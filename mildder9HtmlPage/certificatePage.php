@@ -16,11 +16,11 @@ class page {
     $class = "margin-top-6 margin-bottom-46";
 
      $output = '';
-     $output .= '<div class="container margin-top-26 margin-bottom-26 color-1F497C border-1F497C-solid-3px font-italic">';
+     $output .= '<div class="container margin-top-26 margin-bottom-26 color-1F497C border-1F497C-solid-3px font-italic over-flow height-746 width-840">';
       $output .= '<div class="col-sm-12 col-md-12 col-lg-12 row margin-top-6">';
         $output .= '<img class="float-left image-width image-height" src="mildder_site_logo.png" />';
       $output .= '</div>';
-       $output .= '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 text-center">';
+       $output .= '<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 text-center">';
          $output .= '<div class="font-weight-bold">';
            $output .= '<div class="' . $class . '">';
              $output .= '<p class=" ">';
@@ -65,9 +65,8 @@ class page {
            $output .= '</div>';
          $output .= '</div>';
 
-         $output .= '<div class="' . $class . '">';
-          // $output .= '<hr class="width-24">';
-         $output .= '<div class="margin-left-auto margin-right-auto width-24 border-top-1F497C-solid-1px">';
+         $output .= '<div class="' . $class . ' ">';
+         $output .= '<div class="margin-left-auto margin-right-auto width-240 border-top-1F497C-solid-1px">';
          $output .= '</div>';
            $output .= '<p>';
             $output .= 'Chair,';
@@ -78,11 +77,11 @@ class page {
          $output .= '</div>';
        $output .= '</div>';
 
-       $output .= '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">';
+       $output .= '<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">';
          $output .= '<div class="row">';
            // $output .= '<div class="col-sm-2 margin-top-38 border-left-1F497C-solid-3px height-46">';
            //  $output .= '</div>';
-          $output .= '<div class="margin-top-38 border-left-1F497C-solid-3px height-46">';
+          $output .= '<div class="margin-top-38 border-left-1F497C-solid-3px height-446">';
            $output .= '<p class="padding-top-56 padding-left-12">';
            $output .= 'The Multi-disciplinary <br/>
                         Interstitial Lung <br/>
