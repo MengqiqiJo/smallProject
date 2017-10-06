@@ -13,56 +13,59 @@ class page {
     $locationOfTheActivity = "Location of the activity";
     $dateRangeOfActivity = "Date range of the acticity";
     $numberOfHoursAttended = "Number of hours attended";
+    $class = "margin-top-6 margin-bottom-46";
 
      $output = '';
      $output .= '<div class="container margin-top-26 margin-bottom-26 color-1F497C border-1F497C-solid-3px font-italic">';
       $output .= '<div class="col-sm-12 col-md-12 col-lg-12 row margin-top-6">';
-      $output .= ' <img class="float-left image-width image-height" src="mildder_site_logo.png"/>';
+        $output .= '<img class="float-left image-width image-height" src="mildder_site_logo.png" />';
       $output .= '</div>';
        $output .= '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 text-center">';
-         $output .= '<div class="margin-top-6 margin-bottom-46 font-weight-bold">';
-           $output .= '<p class=" ">';
-            $output .= 'Dr. Shane Shapera,';
-           $output .= '</p>';
-           $output .= '<p>';
-            $output .= 'Toronto General Hospital';
-           $output .= '</p>';
-           $output .= '<p class="font-weight-normal">';
-            $output .= 'Certifies that';
-           $output .= '</p>';
-           $output .= '<p>';
-            $output .= '[' . $nameOfParticipant . ']';
-           $output .= '</p>';
-           $output .= '<p class="font-weight-normal">';
-            $output .= 'Has attended the';
-           $output .= '</p>';
+         $output .= '<div class="font-weight-bold">';
+           $output .= '<div class="' . $class . '">';
+             $output .= '<p class=" ">';
+              $output .= 'Dr. Shane Shapera,';
+             $output .= '</p>';
+             $output .= '<p>';
+              $output .= 'Toronto General Hospital';
+             $output .= '</p>';
+             $output .= '<p class="font-weight-normal">';
+              $output .= 'Certifies that';
+             $output .= '</p>';
+             $output .= '<p>';
+              $output .= '[' . $nameOfParticipant . ']';
+             $output .= '</p>';
+             $output .= '<p class="font-weight-normal">';
+              $output .= 'Has attended the';
+             $output .= '</p>';
+           $output .= '</div>';
+
+           $output .= '<div class="' . $class . '">';
+             $output .= '<p>';
+              $output .= 'Multi-disciplinary Interstitial lung Disease';
+             $output .= '</p>';
+             $output .= '<p>';
+              $output .= 'Discussions with Experts Remotely Rounds';
+             $output .= '</p>';
+           $output .= '</div>';
+
+           $output .= '<div class="' . $class . '">';
+             $output .= '<p>';
+              $output .= '<span class="font-weight-normal">in</span> ' . '[' . $locationOfTheActivity . ']';
+             $output .= '</p>';
+             $output .= '<p>';
+              $output .= '[' . $dateRangeOfActivity . ']';
+             $output .= '</p>';
+           $output .= '</div>';
+
+           $output .= '<div class="' . $class . '">';
+             $output .= '<p>';
+              $output .= '[' . $numberOfHoursAttended . ']';
+             $output .= '</p>';
+           $output .= '</div>';
          $output .= '</div>';
 
-         $output .= '<div class="margin-top-6 margin-bottom-46 font-weight-bold">';
-           $output .= '<p>';
-            $output .= 'Multi-disciplinary Interstitial lung Disease';
-           $output .= '</p>';
-           $output .= '<p>';
-            $output .= 'Discussions with Experts Remotely Rounds';
-           $output .= '</p>';
-         $output .= '</div>';
-
-         $output .= '<div class="margin-top-6 margin-bottom-46 font-weight-bold">';
-           $output .= '<p>';
-            $output .= '<span class="font-weight-normal">in</span> ' . '[' . $locationOfTheActivity . ']';
-           $output .= '</p>';
-           $output .= '<p>';
-            $output .= '[' . $dateRangeOfActivity . ']';
-           $output .= '</p>';
-         $output .= '</div>';
-
-         $output .= '<div class="margin-top-6 margin-bottom-46 font-weight-bold">';
-           $output .= '<p>';
-            $output .= '[' . $numberOfHoursAttended . ']';
-           $output .= '</p>';
-         $output .= '</div>';
-
-         $output .= '<div class="margin-top-38 margin-bottom-46">';
+         $output .= '<div class="' . $class . '">';
           // $output .= '<hr class="width-24">';
          $output .= '<div class="margin-left-auto margin-right-auto width-24 border-top-1F497C-solid-1px">';
          $output .= '</div>';
@@ -88,7 +91,7 @@ class page {
                         (MILDDER) Rounds is<br/>
                         a self-approved group<br/>
                         learning activity<br/>
-                        (Section 1) as defined<br/>
+                        (Section 1) as defined<br />
                         by the Maintenance of<br/>
                         Certification Program<br/>
                         of the Royal College of<br/>
@@ -98,12 +101,6 @@ class page {
            $output .= '</div>';
          $output .= '</div>';
        $output .= '</div>';
-       $output .= '';
-       $output .= '';
-       $output .= '';
-       $output .= '';
-       $output .= '';
-       $output .= '';
      $output .= '</div>';
 
      return $output;
