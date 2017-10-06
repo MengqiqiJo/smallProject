@@ -1,6 +1,9 @@
 .margin-top-6 {
   margin-top: 6px;
 }
+.margin-bottom-0 {
+  margin-bottom: 0px;
+}
 .margin-bottom-46 {
   margin-bottom: 46px;
 }
@@ -72,6 +75,9 @@
 }
 .font-italic {
   font-style: italic;
+}
+.font-normal {
+  font-style: normal;
 }
 .over-flow {
   overflow:scroll;

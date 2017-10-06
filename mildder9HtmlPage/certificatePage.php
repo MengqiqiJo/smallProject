@@ -15,21 +15,25 @@ class page {
     $numberOfHoursAttended = "Number of hours attended";
     $class = "margin-top-6 margin-bottom-46";
 
-     $output = '';
-     $output .= '<div class="container margin-top-26 margin-bottom-26 color-1F497C border-1F497C-solid-3px font-italic over-flow height-746 width-840">';
+    $output = '';
+
+    $output .= '<div class="margin-top-26 margin-bottom-26 color-1F497C"> ';
+      $output .= 'page title';
+    $output .= '</div>';
+    $output .= '<div id="3333" class="container margin-top-26 margin-bottom-26 color-1F497C border-1F497C-solid-3px font-italic over-flow height-746 width-840">';
       $output .= '<div class="col-sm-12 col-md-12 col-lg-12 row margin-top-6">';
         $output .= '<img class="float-left image-width image-height" src="mildder_site_logo.png" />';
       $output .= '</div>';
        $output .= '<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 text-center">';
          $output .= '<div class="font-weight-bold">';
            $output .= '<div class="' . $class . '">';
-             $output .= '<p class=" ">';
+             $output .= '<p class="margin-bottom-0">';
               $output .= 'Dr. Shane Shapera,';
              $output .= '</p>';
              $output .= '<p>';
               $output .= 'Toronto General Hospital';
              $output .= '</p>';
-             $output .= '<p class="font-weight-normal">';
+             $output .= '<p class="font-weight-normal font-normal">';
               $output .= 'Certifies that';
              $output .= '</p>';
              $output .= '<p>';
@@ -41,7 +45,7 @@ class page {
            $output .= '</div>';
 
            $output .= '<div class="' . $class . '">';
-             $output .= '<p>';
+             $output .= '<p class="margin-bottom-0">';
               $output .= 'Multi-disciplinary Interstitial lung Disease';
              $output .= '</p>';
              $output .= '<p>';
@@ -100,9 +104,13 @@ class page {
            $output .= '</div>';
          $output .= '</div>';
        $output .= '</div>';
-     $output .= '</div>';
+    $output .= '</div>';
+    $output .= '<div>';
+      $output .= 'print';
+    $output .= '</div>';
 
-     return $output;
+
+    return $output;
   }
 
 }
