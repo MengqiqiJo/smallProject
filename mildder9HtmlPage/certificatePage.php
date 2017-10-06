@@ -112,8 +112,9 @@ class page {
          $output .= '</div>';
       $output .= '</div>';
     $output .= '</div>';
-    $output .= '<div class="margin-left-auto margin-right-auto">';
-    $output .= '<button id="btn" class="btn btn-success">';
+
+    $output .= '<div class="text-center">';
+    $output .= '<button id="btn" class="btn btn-primary">';
       $output .= 'Download';
     $output .= '</button>';
     $output .= '</div>';

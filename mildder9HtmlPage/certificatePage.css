@@ -19,6 +19,9 @@
 .margin-left-auto {
   margin-left: auto;
 }
+.margin-left-24 {
+  margin-left: 24;
+}
 .margin-right-auto {
   margin-right: auto;
 }
@@ -62,7 +65,7 @@
   height: 126px;
 }
 .float-left {
-  float: left;
+  float: center;
 }
 .color-1F497C {
   color: #1F497C;
