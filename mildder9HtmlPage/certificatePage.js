@@ -7,6 +7,7 @@ var ySpaveSingle = 4;
 var ySpaceBetweenEachDiv = 15;
 var sideLineXpostion = 142;
 var sideTextXpostion = 142 + 4;
+var sideTextContent = ['The Multi-disciplinary', 'Interstitial Lung', 'Disease Discussions', 'with Experts Remotely', '(MILDDER) Rounds is', 'a self-approved group', 'learning activity', '(Section 1) as defined', 'by the Maintenance of', 'Certification Program', 'of the Royal College of', 'Physicians and', 'Surgeons of Canada.'];
 
 downPdf.onclick = function() {
 
@@ -42,20 +43,9 @@ downPdf.onclick = function() {
 
   doc.text(xPosition + 5, yPosition + ySpaveSingle * 2 + ySpaceDouble * 5 + ySpaceBetweenEachDiv * 4, 'Planning Committee');
 
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle + ySpaceDouble * 2, 'The Multi-disciplinary');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 2 + ySpaceDouble * 2, 'Interstitial Lung');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 3 + ySpaceDouble * 2, 'Disease Discussions');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 4 + ySpaceDouble * 2, 'with Experts Remotely');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 5 + ySpaceDouble * 2, '(MILDDER) Rounds is');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 6 + ySpaceDouble * 2, 'a self-approved group');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 7 + ySpaceDouble * 2, 'learning activity');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 8 + ySpaceDouble * 2, '(Section 1) as defined');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 9 + ySpaceDouble * 2, 'by the Maintenance of');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 10 + ySpaceDouble * 2, 'Certification Program');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 11 + ySpaceDouble * 2, 'of the Royal College of');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 12 + ySpaceDouble * 2, 'Physicians and');
-  doc.text(sideTextXpostion, yPosition + ySpaveSingle * 13 + ySpaceDouble * 2, 'Surgeons of Canada.');
-
+  for (var i = 0; i < sideTextContent.length; i++) {
+    doc.text(sideTextXpostion, yPosition + ySpaveSingle + ySpaveSingle * i + ySpaceDouble * 2, sideTextContent[i]);
+  }
   doc.setLineWidth(0.6);
   doc.line(sideLineXpostion , yPosition + ySpaveSingle , sideLineXpostion, yPosition + ySpaveSingle * 2 + ySpaceDouble * 4 + ySpaceBetweenEachDiv * 4);
   doc.line(14 , 20 , 196, 20);
