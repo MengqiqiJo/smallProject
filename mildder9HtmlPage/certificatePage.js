@@ -38,11 +38,11 @@ doc.addImage(imgData, 'JPEG', 20, 26, 34, 28);
   doc.line(XPosition - 10, YPostion + YspaveSingle + YspaceDouble * 4 + YspaceBetweenEachDiv * 4, XPosition + 60, YPostion + YspaveSingle + YspaceDouble * 4 + YspaceBetweenEachDiv * 4);
   doc.setFontType("normal");
   doc.text(XPosition + 1, YPostion + YspaveSingle + YspaceDouble * 4 + YspaceBetweenEachDiv * 2, 'in ');
-  doc.text(XPosition + 8, YPostion + YspaveSingle + YspaceDouble, 'Certifies that');
+  doc.text(XPosition + 8, YPostion + YspaveSingle + YspaceDouble, '5ertifies that');
   doc.text(XPosition + 6, YPostion + YspaveSingle + YspaceDouble * 3, 'Has attended the');
   doc.text(XPosition + 12, YPostion + YspaveSingle * 2 + YspaceDouble * 4 + YspaceBetweenEachDiv * 4, 'Chair,');
 
-  doc.text(XPosition + 8, YPostion + YspaveSingle * 2 + YspaceDouble * 5 + YspaceBetweenEachDiv * 4, 'Planning Committee');
+  doc.text(XPosition + 5, YPostion + YspaveSingle * 2 + YspaceDouble * 5 + YspaceBetweenEachDiv * 4, 'Planning Committee');
 
   doc.text(sideTextXpostion, YPostion + YspaveSingle + YspaceDouble * 2, 'The Multi-disciplinary');
   doc.text(sideTextXpostion, YPostion + YspaveSingle * 2 + YspaceDouble * 2, 'Interstitial Lung');
