@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <div id="app">
+      <v-card-text>
+        <v-container fluid>
+          <v-layout wrap>
+            <v-flex xs12 sm12>
+              <v-checkbox v-model=mode value="left" label="Left"></v-checkbox>
+            </v-flex>
+           <v-flex xs6 sm12>
+              <v-checkbox v-model=mode value="right" label="Right"></v-checkbox>
+            </v-flex>
+            <v-flex xs6 sm12>
+              <h6>Terms:</h6>
+              <h6>I have discussed with my patient that I will be discussing their case in the MILDDER platform</h6>
+            </v-flex>
+            <v-flex xs2 sm2>
+              <v-checkbox v-model=agree value="agree" label="agree"></v-checkbox>
+            </v-flex>
+            <div class="v-flex" xs12 sm12>
+              <v-btn color="primary">Submit</v-btn>
+            </div>
+
+          </v-layout>
+        </v-container>
+      </v-card-text>
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script src="vuejs.js"></script>
+</body>
+</html>
