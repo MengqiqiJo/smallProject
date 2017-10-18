@@ -19,10 +19,12 @@ class startForm {
       $output .= '<div id="app">';
           $output .= '<div class="v-container fluid">';
             $output .= '<div class="v-layout wrap">';
+
               $output .= '<div class="v-flex col-xs-12 col-sm-12 text-center">';
                 $output .= '<v-checkbox v-model=mode value="Respirologist" label="Respirologist"></v-checkbox>';
               $output .= '</div>';
-              $output .= '<div class="v-flex col-xs-12 col-sm-12 text-center">';
+
+              $output .= '<div class="v-flex mx-auto">';
                 $output .= '<v-checkbox v-model=mode value="Pathologist" label="Pathologist"></v-checkbox>';
               $output .= '</div>';
 
@@ -35,11 +37,11 @@ class startForm {
                 $output .= '</p>';
               $output .= ' </div>';
 
-              $output .= '<div class="row">';
-                $output .= '<div class="v-flex col-sm-2 col-sm-offset-6">';
+
+                $output .= '<div class="v-flex ">';
                   $output .= '<v-checkbox v-model=agree value="agree" label="I Agree"></v-checkbox>';
                 $output .= '</div>';
-              $output .= '</div>';
+
 
               $output .= '<div class="v-flex col-xs-12 col-sm-12 text-center">';
                $output .= '<v-btn color="primary">Submit</v-btn>';
