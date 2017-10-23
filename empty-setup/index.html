@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+  <link rel='stylesheet prefetch' href='https://unpkg.com/vue-material@latest/dist/vue-material.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <md-toolbar>
+    <h1 class="md-title">My Title</h1>
+    </md-toolbar>
+
+    <div class="main-content">
+      <div>
+        <md-radio v-model="radio1" id="my-test1" name="my-test-group1" md-value="Respirologist">Respirologist</md-radio>
+        <md-radio v-model="radio1" id="my-test2" name="my-test-group1" md-value="Pathologist">Pathologist</md-radio>
+      </div>
+      <div>
+        <p>Terms: I have discussed with my patient that I will be discussing their case in the MILDDER platform.</p>
+      </div>
+
+      <div>
+        <md-checkbox  id="my-test5" name="my-test5" v-model="checkbox1" class="md-primary" required>I Agree</md-checkbox>
+        <span class="md-error">Validation message</span>
+        <md-tooltip md-delay="400" md-direction="left-bottom">My tooltip</md-tooltip>
+        </md-avatar>
+      </div>
+
+      <div>
+       <md-button href="/mildder9" class="md-raised md-primary">submit</md-button>
+      </div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js'></script>
+  <script src='https://unpkg.com/vue-material@latest'></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
