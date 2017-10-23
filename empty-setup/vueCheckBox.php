@@ -39,7 +39,6 @@ class popUpWithCheckBox {
       $output .= 'I have discussed with my patient that I will be discussing their case in the MILDDER platform.';
     $output .= '</p>';
     return $output;
-
   }
 
   function checkBox($textContent, $modelContent) {
