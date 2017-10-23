@@ -12,8 +12,8 @@ echo "<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto:300,
 echo "<link rel='stylesheet' href='//fonts.googleapis.com/icon?family=Material+Icons'>";
 
 /**
-*
-*/
+ *
+ */
 class popUpWithCheckBox {
 
   function popUpWithCH() {
@@ -80,10 +80,11 @@ class popUpWithCheckBox {
           $output .= '</md-input-container>';
         $output .= '</md-step>';
 
-        $output .= ' <md-step :md-disabled="!nameValid" md-label="Phone">';
-          $output .= '<md-input-container>';
-            $output .= '<label>Phone</label>';
-            $output .= '<md-input type="tel"></md-input>';
+        $output .= '<md-step :md-editable="true" md-label="Phone" :md-error="!phoneValid" :md-continue="phoneValid" :md-message="invalidPhoneMessage">';
+          $output .= '<p>Please enter your phone number</p>';
+          $output .= '<md-input-container :class="{\'md-input-invalid\': !phoneValid}">';
+          $output .= '<md-input type="phone" v-model="phone" required/>';
+          $output .= '<label>phone</label>';
           $output .= '</md-input-container>';
         $output .= '</md-step>';
 
