@@ -6,7 +6,6 @@ echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether
 echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>';
 
 echo "<link rel='stylesheet prefetch' href='https://unpkg.com/vue-material@latest/dist/vue-material.css'>";
-echo "<link rel='stylesheet' href='css/style.css'>";
 echo "<link rel='stylesheet' href='../plugin.css'>";
 
 /**
