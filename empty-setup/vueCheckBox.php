@@ -65,8 +65,8 @@ class popUpWithCheckBox {
         $output .= '<h1 class="md-title"></h1>';
       $output .= '</md-toolbar>';
 
-      $output .= $this->duplicateFrameStart($this->radioBox("Respirologist", "radio1"), "20", "30");
-      $output .= $this->duplicateFrameStart($this->radioBox("Pathologist", "radio1"), "20", "30");
+      $output .= $this->duplicateFrameStart($this->radioBox("Respirologist", "radio1"));
+      $output .= $this->duplicateFrameStart($this->radioBox("Pathologist", "radio1"));
       $output .= $this->duplicateFrameStart($this->textContent(), "40", "30");
       $output .= $this->duplicateFrameStart($this->checkBox("I Agree", "checkbox1"), "40", "30");
 
@@ -79,7 +79,7 @@ class popUpWithCheckBox {
         $content .= '(* Please select role)';
        $content .= '</span>';
       $content .= '</md-layout>';
-      $output .= $this->duplicateFrameStart($content, "20", "30");
+      $output .= $this->duplicateFrameStart($content);
 
       $content = '';
       $content .= '<md-layout v-if="!checkbox1">';
@@ -87,7 +87,7 @@ class popUpWithCheckBox {
           $content .= '(* Please choose "I Agree")';
         $content .= '</span>';
       $content .= '</md-layout>';
-      $output .= $this->duplicateFrameStart($content, "20", "30");
+      $output .= $this->duplicateFrameStart($content);
 
       $output .= '<md-layout v-if="(radio1==\'Respirologist\' || radio1==\'Pathologist\') && checkbox1">';
         $output .= $this->duplicateFrameStart($this->button("/mildder9", "submit"), "40", "30");
