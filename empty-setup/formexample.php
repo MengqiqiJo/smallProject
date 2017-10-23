@@ -20,107 +20,76 @@ class popUpWithCheckBox {
     $output = '';
     $output .= '<div id="app">';
 
-      $output .= '<md-toolbar>';
-        $output .= '<h1 class="md-title"></h1>';
-      $output .= '</md-toolbar>';
+    $output .= '<md-toolbar>';
+      $output .= '<md-menu>';
+        $output .= '<md-button md-menu-trigger>Default</md-button>';
 
+        $output .= '<md-menu-content>';
+          $output .= '<md-menu-item>My Item 1</md-menu-item>';
+          $output .= '<md-menu-item>My Item 2</md-menu-item>';
+          $output .= '<md-menu-item>My Item 3</md-menu-item>';
+        $output .= '</md-menu-content>';
+      $output .= '</md-menu>';
 
+      $output .= '<md-menu md-align-trigger>';
+        $output .= '<md-button md-menu-trigger>Align trigger</md-button>';
 
-      $output .= '<md-layout md-gutter>';
+        $output .= '<md-menu-content>';
+          $output .= '<md-menu-item>My Item 1</md-menu-item>';
+          $output .= '<md-menu-item>My Item 2</md-menu-item>';
+          $output .= '<md-menu-item>My Item 3</md-menu-item>';
+        $output .= '</md-menu-content>';
+      $output .= '</md-menu>';
 
+      $output .= '<md-menu :md-offset-x="154" md-offset-y="12">';
+        $output .= '<md-button md-menu-trigger>Custom offset</md-button>';
 
+        $output .= '<md-menu-content>';
+          $output .= '<md-menu-item>My Item 1</md-menu-item>';
+          $output .= '<md-menu-item>My Item 2</md-menu-item>';
+          $output .= '<md-menu-item>My Item 3</md-menu-item>';
+        $output .= '</md-menu-content>';
+     $output .= ' </md-menu>';
+    $output .= '</md-toolbar>';
 
-               $output .= '<div class="phone-viewport">';
-                 $output .= '<md-list class="md-dense">';
-                   $output .= '<md-list-item>';
-                     $output .= '<md-icon>move_to_inbox</md-icon> <span>Inbox</span>';
-                   $output .= '</md-list-item>';
+    $output .= '<md-layout md-gutter>';
+      $output .= '<md-layout md-flex="60" md-flex-offset="20">';
+        $output .= '<md-stepper>';
 
-                   $output .= '<md-list-item>';
-                     $output .= '<md-icon>send</md-icon> <span>Sent Mail</span>';
-                   $output .= '</md-list-item>';
+        $output .= '<md-step :md-editable="true" md-label="Email" :md-error="!mailValid" :md-continue="mailValid" :md-message="invalidMessage">';
+          $output .= '<p>Please enter your emailaddress</p>';
+          $output .= '<md-input-container :class="{\'md-input-invalid\': !mailValid}">';
+          $output .= '<md-input type="email" v-model="mail" required/>';
+          $output .= '<label>Email</label>';
+          $output .= '</md-input-container>';
+        $output .= '</md-step>';
 
-                   $output .= '<md-list-item>';
-                     $output .= '<md-icon>delete</md-icon> <span>Trash</span>';
-                   $output .= '</md-list-item>';
+        $output .= '<md-step :md-editable="true" md-label="Name" :md-error="!nameValid" :md-continue="nameValid" :md-message="invalidNameMessage">';
+          $output .= '<p>Please enter your name</p>';
+          $output .= '<md-input-container :class="{\'md-input-invalid\': !nameValid}">';
+          $output .= '<md-input type="name" v-model="name" required/>';
+          $output .= '<label>name</label>';
+          $output .= '</md-input-container>';
+        $output .= '</md-step>';
 
-                  $output .= ' <md-list-item>';
-                     $output .= '<md-icon>error</md-icon> <span>Spam</span>';
+        $output .= '<md-step :md-editable="true" md-label="Password" :md-error="!passwordValid" :md-continue="passwordValid" :md-message="invalidPasswordMessage">';
+          $output .= '<p>Please enter your password</p>';
+          $output .= '<md-input-container :class="{\'md-input-invalid\': !passwordValid}">';
+          $output .= '<md-input type="password" v-model="password" required/>';
+          $output .= '<label>password</label>';
+          $output .= '</md-input-container>';
+        $output .= '</md-step>';
 
-                     $output .= '<md-divider class="md-inset"></md-divider>';
-                   $output .= '</md-list-item>';
-
-                   $output .= '<md-list-item>';
-                     $output .= '<md-avatar>';
-                       $output .= '<img src="https://placeimg.com/40/40/people/5" alt="People">';
-                     $output .= '</md-avatar>';
-
-                     $output .= '<span>Abbey Christansen</span>';
-
-                     $output .= '<md-button class="md-icon-button md-list-action">';
-                       $output .= '<md-icon class="md-primary">chat_bubble</md-icon>';
-                     $output .= '</md-button>';
-                   $output .= '</md-list-item>';
-
-                   $output .= '<md-list-item>';
-                     $output .= '<md-avatar>';
-                      $output .= ' <img src="https://placeimg.com/40/40/people/1" alt="People">';
-                     $output .= '</md-avatar>';
-
-                    $output .= ' <span>Alex Nelson</span>';
-
-                     $output .= '<md-button class="md-icon-button md-list-action">';
-                       $output .= '<md-icon class="md-primary">chat_bubble</md-icon>';
-                     $output .= '</md-button>';
-                   $output .= '</md-list-item>';
-
-                   $output .= '<md-list-item>';
-                    $output .= ' <md-avatar>';
-                       $output .= '<img src="https://placeimg.com/40/40/people/6" alt="People">';
-                     $output .= '</md-avatar>';
-
-                     $output .= '<span>Mary Johnson</span>';
-
-                     $output .= '<md-button class="md-icon-button md-list-action">';
-                      $output .= ' <md-icon>chat_bubble</md-icon>';
-                     $output .= '</md-button>';
-                  $output .= ' </md-list-item>';
-                $output .= ' </md-list>';
-               $output .= '</div>';
-
-
-
-
-           $output .= '</md-layout>';
-
-$output .= '<md-layout md-gutter>';
-
-
-          $output .= '<md-layout >';
-            $output .= '<md-input-container>';
-              $output .= '<label>Phone</label>';
-              $output .= '<md-input type="tel"></md-input>';
-            $output .= '</md-input-container>';
-
-           $output .= '</md-layout>';
-
-        $output .= '<md-layout >';
+        $output .= ' <md-step :md-disabled="!nameValid" md-label="Phone">';
           $output .= '<md-input-container>';
-            $output .= '<label>Password</label>';
-          $output .= '<md-input type="password"></md-input>';
+            $output .= '<label>Phone</label>';
+            $output .= '<md-input type="tel"></md-input>';
           $output .= '</md-input-container>';
-        $output .= '</md-layout>';
+        $output .= '</md-step>';
 
-
-           $output .= '<md-layout >';
-        $output .= '<md-input-container class="md-input-invalid">';
-            $output .= '<label>Name</label>';
-            $output .= '<md-input required></md-input>';
-          $output .= '</md-input-container>';
-      $output .= '</md-layout>';
-
-
-         $output .= '</md-layout>';
+      $output .= '</md-stepper>';
+    $output .= '</md-layout>';
+  $output .= '</md-layout>';
 
 
       $output .= '<md-layout md-gutter>';
