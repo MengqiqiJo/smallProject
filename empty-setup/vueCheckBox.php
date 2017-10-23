@@ -14,7 +14,24 @@ echo "<link rel='stylesheet' href='../plugin.css'>";
 */
 class popUpWithCheckBox {
 
+  function duplicateFrameStart($a, $b) {
+    $output = '';
+    $output .= '<md-layout md-gutter>';
+      $output .= '<md-layout md-flex=' . $a .' md-flex-offset='. $b .'>';
+      return $output;
+  }
+
+  function duplicateFrameEnd() {
+    $output = '';
+    $output .= '</md-layout>';
+    $output .= '</md-layout>';
+
+    return $output;
+  }
+
   function popUpWithCH() {
+    $startFrame = $this->duplicateFrameStart("20", "30");
+    $endFrame = $this->duplicateFrameEnd();
     $output = '';
     $output .= '<div id="app">';
 
@@ -22,44 +39,50 @@ class popUpWithCheckBox {
         $output .= '<h1 class="md-title"></h1>';
       $output .= '</md-toolbar>';
 
-      $output .= '<md-layout md-gutter>';
-        $output .= '<md-layout md-flex="10" md-flex-offset="40">';
-          $output .= '<md-radio v-model="radio1" name="my-test-group1" md-value="Respirologist">Respirologist</md-radio>';
-          $output .= '<md-radio v-model="radio1" name="my-test-group1" md-value="Pathologist">Pathologist</md-radio>';
-        $output .= '</md-layout>';
+            $output .= $startFrame;
+              $output .= '<md-radio v-model="radio1" name="my-test-group1" md-value="Respirologist">Respirologist</md-radio>';
+            $output .= $endFrame;
 
-        $output .= '<md-layout md-flex="40" md-flex-offset="30">';
-          $output .= '<p class="font-bold font-size-14"><span class="font-bold font-size-18">Terms:</span> I have discussed with my patient that I will be discussing their case in the MILDDER platform.</p>';
-        $output .= '</md-layout>';
-        $output .= '<md-layout md-flex="60" md-flex-offset="40">';
-          $output .= '<md-checkbox  id="my-test5" name="my-test5" v-model="checkbox1" class="md-primary" required>I Agree</md-checkbox>';
-        $output .= '</md-layout>';
 
-        $output .= '<md-layout md-flex="60" md-flex-offset="40">';
-          $output .= '<md-layout v-if="radio1==\'Respirologist\' || radio1==\'Pathologist\'">';
-          $output .= '</md-layout>';
-          $output .= '<md-layout v-else>';
-           $output .= '<span class="color-f00000">(* Please select role)</span>';
-          $output .= '</md-layout>';
-        $output .= '</md-layout>';
-        $output .= '<md-layout md-flex="60" md-flex-offset="40">';
-          $output .= '<md-layout v-if="!checkbox1">';
-            $output .= '<span class="color-f00000">(* Please choose "I Agree")</span>';
-          $output .= '</md-layout>';
-        $output .= '</md-layout>';
+            $output .= $startFrame;
+                $output .= '<md-radio v-model="radio1" name="my-test-group1" md-value="Pathologist">Pathologist</md-radio>';
+              $output .= '</md-layout>';
+            $output .= $endFrame;
 
-        $output .= '<md-layout md-flex="60" md-flex-offset="40">';
-          $output .= '<md-layout v-if="(radio1==\'Respirologist\' || radio1==\'Pathologist\') && checkbox1">';
-            $output .= '<md-layout>';
-              $output .= '<md-button href="/mildder9" class="md-raised md-primary">submit</md-button>';
-             $output .= '</md-layout>';
-          $output .= '</md-layout>';
-          $output .= '<md-layout v-else>';
-            $output .= '<md-button href="" class="md-raised md-primary">submit</md-button>';
-          $output .= '</md-layout>';
-        $output .= '</md-layout>';
-      $output .= '</md-layout>';
-    $output .= '</div>';
+            $output .= $this->duplicateFrameStart("40", "30");
+                $output .= '<p class="font-bold font-size-14"><span class="font-bold font-size-18">Terms:</span> I have discussed with my patient that I will be discussing their case in the MILDDER platform.</p>';
+            $output .= $endFrame;
+
+            $output .= $startFrame;
+                $output .= '<md-checkbox  id="my-test5" name="my-test5" v-model="checkbox1" class="md-primary" required>I Agree</md-checkbox>';
+            $output .= $endFrame;
+
+            $output .= $startFrame;
+                $output .= '<md-layout v-if="radio1==\'Respirologist\' || radio1==\'Pathologist\'">';
+                $output .= '</md-layout>';
+                $output .= '<md-layout v-else>';
+                 $output .= '<span class="color-f00000">(* Please select role)</span>';
+                $output .= '</md-layout>';
+            $output .= $endFrame;
+
+            $output .= $startFrame;
+                $output .= '<md-layout v-if="!checkbox1">';
+                  $output .= '<span class="color-f00000">(* Please choose "I Agree")</span>';
+                $output .= '</md-layout>';
+            $output .= $endFrame;
+
+            $output .= $startFrame;
+                $output .= '<md-layout v-if="(radio1==\'Respirologist\' || radio1==\'Pathologist\') && checkbox1">';
+                  $output .= '<md-layout>';
+                    $output .= '<md-button href="/mildder9" class="md-raised md-primary">submit</md-button>';
+                   $output .= '</md-layout>';
+                $output .= '</md-layout>';
+                $output .= '<md-layout v-else>';
+                  $output .= '<md-button href="" class="md-raised md-primary">submit</md-button>';
+                $output .= '</md-layout>';
+            $output .= $endFrame;
+          $output .= '</div>';
+
 
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js"></script>';
     $output .= '<script src="https://unpkg.com/vue-material@latest"></script>';
