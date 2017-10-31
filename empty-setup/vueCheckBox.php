@@ -67,6 +67,7 @@ class popUpWithCheckBox {
       $output .= $this->duplicateFrameStart($this->radioBox("Pathologist", "radio1"));
       $output .= $this->duplicateFrameStart($this->textContent(), "40", "30");
       $output .= $this->duplicateFrameStart($this->checkBox("I Agree", "checkbox1"), "40", "30");
+      $output .= '<p>{{checkbox1}}</p>';
 
 
       $content = '';
