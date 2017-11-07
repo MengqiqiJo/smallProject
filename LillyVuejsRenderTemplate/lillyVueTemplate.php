@@ -6,6 +6,7 @@ echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3
 // echo '<script src="https://rawgit.com/FVANCOP/ChartNew.js/master/ChartNew.js"></script>';
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
 echo '<script type="text/javascript" src="ChartNew.js"></script>';
+echo '<script src="shapesInChart.js"></script>';
 echo '<script src="https://unpkg.com/vue"></script>';
 echo '<script type="text/javascript" src="lillyVueTemplate.js"></script>';
 echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
@@ -40,35 +41,14 @@ class dashpageBlockGenerator {
               // $output .= "{{blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartType}}<br/>";
               // $output .= "{{blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartId}}<br/>";
               // $output .= "{{blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartData}}<br/>";
-                $output .= '<canvas width="600" height="700"
-                  options="{inGraphDataShow : true,
-                            inGraphDataAnglePosition : 2,
-                            inGraphDataRadiusPosition: 2,
-                            inGraphDataRotate : \'inRadiusAxisRotateLabels\',
-                            inGraphDataAlign : \'center\',
-                            inGraphDataVAlign : \'middle\',
-                            inGraphDataFontColor: \'white\',
-                            inGraphDataFontSize : 16}"
-                  type="pie"
-                  data="[{
-                          \'value\': 45,
-                          \'color\': \'#2fa9e0\',
-                          \'title\': \'1(12)\'
-                          },
-                          {
-                          \'value\': 12,
-                          \'color\': \'#f24b99\',
-                          \'title\': \'2(28)\'
-                          },
-                          {
-                          \'value\': 32,
-                          \'color\': \'#37d8b3\',
-                          \'title\': \'3(9)\'
-                          }]"></canvas>';
+
               // $output .= '</div>';
-              $output .= '<div v-else>';
+              $output .= '<div>';
                 // $output .= $this->contentRenderCharts();
-              $output .= "hello2222";
+              $output .= "111.{{option}}<br/>";
+              $output .= "222.{{chartType}}<br/>";
+              $output .= "3333.{{dataset}}<br/>";
+
               $output .= '</div>';
             // $output .= '</div>';
           // $output .= '</div>';
@@ -80,6 +60,7 @@ class dashpageBlockGenerator {
         // $output .= '</div>';
       $output .= '</div>';
     $output .= '</div>';
+    $output .= '<canvas id="canvasForChart" width="600" height="700"></canvas>';
 
     $output .= '<script src="https://unpkg.com/vue"></script>';
     $output .= '<script src="LillyVueTemplate.js" type="text/javascript"></script>';

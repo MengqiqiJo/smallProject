@@ -143,13 +143,13 @@
 "chartType": "Doughnut",
 "chartData": [
 {
-"value": 5,
-"color": "#f3f3f3",
+"data": 5,
+"fillColor": "#f3f3f3",
 "title": "Yes"
 },
 {
-"value": 25,
-"color": "#a5d23e",
+"data": 25,
+"fillColor": "#a5d23e",
 "title": "No"
 }
 ],
@@ -191,8 +191,8 @@
 "title": "Yes"
 },
 {
-"value": 25,
-"color": "#a5d23e",
+"data": 25,
+"fillColor": "#a5d23e",
 "title": "No"
 }
 ],
