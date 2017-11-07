@@ -1,34 +1,41 @@
 
-
 var app = new Vue({
   el: '#block',
   data: {
     blocks: "",
     option: "",
     chartType: "",
-    dataset: "",
-    mydata4: [{value:"70", color:"rgba(151,187,205,1)", title:"data1"},{value:"30", color:"rgba(220, 220, 220,1)", title:"data1"}]
+    dataset: [],
+    mydata2: "",
+    opt: ""
+
+  },
+  created: function () {
+    this.getDoughnutChartData();
   },
   mounted: function () {
-    this.getDoughnutChart();
+    var self = this;
+    self.dataset = "ready";
+    this.drawDoughnutChart();
   },
   methods: {
-    getData: function () {
-       var self = this;
-    $.get( "jsonData.json", function(data) {
-        self.blocks = data;
-        self.option = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartOptions
-        self.chartType = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartType
-        // blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartId
-        self.dataset = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartData
+ //    getData: function () {
+ //       var self = this;
+ //    $.get( "jsonData.json", function(data) {
+ //        self.blocks = data;
+ //        self.option = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartOptions
+ //        self.chartType = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartType
+ //        // blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartId
+ //        self.dataset = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartData
 
-    });
-    window.onload = function() {
-    var myLine = new Chart(document.getElementById("canvas_Doughnut").getContext("2d")).Doughnut(self.dataset,self.opt);
-  }
- },
- getDoughnutChart: function () {
-  var mydata2 = {
+ //    });
+ //    window.onload = function() {
+ //    var myLine = new Chart(document.getElementById("canvas_Doughnut").getContext("2d")).Doughnut(self.dataset,self.opt);
+ //  }
+ // },
+ getDoughnutChartData: function () {
+  var self = this;
+  self.mydata2 = {
        datasets : [
              {
         data : [45],
@@ -52,7 +59,7 @@ var app = new Vue({
              }
   ]
   };
-  var opt = {
+  self.opt = {
         canvasBorders : true,
         canvasBordersWidth : 2,
         canvasBordersColor : "black",
@@ -65,11 +72,12 @@ var app = new Vue({
         endDrawDataFunction: drawShapes
 
   };
-
+  self.dataset = "mounted1";
+ },
+ drawDoughnutChart: function () {
   window.onload = function() {
-    var myLine = new Chart(document.getElementById("canvasForChart").getContext("2d")).Doughnut(mydata2,opt);
-}
-
+    var myLine = new Chart(document.getElementById("canvasForChart").getContext("2d")).Doughnut(this.mydata2, this.opt);
+  }
  }
   }
 });

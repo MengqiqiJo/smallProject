@@ -6,7 +6,7 @@ echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3
 // echo '<script src="https://rawgit.com/FVANCOP/ChartNew.js/master/ChartNew.js"></script>';
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
 echo '<script type="text/javascript" src="ChartNew.js"></script>';
-echo '<script src="shapesInChart.js"></script>';
+echo '<script type="text/javascript" src="shapesInChart.js"></script>';
 echo '<script src="https://unpkg.com/vue"></script>';
 echo '<script type="text/javascript" src="lillyVueTemplate.js"></script>';
 echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
@@ -25,45 +25,14 @@ class dashpageBlockGenerator {
 
     $output = '';
     $output .= '<div id="block">';
-      // $output .= '<div ng-if="block.top.enable">';
-      //   $output .= '<md-content>';
-      //     $output .= $this->contentRenderHeader();
-      //   $output .= '</md-content>';
-      // $output .= '</div>';
-
-      $output .= '<div>';
-        // $output .= '<div ng-if="block.middle.enable">';
-          // $output .= '<div class="{{block.blockClasses}}">';
-            // $output .= '<div ng-switch="block.type">';
-              // $output .= '<div v-if="blocks[\'contentSection\'][2].type==\'chart\'">';
-                // $output .= $this->contentRenderCharts();
-              // $output .= "{{blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartOptions}}<br/>";
-              // $output .= "{{blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartType}}<br/>";
-              // $output .= "{{blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartId}}<br/>";
-              // $output .= "{{blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartData}}<br/>";
-
-              // $output .= '</div>';
-              $output .= '<div>';
-                // $output .= $this->contentRenderCharts();
-              $output .= "111.{{option}}<br/>";
-              $output .= "222.{{chartType}}<br/>";
-              $output .= "3333.{{dataset}}<br/>";
-
-              $output .= '</div>';
-            // $output .= '</div>';
-          // $output .= '</div>';
-        // $output .= '</div>';
-        // $output .= '<div ng-if="block.bottom.enable">';
-        //   $output .= '<md-content>';
-        //     $output .= $this->contentRenderBottom();
-        //   $output .= '</md-content>';
-        // $output .= '</div>';
-      $output .= '</div>';
+      $output .= '<canvas id="canvasForChart" width="600" height="700"></canvas>';
     $output .= '</div>';
-    $output .= '<canvas id="canvasForChart" width="600" height="700"></canvas>';
 
-    $output .= '<script src="https://unpkg.com/vue"></script>';
-    $output .= '<script src="LillyVueTemplate.js" type="text/javascript"></script>';
+
+    // $output .= '<script src="https://unpkg.com/vue"></script>';
+    // $output .= '<script type="text/javascript" src="ChartNew.js"></script>';
+    // $output .= '<script type="text/javascript" src="shapesInChart.js"></script>';
+    // $output .= '<script src="LillyVueTemplate.js" type="text/javascript"></script>';
 
     return $output;
   }
