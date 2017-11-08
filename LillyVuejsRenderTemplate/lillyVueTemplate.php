@@ -5,10 +5,11 @@ echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3
 // echo '<script src="https://cdn.rawgit.com/FVANCOP/ChartNew.js/master/ChartNew.js"></script>';
 // echo '<script src="https://rawgit.com/FVANCOP/ChartNew.js/master/ChartNew.js"></script>';
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
-echo '<script type="text/javascript" src="ChartNew.js"></script>';
-echo '<script type="text/javascript" src="shapesInChart.js"></script>';
-echo '<script src="https://unpkg.com/vue"></script>';
-echo '<script type="text/javascript" src="lillyVueTemplate.js"></script>';
+// echo '<script type="text/javascript" src="ChartNew.js"></script>';
+echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>';
+echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>';
+
+echo '<script type="text/javascript" src="chartTemplate.js"></script>';
 echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
 echo "<link rel='stylesheet' href='../plugin.css'>";
 echo '<script src="https://unpkg.com/vue/dist/vue.js"></script>';
@@ -24,15 +25,14 @@ class dashpageBlockGenerator {
   function contentBlockMaster() {
 
     $output = '';
-    $output .= '<div id="block">';
-      $output .= '<canvas id="canvasForChart" width="600" height="700"></canvas>';
+    $output .= '<div id="page-wrapper" width="40" height="40" class="row">';
+
     $output .= '</div>';
 
-
     // $output .= '<script src="https://unpkg.com/vue"></script>';
-    // $output .= '<script type="text/javascript" src="ChartNew.js"></script>';
-    // $output .= '<script type="text/javascript" src="shapesInChart.js"></script>';
-    // $output .= '<script src="LillyVueTemplate.js" type="text/javascript"></script>';
+    $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>';
+    $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>';
+    $output .= '<script src="chartTemplate.js" type="text/javascript"></script>';
 
     return $output;
   }
