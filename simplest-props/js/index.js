@@ -57,6 +57,6 @@ Vue.component('piechart', {
 });
 
 new Vue({
-  el: "#page-wrapper",
+  el: "#app",
 
 });
