@@ -1,8 +1,7 @@
 'use strict';
 
 Vue.component('doughnutchart', {
-  // props: ['text'],
-  template: '<canvas class="col-md-3" ref="canvas" width="40px" height="40px"></canvas>',
+  template: '<canvas class="col-md-3" ref="canvas"></canvas>',
   mounted: function(){
     this.startPie(this.$refs.canvas, 'doughnut');
   },
@@ -28,7 +27,7 @@ Vue.component('doughnutchart', {
   }
 });
 
-Vue.component('piechart', {
+Vue.component('vue-chartjs-pie', {
   // props: ['text'],
   template: '<canvas class="col-md-3" ref="canvas" width="40px" height="40px"></canvas>',
   mounted: function(){

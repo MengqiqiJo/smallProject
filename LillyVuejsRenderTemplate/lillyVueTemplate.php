@@ -16,9 +16,9 @@ class dashpageBlockGenerator {
   function contentBlockMaster() {
 
     $output = '';
-    $output .= '<div id="page-wrapper" width="40" height="40" class="row">';
-    $output .= '<piechart>s1s2s3s4s5</piechart>';
-    $output .= '<doughnutchart>s1s2s3s4s5</doughnutchart>';
+    $output .= '<div id="page-wrapper" class="row">';
+    $output .= '<vue-chartjs-pie></vue-chartjs-pie>';
+    $output .= '<doughnutchart></doughnutchart>';
     $output .= '</div>';
 
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>';

@@ -27,25 +27,20 @@ new Vue({
           labels: this.labels,
           datasets: [
             {
-        data : [45],
-        fillColor : "#2fa9e0",
-        title : "1(12)",
-             },
-             {
-        data : [12],
-        fillColor : "#f24b99",
-        title : "2(28)",
-             },
-             {
-        data : [32],
-        fillColor : "#37d8b3",
-        title : "data3"
-             },
-             {
-        data : [15],
-        fillColor : "#bfbfbf",
-        title : "data4",
-             }]
+              data: this.data,
+              backgroundColor: [
+                "#e25039",
+                "#27a86e",
+                "#f39c12",
+                "#00c0ef",
+                "#428dbc"
+              ],
+              hoverBackgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+              ]
+            }]
         },
         options: {
           animation:{
