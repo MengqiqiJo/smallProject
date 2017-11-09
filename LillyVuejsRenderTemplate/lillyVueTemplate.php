@@ -17,8 +17,18 @@ class dashpageBlockGenerator {
 
     $output = '';
     $output .= '<div id="page-wrapper" class="row">';
-    $output .= '<vue-chartjs-pie></vue-chartjs-pie>';
-    $output .= '<doughnutchart></doughnutchart>';
+      $output .= '<div class="width-300 height-180 col-md-6 margin-left-20 margin-top-12">';
+        $output .= '<vue-chartjs-top></vue-chartjs-top>';
+        $output .= '<doughnutchart class="border-1-e7e7e7"></doughnutchart>';
+      $output .= '</div>';
+      $output .= '<div class="width-300 height-180 col-md-6 margin-left-20 margin-top-12">';
+        $output .= '<vue-chartjs-top></vue-chartjs-top>';
+        $output .= '<vue-chartjs-pie class="border-1-e7e7e7"></vue-chartjs-pie>';
+      $output .= '</div>';
+      $output .= '<div class="width-300 height-180 col-md-6 margin-left-20 margin-top-12">';
+        $output .= '<vue-chartjs-top></vue-chartjs-top>';
+        $output .= '<vue-chartjs-bar class="border-1-e7e7e7 width-300 height-180"></vue-chartjs-bar>';
+      $output .= '</div>';
     $output .= '</div>';
 
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>';
