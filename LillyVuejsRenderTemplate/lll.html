@@ -4,56 +4,9 @@
      <title>Demo ChartNew.js</title>
  </head>
  <body>
- <!--[if lte IE 8]><SCRIPT src='source/excanvas.js'></script><![endif]--><SCRIPT src='source/ChartNew.js'></script>
- <center>
- <FONT SIZE=6><B>Demo of ChartNew.js !</B></FONT>    <BR>
+
  <script>
- defCanvasWidth=1200;
- defCanvasHeight=600;
- var mydata4 = [
- {
-     value : 70,
-     color: "rgba(151,187,205,1)",
-     title : "data1"
- },
- {
-      value : 30,
-      color: "rgba(220,220,220,1)",
-      title : "data1"
- }
- ]
- function myCrossTextFunction(numtxt,valtxt,ctx,config,posX,posY,borderX,borderY,overlay,data,animPC){
-    var now         = new Date();
-    var hour        = now.getHours();
-    var minute      = now.getMinutes();
-    var second      = now.getSeconds();
-    var monthnumber = (now.getMonth()+1);
-    var monthday    = now.getDate();
-    var year        = (now.getFullYear());
-    if(numtxt==0)return("Date : "+monthday+"/"+monthnumber+"/"+year);
-    else if(numtxt==1)return("Time : "+hour+":"+minute);
-    else if(numtxt==2) return(Math.round(animPC*data[0].value)+ " %");
- }
- var varcrosstxt = {
-    crossText : ["%disp time","%dispdate","%dispdata"],
-    crossTextIter: ["first","last","all"],
-    crossTextOverlay :   [true],
-    crossTextFontSize : [20,20,50],
-    crossTextFontColor : ["black"],
-    crossTextRelativePosX : [0,4,2],
-    crossTextRelativePosY : [0,4,2],
-    crossTextPosX : [10,-10,0],
-    crossTextPosY : [10,-10,0],
-    crossTextAlign : ["left","right","center"],
-    crossTextBaseline : ["top","bottom","middle"],
-    crossTextFunction : myCrossTextFunction,
-    canvasBorders : true,
-    graphTitle : "Sample - Variable text on graph"
- }
- document.write("<canvas id=\"canvas_doughnut3\" height=\""+defCanvasHeight+"\" width=\""+defCanvasWidth+"\"></canvas>");
- window.onload = function() {
-     var myLine = new Chart(document.getElementById("canvas_doughnut3").getContext("2d")).Doughnut(mydata4,varcrosstxt);
- }
+
  </script>
  </body>
  </html>
