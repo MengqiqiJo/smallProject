@@ -1,4 +1,5 @@
 'use strict';
+// vue.data
 
 Vue.component('doughnutchart', {
 
@@ -11,11 +12,10 @@ Vue.component('doughnutchart', {
       let chart = new Chart(canvas, {
         type: type,
         data: {
-          datasets: [
-            {
-        data : [45, 12, 32, 15],
-        backgroundColor : ["#2fa9e0", "#f24b99", "#37d8b3","#bfbfbf"]
-        }]
+          datasets: [{
+            data : [45, 12, 32, 15],
+            backgroundColor : ["#2fa9e0", "#f24b99", "#37d8b3","#bfbfbf"]
+          }]
       },
         options: {
           animation:{
@@ -40,11 +40,10 @@ Vue.component('vue-chartjs-pie', {
       let chart = new Chart(canvas, {
         type: type,
         data: {
-          datasets: [
-            {
-        data : [45, 12, 32, 15],
-        backgroundColor : ["#2fa9e0", "#f24b99", "#37d8b3","#bfbfbf"]
-        }]
+          datasets: [{
+            data : [45, 12, 32, 15],
+            backgroundColor : ["#2fa9e0", "#f24b99", "#37d8b3","#bfbfbf"]
+          }]
       },
         options: {
           animation:{
@@ -68,20 +67,21 @@ Vue.component('vue-chartjs-bar', {
       let chart = new Chart(canvas, {
         type: type,
         data: {
-          labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+          labels: ["1(45)", "2(12)", "3(32)", "4(15)"],
           datasets: [
             {
-              label: "Population (millions)",
-              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-              data: [2478,5267,734,784,433]
+              backgroundColor: ["#2fa9e0", "#f24b99", "#37d8b3","#bfbfbf"],
+              data: [45, 12, 32, 15]
         }]
       },
         options: {
           legend: { display: false },
-      title: {
-        display: true,
-        text: 'Predicted world population (millions) in 2050'
-      }
+          // responsive: true,
+          // maintainAspectRatio: false,
+      // title: {
+      //   display: true,
+      //   text: 'Predicted world population (millions) in 2050'
+      // }
         }
       })
     }
@@ -90,7 +90,7 @@ Vue.component('vue-chartjs-bar', {
 
 
 Vue.component('vue-chartjs-top', {
-  template: '<div class="bg-0082ba height-32 width-280 color-fff padding-10">this is the top</div>'
+  template: '<div class="bg-0082ba height-32 color-fff padding-10">this is the top</div>'
 })
 
 new Vue({
