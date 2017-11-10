@@ -3,6 +3,7 @@
 
 Vue.component('doughnutchart', {
 
+  template: `<canvas ref="canvas"></canvas>`,
   mounted: function(){
     this.startPie(this.$refs.canvas, 'doughnut');
   },
@@ -25,12 +26,21 @@ Vue.component('doughnutchart', {
       })
     }
   },
-  template: `<canvas ref="canvas"></canvas>`
+  template:`
+      <span class="doughnutchart">
+        <span class="col-sm-12 col-md-6 col-lg-6">
+          <div class="margin-left-20">
+            <div class="border-1-e7e7e7">
+              <canvas ref="canvas"  class="doughnutchart"></canvas>
+            </div>
+          </div>
+        </span>
+      </span>`
 });
 
 Vue.component('vue-chartjs-pie', {
   // props: ['text'],
-  template: '<canvas ref="canvas"></canvas>',
+  // template: '<canvas ref="canvas"></canvas>',
   mounted: function(){
     this.startPie(this.$refs.canvas, 'pie');
   },
@@ -52,12 +62,21 @@ Vue.component('vue-chartjs-pie', {
         }
       })
     }
-  }
+  },
+  template:`
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="margin-left-20">
+          <div class="border-1-e7e7e7">
+            <vue-chartjs-top></vue-chartjs-top>
+            <canvas ref="canvas"></canvas>
+          </div>
+        </div>
+      </div>`
 });
 
 Vue.component('vue-chartjs-bar', {
   // props: ['text'],
-  template: '<canvas ref="canvas"></canvas>',
+  // template: '<canvas ref="canvas"></canvas>',
   mounted: function(){
     this.startPie(this.$refs.canvas, 'bar');
   },
@@ -76,8 +95,8 @@ Vue.component('vue-chartjs-bar', {
       },
         options: {
           legend: { display: false },
-          // responsive: true,
-          // maintainAspectRatio: false,
+          responsive: true,
+          maintainAspectRatio: false,
       // title: {
       //   display: true,
       //   text: 'Predicted world population (millions) in 2050'
@@ -85,7 +104,16 @@ Vue.component('vue-chartjs-bar', {
         }
       })
     }
-  }
+  },
+  template:`
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="margin-left-20">
+          <div class="border-1-e7e7e7">
+            <vue-chartjs-top></vue-chartjs-top>
+            <canvas ref="canvas"></canvas>
+          </div>
+        </div>
+      </div>`
 });
 
 
