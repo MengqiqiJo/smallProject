@@ -26,18 +26,18 @@ Vue.component('doughnutchart', {
     }
   },
   template:`
-      <span class="doughnutchart">
-        <span class="col-sm-12 col-md-6 col-lg-6">
-          <div class="margin-left-20">
-            <div class="border-1-e7e7e7">
-              <vue-chartjs-top></vue-chartjs-top>
-              <div class="margin-50">
-                <canvas ref="canvas"></canvas>
-              </div>
+    <span class="doughnutchart">
+      <span class="col-sm-12 col-md-6 col-lg-6">
+        <div class="margin-left-20 margin-top-16">
+          <div class="border-1-e7e7e7">
+            <vue-chartjs-top></vue-chartjs-top>
+            <div class="margin-50">
+              <canvas ref="canvas"></canvas>
             </div>
           </div>
-        </span>
-      </span>`
+        </div>
+      </span>
+    </span>`
 });
 
 Vue.component('vue-chartjs-pie', {
@@ -66,18 +66,18 @@ Vue.component('vue-chartjs-pie', {
     }
   },
   template:`
-      <span class="doughnutchart">
-        <span class="col-sm-12 col-md-6 col-lg-6">
-          <div class="margin-left-20">
-            <div class="border-1-e7e7e7">
-              <vue-chartjs-top></vue-chartjs-top>
-              <div class="margin-50">
-                <canvas ref="canvas"></canvas>
-              </div>
+    <span class="doughnutchart">
+      <span class="col-sm-12 col-md-6 col-lg-6">
+        <div class="margin-left-20 margin-top-16">
+          <div class="border-1-e7e7e7">
+            <vue-chartjs-top></vue-chartjs-top>
+            <div class="margin-50">
+              <canvas ref="canvas"></canvas>
             </div>
           </div>
-        </span>
-      </span>`
+        </div>
+      </span>
+    </span>`
 });
 
 Vue.component('vue-chartjs-bar', {
@@ -112,18 +112,18 @@ Vue.component('vue-chartjs-bar', {
     }
   },
   template:`
-      <div class="doughnutchart">
-        <div class="col-sm-12 col-md-6 col-lg-6">
-          <div class="margin-left-20">
-            <div class="border-1-e7e7e7">
-              <vue-chartjs-top></vue-chartjs-top>
-              <div class="margin-50 min-height-382">
-                <canvas ref="canvas"></canvas>
-              </div>
+    <div class="doughnutchart">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="margin-left-20 margin-top-16">
+          <div class="border-1-e7e7e7">
+            <vue-chartjs-top></vue-chartjs-top>
+            <div class="margin-50 min-height-382">
+              <canvas ref="canvas"></canvas>
             </div>
           </div>
         </div>
-      </div>`
+      </div>
+    </div>`
 });
 
 Vue.component('vue-chartjs-top', {
