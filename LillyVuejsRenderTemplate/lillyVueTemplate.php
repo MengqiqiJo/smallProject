@@ -17,27 +17,10 @@ class dashpageBlockGenerator {
 
     $output = '';
     $output .= '<div id="page-wrapper" class="row">';
-      $output .= '<doughnutchart></doughnutchart>';
-
-
-      // $output .= '<div class="col-sm-12 col-md-6 col-lg-6">';
-      //   $output .= '<div class="margin-left-20">';
-      //     $output .= '<div class="border-1-e7e7e7">';
-      //       $output .= '<vue-chartjs-top></vue-chartjs-top>';
-            $output .= '<vue-chartjs-pie></vue-chartjs-pie>';
-      //     $output .= '</div>';
-      //   $output .= '</div>';
-      // $output .= '</div>';
-
-      // $output .= '<div class="col-sm-12 col-md-6 col-lg-6">';
-      //   $output .= '<div class="margin-left-20">';
-      //     $output .= '<div class="border-1-e7e7e7">';
-      //       $output .= '<vue-chartjs-top></vue-chartjs-top>';
-            $output .= '<vue-chartjs-bar></vue-chartjs-bar>';
-      //     $output .= '</div>';
-      //   $output .= '</div>';
-      // $output .= '</div>';
-
+    $output .= '<doughnutchart></doughnutchart>';
+    $output .= '<vue-chartjs-pie></vue-chartjs-pie>';
+    $output .= '<vue-chartjs-bar></vue-chartjs-bar>';
+    $output .= '<vue-chartjs-bar></vue-chartjs-bar>';
     $output .= '</div>';
 
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>';
