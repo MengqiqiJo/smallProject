@@ -21,13 +21,17 @@ class dashpageBlockGenerator {
     // $output .= '<vue-chartjs-pie></vue-chartjs-pie>';
     // $output .= '<vue-chartjs-bar></vue-chartjs-bar>';
     // $output .= '<vue-chartjs-line></vue-chartjs-line>';
-      $output .= '<p>{{blocks}}</p>';
-      $output .= '<p>{{blocks}}</p>';
+      $output .= '<p>{{blockData}}</p>';
+      // $output .= '<p>{{blockData}}</p>';
     $output .= '</div>';
 
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>';
+    // $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>';
+    // $output .= '<script src="https://unpkg.com/axios/dist/axios.min.js"></script>';
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>';
+    $output .= '<script src="https://unpkg.com/axios/dist/axios.min.js"></script>';
     $output .= '<script src="chartTemplate.js" type="text/javascript"></script>';
+
 
     return $output;
   }

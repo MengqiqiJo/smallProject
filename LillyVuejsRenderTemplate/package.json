@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/FVANCOP/ChartNew.js/issues"
   },
-  "homepage": "https://github.com/FVANCOP/ChartNew.js#readme"
+  "homepage": "https://github.com/FVANCOP/ChartNew.js#readme",
+  "dependencies": {
+    "axios": "^0.17.1"
+  }
 }
