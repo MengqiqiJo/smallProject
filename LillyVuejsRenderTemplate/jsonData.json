@@ -82,6 +82,8 @@
                 ],
                 "datasets": [
                   {
+              "backgroundColor": ["#2fa9e0", "#f24b99", "#37d8b3","#bfbfbf"],
+
                     "data": [
                       45,
                       12,
@@ -89,16 +91,16 @@
                       15
                     ]
                   }
-                ],
-                "chartOptions": {
+                ]
+              }
+            ],
+            "chartOptions": {
                   "legend": {
                     "display": false
                   },
                   "responsive": true,
                   "maintainAspectRatio": false
-                }
-              }
-            ],
+                },
               "middleMiddleRightClass": "col-md-2",
               "middleMiddleRight": "<div class=\"margin-top-150\"><span class=\"bg-f3f3f3 legend-square\"></span>1<br /><span class=\"bg-99dc3b legend-square\"></span>2<br /></div>"
           },
