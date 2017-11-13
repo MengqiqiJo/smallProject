@@ -41,8 +41,6 @@ Vue.component('doughnutchart', {
 });
 
 Vue.component('vue-chartjs-pie', {
-  // props: ['text'],
-  // template: '<canvas ref="canvas"></canvas>',
   mounted: function(){
     this.startPie(this.$refs.canvas, 'pie');
   },
@@ -81,8 +79,6 @@ Vue.component('vue-chartjs-pie', {
 });
 
 Vue.component('vue-chartjs-bar', {
-  // props: ['text'],
-  // template: '<canvas ref="canvas"></canvas>',
   mounted: function(){
     this.startPie(this.$refs.canvas, 'bar');
   },
@@ -126,11 +122,69 @@ Vue.component('vue-chartjs-bar', {
     </div>`
 });
 
+Vue.component('vue-chartjs-line', {
+  mounted: function(){
+    this.startPie(this.$refs.canvas, 'line');
+  },
+  methods: {
+    startPie: function(canvas, type){
+      console.log("lslslslslslslsls");
+      let chart = new Chart(canvas, {
+        type: type,
+        data: {
+          labels: ["1(45)", "2(12)", "3(32)", "4(15)"],
+          datasets: [
+            {
+              data: [45, 12, 32, 15]
+        }]
+      },
+        options: {
+          legend: { display: false },
+          responsive: true,
+          maintainAspectRatio: false
+        }
+      })
+    }
+  },
+  template:`
+    <div class="doughnutchart">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="margin-left-20 margin-top-16">
+          <div class="border-1-e7e7e7">
+            <vue-chartjs-top></vue-chartjs-top>
+            <div class="margin-50 min-height-382">
+              <canvas ref="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`
+});
+
 Vue.component('vue-chartjs-top', {
   template: '<div class="bg-0082ba height-32 color-fff padding-10">this is the top</div>'
 })
 
 new Vue({
   el: "#page-wrapper",
-
+  data: {
+    blocks: "",
+    option: [],
+    chartType: "",
+    dataset: []
+  },
+  mounted: function () {
+    this.getData();
+  },
+  methods: {
+    getData: function () {
+      console.log("gettttddddddaaatttaaa");
+      $.getJSON("jsonData.json").then(function (res) {
+        this.blocks = res;
+        // this.option = this.blocks['contentSection'][0].middle.middleMiddle.middleMiddleMiddle.chartOptions
+        // this.chartType = this.blocks['contentSection'][0].middle.middleMiddle.middleMiddleMiddle.chartType
+        // this.dataset = this.blocks['contentSection'][0].middle.middleMiddle.middleMiddleMiddle.chartData
+      });
+    }
+  }
 });
