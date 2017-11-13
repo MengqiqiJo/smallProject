@@ -169,22 +169,24 @@ new Vue({
   el: "#page-wrapper",
   data: {
     blocks: "",
-    option: [],
+    option: "",
     chartType: "",
-    dataset: []
+    dataset: "",
   },
   mounted: function () {
     this.getData();
   },
   methods: {
     getData: function () {
-      console.log("gettttddddddaaatttaaa");
-      $.getJSON("jsonData.json").then(function (res) {
-        this.blocks = res;
+      console.log("gettttddddddaaatttaaa1111222");
+      $.get( "jsonData.json", function(data) {
+        // this.blocks.push(res);
+        console.log("gettttddddddaaatttaaa2");
         // this.option = this.blocks['contentSection'][0].middle.middleMiddle.middleMiddleMiddle.chartOptions
         // this.chartType = this.blocks['contentSection'][0].middle.middleMiddle.middleMiddleMiddle.chartType
         // this.dataset = this.blocks['contentSection'][0].middle.middleMiddle.middleMiddleMiddle.chartData
       });
+      console.log("gettttddddddaaatttaaa33");
     }
   }
 });

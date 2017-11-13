@@ -16,13 +16,13 @@ class dashpageBlockGenerator {
   function contentBlockMaster() {
 
     $output = '';
-    $output .= '<div id="page-wrapper" class="row">';
+    $output .= '<div id="page-wrapper">';
     // $output .= '<doughnutchart></doughnutchart>';
     // $output .= '<vue-chartjs-pie></vue-chartjs-pie>';
     // $output .= '<vue-chartjs-bar></vue-chartjs-bar>';
     // $output .= '<vue-chartjs-line></vue-chartjs-line>';
-    $output .= '<p>{{blocks}}</p>';
-    $output .= '<p>{{dataset}}</p>';
+      $output .= '<p>{{blocks}}</p>';
+      $output .= '<p>{{blocks}}</p>';
     $output .= '</div>';
 
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>';
