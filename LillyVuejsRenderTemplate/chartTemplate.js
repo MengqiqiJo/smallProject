@@ -20,7 +20,7 @@ var app = new Vue({
           // console.log(response.data.contentSection[0]);
           // app.blockData = response.data.contentSection[0];
           this.pieChartData = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartData;
-          // app.barChartData = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartData;
+          // this.barChartData = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartData;
 
           console.log("111122");
           console.log(this.pieChartData);
@@ -37,9 +37,6 @@ var app = new Vue({
         .catch(function (error) {
           console.log(error);
         });
-
-
-
       }
     },
     template:`
