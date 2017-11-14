@@ -25,7 +25,7 @@ var app = new Vue({
        });
     },
     methods: {
-      startPie: function(canvas, type, chartData) {
+      drawChart: function(canvas, type, chartData) {
         console.log("2222");
           let chart = new Chart(canvas, {
             type: type,
@@ -40,9 +40,8 @@ var app = new Vue({
     },
     watch: {
       pieChartData: function () {
-        this.startPie(this.$refs.canvas, 'pie', this.pieChartData);
+        this.drawChart(this.$refs.canvas, 'pie', this.pieChartData);
       }
-
     },
     template:`
       <span class="chart-wrapper">
