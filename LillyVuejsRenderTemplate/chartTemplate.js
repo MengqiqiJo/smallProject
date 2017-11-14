@@ -9,18 +9,14 @@ Vue.component('vue-chartjs-top', {
  * @
  */
 Vue.component('vue-chartjs-pie', {
-  props: ['pieChartData'],
+  props: ['pieChartData', 'pieChartOptions'],
   methods: {
     drawChart: function(canvas, type, chartData) {
       console.log("2222");
       let chart = new Chart(canvas, {
         type: type,
         data: this.pieChartData,
-        options: {
-          animation:{
-            animateScale:false
-          }
-        }
+        // options: this.pieChartOptions,
       })
     }
   },
@@ -52,18 +48,14 @@ Vue.component('vue-chartjs-pie', {
  * @
  */
 Vue.component('vue-chartjs-bar', {
-  props: ['barChartData'],
+  props: ['barChartData', 'barChartOptions'],
   methods: {
     drawChart: function(canvas, type, chartData) {
       console.log("2222");
       let chart = new Chart(canvas, {
         type: type,
         data: this.barChartData,
-        options: {
-          animation:{
-            animateScale:false
-          }
-        }
+        options: this.barChartOptions,
       })
     }
   },
@@ -96,44 +88,29 @@ var app = new Vue({
     data: {
       blockData: "",
       pieChartData: "",
+      pieChartOptions: "",
       barChartData: "",
+      barChartOptions: "",
     },
     created: function () {
        var self = this;
        axios.get('jsonData.json').then((response) => {
-         console.log("3333");
+         console.log("3333666");
          self.pieChartData = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartData;
+         self.pieChartOptions = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartOptions;
+
          self.barChartData = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartData;
+         self.barChartOptions = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartOptions;
+         console.log(self.pieChartOptions);
+         console.log(self.barChartOptions);
        })
        .catch((error) => {
          console.log(error);
        });
     },
-    // methods: {
-    //   drawChart: function(canvas, type, chartData) {
-    //     console.log("2222");
-    //       let chart = new Chart(canvas, {
-    //         type: type,
-    //         data: this.pieChartData,
-    //         options: {
-    //           animation:{
-    //             animateScale: false
-    //           }
-    //         }
-    //       })
-    //   }
-    // },
-    // watch: {
-    //   pieChartData: function () {
-    //     this.drawChart(this.$refs.canvas, 'pie', this.pieChartData);
-    //   },
-    //   barChartData: function () {
-    //     this.drawChart(this.$refs.canvas, 'bar', this.barChartData);
-    //   }
-    // },
     template:`
       <div>
-        <vue-chartjs-pie v-bind:pieChartData="pieChartData"></vue-chartjs-pie>
-        <vue-chartjs-bar v-bind:barChartData="barChartData"></vue-chartjs-bar>
+        <vue-chartjs-pie v-bind:pieChartData="pieChartData" v-bind:pieChartOptions="pieChartOptions"></vue-chartjs-pie>
+        <vue-chartjs-bar v-bind:barChartData="barChartData" v-bind:barChartOptions="barChartOptions"></vue-chartjs-bar>
       </div>`
   });
