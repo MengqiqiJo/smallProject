@@ -27,8 +27,6 @@ class dashpageBlockGenerator {
     $output .= '</div>';
 
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>';
-    // $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>';
-    // $output .= '<script src="https://unpkg.com/axios/dist/axios.min.js"></script>';
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>';
     $output .= '<script src="https://unpkg.com/axios/dist/axios.min.js"></script>';
     $output .= '<script src="chartTemplate.js" type="text/javascript"></script>';
