@@ -23,7 +23,7 @@ class dashpageBlockGenerator {
     // $output .= '<vue-chartjs-line></vue-chartjs-line>';
       // $output .= '<p>{{blockData}}</p>';
       $output .= '<p>{{pieChartData}}</p>';
-      $output .= '<p>{{barChartData}}</p>';
+      // $output .= '<p>{{barChartData}}</p>';
     $output .= '</div>';
 
     $output .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>';
