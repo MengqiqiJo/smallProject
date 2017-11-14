@@ -18,17 +18,17 @@ var app = new Vue({
     self.dataset = "ready";
     this.drawDoughnutChart();
   },
-  methods: {
- //    getData: function () {
- //       var self = this;
- //    $.get( "jsonData.json", function(data) {
- //        self.blocks = data;
- //        self.option = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartOptions
- //        self.chartType = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartType
- //        // blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartId
- //        self.dataset = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartData
+  // methods: {
+  //   getData: function () {
+  //      var self = this;
+  //   $.get( "jsonData.json", function(data) {
+  //       self.blocks = data;
+  //       self.option = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartOptions
+  //       self.chartType = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartType
+  //       // blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartId
+  //       self.dataset = self.blocks['contentSection'][2].middle.middleMiddle.middleMiddleMiddle.chartData
 
- //    });
+  //   });
  //    window.onload = function() {
  //    var myLine = new Chart(document.getElementById("canvas_Doughnut").getContext("2d")).Doughnut(self.dataset,self.opt);
  //  }

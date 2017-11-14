@@ -1,4 +1,9 @@
-
+/**
+ * @file
+ */
+Vue.component('vue-chartjs-top', {
+  template: '<div class="bg-0082ba height-32 color-fff padding-10">this is the top</div>'
+})
 
 var app = new Vue({
     el: "#page-wrapper",
@@ -8,39 +13,38 @@ var app = new Vue({
       barChartData: "",
     },
     created: function () {
+       console.log("1111");
+       axios.get('jsonData.json').then(function(response) {
+         app.pieChartData = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartData;
+         app.barChartData = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartData;
+         console.log("3333");
+       })
+       .catch(function (error) {
+         console.log(error);
+       });
 
     },
     mounted: function(){
-      this.startPie(this.$refs.canvas, 'pie');
+      console.log("2222");
+
+      this.startPie(this.$refs.canvas, 'pie', this.pieChartData);
     },
     methods: {
-      startPie: function(canvas, type){
-        axios.get('jsonData.json').then(function(response) {
-          console.log("1111");
-          // console.log(response.data.contentSection[0]);
-          // app.blockData = response.data.contentSection[0];
-          this.pieChartData = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartData;
-          // this.barChartData = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartData;
-
-          console.log("111122");
-          console.log(this.pieChartData);
+      startPie: function(canvas, type, chartData){
+        console.log(chartData);
           let chart = new Chart(canvas, {
             type: type,
-            data: this.pieChartData,
+            data: chartData,
             options: {
               animation:{
                 animateScale:false
               }
             }
           })
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
       }
     },
     template:`
-      <span class="doughnutchart">
+      <span class="chart-wrapper">
         <span class="col-sm-12 col-md-6 col-lg-6">
           <div class="margin-left-20 margin-top-16">
             <div class="border-1-e7e7e7">
