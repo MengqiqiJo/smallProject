@@ -9,20 +9,20 @@ Vue.component('vue-chartjs-top', {
  * @
  */
 Vue.component('vue-chartjs-pie', {
-  props: ['pieChartData', 'pieChartOptions'],
+  props: ['pieChartData', 'pieChartOptions', 'chartType'],
   methods: {
     drawChart: function(canvas, type, chartData) {
       console.log("2222");
       let chart = new Chart(canvas, {
-        type: type,
+        type: this.chartType,
         data: this.pieChartData,
-        // options: this.pieChartOptions,
+        options: this.pieChartOptions,
       })
     }
   },
   watch: {
     pieChartData: function () {
-      this.drawChart(this.$refs.canvas, 'pie', this.pieChartData);
+      this.drawChart(this.$refs.canvas, this.chartType, this.pieChartData);
     },
     // barChartData: function () {
     //   this.drawChart(this.$refs.canvas, 'bar', this.barChartData);
@@ -48,20 +48,24 @@ Vue.component('vue-chartjs-pie', {
  * @
  */
 Vue.component('vue-chartjs-bar', {
-  props: ['barChartData', 'barChartOptions'],
+  props: ['barChartData', 'barChartOptions', 'chartType'],
   methods: {
     drawChart: function(canvas, type, chartData) {
       console.log("2222");
       let chart = new Chart(canvas, {
-        type: type,
+        type: this.chartType,
         data: this.barChartData,
-        options: this.barChartOptions,
+        options: {
+          animation:{
+            animateScale:false
+          }
+        }
       })
     }
   },
   watch: {
     barChartData: function () {
-      this.drawChart(this.$refs.canvas, 'bar', this.barChartData);
+      this.drawChart(this.$refs.canvas, this.chartType, this.barChartData);
     }
 
   },
@@ -91,14 +95,18 @@ var app = new Vue({
       pieChartOptions: "",
       barChartData: "",
       barChartOptions: "",
+      pieChartType: "pie",
+      doughnutChartType: "doughnut",
+      lineChartType: "line",
+      barChartType: "bar"
+
     },
     created: function () {
        var self = this;
        axios.get('jsonData.json').then((response) => {
-         console.log("3333666");
+         console.log("3333");
          self.pieChartData = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartData;
          self.pieChartOptions = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartOptions;
-
          self.barChartData = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartData;
          self.barChartOptions = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartOptions;
          console.log(self.pieChartOptions);
@@ -110,7 +118,9 @@ var app = new Vue({
     },
     template:`
       <div>
-        <vue-chartjs-pie v-bind:pieChartData="pieChartData" v-bind:pieChartOptions="pieChartOptions"></vue-chartjs-pie>
-        <vue-chartjs-bar v-bind:barChartData="barChartData" v-bind:barChartOptions="barChartOptions"></vue-chartjs-bar>
+        <vue-chartjs-pie v-bind:pieChartData="pieChartData" v-bind:chartType="pieChartType"></vue-chartjs-pie>
+        <vue-chartjs-pie v-bind:pieChartData="pieChartData" v-bind:chartType="doughnutChartType"></vue-chartjs-pie>
+        <vue-chartjs-bar v-bind:barChartData="barChartData" v-bind:chartType="barChartType"></vue-chartjs-bar>
+        <vue-chartjs-bar v-bind:barChartData="barChartData" v-bind:chartType="lineChartType"></vue-chartjs-bar>
       </div>`
   });

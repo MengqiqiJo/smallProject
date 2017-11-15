@@ -34,7 +34,7 @@
                     "#37d8b3",
                     "#bfbfbf"
                   ]
-                },
+                }
               ]
             },
             "chartOptions": {
@@ -71,7 +71,7 @@
           "middleMiddleMiddleClass": "col-md-10",
           "middleMiddleMiddle": {
             "chartId": 92771878,
-            "chartType": "bar",
+            "chartType": "Bar",
             "chartData": [
               {
                 "labels": [
@@ -82,27 +82,31 @@
                 ],
                 "datasets": [
                   {
-              "backgroundColor": ["#2fa9e0", "#f24b99", "#37d8b3","#bfbfbf"],
-
                     "data": [
                       45,
                       12,
                       32,
                       15
-                    ]
-                  }
-                ]
-              }
-            ],
+                    ],
+                  "backgroundColor": [
+                    "#2fa9e0",
+                    "#f24b99",
+                    "#37d8b3",
+                    "#bfbfbf"
+                  ]
+                }
+              ]
+            }
+          ],
             "chartOptions": {
-              "legend": {
-                "display": false
-              },
-              "responsive": true,
-              "maintainAspectRatio": false
-            },
-            "middleMiddleRightClass": "col-md-2",
-            "middleMiddleRight": "<div class=\"margin-top-150\"><span class=\"bg-f3f3f3 legend-square\"></span>1<br /><span class=\"bg-99dc3b legend-square\"></span>2<br /></div>"
+                  "legend": {
+                    "display": false
+                  },
+                  "responsive": true,
+                  "maintainAspectRatio": false
+                },
+              "middleMiddleRightClass": "col-md-2",
+              "middleMiddleRight": "<div class=\"margin-top-150\"><span class=\"bg-f3f3f3 legend-square\"></span>1<br /><span class=\"bg-99dc3b legend-square\"></span>2<br /></div>"
           },
             "middleBottom": "<div class=\"col-md-12 padding-0 position-absolute bottom-0\"><div class=\"col-md-6 height-66 border-1-eee text-align-center\">NTS</div><div class=\"col-md-6 height-66 border-1-eee text-align-center\">RESPONSES</div></div>"
         },
