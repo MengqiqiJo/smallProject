@@ -123,30 +123,30 @@ Vue.component('vue-chartjs-bar', {
     </div>`
 });
 
-// Vue.component('vue-chartjs-line', {
-//   mounted: function(){
-//     this.startPie(this.$refs.canvas, 'line');
-//   },
-//   methods: {
-//     startPie: function(canvas, type){
-//       console.log("lslslslslslslsls");
-//       let chart = new Chart(canvas, {
-//         type: type,
-//         data: {
-//           labels: ["1(45)", "2(12)", "3(32)", "4(15)"],
-//           datasets: [
-//             {
-//               data: [45, 12, 32, 15]
-//         }]
-//       },
-//         options: {
-//           legend: { display: false },
-//           responsive: true,
-//           maintainAspectRatio: false
-//         }
-//       })
-//     }
-//   },
+Vue.component('vue-chartjs-line', {
+  mounted: function(){
+    this.startPie(this.$refs.canvas, 'line');
+  },
+  methods: {
+    startPie: function(canvas, type){
+      console.log("lslslslslslslsls");
+      let chart = new Chart(canvas, {
+        type: type,
+        data: {
+          labels: ["1(45)", "2(12)", "3(32)", "4(15)"],
+          datasets: [
+            {
+              data: [45, 12, 32, 15]
+        }]
+      },
+        options: {
+          legend: { display: false },
+          responsive: true,
+          maintainAspectRatio: false
+        }
+      })
+    }
+  },
 //   template:`
 //     <div class="doughnutchart">
 //       <div class="col-sm-12 col-md-6 col-lg-6">

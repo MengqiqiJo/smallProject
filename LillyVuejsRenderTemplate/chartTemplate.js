@@ -2,7 +2,7 @@
  * @file
  */
 Vue.component('vue-chartjs-top', {
-  template: '<div class="bg-0082ba height-32 color-fff padding-10">this is the top</div>'
+  template: '<div class="bg-0082ba max-height-32 color-fff padding-10">this is top</div>'
 })
 
 /**
@@ -15,7 +15,7 @@ Vue.component('vue-chartjs-pie', {
       console.log("2222");
       let chart = new Chart(canvas, {
         type: this.chartType,
-        data: this.pieChartData,
+        data: this.chartType,
         options: this.pieChartOptions,
       })
     }
@@ -35,7 +35,7 @@ Vue.component('vue-chartjs-pie', {
         <div class="margin-left-20 margin-top-16">
           <div class="border-1-e7e7e7">
             <vue-chartjs-top></vue-chartjs-top>
-            <div class="margin-50">
+             <div class="margin-50">
               <canvas ref="canvas"></canvas>
             </div>
           </div>
@@ -47,42 +47,38 @@ Vue.component('vue-chartjs-pie', {
 /**
  * @
  */
-Vue.component('vue-chartjs-bar', {
-  props: ['barChartData', 'barChartOptions', 'chartType'],
-  methods: {
-    drawChart: function(canvas, type, chartData) {
-      console.log("2222");
-      let chart = new Chart(canvas, {
-        type: this.chartType,
-        data: this.barChartData,
-        options: {
-          animation:{
-            animateScale:false
-          }
-        }
-      })
-    }
-  },
-  watch: {
-    barChartData: function () {
-      this.drawChart(this.$refs.canvas, this.chartType, this.barChartData);
-    }
+// Vue.component('vue-chartjs-bar', {
+//   props: ['barChartData', 'barChartOptions', 'chartType'],
+//   methods: {
+//     drawChart: function(canvas, type, chartData) {
+//       console.log("2222");
+//       let chart = new Chart(canvas, {
+//         type: this.chartType,
+//         data: this.barChartData,
+//         options: this.barChartOptions
+//       })
+//     }
+//   },
+//   watch: {
+//     barChartData: function () {
+//       this.drawChart(this.$refs.canvas, this.chartType, this.barChartData);
+//     }
 
-  },
-  template:`
-    <span class="doughnutchart">
-      <span class="col-sm-12 col-md-6 col-lg-6">
-        <div class="margin-left-20 margin-top-16">
-          <div class="border-1-e7e7e7">
-            <vue-chartjs-top></vue-chartjs-top>
-            <div class="margin-50">
-              <canvas ref="canvas"></canvas>
-            </div>
-          </div>
-        </div>
-      </span>
-    </span>`
-});
+//   },
+//   template:`
+//     <span class="doughnutchart">
+//       <span class="col-sm-12 col-md-6 col-lg-6">
+//         <div class="margin-left-20 margin-top-16">
+//           <div class="border-1-e7e7e7">
+//             <vue-chartjs-top></vue-chartjs-top>
+//             <div class="margin-50 min-height-382">
+//               <canvas ref="canvas"></canvas>
+//             </div>
+//           </div>
+//         </div>
+//       </span>
+//     </span>`
+// });
 
 /**
  * @
@@ -98,8 +94,7 @@ var app = new Vue({
       pieChartType: "pie",
       doughnutChartType: "doughnut",
       lineChartType: "line",
-      barChartType: "bar"
-
+      barChartType: "bar",
     },
     created: function () {
        var self = this;
@@ -118,9 +113,9 @@ var app = new Vue({
     },
     template:`
       <div>
-        <vue-chartjs-pie v-bind:pieChartData="pieChartData" v-bind:chartType="pieChartType"></vue-chartjs-pie>
-        <vue-chartjs-pie v-bind:pieChartData="pieChartData" v-bind:chartType="doughnutChartType"></vue-chartjs-pie>
-        <vue-chartjs-bar v-bind:barChartData="barChartData" v-bind:chartType="barChartType"></vue-chartjs-bar>
-        <vue-chartjs-bar v-bind:barChartData="barChartData" v-bind:chartType="lineChartType"></vue-chartjs-bar>
+        <vue-chartjs-pie v-bind:pieChartData="pieChartData" v-bind:pieChartOptions="pieChartOptions" v-bind:chartType="pieChartType"></vue-chartjs-pie>
+        <vue-chartjs-pie v-bind:pieChartData="pieChartData" v-bind:pieChartOptions="pieChartOptions" v-bind:chartType="doughnutChartType"></vue-chartjs-pie>
+        <vue-chartjs-pie v-bind:pieChartData="barChartData" v-bind:pieChartOptions="barChartOptions" v-bind:chartType="barChartType"></vue-chartjs-pie>
+        <vue-chartjs-pie v-bind:pieChartData="barChartData" v-bind:pieChartOptions="barChartOptions" v-bind:chartType="lineChartType"></vue-chartjs-pie>
       </div>`
   });
