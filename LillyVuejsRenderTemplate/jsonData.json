@@ -115,6 +115,71 @@
           "value": ""
         }
       }
+    },
+    {
+      "blockId": 392654866,
+      "class": "col-xs-12 col-md-6",
+      "blockClasses": "height-400 overflow-hidden position-relative",
+      "type": "chart",
+      "top": {
+        "enable": true,
+        "value": "How effective is the speaker?",
+        "class": "col-xs-12 col-md-6"
+      },
+      "topClass": "col-xs-12 col-md-6",
+      "middle": {
+        "enable": true,
+        "middleTop": null,
+        "middleMiddle": {
+          "middleMiddleLeftClass": "",
+          "middleMiddleLeft": "",
+          "middleMiddleMiddleClass": "col-md-10",
+          "middleMiddleMiddle": {
+            "chartId": 92771878,
+            "chartType": "Line",
+            "chartData":
+              {
+                "labels": [
+                  "1(45)",
+                  "2(12)",
+                  "3(32)",
+                  "4(15)"
+                ],
+                "datasets": [
+                  {
+                    "data": [
+                      45,
+                      12,
+                      32,
+                      15
+                    ],
+                  "backgroundColor": [
+                    "#2fa9e0",
+                    "#f24b99",
+                    "#37d8b3",
+                    "#bfbfbf"
+                  ]
+                }
+              ]
+            }
+          ,
+            "chartOptions": {
+                  "legend": {
+                    "display": false
+                  },
+                  "responsive": true,
+                  "maintainAspectRatio": false
+                },
+              "middleMiddleRightClass": "col-md-2",
+              "middleMiddleRight": "<div class=\"margin-top-150\"><span class=\"bg-f3f3f3 legend-square\"></span>1<br /><span class=\"bg-99dc3b legend-square\"></span>2<br /></div>"
+          },
+            "middleBottom": "<div class=\"col-md-12 padding-0 position-absolute bottom-0\"><div class=\"col-md-6 height-66 border-1-eee text-align-center\">NTS</div><div class=\"col-md-6 height-66 border-1-eee text-align-center\">RESPONSES</div></div>"
+        },
+        "bottom": {
+          "enable": true,
+          "value": ""
+        }
+      }
     }
   ]
 }
