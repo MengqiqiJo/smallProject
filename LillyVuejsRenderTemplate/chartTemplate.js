@@ -11,27 +11,23 @@ Vue.component('vue-chartjs-top', {
 Vue.component('vue-chartjs-pie', {
   props: ['pieChartData', 'pieChartOptions', 'chartType'],
   methods: {
-    drawChart: function(canvas, type, chartData) {
+    drawChart: function(canvas, type, chartData, chartOptions) {
       console.log("2222");
       let chart = new Chart(canvas, {
-        type: this.chartType,
-        data: this.chartType,
-        options: this.pieChartOptions,
+        type: type,
+        data: chartData,
+        options: chartOptions,
       })
     }
   },
   watch: {
     pieChartData: function () {
-      this.drawChart(this.$refs.canvas, this.chartType, this.pieChartData);
+      this.drawChart(this.$refs.canvas, this.chartType, this.pieChartData, this.pieChartOptions);
     },
-    // barChartData: function () {
-    //   this.drawChart(this.$refs.canvas, 'bar', this.barChartData);
-    // }
-
   },
   template:`
-    <span class="doughnutchart">
-      <span class="col-sm-12 col-md-6 col-lg-6">
+    <div>
+      <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="margin-left-20 margin-top-16">
           <div class="border-1-e7e7e7">
             <vue-chartjs-top></vue-chartjs-top>
@@ -40,45 +36,9 @@ Vue.component('vue-chartjs-pie', {
             </div>
           </div>
         </div>
-      </span>
-    </span>`
+      </div>
+    </div>`
 });
-
-/**
- * @
- */
-// Vue.component('vue-chartjs-bar', {
-//   props: ['barChartData', 'barChartOptions', 'chartType'],
-//   methods: {
-//     drawChart: function(canvas, type, chartData) {
-//       console.log("2222");
-//       let chart = new Chart(canvas, {
-//         type: this.chartType,
-//         data: this.barChartData,
-//         options: this.barChartOptions
-//       })
-//     }
-//   },
-//   watch: {
-//     barChartData: function () {
-//       this.drawChart(this.$refs.canvas, this.chartType, this.barChartData);
-//     }
-
-//   },
-//   template:`
-//     <span class="doughnutchart">
-//       <span class="col-sm-12 col-md-6 col-lg-6">
-//         <div class="margin-left-20 margin-top-16">
-//           <div class="border-1-e7e7e7">
-//             <vue-chartjs-top></vue-chartjs-top>
-//             <div class="margin-50 min-height-382">
-//               <canvas ref="canvas"></canvas>
-//             </div>
-//           </div>
-//         </div>
-//       </span>
-//     </span>`
-// });
 
 /**
  * @

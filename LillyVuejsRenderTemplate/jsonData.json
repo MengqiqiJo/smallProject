@@ -72,7 +72,7 @@
           "middleMiddleMiddle": {
             "chartId": 92771878,
             "chartType": "Bar",
-            "chartData": [
+            "chartData":
               {
                 "labels": [
                   "1(45)",
@@ -97,7 +97,7 @@
                 }
               ]
             }
-          ],
+          ,
             "chartOptions": {
                   "legend": {
                     "display": false
