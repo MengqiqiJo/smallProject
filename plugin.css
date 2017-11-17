@@ -17,7 +17,9 @@
  *
  *
  */
-
+.max-height-580 {
+  max-height: 580px;
+}
 /**
  * background
  */
