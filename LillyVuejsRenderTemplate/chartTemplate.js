@@ -112,6 +112,7 @@ var app = new Vue({
   },
   template:`
     <div>
+     <vue-chartjs-pie v-bind:pieChartData=pieChartData[1] v-bind:pieChartOptions=pieChartOptions[1] v-bind:chartTop=pieChartTop[1] v-bind:chartType="barChartType" v-bind:chartTopClass="topClass"></vue-chartjs-pie>
       <vue-chartjs-pie v-bind:pieChartData=pieChartData[0] v-bind:pieChartOptions=pieChartOptions[0] v-bind:chartTop=pieChartTop[0] v-bind:chartType="pieChartType" v-bind:chartTopClass="topClass"></vue-chartjs-pie>
     </div>`
 });
