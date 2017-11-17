@@ -32,8 +32,8 @@ Vue.component('vue-chartjs-pie', {
         <div class="margin-left-20 margin-top-16">
           <div class="border-1-e7e7e7">
             <vue-chartjs-top v-bind:chartTop="chartTop"></vue-chartjs-top>
-             <div class="margin-50">
-              <canvas ref="canvas" class="max-height-580"></canvas>
+             <div class="margin-50 max-height-480">
+              <canvas ref="canvas"></canvas>
             </div>
           </div>
         </div>
