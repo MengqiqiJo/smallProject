@@ -72,24 +72,24 @@ var app = new Vue({
        console.log("3333");
        // console.log(countChart);
        countChart = response.data.contentSection.length;
-       console.log(countChart);
+       // console.log(countChart);
        for(var i=0; i<countChart; i++) {
         self.pieChartData[i] = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartData;
         self.pieChartOptions[i] = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartOptions;
         self.pieChartTop[i] = response.data.contentSection[i].top.value;
         self.pieChartTopClass[i] = response.data.contentSection[i].top.class;
-        console.log(self.pieChartData[i]);
-        console.log(self.pieChartOptions[i]);
-        console.log(self.pieChartTop[i]);
-        console.log(self.pieChartTopClass[i]);
-        console.log(i);
+        // console.log(self.pieChartData[i]);
+        // console.log(self.pieChartOptions[i]);
+        // console.log(self.pieChartTop[i]);
+        // console.log(self.pieChartTopClass[i]);
+        // console.log(i);
        }
 
 
 
-        self.data = self.pieChartData[0];
-        self.option = self.pieChartOptions[0];
-        self.top = self.pieChartTop[0];
+        // self.data = self.pieChartData[0];
+        // self.option = self.pieChartOptions[0];
+        // self.top = self.pieChartTop[0];
         self.topClass = self.pieChartTopClass[0];
 
 
