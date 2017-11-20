@@ -57,12 +57,20 @@ var app = new Vue({
     chartTop: [],
     chartTopClass: [],
     topClass: "",
-    chart: [{
-      chartData: [],
-      chartOptions: [],
-      chartTop: [],
-      chartTopClass: [],
-    }]
+    chart: [
+      {
+        chartData: {},
+        chartOptions: {},
+        chartTop: {},
+        chartTopClass: {},
+      },
+      {
+        chartData: {},
+        chartOptions: {},
+        chartTop: {},
+        chartTopClass: {},
+      },
+    ]
 
   },
   created: function () {
@@ -70,19 +78,33 @@ var app = new Vue({
     var countChart = 0;
     axios.get('jsonData.json').then((response) => {
       countChart = response.data.contentSection.length;
-      // console.log(countChart);
-      for(var i = 0; i < countChart; i++) {
-        self.chart[i].chartData = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartData;
-        self.chart[i].chartOptions = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartOptions;
-        self.chart[i].chartTop = response.data.contentSection[i].top.value;
-        self.chart[i].chartTopClass = response.data.contentSection[i].top.class;
+
+      console.log(self.chart);
+
+
+      // for(var i = 0; i < countChart; i++) {
+        self.chart[0].chartData = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartData;
+        self.chart[0].chartOptions = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartOptions;
+        self.chart[0].chartTop = response.data.contentSection[0].top.value;
+        self.chart[0].chartTopClass = response.data.contentSection[0].top.class;
+
+
+        self.chart[1].chartData = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartData;
+        self.chart[1].chartOptions = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartOptions;
+        self.chart[1].chartTop = response.data.contentSection[1].top.value;
+        self.chart[1].chartTopClass = response.data.contentSection[1].top.class;
 
         // self.chartData[i] = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartData;
         // self.chartOptions[i] = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartOptions;
         // self.chartTop[i] = response.data.contentSection[i].top.value;
         // self.chartTopClass[i] = response.data.contentSection[i].top.class;
-      }
-      self.topClass = self.chartTopClass[0];
+      // }
+
+      console.log(self.chart);
+      console.log(98);
+
+
+      self.topClass = self.chart[0].chartTopClass;
       })
       .catch((error) => {
       console.log(error);
@@ -92,5 +114,6 @@ var app = new Vue({
     <div>
       <vue-chartjs-pie v-bind:chartData=chart[0].chartData v-bind:chartOptions=chart[0].chartOptions v-bind:chartTop=chart[0].chartTop v-bind:chartType="doughnutChartType" v-bind:chartTopClass=chart[0].chartTopClass></vue-chartjs-pie>
       <vue-chartjs-pie v-bind:chartData=chart[0].chartData v-bind:chartOptions=chart[0].chartOptions v-bind:chartTop=chart[0].chartTop v-bind:chartType="pieChartType" v-bind:chartTopClass=chart[0].chartTopClass></vue-chartjs-pie>
-      </div>`
+      <vue-chartjs-pie v-bind:chartData=chart[1].chartData v-bind:chartOptions=chart[1].chartOptions v-bind:chartTop=chart[1].chartTop v-bind:chartType="barChartType" v-bind:chartTopClass=chart[0].chartTopClass></vue-chartjs-pie>
+    </div>`
 });
