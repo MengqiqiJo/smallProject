@@ -215,3 +215,4 @@ Vue.component('vue-chartjs-line', {
 <vue-chartjs-pie v-bind:pieChartData="pieChartData[0]" v-bind:pieChartOptions="pieChartOptions[0]" v-bind:chartTop="pieChartTop[0]" v-bind:chartType="doughnutChartType" v-bind:chartTopClass="pieChartTopClass[0]"></vue-chartjs-pie>
       <vue-chartjs-pie v-bind:pieChartData="pieChartData[1]" v-bind:pieChartOptions="pieChartOptions[1]" v-bind:chartTop="pieChartTop[1]" v-bind:chartType="barChartType" v-bind:chartTopClass="pieChartTopClass[1]"></vue-chartjs-pie>
       <vue-chartjs-pie v-bind:pieChartData="pieChartData[1]" v-bind:pieChartOptions="pieChartOptions[1]" v-bind:chartTop="pieChartTop[1]" v-bind:chartType="lineChartType" v-bind:chartTopClass="pieChartTopClass[1]"></vue-chartjs-pie>
+<vue-chartjs-pie v-bind:pieChartData="data" v-bind:pieChartOptions="option" v-bind:chartTop="top" v-bind:chartType="pieChartType" v-bind:chartTopClass="topClass"></vue-chartjs-pie>
