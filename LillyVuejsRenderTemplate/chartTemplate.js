@@ -3,7 +3,7 @@
  */
 Vue.component('vue-chartjs-top', {
   props: ['chartTop'],
-  template: '<div v-if="chartTop != \'\' " class="bg-0082ba max-height-32 color-fff padding-10">{{chartTop}}</div>'
+  template: '<div v-if="chartTop != \'\' " class="bg-0082ba max-height-32 color-fff padding-10" v-html="chartTop"></div>'
 })
 
 Vue.component('vue-chartjs-bottom', {
