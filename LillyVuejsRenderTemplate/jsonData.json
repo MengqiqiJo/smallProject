@@ -51,7 +51,7 @@
       },
       "bottom": {
         "enable": true,
-        "value": ""
+        "value": "this is the first bottom"
       }
     },
     {
