@@ -58,16 +58,10 @@ Vue.component('vue-chartjs-pie', {
 var app = new Vue({
   el: "#page-wrapper",
   data: {
-    blockData: "",
-    chartData: [],
-    chartOptions: [],
     pieChartType: "pie",
     doughnutChartType: "doughnut",
     lineChartType: "line",
     barChartType: "bar",
-    chartTop: [],
-    chartTopClass: [],
-    topClass: "",
     chart: [
       {
         chartData: {},
@@ -99,31 +93,40 @@ var app = new Vue({
       console.log(self.chart);
 
 
-      // for(var i = 0; i < countChart; i++) {
+      for(var i = 0; i < countChart; i++) {
         self.chart[0] = response.data.contentSection[0];
 
-        self.chart[0].chartData = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartData;
-        self.chart[0].chartOptions = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartOptions;
-        self.chart[0].chartTop = response.data.contentSection[0].top.value;
-        self.chart[0].chartTopClass = response.data.contentSection[0].top.class;
-        self.chart[0].chartMiddleMiddleClass = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddleClass;
-        self.chart[0].chartMiddleRightClass = response.data.contentSection[0].middle.middleMiddle.middleMiddleRightClass;
-        self.chart[0].chartBottomValue = response.data.contentSection[0].bottom.value;
+        self.chart[i].chartData = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartData;
+        self.chart[i].chartOptions = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartOptions;
+        self.chart[i].chartTop = response.data.contentSection[i].top.value;
+        self.chart[i].chartTopClass = response.data.contentSection[i].top.class;
+        self.chart[i].chartMiddleMiddleClass = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddleClass;
+        self.chart[i].chartMiddleRightClass = response.data.contentSection[i].middle.middleMiddle.middleMiddleRightClass;
+        self.chart[i].chartBottomValue = response.data.contentSection[i].bottom.value;
 
-        self.chart[1].chartData = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartData;
-        self.chart[1].chartOptions = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartOptions;
-        self.chart[1].chartTop = response.data.contentSection[1].top.value;
-        self.chart[1].chartTopClass = response.data.contentSection[1].top.class;
-        self.chart[1].chartMiddleMiddleClass = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddleClass;
-        self.chart[1].chartMiddleRightClass = response.data.contentSection[0].middle.middleMiddle.middleMiddleRightClass;
-        self.chart[1].chartBottomValue = response.data.contentSection[0].bottom.value;
+
+        // self.chart[0].chartData = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartData;
+        // self.chart[0].chartOptions = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartOptions;
+        // self.chart[0].chartTop = response.data.contentSection[0].top.value;
+        // self.chart[0].chartTopClass = response.data.contentSection[0].top.class;
+        // self.chart[0].chartMiddleMiddleClass = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddleClass;
+        // self.chart[0].chartMiddleRightClass = response.data.contentSection[0].middle.middleMiddle.middleMiddleRightClass;
+        // self.chart[0].chartBottomValue = response.data.contentSection[0].bottom.value;
+
+        // self.chart[1].chartData = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartData;
+        // self.chart[1].chartOptions = response.data.contentSection[1].middle.middleMiddle.middleMiddleMiddle.chartOptions;
+        // self.chart[1].chartTop = response.data.contentSection[1].top.value;
+        // self.chart[1].chartTopClass = response.data.contentSection[1].top.class;
+        // self.chart[1].chartMiddleMiddleClass = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddleClass;
+        // self.chart[1].chartMiddleRightClass = response.data.contentSection[0].middle.middleMiddle.middleMiddleRightClass;
+        // self.chart[1].chartBottomValue = response.data.contentSection[0].bottom.value;
 
 
         // self.chartData[i] = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartData;
         // self.chartOptions[i] = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartOptions;
         // self.chartTop[i] = response.data.contentSection[i].top.value;
         // self.chartTopClass[i] = response.data.contentSection[i].top.class;
-      // }
+      }
 
       console.log(self.chart[1].chartMiddleRightClass);
       console.log(self.chart[1].chartMiddleMiddleClass);
