@@ -112,14 +112,14 @@ var app = new Vue({
         self.chart[i].chartMiddleRightClass = response.data.contentSection[i].middle.middleMiddle.middleMiddleRightClass;
         self.chart[i].chartBottomValue = response.data.contentSection[i].bottom.value;
 
-      console.log(self.chart[i].chartData);
-      console.log(self.chart[i].chartOptions);
-      console.log(self.chart[i].chartTop);
-      console.log(self.chart[i].chartTopClass);
-      console.log(self.chart[i].chartMiddleMiddleClass);
-      console.log(self.chart[i].chartMiddleRightClass);
-      console.log(self.chart[i].chartBottomValue);
-      console.log(i);
+      // console.log(self.chart[i].chartData);
+      // console.log(self.chart[i].chartOptions);
+      // console.log(self.chart[i].chartTop);
+      // console.log(self.chart[i].chartTopClass);
+      // console.log(self.chart[i].chartMiddleMiddleClass);
+      // console.log(self.chart[i].chartMiddleRightClass);
+      // console.log(self.chart[i].chartBottomValue);
+      // console.log(i);
 
         // self.chart[0].chartData = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartData;
         // self.chart[0].chartOptions = response.data.contentSection[0].middle.middleMiddle.middleMiddleMiddle.chartOptions;
@@ -149,8 +149,7 @@ var app = new Vue({
       console.log(98);
 // <vue-chartjs-pie v-bind:chartData=chart[0].middle.middleMiddle.middleMiddleMiddle.chartData v-bind:chartOptions=chart[0].chartOptions v-bind:chartTop=chart[0].chartTop v-bind:chartType="doughnutChartType" v-bind:chartTopClass=chart[0].chartTopClass></vue-chartjs-pie>
 
-
-      self.topClass = self.chart[0].chartTopClass;
+      // self.topClass = self.chart[0].chartTopClass;
       })
       .catch((error) => {
       console.log(error);
