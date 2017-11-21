@@ -8,7 +8,7 @@ Vue.component('vue-chartjs-top', {
 
 Vue.component('vue-chartjs-bottom', {
   props: ['chartBottomValue'],
-  template: '<div v-if="chartBottomValue != \'\' " class="border-1-e7e7e7">{{chartBottomValue}}</div>'
+  template: '<div v-if="chartBottomValue != \'\' " class="border-1-e7e7e7" v-html="chartBottomValue"></div>'
 })
 
 /**
