@@ -38,8 +38,10 @@ Vue.component('vue-chartjs-pie', {
           <div class="border-1-e7e7e7">
             <vue-chartjs-top v-bind:chartTop="chartTop"></vue-chartjs-top>
             <div class="row">
-              <div class="margin-50 max-height-480" v-bind:class="chartMiddleMiddleClass">
-                <canvas ref="canvas"></canvas>
+              <div v-bind:class="chartMiddleMiddleClass">
+                <div class="margin-50 max-height-480">
+                  <canvas ref="canvas"></canvas>
+                </div>
               </div>
               <div v-bind:class="chartMiddleRightClass">
                 <div>lsls</div>
