@@ -63,7 +63,8 @@
                                 '<span>Event Type: OLA</span>'+
                               '</div>'+
                               '<div class="margin-top-16">'+
-                                '<span>Speaker: Ronald Mund</span>'+
+                                '<span>Speaker: </span>'+
+                                '<span>Ronald Mund</span>'+
                               '</div>'+
                               '<div class="margin-top-16">'+
                                 '<span>Venue: Restaurant</span>'+
@@ -96,17 +97,22 @@
         for (var i = 0; i < results.features.length; i++) {
           var coords = results.features[i].geometry.coordinates;
           var latLngs = new google.maps.LatLng(coords[1],coords[0]);
-          var marker = new google.maps.Marker({
-            position: latLngs,
-            map: map
-          });
-          var coordInfoWindow = new google.maps.InfoWindow({
-            content: contentString
-          });
-          marker.addListener('click', function() {
-            coordInfoWindow.setPosition(latLngs);
-            coordInfoWindow.open(map, marker);
-          });
+
+          (function () {
+            var marker = new google.maps.Marker({
+              position: latLngs,
+              map: map
+            });
+
+            var coordInfoWindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+            marker.addListener('click', function() {
+              // coordInfoWindow.setPosition(marker.getPosition());
+              coordInfoWindow.open(map, marker);
+            });
+          }());
+
         }
       }
 
