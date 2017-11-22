@@ -1,0 +1,3 @@
+# Ignore mac text files
+.DS_Store
+.Rhistory
