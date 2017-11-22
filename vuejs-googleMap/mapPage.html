@@ -27,81 +27,97 @@
     <script>
       var map;
       function initMap() {
-  var uluru = {lat: -25.363, lng: 131.044};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: uluru
-  });
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: new google.maps.LatLng(2.8,-187.3),
+          mapTypeId: 'terrain'
+        });
 
-  var contentString = '<div id="content" class="panel panel-default width-500">'+
-      '<div class="bg-199ed5 height-42 padding-12">'+
-        '<h3 class="panel-title color-fff">Program Name</h3>'+
-      '</div>'+
-      '<div class="panel-body">'+
-        '<div class="row margin-top-10">'+
-          '<div class="col-md-3">'+
-            '<div>'+
-              '<i class="fa fa-bookmark color-199ed5" aria-hidden="true"></i>'+
-              '<span>Carrdio</span>'+
-            '</div>'+
-          '</div>'+
-          '<div class="col-md-3">'+
 
-              '<i class="fa fa-calendar-o color-199ed5" aria-hidden="true"></i>'+
-              '<span>Oct 19,2017</span>'+
 
-          '</div>'+
-          '<div class="col-md-3">'+
 
-              '<i class="fa fa-map-marker color-199ed5" aria-hidden="true"></i>'+
-              '<span>Motreal, QC</span>'+
 
-          '</div>'+
-        '</div>'+
-        '<div class="margin-top-16">'+
-          '<span>Event Type: OLA</span>'+
-        '</div>'+
-        '<div class="margin-top-16">'+
-          '<span>Speaker: Ronald Mund</span>'+
-        '</div>'+
-        '<div class="margin-top-16">'+
-          '<span>Venue: Restaurant</span>'+
-        '</div>'+
-        '<div class="row margin-top-20">'+
-          '<div class="col-md-6 text-align-center">'+
-            '<div>'+
-              '<span>ATTENDEES</span>'+
-            '</div>'+
-            '<div>'+
-              '<span class="color-199ed5 font-size-16">25</span>'+
-            '</div>'+
-          '</div>'+
-          '<div class="col-md-6 text-align-center">'+
-            '<div>'+
-              '<span>RESPONSES</span>'+
-            '</div>'+
-            '<div>'+
-              '<span class="color-199ed5 font-size-16">21</span>'+
-            '</div>'+
-          '</div>'+
-        '</div>'+
-        '</div>'+
-      '</div>'+
-    '</div>';
 
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString
-  });
+        // Create a <script> tag and set the USGS URL as the source.
+        var script = document.createElement('script');
+        // This example uses a local copy of the GeoJSON stored at
+        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+      var contentString='<div id="content" class="panel panel-default width-460">'+
+                                    '<div class="bg-199ed5 height-42 padding-12">'+
+                                      '<h3 class="panel-title color-fff">Program Name</h3>'+
+                                    '</div>'+
+                                    '<div class="panel-body">'+
+                                      '<div class="row margin-top-10">'+
+                                        '<div class="col-md-3">'+
+                                          '<div>'+
+                                            '<i class="fa fa-bookmark color-199ed5" aria-hidden="true"></i>'+
+                                            '<span> Carrdio</span>'+
+                                          '</div>'+
+                                        '</div>'+
+                                        '<div class="col-md-3">'+
+                                          '<i class="fa fa-calendar-o color-199ed5" aria-hidden="true"></i>'+
+                                          '<span> Oct 19,2017</span>'+
+                                        '</div>'+
+                                        '<div class="col-md-3">'+
+                                          '<i class="fa fa-map-marker color-199ed5" aria-hidden="true"></i>'+
+                                          '<span> Motreal, QC</span>'+
+                                        '</div>'+
+                                      '</div>'+
+                                      '<div class="margin-top-16">'+
+                                        '<span>Event Type: OLA</span>'+
+                                      '</div>'+
+                                      '<div class="margin-top-16">'+
+                                        '<span>Speaker: Ronald Mund</span>'+
+                                      '</div>'+
+                                      '<div class="margin-top-16">'+
+                                        '<span>Venue: Restaurant</span>'+
+                                      '</div>'+
+                                      '<div class="row margin-top-20">'+
+                                        '<div class="col-md-6 text-align-center">'+
+                                          '<div>'+
+                                            '<span>ATTENDEES</span>'+
+                                          '</div>'+
+                                          '<div>'+
+                                            '<span class="color-199ed5 font-size-16">25</span>'+
+                                          '</div>'+
+                                        '</div>'+
+                                        '<div class="col-md-6 text-align-center">'+
+                                          '<div>'+
+                                            '<span>RESPONSES</span>'+
+                                          '</div>'+
+                                          '<div>'+
+                                            '<span class="color-199ed5 font-size-16">21</span>'+
+                                          '</div>'+
+                                        '</div>'+
+                                      '</div>'+
+                                      '</div>'+
+                                    '</div>'+
+                                  '</div>';
 
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-    title: 'Uluru (Ayers Rock)'
-  });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-}
+      // Loop through the results array and place a marker for each
+      // set of coordinates.
+      window.eqfeed_callback = function(results) {
+        for (var i = 0; i < results.features.length; i++) {
+          var coords = results.features[i].geometry.coordinates;
+          var latLng = new google.maps.LatLng(coords[1],coords[0]);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+          var coordInfoWindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+
+         marker.addListener('click', function() {
+          coordInfoWindow.open(map, marker);
+
+        });
+      }
+    }
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqCGAZ6L98e1hCzMHcyt6lemAEtjN8OEY&callback=initMap">
