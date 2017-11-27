@@ -111,10 +111,17 @@
               coordInfoWindow.open(map, marker);
             });
           }());
+          var markers = locations.map(marker);
+          // Add a marker clusterer to manage the markers.
+          var markerCluster = new MarkerClusterer(map, markers,
+              {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
 
         }
       }
 
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqCGAZ6L98e1hCzMHcyt6lemAEtjN8OEY&callback=initMap">
