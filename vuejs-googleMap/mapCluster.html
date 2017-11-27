@@ -35,7 +35,7 @@
               lng: -47.8821945
             }
           });
-          var infoWin = new google.maps.InfoWindow();
+          var infoWindow = new google.maps.InfoWindow();
 
           var markers = locations.map(function(location, i) {
           var marker = new google.maps.Marker({
@@ -43,8 +43,8 @@
           });
 
           google.maps.event.addListener(marker, 'click', function(evt) {
-              infoWin.setContent(location.info);
-              infoWin.open(map, marker);
+              infoWindow.setContent(location.info);
+              infoWindow.open(map, marker);
             })
             return marker;
           });
