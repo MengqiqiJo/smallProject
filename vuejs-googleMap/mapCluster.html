@@ -36,14 +36,12 @@
              }
            });
            var infoWin = new google.maps.InfoWindow();
-           // Add some markers to the map.
-           // Note: The code uses the JavaScript Array.prototype.map() method to
-           // create an array of markers based on a given "locations" array.
-           // The map() method here has nothing to do with the Google Maps API.
+
            var markers = locations.map(function(location, i) {
              var marker = new google.maps.Marker({
                position: location
              });
+
              google.maps.event.addListener(marker, 'click', function(evt) {
                infoWin.setContent(location.info);
                infoWin.open(map, marker);
@@ -51,12 +49,13 @@
              return marker;
            });
 
-           // Add a marker clusterer to manage the markers.
+
            var markerCluster = new MarkerClusterer(map, markers, {
              imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
            });
 
          }
+
          var contentString='<div id="content" class="panel panel-default width-460">'+
                                '<div class="bg-199ed5 height-42 padding-12">'+
                                  '<h3 class="panel-title color-fff">Program Name</h3>'+
