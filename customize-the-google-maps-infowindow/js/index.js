@@ -17,7 +17,7 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
 
   // A new Info Window is created and set content
   var infowindow = new google.maps.InfoWindow({
-    content: contentString,
+    // content: contentString,
 
     // Assign a maximum value for the width of the infowindow allows
     // greater control over the various content elements
@@ -30,7 +30,7 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
     });
 
     google.maps.event.addListener(marker, 'click', function(evt) {
-      // infoWindow.setContent(location.info);
+      infowindow.setContent(location.info);
       infowindow.open(map, marker);
     })
     return marker;
