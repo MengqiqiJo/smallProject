@@ -99,16 +99,16 @@ var contentString='<div id="iw-container" class="width-460">'+
         '<div class="col-md-3">'+
         '<div>'+
         '<i class="fa fa-bookmark color-199ed5" aria-hidden="true"></i>'+
-        '<span> Carrdio</span>'+
+        '<span class="padding-left-4">Carrdio</span>'+
         '</div>'+
         '</div>'+
         '<div class="col-md-3">'+
         '<i class="fa fa-calendar-o color-199ed5" aria-hidden="true"></i>'+
-        '<span> Oct 19,2017</span>'+
+            '<span class="padding-left-4">Oct 19,2017</span>'+
         '</div>'+
         '<div class="col-md-3">'+
         '<i class="fa fa-map-marker color-199ed5" aria-hidden="true"></i>'+
-        '<span> Motreal, QC</span>'+
+        '<span class="padding-left-4">Motreal, QC</span>'+
         '</div>'+
         '</div>'+
         '<div class="margin-top-16">'+
@@ -126,16 +126,16 @@ var contentString='<div id="iw-container" class="width-460">'+
         '<div>'+
         '<span>ATTENDEES</span>'+
         '</div>'+
-        '<div>'+
-        '<span class="color-199ed5 font-size-16 padding-24">25</span>'+
+        '<div class="padding-left-24">'+
+        '<span class="color-199ed5 font-size-16">25</span>'+
         '</div>'+
         '</div>'+
         '<div class="col-md-6 col-offset-md-4">'+
         '<div>'+
         '<span>RESPONSES</span>'+
         '</div>'+
-        '<div>'+
-        '<span class="color-199ed5 font-size-16 padding-24">21</span>'+
+        '<div class="padding-left-24">'+
+        '<span class="color-199ed5 font-size-16">21</span>'+
         '</div>'+
         '</div>'+
         '</div>'+
