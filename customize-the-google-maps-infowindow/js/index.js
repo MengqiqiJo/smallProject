@@ -16,11 +16,7 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
           });
 
   // A new Info Window is created and set content
-  var infowindow = new google.maps.InfoWindow({
-    // Assign a maximum value for the width of the infowindow allows
-    // greater control over the various content elements
-
-  });
+  var infowindow = new google.maps.InfoWindow();
 
   var markers = locations.map(function(location, i) {
     var marker = new google.maps.Marker({
