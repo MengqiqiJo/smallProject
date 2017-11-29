@@ -48,7 +48,6 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
 
     // Reference to the DIV that wraps the bottom of infowindow
     var iwOuter = $('.gm-style-iw');
-    // iwOuter.css({width(): '480px'});
 
     /* Since this div is in a position prior to .gm-div style-iw.
      * We use jQuery and create a iwBackground variable,
@@ -91,25 +90,25 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
     });
   });
 }
-var contentString='<div id="iw-container" class="width-460">'+
+var contentString='<div id="iw-container" class="width-500">'+
         '<div class="">'+
         '<h3 class="iw-title">Program Name</h3>'+
         '</div>'+
         '<div class="iw-content width-460">'+
         '<div class="row margin-top-10">'+
-        '<div class="col-md-3">'+
+        '<div class="col-md-4">'+
         '<div>'+
-        '<i class="fa fa-bookmark color-199ed5" aria-hidden="true"></i>'+
-        '<span class="padding-left-4">Carrdio</span>'+
+        '<i class="fa fa-bookmark color-199ed5"></i>'+
+        '<span class="padding-left-6">Carrdio</span>'+
         '</div>'+
         '</div>'+
-        '<div class="col-md-3">'+
-        '<i class="fa fa-calendar-o color-199ed5" aria-hidden="true"></i>'+
-            '<span class="padding-left-4">Oct 19,2017</span>'+
+        '<div class="col-md-4">'+
+        '<i class="fa fa-calendar-o color-199ed5"></i>'+
+        '<span class="padding-left-6">Oct 19,2017</span>'+
         '</div>'+
-        '<div class="col-md-3">'+
-        '<i class="fa fa-map-marker color-199ed5" aria-hidden="true"></i>'+
-        '<span class="padding-left-4">Motreal, QC</span>'+
+        '<div class="col-md-4">'+
+        '<i class="fa fa-map-marker color-199ed5"></i>'+
+        '<span class="padding-left-6">Motreal, QC</span>'+
         '</div>'+
         '</div>'+
         '<div class="margin-top-16">'+
@@ -123,26 +122,26 @@ var contentString='<div id="iw-container" class="width-460">'+
         '<span>Venue: Restaurant</span>'+
         '</div>'+
         '<div class="row margin-top-20">'+
-        '<div class="col-md-6 col-offset-md-4 padding-left-10">'+
-        '<div class="margin-left-32">'+
+        '<div class="col-md-6 text-align-center">'+
+        '<div>'+
         '<span>ATTENDEES</span>'+
         '</div>'+
-        '<div class="margin-left-32 padding-left-24">'+
+        '<div>'+
         '<span class="color-199ed5 font-size-16">25</span>'+
         '</div>'+
         '</div>'+
-        '<div class="col-md-6 col-offset-md-4 ">'+
-        '<div class="margin-right-16">'+
+        '<div class="col-md-6 text-align-center">'+
+        '<div>'+
         '<span>RESPONSES</span>'+
         '</div>'+
-        '<div class="padding-left-24 margin-right-16">'+
+        '<div>'+
         '<span class="color-199ed5 font-size-16">21</span>'+
         '</div>'+
         '</div>'+
         '</div>'+
         '</div>'+
         '</div>'+
-    '</div>';
+        '</div>';
 
 // var contentString='<div>hellodsdfasdfdfdgdfjhkdhfishdhhdhdhdhdhdhdhdhdhhdhdhdhueuueueueue</div>';
 var locations = [
