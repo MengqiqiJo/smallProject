@@ -77,7 +77,7 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
     var iwCloseBtn = iwOuter.next();
 
     // Apply the desired effect to the close button
-    iwCloseBtn.css({opacity: '1', left: '330px', top: '26px', 'background-image': 'url("http://appsavvy.net/close.png")'});
+    iwCloseBtn.css({opacity: '1', left: '330px', top: '26px'});
 
     // If the content of infowindow not exceed the set maximum height, then the gradient is removed.
     if($('.iw-content').height() < 180){
@@ -122,19 +122,19 @@ var contentString='<div id="iw-container" class="width-460">'+
         '<span>Venue: Restaurant</span>'+
         '</div>'+
         '<div class="row margin-top-20">'+
-        '<div class="col-md-6 col-offset-md-4">'+
-        '<div>'+
+        '<div class="col-md-6 col-offset-md-4 padding-left-10">'+
+        '<div class="margin-left-32">'+
         '<span>ATTENDEES</span>'+
         '</div>'+
-        '<div class="padding-left-24">'+
+        '<div class="margin-left-32 padding-left-24">'+
         '<span class="color-199ed5 font-size-16">25</span>'+
         '</div>'+
         '</div>'+
-        '<div class="col-md-6 col-offset-md-4">'+
-        '<div>'+
+        '<div class="col-md-6 col-offset-md-4 ">'+
+        '<div class="padding-left-0">'+
         '<span>RESPONSES</span>'+
         '</div>'+
-        '<div class="padding-left-24">'+
+        '<div class="padding-left-24 padding-left-0">'+
         '<span class="color-199ed5 font-size-16">21</span>'+
         '</div>'+
         '</div>'+
