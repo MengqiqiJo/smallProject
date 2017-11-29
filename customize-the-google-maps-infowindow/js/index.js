@@ -19,7 +19,7 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
   var infowindow = new google.maps.InfoWindow({
     // Assign a maximum value for the width of the infowindow allows
     // greater control over the various content elements
-    maxWidth: 470
+
   });
 
   var markers = locations.map(function(location, i) {
@@ -48,6 +48,7 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
 
     // Reference to the DIV that wraps the bottom of infowindow
     var iwOuter = $('.gm-style-iw');
+    // iwOuter.css({width(): '480px'});
 
     /* Since this div is in a position prior to .gm-div style-iw.
      * We use jQuery and create a iwBackground variable,
@@ -131,10 +132,10 @@ var contentString='<div id="iw-container" class="width-460">'+
         '</div>'+
         '</div>'+
         '<div class="col-md-6 col-offset-md-4 ">'+
-        '<div class="padding-left-0">'+
+        '<div class="margin-right-16">'+
         '<span>RESPONSES</span>'+
         '</div>'+
-        '<div class="padding-left-24 padding-left-0">'+
+        '<div class="padding-left-24 margin-right-16">'+
         '<span class="color-199ed5 font-size-16">21</span>'+
         '</div>'+
         '</div>'+
@@ -142,6 +143,8 @@ var contentString='<div id="iw-container" class="width-460">'+
         '</div>'+
         '</div>'+
     '</div>';
+
+// var contentString='<div>hellodsdfasdfdfdgdfjhkdhfishdhhdhdhdhdhdhdhdhdhhdhdhdhueuueueueue</div>';
 var locations = [
   {
   lat: -19.9286,
