@@ -19,7 +19,7 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
   var infowindow = new google.maps.InfoWindow({
     // Assign a maximum value for the width of the infowindow allows
     // greater control over the various content elements
-    maxWidth: 350
+    maxWidth: 470
   });
 
   var markers = locations.map(function(location, i) {
@@ -56,28 +56,28 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
     var iwBackground = iwOuter.prev();
 
     // Removes background shadow DIV
-    iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+    iwBackground.children(':nth-child(2)').css({'display': 'none'});
 
     // Removes white background DIV
-    iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+    iwBackground.children(':nth-child(4)').css({'display': 'none'});
 
     // Moves the infowindow 115px to the right.
-    iwOuter.parent().parent().css({left: '115px'});
+    iwOuter.parent().parent().css({left: '102px'});
 
     // Moves the shadow of the arrow 76px to the left margin.
-    iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
+    iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 146px !important;'});
 
     // Moves the arrow 76px to the left margin.
-    iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
+    iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 146px !important;'});
 
     // Changes the desired tail shadow color.
-    iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index' : '1'});
+    iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index': '1'});
 
     // Reference to the div that groups the close button elements.
     var iwCloseBtn = iwOuter.next();
 
     // Apply the desired effect to the close button
-    iwCloseBtn.css({opacity: '1', right: '38px', top: '3px', border: '7px solid #48b5e9', 'border-radius': '13px', 'box-shadow': '0 0 5px #3990B9'});
+    iwCloseBtn.css({opacity: '1', right: '38px', top: '3px', border: '7px solid #48b5e9', 'border-radius': '13px', 'box-shadow': '0 0 5px #3990b9'});
 
     // If the content of infowindow not exceed the set maximum height, then the gradient is removed.
     if($('.iw-content').height() < 180){
@@ -122,7 +122,7 @@ var contentString='<div id="iw-container" class="width-460">'+
         '<span>Venue: Restaurant</span>'+
         '</div>'+
         '<div class="row margin-top-20">'+
-        '<div class="col-md-6 text-align-center">'+
+        '<div class="col-md-6 col-offset-md-4">'+
         '<div>'+
         '<span>ATTENDEES</span>'+
         '</div>'+
@@ -130,7 +130,7 @@ var contentString='<div id="iw-container" class="width-460">'+
         '<span class="color-199ed5 font-size-16">25</span>'+
         '</div>'+
         '</div>'+
-        '<div class="col-md-6 text-align-center">'+
+        '<div class="col-md-6 col-offset-md-4">'+
         '<div>'+
         '<span>RESPONSES</span>'+
         '</div>'+
