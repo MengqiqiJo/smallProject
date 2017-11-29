@@ -127,7 +127,7 @@ var contentString='<div id="iw-container" class="width-460">'+
         '<span>ATTENDEES</span>'+
         '</div>'+
         '<div>'+
-        '<span class="color-199ed5 font-size-16">25</span>'+
+        '<span class="color-199ed5 font-size-16 padding-24">25</span>'+
         '</div>'+
         '</div>'+
         '<div class="col-md-6 col-offset-md-4">'+
@@ -135,7 +135,7 @@ var contentString='<div id="iw-container" class="width-460">'+
         '<span>RESPONSES</span>'+
         '</div>'+
         '<div>'+
-        '<span class="color-199ed5 font-size-16">21</span>'+
+        '<span class="color-199ed5 font-size-16 padding-24">21</span>'+
         '</div>'+
         '</div>'+
         '</div>'+
