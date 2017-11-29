@@ -77,7 +77,7 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
     var iwCloseBtn = iwOuter.next();
 
     // Apply the desired effect to the close button
-    iwCloseBtn.css({opacity: '1', left: '330px', top: '26px'});
+    iwCloseBtn.css({opacity: '1', left: '470px', top: '26px'});
 
     // If the content of infowindow not exceed the set maximum height, then the gradient is removed.
     if($('.iw-content').height() < 180){
