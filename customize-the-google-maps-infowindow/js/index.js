@@ -15,7 +15,6 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
             }
           });
 
-  // A new Info Window is created and set content
   var infowindow = new google.maps.InfoWindow();
 
   var markers = locations.map(function(location, i) {
@@ -131,7 +130,7 @@ var contentString='<div id="iw-container" class="width-500">'+
         '<span>RESPONSES</span>'+
         '</div>'+
         '<div>'+
-        '<span class="color-199ed5 font-size-16">21</span>'+
+        '<span class="color-199ed5 font-size-16">' + value + '</span>'+
         '</div>'+
         '</div>'+
         '</div>'+
