@@ -4,21 +4,16 @@
  * http://en.marnoto.com/2014/09/5-formas-de-personalizar-infowindow.html
 */
 
-// map center
-var center = new google.maps.LatLng(40.589500, -8.683542);
-
-// marker position
-var factory = new google.maps.LatLng(40.589500, -8.683542);
 
 function initialize() {
-  var mapOptions = {
-    center: center,
-    zoom: 16,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
 
-  var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
-
+var map = new google.maps.Map(document.getElementById('map-canvas'), {
+            zoom: 5,
+            center: {
+              lat: -15.7942357,
+              lng: -47.8821945
+            }
+          });
 
   // A new Info Window is created and set content
   var infowindow = new google.maps.InfoWindow({
@@ -29,22 +24,20 @@ function initialize() {
     maxWidth: 350
   });
 
-  // marker options
-  var marker = new google.maps.Marker({
-    position: factory,
-    map: map,
-    title:"Porcelain Factory of Vista Alegre"
+  var markers = locations.map(function(location, i) {
+    var marker = new google.maps.Marker({
+      position: location
+    });
+
+    google.maps.event.addListener(marker, 'click', function(evt) {
+      // infoWindow.setContent(location.info);
+      infowindow.open(map, marker);
+    })
+    return marker;
   });
 
-  // This event expects a click on a marker
-  // When this event is fired the Info Window is opened.
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
-  });
-
-  // Event that closes the Info Window with a click on the map
-  google.maps.event.addListener(map, 'click', function() {
-    infowindow.close();
+  var markerCluster = new MarkerClusterer(map, markers, {
+    imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
   });
 
   // *
@@ -150,43 +143,43 @@ var contentString='<div id="iw-container" class="width-460">'+
         '</div>'+
         '</div>'+
         '</div>'+
-                          '</div>';
-        var locations = [
-          {
-          lat: -19.9286,
-          lng: -43.93888,
-          info: contentString
-          },
-          {
-          lat: -19.85758,
-          lng: -43.9668,
-          info: contentString
-          },
-          {
-          lat: -18.24587,
-          lng: -43.59613,
-          info: contentString
-          },
-          {
-          lat: -20.46427,
-          lng: -45.42629,
-          info: contentString
-          },
-          {
-          lat: -20.37817,
-          lng: -43.41641,
-          info: contentString
-          },
-          {
-          lat: -20.09749,
-          lng: -43.48831,
-          info: contentString
-          },
-          {
-          lat: -21.13594,
-          lng: -44.26132,
-          info: contentString
-          },
-        ];
+    '</div>';
+var locations = [
+  {
+  lat: -19.9286,
+  lng: -43.93888,
+  info: contentString
+  },
+  {
+  lat: -19.85758,
+  lng: -43.9668,
+  info: contentString
+  },
+  {
+  lat: -18.24587,
+  lng: -43.59613,
+  info: contentString
+  },
+  {
+  lat: -20.46427,
+  lng: -45.42629,
+  info: contentString
+  },
+  {
+  lat: -20.37817,
+  lng: -43.41641,
+  info: contentString
+  },
+  {
+  lat: -20.09749,
+  lng: -43.48831,
+  info: contentString
+  },
+  {
+  lat: -21.13594,
+  lng: -44.26132,
+  info: contentString
+  },
+];
 
 google.maps.event.addDomListener(window, 'load', initialize);
