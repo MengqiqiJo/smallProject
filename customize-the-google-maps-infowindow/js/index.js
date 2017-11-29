@@ -62,13 +62,13 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
     iwBackground.children(':nth-child(4)').css({'display': 'none'});
 
     // Moves the infowindow 115px to the right.
-    iwOuter.parent().parent().css({left: '86px'});
+    iwOuter.parent().parent().css({left: '14px'});
 
     // Moves the shadow of the arrow 76px to the left margin.
-    iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 146px !important;'});
+    iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 250px !important;'});
 
     // Moves the arrow 76px to the left margin.
-    iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 160px !important;'});
+    iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 250px !important;'});
 
     // Changes the desired tail shadow color.
     iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index': '1'});
