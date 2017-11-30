@@ -3,88 +3,7 @@
  * 2015 - en.marnoto.com
  * http://en.marnoto.com/2014/09/5-formas-de-personalizar-infowindow.html
 */
-// ,
-//   {
-//   lat: "-19.85758",
-//   lng: "-43.9668",
-//   subtitle: "Program Name",
-//   workingField: "Cardio",
-//   date: "Oct 19,2017",
-//   city: "Montreal, QC",
-//   eventType: "OLA",
-//   speakerName: "Ronald Mund",
-//   venue: "Restaurant",
-//   attendNum: "25",
-//   responseNum: "21"
-//   },
-//   {
-//   lat: "-18.24587",
-//   lng: "-43.59613",
-//   subtitle: "Program Name",
-//   workingField: "Cardio",
-//   date: "Oct 19,2017",
-//   city: "Montreal, QC",
-//   eventType: "OLA",
-//   speakerName: "Ronald Mund",
-//   venue: "Restaurant",
-//   attendNum: "25",
-//   responseNum: "21"
-//   },
-//   {
-//   lat: "-20.46427",
-//   lng: "-45.42629",
-//   subtitle: "Program Name",
-//   workingField: "Cardio",
-//   date: "Oct 19,2017",
-//   city: "Montreal, QC",
-//   eventType: "OLA",
-//   speakerName: "Ronald Mund",
-//   venue: "Restaurant",
-//   attendNum: "25",
-//   responseNum: "21"
-//   },
-//   {
-//   lat: "-20.37817",
-//   lng: "-43.41641",
-//   subtitle: "Program Name",
-//   workingField: "Cardio",
-//   date: "Oct 19,2017",
-//   city: "Montreal, QC",
-//   eventType: "OLA",
-//   speakerName: "Ronald Mund",
-//   venue: "Restaurant",
-//   attendNum: "25",
-//   responseNum: "21"
-//   },
-//   {
-//   lat: "-20.09749",
-//   lng: "-43.48831",
-//   subtitle: "Program Name",
-//   workingField: "Cardio",
-//   date: "Oct 19,2017",
-//   city: "Montreal, QC",
-//   eventType: "OLA",
-//   speakerName: "Ronald Mund",
-//   venue: "Restaurant",
-//   attendNum: "25",
-//   responseNum: "21"
-//   },
-//   {
-//   lat: "-21.13594",
-//   lng: "-44.26132",
-//   subtitle: "Program Name",
-//   workingField: "Cardio",
-//   date: "Oct 19,2017",
-//   city: "Montreal, QC",
-//   eventType: "OLA",
-//   speakerName: "Ronald Mund",
-//   venue: "Restaurant",
-//   attendNum: "25",
-//   responseNum: "21"
-//   }
-
 function initialize() {
-
   $.getJSON( "infoDara.json", function( locations ) {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
       zoom: 5,
@@ -223,44 +142,5 @@ function getPopupTemplate(subtitle, workingField, date, city, eventType, speaker
           '</div>';
   return contentString;
 }
-
-// var contentString='<div>hellodsdfasdfdfdgdfjhkdhfishdhhdhdhdhdhdhdhdhdhhdhdhdhueuueueueue</div>';
-var locations = [
-  {
-  lat: -19.9286,
-  lng: -43.93888,
-  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
-  },
-  {
-  lat: -19.85758,
-  lng: -43.9668,
-  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
-  },
-  {
-  lat: -18.24587,
-  lng: -43.59613,
-  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
-  },
-  {
-  lat: -20.46427,
-  lng: -45.42629,
-  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
-  },
-  {
-  lat: -20.37817,
-  lng: -43.41641,
-  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
-  },
-  {
-  lat: -20.09749,
-  lng: -43.48831,
-  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
-  },
-  {
-  lat: -21.13594,
-  lng: -44.26132,
-  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
-  },
-];
 
 google.maps.event.addDomListener(window, 'load', initialize);
