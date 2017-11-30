@@ -7,7 +7,7 @@
 
 function initialize() {
 
-var map = new google.maps.Map(document.getElementById('map-canvas'), {
+  var map = new google.maps.Map(document.getElementById('map-canvas'), {
             zoom: 5,
             center: {
               lat: -15.7942357,
@@ -85,95 +85,101 @@ var map = new google.maps.Map(document.getElementById('map-canvas'), {
     });
   });
 }
-var contentString='<div id="iw-container" class="width-500">'+
-        '<div class="">'+
-        '<h3 class="iw-title">Program Name</h3>'+
-        '</div>'+
-        '<div class="iw-content width-460">'+
-        '<div class="row margin-top-10">'+
-        '<div class="col-md-4">'+
-        '<div>'+
-        '<i class="fa fa-bookmark color-199ed5"></i>'+
-        '<span class="padding-left-6">Carrdio</span>'+
-        '</div>'+
-        '</div>'+
-        '<div class="col-md-4">'+
-        '<i class="fa fa-calendar-o color-199ed5"></i>'+
-        '<span class="padding-left-6">Oct 19,2017</span>'+
-        '</div>'+
-        '<div class="col-md-4">'+
-        '<i class="fa fa-map-marker color-199ed5"></i>'+
-        '<span class="padding-left-6">Motreal, QC</span>'+
-        '</div>'+
-        '</div>'+
-        '<div class="margin-top-16">'+
-        '<span>Event Type: OLA</span>'+
-        '</div>'+
-        '<div class="margin-top-16">'+
-        '<span>Speaker: </span>'+
-        '<span>Ronald Mund</span>'+
-        '</div>'+
-        '<div class="margin-top-16">'+
-        '<span>Venue: Restaurant</span>'+
-        '</div>'+
-        '<div class="row margin-top-20">'+
-        '<div class="col-md-6 text-align-center">'+
-        '<div>'+
-        '<span>ATTENDEES</span>'+
-        '</div>'+
-        '<div>'+
-        '<span class="color-199ed5 font-size-16">25</span>'+
-        '</div>'+
-        '</div>'+
-        '<div class="col-md-6 text-align-center">'+
-        '<div>'+
-        '<span>RESPONSES</span>'+
-        '</div>'+
-        '<div>'+
-        '<span class="color-199ed5 font-size-16">' + value + '</span>'+
-        '</div>'+
-        '</div>'+
-        '</div>'+
-        '</div>'+
-        '</div>'+
-        '</div>';
+function getPopupTemplate(subtitle, workingField, date, city, eventType, speakerName, venue, attendNum, responseNum) {
+  var contentString='<div id="iw-container" class="width-500">'+
+          '<div class="">'+
+          '<h3 class="iw-title">' + subtitle + '</h3>'+
+          '</div>'+
+          '<div class="iw-content width-460">'+
+          '<div class="row margin-top-10">'+
+          '<div class="col-md-4">'+
+          '<div>'+
+          '<i class="fa fa-bookmark color-199ed5"></i>'+
+          '<span class="padding-left-6">' + workingField + '</span>'+
+          '</div>'+
+          '</div>'+
+          '<div class="col-md-4">'+
+          '<i class="fa fa-calendar-o color-199ed5"></i>'+
+          '<span class="padding-left-6">' + date + '</span>'+
+          '</div>'+
+          '<div class="col-md-4">'+
+          '<i class="fa fa-map-marker color-199ed5"></i>'+
+          '<span class="padding-left-6">' + city + '</span>'+
+          '</div>'+
+          '</div>'+
+          '<div class="margin-top-16">'+
+          '<span> Event Type: </span>'+
+          '<span>' + eventType + '</span>'+
+          '</div>'+
+          '<div class="margin-top-16">'+
+          '<span>Speaker: </span>'+
+          '<span>' + speakerName + '</span>'+
+          '</div>'+
+          '<div class="margin-top-16">'+
+          '<span>Venue: </span>'+
+          '<span>' + venue + '</span>'+
+          '</div>'+
+          '<div class="row margin-top-20">'+
+          '<div class="col-md-6 text-align-center">'+
+          '<div>'+
+          '<span>ATTENDEES</span>'+
+          '</div>'+
+          '<div>'+
+          '<span class="color-199ed5 font-size-16">' + attendNum + '</span>'+
+          '</div>'+
+          '</div>'+
+          '<div class="col-md-6 text-align-center">'+
+          '<div>'+
+          '<span>RESPONSES</span>'+
+          '</div>'+
+          '<div>'+
+          '<span class="color-199ed5 font-size-16">' + responseNum + '</span>'+
+          '</div>'+
+          '</div>'+
+          '</div>'+
+          '</div>'+
+          '</div>'+
+          '</div>';
+  return contentString;
+}
+
 
 // var contentString='<div>hellodsdfasdfdfdgdfjhkdhfishdhhdhdhdhdhdhdhdhdhhdhdhdhueuueueueue</div>';
 var locations = [
   {
   lat: -19.9286,
   lng: -43.93888,
-  info: contentString
+  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
   },
   {
   lat: -19.85758,
   lng: -43.9668,
-  info: contentString
+  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
   },
   {
   lat: -18.24587,
   lng: -43.59613,
-  info: contentString
+  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
   },
   {
   lat: -20.46427,
   lng: -45.42629,
-  info: contentString
+  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
   },
   {
   lat: -20.37817,
   lng: -43.41641,
-  info: contentString
+  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
   },
   {
   lat: -20.09749,
   lng: -43.48831,
-  info: contentString
+  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
   },
   {
   lat: -21.13594,
   lng: -44.26132,
-  info: contentString
+  info: getPopupTemplate('subtitle', 'workingField', 'date', 'city', 'eventType', 'speakerName', 'venue', 'attendNum', 'responseNum')
   },
 ];
 
