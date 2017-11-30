@@ -1,37 +1,41 @@
 [
   {
-  lat: "-19.9286",
-  lng: "-43.93888",
-  info: "contentString"
+  "lat": "-19.9286",
+  "lng": "-43.93888",
+  "subtitle": "Program111 Name",
+  "workingField": "Cardio",
+  "date": "Oct 19,2017",
+  "city": "Montreal, QC",
+  "eventType": "OLA",
+  "speakerName": "Ronald Mund",
+  "venue": "Restaurant",
+  "attendNum": "25",
+  "responseNum": "21"
   },
   {
-  lat: "-19.85758",
-  lng: "-43.9668",
-  info: "contentString"
+  "lat": "-19.85758",
+  "lng": "-43.93888",
+  "subtitle": "Program222 Name",
+  "workingField": "Cardio",
+  "date": "Oct 19,2017",
+  "city": "Montreal, QC",
+  "eventType": "OLA",
+  "speakerName": "Ronald Mund",
+  "venue": "Restaurant",
+  "attendNum": "25",
+  "responseNum": "21"
   },
   {
-  lat: "-18.24587",
-  lng: "-43.59613",
-  info: "contentString"
-  },
-  {
-  lat: "-20.46427",
-  lng: "-45.42629",
-  info: "contentString"
-  },
-  {
-  lat: "-20.37817",
-  lng: "-43.41641",
-  info: "contentString"
-  },
-  {
-  lat: "-20.09749",
-  lng: "-43.48831",
-  info: "contentString"
-  },
-  {
-  lat: "-21.13594",
-  lng: "-44.26132",
-  info: "contentString"
-  },
+  "lat": "-18.24587",
+  "lng": "-43.93888",
+  "subtitle": "Program33 Name",
+  "workingField": "Cardio",
+  "date": "Oct 19,2017",
+  "city": "Montreal, QC",
+  "eventType": "OLA",
+  "speakerName": "Ronald Mund",
+  "venue": "Restaurant",
+  "attendNum": "25",
+  "responseNum": "21"
+  }
 ]
