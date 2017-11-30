@@ -87,59 +87,59 @@ function initialize() {
 }
 function getPopupTemplate(subtitle, workingField, date, city, eventType, speakerName, venue, attendNum, responseNum) {
   var contentString='<div id="iw-container" class="width-500">'+
-          '<div class="">'+
-          '<h3 class="iw-title">' + subtitle + '</h3>'+
-          '</div>'+
-          '<div class="iw-content width-460">'+
-          '<div class="row margin-top-10">'+
-          '<div class="col-md-4">'+
-          '<div>'+
-          '<i class="fa fa-bookmark color-199ed5"></i>'+
-          '<span class="padding-left-6">' + workingField + '</span>'+
-          '</div>'+
-          '</div>'+
-          '<div class="col-md-4">'+
-          '<i class="fa fa-calendar-o color-199ed5"></i>'+
-          '<span class="padding-left-6">' + date + '</span>'+
-          '</div>'+
-          '<div class="col-md-4">'+
-          '<i class="fa fa-map-marker color-199ed5"></i>'+
-          '<span class="padding-left-6">' + city + '</span>'+
-          '</div>'+
-          '</div>'+
-          '<div class="margin-top-16">'+
-          '<span> Event Type: </span>'+
-          '<span>' + eventType + '</span>'+
-          '</div>'+
-          '<div class="margin-top-16">'+
-          '<span>Speaker: </span>'+
-          '<span>' + speakerName + '</span>'+
-          '</div>'+
-          '<div class="margin-top-16">'+
-          '<span>Venue: </span>'+
-          '<span>' + venue + '</span>'+
-          '</div>'+
-          '<div class="row margin-top-20">'+
-          '<div class="col-md-6 text-align-center">'+
-          '<div>'+
-          '<span>ATTENDEES</span>'+
-          '</div>'+
-          '<div>'+
-          '<span class="color-199ed5 font-size-16">' + attendNum + '</span>'+
-          '</div>'+
-          '</div>'+
-          '<div class="col-md-6 text-align-center">'+
-          '<div>'+
-          '<span>RESPONSES</span>'+
-          '</div>'+
-          '<div>'+
-          '<span class="color-199ed5 font-size-16">' + responseNum + '</span>'+
-          '</div>'+
-          '</div>'+
-          '</div>'+
-          '</div>'+
-          '</div>'+
-          '</div>';
+                      '<div class="">'+
+                        '<h3 class="iw-title">' + subtitle + '</h3>'+
+                      '</div>'+
+                      '<div class="iw-content width-460">'+
+                        '<div class="row margin-top-10">'+
+                          '<div class="col-md-4">'+
+                            '<div>'+
+                              '<i class="fa fa-bookmark color-199ed5"></i>'+
+                              '<span class="padding-left-6">' + workingField + '</span>'+
+                            '</div>'+
+                          '</div>'+
+                          '<div class="col-md-4">'+
+                            '<i class="fa fa-calendar-o color-199ed5"></i>'+
+                            '<span class="padding-left-6">' + date + '</span>'+
+                          '</div>'+
+                          '<div class="col-md-4">'+
+                            '<i class="fa fa-map-marker color-199ed5"></i>'+
+                            '<span class="padding-left-6">' + city + '</span>'+
+                          '</div>'+
+                        '</div>'+
+                        '<div class="margin-top-16">'+
+                          '<span> Event Type: </span>'+
+                          '<span>' + eventType + '</span>'+
+                        '</div>'+
+                        '<div class="margin-top-16">'+
+                          '<span>Speaker: </span>'+
+                          '<span>' + speakerName + '</span>'+
+                        '</div>'+
+                        '<div class="margin-top-16">'+
+                          '<span>Venue: </span>'+
+                          '<span>' + venue + '</span>'+
+                        '</div>'+
+                        '<div class="row margin-top-20">'+
+                          '<div class="col-md-6 text-align-center">'+
+                            '<div>'+
+                              '<span>ATTENDEES</span>'+
+                            '</div>'+
+                            '<div>'+
+                              '<span class="color-199ed5 font-size-16">' + attendNum + '</span>'+
+                            '</div>'+
+                          '</div>'+
+                          '<div class="col-md-6 text-align-center">'+
+                            '<div>'+
+                              '<span>RESPONSES</span>'+
+                            '</div>'+
+                            '<div>'+
+                              '<span class="color-199ed5 font-size-16">' + responseNum + '</span>'+
+                            '</div>'+
+                          '</div>'+
+                        '</div>'+
+                      '</div>'+
+                    '</div>'+
+                  '</div>';
   return contentString;
 }
 
