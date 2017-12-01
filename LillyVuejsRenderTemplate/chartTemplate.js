@@ -40,22 +40,22 @@ Vue.component('vue-chartjs-multitabs-frame', {
   props: ['chartData', 'chartOptions', 'chartTop', 'chartType', 'chartTopClass', 'chartMiddleMiddleClass', 'chartMiddleRightClass', 'chartBottomValue', 'chartBottomValue'],
   template:`
     <div class="vue-chart-block">
-      <div  v-bind:class="chartTopClass">
+      <div v-bind:class="chartTopClass">
         <div class="margin-left-20 margin-top-16">
+          <vue-chartjs-top v-bind:chartTop=chartTop></vue-chartjs-top>
         </div>
-        <vue-chartjs-top v-bind:chartTop=chartTop></vue-chartjs-top>
-      </div>
 
-        <div class="col-md-12">
-          <div class="border-1-e7e7e7">
-            <vue-chartjs-multiTabs v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-multiTabs>
-          </div>
+        <div class="border-1-e7e7e7">
+          <vue-chartjs-multiTabs v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-multiTabs>
         </div>
+        <vue-chartjs-bottom v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-bottom>
+
+      </div>
     </div>`
 });
 
 /**
- * @v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass
+ *
  */
 Vue.component('vue-chartjs-drawchart', {
   props: ['chartData', 'chartOptions', 'chartType', 'chartMiddleMiddleClass', 'chartMiddleRightClass'],
@@ -110,7 +110,7 @@ Vue.component('vue-chartjs-drawchart', {
  * @
  */
 Vue.component('vue-chartjs-multiTabs', {
-  props: ['chartData', 'chartOptions', 'chartType', 'chartMiddleMiddleClass', 'chartMiddleRightClass', 'chartBottomValue'],
+  props: ['chartData', 'chartOptions', 'chartType', 'chartMiddleMiddleClass', 'chartMiddleRightClass'],
   // methods: {
   //   drawChart: function(canvas, type, chartData, chartOptions) {
   //     console.log("tabs");
@@ -127,16 +127,16 @@ Vue.component('vue-chartjs-multiTabs', {
   //   },
   // },
   template:`
-    <div class="container col-md-6">
+    <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <ul class="nav nav-tabs">
               <li><a data-toggle="tab" href="#chart1">chart 1</a></li>
               <li><a data-toggle="tab" href="#chart2">chart 2</a></li>
               <li><a data-toggle="tab" href="#chart3">chart 3</a></li>
               <li><a data-toggle="tab" href="#chart4">chart 4</a></li>
             </ul>
-            <div class="tab-content col-md-12">
+            <div class="tab-content">
               <div id="chart1" class="tab-pane fade">
                 <vue-chartjs-drawchart v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass></vue-chartjs-drawchart>
               </div>
@@ -151,7 +151,7 @@ Vue.component('vue-chartjs-multiTabs', {
               </div>
             </div>
           </div>
-          <vue-chartjs-bottom v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-bottom>
+
     </div>`
 });
 
@@ -199,7 +199,7 @@ var app = new Vue({
   created: function () {
     var self = this;
     var countChart = 0;
-    axios.get('jsonData.json').then((response) => {
+    axios.get('jsonData_bkup.json').then((response) => {
       countChart = response.data.contentSection.length;
 
       for(var i = 0; i < countChart; i++) {
