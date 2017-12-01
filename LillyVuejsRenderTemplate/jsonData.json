@@ -4,7 +4,7 @@
       "blockId": 392654866,
       "class": "col-xs-12 col-md-6",
       "blockClasses": "height-400 overflow-hidden position-relative",
-      "type": "tab x /no tab",
+      "typeIsTab": "true",
       "top": {
         "enable": true,
         "value": "<h5 class=\"margin-50\">header</h5>",
@@ -173,7 +173,7 @@
       "blockId": 392654866,
       "wrapperclass": "col-xs-12 col-md-6",
       "blockClasses": "height-400 overflow-hidden position-relative",
-      "blocktype": "no tab",
+      "blocktypeIsNotTab": "false",
       "blocktop": {
         "enable": true,
         "value": "How effective is the speaker?",
