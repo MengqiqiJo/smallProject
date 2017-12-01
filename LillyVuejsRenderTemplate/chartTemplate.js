@@ -17,21 +17,21 @@ Vue.component('vue-chartjs-bottom', {
 /**
  * @
  */
-Vue.component('vue-chartjs-singlechart-frame', {
-  props: ['chartData', 'chartOptions', 'chartTop', 'chartType', 'chartTopClass', 'chartMiddleMiddleClass', 'chartMiddleRightClass', 'chartBottomValue'],
-  template:`
-    <div class="vue-chart-block">
-      <div  v-bind:class="chartTopClass">
-        <div class="margin-left-20 margin-top-16">
-        <vue-chartjs-top v-bind:chartTop=chartTop></vue-chartjs-top>
-          <div class="border-1-e7e7e7">
-            <vue-chartjs-drawchart v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass></vue-chartjs-drawchart>
-            <vue-chartjs-bottom v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-bottom>
-          </div>
-        </div>
-      </div>
-    </div>`
-});
+// Vue.component('vue-chartjs-singlechart-frame', {
+//   props: ['chartData', 'chartOptions', 'chartTop', 'chartType', 'chartTopClass', 'chartMiddleMiddleClass', 'chartMiddleRightClass', 'chartBottomValue'],
+//   template:`
+//     <div class="vue-chart-block">
+//       <div  v-bind:class="chartTopClass">
+//         <div class="margin-left-20 margin-top-16">
+//         <vue-chartjs-top v-bind:chartTop=chartTop></vue-chartjs-top>
+//           <div class="border-1-e7e7e7">
+//             <vue-chartjs-drawchart v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass></vue-chartjs-drawchart>
+//             <vue-chartjs-bottom v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-bottom>
+//           </div>
+//         </div>
+//       </div>
+//     </div>`
+// });
 
 /**
  * @
@@ -41,12 +41,33 @@ Vue.component('vue-chartjs-multitabs-frame', {
   template:`
     <div class="vue-chart-block">
       <div v-bind:class="chartTopClass">
-        <div class="margin-left-20 margin-top-16">
+        <div class="margin-top-16">
           <vue-chartjs-top v-bind:chartTop=chartTop></vue-chartjs-top>
         </div>
 
         <div class="border-1-e7e7e7">
           <vue-chartjs-multiTabs v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-multiTabs>
+        </div>
+        <vue-chartjs-bottom v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-bottom>
+
+      </div>
+    </div>`
+});
+
+/**
+ * @
+ */
+Vue.component('vue-chartjs-singlechart-frame', {
+  props: ['chartData', 'chartOptions', 'chartTop', 'chartType', 'chartTopClass', 'chartMiddleMiddleClass', 'chartMiddleRightClass', 'chartBottomValue', 'chartBottomValue'],
+  template:`
+    <div class="vue-chart-block">
+      <div v-bind:class="chartTopClass">
+        <div class="margin-top-16">
+          <vue-chartjs-top v-bind:chartTop=chartTop></vue-chartjs-top>
+        </div>
+
+        <div class="border-1-e7e7e7">
+          <vue-chartjs-drawchart v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-drawchart>
         </div>
         <vue-chartjs-bottom v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-bottom>
 
