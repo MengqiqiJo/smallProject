@@ -3,7 +3,8 @@
 
 echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">';
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
-echo "<link rel='stylesheet' href='../plugin.css'>";
+echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
+echo '<link rel="stylesheet" href="../plugin.css">';
 
 /**
  * @file
@@ -22,7 +23,7 @@ class dashpageBlockGenerator {
     // $output .= '<vue-chartjs-bar></vue-chartjs-bar>';
     // $output .= '<vue-chartjs-line></vue-chartjs-line>';
       // $output .= '<p>{{blockData}}</p>';
-      $output .= '<p>{{pieChartData}}</p>';
+      // $output .= '<p>{{pieChartData}}</p>';
       // $output .= '<p>{{barChartData}}</p>';
     $output .= '</div>';
 
