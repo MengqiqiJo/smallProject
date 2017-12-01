@@ -173,7 +173,7 @@
       "blockId": 392654866,
       "wrapperclass": "col-xs-12 col-md-6",
       "blockClasses": "height-400 overflow-hidden position-relative",
-      "blocktypeIsNotTab": "false",
+      "typeIsTab": "false",
       "blocktop": {
         "enable": true,
         "value": "How effective is the speaker?",
