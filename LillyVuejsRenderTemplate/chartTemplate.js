@@ -17,21 +17,13 @@ Vue.component('vue-chartjs-bottom', {
 /**
  * @
  */
-// Vue.component('vue-chartjs-singlechart-frame', {
-//   props: ['chartData', 'chartOptions', 'chartTop', 'chartType', 'chartTopClass', 'chartMiddleMiddleClass', 'chartMiddleRightClass', 'chartBottomValue'],
-//   template:`
-//     <div class="vue-chart-block">
-//       <div  v-bind:class="chartTopClass">
-//         <div class="margin-left-20 margin-top-16">
-//         <vue-chartjs-top v-bind:chartTop=chartTop></vue-chartjs-top>
-//           <div class="border-1-e7e7e7">
-//             <vue-chartjs-drawchart v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass></vue-chartjs-drawchart>
-//             <vue-chartjs-bottom v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-bottom>
-//           </div>
-//         </div>
-//       </div>
-//     </div>`
-// });
+Vue.component('vue-chartjs-multitabs-test-frame', {
+  props: ['chart'],
+  template:`
+    <div class="vue-chart-block">
+      <li v-for="chartdetail in chart">{{chartdetail}}</li>
+    </div>`
+});
 
 /**
  * @
@@ -192,59 +184,43 @@ var app = new Vue({
     lineChartType: "line",
     barChartType: "bar",
     chart: [
-      {
-        chartData: {},
-        chartOptions: {},
-        chartTop: {},
-        chartTopClass: {},
-        chartMiddleMiddleClass: {},
-        chartMiddleRightClass: {},
-        chartBottomValue: "",
-      },
-      {
-        chartData: {},
-        chartOptions: {},
-        chartTop: {},
-        chartTopClass: {},
-        chartMiddleMiddleClass: {},
-        chartMiddleRightClass: {},
-        chartBottomValue: "",
-      },
-      {
-        chartData: {},
-        chartOptions: {},
-        chartTop: {},
-        chartTopClass: {},
-        chartMiddleMiddleClass: {},
-        chartMiddleRightClass: {},
-        chartBottomValue: "",
-      },
+
     ]
 
   },
   created: function () {
     var self = this;
     var countChart = 0;
-    axios.get('jsonData.json').then((response) => {
-      countChart = response.data.contentSection.length;
+    axios.get('jsonData_bkup.json').then((response) => {
+      // countChart = response.data.contentSection.length;
 
-      for(var i = 0; i < countChart; i++) {
+      // response.data.contentSection = [];
+      for(var i = 0; i < 4; i++) {
         // self.chart[0] = response.data.contentSection[0];
 
-        self.chart[i].chartData = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartData;
-        self.chart[i].chartOptions = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartOptions;
-        self.chart[i].chartTop = response.data.contentSection[i].top.value;
-        self.chart[i].chartTopClass = response.data.contentSection[i].top.class;
-        self.chart[i].chartMiddleMiddleClass = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddleClass;
-        self.chart[i].chartMiddleRightClass = response.data.contentSection[i].middle.middleMiddle.middleMiddleRightClass;
-        self.chart[i].chartBottomValue = response.data.contentSection[i].bottom.value;
+        // self.chart[i].chartData = response.data.contentSection[0].blockmiddle[0].tabmiddle[0];
+        // self.chart[i].chartOptions = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddle.chartOptions;
+        // self.chart[i].chartTop = response.data.contentSection[i].top.value;
+        // self.chart[i].chartTopClass = response.data.contentSection[i].top.class;
+        // self.chart[i].chartMiddleMiddleClass = response.data.contentSection[i].middle.middleMiddle.middleMiddleMiddleClass;
+        // self.chart[i].chartMiddleRightClass = response.data.contentSection[i].middle.middleMiddle.middleMiddleRightClass;
+        // self.chart[i].chartBottomValue = response.data.contentSection[i].bottom.value;
 
+        // self.chart[i] = response.data.contentSection[i];
+        // console.log(response.data);
+        // console.log(response.data.contentSection[0]);
+        console.log(response.data.contentSection[i]);
+        // console.log(self.chart[0]);
 
       }
 
-      console.log(self.chart[1].chartMiddleRightClass);
-      console.log(self.chart[1].chartMiddleMiddleClass);
-      console.log(98);
+      // <vue-chartjs-multitabs-frame v-bind:chartData=chart[2].chartData v-bind:chartOptions=chart[2].chartOptions v-bind:chartTop=chart[2].chartTop v-bind:chartType="doughnutChartType" v-bind:chartTopClass=chart[2].chartTopClass v-bind:chartMiddleMiddleClass=chart[2].chartMiddleMiddleClass v-bind:chartMiddleRightClass=chart[2].chartMiddleRightClass v-bind:chartBottomValue=chart[2].chartBottomValue></vue-chartjs-multitabs-frame>
+      // <vue-chartjs-singlechart-frame v-bind:chartData=chart[0].chartData v-bind:chartOptions=chart[0].chartOptions v-bind:chartTop=chart[0].chartTop v-bind:chartType="pieChartType" v-bind:chartTopClass=chart[0].chartTopClass v-bind:chartMiddleMiddleClass=chart[0].chartMiddleMiddleClass v-bind:chartMiddleRightClass=chart[0].chartMiddleRightClass v-bind:chartBottomValue=chart[0].chartBottomValue></vue-chartjs-singlechart-frame>
+      // <vue-chartjs-singlechart-frame v-bind:chartData=chart[1].chartData v-bind:chartOptions=chart[1].chartOptions v-bind:chartTop=chart[1].chartTop v-bind:chartType="barChartType" v-bind:chartTopClass=chart[1].chartTopClass v-bind:chartMiddleMiddleClass=chart[1].chartMiddleMiddleClass v-bind:chartMiddleRightClass=chart[1].chartMiddleRightClass v-bind:chartBottomValue=chart[1].chartBottomValue></vue-chartjs-singlechart-frame>
+
+
+
+
 // <vue-chartjs-pie v-bind:chartData=chart[0].middle.middleMiddle.middleMiddleMiddle.chartData v-bind:chartOptions=chart[0].chartOptions v-bind:chartTop=chart[0].chartTop v-bind:chartType="doughnutChartType" v-bind:chartTopClass=chart[0].chartTopClass></vue-chartjs-pie>
 
       // self.topClass = self.chart[0].chartTopClass;
@@ -255,8 +231,6 @@ var app = new Vue({
   },
   template:`
     <div>
-      <vue-chartjs-multitabs-frame v-bind:chartData=chart[2].chartData v-bind:chartOptions=chart[2].chartOptions v-bind:chartTop=chart[2].chartTop v-bind:chartType="doughnutChartType" v-bind:chartTopClass=chart[2].chartTopClass v-bind:chartMiddleMiddleClass=chart[2].chartMiddleMiddleClass v-bind:chartMiddleRightClass=chart[2].chartMiddleRightClass v-bind:chartBottomValue=chart[2].chartBottomValue></vue-chartjs-multitabs-frame>
-      <vue-chartjs-singlechart-frame v-bind:chartData=chart[0].chartData v-bind:chartOptions=chart[0].chartOptions v-bind:chartTop=chart[0].chartTop v-bind:chartType="pieChartType" v-bind:chartTopClass=chart[0].chartTopClass v-bind:chartMiddleMiddleClass=chart[0].chartMiddleMiddleClass v-bind:chartMiddleRightClass=chart[0].chartMiddleRightClass v-bind:chartBottomValue=chart[0].chartBottomValue></vue-chartjs-singlechart-frame>
-      <vue-chartjs-singlechart-frame v-bind:chartData=chart[1].chartData v-bind:chartOptions=chart[1].chartOptions v-bind:chartTop=chart[1].chartTop v-bind:chartType="barChartType" v-bind:chartTopClass=chart[1].chartTopClass v-bind:chartMiddleMiddleClass=chart[1].chartMiddleMiddleClass v-bind:chartMiddleRightClass=chart[1].chartMiddleRightClass v-bind:chartBottomValue=chart[1].chartBottomValue></vue-chartjs-singlechart-frame>
+      <vue-chartjs-multitabs-test-frame v-bind:chart=chart[0]></vue-chartjs-multitabs-test-frame>
     </div>`
 });

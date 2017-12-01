@@ -5,19 +5,19 @@
       "class": "col-xs-12 col-md-6",
       "blockClasses": "height-400 overflow-hidden position-relative",
       "typeIsTab": "true",
-      "top": {
+      "blocktop": {
         "enable": true,
         "value": "<h5 class=\"margin-50\">header</h5>",
         "class": "col-xs-12 col-md-6"
       },
-      "middle": {
+      "blockmiddle": {
         [
-          "top": {
+          "tabtop": {
             "enable": true,
             "value": "<h5 class=\"margin-50\">header</h5>",
             "class": "col-xs-12 col-md-6"
           },
-          "middle": {
+          "tabmiddle": {
             "type": "chart",
             "enable": true,
             "middleTop": null,
@@ -164,7 +164,7 @@
         ]
 
       },
-      "bottom": {
+      "blockbottom": {
         "enable": true,
         "value": "this is the first bottom"
       }
