@@ -125,7 +125,7 @@
       "top": {
         "enable": true,
         "value": "tab",
-        "class": "col-xs-12 col-md-12"
+        "class": "col-xs-12 col-md-6"
       },
       "middle": {
         "enable": true,
