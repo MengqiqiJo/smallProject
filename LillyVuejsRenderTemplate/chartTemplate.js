@@ -67,8 +67,13 @@ Vue.component('vue-chartjs-singlechart-frame', {
         </div>
 
         <div class="border-1-e7e7e7">
-          <vue-chartjs-drawchart v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-drawchart>
-        </div>
+          <div v-if="">
+            <vue-chartjs-multiTabs v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-multiTabs>
+          </div>
+          <div>
+            <vue-chartjs-drawchart v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-drawchart>
+          </div v-else>
+            </div>
         <vue-chartjs-bottom v-bind:chartBottomValue="chartBottomValue"></vue-chartjs-bottom>
 
       </div>
@@ -152,13 +157,13 @@ Vue.component('vue-chartjs-multiTabs', {
         <div class="row">
           <div class="col-md-6">
             <ul class="nav nav-tabs">
-              <li><a data-toggle="tab" href="#chart1">chart 1</a></li>
+              <li class="active"><a data-toggle="tab" href="#chart1">chart 1</a></li>
               <li><a data-toggle="tab" href="#chart2">chart 2</a></li>
               <li><a data-toggle="tab" href="#chart3">chart 3</a></li>
               <li><a data-toggle="tab" href="#chart4">chart 4</a></li>
             </ul>
             <div class="tab-content">
-              <div id="chart1" class="tab-pane fade">
+              <div id="chart1" class="tab-pane fade in active">
                 <vue-chartjs-drawchart v-bind:chartData=chartData v-bind:chartOptions=chartOptions v-bind:chartType=chartType v-bind:chartMiddleMiddleClass=chartMiddleMiddleClass v-bind:chartMiddleRightClass=chartMiddleRightClass></vue-chartjs-drawchart>
               </div>
               <div id="chart2" class="tab-pane fade">
@@ -220,7 +225,7 @@ var app = new Vue({
   created: function () {
     var self = this;
     var countChart = 0;
-    axios.get('jsonData_bkup.json').then((response) => {
+    axios.get('jsonData.json').then((response) => {
       countChart = response.data.contentSection.length;
 
       for(var i = 0; i < countChart; i++) {
