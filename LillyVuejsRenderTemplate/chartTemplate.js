@@ -211,6 +211,7 @@ var app = new Vue({
         // console.log(response.data.contentSection[0]);
         console.log(response.data.contentSection[0]);
         console.log(response.data.contentSection[1]);
+        console.log(response.data.contentSection[2]);
         // console.log(self.chart[0]);
 
       // }
