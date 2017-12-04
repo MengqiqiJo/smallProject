@@ -191,11 +191,11 @@ var app = new Vue({
   created: function () {
     var self = this;
     var countChart = 0;
-    axios.get('jsonData_bkup.json').then((response) => {
+    axios.get('jsonData1.json').then((response) => {
       // countChart = response.data.contentSection.length;
 
       // response.data.contentSection = [];
-      for(var i = 0; i < 4; i++) {
+      // for(var i = 0; i < 4; i++) {
         // self.chart[0] = response.data.contentSection[0];
 
         // self.chart[i].chartData = response.data.contentSection[0].blockmiddle[0].tabmiddle[0];
@@ -209,10 +209,11 @@ var app = new Vue({
         // self.chart[i] = response.data.contentSection[i];
         // console.log(response.data);
         // console.log(response.data.contentSection[0]);
-        console.log(response.data.contentSection[i]);
+        console.log(response.data.contentSection[0]);
+        console.log(response.data.contentSection[1]);
         // console.log(self.chart[0]);
 
-      }
+      // }
 
       // <vue-chartjs-multitabs-frame v-bind:chartData=chart[2].chartData v-bind:chartOptions=chart[2].chartOptions v-bind:chartTop=chart[2].chartTop v-bind:chartType="doughnutChartType" v-bind:chartTopClass=chart[2].chartTopClass v-bind:chartMiddleMiddleClass=chart[2].chartMiddleMiddleClass v-bind:chartMiddleRightClass=chart[2].chartMiddleRightClass v-bind:chartBottomValue=chart[2].chartBottomValue></vue-chartjs-multitabs-frame>
       // <vue-chartjs-singlechart-frame v-bind:chartData=chart[0].chartData v-bind:chartOptions=chart[0].chartOptions v-bind:chartTop=chart[0].chartTop v-bind:chartType="pieChartType" v-bind:chartTopClass=chart[0].chartTopClass v-bind:chartMiddleMiddleClass=chart[0].chartMiddleMiddleClass v-bind:chartMiddleRightClass=chart[0].chartMiddleRightClass v-bind:chartBottomValue=chart[0].chartBottomValue></vue-chartjs-singlechart-frame>
