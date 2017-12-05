@@ -1,0 +1,30 @@
+    "value": '<div class="container">
+        <div class="row">
+
+          <vue-chartjs-top></vue-chartjs-top>
+
+          <div class="col-md-6">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#chart1">chart 1</a></li>
+              <li><a data-toggle="tab" href="#chart2">chart 2</a></li>
+              <li><a data-toggle="tab" href="#chart3">chart 3</a></li>
+              <li><a data-toggle="tab" href="#chart4">chart 4</a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="chart1" class="tab-pane fade in active">
+                <vue-chart-line id="chart4" class="vue-chart-line-wrapper"><vue-chart-line>
+              </div>
+              <div id="chart2" class="tab-pane fade">
+                <vue-chart-bar id="chart4" class="vue-chart-bar-wrapper"><vue-chart-bar>
+              </div>
+              <div id="chart3" class="tab-pane fade">
+                <vue-chart-bar id="chart4" class="vue-chart-bar-wrapper"><vue-chart-bar>
+              </div>
+              <div id="chart4" class="tab-pane fade">
+                <vue-chart-pie id="chart4" class="vue-chart-pie-wrapper"><vue-chart-pie>
+              </div>
+            </div>
+          </div>
+
+      <div class=\"col-md-12 padding-0 position-absolute bottom-0\"><div class=\"col-md-6 height-66 border-1-eee text-align-center\">NTS</div><div class=\"col-md-6 height-66 border-1-eee text-align-center\">RESPONSES</div></div>
+    </div>';

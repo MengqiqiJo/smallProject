@@ -3,7 +3,7 @@
  */
 Vue.component('vue-chartjs-top', {
   props: ['chartTop'],
-  template: '<div v-if="chartTop != \'\' " class="bg-0082ba max-height-32 color-fff padding-10" v-html="chartTop"></div>'
+  template: '<div class="bg-0082ba max-height-32 color-fff padding-10">fix header</div>'
 })
 
 /**
@@ -191,11 +191,11 @@ var app = new Vue({
   created: function () {
     var self = this;
     var countChart = 0;
-    axios.get('jsonData1.json').then((response) => {
+    axios.get('jsonData_bkup.json').then((response) => {
       // countChart = response.data.contentSection.length;
 
       // response.data.contentSection = [];
-      // for(var i = 0; i < 4; i++) {
+      // for(var i = 0; i < countChart; i++) {
         // self.chart[0] = response.data.contentSection[0];
 
         // self.chart[i].chartData = response.data.contentSection[0].blockmiddle[0].tabmiddle[0];
@@ -208,7 +208,7 @@ var app = new Vue({
 
         // self.chart[i] = response.data.contentSection[i];
         // console.log(response.data);
-        // console.log(response.data.contentSection[0]);
+        console.log(response.data.contentSection[0]);
         console.log(response.data.contentSection[0]);
         console.log(response.data.contentSection[1]);
         console.log(response.data.contentSection[2]);
