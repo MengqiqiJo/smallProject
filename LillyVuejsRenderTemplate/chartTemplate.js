@@ -1,9 +1,15 @@
 /**
  * @file
  */
+Vue.component('vue-chartjs-top-test', {
+  template: '<h5>fix header123123123123123132313123123132312323</h5>'
+})
+/**
+ * @file
+ */
 Vue.component('vue-chartjs-top', {
   props: ['chartTop'],
-  template: '<div class="bg-0082ba max-height-32 color-fff padding-10">fix header</div>'
+  template: '<div v-html="chartTop"></div>'
 })
 
 /**
@@ -183,6 +189,7 @@ var app = new Vue({
     doughnutChartType: "doughnut",
     lineChartType: "line",
     barChartType: "bar",
+    chartTop: "",
     chart: [
 
     ]
@@ -208,10 +215,11 @@ var app = new Vue({
 
         // self.chart[i] = response.data.contentSection[i];
         // console.log(response.data);
-        console.log(response.data.contentSection[0]);
-        console.log(response.data.contentSection[0]);
-        console.log(response.data.contentSection[1]);
-        console.log(response.data.contentSection[2]);
+        self.chartTop = response.data.contentSection[0].top.value;
+        console.log(response.data.contentSection[0].top.value);
+        // console.log(response.data.contentSection[0]);
+        // console.log(response.data.contentSection[1]);
+        // console.log(response.data.contentSection[2]);
         // console.log(self.chart[0]);
 
       // }
@@ -224,7 +232,7 @@ var app = new Vue({
 
 
 // <vue-chartjs-pie v-bind:chartData=chart[0].middle.middleMiddle.middleMiddleMiddle.chartData v-bind:chartOptions=chart[0].chartOptions v-bind:chartTop=chart[0].chartTop v-bind:chartType="doughnutChartType" v-bind:chartTopClass=chart[0].chartTopClass></vue-chartjs-pie>
-
+// <vue-chartjs-multitabs-test-frame v-bind:chart=chart[0]></vue-chartjs-multitabs-test-frame>
       // self.topClass = self.chart[0].chartTopClass;
       })
       .catch((error) => {
@@ -233,6 +241,6 @@ var app = new Vue({
   },
   template:`
     <div>
-      <vue-chartjs-multitabs-test-frame v-bind:chart=chart[0]></vue-chartjs-multitabs-test-frame>
+      <vue-chartjs-top v-bind:chartTop=chartTop></vue-chartjs-top>
     </div>`
 });

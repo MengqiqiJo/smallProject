@@ -2,7 +2,7 @@
         <div class="row">
 
           <vue-chartjs-top></vue-chartjs-top>
-
+          <h5 class=\"margin-50\">header</h5>
           <div class="col-md-6">
             <ul class="nav nav-tabs">
               <li class="active"><a data-toggle="tab" href="#chart1">chart 1</a></li>
@@ -12,7 +12,7 @@
             </ul>
             <div class="tab-content">
               <div id="chart1" class="tab-pane fade in active">
-                <vue-chart-line id="chart4" class="vue-chart-line-wrapper"><vue-chart-line>
+                <vue-chart-line><vue-chart-line>
               </div>
               <div id="chart2" class="tab-pane fade">
                 <vue-chart-bar id="chart4" class="vue-chart-bar-wrapper"><vue-chart-bar>
