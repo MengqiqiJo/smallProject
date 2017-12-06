@@ -9,7 +9,6 @@ class clickToOutlookCalendar {
     $output .= '</div>';
 
     return $output;
-
   }
 
 }
