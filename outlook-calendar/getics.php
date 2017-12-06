@@ -1,25 +1,7 @@
 <?php
 
-// $DTSTART = '20171225T050000Z';
-// $DTEND = '20171225T090000Z';
-// $SUMMARY = 'hellcnew5ss5 world';
-// $DTSTAMP = '20171206T164709Z';
-
 header("Content-Type: text/Calendar");
 header("Content-Disposition: inline; filename=\"myevents.ics\"");
-// echo "BEGIN:VCALENDAR
-// VERSION:2.0
-// PRODID:-//hacksw/handcal//NONSGML v1.0//EN
-// BEGIN:VEVENT
-// DTSTART:$DTSTART
-// DTEND:$DTEND
-// SUMMARY:$SUMMARY
-// DTSTAMP:$DTSTAMP
-// END:VEVENT
-// END:VCALENDAR";
-
-
-
 
 function ics_content() {
     /*
