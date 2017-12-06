@@ -1,29 +1,19 @@
 <?php
+
+$UID = '040000008200E00074C5B7101A82E008000000008062306C6261CA01000000000000000';
+$DTSTART = '20171217T061000Z';
+$DTEND = '20171220T010000Z';
+
 header("Content-Type: text/Calendar");
-header("Content-Disposition: inline; filename=\"myevents.ics\"");
+header("Content-Disposition: inline");
 echo "BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//hacksw/handcal//NONSGML v1.0//EN
 BEGIN:VEVENT
-UID:" . md5(uniqid(mt_rand(), true)) . "@yourhost.test
-DTSTAMP:" . gmdate('Ymd').'T'. gmdate('His') . "Z
-DTSTART:20110925T170000Z
-DTEND:20110928T035959Z
-SUMMARY:Bastille Day Party
-END:VEVENT
-BEGIN:VEVENT
-UID:" . md5(uniqid(mt_rand(), true)) . "@yourhost.test
-DTSTAMP:" . gmdate('Ymd').'T'. gmdate('His') . "Z
-DTSTART:20110929T170000Z
-DTEND:20110930T035959Z
-SUMMARY:Camping Trip
-END:VEVENT
-BEGIN:VEVENT
-UID:" . md5(uniqid(mt_rand(), true)) . "@yourhost.test
-DTSTAMP:" . gmdate('Ymd').'T'. gmdate('His') . "Z
-DTSTART:20110914T170000Z
-DTEND:20110915T035959Z
-SUMMARY:Testing new Event
+UID: $UID
+DTEND:$DTEND
+DTSTART:$DTSTART
+SUMMARY:i have a pen
 END:VEVENT
 END:VCALENDAR";
 ?>
