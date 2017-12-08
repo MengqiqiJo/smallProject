@@ -6,11 +6,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700'>
-<link rel='stylesheet prefetch' href='https://cdn.rawgit.com/andrewcourtice/vuetiful/46294dcb0852e2f13324f186908aa7e62251f7aa/dist/components/app.style.css'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.4.0/introjs.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/andrewcourtice/vuetiful/46294dcb0852e2f13324f186908aa7e62251f7aa/dist/components/app.style.css'>
 
-      <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 
 </head>
@@ -18,13 +16,13 @@
 <body>
   <div id="datatables" class="container">
     <div>
-        <h3>Pagination</h3>
+
         <div class="grid-cell" layout="row">
             <input type="text" placeholder="Type here to filter paginated data" self="size-x1" v-model="customers.filter" data-intro="You can filter the data in a datatable by typing in any of the filter fields" data-step="9" data-position="top">
         </div>
         <div class="grid-row" layout="row top-stretch">
             <div class="grid-cell">
-                <paginator :source="customers.rows" :page-size="4" :filter="customers.filter" data-intro="Use the paginator to page data for easier viewing" data-step="10" data-position="top">
+                <paginator :source="customers.rows" :page-size="5" :filter="customers.filter" data-intro="Use the paginator to page data for easier viewing" data-step="10" data-position="top">
                     <template scope="page">
                         <datatable id="data-table-main"
                             :source="page.data"
@@ -44,16 +42,17 @@
                         </datatable>
                     </template>
                 </paginator>
+                <div layout="row center-justify">total rows: {{totalRows}}</div>
             </div>
         </div>
     </div>
 </div>
   <script src='https://unpkg.com/vue@2.2.6/dist/vue.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.27.1/date_fns.min.js'></script>
-<script src='https://cdn.rawgit.com/andrewcourtice/vuetiful/4c555c8c768cd27fea16d5370cd926763d78158a/dist/components/components.bundle.js'></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.27.1/date_fns.min.js'></script>
+  <script src='https://cdn.rawgit.com/andrewcourtice/vuetiful/4c555c8c768cd27fea16d5370cd926763d78158a/dist/components/components.bundle.js'></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <script  src="js/index.js"></script>
+  <script  src="js/index.js"></script>
 
 </body>
 </html>

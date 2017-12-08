@@ -119,6 +119,7 @@ new Vue({
     data: function () {
         return {
             customers: {},
+            totalRows: '',
             dateFormats: [
                 "DD/MM/YYYY",
                 "DD MMM YYYY",
@@ -129,12 +130,12 @@ new Vue({
     },
     created: function () {
         var self = this;
+
         axios.get('tableData.json').then((response) => {
-          console.log("11111");
-          console.log(response.data);
-          console.log("2222");
           var tableColumns = response.data;
           self.customers = tableColumns;
+          self.totalRows = tableColumns.rows.length;
+
         })
         .catch((error) => {
         console.log(error);
