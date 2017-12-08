@@ -1,0 +1,26 @@
+h1 {
+  margin-top: 0.25em;
+}
+
+a {
+  cursor: pointer;
+}
+
+.container {
+  padding: 1rem 0;
+}
+
+.datatable-options-toggle {
+  padding: 0.5rem 1rem;
+}
+
+.checkable-column {
+  text-align: center;
+}
+.checkable-column .checkbox {
+  margin: 0;
+}
+
+.paginator .datatable {
+  border: none;
+}

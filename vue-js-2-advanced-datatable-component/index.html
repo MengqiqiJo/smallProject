@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.JS 2 - Advanced Datatable Component</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700'>
+<link rel='stylesheet prefetch' href='https://cdn.rawgit.com/andrewcourtice/vuetiful/46294dcb0852e2f13324f186908aa7e62251f7aa/dist/components/app.style.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.4.0/introjs.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <div id="datatables" class="container">
+    <div>
+        <h3>Pagination</h3>
+
+        <div class="grid-row" layout="row top-stretch">
+            <div class="grid-cell">
+                <paginator :source="customers.rows" :page-size="4" :filter="customers.filter" data-intro="Use the paginator to page data for easier viewing" data-step="10" data-position="top">
+                    <template scope="page">
+                        <datatable id="data-table-main"
+                            :source="page.data"
+                            :filterable="false"
+                            :striped="customers.striped"
+                            :editable="customers.editable"
+                            :line-numbers="customers.lineNumbers">
+                            <datatable-column
+                                v-for="column in customers.columns"
+                                :id="column.id"
+                                :label="column.label"
+                                :width="column.width"
+                                :sortable="column.sortable"
+                                :groupable="column.groupable"
+                                :formatter="column.formatter">
+                            </datatable-column>
+                        </datatable>
+                    </template>
+                </paginator>
+            </div>
+        </div>
+    </div>
+</div>
+  <script src='https://unpkg.com/vue@2.2.6/dist/vue.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.27.1/date_fns.min.js'></script>
+<script src='https://cdn.rawgit.com/andrewcourtice/vuetiful/4c555c8c768cd27fea16d5370cd926763d78158a/dist/components/components.bundle.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.4.0/intro.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
