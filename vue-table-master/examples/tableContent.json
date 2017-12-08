@@ -1,9 +1,9 @@
 {
-"total": 200,
+"total": 15,
 "per_page": 15,
 "current_page": 1,
-"last_page": 14,
-"next_page_url": "http://vuetable.ratiw.net/api/users?page=2",
+"last_page": 1,
+"next_page_url": null,
 "prev_page_url": null,
 "from": 1,
 "to": 15,
@@ -11,7 +11,7 @@
 {
 "id": 1,
 "name": "Noelia O'Kon",
-"nickname": "asperiores",
+"nickname": "bs1periores",
 "email": "otho.smitham@example.com",
 "birthdate": "1978-06-28 00:00:00",
 "gender": "F",
@@ -38,7 +38,7 @@
 {
 "id": 2,
 "name": "Mr. Enid Von PhD",
-"nickname": "alias",
+"nickname": "b1lias",
 "email": "pollich.cecilia@example.com",
 "birthdate": "1990-09-18 00:00:00",
 "gender": "M",
