@@ -19,7 +19,9 @@
   <div id="datatables" class="container">
     <div>
         <h3>Pagination</h3>
-
+        <div class="grid-cell" layout="row">
+            <input type="text" placeholder="Type here to filter paginated data" self="size-x1" v-model="customers.filter" data-intro="You can filter the data in a datatable by typing in any of the filter fields" data-step="9" data-position="top">
+        </div>
         <div class="grid-row" layout="row top-stretch">
             <div class="grid-cell">
                 <paginator :source="customers.rows" :page-size="4" :filter="customers.filter" data-intro="Use the paginator to page data for easier viewing" data-step="10" data-position="top">
