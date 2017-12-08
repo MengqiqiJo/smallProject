@@ -126,38 +126,5 @@ new Vue({
                 "D/MM/YYYY h:mm a"
             ]
         };
-    },
-
-    computed: {
-
-        selectAll: {
-            get: function () {
-                return customers.selected.length == customers.rows.length;
-            },
-            set: function (value) {
-                customers.selected = value ? customers.rows : [];
-            }
-        }
-
-    },
-
-    methods: {
-        deleteCustomer: function(customer) {
-            var result = window.confirm("You are about to delete " + customer.purchasor_name + ". Are you sure?");
-
-            if (result) {
-                var index = customers.rows.indexOf(customer);
-
-                if (index === -1) {
-                    return;
-                }
-
-                customers.rows.splice(index, 1);
-            }
-        }
-    },
-
-    mounted() {
-
     }
 });
