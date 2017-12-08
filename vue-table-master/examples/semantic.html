@@ -126,6 +126,30 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="../dist/vue-table.js"></script>
 <script>
+    var tableColumns = [
+        {
+          name: "name",
+          title: "Full Name",
+          sortField: "name",
+          visible: true
+        },
+        {
+            name: "email",
+            sortField: "email",
+            visible: true
+        },
+        {
+            name: "nickname",
+            sortField: "nickname",
+            visible: true
+        },
+        {
+            name: "birthdate",
+            sortField: "birthdate",
+            callback: "formatDate|D/MM/Y",
+            visible: true
+        }
+    ]
 
     Vue.config.debug = true
 
@@ -136,8 +160,8 @@
         data: {
             searchFor: '',
             moreParams: [],
-            // fields: tableColumns,
-            fields: [],
+            fields: tableColumns,
+            // fields: [],
             sortOrder: [{
                 field: 'name',
                 direction: 'asc',
@@ -149,8 +173,8 @@
         created: function () {
             var self = this;
             axios.get('tablehead.json').then((response) => {
-              var tableColumns = response.data.tableColumns;
-              self.fields = tableColumns;
+              // var tableColumns = response.data.tableColumns;
+              // self.fields = tableColumns;
             })
             .catch((error) => {
             console.log(error);
