@@ -1,4 +1,29 @@
 {
+
+  "tableColumns" :[
+      {
+        "name": "name",
+        "title": "Full Name",
+        "sortField": "name",
+        "visible": true
+      },
+      {
+          "name": "email",
+          "sortField": "email",
+          "visible": true
+      },
+      {
+          "name": "nickname",
+          "sortField": "nickname",
+          "visible": true
+      },
+      {
+          "name": "birthdate",
+          "sortField": "birthdate",
+          "callback": "formatDate|D/MM/Y",
+          "visible": true
+      }
+  ],
   "total": 200,
   "per_page": 15,
   "current_page": 1,
@@ -413,30 +438,5 @@
   "fax": "(467)912-6668"
   }
   }
-  ],
-  "tableColumns" :[
-        {
-          "name": "name",
-          "title": "Full Name",
-          "sortField": "name",
-          "visible": true
-        },
-        {
-            "name": "email",
-            "sortField": "email",
-            "visible": true
-        },
-        {
-            "name": "nickname",
-            "sortField": "nickname",
-            "visible": true
-        },
-        {
-            "name": "birthdate",
-            "sortField": "birthdate",
-            "callback": "formatDate|D/MM/Y",
-            "visible": true
-        }
-    ]
-
+  ]
 }
