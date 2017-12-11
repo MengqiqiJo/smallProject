@@ -53,10 +53,10 @@ new Vue({
     },
     filterText: ''
   },
-  mounted() {
-     this.$events.$on('filter-set', eventData => this.onFilterSet(eventData))
-     this.$events.$on('filter-reset', e => this.onFilterReset())
-   },
+  // mounted() {
+  //    this.$events.$on('filter-set', eventData => this.onFilterSet(eventData))
+  //    this.$events.$on('filter-reset', e => this.onFilterReset())
+  //  },
   computed:{
   /*httpOptions(){
     return {headers: {'Authorization': "my-token"}} //table props -> :http-options="httpOptions"
@@ -82,7 +82,8 @@ new Vue({
       console.log('loaded! .. hide your spinner here')
     },
     doFilter () {
-        console.log('doFilter:', this.filterText)
+      this.$events.fire('filter-set', this.filterText)
+        console.log('doFilter1:', this.filterText)
       },
       resetFilter () {
         this.filterText = ''
