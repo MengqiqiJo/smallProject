@@ -3,29 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>VueTables 2 Options API Filter Results:   Search query</title>
-  
-  
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.4/vue.min.js'>
-
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.4/vue.min.js'>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div id="vue-tables-options" class="container">
-  <h2>VueTables 2 Options API</h2>
-  <v-client-table :data="data" :columns="columns" :options="options">
-    <div slot="beforeBody">
-    before body
-    </div>
-  </v-client-table>
-</div>
+    <h2>VueTables 2 Options API</h2>
+    <v-client-table :data="data" :columns="columns" :options="options">
+      <div slot="beforeBody">
+        before body
+      </div>
+    </v-client-table>
+  </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.4/vue.min.js'></script>
-<script src='https://rawgit.com/matfish2/vue-tables/master/dist/vue-tables.min.js'></script>
-
-    <script  src="js/index.js"></script>
+  <script src='https://rawgit.com/matfish2/vue-tables/master/dist/vue-tables.min.js'></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script  src="js/index.js"></script>
 
 </body>
 </html>
