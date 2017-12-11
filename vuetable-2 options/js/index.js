@@ -7,17 +7,16 @@ new Vue({
   data: {
     columns: [],
     data: [],
-    options: {sortable: ['option','type','description']}
+    options: {
+      sortable: []
+    }
   },
   created: function () {
     var self = this;
     axios.get('tableData.json').then((response) => {
       self.columns = response.data.columns;
       self.data = response.data.data;
-      // self.options = response.data.options;
-      console.log(self.columns);
-      console.log(self.data);
-      console.log(self.options);
+      self.sortable = response.data.options.sortable;
     })
     .catch((error) => {
       console.log(error);

@@ -1,4 +1,7 @@
 {
+  "options": {
+    "sortable": ["option","type","description"]
+  },
   "columns": ["option", "type", "description", "default"],
   "data": [
     {
@@ -71,7 +74,7 @@
       "option":"6serverMultiSorting",
       "type":"Boolean",
       "description":"Enable multiple columns sorting using Shift + Click on the server component",
-      "default":"<code>false</code>"
+      "default":"<h5>false</h5>"
     },
      {
       "option":"7clientMultiSorting",
@@ -85,8 +88,6 @@
       "description":"Set a custom request format",
       "default":"<code>function(data) { return data; }</code>"
     }
-  ],
-  "options": {
-    "sortable": ["option","type","description"]
-  }
+  ]
+
 }
