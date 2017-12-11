@@ -1,0 +1,19 @@
+#vue-tables-options {
+  text-align: center;
+}
+
+table {
+  text-align: left;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+thead tr:nth-child(2) th {
+  font-weight: normal;
+}
+
+.VueTables__sortable {
+  cursor: pointer;
+}
