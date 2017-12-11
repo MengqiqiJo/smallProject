@@ -213,7 +213,7 @@ new Vue({
       default: "<code>{}</code>"
     }],
     options: {
-      sortable: ['option','type']
+      sortable: ['option','type','description']
     }
   }
 
