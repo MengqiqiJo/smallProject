@@ -7,7 +7,7 @@ new Vue({
   data: {
     columns: [],
     data: [],
-    options: {sortable: ['option','type']}
+    options: {sortable: ['option','type','description']}
   },
   created: function () {
     var self = this;
