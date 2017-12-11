@@ -8,7 +8,6 @@ new Vue({
     columns: [],
     data: [],
     options: {
-      sortable: []
     }
   },
   created: function () {
@@ -16,7 +15,8 @@ new Vue({
     axios.get('tableData.json').then((response) => {
       self.columns = response.data.columns;
       self.data = response.data.data;
-      self.sortable = response.data.options.sortable;
+      self.options = self.options;
+      console.log(self.options);
     })
     .catch((error) => {
       console.log(error);
