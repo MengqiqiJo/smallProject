@@ -1,4 +1,6 @@
-{
+<?php
+
+echo '{
   "options": {
     "sortable": ["option","type","description"]
   },
@@ -85,7 +87,7 @@
       "option":"6serverMultiSorting",
       "type":"Boolean",
       "description":"Enable multiple columns sorting using Shift + Click on the server component",
-      "default":"false",
+      "default":"false0",
       "sortField": "option"
     },
      {
@@ -104,4 +106,4 @@
     }
   ]
 
-}
+}';

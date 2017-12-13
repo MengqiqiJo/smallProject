@@ -7,7 +7,15 @@ new Vue({
   data: {
     columns: [],
     data: [],
+    sortOrder: [
+      {
+        field: 'type',
+        sortField: 'type',
+        direction: 'asc'
+      }
+    ],
     options: {
+      sortable: ['option']
     }
   },
   created: function () {
@@ -24,3 +32,5 @@ new Vue({
   }
 
 })
+
+
