@@ -1,5 +1,9 @@
 Vue.use(VueTables.client, {
-  perPage: 25
+  filterByColumn: true,
+  perPage: 25,
+  texts: {
+    filter: "Search:"
+  }
 })
 
 new Vue({
@@ -8,7 +12,8 @@ new Vue({
     columns: [],
     data: [],
     options: {
-      sortable: ['option']
+      sortable: ['option'],
+
     }
   },
   created: function () {
