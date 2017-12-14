@@ -1,5 +1,5 @@
 Vue.use(VueTables.ClientTable);
-
+new Clipboard('.btn');
 new Vue({
   el: "#people",
   data: {
