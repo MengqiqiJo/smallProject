@@ -1,11 +1,12 @@
 Vue.use(VueTables.ClientTable);
+
 new Vue({
   el: "#people",
   data: {
     columns: [],
     data: [],
     options: {
-      sortable: ["option","type","description"]
+
     }
   },
   created: function () {
