@@ -8,12 +8,15 @@
 </head>
 
 <body>
-  <div id="people">
+
+  <div id="people" class="container">
+    <textarea ref="text"></textarea>
+    <button @click="copyTextArea">Copy Title To Clipboard</button>
     <v-client-table :data="data" :columns="columns" :options="options"></v-client-table>
   </div>
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js'></script>
   <script src='vue-tables-2.min.js'></script>
   <script  src="js/index.js"></script>
 
