@@ -1,12 +1,6 @@
 Vue.use(VueGoodTable);
 var demo = new Vue({
     el: '#demo',
-    methods: {
-      onClickFn: function (row, index) {
-        alert(row); //the object for the row that was clicked on
-        alert(index); // index of the row that was clicked on
-      }
-    },
     data(){
     return {
       columns: [
