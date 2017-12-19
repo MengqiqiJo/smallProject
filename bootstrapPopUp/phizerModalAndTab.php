@@ -57,7 +57,7 @@
     }
 
     public function getTabContent($tabVaule) {
-      $countTabContent = count($tabVaule);
+      // $countTabContent = count($tabVaule);
 
       $output = '';
       $output .= '<div class="row bg-673ab7">';
@@ -69,46 +69,40 @@
 
       $output .= '<div class="tab-content margin-top-n-4">';
         $output .= '<div id="tab1" class="tab-pane fade in active">';
-          $output .= '<div class="row padding-top-20 padding-bottom-20">';
-            $output .= '<div class="col-md-custom-20-p">';
-              $output .= '<div class="text-align-center">';
-                $output .= '<p class="font-bold">' . $tabVaule[0]["tabNumber"] . '</p>';
-                $output .= '<p class="font-size-10 color-818384">' . $tabVaule[0]["tabContent"] . '</p>';
-              $output .= '</div>';
-            $output .= '</div>';
-            for ($i = 1; $i < $countTabContent; $i++) {
-              $output .= '<div class="col-md-custom-20-p">';
-                $output .= '<div class="text-align-center border-left-2-e2e2e2">';
-                  $output .= '<p class="font-bold">' . $tabVaule[$i]["tabNumber"] . '</p>';
-                  $output .= '<p class="font-size-10 color-818384">' . $tabVaule[$i]["tabContent"] . '</p>';
-                $output .= '</div>';
-              $output .= '</div>';
-            }
-          $output .= '</div>';
+          $output .= $this->getTabText($tabVaule);
         $output .= '</div>';
 
         $output .= '<div id="tab2" class="tab-pane fade">';
-          $output .= '<div class="row bg-ffffff padding-top-20 padding-bottom-20">';
-            $output .= '<div class="col-md-3">';
-              $output .= '<div class="text-align-center">';
-                $output .= '<p>' . $tabVaule[0]["tabNumber"] . '</p>';
-                $output .= '<p class="font-size-10">' . $tabVaule[0]["tabContent"] . '</p>';
-              $output .= '</div>';
-            $output .= '</div>';
-            for ($i = 1; $i < $countTabContent; $i++) {
-              $output .= '<div class="col-md-2">';
-                $output .= '<div class="text-align-center border-left-2-e2e2e2">';
-                  $output .= '<p>' . $tabVaule[$i]["tabNumber"] . '</p>';
-                  $output .= '<p class="font-size-10">' . $tabVaule[$i]["tabContent"] . '</p>';
-                $output .= '</div>';
-              $output .= '</div>';
-            }
-          $output .= '</div>';
+          $output .= $this->getTabText($tabVaule);
         $output .= '</div>';
 
       $output .= '</div>';
 
       return $output;
+    }
+
+    public function getTabText($tabVaule) {
+      $countTabContent = count($tabVaule);
+      $output = '';
+      $output .= '<div class="row padding-top-20 padding-bottom-20">';
+        $output .= '<div class="col-md-custom-20-p">';
+          $output .= '<div class="text-align-center">';
+            $output .= '<p class="font-bold">' . $tabVaule[0]["tabNumber"] . '</p>';
+            $output .= '<p class="font-size-10 color-818384">' . $tabVaule[0]["tabContent"] . '</p>';
+          $output .= '</div>';
+        $output .= '</div>';
+        for ($i = 1; $i < $countTabContent; $i++) {
+          $output .= '<div class="col-md-custom-20-p">';
+            $output .= '<div class="text-align-center border-left-2-e2e2e2">';
+              $output .= '<p class="font-bold">' . $tabVaule[$i]["tabNumber"] . '</p>';
+              $output .= '<p class="font-size-10 color-818384">' . $tabVaule[$i]["tabContent"] . '</p>';
+            $output .= '</div>';
+          $output .= '</div>';
+        }
+      $output .= '</div>';
+
+      return $output;
+
     }
 
     public function getTabTable($secondTabValueOne, $secondTabValueTwo) {
