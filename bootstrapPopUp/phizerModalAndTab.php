@@ -37,13 +37,15 @@
             $output .= '<!-- Modal content-->';
             $output .= '<div class="modal-content">';
 
-              $output .= '<div class="modal-header bg-673ab7">';
-                $output .= '<button type="button" class="close color-fff" data-dismiss="modal">&times;</button>';
-                $output .= '<h4 class="modal-title color-fff text-align-center">Modal Header</h4>';
+              $output .= '<div class="modal-header">';
+                $output .= '<div class="row bg-673ab7 margin-top-n-24">';
+                  $output .= '<button type="button" class="close color-fff" data-dismiss="modal">&times;</button>';
+                  $output .= '<h4 class="modal-title color-fff text-align-center">Modal Header</h4>';
+                $output .= '</div>';
                 $output .= $this->getTabContent($firstTabValue);
               $output .= '</div>';
 
-              $output .= '<div class="modal-body bg-673ab7">';
+              $output .= '<div class="modal-body">';
                 $output .= $this->getTabTable($secondTabValue);
               $output .= '</div>';
             $output .= '</div>';
@@ -58,18 +60,16 @@
       $countTabContent = count($tabVaule);
 
       $output = '';
-      $output .= '<div>';
+      $output .= '<div class="row bg-673ab7">';
         $output .= '<ul class="nav nav-tabs">';
           $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab1">Home</a></li>';
           $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab2">Menu 1</a></li>';
         $output .= '</ul>';
       $output .= '</div>';
 
-      $output .= '<div class="tab-content margin-bottom-n-16 margin-top-n-4">';
-
-
+      $output .= '<div class="tab-content margin-top-n-4">';
         $output .= '<div id="tab1" class="tab-pane fade in active">';
-          $output .= '<div class="row bg-ffffff padding-top-20 padding-bottom-20">';
+          $output .= '<div class="row padding-top-20 padding-bottom-20">';
             $output .= '<div class="col-md-custom-20-p">';
               $output .= '<div class="text-align-center">';
                 $output .= '<p class="font-bold">' . $tabVaule[0]["tabNumber"] . '</p>';
@@ -114,15 +114,15 @@
     public function getTabTable($tabVauleSecond) {
       $countTable = count($tabVauleSecond);
       $output = '';
-      $output .= '<ul class="nav nav-tabs bg-673ab7">';
+      $output .= '<ul class="nav nav-tabs bg-673ab7 row margin-top-n-16">';
         $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab21">Home</a></li>';
         $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab22">Menu 1</a></li>';
       $output .= '</ul>';
 
-      $output .= '<div class="tab-content bg-ffffff margin-bottom-n-16 margin-top-n-4">';
+      $output .= '<div class="tab-content">';
 
         $output .= '<div id="tab21" class="tab-pane fade in active">';
-          $output .= '<div class="row bg-ffffff padding-top-20 padding-bottom-20">';
+          $output .= '<div class="row padding-top-20 padding-bottom-20">';
             $output .= '<table class="table">';
                 $output .= '<thead>';
                   $output .= '<tr>';
