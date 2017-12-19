@@ -17,9 +17,10 @@
         array("tabNumber" => '14,000', "tabContent" => 'Honorarium')
       );
       $secondTabValue = array(
-        array("tabName" => 'tab4', "tabContent" => 'this is tab4'),
-        array("tabName" => 'tab5', "tabContent" => 'this is tab5'),
-        array("tabName" => 'tab6', "tabContent" => 'this is tab6')
+        array("tabContentOne" => 'Program Name', "tabContentTwo" => '#Events', "tabContentThree" => 'Reach', "tabContentFour" => 'Responses'),
+        array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950'),
+        array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950'),
+        array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950')
       );
 
       $output = '';
@@ -157,40 +158,35 @@
       return $output;
     }
 
-    public function getTabTable($tabVaule) {
+    public function getTabTable($tabVauleSecond) {
+      $countTable = count($tabVauleSecond);
       $output = '';
       $output .= '<ul class="nav nav-tabs bg-673ab7">';
         $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab21">Home</a></li>';
         $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab22">Menu 1</a></li>';
       $output .= '</ul>';
 
-      $output .= '<div class="tab-content bg-ffffff padding-50">';
+      $output .= '<div class="tab-content bg-ffffff">';
 
         $output .= '<div id="tab21" class="tab-pane fade in active">';
           $output .= '<table class="table">';
               $output .= '<thead>';
                 $output .= '<tr>';
-                  $output .= '<th>Firstname</th>';
-                  $output .= '<th>Lastname</th>';
-                  $output .= '<th>Email</th>';
+                  $output .= '<th>' . $tabVauleSecond[0]["tabContentOne"] . '</th>';
+                  $output .= '<th>' . $tabVauleSecond[0]["tabContentTwo"] . '</th>';
+                  $output .= '<th>' . $tabVauleSecond[0]["tabContentThree"] . '</th>';
+                  $output .= '<th>' . $tabVauleSecond[0]["tabContentFour"] . '</th>';
                 $output .= '</tr>';
               $output .= '</thead>';
               $output .= '<tbody>';
+              for ($i = 1; $i < $countTable; $i++) {
                 $output .= '<tr>';
-                  $output .= '<td>John</td>';
-                  $output .= '<td>Doe</td>';
-                  $output .= '<td>john@example.com</td>';
+                  $output .= '<th>' . $tabVauleSecond[$i]["tabContentOne"] . '</th>';
+                  $output .= '<th>' . $tabVauleSecond[$i]["tabContentTwo"] . '</th>';
+                  $output .= '<th>' . $tabVauleSecond[$i]["tabContentThree"] . '</th>';
+                  $output .= '<th>' . $tabVauleSecond[$i]["tabContentFour"] . '</th>';
                 $output .= '</tr>';
-                $output .= '<tr>';
-                  $output .= '<td>Mary</td>';
-                  $output .= '<td>Moe</td>';
-                  $output .= '<td>mary@example.com</td>';
-                $output .= '</tr>';
-                $output .= '<tr>';
-                  $output .= '<td>July</td>';
-                  $output .= '<td>Dooley</td>';
-                  $output .= '<td>july@example.com</td>';
-                $output .= '</tr>';
+              }
               $output .= '</tbody>';
             $output .= '</table>';
         $output .= '</div>';
