@@ -217,6 +217,12 @@
 .border-right-2-fff {
   border-right: 2px solid #fff;
 }
+.border-right-2-e2e2e2 {
+  border-right: 2px solid #E2E2E2;
+}
+.border-left-2-e2e2e2 {
+  border-left: 2px solid #E2E2E2;
+}
 .border-top-1-e7e7e7 {
   border-top: 1px solid #e7e7e7;
 }
@@ -1356,7 +1362,7 @@
   padding-right: 10px;
 }
 .padding-right-12 {
-  padding-right: 12px;
+  padding-right: 22px;
 }
 .padding-right-pt-14 {
   padding-right: 14%;

@@ -2,6 +2,7 @@
 
 
   echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">';
+  echo '<link rel="stylesheet" href="../plugin.css">';
   echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
   echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
 
@@ -91,7 +92,7 @@
                 //     $output .= '<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>';
                 //   $output .= '</div>';
                 // $output .= '</div>';
-              $output .= $this->getTabContent($secondTabValue);
+              $output .= $this->getTabTable($secondTabValue);
               $output .= '</div>';
             $output .= '</div>';
           $output .= '</div>';
@@ -102,6 +103,59 @@
     }
 
     public function getTabContent($tabVaule) {
+      $output = '';
+      $output .= '<ul class="nav nav-tabs">';
+        $output .= '<li class="active"><a data-toggle="tab" href="#tab1">Home</a></li>';
+        $output .= '<li><a data-toggle="tab" href="#menu1">Menu 1</a></li>';
+      $output .= '</ul>';
+
+      $output .= '<div class="tab-content">';
+        $output .= '<div id="tab1" class="tab-pane fade in active">';
+          $output .= '<div class="row margin-top-6">';
+
+            $output .= '<div class="col-md-3">';
+              $output .= '<div class="text-align-center">';
+                $output .= '<p>8</p>';
+                $output .= '<p class="font-size-12">TOTAL EVENTS</p>';
+              $output .= '</div>';
+            $output .= '</div>';
+            $output .= '<div class="col-md-3">';
+              $output .= '<div class="border-right-2-e2e2e2 border-left-2-e2e2e2 text-align-center">';
+                $output .= '<p>125</p>';
+                $output .= '<p class="font-size-12">HCP REACH</p>';
+              $output .= '</div>';
+            $output .= '</div>';
+            $output .= '<div class="col-md-2">';
+              $output .= '<div class="text-align-center">';
+                $output .= '<p>110</p>';
+                $output .= '<p class="font-size-12">RESPONSES</p>';
+              $output .= '</div>';
+            $output .= '</div>';
+            $output .= '<div class="col-md-2">';
+              $output .= '<div class="border-right-2-e2e2e2 border-left-2-e2e2e2 text-align-center">';
+                $output .= '<p>4.55</p>';
+                $output .= '<p class="font-size-12">RATING</p>';
+              $output .= '</div>';
+            $output .= '</div>';
+            $output .= '<div class="col-md-2">';
+              $output .= '<div class="text-align-center">';
+                $output .= '<p>$14,000</p>';
+                $output .= '<p class="font-size-12">Honorarium</p>';
+              $output .= '</div>';
+            $output .= '</div>';
+
+          $output .= '</div>';
+        $output .= '</div>';
+        $output .= '<div id="menu1" class="tab-pane fade">';
+          $output .= '<h3>Menu 1</h3>';
+          $output .= '<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
+        $output .= '</div>';
+      $output .= '</div>';
+
+      return $output;
+    }
+
+    public function getTabTable($tabVaule) {
       $output = '';
       $output .= '<ul class="nav nav-tabs">';
         $output .= '<li class="active"><a data-toggle="tab" href="#home">Home</a></li>';
@@ -129,8 +183,8 @@
         $output .= '</div>';
       $output .= '</div>';
       return $output;
-
     }
+
 
   }
 
