@@ -38,8 +38,7 @@
             $output .= '<div class="modal-content">';
 
               $output .= '<div class="modal-header">';
-                $output .= '<div class="row bg-673ab7 margin-top-n-24">';
-                  $output .= '<button type="button" class="close color-fff" data-dismiss="modal">&times;</button>';
+                $output .= '<div class="row bg-673ab7 margin-top-n-24 padding-top-20">';
                   $output .= '<h4 class="modal-title color-fff text-align-center">Modal Header</h4>';
                 $output .= '</div>';
                 $output .= $this->getTabContent($firstTabValue);
@@ -114,7 +113,7 @@
     public function getTabTable($tabVauleSecond) {
       $countTable = count($tabVauleSecond);
       $output = '';
-      $output .= '<ul class="nav nav-tabs bg-673ab7 row margin-top-n-16">';
+      $output .= '<ul class="nav nav-tabs bg-673ab7 row margin-top-n-16 padding-top-12">';
         $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab21">Home</a></li>';
         $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab22">Menu 1</a></li>';
       $output .= '</ul>';
