@@ -10,9 +10,11 @@
 
     public function getModalAndTab() {
       $firstTabValue = array(
-        array("tabName" => 'tab1', "tabContent" => 'this is tab1'),
-        array("tabName" => 'tab2', "tabContent" => 'this is tab2'),
-        array("tabName" => 'tab3', "tabContent" => 'this is tab3')
+        array("tabNumber" => '8', "tabContent" => 'TOTAL EVENTS'),
+        array("tabNumber" => '125', "tabContent" => 'HCP REACH'),
+        array("tabNumber" => '110', "tabContent" => 'RESPONSES'),
+        array("tabNumber" => '4.55', "tabContent" => 'RATING'),
+        array("tabNumber" => '14,000', "tabContent" => 'Honorarium')
       );
       $secondTabValue = array(
         array("tabName" => 'tab4', "tabContent" => 'this is tab4'),
@@ -115,32 +117,32 @@
 
             $output .= '<div class="col-md-3">';
               $output .= '<div class="text-align-center">';
-                $output .= '<p>8</p>';
-                $output .= '<p class="font-size-12">TOTAL EVENTS</p>';
+                $output .= '<p>' . $tabVaule[0]["tabNumber"] . '</p>';
+                $output .= '<p class="font-size-12">' . $tabVaule[0]["tabContent"] . '</p>';
               $output .= '</div>';
             $output .= '</div>';
             $output .= '<div class="col-md-3">';
               $output .= '<div class="border-right-2-e2e2e2 border-left-2-e2e2e2 text-align-center">';
-                $output .= '<p>125</p>';
-                $output .= '<p class="font-size-12">HCP REACH</p>';
+                $output .= '<p>' . $tabVaule[1]["tabNumber"] . '</p>';
+                $output .= '<p class="font-size-12">' . $tabVaule[1]["tabContent"] . '</p>';
               $output .= '</div>';
             $output .= '</div>';
             $output .= '<div class="col-md-2">';
               $output .= '<div class="text-align-center">';
-                $output .= '<p>110</p>';
-                $output .= '<p class="font-size-12">RESPONSES</p>';
+                $output .= '<p>' . $tabVaule[2]["tabNumber"] . '</p>';
+                $output .= '<p class="font-size-12">' . $tabVaule[2]["tabContent"] . '</p>';
               $output .= '</div>';
             $output .= '</div>';
             $output .= '<div class="col-md-2">';
               $output .= '<div class="border-right-2-e2e2e2 border-left-2-e2e2e2 text-align-center">';
-                $output .= '<p>4.55</p>';
-                $output .= '<p class="font-size-12">RATING</p>';
+                $output .= '<p>' . $tabVaule[3]["tabNumber"] . '</p>';
+                $output .= '<p class="font-size-12">' . $tabVaule[3]["tabContent"] . '</p>';
               $output .= '</div>';
             $output .= '</div>';
             $output .= '<div class="col-md-2">';
               $output .= '<div class="text-align-center">';
-                $output .= '<p>$14,000</p>';
-                $output .= '<p class="font-size-12">Honorarium</p>';
+                $output .= '<p>' . $tabVaule[4]["tabNumber"] . '</p>';
+                $output .= '<p class="font-size-12">' . $tabVaule[4]["tabContent"] . '</p>';
               $output .= '</div>';
             $output .= '</div>';
 
