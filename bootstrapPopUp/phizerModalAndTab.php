@@ -103,26 +103,28 @@
       $output .= '<div class="tab-content bg-ffffff">';
 
         $output .= '<div id="tab21" class="tab-pane fade in active">';
-          $output .= '<table class="table">';
-              $output .= '<thead>';
-                $output .= '<tr>';
-                  $output .= '<th>' . $tabVauleSecond[0]["tabContentOne"] . '</th>';
-                  $output .= '<th>' . $tabVauleSecond[0]["tabContentTwo"] . '</th>';
-                  $output .= '<th>' . $tabVauleSecond[0]["tabContentThree"] . '</th>';
-                  $output .= '<th>' . $tabVauleSecond[0]["tabContentFour"] . '</th>';
-                $output .= '</tr>';
-              $output .= '</thead>';
-              $output .= '<tbody>';
-              for ($i = 1; $i < $countTable; $i++) {
-                $output .= '<tr>';
-                  $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentOne"] . '</th>';
-                  $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentTwo"] . '</th>';
-                  $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentThree"] . '</th>';
-                  $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentFour"] . '</th>';
-                $output .= '</tr>';
-              }
-              $output .= '</tbody>';
-            $output .= '</table>';
+          $output .= '<div class="row bg-ffffff padding-top-20 padding-bottom-20">';
+            $output .= '<table class="table">';
+                $output .= '<thead>';
+                  $output .= '<tr>';
+                    $output .= '<th>' . $tabVauleSecond[0]["tabContentOne"] . '</th>';
+                    $output .= '<th>' . $tabVauleSecond[0]["tabContentTwo"] . '</th>';
+                    $output .= '<th>' . $tabVauleSecond[0]["tabContentThree"] . '</th>';
+                    $output .= '<th>' . $tabVauleSecond[0]["tabContentFour"] . '</th>';
+                  $output .= '</tr>';
+                $output .= '</thead>';
+                $output .= '<tbody>';
+                for ($i = 1; $i < $countTable; $i++) {
+                  $output .= '<tr>';
+                    $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentOne"] . '</th>';
+                    $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentTwo"] . '</th>';
+                    $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentThree"] . '</th>';
+                    $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentFour"] . '</th>';
+                  $output .= '</tr>';
+                }
+                $output .= '</tbody>';
+              $output .= '</table>';
+          $output .= '</div>';
         $output .= '</div>';
 
         $output .= '<div id="tab22" class="tab-pane fade">';
