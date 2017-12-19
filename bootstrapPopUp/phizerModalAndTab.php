@@ -62,8 +62,8 @@
       $output = '';
       $output .= '<div class="row bg-673ab7">';
         $output .= '<ul class="nav nav-tabs">';
-          $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab1">Home</a></li>';
-          $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab2">Menu 1</a></li>';
+          $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab1">YTD</a></li>';
+          $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab2">ALL TIME</a></li>';
         $output .= '</ul>';
       $output .= '</div>';
 
@@ -109,8 +109,8 @@
       // $countTable = count($tabVauleSecond);
       $output = '';
       $output .= '<ul class="nav nav-tabs bg-673ab7 row margin-top-n-16 padding-top-12">';
-        $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab21">Home</a></li>';
-        $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab22">Menu 1</a></li>';
+        $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab21">PROGRAMS</a></li>';
+        $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab22">LOCATIONS</a></li>';
       $output .= '</ul>';
 
       $output .= '<div class="tab-content">';
