@@ -109,7 +109,7 @@
         $output .= '<li><a class="color-fff" data-toggle="tab" href="#menu1">Menu 1</a></li>';
       $output .= '</ul>';
 
-      $output .= '<div class="tab-content bg-ffffff padding-30">';
+      $output .= '<div class="tab-content bg-ffffff padding-50">';
         $output .= '<div id="tab1" class="tab-pane fade in active">';
           $output .= '<div class="row margin-top-6">';
 
@@ -162,7 +162,7 @@
         $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab22">Menu 1</a></li>';
       $output .= '</ul>';
 
-      $output .= '<div class="tab-content bg-ffffff padding-30">';
+      $output .= '<div class="tab-content bg-ffffff padding-50">';
 
         $output .= '<div id="tab21" class="tab-pane fade in active">';
           $output .= '<table class="table">';
