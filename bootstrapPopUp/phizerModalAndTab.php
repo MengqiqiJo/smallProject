@@ -8,6 +8,16 @@
   class modalAndTab {
 
     public function getModalAndTab() {
+      $firstTabValue = array(
+        array("tabName" => 'tab1', "tabContent" => 'this is tab1'),
+        array("tabName" => 'tab2', "tabContent" => 'this is tab2'),
+        array("tabName" => 'tab3', "tabContent" => 'this is tab3')
+      );
+      $secondTabValue = array(
+        array("tabName" => 'tab4', "tabContent" => 'this is tab4'),
+        array("tabName" => 'tab5', "tabContent" => 'this is tab5'),
+        array("tabName" => 'tab6', "tabContent" => 'this is tab6')
+      );
 
       $output = '';
       $output .= '';
@@ -52,34 +62,36 @@
                 //     $output .= '<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>';
                 //   $output .= '</div>';
                 // $output .= '</div>';
-                $output .= $this->getTabContent();
+                $output .= $this->getTabContent($firstTabValue);
               $output .= '</div>';
 
               $output .= '<div class="modal-body">';
-                $output .= '<ul class="nav nav-tabs">';
-                  $output .= '<li class="active"><a data-toggle="tab" href="#home">Home</a></li>';
-                  $output .= '<li><a data-toggle="tab" href="#menu4">Menu 1</a></li>';
-                  $output .= '<li><a data-toggle="tab" href="#menu5">Menu 2</a></li>';
-                  $output .= '<li><a data-toggle="tab" href="#menu6">Menu 3</a></li>';
-               $output .= '</ul>';
-                $output .= '<div class="tab-content">';
-                  $output .= '<div id="home" class="tab-pane fade in active">';
-                    $output .= '<h3>HOME</h3>';
-                    $output .= '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>';
-                  $output .= '</div>';
-                  $output .= '<div id="menu4" class="tab-pane fade">';
-                    $output .= '<h3>Menu 1</h3>';
-                    $output .= '<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
-                  $output .= '</div>';
-                  $output .= '<div id="menu5" class="tab-pane fade">';
-                    $output .= '<h3>Menu 2</h3>';
-                    $output .= '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>';
-                  $output .= '</div>';
-                  $output .= '<div id="menu6" class="tab-pane fade">';
-                    $output .= '<h3>Menu 3</h3>';
-                    $output .= '<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>';
-                  $output .= '</div>';
-                $output .= '</div>';
+
+                // $output .= '<ul class="nav nav-tabs">';
+                //   $output .= '<li class="active"><a data-toggle="tab" href="#home">Home</a></li>';
+                //   $output .= '<li><a data-toggle="tab" href="#menu4">Menu 1</a></li>';
+                //   $output .= '<li><a data-toggle="tab" href="#menu5">Menu 2</a></li>';
+                //   $output .= '<li><a data-toggle="tab" href="#menu6">Menu 3</a></li>';
+                // $output .= '</ul>';
+                // $output .= '<div class="tab-content">';
+                //   $output .= '<div id="home" class="tab-pane fade in active">';
+                //     $output .= '<h3>HOME</h3>';
+                //     $output .= '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>';
+                //   $output .= '</div>';
+                //   $output .= '<div id="menu4" class="tab-pane fade">';
+                //     $output .= '<h3>Menu 1</h3>';
+                //     $output .= '<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
+                //   $output .= '</div>';
+                //   $output .= '<div id="menu5" class="tab-pane fade">';
+                //     $output .= '<h3>Menu 2</h3>';
+                //     $output .= '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>';
+                //   $output .= '</div>';
+                //   $output .= '<div id="menu6" class="tab-pane fade">';
+                //     $output .= '<h3>Menu 3</h3>';
+                //     $output .= '<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>';
+                //   $output .= '</div>';
+                // $output .= '</div>';
+              $output .= $this->getTabContent($secondTabValue);
               $output .= '</div>';
             $output .= '</div>';
           $output .= '</div>';
@@ -89,7 +101,7 @@
       return $output;
     }
 
-    public function getTabContent() {
+    public function getTabContent($tabVaule) {
       $output = '';
       $output .= '<ul class="nav nav-tabs">';
         $output .= '<li class="active"><a data-toggle="tab" href="#home">Home</a></li>';
