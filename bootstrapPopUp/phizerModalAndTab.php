@@ -38,7 +38,7 @@
             $output .= '<div class="modal-content">';
 
               $output .= '<div class="modal-header bg-673ab7">';
-                $output .= '<button type="button" class="close" data-dismiss="modal">&times;</button>';
+                $output .= '<button type="button" class="close color-fff" data-dismiss="modal">&times;</button>';
                 $output .= '<h4 class="modal-title color-fff text-align-center">Modal Header</h4>';
                 $output .= $this->getTabContent($firstTabValue);
               $output .= '</div>';
@@ -57,19 +57,27 @@
     public function getTabContent($tabVaule) {
       $countTabContent = count($tabVaule);
       $output = '';
-      $output .= '<ul class="nav nav-tabs">';
-        $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab1">Home</a></li>';
-        $output .= '<li><a class="color-fff" data-toggle="tab" href="#menu1">Menu 1</a></li>';
-      $output .= '</ul>';
+      $output .= '<div>';
+        $output .= '<ul class="nav nav-tabs">';
+          $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab1">Home</a></li>';
+          $output .= '<li><a class="color-fff" data-toggle="tab" href="#menu1">Menu 1</a></li>';
+        $output .= '</ul>';
+      $output .= '</div>';
 
-      $output .= '<div class="tab-content bg-ffffff padding-50">';
+      $output .= '<div class="tab-content">';
         $output .= '<div id="tab1" class="tab-pane fade in active">';
-          $output .= '<div class="row margin-top-6">';
-            for ($i = 0; $i < $countTabContent; $i++) {
+          $output .= '<div class="row bg-ffffff padding-top-20 padding-bottom-20">';
+            $output .= '<div class="col-md-3">';
+              $output .= '<div class="text-align-center">';
+                $output .= '<p>' . $tabVaule[0]["tabNumber"] . '</p>';
+                $output .= '<p class="font-size-10">' . $tabVaule[0]["tabContent"] . '</p>';
+              $output .= '</div>';
+            $output .= '</div>';
+            for ($i = 1; $i < $countTabContent; $i++) {
               $output .= '<div class="col-md-2">';
-                $output .= '<div class="text-align-center">';
+                $output .= '<div class="text-align-center border-left-2-e2e2e2">';
                   $output .= '<p>' . $tabVaule[$i]["tabNumber"] . '</p>';
-                  $output .= '<p class="font-size-12">' . $tabVaule[$i]["tabContent"] . '</p>';
+                  $output .= '<p class="font-size-10">' . $tabVaule[$i]["tabContent"] . '</p>';
                 $output .= '</div>';
               $output .= '</div>';
             }
@@ -107,10 +115,10 @@
               $output .= '<tbody>';
               for ($i = 1; $i < $countTable; $i++) {
                 $output .= '<tr>';
-                  $output .= '<th>' . $tabVauleSecond[$i]["tabContentOne"] . '</th>';
-                  $output .= '<th>' . $tabVauleSecond[$i]["tabContentTwo"] . '</th>';
-                  $output .= '<th>' . $tabVauleSecond[$i]["tabContentThree"] . '</th>';
-                  $output .= '<th>' . $tabVauleSecond[$i]["tabContentFour"] . '</th>';
+                  $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentOne"] . '</th>';
+                  $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentTwo"] . '</th>';
+                  $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentThree"] . '</th>';
+                  $output .= '<th class="font-size-12 font-normal">' . $tabVauleSecond[$i]["tabContentFour"] . '</th>';
                 $output .= '</tr>';
               }
               $output .= '</tbody>';

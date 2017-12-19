@@ -224,7 +224,7 @@
   border-right: 2px solid #E2E2E2;
 }
 .border-left-2-e2e2e2 {
-  border-left: 2px solid #E2E2E2;
+  border-left: 1px solid #E2E2E2;
 }
 .border-top-1-e7e7e7 {
   border-top: 1px solid #e7e7e7;
@@ -449,6 +449,9 @@
 }
 .font-lighter {
   font-weight: lighter;
+}
+.font-normal {
+  font-weight: normal;
 }
 .font-weight-100 {
   font-weight: 100;
