@@ -107,10 +107,10 @@
             $output .= '<table class="table">';
                 $output .= '<thead>';
                   $output .= '<tr>';
-                    $output .= '<th>' . $tabVauleSecond[0]["tabContentOne"] . '</th>';
-                    $output .= '<th>' . $tabVauleSecond[0]["tabContentTwo"] . '</th>';
-                    $output .= '<th>' . $tabVauleSecond[0]["tabContentThree"] . '</th>';
-                    $output .= '<th>' . $tabVauleSecond[0]["tabContentFour"] . '</th>';
+                    $output .= '<th class="font-size-12">' . $tabVauleSecond[0]["tabContentOne"] . '</th>';
+                    $output .= '<th class="font-size-12">' . $tabVauleSecond[0]["tabContentTwo"] . '</th>';
+                    $output .= '<th class="font-size-12">' . $tabVauleSecond[0]["tabContentThree"] . '</th>';
+                    $output .= '<th class="font-size-12">' . $tabVauleSecond[0]["tabContentFour"] . '</th>';
                   $output .= '</tr>';
                 $output .= '</thead>';
                 $output .= '<tbody>';
