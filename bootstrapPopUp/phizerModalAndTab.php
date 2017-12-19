@@ -64,7 +64,7 @@
         $output .= '</ul>';
       $output .= '</div>';
 
-      $output .= '<div class="tab-content">';
+      $output .= '<div class="tab-content margin-bottom-n-16">';
         $output .= '<div id="tab1" class="tab-pane fade in active">';
           $output .= '<div class="row bg-ffffff padding-top-20 padding-bottom-20">';
             $output .= '<div class="col-md-3">';
@@ -100,7 +100,7 @@
         $output .= '<li><a class="color-fff" data-toggle="tab" href="#tab22">Menu 1</a></li>';
       $output .= '</ul>';
 
-      $output .= '<div class="tab-content bg-ffffff">';
+      $output .= '<div class="tab-content bg-ffffff margin-bottom-n-16">';
 
         $output .= '<div id="tab21" class="tab-pane fade in active">';
           $output .= '<div class="row bg-ffffff padding-top-20 padding-bottom-20">';
