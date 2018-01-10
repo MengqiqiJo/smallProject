@@ -18,10 +18,7 @@
       $output = $this->getDemoModalPageButton(1);
       $output .= $this->getDemoModalPageButton(2);
 
-
       $output .= $this->getDemoModalPageLink(3);
-
-
       return $output;
     }
 
@@ -56,6 +53,7 @@
      *
      */
     public function getFirstTabValue($user_uid) {
+
       $firstTabValue = array(
         array(
           "tabNumber" => '8' . $user_uid,
