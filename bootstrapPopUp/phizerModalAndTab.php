@@ -47,13 +47,27 @@
      *
      */
     public function getFirstTabValue($user_uid) {
-
       $firstTabValue = array(
-        array("tabNumber" => '8' . $user_uid, "tabContent" => 'TOTAL EVENTS'),
-        array("tabNumber" => '125', "tabContent" => 'HCP REACH'),
-        array("tabNumber" => '110', "tabContent" => 'RESPONSES'),
-        array("tabNumber" => '4.55', "tabContent" => 'RATING'),
-        array("tabNumber" => '14,000', "tabContent" => 'Honorarium')
+        array(
+          "tabNumber" => '8' . $user_uid,
+          "tabContent" => 'TOTAL EVENTS',
+        ),
+        array(
+          "tabNumber" => '125',
+          "tabContent" => 'HCP REACH',
+        ),
+        array(
+          "tabNumber" => '110',
+          "tabContent" => 'RESPONSES',
+        ),
+        array(
+          "tabNumber" => '4.55',
+          "tabContent" => 'RATING',
+        ),
+        array(
+          "tabNumber" => '14,000',
+          "tabContent" => 'Honorarium',
+        )
       );
       return $firstTabValue;
     }
@@ -62,22 +76,47 @@
      *
      */
     public function getSecondTabValue($user_uid) {
-
       $secondTabValue = array(
-        array("tabContentOne" => 'Program Name' . $user_uid, "tabContentTwo" => '#Events', "tabContentThree" => 'Reach', "tabContentFour" => 'Responses'),
-        array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950'),
-        array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950'),
-        array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950')
+        array(
+          "tabContentOne" => 'Program Name' . $user_uid,
+          "tabContentTwo" => '#Events',
+          "tabContentThree" => 'Reach',
+          "tabContentFour" => 'Responses',
+        ),
+        array(
+          "tabContentOne" => 'Hyperlink Program Name',
+          "tabContentTwo" => '125',
+          "tabContentThree" => '1125',
+          "tabContentFour" => '950',
+        ),
+        array(
+          "tabContentOne" => 'Hyperlink Program Name',
+          "tabContentTwo" => '125',
+          "tabContentThree" => '1125',
+          "tabContentFour" => '950',
+        ),
+        array(
+          "tabContentOne" => 'Hyperlink Program Name',
+          "tabContentTwo" => '125',
+          "tabContentThree" => '1125',
+          "tabContentFour" => '950',
+        )
       );
       return $secondTabValue;
     }
 
+    /**
+     *
+     */
     public function getDemoModalButton($user_uid = NULL) {
       // Trigger the modal with a button
       $output = '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-' . $user_uid . '">Open Modal</button>';
       return $output;
     }
 
+    /**
+     *
+     */
     public function getDemoModalLink($user_uid = NULL) {
       // Trigger the modal with a button
       $output = '<a data-toggle="modal" data-target="#myModal-' . $user_uid . '">Open Modal</a>';
