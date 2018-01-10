@@ -8,7 +8,7 @@
 
   class modalAndTab {
 
-    public function getModalAndTab() {
+    public function getFirstTabValue() {
       $firstTabValue = array(
         array("tabNumber" => '8', "tabContent" => 'TOTAL EVENTS'),
         array("tabNumber" => '125', "tabContent" => 'HCP REACH'),
@@ -16,13 +16,20 @@
         array("tabNumber" => '4.55', "tabContent" => 'RATING'),
         array("tabNumber" => '14,000', "tabContent" => 'Honorarium')
       );
-      $secondTabValueOne = array(
+      return $firstTabValue;
+    }
+
+    public function getSecondTabValue() {
+      $secondTabValue = array(
         array("tabContentOne" => 'Program Name', "tabContentTwo" => '#Events', "tabContentThree" => 'Reach', "tabContentFour" => 'Responses'),
         array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950'),
         array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950'),
         array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950')
       );
+      return $secondTabValue;
+    }
 
+    public function getModalAndTab() {
 
       $output = '';
       $output .= '';
@@ -46,7 +53,7 @@
               $output .= '</div>';
 
               $output .= '<div class="modal-body">';
-                $output .= $this->getTabTable($secondTabValueOne, $secondTabValueOne);
+                $output .= $this->getTabTable($secondTabValue, $secondTabValue);
               $output .= '</div>';
             $output .= '</div>';
           $output .= '</div>';
@@ -102,10 +109,9 @@
       $output .= '</div>';
 
       return $output;
-
     }
 
-    public function getTabTable($secondTabValueOne, $secondTabValueTwo) {
+    public function getTabTable($secondTabValue, $secondTabValueTwo) {
       // $countTable = count($tabVauleSecond);
       $output = '';
       $output .= '<ul class="nav nav-tabs bg-673ab7 row margin-top-n-16 padding-top-12">';
@@ -116,7 +122,7 @@
       $output .= '<div class="tab-content">';
 
         $output .= '<div id="tab21" class="tab-pane fade in active">';
-          $output .= $this->getTableContent($secondTabValueOne);
+          $output .= $this->getTableContent($secondTabValue);
         $output .= '</div>';
         $output .= '<div id="tab22" class="tab-pane fade">';
           $output .= $this->getTableContent($secondTabValueTwo);
@@ -154,7 +160,6 @@
         $output .= '</div>';
       return $output;
     }
-
 
   }
 
