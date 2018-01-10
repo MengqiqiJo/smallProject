@@ -6,9 +6,16 @@
   echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
   echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
 
+  /**
+   *
+   */
   class modalAndTab {
 
+    /**
+     *
+     */
     public function getFirstTabValue() {
+
       $firstTabValue = array(
         array("tabNumber" => '8', "tabContent" => 'TOTAL EVENTS'),
         array("tabNumber" => '125', "tabContent" => 'HCP REACH'),
@@ -19,7 +26,11 @@
       return $firstTabValue;
     }
 
+    /**
+     *
+     */
     public function getSecondTabValue() {
+
       $secondTabValue = array(
         array("tabContentOne" => 'Program Name', "tabContentTwo" => '#Events', "tabContentThree" => 'Reach', "tabContentFour" => 'Responses'),
         array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950'),
@@ -29,7 +40,10 @@
       return $secondTabValue;
     }
 
-    public function getModalAndTab() {
+    /**
+     *
+     */
+    public function getModalAndTab($firstTabValue, $secondTabValue) {
 
       $output = '';
       $output .= '';
@@ -59,10 +73,12 @@
           $output .= '</div>';
         $output .= '</div>';
       $output .= '</div>';
-
       return $output;
     }
 
+    /**
+     *
+     */
     public function getTabContent($tabVaule) {
       // $countTabContent = count($tabVaule);
 
@@ -84,10 +100,12 @@
         $output .= '</div>';
 
       $output .= '</div>';
-
       return $output;
     }
 
+    /**
+     *
+     */
     public function getTabText($tabVaule) {
       $countTabContent = count($tabVaule);
       $output = '';
@@ -107,10 +125,12 @@
           $output .= '</div>';
         }
       $output .= '</div>';
-
       return $output;
     }
 
+    /**
+     *
+     */
     public function getTabTable($secondTabValue, $secondTabValueTwo) {
       // $countTable = count($tabVauleSecond);
       $output = '';
@@ -132,6 +152,9 @@
       return $output;
     }
 
+    /**
+     *
+     */
     public function getTableContent($tabVauleSecond) {
       $countTable = count($tabVauleSecond);
       $output = '';
