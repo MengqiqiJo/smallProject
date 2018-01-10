@@ -21,7 +21,7 @@
         for($number = 0; $number < $modalNumber; $number++) {
           $output .= '<h2>Modal Example</h2>';
           $output .= $this->getDemoModalButton($number);
-          $output .= $this->getModalAndTab($this->getFirstTabValue(), $this->getSecondTabValue(), $number);
+          $output .= $this->getModalAndTab($this->getFirstTabValue($number), $this->getSecondTabValue($number), $number);
         }
       $output .= '</div>';
       return $output;
@@ -44,10 +44,10 @@
     /**
      *
      */
-    public function getFirstTabValue() {
+    public function getFirstTabValue($user_uid) {
 
       $firstTabValue = array(
-        array("tabNumber" => '8', "tabContent" => 'TOTAL EVENTS'),
+        array("tabNumber" => '8' . $user_uid, "tabContent" => 'TOTAL EVENTS'),
         array("tabNumber" => '125', "tabContent" => 'HCP REACH'),
         array("tabNumber" => '110', "tabContent" => 'RESPONSES'),
         array("tabNumber" => '4.55', "tabContent" => 'RATING'),
@@ -59,10 +59,10 @@
     /**
      *
      */
-    public function getSecondTabValue() {
+    public function getSecondTabValue($user_uid) {
 
       $secondTabValue = array(
-        array("tabContentOne" => 'Program Name', "tabContentTwo" => '#Events', "tabContentThree" => 'Reach', "tabContentFour" => 'Responses'),
+        array("tabContentOne" => 'Program Name' . $user_uid, "tabContentTwo" => '#Events', "tabContentThree" => 'Reach', "tabContentFour" => 'Responses'),
         array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950'),
         array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950'),
         array("tabContentOne" => 'Hyperlink Program Name', "tabContentTwo" => '125', "tabContentThree" => '1125', "tabContentFour" => '950')
@@ -93,8 +93,6 @@
       $output = '';
       $output .= '';
       $output .= '<div class="container">';
-        // $output .= '<h2>Modal Example</h2>';
-        // $output .= '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>';
 
         $output .= '<!-- Modal -->';
         $output .= '<div class="modal fade" id="myModal-' . $user_uid . '" role="dialog">';
