@@ -14,13 +14,15 @@
     /**
      *
      */
-    public function getDemoModalPageButton() {
+    public function getDemoModalPageButton($modalNumber) {
       $output = '';
       $output .= '';
       $output .= '<div class="container">';
-        $output .= '<h2>Modal Example</h2>';
-        $output .= $this->getDemoModalButton('1');
-        $output .= $this->getModalAndTab($this->getFirstTabValue(), $this->getSecondTabValue(), '1');
+        for($number = 0; $number < $modalNumber; $number++) {
+          $output .= '<h2>Modal Example</h2>';
+          $output .= $this->getDemoModalButton($number);
+          $output .= $this->getModalAndTab($this->getFirstTabValue(), $this->getSecondTabValue(), $number);
+        }
       $output .= '</div>';
       return $output;
     }
@@ -269,11 +271,9 @@
  *
  */
 $modalAndTab = new modalAndTab();
-$cc1 = $modalAndTab->getDemoModalPageButton();
-$cc2 = $modalAndTab->getDemoModalPageButton();
+$cc1 = $modalAndTab->getDemoModalPageButton(4);
 // $cc3 = $modalAndTab->getDemoModalPageLink();
 // $cc4 = $modalAndTab->getDemoModalPageLink();
 echo $cc1;
-echo $cc2;
 // echo $cc3;
 // echo $cc4;
