@@ -19,8 +19,8 @@
       $output .= '';
       $output .= '<div class="container">';
         $output .= '<h2>Modal Example</h2>';
-        $output .= $this->getDemoModalButton();
-        $output .= $this->getModalAndTab($this->getFirstTabValue(),$this->getSecondTabValue());
+        $output .= $this->getDemoModalButton('1');
+        $output .= $this->getModalAndTab($this->getFirstTabValue(), $this->getSecondTabValue(), '1');
       $output .= '</div>';
       return $output;
     }
@@ -68,9 +68,9 @@
       return $secondTabValue;
     }
 
-    public function getDemoModalButton() {
+    public function getDemoModalButton($user_uid = NULL) {
       // Trigger the modal with a button
-      $output = '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>';
+      $output = '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-' . $user_uid . '">Open Modal</button>';
       return $output;
     }
 
@@ -86,7 +86,7 @@
     /**
      *
      */
-    public function getModalAndTab($firstTabValue, $secondTabValue) {
+    public function getModalAndTab($firstTabValue, $secondTabValue, $user_uid = NULL) {
 
       $output = '';
       $output .= '';
@@ -95,7 +95,7 @@
         // $output .= '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>';
 
         $output .= '<!-- Modal -->';
-        $output .= '<div class="modal fade" id="myModal" role="dialog">';
+        $output .= '<div class="modal fade" id="myModal-' . $user_uid . '" role="dialog">';
           $output .= '<div class="modal-dialog">';
 
             $output .= '<!-- Modal content-->';
@@ -142,10 +142,10 @@
       $output .= '</div>';
 
       $output .= '<div class="tab-content margin-top-n-4">';
-        $output .= '<div id="tab1" class="tab-pane fade in active">';
+        $output .= '<div id="tab11" class="tab-pane fade in active">';
           $output .= $this->getTabText($tabVaule);
         $output .= '</div>';
-        $output .= '<div id="tab2" class="tab-pane fade">';
+        $output .= '<div id="tab12" class="tab-pane fade">';
           $output .= $this->getTabText($tabVaule);
         $output .= '</div>';
 
@@ -271,9 +271,9 @@
 $modalAndTab = new modalAndTab();
 $cc1 = $modalAndTab->getDemoModalPageButton();
 $cc2 = $modalAndTab->getDemoModalPageButton();
-$cc3 = $modalAndTab->getDemoModalPageLink();
-$cc4 = $modalAndTab->getDemoModalPageLink();
+// $cc3 = $modalAndTab->getDemoModalPageLink();
+// $cc4 = $modalAndTab->getDemoModalPageLink();
 echo $cc1;
 echo $cc2;
-echo $cc3;
-echo $cc4;
+// echo $cc3;
+// echo $cc4;
