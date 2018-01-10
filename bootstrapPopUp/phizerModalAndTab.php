@@ -14,17 +14,28 @@
     /**
      *
      */
-    public function getDemoModalPage() {
+    public function getDemoModalPageButton() {
       $output = '';
       $output .= '';
       $output .= '<div class="container">';
         $output .= '<h2>Modal Example</h2>';
-
         $output .= $this->getDemoModalButton();
         $output .= $this->getModalAndTab($this->getFirstTabValue(),$this->getSecondTabValue());
-
       $output .= '</div>';
+      return $output;
+    }
 
+    /**
+     *
+     */
+    public function getDemoModalPageLink() {
+      $output = '';
+      $output .= '';
+      $output .= '<div class="container">';
+        $output .= '<h2>Modal Example</h2>';
+        $output .= $this->getDemoModalLink();
+        $output .= $this->getModalAndTab($this->getFirstTabValue(),$this->getSecondTabValue());
+      $output .= '</div>';
       return $output;
     }
 
@@ -257,8 +268,12 @@
 /**
  *
  */
-
-
 $modalAndTab = new modalAndTab();
-$cc = $modalAndTab->getDemoModalPage();
-echo $cc;
+$cc1 = $modalAndTab->getDemoModalPageButton();
+$cc2 = $modalAndTab->getDemoModalPageButton();
+$cc3 = $modalAndTab->getDemoModalPageLink();
+$cc4 = $modalAndTab->getDemoModalPageLink();
+echo $cc1;
+echo $cc2;
+echo $cc3;
+echo $cc4;
