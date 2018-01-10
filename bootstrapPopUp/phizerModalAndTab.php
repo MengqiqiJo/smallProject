@@ -30,13 +30,15 @@
     /**
      *
      */
-    public function getDemoModalPageLink() {
+    public function getDemoModalPageLink($modalNumber) {
       $output = '';
       $output .= '';
       $output .= '<div class="container">';
-        $output .= '<h2>Modal Example</h2>';
-        $output .= $this->getDemoModalLink();
-        $output .= $this->getModalAndTab($this->getFirstTabValue(),$this->getSecondTabValue());
+        for($number = 0; $number < $modalNumber; $number++) {
+          $output .= '<h2>Modal Example</h2>';
+          $output .= $this->getDemoModalLink($number);
+          $output .= $this->getModalAndTab($this->getFirstTabValue($number), $this->getSecondTabValue($number), $number);
+        }
       $output .= '</div>';
       return $output;
     }
@@ -76,11 +78,11 @@
       return $output;
     }
 
-    public function getDemoModalLink($user_uid = NULL, $user_name = NULL) {
+    public function getDemoModalLink($user_uid = NULL) {
       // Trigger the modal with a button
-      $output = '<span class="text-primary" data-toggle="modal" data-target="#myModal-' . $user_uid . '">';
-        $output .= $user_name;
-      $output .= '</span>';
+      $output = '<a data-toggle="modal" data-target="#myModal-' . $user_uid . '">Open Modal</a>';
+      //   $output .= $user_name;
+      // $output .= '</a>';
 
       return $output;
     }
@@ -269,9 +271,8 @@
  *
  */
 $modalAndTab = new modalAndTab();
-$cc1 = $modalAndTab->getDemoModalPageButton(4);
-// $cc3 = $modalAndTab->getDemoModalPageLink();
-// $cc4 = $modalAndTab->getDemoModalPageLink();
+$cc1 = $modalAndTab->getDemoModalPageButton(2);
+$cc3 = $modalAndTab->getDemoModalPageLink(3);
 echo $cc1;
-// echo $cc3;
-// echo $cc4;
+echo $cc3;
+
