@@ -183,20 +183,36 @@
           $output .= '<table class="table">';
               $output .= '<thead>';
                 $output .= '<tr>';
-                  $output .= '<th class="font-size-12">' . $tabVauleSecond[0]["tabContentOne"] . '</th>';
-                  $output .= '<th class="font-size-12">' . $tabVauleSecond[0]["tabContentTwo"] . '</th>';
-                  $output .= '<th class="font-size-12">' . $tabVauleSecond[0]["tabContentThree"] . '</th>';
-                  $output .= '<th class="font-size-12">' . $tabVauleSecond[0]["tabContentFour"] . '</th>';
+                  $output .= '<th class="font-size-12">';
+                    $output .= $tabVauleSecond[0]["tabContentOne"];
+                  $output .= '</th>';
+                  $output .= '<th class="font-size-12">';
+                    $output .= $tabVauleSecond[0]["tabContentTwo"];
+                  $output .= '</th>';
+                  $output .= '<th class="font-size-12">';
+                    $output .= $tabVauleSecond[0]["tabContentThree"];
+                  $output .= '</th>';
+                  $output .= '<th class="font-size-12">';
+                    $output .= $tabVauleSecond[0]["tabContentFour"];
+                  $output .= '</th>';
                 $output .= '</tr>';
               $output .= '</thead>';
 
               $output .= '<tbody>';
               for ($i = 1; $i < $countTable; $i++) {
                 $output .= '<tr class="font-size-12 font-normal">';
-                  $output .= '<td>' . $tabVauleSecond[$i]["tabContentOne"] . '</td>';
-                  $output .= '<td>' . $tabVauleSecond[$i]["tabContentTwo"] . '</td>';
-                  $output .= '<td>' . $tabVauleSecond[$i]["tabContentThree"] . '</td>';
-                  $output .= '<td>' . $tabVauleSecond[$i]["tabContentFour"] . '</td>';
+                  $output .= '<td>';
+                    $output .= $tabVauleSecond[$i]["tabContentOne"];
+                  $output .= '</td>';
+                  $output .= '<td>';
+                    $output .= $tabVauleSecond[$i]["tabContentTwo"];
+                  $output .= '</td>';
+                  $output .= '<td>';
+                    $output .= $tabVauleSecond[$i]["tabContentThree"];
+                  $output .= '</td>';
+                  $output .= '<td>';
+                    $output .= $tabVauleSecond[$i]["tabContentFour"];
+                  $output .= '</td>';
                 $output .= '</tr>';
               }
               $output .= '</tbody>';
