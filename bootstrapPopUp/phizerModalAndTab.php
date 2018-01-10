@@ -271,8 +271,8 @@
  *
  */
 $modalAndTab = new modalAndTab();
-$cc1 = $modalAndTab->getDemoModalPageButton(2);
-$cc3 = $modalAndTab->getDemoModalPageLink(3);
-echo $cc1;
-echo $cc3;
+$demoModalButton = $modalAndTab->getDemoModalPageButton(2);
+$demoModalLink = $modalAndTab->getDemoModalPageLink(3);
+echo $demoModalButton;
+echo $demoModalLink;
 
