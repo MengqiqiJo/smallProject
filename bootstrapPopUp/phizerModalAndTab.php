@@ -14,6 +14,23 @@
     /**
      *
      */
+    public function getDemoModalPage() {
+      $output = '';
+      $output .= '';
+      $output .= '<div class="container">';
+        $output .= '<h2>Modal Example</h2>';
+
+        $output .= $this->getDemoModalButton();
+        $output .= $this->getModalAndTab($this->getFirstTabValue(),$this->getSecondTabValue());
+
+      $output .= '</div>';
+
+      return $output;
+    }
+
+    /**
+     *
+     */
     public function getFirstTabValue() {
 
       $firstTabValue = array(
@@ -40,6 +57,21 @@
       return $secondTabValue;
     }
 
+    public function getDemoModalButton() {
+      // Trigger the modal with a button
+      $output = '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>';
+      return $output;
+    }
+
+    public function getDemoModalLink($user_uid = NULL, $user_name = NULL) {
+      // Trigger the modal with a button
+      $output = '<span class="text-primary" data-toggle="modal" data-target="#myModal-' . $user_uid . '">';
+        $output .= $user_name;
+      $output .= '</span>';
+
+      return $output;
+    }
+
     /**
      *
      */
@@ -48,9 +80,8 @@
       $output = '';
       $output .= '';
       $output .= '<div class="container">';
-        $output .= '<h2>Modal Example</h2>';
-        $output .= '<!-- Trigger the modal with a button -->';
-        $output .= '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>';
+        // $output .= '<h2>Modal Example</h2>';
+        // $output .= '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>';
 
         $output .= '<!-- Modal -->';
         $output .= '<div class="modal fade" id="myModal" role="dialog">';
@@ -223,6 +254,11 @@
 
   }
 
+/**
+ *
+ */
+
+
 $modalAndTab = new modalAndTab();
-$cc = $modalAndTab->getModalAndTab();
+$cc = $modalAndTab->getDemoModalPage();
 echo $cc;
