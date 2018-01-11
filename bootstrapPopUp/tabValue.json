@@ -1,4 +1,12 @@
 {
-  "tabNumber": "8",
-  "tabContent": "TOTAL EVENTS"
+  "firstTab": [
+    {
+      "tabNumber": "8",
+      "tabContent": "TOTAL EVENTS"
+    },
+    {
+      "tabNumber": "9",
+      "tabContent": "HCP REACH"
+    }
+  ]
 }

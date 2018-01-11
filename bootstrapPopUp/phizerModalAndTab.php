@@ -6,6 +6,7 @@
   echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
   echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
   echo '<script src="phizerModalAndTab.js"></script>';
+
   /**
    *
    */
@@ -139,16 +140,15 @@
      *
      */
     public function getModalAndTab($firstTabValue, $secondTabValue, $user_uid = NULL) {
-
       $output = '';
       $output .= '';
       $output .= '<div class="container">';
 
-        $output .= '<!-- Modal -->';
+        // Modal
         $output .= '<div class="modal fade" id="myModal-' . $user_uid . '" role="dialog">';
           $output .= '<div class="modal-dialog">';
 
-            $output .= '<!-- Modal content-->';
+            // Modal content
             $output .= '<div class="modal-content">';
 
               $output .= '<div class="modal-header">';
