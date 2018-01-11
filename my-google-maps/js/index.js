@@ -20,11 +20,9 @@ function initialize() {
     var markers = locations.map(function(location) {
 
       latLngs = new google.maps.LatLng(location.lat,location.lng);
-      console.log(countMarkers);
+
       for (var i = 1; i < countMarkers; i++) {
-        console.log(existingMarker[i]);
         if (latLngs.equals(existingMarker[i])) {
-          console.log(latLngs.equals(existingMarker[i]));
           var newLat = latLngs.lat() + (Math.random() -.5) / 1500;
           var newLng = latLngs.lng() + (Math.random() -.5) / 1500;
           latLngs = new google.maps.LatLng(newLat, newLng);
