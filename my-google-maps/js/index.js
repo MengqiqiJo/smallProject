@@ -14,19 +14,41 @@ function initialize() {
     });
 
     var infowindow = new google.maps.InfoWindow();
-
+    var latLngs;
+    var existingMarker;
+    var countMarkers = 0;
     var markers = locations.map(function(location) {
-      var latLngs = new google.maps.LatLng(location.lat,location.lng);
+      latLngs = new google.maps.LatLng(location.lat,location.lng);
+      if (latLngs.equals(existingMarker)) {
+        var newLat = latLngs.lat() + 0.1;
+        var newLng = latLngs.lng() + 0.1;
+        latLngs = new google.maps.LatLng(newLat, newLng);
+      }
       var marker = new google.maps.Marker({
         position: latLngs
       });
 
+      existingMarker = latLngs;
+      countMarkers ++;
       google.maps.event.addListener(marker, 'click', function(evt) {
         infowindow.setContent(getPopupTemplate(location.subtitle, location.workingField, location.date, location.city, location.eventType, location.speakerName, location.venue, location.attendNum, location.responseNum));
         infowindow.open(map, marker);
       })
       return marker;
     });
+
+    // if (markers.length != 0) {
+    //     for (var i = 0; i < markers.length; i++) {
+    //       var existingMarker = markers[i];
+    //       var pos = existingMarker.getPosition();
+    //       if (latLngs.equals(pos)) {
+    //         //update the position of the coincident marker by applying a small multipler to its coordinates
+    //         var newLat = latlngs.lat() + (Math.random() -.5) / 1500;// * (Math.random() * (max - min) + min);
+    //         var newLng = latlngs.lng() + (Math.random() -.5) / 1500;// * (Math.random() * (max - min) + min);
+    //         finalLatLng = new google.maps.LatLng(newLat,newLng);
+    //       }
+    //     }
+    //   }
 
 
 
