@@ -14,22 +14,28 @@ function initialize() {
     });
 
     var infowindow = new google.maps.InfoWindow();
-    var latLngs;
-    var existingMarker;
+    var latLngs = new google.maps.LatLng("-15.7942357","-47.8821945");
+    var existingMarker = [latLngs];
     var countMarkers = 0;
     var markers = locations.map(function(location) {
+
       latLngs = new google.maps.LatLng(location.lat,location.lng);
-      if (latLngs.equals(existingMarker)) {
-        var newLat = latLngs.lat() + 0.1;
-        var newLng = latLngs.lng() + 0.1;
-        latLngs = new google.maps.LatLng(newLat, newLng);
+      console.log(countMarkers);
+      for (var i = 0; i < countMarkers; i++) {
+        console.log(existingMarker[i]);
+        if (latLngs.equals(existingMarker[i])) {
+          console.log(latLngs.equals(existingMarker[i]));
+          var newLat = latLngs.lat() + 1;
+          var newLng = latLngs.lng() + 0.1;
+          latLngs = new google.maps.LatLng(newLat, newLng);
+        }
       }
+
       var marker = new google.maps.Marker({
         position: latLngs
       });
+      countMarkers = existingMarker.push(latLngs);
 
-      existingMarker = latLngs;
-      countMarkers ++;
       google.maps.event.addListener(marker, 'click', function(evt) {
         infowindow.setContent(getPopupTemplate(location.subtitle, location.workingField, location.date, location.city, location.eventType, location.speakerName, location.venue, location.attendNum, location.responseNum));
         infowindow.open(map, marker);
