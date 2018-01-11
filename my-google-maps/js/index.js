@@ -23,16 +23,16 @@ function initialize() {
 
       for (var i = 1; i < countMarkers; i++) {
         if (latLngs.equals(existingMarker[i])) {
-          var newLat = latLngs.lat() + (Math.random() -.5) / 1500;
-          var newLng = latLngs.lng() + (Math.random() -.5) / 1500;
+          var newLat = latLngs.lat() + 0.0005;
+          var newLng = latLngs.lng();
           latLngs = new google.maps.LatLng(newLat, newLng);
         }
       }
+      countMarkers = existingMarker.push(latLngs);
 
       var marker = new google.maps.Marker({
         position: latLngs
       });
-      countMarkers = existingMarker.push(latLngs);
 
       google.maps.event.addListener(marker, 'click', function(evt) {
         infowindow.setContent(getPopupTemplate(location.subtitle, location.workingField, location.date, location.city, location.eventType, location.speakerName, location.venue, location.attendNum, location.responseNum));
@@ -42,7 +42,7 @@ function initialize() {
     });
 
     var markerCluster = new MarkerClusterer(map, markers, {
-      maxZoom: 7,
+      maxZoom: 9,
       imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
 
