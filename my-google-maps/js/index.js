@@ -41,21 +41,6 @@ function initialize() {
       return marker;
     });
 
-    // if (markers.length != 0) {
-    //     for (var i = 0; i < markers.length; i++) {
-    //       var existingMarker = markers[i];
-    //       var pos = existingMarker.getPosition();
-    //       if (latLngs.equals(pos)) {
-    //         //update the position of the coincident marker by applying a small multipler to its coordinates
-    //         var newLat = latlngs.lat() + (Math.random() -.5) / 1500;// * (Math.random() * (max - min) + min);
-    //         var newLng = latlngs.lng() + (Math.random() -.5) / 1500;// * (Math.random() * (max - min) + min);
-    //         finalLatLng = new google.maps.LatLng(newLat,newLng);
-    //       }
-    //     }
-    //   }
-
-
-
     var markerCluster = new MarkerClusterer(map, markers, {
       maxZoom: 7,
       imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
