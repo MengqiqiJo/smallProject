@@ -6,7 +6,6 @@
   echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
   echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
   echo '<script src="phizerModalAndTab.js"></script>';
-
   /**
    *
    */
@@ -128,7 +127,7 @@
      */
     public function getDemoModalLink($user_uid = NULL) {
       // Trigger the modal with a button
-      $output = '<a href="#" onclick="openModal()">Open Modal</a>';
+      $output = '<a href="#" id="aLink">Open Modal</a>';
       // $output = '<a href="#" onclick="openModal()" data-toggle="modal" data-target="#myModal-' . $user_uid . '">Open Modal</a>';
       //   $output .= $user_name;
       // $output .= '</a>';
