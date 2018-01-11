@@ -212,27 +212,27 @@
       $output = '';
       $output .= '<div class="row padding-top-20 padding-bottom-20 gettabtext-wrapper">';
         $output .= '<div class="col-md-custom-20-p">';
-          $output .= '<div class="text-align-center">';
-            $output .= '<p class="font-bold ytd-value-wrapper">';
-              $output .= $tabVaule[0]["tabNumber"];
-            $output .= '</p>';
-            $output .= '<p class="font-size-10 color-818384">';
-              $output .= $tabVaule[0]["tabContent"];
+          $output .= '<div class="text-align-center" id="tabValue111">';
+            $output .= '<p class="font-bold" id="ytd-value-wrapper">';
+              // $output .= $tabVaule[0]["tabNumber"];
+            // $output .= '</p>';
+            // $output .= '<p class="font-size-10 color-818384">';
+              // $output .= $tabVaule[0]["tabContent"];
             $output .= '</p>';
           $output .= '</div>';
         $output .= '</div>';
-        for ($i = 1; $i < $countTabContent; $i++) {
-          $output .= '<div class="col-md-custom-20-p">';
-            $output .= '<div class="text-align-center border-left-2-e2e2e2">';
-              $output .= '<p class="font-bold">';
-                $output .= $tabVaule[$i]["tabNumber"];
-              $output .= '</p>';
-              $output .= '<p class="font-size-10 color-818384">';
-                $output .= $tabVaule[$i]["tabContent"];
-              $output .= '</p>';
-            $output .= '</div>';
-          $output .= '</div>';
-        }
+        // for ($i = 1; $i < $countTabContent; $i++) {
+        //   $output .= '<div class="col-md-custom-20-p">';
+        //     $output .= '<div class="text-align-center border-left-2-e2e2e2">';
+        //       $output .= '<p class="font-bold">';
+        //         $output .= $tabVaule[$i]["tabNumber"];
+        //       $output .= '</p>';
+        //       $output .= '<p class="font-size-10 color-818384">';
+        //         $output .= $tabVaule[$i]["tabContent"];
+        //       $output .= '</p>';
+        //     $output .= '</div>';
+        //   $output .= '</div>';
+        // }
       $output .= '</div>';
       return $output;
     }
