@@ -28,7 +28,10 @@ function initialize() {
       return marker;
     });
 
+
+
     var markerCluster = new MarkerClusterer(map, markers, {
+      maxZoom: 7,
       imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
 
