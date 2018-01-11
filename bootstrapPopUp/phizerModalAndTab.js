@@ -18,7 +18,6 @@ $(document).ready(function(){
             return result.tabNumber + result.tabContent;
         });
       });
-
     });
 });
 // tabValue.json
