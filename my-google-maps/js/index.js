@@ -8,25 +8,25 @@ function initialize() {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
       zoom: 5,
       center: {
-        lat: -15.7942357,
-        lng: -47.8821945
+        lat: -19.3286,
+        lng: -43.93888
       }
     });
 
     var infowindow = new google.maps.InfoWindow();
-    var latLngs = new google.maps.LatLng("-15.7942357","-47.8821945");
+    var latLngs = new google.maps.LatLng("-19.3286","-43.93888");
     var existingMarker = [latLngs];
     var countMarkers = 0;
     var markers = locations.map(function(location) {
 
       latLngs = new google.maps.LatLng(location.lat,location.lng);
       console.log(countMarkers);
-      for (var i = 0; i < countMarkers; i++) {
+      for (var i = 1; i < countMarkers; i++) {
         console.log(existingMarker[i]);
         if (latLngs.equals(existingMarker[i])) {
           console.log(latLngs.equals(existingMarker[i]));
-          var newLat = latLngs.lat() + 1;
-          var newLng = latLngs.lng() + 0.1;
+          var newLat = latLngs.lat() + (Math.random() -.5) / 1500;
+          var newLng = latLngs.lng() + (Math.random() -.5) / 1500;
           latLngs = new google.maps.LatLng(newLat, newLng);
         }
       }
