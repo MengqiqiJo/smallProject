@@ -5,47 +5,62 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/e525368239.js"></script>
     <style type="text/css">
 
-    .out-wrapper-background-img {
-      background-image: url("backgroundImg.png");
-      background-repeat: repeat;
+      .out-wrapper-background-img {
+        background-image: url("backgroundImg.png");
+        background-repeat: repeat;
 
-    }
-    .out-wrapper-frame-height {
-      height: 1500px;
-    }
+      }
+      .out-wrapper-frame-height {
+        height: 1500px;
+      }
 
-    .inner-wrapper-size {
-      padding-top: 60px;
-      width: 400px;
-      height: 560px;
-    }
-    .inner-wrapper-border {
-      border: 3px solid grey;
-      border-radius: 15px;
-      background-color: white;
-    }
-    .inner-wrapper-position {
-      padding-top: 60px;
-      padding-bottom: 60px;
-      text-align: center;
+      .inner-wrapper-size {
+        padding-top: 60px;
+        width: 400px;
+        height: 560px;
+      }
+      .inner-wrapper-border {
+        border: 3px solid grey;
+        border-radius: 15px;
+        background-color: white;
+      }
+      .inner-wrapper-position {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
 
-    }
-    .novartis-logo img {
-      width: 150px;
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-    .form-input {
-      padding-bottom: 30px;
-    }
-    .linkForgot {
-      padding-bottom: 30px;
-    }
-    .form-submit {
-      text-align: center;
-    }
+      }
+      .novartis-logo img {
+        width: 200px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+      .form-input {
+        color: #929092;
+        padding-bottom: 30px;
+      }
+      .linkForgot {
+        padding-bottom: 30px;
+      }
+      .form-submit {
+        text-align: center;
+      }
+      .title span {
+        color: #7099BD;
+        font-size: 18px;
+      }
+      .form-input input {
+        outline: none;
+      }
+      .form-control {
+        font-family: "FontAwesome";
+        width: 50%;
+        margin: auto;
+      }
+
 
     </style>
   </head>
@@ -53,21 +68,26 @@
     <div class="container col-sm-12 col-md-12">
       <div class="out-wrapper-background-img">
         <div class="out-wrapper-frame-height">
-          <div class="inner-wrapper-size col-md-offset-4">
+          <div class="inner-wrapper-size col-md-2 col-md-offset-4">
             <div class="inner-wrapper-border">
               <div class="inner-wrapper-position">
                 <form>
                   <div class="novartis-logo">
                     <img src="https://www.novartis.ca/sites/all/themes/novartis/novartis-logo.svg" alt="Novartis logo">
                   </div>
+                  <div class="title">
+                    <span>
+                      Med Ed Dashboard
+                    </span>
+                  </div>
+                  <br />
                   <div class="form-input">
                     <div>
-                      <input type="email" name="Email" placeholder="email">
-                      <br />
+                      <input type="email" class="form-control" name="Email" placeholder="&#xF003; email">
                       <br />
                     </div>
                     <div>
-                      <input type="password" name="password" placeholder="password">
+                      <input type="password" class="form-control" name="password" placeholder="&#xf13e; password">
                       <br />
                     </div>
                   </div>
@@ -78,7 +98,7 @@
                     </span>
                   </div>
                   <div class="form-submit">
-                    <input type="submit" name="Login">
+                    <button type="button" class="btn btn-primary">Login</button>
                   </div>
                 </form>
               </div>
