@@ -6,61 +6,64 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
-    .innerWrapper {
+
+    .out-wrapper-background-img {
       background-image: url("backgroundImg.png");
       background-repeat: repeat;
+
+    }
+    .out-wrapper-frame-height {
       height: 1500px;
+    }
+
+    .inner-wrapper-size {
       padding-top: 60px;
-
+      width: 400px;
+      height: 560px;
     }
-    .form-width {
-      text-align: center;
-      width: 360px;
-      border: 2px solid grey;
-      border-radius: 155px;
+    .inner-wrapper-border {
+      border: 3px solid grey;
+      border-radius: 15px;
+      background-color: white;
     }
-    .form-wrapper {
-
-    }
-    .form-frame {
+    .inner-wrapper-position {
       padding-top: 60px;
       padding-bottom: 60px;
+      text-align: center;
 
     }
-    .linkForgot {
-      margin-bottom: 20px;
-    }
-    .background-img img {
+    .novartis-logo img {
       width: 150px;
       padding-top: 30px;
       padding-bottom: 30px;
     }
-    input {
-      margin-bottom: 10px;
-    }
-    .form-background-color {
-      background-color: white;
-    }
-    .form-submit {
+    .form-input {
       padding-bottom: 30px;
     }
+    .linkForgot {
+      padding-bottom: 30px;
+    }
+    .form-submit {
+      text-align: center;
+    }
+
     </style>
   </head>
   <body>
     <div class="container col-sm-12 col-md-12">
-      <div class="innerWrapper">
-        <div class="form-wrapper">
-          <div class="form-width col-md-offset-4">
-            <div class="form-background-color">
-              <form class="form-frame" action="">
-                <div class="form-group">
-                  <div class="background-img">
+      <div class="out-wrapper-background-img">
+        <div class="out-wrapper-frame-height">
+          <div class="inner-wrapper-size col-md-offset-4">
+            <div class="inner-wrapper-border">
+              <div class="inner-wrapper-position">
+                <form>
+                  <div class="novartis-logo">
                     <img src="https://www.novartis.ca/sites/all/themes/novartis/novartis-logo.svg" alt="Novartis logo">
-                    <br />
                   </div>
                   <div class="form-input">
                     <div>
                       <input type="email" name="Email" placeholder="email">
+                      <br />
                       <br />
                     </div>
                     <div>
@@ -68,22 +71,23 @@
                       <br />
                     </div>
                   </div>
-                </div>
-                <div class="linkForgot">
-                  <span>
-                    <a href="#">Forgot?</a>
-                    <br />
-                  </span>
-                </div>
-                <div class="form-submit">
-                  <input type="submit" name="Login">
-                </div>
-              </form>
+                  <div class="linkForgot">
+                    <span>
+                      <a href="#">Forgot?</a>
+                      <br />
+                    </span>
+                  </div>
+                  <div class="form-submit">
+                    <input type="submit" name="Login">
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </body>
 
 </html>
