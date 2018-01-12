@@ -10,16 +10,17 @@
       background-image: url("backgroundImg.png");
       background-repeat: repeat;
       height: 500px;
+
+    }
+    .form-width {
+      text-align: center;
+      width: 400px;
     }
 
     .linkForgot {
       margin-bottom: 20px;
     }
-    .form-background-color {
-      background-color: white;
-      width: 100px;
-      height: 400px;
-    }
+
 
     img {
       width: 150px;
@@ -29,21 +30,24 @@
     input {
       margin-bottom: 10px;
     }
+    .form-background-color {
+      background-color: white;
+    }
 
     </style>
   </head>
   <body>
     <div class="container col-sm-12 col-md-12">
       <div class="innerWrapper">
-        <div class="formContent">
+        <div class="form-width col-md-offset-4">
           <div class="form-background-color">
             <form class="form-horizontal" action="">
               <div class="form-group ">
-                <div class="col-sm-offset-6 col-md-offset-6">
+                <div class="">
                   <img src="https://www.novartis.ca/sites/all/themes/novartis/novartis-logo.svg" alt="Novartis logo">
                   <br />
                 </div>
-                <div class="col-sm-offset-6 col-md-offset-6">
+                <div class="form-input">
                   <div>
                     <input type="email" name="Email" placeholder="email">
                     <br />
@@ -54,13 +58,13 @@
                   </div>
                 </div>
               </div>
-              <div class="linkForgot col-sm-offset-6 col-md-offset-6">
+              <div class="linkForgot">
                 <span>
                   <a href="#">Forgot?</a>
                   <br />
                 </span>
               </div>
-              <div class="col-sm-offset-6 col-md-offset-6">
+              <div class="">
                 <input type="submit" name="Login">
               </div>
             </form>
