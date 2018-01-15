@@ -8,85 +8,88 @@
     <script src="https://use.fontawesome.com/e525368239.js"></script>
     <style type="text/css">
 
-      .out-wrapper-background-img {
+      .login-wrapper .login-background-wrapper {
         background-image: url("backgroundImg.png");
         background-repeat: repeat;
+        height: 100%;
 
       }
-      .out-wrapper-frame-height {
-        height: 1500px;
+      .login-wrapper .out-wrapper-frame-height {
+        height: 100%;
       }
 
-      .inner-wrapper-size {
+      .login-wrapper .inner-wrapper-size {
         padding-top: 100px;
         width: 440px;
         height: 560px;
         margin: auto;
       }
-      .inner-wrapper-border {
-        border: 3px solid grey;
+      .login-wrapper .inner-wrapper-border {
+        border: 3px solid white;
         border-radius: 15px;
         background-color: white;
       }
-      .inner-wrapper-position {
+      .login-wrapper .inner-wrapper-position {
         padding-top: 60px;
         padding-bottom: 60px;
         text-align: center;
         margin: auto;
       }
-      .novartis-logo img {
+
+      .login-wrapper .site-logo img {
         width: 280px;
         padding-top: 20px;
         padding-bottom: 30px;
       }
-      .form-input {
+      .login-wrapper .form-input {
         color: #929092;
         padding-bottom: 30px;
       }
 
-      .linkForgot a {
+      .login-wrapper .linkForgot a {
         color: #8AB1E7;
         padding-right: 156px;
 
       }
-      .form-submit {
+      .login-wrapper .form-submit {
         text-align: center;
         margin-top: 30px;
       }
-      #submitButton {
+      .login-wrapper #submitButton {
         width: 130px;
         height: 40px;
       }
-      .title span {
+      .login-wrapper .title span {
         color: #8AB1E7;
         font-size: 22px;
         font-weight: 200;
       }
-      .form-input input {
+      .login-wrapper .form-input input {
         border-top: transparent;
         border-left: transparent;
         border-right: transparent;
         -webkit-box-shadow: none;
         box-shadow: none;
       }
-      .form-control {
+      .login-wrapper .form-control {
         font-family: "FontAwesome";
         width: 50%;
         margin: auto;
       }
 
-
+decouple
+detach
     </style>
   </head>
   <body>
-    <div class="">
-      <div class="out-wrapper-background-img">
+    <div class="login-wrapper">
+      <div class="login-background-wrapper">
         <div class="out-wrapper-frame-height">
           <div class="inner-wrapper-size">
             <div class="inner-wrapper-border">
               <div class="inner-wrapper-position">
                 <form>
-                  <div class="novartis-logo">
+                  <div class="site-logo">
                     <img src="https://www.novartis.ca/sites/all/themes/novartis/novartis-logo.svg" alt="Novartis logo">
                   </div>
                   <div class="title">
@@ -106,15 +109,10 @@
                       <span class="linkForgot">
                         <a href="#">Forgot?</a>
                       <br />
-                    </span>
+                      </span>
                     </div>
                   </div>
-                  <!-- <div >
-                    <span class="linkForgot">
-                      <a href="#">Forgot?</a>
-                      <br />
-                    </span>
-                  </div> -->
+
                   <div class="form-submit">
                     <button id="submitButton" type="button" class="btn btn-primary">Login</button>
                   </div>
