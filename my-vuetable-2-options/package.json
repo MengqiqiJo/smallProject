@@ -1,0 +1,14 @@
+{
+  "name": "my-vuetable-2-options",
+  "version": "1.0.0",
+  "description": "Downloaded from codeseek.co",
+  "main": "vue-tables-2.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue-json-excel": "^0.2.82"
+  }
+}
