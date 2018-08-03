@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>VueTables 2 Options API Filter Results:   Search query</title>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="people" class="container">
+    <v-client-table :data="data" :columns="columns" :options="options" ref="text"></v-client-table>
+  </div>
+<button class="btn" data-clipboard-action="copy" data-clipboard-target="div">Copy</button>
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js'></script>
+  <script src='vue-tables-2.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+  <script  src="js/indexclipboard.js"></script>
+  <script>
+  var clipboard = new Clipboard('.btn');
+
+  clipboard.on('success', function(e) {
+      console.log(e);
+  });
+
+  clipboard.on('error', function(e) {
+      console.log(e);
+  });
+  </script>
+
+</body>
+</html>
+

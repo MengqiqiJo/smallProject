@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>VueTables 2 Options API Filter Results:   Search query</title>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+</head>
+
+<body>
+
+  <div id="app" class="container">
+    <download-excel
+      class   = "btn btn-default"
+      :data   = "json_data"
+      :fields = "json_fields"
+      name    = "filename.xls">
+      Download Excel (you can customize this with html code!)
+    </download-excel>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js'></script>
+  <script  src="anotherindex.js"></script>
+
+</body>
+</html>
+

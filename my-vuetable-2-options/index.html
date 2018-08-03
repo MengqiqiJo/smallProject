@@ -9,8 +9,16 @@
 
 <body>
 
-  <div id="people" class="container">
-    <v-client-table :data="data" :columns="columns" :options="options" ref="text"></v-client-table>
+  <div id="app" class="container">
+    <download-excel
+      class   = "btn btn-default"
+      :data   = "json_data"
+      :fields = "json_fields"
+      name    = "filename.xls">
+
+      Download Excel (you can customize this with html code!)
+
+    </download-excel>
   </div>
 <button class="btn" data-clipboard-action="copy" data-clipboard-target="div">Copy</button>
 
@@ -19,7 +27,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js'></script>
   <script src='vue-tables-2.min.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
-  <script  src="js/index.js"></script>
+  <script  src="index.js"></script>
   <script>
   var clipboard = new Clipboard('.btn');
 
