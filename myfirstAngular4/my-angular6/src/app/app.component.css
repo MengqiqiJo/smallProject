@@ -1,0 +1,40 @@
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+body {
+  padding: 20px;
+}
+
+.form-control.ng-touched.ng-invalid {
+  border: 2px solid red;
+}
+
+.bg-009ddf{
+  background-color: #009ddf;
+}
+
+.color-fff {
+  color: #fff;
+}
+
+.height-60 {
+  height: 60px;
+}
+.bg-05d23e {
+  background-color: #05d23e;
+}
+
+.bg-00aade {
+  background-color: #001a4e;
+}
+.width-10 {
+  width: 10px;
+}
+
+.height-10 {
+  height: 10px;
+}
