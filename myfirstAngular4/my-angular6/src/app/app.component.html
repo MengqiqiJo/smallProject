@@ -60,40 +60,34 @@
 
 <div class="row">
   <div class="col-md-6">
-    <div class={{firstTitle.styleClass}} [innerHTML]="firstTitle.value"></div>
-    <div class={{firstTitle.styleClass}} [innerHTML]="firstTitle.value"></div>
-    <div class={{firstTitle.styleClass}} [innerHTML]="firstTitle.value"></div>
-
-    <div style="border: 2px solid lightblue; height: 300px">
-      <div class="col-md-10">
-        <canvas id="barChart"></canvas>
-      </div>
-      <div class="col-md-2" for="firstChartLegends">
-        <div *ngFor="let legend of firstChartLegends">
-          <div style="width: 10px; height:16px" class={{legend.color}}></div>
-          <div>{{legend.value}}</div>
-        </div>
-      </div>
+    <div [innerHTML]="firstTitleValue"></div>
+    <div style="border: 2px solid lightblue; height: 400px">
+      <canvas id="barChart"></canvas>
     </div>
+    <div [innerHTML]="firstBottom"></div>
 
-    <div>
+
+
+    <!-- <div class={{firstTitle.styleClass}} [innerHTML]="firstTitle.value"></div>
+    <div class={{firstTitle.styleClass}} [innerHTML]="firstTitle.value"></div> -->
+
+
+
+    <!-- <div>
       <div style="border: 1px solid grey; height: 60px" class="col-md-6">
-
       </div>
       <div style="border: 1px solid grey; height: 60px" class="col-md-6">
-
       </div>
-    </div>
-
+    </div> -->
   </div>
 
 
-  <div class="col-md-6">
+  <!-- <div class="col-md-6">
     <div style="height: 60px; background-color: lightblue">hello</div>
     <div style="border: 2px solid lightblue; height: 50%">
       <canvas id="linechart"></canvas>
     </div>
-  </div>
+  </div> -->
 </div>
     <!-- <div style="width: 700px;height: 50%">
       <canvas id="barChart"></canvas>

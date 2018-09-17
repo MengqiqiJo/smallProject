@@ -70,8 +70,8 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   public name = "jojo";
-  pubic myId= "testId";
-  publick displayName =true;
+  public myId= "testId";
+  public displayName =true;
   public hasError = false;
   public isSpecial = false;
 

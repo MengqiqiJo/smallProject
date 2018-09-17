@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Chart } from 'chart.js';
 
@@ -8,8 +8,10 @@ import { MyappService } from './myapp.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
+
 export class AppComponent implements OnInit {
   title = 'my-angular6999';
   fruits = ['apple', 'pear', 'orange', 'kiwi', 'peach'];
@@ -25,22 +27,32 @@ export class AppComponent implements OnInit {
 
   getChart = [];
   contentGeneral: any;
-  chartData : any;
+  sectionContent: any;
+  chartData: any;
   canvasBlockId = '';
 
-  firstTitle = '';
-  firstChartLegends = [];
+  firstTitle: any;
+  firstTitleValue = "";
+  firstBottom = "";
+  firstBlockContent = [{"top": "" , "middle": "", "bottom": ""}];
 
   constructor(private myService: MyappService) {}
 
   getChartJSONAndDisplay() {
 
     this.myService.getMyJson().subscribe(data => {
-      this.contentGeneral = data.contentSection;
+      this.sectionContent = data;
+      this.contentGeneral = this.sectionContent.contentSection;
 
       console.log(this.contentGeneral);
-      this.firstTitle = this.contentGeneral[0].top;
-      this.firstChartLegends = this.contentGeneral[0].middle.legends;
+      this.firstTitle = this.contentGeneral[0];
+      this.firstTitleValue = this.firstTitle.top.value;
+      this.firstBottom = this.firstTitle.bottom.value;
+
+      this.firstBlockContent[0].top = this.firstTitleValue;
+      this.firstBlockContent[0].bottom = this.firstBottom;
+
+      console.log(this.firstBlockContent[0]);
 
       this.contentGeneral.forEach((blockData, key) => {
         this.canvasBlockId = blockData.blockId;
@@ -62,6 +74,8 @@ export class AppComponent implements OnInit {
             }
           }
         });
+
+
       });
     }, // Bind to view
     err => {

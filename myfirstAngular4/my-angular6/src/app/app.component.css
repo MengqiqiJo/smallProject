@@ -14,11 +14,11 @@ body {
 }
 
 .bg-009ddf{
-  background-color: #009ddf;
+  background-color: #0090df;
 }
 
 .color-fff {
-  color: #fff;
+  color: #000;
 }
 
 .height-60 {
@@ -37,4 +37,8 @@ body {
 
 .height-10 {
   height: 10px;
+}
+
+.bottom-border {
+  border: 1px solid grey;
 }
