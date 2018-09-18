@@ -7,7 +7,7 @@
         "top": {
           "enable": false,
           "styleClass": "bg-009ddf color-fff height-60",
-          "value": "<div class=\"col-sm-5 offset-sm-12 col-md-12 offset-md-1 bg-009ddf color-fff height-60\">hell00o barChart</div>"
+          "value": "<div class=\"col-sm-5 offset-sm-12 col-md-12 offset-md-1 bg-009ddf color-fff height-60\"><i class=\"fas fa-ad\"></i>hell00o barChart</div>"
         },
         "middle": {
           "id": "barChart",

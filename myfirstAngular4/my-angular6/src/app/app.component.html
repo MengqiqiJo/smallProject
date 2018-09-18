@@ -9,7 +9,7 @@
 <!-- <div app-test></div> -->
 <form>
   <div class="form-group row">
-    <label class="col-md-1 col-form-label" for="firstName">first name: </label>
+    <label class="col-md-1 col-form-label" for="firstName"><i class="fas fa-ad"></i>first name: </label>
     <div class="col-md-4">
       <input required minlength="3" maxlength="10" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName.value)" id="firstName" type="text" class="form-control col-md-6">
       <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
