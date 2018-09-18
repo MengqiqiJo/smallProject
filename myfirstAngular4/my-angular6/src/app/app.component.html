@@ -54,29 +54,30 @@
 
 <div class="row">
   <div class="col-md-6">
-    <p-chart type="bar" [data]="primeData"></p-chart>
+    <p-chart type="bar" [data]="{labels: ['January', 'February'],datasets: [{label: 'My First dataset',backgroundColor: '#42A5F5',borderColor: '#1E88E5',data: [65, 59]}]}"></p-chart>
+  </div>
+  <div class="col-md-6">
+    <!-- <p-chart type="line" [data]="firstBlcok"></p-chart> -->
+        <div [innerHTML]="firstBlcok"></div>
+
   </div>
 </div>
 
 <br>
 
 <div class="row">
-  <div class="col-md-6">
+  <!-- <div class="col-md-12">
     <div [innerHTML]="firstBlockTopValue"></div>
-    <div style="border: 2px solid lightblue; height: 400px">
-      <canvas id="barChart"></canvas>
-    </div>
-    <!-- <div [innerHTML]="firstBlockBottomValue"></div> -->
-  </div>
-  <div class="col-md-6">
-    <div style="height: 60px; background-color: lightblue">hello</div>
-    <div style="border: 2px solid lightblue; height: 50%">
-      <canvas id="linechart"></canvas>
-    </div>
+    <div [innerHTML]="firstBlockMiddelValue"></div>
     <div [innerHTML]="firstBlockBottomValue"></div>
-
+  </div> -->
+  <div class="col-md-6" style="border: 2px solid lightblue; height: 50%">
+    <canvas id="barChart"></canvas>
   </div>
 
+  <div class="col-md-6" style="border: 2px solid lightblue; height: 50%">
+    <canvas id="linechart"></canvas>
+  </div>
 </div>
 
 

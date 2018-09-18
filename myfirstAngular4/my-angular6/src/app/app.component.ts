@@ -29,16 +29,9 @@ export class AppComponent implements OnInit {
   contentGeneral: any;
   sectionContent: any;
   chartData: any;
-  canvasBlockId = '';
-
-  firstBlock: any;
-  firstBlockTopValue = "";
-  firstBlockMiddelValue = "";
-  firstBlockMiddelId = "";
-  firstBlockBottomValue = "";
-  firstBlockContent = [{"top": "" , "middle": "", "bottom": ""}];
-
   chartDataId: any;
+
+  firstBlcok: any;
 
   constructor(private myService: MyappService) {}
 
@@ -48,39 +41,14 @@ export class AppComponent implements OnInit {
       this.sectionContent = data;
       this.contentGeneral = this.sectionContent.contentSection;
 
-      console.log(this.contentGeneral);
-      this.firstBlock = this.contentGeneral[0];
-      this.firstBlockTopValue = this.firstBlock.top.value;
-      this.firstBlockMiddelValue = this.firstBlock.middle.value;
-      this.firstBlockMiddelId = this.firstBlock.middle.id;
-      this.firstBlockBottomValue = this.firstBlock.bottom.value;
+      this.firstBlcok = this.contentGeneral[0].middle.value;
 
-      this.firstBlockContent[0].top = this.firstBlockTopValue;
-      this.firstBlockContent[0].bottom = this.firstBlockBottomValue;
-
-      console.log(this.firstBlockMiddelValue);
+      console.log(this.firstBlcok);
 
       this.contentGeneral.forEach((blockData, key) => {
-        this.canvasBlockId = blockData.blockId;
         this.chartData = blockData.middle;
         this.chartDataId = document.getElementById(this.chartData.id);
-
         this.getChart[key] = new Chart(this.chartDataId, {
-          type: this.chartData.type,
-          data: this.chartData.data,
-          options: {
-            title: {
-              text: this.chartData.title,
-              display: true
-            },
-            scales: {
-              yAxes: [{
-                ticks: {
-                  beginAtZero:true
-                }
-              }]
-            }
-          }
         });
 
 
