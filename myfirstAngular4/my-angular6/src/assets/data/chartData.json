@@ -2,14 +2,15 @@
     "contentSection":[
       {
         "blockId": "barChart",
-        "class": "col-md-12",
+        "class": "col-md-6",
         "type": "bar chart",
         "top": {
           "enable": false,
           "styleClass": "bg-009ddf color-fff height-60",
-          "value": "<div class=\"col-sm-5 offset-sm-12 col-md-12 offset-md-1 bg-009ddf color-fff height-60\"><i class=\"fas fa-ad\"></i>hell00o barChart</div>"
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o barChart</div></div>"
         },
         "middle": {
+          "value": "<div class=\"middle-border height-400\">hello this is bar chart</div>",
           "id": "barChart",
           "title": "bar chart",
           "type": "bar",
@@ -40,18 +41,19 @@
           }
         },
         "bottom": {
-          "value": "<div><div class=\"bottom-border col-md-6 height-60\">the left block</div><div class=\"bottom-border col-md-6 height-60\">the right block</div></div>"
+          "value": "<div><div class=\"bottom-border col-md-6 height-60\">the left bar block</div><div class=\"bottom-border col-md-6 height-60\">the right bar block</div></div>"
         }
       },
       {
         "blockId": "linechart",
-        "class": "col-md-12",
+        "class": "col-md-6",
         "type": "bar chart",
         "top": {
           "enable": false,
-          "value": "hello"
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o lineChart</div></div>"
         },
         "middle": {
+          "value": "<div class=\"middle-border height-400\">hello this is bar chart</div>",
           "id": "linechart",
           "type": "line",
           "data": {
@@ -65,6 +67,93 @@
               "borderWidth": 1
             }]
           }
+        },
+        "bottom": {
+          "value": "<div><div class=\"bottom-border col-md-6 height-60\">the left line block</div><div class=\"bottom-border col-md-6 height-60\">the right line block</div></div>"
+        }
+      },
+      {
+        "blockId": "linechart",
+        "class": "col-md-4",
+        "type": "bar chart",
+        "top": {
+          "enable": false,
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o lineChart</div></div>"
+        },
+        "middle": {
+          "value": "<div class=\"middle-border height-400\">hello this is bar chart</div>",
+          "id": "linechart",
+          "type": "line",
+          "data": {
+            "labels": ["1", "2", "3", "4", "5"],
+            "datasets": [{
+              "label": "number of items",
+              "data": [9, 8, 4, 5, 9],
+              "fill": false,
+              "lineTension": 0.2,
+              "borderColor": "red",
+              "borderWidth": 1
+            }]
+          }
+        },
+        "bottom": {
+          "value": "<div><div class=\"bottom-border col-md-6 height-60\">the left line block</div><div class=\"bottom-border col-md-6 height-60\">the right line block</div></div>"
+        }
+      },
+      {
+        "blockId": "linechart",
+        "class": "col-md-4",
+        "type": "bar chart",
+        "top": {
+          "enable": false,
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o lineChart</div></div>"
+        },
+        "middle": {
+          "value": "<div class=\"middle-border height-400\">hello this is bar chart</div>",
+          "id": "linechart",
+          "type": "line",
+          "data": {
+            "labels": ["1", "2", "3", "4", "5"],
+            "datasets": [{
+              "label": "number of items",
+              "data": [9, 8, 4, 5, 9],
+              "fill": false,
+              "lineTension": 0.2,
+              "borderColor": "red",
+              "borderWidth": 1
+            }]
+          }
+        },
+        "bottom": {
+          "value": "<div><div class=\"bottom-border col-md-6 height-60\">the left line block</div><div class=\"bottom-border col-md-6 height-60\">the right line block</div></div>"
+        }
+      },
+      {
+        "blockId": "linechart",
+        "class": "col-md-4",
+        "type": "bar chart",
+        "top": {
+          "enable": false,
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o lineChart</div></div>"
+        },
+        "middle": {
+          "value": "<div class=\"middle-border height-400\">hello this is bar chart</div>",
+          "id": "linechart",
+          "type": "line",
+          "data": {
+            "labels": ["1", "2", "3", "4", "5"],
+            "datasets": [{
+              "label": "number of items",
+              "data": [9, 8, 4, 5, 9],
+              "fill": false,
+              "lineTension": 0.2,
+              "borderColor": "red",
+              "borderWidth": 1
+            }]
+          }
+        },
+        "bottom": {
+          "value": "<div><div class=\"bottom-border col-md-6 height-60\">the left line block</div><div class=\"bottom-border col-md-6 height-60\">the right line block</div></div>"
         }
       }
     ]

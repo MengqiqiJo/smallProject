@@ -9,7 +9,7 @@
 <!-- <div app-test></div> -->
 <form>
   <div class="form-group row">
-    <label class="col-md-1 col-form-label" for="firstName"><i class="fas fa-ad"></i>first name: </label>
+    <label class="col-md-1 col-form-label" for="firstName">first name: </label>
     <div class="col-md-4">
       <input required minlength="3" maxlength="10" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName.value)" id="firstName" type="text" class="form-control col-md-6">
       <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
@@ -49,49 +49,36 @@
   <button (click)="showResult()" class="btn btn-primary">submit</button>
 </form>
 
-
-  <!-- <div for="contentGeneral">
-    <div style="height: 60px; background-color: lightblue" *ngFor="let contentTop of contentGeneral">
-      <div style="border: 2px solid lightblue; height: 50%">{{contentTop.blockId}}
-        <canvas id="contentTop.blockId"></canvas>
-      </div>
-    </div>
-  </div> -->
-
 <div class="row">
   <div class="col-md-6">
-    <div [innerHTML]="firstTitleValue"></div>
+    <div [innerHTML]="firstBlockTopValue"></div>
     <div style="border: 2px solid lightblue; height: 400px">
       <canvas id="barChart"></canvas>
     </div>
-    <div [innerHTML]="firstBottom"></div>
-
-
-
-    <!-- <div class={{firstTitle.styleClass}} [innerHTML]="firstTitle.value"></div>
-    <div class={{firstTitle.styleClass}} [innerHTML]="firstTitle.value"></div> -->
-
-
-
-    <!-- <div>
-      <div style="border: 1px solid grey; height: 60px" class="col-md-6">
-      </div>
-      <div style="border: 1px solid grey; height: 60px" class="col-md-6">
-      </div>
-    </div> -->
+    <!-- <div [innerHTML]="firstBlockBottomValue"></div> -->
   </div>
-
-
-  <!-- <div class="col-md-6">
+  <div class="col-md-6">
     <div style="height: 60px; background-color: lightblue">hello</div>
     <div style="border: 2px solid lightblue; height: 50%">
       <canvas id="linechart"></canvas>
     </div>
-  </div> -->
+    <div [innerHTML]="firstBlockBottomValue"></div>
+
+  </div>
+
 </div>
-    <!-- <div style="width: 700px;height: 50%">
-      <canvas id="barChart"></canvas>
-    </div> -->
+
+<div class="row" for="contentGeneral">
+  <div *ngFor="let blockData of contentGeneral" >
+    <div class={{blockData.class}}>
+      <div>
+        <div [innerHTML]="blockData.top.value"></div>
+        <div [innerHTML]="blockData.middle.value"></div>
+        <div [innerHTML]="blockData.bottom.value"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

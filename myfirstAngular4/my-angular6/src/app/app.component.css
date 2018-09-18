@@ -39,6 +39,14 @@ body {
   height: 10px;
 }
 
+.height-400 {
+  height: 400px;
+}
+
 .bottom-border {
   border: 1px solid grey;
+}
+
+.middle-border {
+  border: 2px solid lightblue;
 }
