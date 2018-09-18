@@ -10,7 +10,7 @@
           "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o barChart</div></div>"
         },
         "middle": {
-          "value": "<div class=\"middle-border height-400\">hello this is bar chart</div>",
+          "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
           "id": "barChart",
           "title": "bar chart",
           "type": "bar",
@@ -75,7 +75,7 @@
       {
         "blockId": "linechart",
         "class": "col-md-4",
-        "type": "bar chart",
+        "type": "doughnut",
         "top": {
           "enable": false,
           "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o lineChart</div></div>"
@@ -83,18 +83,25 @@
         "middle": {
           "value": "<div class=\"middle-border height-400\">hello this is bar chart</div>",
           "id": "linechart",
-          "type": "line",
+          "type": "doughnut",
           "data": {
-            "labels": ["1", "2", "3", "4", "5"],
-            "datasets": [{
-              "label": "number of items",
-              "data": [9, 8, 4, 5, 9],
-              "fill": false,
-              "lineTension": 0.2,
-              "borderColor": "red",
-              "borderWidth": 1
-            }]
-          }
+            "labels": ["A","B","C"],
+              "datasets": [
+                {
+                  "data": [300, 50, 100],
+                  "backgroundColor": [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56"
+                  ],
+                  "hoverBackgroundColor": [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56"
+                  ]
+                }
+              ]
+            }
         },
         "bottom": {
           "value": "<div><div class=\"bottom-border col-md-6 height-60\">the left line block</div><div class=\"bottom-border col-md-6 height-60\">the right line block</div></div>"
@@ -131,7 +138,7 @@
       {
         "blockId": "linechart",
         "class": "col-md-4",
-        "type": "bar chart",
+        "type": "pie",
         "top": {
           "enable": false,
           "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o lineChart</div></div>"
@@ -139,18 +146,25 @@
         "middle": {
           "value": "<div class=\"middle-border height-400\">hello this is bar chart</div>",
           "id": "linechart",
-          "type": "line",
+          "type": "pie",
           "data": {
-            "labels": ["1", "2", "3", "4", "5"],
-            "datasets": [{
-              "label": "number of items",
-              "data": [9, 8, 4, 5, 9],
-              "fill": false,
-              "lineTension": 0.2,
-              "borderColor": "red",
-              "borderWidth": 1
-            }]
-          }
+            "labels": ["A","B","C"],
+              "datasets": [
+                {
+                  "data": [300, 50, 100],
+                  "backgroundColor": [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56"
+                  ],
+                  "hoverBackgroundColor": [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56"
+                  ]
+                }
+              ]
+            }
         },
         "bottom": {
           "value": "<div><div class=\"bottom-border col-md-6 height-60\">the left line block</div><div class=\"bottom-border col-md-6 height-60\">the right line block</div></div>"

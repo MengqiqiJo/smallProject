@@ -49,6 +49,17 @@
   <button (click)="showResult()" class="btn btn-primary">submit</button>
 </form>
 
+  <button pButton type="button" label="Click" ></button>
+  <p-button label="Click" ></p-button>
+
+<div class="row">
+  <div class="col-md-6">
+    <p-chart type="bar" [data]="primeData"></p-chart>
+  </div>
+</div>
+
+<br>
+
 <div class="row">
   <div class="col-md-6">
     <div [innerHTML]="firstBlockTopValue"></div>
@@ -68,12 +79,16 @@
 
 </div>
 
+
+<!-- / -->
 <div class="row" for="contentGeneral">
   <div *ngFor="let blockData of contentGeneral" >
     <div class={{blockData.class}}>
       <div>
         <div [innerHTML]="blockData.top.value"></div>
-        <div [innerHTML]="blockData.middle.value"></div>
+        <!-- <div [innerHTML]="blockData.middle.value"></div> -->
+        <p-chart type={{blockData.middle.type}} [data]="blockData.middle.data"></p-chart>
+
         <div [innerHTML]="blockData.bottom.value"></div>
       </div>
     </div>
