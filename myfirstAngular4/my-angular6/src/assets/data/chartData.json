@@ -2,7 +2,7 @@
     "contentSection":[
       {
         "blockId": "barChart",
-        "class": "col-md-6",
+        "class": "col-md-6 margin-top-24",
         "type": "bar chart",
         "top": {
           "enable": false,
@@ -18,11 +18,10 @@
           "middleMiddle": {
             "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
             "type": "bar",
-            "styleClass": "col-md-8",
+            "styleClass": "col-md-8 margin-top-24",
             "data": {
               "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
               "datasets": [{
-                "label": "of votes",
                 "data": [12, 19, 3, 5, 2, 3],
                 "backgroundColor": [
                   "rgba(255, 99, 132, 1)",
@@ -42,6 +41,13 @@
                 ],
                 "borderWidth": 1
               }]
+            },
+            "options": {
+              "legend": {
+                "display": false
+              },
+              "responsive": false,
+              "maintainAspectRatio": false
             }
           },
           "middleRight": {
@@ -56,7 +62,7 @@
       },
       {
         "blockId": "barChart",
-        "class": "col-md-6",
+        "class": "col-md-6 margin-top-24",
         "type": "bar chart",
         "top": {
           "enable": false,
@@ -71,8 +77,8 @@
           },
           "middleMiddle": {
             "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
-            "type": "bar",
-            "styleClass": "col-md-8",
+            "type": "pie",
+            "styleClass": "col-md-8 margin-top-24",
             "data": {
               "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
               "datasets": [{
@@ -85,17 +91,13 @@
                   "rgba(75, 192, 192, 0.2)",
                   "rgba(153, 102, 255, 0.2)",
                   "rgba(255, 159, 64, 0.2)"
-                ],
-                "borderColor": [
-                  "rgba(255,99,132,1)",
-                  "rgba(54, 162, 235, 1)",
-                  "rgba(255, 206, 86, 1)",
-                  "rgba(75, 192, 192, 1)",
-                  "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)"
-                ],
-                "borderWidth": 1
+                ]
               }]
+            },
+            "options": {
+              "legend": {
+                "display": false
+              }
             }
           },
           "middleRight": {
@@ -110,12 +112,12 @@
       },
       {
         "blockId": "barChart",
-        "class": "col-md-4",
+        "class": "col-md-4 margin-top-24",
         "type": "bar chart",
         "top": {
           "enable": false,
-          "styleClass": "bg-009ddf color-fff height-60",
-          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o barChart</div></div>"
+          "styleClass": "bg-009ddf color-fff",
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\">hell00o barChart</div>"
         },
         "middle": {
           "middleLeft": {
@@ -126,7 +128,7 @@
           "middleMiddle": {
             "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
             "type": "bar",
-            "styleClass": "col-md-6",
+            "styleClass": "col-md-8 margin-top-24",
             "data": {
               "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
               "datasets": [{
@@ -150,11 +152,16 @@
                 ],
                 "borderWidth": 1
               }]
+            },
+            "options": {
+              "legend": {
+                "display": false
+              }
             }
           },
           "middleRight": {
             "enable": false,
-            "styleClass": "col-md-6",
+            "styleClass": "col-md-4",
             "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-2fa9e0\"></span><span class=\"float-left legend-text\">Strongly Agree(12)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-05d23e\"></span><span class=\"float-left legend-text\">Agree(7)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Neutral(3)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f7d417\"></span><span class=\"float-left legend-text\">Disagree(0)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f24b99\"></span><span class=\"float-left legend-text\">Strongly Disagree(0)</span></div></div>"
           }
         },
@@ -164,7 +171,7 @@
       },
       {
         "blockId": "barChart",
-        "class": "col-md-4",
+        "class": "col-md-4 margin-top-24",
         "type": "bar chart",
         "top": {
           "enable": false,
@@ -180,7 +187,7 @@
           "middleMiddle": {
             "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
             "type": "bar",
-            "styleClass": "col-md-6",
+            "styleClass": "col-md-8 margin-top-24",
             "data": {
               "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
               "datasets": [{
@@ -204,11 +211,16 @@
                 ],
                 "borderWidth": 1
               }]
+            },
+            "options": {
+              "legend": {
+                "display": false
+              }
             }
           },
           "middleRight": {
             "enable": false,
-            "styleClass": "col-md-6",
+            "styleClass": "col-md-4",
             "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-2fa9e0\"></span><span class=\"float-left legend-text\">Strongly Agree(12)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-05d23e\"></span><span class=\"float-left legend-text\">Agree(7)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Neutral(3)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f7d417\"></span><span class=\"float-left legend-text\">Disagree(0)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f24b99\"></span><span class=\"float-left legend-text\">Strongly Disagree(0)</span></div></div>"
           }
         },
@@ -218,12 +230,12 @@
       },
       {
         "blockId": "barChart",
-        "class": "col-md-4",
+        "class": "col-md-4 margin-top-24",
         "type": "bar chart",
         "top": {
           "enable": false,
           "styleClass": "bg-009ddf color-fff height-60",
-          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o barChart</div></div>"
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\">hell00o barChart</div>"
         },
         "middle": {
           "middleLeft": {
@@ -233,31 +245,22 @@
           },
           "middleMiddle": {
             "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
-            "type": "bar",
-            "styleClass": "col-md-8",
+            "type": "line",
+            "styleClass": "col-md-8 margin-top-24",
             "data": {
               "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
               "datasets": [{
                 "label": "of votes",
                 "data": [12, 19, 3, 5, 2, 3],
-                "backgroundColor": [
-                  "rgba(255, 99, 132, 1)",
-                  "rgba(54, 162, 235, 0.2)",
-                  "rgba(255, 206, 86, 0.2)",
-                  "rgba(75, 192, 192, 0.2)",
-                  "rgba(153, 102, 255, 0.2)",
-                  "rgba(255, 159, 64, 0.2)"
-                ],
-                "borderColor": [
-                  "rgba(255,99,132,1)",
-                  "rgba(54, 162, 235, 1)",
-                  "rgba(255, 206, 86, 1)",
-                  "rgba(75, 192, 192, 1)",
-                  "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)"
-                ],
+                "fill": false,
+                "borderColor": "rgba(255,99,132,1)",
                 "borderWidth": 1
               }]
+            },
+            "options": {
+              "legend": {
+                "display": false
+              }
             }
           },
           "middleRight": {
