@@ -67,24 +67,7 @@
 
 <br>
 
-<div class="row">
-  <!-- <div class="col-md-12">
-    <div [innerHTML]="firstBlcok.top.value"></div>
-    <div [innerHTML]="firstBlockMiddelValue"></div>
-    <div [innerHTML]="firstBlcok.bottom.value"></div>
-  </div>
- -->
-  <div class="col-md-6" style="border: 2px solid lightblue; height: 50%">
-    <canvas id="barChart"></canvas>
-  </div>
-
   <button (click)="saveImage()" class="btn btn-primary">Save Image</button>
-
-  <div class="col-md-6" style="border: 2px solid lightblue; height: 50%">
-    <canvas id="linechart"></canvas>
-  </div>
-</div>
-
 
 <!-- / -->
 <div class="row" for="contentGeneral">
@@ -92,10 +75,13 @@
     <div class={{blockData.class}}>
       <div>
         <div [innerHTML]="blockData.top.value"></div>
-        <!-- <div [innerHTML]="blockData.middle.value"></div> -->
         <div>
-          <p-chart type={{blockData.middle.type}} [data]="blockData.middle.data"></p-chart>
-          <p-chart type={{blockData.middle.type}} [data]="blockData.middle.data"></p-chart>
+          <div class={{blockData.middle.middleMiddle.styleClass}}>
+            <p-chart type={{blockData.middle.middleMiddle.type}} [data]="blockData.middle.middleMiddle.data"></p-chart>
+          </div>
+          <div class={{blockData.middle.middleRight.styleClass}}>
+            <div [innerHTML]="blockData.middle.middleRight.value"></div>
+          </div>
         </div>
 
         <div [innerHTML]="blockData.bottom.value"></div>
@@ -103,13 +89,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
 
 
 

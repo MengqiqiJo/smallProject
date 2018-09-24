@@ -16,6 +16,12 @@ body {
 .bg-009ddf{
   background-color: #0090df;
 }
+.bg-c6c6c6{
+  background-color: #c6c6c6;
+}
+.bg-f7d417{
+  background-color: #f7d417;
+}
 
 .color-fff {
   color: #000;
@@ -49,4 +55,12 @@ body {
 
 .middle-border {
   border: 2px solid lightblue;
+}
+
+.legend-square {
+  float: left;
+  height: 12px;
+  width: 12px;
+  margin: 2px;
+  margin-right: 6px;
 }

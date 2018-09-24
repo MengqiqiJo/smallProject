@@ -10,7 +10,7 @@ import * as html2canvas from "html2canvas";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css', '../css/plugin.css'],
   encapsulation: ViewEncapsulation.None,
 })
 
@@ -51,32 +51,8 @@ export class AppComponent implements OnInit {
       this.firstBlcokTop = this.firstBlcok.top.value;
       this.firstBlcokBottom = this.firstBlcok.bottom.value;
 
-      console.log(this.firstBlcok);
+      new Chart();
 
-      this.contentGeneral.forEach((blockData, key) => {
-        this.chartData = blockData.middle;
-        this.chartDataId = document.getElementById(this.chartData.id);
-        this.getChart[key] = new Chart(this.chartDataId, {
-          type: this.chartData.type,
-            data: this.chartData.data,
-            options: {
-              title: {
-                text: this.chartData.title,
-                display: true
-              },
-              scales: {
-                yAxes: [{
-                  ticks: {
-                    beginAtZero:true
-                  }
-                }]
-              }
-            }
-
-        });
-
-
-      });
     }, // Bind to view
     err => {
       // Log errors if any
