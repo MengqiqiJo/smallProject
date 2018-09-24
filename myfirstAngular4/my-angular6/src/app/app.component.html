@@ -53,8 +53,10 @@
   <p-button label="Click" ></p-button>
 
 <div class="row">
-  <div class="col-md-6">
+  <div id="demoChart" class="col-md-6">
+    <div [innerHTML]="firstBlcokTop"></div>
     <p-chart type="bar" [data]="{labels: ['January', 'February'],datasets: [{label: 'My First dataset',backgroundColor: '#42A5F5',borderColor: '#1E88E5',data: [65, 59]}]}"></p-chart>
+    <div [innerHTML]="firstBlcokBottom"></div>
   </div>
   <div class="col-md-6">
     <!-- <p-chart type="line" [data]="firstBlcok"></p-chart> -->
@@ -67,13 +69,16 @@
 
 <div class="row">
   <!-- <div class="col-md-12">
-    <div [innerHTML]="firstBlockTopValue"></div>
+    <div [innerHTML]="firstBlcok.top.value"></div>
     <div [innerHTML]="firstBlockMiddelValue"></div>
-    <div [innerHTML]="firstBlockBottomValue"></div>
-  </div> -->
+    <div [innerHTML]="firstBlcok.bottom.value"></div>
+  </div>
+ -->
   <div class="col-md-6" style="border: 2px solid lightblue; height: 50%">
     <canvas id="barChart"></canvas>
   </div>
+
+  <button (click)="saveImage()" class="btn btn-primary">Save Image</button>
 
   <div class="col-md-6" style="border: 2px solid lightblue; height: 50%">
     <canvas id="linechart"></canvas>
@@ -88,7 +93,10 @@
       <div>
         <div [innerHTML]="blockData.top.value"></div>
         <!-- <div [innerHTML]="blockData.middle.value"></div> -->
-        <p-chart type={{blockData.middle.type}} [data]="blockData.middle.data"></p-chart>
+        <div>
+          <p-chart type={{blockData.middle.type}} [data]="blockData.middle.data"></p-chart>
+          <p-chart type={{blockData.middle.type}} [data]="blockData.middle.data"></p-chart>
+        </div>
 
         <div [innerHTML]="blockData.bottom.value"></div>
       </div>

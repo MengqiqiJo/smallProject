@@ -4,6 +4,8 @@ import { Chart } from 'chart.js';
 
 import { MyappService } from './myapp.service';
 
+import * as html2canvas from "html2canvas";
+
 
 @Component({
   selector: 'app-root',
@@ -25,6 +27,8 @@ export class AppComponent implements OnInit {
     this.result = this.inputFirstName;
   }
 
+
+
   getChart = [];
   contentGeneral: any;
   sectionContent: any;
@@ -32,6 +36,8 @@ export class AppComponent implements OnInit {
   chartDataId: any;
 
   firstBlcok: any;
+  firstBlcokTop: any;
+  firstBlcokBottom: any;
 
   constructor(private myService: MyappService) {}
 
@@ -41,7 +47,9 @@ export class AppComponent implements OnInit {
       this.sectionContent = data;
       this.contentGeneral = this.sectionContent.contentSection;
 
-      this.firstBlcok = this.contentGeneral[0].middle.value;
+      this.firstBlcok = this.contentGeneral[0];
+      this.firstBlcokTop = this.firstBlcok.top.value;
+      this.firstBlcokBottom = this.firstBlcok.bottom.value;
 
       console.log(this.firstBlcok);
 
@@ -49,6 +57,22 @@ export class AppComponent implements OnInit {
         this.chartData = blockData.middle;
         this.chartDataId = document.getElementById(this.chartData.id);
         this.getChart[key] = new Chart(this.chartDataId, {
+          type: this.chartData.type,
+            data: this.chartData.data,
+            options: {
+              title: {
+                text: this.chartData.title,
+                display: true
+              },
+              scales: {
+                yAxes: [{
+                  ticks: {
+                    beginAtZero:true
+                  }
+                }]
+              }
+            }
+
         });
 
 
@@ -60,6 +84,23 @@ export class AppComponent implements OnInit {
     });
 
   }
+
+  testChartId: any;
+  imgData: '';
+
+ saveImage() {
+  // this.testChartId = document.getElementById("barChart");
+  // this.testChartId.toBlob(function(blob) {
+  //   saveAs(blob,"summary.jpg");
+  // })
+
+  html2canvas(document.getElementById("demoChart")).then(canvas => {
+    // this.imgData = canvas.toDataURL("image/png");
+      document.body.appendChild(canvas);
+      // window.open().document.write('<img src="' + canvas.toDataURL() + '" />');
+  })
+
+}
 
   primeData: any;
 
