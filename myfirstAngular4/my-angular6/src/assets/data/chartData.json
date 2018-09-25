@@ -2,21 +2,15 @@
     "contentSection":[
       {
         "blockId": "barChart",
-        "class": "col-md-6 margin-top-24",
-        "type": "bar chart",
+        "class": "col-md-6 col-sm-12 margin-top-24",
         "top": {
-          "enable": false,
-          "styleClass": "bg-009ddf color-fff height-60",
-          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\">hell00o barChart</div>"
+          "value": "<div class=\"col-sm-12 col-md-12 bg-009ddf color-fff height-60\">Brief overview of current treatment considerations in the management of MPNsBrief overview of current treatment considerations in the management of MPNsBrief overview of current treatment considerations in the management of MPNsBrief overview of current treatment considerations in the management of MPNs</div>"
         },
         "middle": {
           "middleLeft": {
-            "enable": false,
-            "styleClass": "",
-            "value": ""
+            "value": "<div class=\"col-md-2\">hell00o barChart</div>"
           },
           "middleMiddle": {
-            "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
             "type": "bar",
             "styleClass": "col-md-8 margin-top-24",
             "data": {
@@ -61,13 +55,12 @@
         }
       },
       {
-        "blockId": "barChart",
+        "blockId": "pieChart",
         "class": "col-md-6 margin-top-24",
-        "type": "bar chart",
         "top": {
           "enable": false,
           "styleClass": "bg-009ddf color-fff height-60",
-          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\">hell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barCharthell00o barChart</div>"
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\">Brief overview of current treatment considerations in the management of MPNs Brief overview of current treatment considerations in the management of MPNs Brief overview of current treatment considerations in the management of MPNs</div>"
         },
         "middle": {
           "middleLeft": {
@@ -78,7 +71,7 @@
           "middleMiddle": {
             "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
             "type": "pie",
-            "styleClass": "col-md-8 margin-top-24",
+            "styleClass": "col-md-6 margin-top-24",
             "data": {
               "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
               "datasets": [{
@@ -102,7 +95,7 @@
           },
           "middleRight": {
             "enable": false,
-            "styleClass": "col-md-4",
+            "styleClass": "col-md-6",
             "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-2fa9e0\"></span><span class=\"float-left legend-text\">Strongly Agree(12)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-05d23e\"></span><span class=\"float-left legend-text\">Agree(7)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Neutral(3)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f7d417\"></span><span class=\"float-left legend-text\">Disagree(0)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f24b99\"></span><span class=\"float-left legend-text\">Strongly Disagree(0)</span></div></div>"
           }
         },
