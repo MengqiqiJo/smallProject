@@ -4,7 +4,7 @@
         "blockId": "barChart",
         "class": "col-md-6 col-sm-12 margin-top-24",
         "top": {
-          "value": "<div class=\"col-sm-12 col-md-12 bg-009ddf color-fff height-60\">Brief overview of current treatment considerations in the management of MPNsBrief overview of current treatment considerations in the management of MPNsBrief overview of current treatment considerations in the management of MPNsBrief overview of current treatment considerations in the management of MPNs</div>"
+          "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 bg-009ddf color-fff height-60\">Brief overview of current treatment considerations in the management of MPNsBrief overview of current treatment considerations in the management of MPNsBrief overview of current treatment considerations in the management of MPNsBrief overview of current treatment considerations in the management of MPNs</div>"
         },
         "middle": {
           "middleLeft": {
