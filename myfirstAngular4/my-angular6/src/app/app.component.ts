@@ -85,6 +85,10 @@ export class AppComponent implements OnInit {
       amount: number
     }[];
 
+    cols: any[];
+
+    cars: any;
+
   ngOnInit() {
 
     this.transactions = [
@@ -106,6 +110,18 @@ export class AppComponent implements OnInit {
     ];
 
     this.getChartJSONAndDisplay();
+
+    this.myService.getCarsSmall().subscribe(data => {
+      this.cars = data;
+    });
+
+    this.cols = [
+      { field: 'vin', header: 'Vin' },
+      { field: 'year', header: 'Year' },
+      { field: 'brand', header: 'Brand' },
+      { field: 'color', header: 'Color' }
+  ];
+
 
   }
 

@@ -7,6 +7,9 @@ import { ButtonModule } from 'primeng/primeng';
 import { RadioButtonModule } from 'primeng/primeng';
 
 import { DataTableModule } from 'primeng/primeng';
+import {TableModule} from 'primeng/table';
+import {DropdownModule} from 'primeng/primeng';
+import {MultiSelectModule} from 'primeng/primeng';
 
 import {ChartModule} from 'primeng/chart';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,7 +36,10 @@ import { TestComponent } from './test/test.component';
     RadioButtonModule,
     BrowserAnimationsModule,
     ChartModule,
-    DataTableModule
+    DataTableModule,
+    TableModule,
+    DropdownModule,
+    MultiSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

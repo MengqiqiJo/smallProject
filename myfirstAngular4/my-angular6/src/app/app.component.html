@@ -77,7 +77,8 @@
         <div [innerHTML]="blockData.top.value"></div>
         <div>
           <div class={{blockData.middle.middleMiddle.styleClass}}>
-            <p-chart type={{blockData.middle.middleMiddle.type}} height="300px" [data]="blockData.middle.middleMiddle.data" [options]="blockData.middle.middleMiddle.options"></p-chart>
+            <p-chart type={{blockData.middle.middleMiddle.type}} height="300px" [data]="blockData.middle.middleMiddle.data" [options]="blockData.middle.middleMiddle.options">
+            </p-chart>
           </div>
           <div class={{blockData.middle.middleRight.styleClass}}>
             <div [innerHTML]="blockData.middle.middleRight.value"></div>
@@ -90,15 +91,35 @@
   </div>
 </div>
 
+<!-- <div>
+  <p-dataTable [value]="transactions" >
+    <p-column field="date" header="Date" [sortable]="true" [filter]="true"></p-column>
+    <p-column field="label" header="Label" [sortable]="true"></p-column>
+    <p-column field="amount" header="Amount" [sortable]="true"></p-column>
+  </p-dataTable>
+</div> -->
 <div>
-  <p-dataTable [value]="transactions">
-  <p-column field="date" header="Date" [sortable]="true" [filter]="true"></p-column>
-  <p-column field="label" header="Label" [sortable]="true"></p-column>
-  <p-column field="amount" header="Amount" [sortable]="true"></p-column>
-</p-dataTable>
+  -----------------------------------------
 </div>
 
-
+<div>
+  <p-table [value]="cars">
+      <ng-template pTemplate="header">
+          <tr>
+              <th *ngFor="let col of cols">
+                  {{col.header}}
+              </th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-car>
+          <tr>
+              <td *ngFor="let col of cols">
+                      {{car[col.field]}}
+              </td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>
 
 
 
