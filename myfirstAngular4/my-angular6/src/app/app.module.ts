@@ -6,10 +6,12 @@ import { PanelModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
 import { RadioButtonModule } from 'primeng/primeng';
 
-import { DataTableModule } from 'primeng/primeng';
+import { DataTableModule, SharedModule } from 'primeng/primeng';
 import {TableModule} from 'primeng/table';
 import {DropdownModule} from 'primeng/primeng';
 import {MultiSelectModule} from 'primeng/primeng';
+
+import { PaginatorModule } from 'primeng/primeng';
 
 import {ChartModule} from 'primeng/chart';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,9 +39,11 @@ import { TestComponent } from './test/test.component';
     BrowserAnimationsModule,
     ChartModule,
     DataTableModule,
+    SharedModule,
     TableModule,
     DropdownModule,
-    MultiSelectModule
+    MultiSelectModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

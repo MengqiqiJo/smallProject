@@ -10,7 +10,7 @@ import * as html2canvas from "html2canvas";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', '../css/plugin.css'],
+  styleUrls: ['./app.component.css', '../css/plugin.css', '../../node_modules/primeicons/primeicons.css', '../../node_modules/primeng/resources/themes/omega/theme.css', '../../node_modules/primeng/resources/primeng.min.css'],
   encapsulation: ViewEncapsulation.None,
 })
 
@@ -89,6 +89,10 @@ export class AppComponent implements OnInit {
 
     cars: any;
 
+    yearTimeout: any;
+
+     selectedColumns: any[];
+
   ngOnInit() {
 
     this.transactions = [
@@ -117,12 +121,12 @@ export class AppComponent implements OnInit {
 
     this.cols = [
       { field: 'vin', header: 'Vin' },
-      { field: 'year', header: 'Year' },
+      { field: 'year', header: 'pooooooYear' },
       { field: 'brand', header: 'Brand' },
       { field: 'color', header: 'Color' }
   ];
 
-
+  this.selectedColumns = this.cols;
   }
 
 }

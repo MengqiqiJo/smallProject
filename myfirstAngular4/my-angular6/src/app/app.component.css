@@ -64,3 +64,9 @@ body {
   margin: 2px;
   margin-right: 6px;
 }
+
+.table-cell {
+  width: 44px;
+  margin: 2px;
+  word-break: break-all;
+}
