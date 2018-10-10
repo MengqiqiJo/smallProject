@@ -41,24 +41,24 @@
 
 <!-- tables -->
 <div for="tableDataGeneral">
-  <div *ngFor="let tabledataContent of tableDataGeneral">
-    <div class="margin-bottom-30">
+  <div class="margin-bottom-20 margin-top-20" *ngFor="let tabledataContent of tableDataGeneral">
+    <div>
       <div [innerHTML]="tabledataContent.top.value"></div>
     </div>
-    <div>&nbsp;</div>
-    <div>
+    <div style="clear:both;">
       <p-table #dt [columns]="selectedColumns" [value]="tabledataContent.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
         <ng-template pTemplate="caption">
-          <div style="text-align:left">
-            <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
-              selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
-          </div>
+
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4" style="text-align:left;">
+              <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
+                selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+            </div>
+            <div class="col-md-4" style="text-align:left;">
               <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
             </div>
-            <div class="ui-helper-clearfix col-md-6">
-              <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:left"></button>
+            <div class="ui-helper-clearfix col-md-4" style="text-align:right;">
+              <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
             </div>
           </div>
         </ng-template>

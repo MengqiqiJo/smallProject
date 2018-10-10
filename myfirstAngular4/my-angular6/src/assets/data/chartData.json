@@ -97,7 +97,7 @@
             "value": ""
           },
           "middleMiddle": {
-            "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+            "value": "<div class=\"middle-border height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
             "type": "pie",
             "styleClass": "col-md-6 margin-top-24",
             "data": {
@@ -147,7 +147,7 @@
             "value": ""
           },
           "middleMiddle": {
-            "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+            "value": "<div class=\"middle-border height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
             "type": "pie",
             "styleClass": "col-md-6 margin-top-24",
             "data": {
@@ -188,9 +188,10 @@
         "top": {
           "enable": false,
           "styleClass": "bg-009ddf color-fff height-60",
-          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\"><div class=\"col-sm-offset-2\"><i class=\"fas fa-ad\"></i>hell00o barChart</div></div>"
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60 block-box-shadow\"><div class=\"col-sm-offset-2\">Event Types of Total</div></div>"
         },
         "middle": {
+          "class": "block-box-shadow height-400",
           "middleLeft": {
             "enable": false,
             "styleClass": "",
@@ -199,27 +200,41 @@
           "middleMiddle": {
             "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
             "type": "bar",
-            "styleClass": "col-md-8 margin-top-24",
+            "styleClass": "col-md-12 margin-top-24",
             "data": {
-              "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
+              "labels": [
+              "OLA",
+              "Accredited",
+              "Speaker Tour",
+              "Symposiums",
+              "Preceptorships",
+              "Nurse Educator"
+              ],
               "datasets": [{
                 "label": "of votes",
-                "data": [12, 19, 3, 5, 2, 3],
+                "data": [
+                  138,
+                  4,
+                  9,
+                  1,
+                  1,
+                  11
+                ],
                 "backgroundColor": [
-                  "rgba(255, 99, 132, 1)",
-                  "rgba(54, 162, 235, 0.2)",
-                  "rgba(255, 206, 86, 0.2)",
-                  "rgba(75, 192, 192, 0.2)",
-                  "rgba(153, 102, 255, 0.2)",
-                  "rgba(255, 159, 64, 0.2)"
+                  "#00134b",
+                  "#0093d0",
+                  "#00aeef",
+                  "#7dba00",
+                  "#c6c6c6",
+                  "#d6006e"
                 ],
                 "borderColor": [
-                  "rgba(255,99,132,1)",
-                  "rgba(54, 162, 235, 1)",
-                  "rgba(255, 206, 86, 1)",
-                  "rgba(75, 192, 192, 1)",
-                  "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)"
+                  "#00134b",
+                  "#0093d0",
+                  "#00aeef",
+                  "#7dba00",
+                  "#c6c6c6",
+                  "#d6006e"
                 ],
                 "borderWidth": 1
               }]
@@ -232,41 +247,42 @@
           },
           "middleRight": {
             "enable": false,
-            "styleClass": "col-md-4",
-            "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-2fa9e0\"></span><span class=\"float-left legend-text\">Strongly Agree(12)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-05d23e\"></span><span class=\"float-left legend-text\">Agree(7)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Neutral(3)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f7d417\"></span><span class=\"float-left legend-text\">Disagree(0)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f24b99\"></span><span class=\"float-left legend-text\">Strongly Disagree(0)</span></div></div>"
+            "styleClass": "",
+            "value": ""
           }
         },
         "bottom": {
-          "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+          "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
         }
       },
       {
-        "blockId": "barChart",
+        "blockId": "pieChart",
         "class": "col-md-4 margin-top-24",
-        "type": "bar chart",
         "top": {
           "enable": false,
           "styleClass": "bg-009ddf color-fff height-60",
-          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\">hell00o barChart</div>"
+          "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\">Head Office vs OLA Programs</div>"
         },
         "middle": {
+          "class": "block-box-shadow height-400",
           "middleLeft": {
             "enable": false,
             "styleClass": "",
             "value": ""
           },
           "middleMiddle": {
-            "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
-            "type": "line",
-            "styleClass": "col-md-8 margin-top-24",
+            "value": "<div class=\"middle-border height-400\"><p-chart type=\"doughnut\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+            "type": "doughnut",
+            "styleClass": "col-md-6 margin-top-24",
             "data": {
-              "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
+              "labels": [],
               "datasets": [{
                 "label": "of votes",
-                "data": [12, 19, 3, 5, 2, 3],
-                "fill": false,
-                "borderColor": "rgba(255,99,132,1)",
-                "borderWidth": 1
+                "data": [4, 138],
+                "backgroundColor": [
+                  "#0093d0",
+                  "#75d1e0"
+                ]
               }]
             },
             "options": {
@@ -277,12 +293,12 @@
           },
           "middleRight": {
             "enable": false,
-            "styleClass": "col-md-4",
-            "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-2fa9e0\"></span><span class=\"float-left legend-text\">Strongly Agree(12)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-05d23e\"></span><span class=\"float-left legend-text\">Agree(7)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Neutral(3)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f7d417\"></span><span class=\"float-left legend-text\">Disagree(0)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f24b99\"></span><span class=\"float-left legend-text\">Strongly Disagree(0)</span></div></div>"
+            "styleClass": "col-md-6",
+            "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
           }
         },
         "bottom": {
-          "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+          "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
         }
       }
     ],
