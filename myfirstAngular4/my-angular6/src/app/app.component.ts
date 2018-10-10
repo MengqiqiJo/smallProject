@@ -81,38 +81,13 @@ export class AppComponent implements OnInit {
 
 }
 
+  cols: any[];
 
-  transactions: {
-      date: string,
-      label: string,
-      amount: number
-    }[];
+  yearTimeout: any;
 
-    cols: any[];
-
-    yearTimeout: any;
-
-     selectedColumns: any[];
+  selectedColumns: any[];
 
   ngOnInit() {
-
-    this.transactions = [
-      {
-        date: '2018-09-10',
-        label: 'Third transaction',
-        amount: 130
-      },
-      {
-        date: '2018-09-10',
-        label: 'Second transaction',
-        amount: 130
-      },
-      {
-        date: '2018-09-10',
-        label: 'First transaction',
-        amount: 130
-      }
-    ];
 
     this.getChartJSONAndDisplay();
 
