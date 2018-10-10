@@ -39,6 +39,8 @@ export class AppComponent implements OnInit {
   firstBlcokTop: any;
   firstBlcokBottom: any;
 
+  cars: any;
+
   constructor(private myService: MyappService) {}
 
   getChartJSONAndDisplay() {
@@ -46,6 +48,7 @@ export class AppComponent implements OnInit {
     this.myService.getMyJson().subscribe(data => {
       this.sectionContent = data;
       this.contentGeneral = this.sectionContent.contentSection;
+      this.cars = this.sectionContent.tablecontent;
 
       this.firstBlcok = this.contentGeneral[0];
       this.firstBlcokTop = this.firstBlcok.top.value;
@@ -87,8 +90,6 @@ export class AppComponent implements OnInit {
 
     cols: any[];
 
-    cars: any;
-
     yearTimeout: any;
 
      selectedColumns: any[];
@@ -115,9 +116,7 @@ export class AppComponent implements OnInit {
 
     this.getChartJSONAndDisplay();
 
-    this.myService.getCarsSmall().subscribe(data => {
-      this.cars = data;
-    });
+    // this.cars = this.sectionContent.tablecontent;
 
     this.cols = [
       { field: 'vin', header: 'Vin' },

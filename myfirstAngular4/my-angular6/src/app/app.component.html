@@ -10,17 +10,17 @@
 <div>
   <p-table #dt [columns]="selectedColumns" [value]="cars" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
     <ng-template pTemplate="caption">
-      <!-- <div style="text-align:left">
+      <div style="text-align:left">
         <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
           selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
-      </div> -->
+      </div>
       <div class="row">
-        <!-- <div class="col-md-6">
+        <div class="col-md-6">
           <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
         </div>
         <div class="ui-helper-clearfix col-md-6">
           <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:left"></button>
-        </div> -->
+        </div>
       </div>
     </ng-template>
     <ng-template pTemplate="header" let-columns>
@@ -39,8 +39,8 @@
     </ng-template>
   </p-table>
 </div>
-<div>--------------------------</div>
-<form>
+
+<!-- <form>
   <div class="form-group row">
     <label class="col-md-1 col-form-label" for="firstName">first name: </label>
     <div class="col-md-4">
@@ -49,7 +49,7 @@
         <div *ngIf="firstName.errors.required">First Name is required</div>
         <div *ngIf="firstName.errors.minlength">First Name should be minimum 3 characters</div>
         <div *ngIf="firstName.errors.maxlength">First Name should be maximum 10 characters</div>
-        <!-- <div *ngIf="firstName.errors.pattern">First Name doesn't match the pattern.</div> -->
+        <div *ngIf="firstName.errors.pattern">First Name doesn't match the pattern.</div>
       </div>
     </div>
   </div>
@@ -83,9 +83,9 @@
 </form>
 
   <button pButton type="button" label="Click" ></button>
-  <p-button label="Click" ></p-button>
+  <p-button label="Click" ></p-button> -->
 
-<div class="row">
+<!-- <div class="row">
   <div id="demoChart" class="col-md-6">
     <div [innerHTML]="firstBlcokTop"></div>
     <p-chart type="bar" [data]="{labels: ['January', 'February'],datasets: [{label: 'My First dataset',backgroundColor: '#42A5F5',borderColor: '#1E88E5',data: [65, 59]}]}"></p-chart>
@@ -93,10 +93,10 @@
   </div>
   <div class="col-md-6">
     <!-- <p-chart type="line" [data]="firstBlcok"></p-chart> -->
-        <div [innerHTML]="firstBlcok"></div>
+        <!-- <div [innerHTML]="firstBlcok"></div> -->
 
-  </div>
-</div>
+  <!-- </div>
+</div> -->
 
 <br>
 
@@ -106,9 +106,8 @@
 <div class="row" for="contentGeneral">
   <div *ngFor="let blockData of contentGeneral" >
     <div class={{blockData.class}}>
-      <div>
         <div [innerHTML]="blockData.top.value"></div>
-        <div>
+        <div class={{blockData.middle.class}}>
           <div class={{blockData.middle.middleMiddle.styleClass}}>
             <p-chart type={{blockData.middle.middleMiddle.type}} height="300px" [data]="blockData.middle.middleMiddle.data" [options]="blockData.middle.middleMiddle.options">
             </p-chart>
@@ -119,7 +118,6 @@
         </div>
 
         <div [innerHTML]="blockData.bottom.value"></div>
-      </div>
     </div>
   </div>
 </div>
@@ -131,9 +129,7 @@
     <p-column field="amount" header="Amount" [sortable]="true"></p-column>
   </p-dataTable>
 </div> -->
-<div>
-  -----------------------------------------
-</div>
+
 
 
 
