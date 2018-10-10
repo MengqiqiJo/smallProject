@@ -39,7 +39,9 @@ export class AppComponent implements OnInit {
   firstBlcokTop: any;
   firstBlcokBottom: any;
 
-  cars: any;
+  tableDataGeneral: any[];
+
+  pageTopFixedTilesDataGeneral: any[];
 
   constructor(private myService: MyappService) {}
 
@@ -47,8 +49,10 @@ export class AppComponent implements OnInit {
 
     this.myService.getMyJson().subscribe(data => {
       this.sectionContent = data;
+
+      this.pageTopFixedTilesDataGeneral = this.sectionContent.pageTopFixedSection;
       this.contentGeneral = this.sectionContent.contentSection;
-      this.cars = this.sectionContent.tablecontent;
+      this.tableDataGeneral = this.sectionContent.tablecontent;
 
       this.firstBlcok = this.contentGeneral[0];
       this.firstBlcokTop = this.firstBlcok.top.value;

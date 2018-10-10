@@ -7,38 +7,86 @@
 <h2>Here are some links to help you start: </h2>
 <div class="app-test"></div>
 <!-- <div app-test></div> -->
-<div>
-  <p-table #dt [columns]="selectedColumns" [value]="cars" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
-    <ng-template pTemplate="caption">
-      <div style="text-align:left">
-        <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
-          selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
-        </div>
-        <div class="ui-helper-clearfix col-md-6">
-          <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:left"></button>
-        </div>
-      </div>
-    </ng-template>
-    <ng-template pTemplate="header" let-columns>
-        <tr>
-            <th *ngFor="let col of selectedColumns" [pSortableColumn]="col.field">
-              {{col.header}}
-              <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
-            </th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-car let-columns="selectedColumns">
-        <tr>
-          <td *ngFor="let col of selectedColumns" [innerHTML]="car[col.field]">
-          </td>
-        </tr>
-    </ng-template>
-  </p-table>
+
+
+<!-- tiles -->
+<div class="row" for="pageTopFixedTilesDataGeneral">
+  <div *ngFor="let tilesData of pageTopFixedTilesDataGeneral">
+    <div class={{tilesData.bolckClass}}>
+      <div [innerHTML]="tilesData.top.value"></div>
+    </div>
+
+  </div>
 </div>
+
+<!-- charts -->
+<div class="row" for="contentGeneral">
+  <div *ngFor="let blockData of contentGeneral" >
+    <div class={{blockData.class}}>
+        <div [innerHTML]="blockData.top.value"></div>
+        <div class={{blockData.middle.class}}>
+          <div class={{blockData.middle.middleMiddle.styleClass}}>
+            <p-chart type={{blockData.middle.middleMiddle.type}} height="300px" [data]="blockData.middle.middleMiddle.data" [options]="blockData.middle.middleMiddle.options">
+            </p-chart>
+          </div>
+          <div class={{blockData.middle.middleRight.styleClass}}>
+            <div [innerHTML]="blockData.middle.middleRight.value"></div>
+          </div>
+        </div>
+
+        <div [innerHTML]="blockData.bottom.value"></div>
+    </div>
+  </div>
+</div>
+
+<!-- tables -->
+<div for="tableDataGeneral">
+  <div *ngFor="let tabledataContent of tableDataGeneral">
+    <div class="margin-bottom-30">
+      <div [innerHTML]="tabledataContent.top.value"></div>
+    </div>
+    <div>&nbsp;</div>
+    <div>
+      <p-table #dt [columns]="selectedColumns" [value]="tabledataContent.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
+        <ng-template pTemplate="caption">
+          <div style="text-align:left">
+            <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
+              selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
+            </div>
+            <div class="ui-helper-clearfix col-md-6">
+              <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:left"></button>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of selectedColumns" [pSortableColumn]="col.field">
+                  {{col.header}}
+                  <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-car let-columns="selectedColumns">
+            <tr>
+              <td *ngFor="let col of selectedColumns" [innerHTML]="car[col.field]">
+              </td>
+            </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<!-- save png -->
+<button (click)="saveImage()" class="btn btn-primary">Save Image</button>
+
+<!-- form -->
 
 <!-- <form>
   <div class="form-group row">
@@ -97,33 +145,6 @@
 
   <!-- </div>
 </div> -->
-
-<br>
-
-  <button (click)="saveImage()" class="btn btn-primary">Save Image</button>
-
-<!-- / -->
-<div class="row" for="contentGeneral">
-  <div *ngFor="let blockData of contentGeneral" >
-    <div class={{blockData.class}}>
-        <div [innerHTML]="blockData.top.value"></div>
-        <div class={{blockData.middle.class}}>
-          <div class={{blockData.middle.middleMiddle.styleClass}}>
-            <p-chart type={{blockData.middle.middleMiddle.type}} height="300px" [data]="blockData.middle.middleMiddle.data" [options]="blockData.middle.middleMiddle.options">
-            </p-chart>
-          </div>
-          <div class={{blockData.middle.middleRight.styleClass}}>
-            <div [innerHTML]="blockData.middle.middleRight.value"></div>
-          </div>
-        </div>
-
-        <div [innerHTML]="blockData.bottom.value"></div>
-    </div>
-  </div>
-</div>
-
-
-
 
 
 
