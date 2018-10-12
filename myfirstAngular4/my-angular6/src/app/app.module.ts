@@ -13,6 +13,8 @@ import {MultiSelectModule} from 'primeng/primeng';
 
 import { PaginatorModule } from 'primeng/primeng';
 
+import {TabViewModule} from 'primeng/tabview';
+
 import {ChartModule} from 'primeng/chart';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -43,7 +45,8 @@ import { TestComponent } from './test/test.component';
     TableModule,
     DropdownModule,
     MultiSelectModule,
-    PaginatorModule
+    PaginatorModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

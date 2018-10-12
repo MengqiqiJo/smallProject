@@ -19,6 +19,23 @@
   </div>
 </div>
 
+<div class="row">
+  <p-tabView>
+      <p-tabPanel header="Header 1">
+        <div class="col-md-6">
+          <p-chart type="bar" [data]="firstBlcok.middle.middleMiddle.data"></p-chart>
+        </div>
+
+      </p-tabPanel>
+      <p-tabPanel header="Header 2">
+          Content 2
+      </p-tabPanel>
+      <p-tabPanel header="Header 3">
+          Content 3
+      </p-tabPanel>
+  </p-tabView>
+</div>
+
 <!-- charts -->
 <div class="row" for="contentGeneral">
   <div *ngFor="let blockData of contentGeneral" >
