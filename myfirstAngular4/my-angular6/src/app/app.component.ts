@@ -71,40 +71,24 @@ export class AppComponent implements OnInit {
   testChartId: any;
   imgData: '';
 
- saveImage() {
-  // this.testChartId = document.getElementById("barChart");
-  // this.testChartId.toBlob(function(blob) {
-  //   saveAs(blob,"summary.jpg");
-  // })
+  saveImage() {
+    // this.testChartId = document.getElementById("barChart");
+    // this.testChartId.toBlob(function(blob) {
+    //   saveAs(blob,"summary.jpg");
+    // })
 
-  html2canvas(document.getElementById("demoChart")).then(canvas => {
-    // this.imgData = canvas.toDataURL("image/png");
+    html2canvas(document.getElementById("demoChart")).then(canvas => {
+      // this.imgData = canvas.toDataURL("image/png");
       document.body.appendChild(canvas);
-      // window.open().document.write('<img src="' + canvas.toDataURL() + '" />');
-  })
+        // window.open().document.write('<img src="' + canvas.toDataURL() + '" />');
+    })
 
-}
-
-  cols: any[];
-
-  yearTimeout: any;
-
-  selectedColumns: any[];
+  }
 
   ngOnInit() {
 
     this.getChartJSONAndDisplay();
 
-    // this.cars = this.sectionContent.tablecontent;
-
-    this.cols = [
-      { field: 'vin', header: 'Vin' },
-      { field: 'year', header: 'pooooooYear' },
-      { field: 'brand', header: 'Brand' },
-      { field: 'color', header: 'Color' }
-  ];
-
-  this.selectedColumns = this.cols;
   }
 
 }

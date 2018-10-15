@@ -57,12 +57,12 @@
   <!-- TABLE -->
           <div *ngIf="blockData.type == 'table'; else elseBlock">
             <div style="clear:both;">
-              <p-table #dt [columns]="selectedColumns" [value]="blockData.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
+              <p-table #dt [columns]="blockData.middle.thead" [value]="blockData.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
                 <ng-template pTemplate="caption">
 
                   <div class="row">
                     <div class="col-md-4" style="text-align:left;">
-                      <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
+                      <p-multiSelect [options]="blockData.middle.tfields" [(ngModel)]="blockData.middle.thead" optionLabel="header"
                         selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
                     </div>
                     <div class="col-md-4" style="text-align:left;">
@@ -75,15 +75,15 @@
                 </ng-template>
                 <ng-template pTemplate="header" let-columns>
                     <tr>
-                        <th *ngFor="let col of selectedColumns" [pSortableColumn]="col.field">
+                        <th *ngFor="let col of blockData.middle.thead" [pSortableColumn]="col.field">
                           {{col.header}}
                           <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
                         </th>
                     </tr>
                 </ng-template>
-                <ng-template pTemplate="body" let-car let-columns="selectedColumns">
+                <ng-template pTemplate="body" let-car let-columns="blockData.middle.thead">
                     <tr>
-                      <td *ngFor="let col of selectedColumns" [innerHTML]="car[col.field]">
+                      <td *ngFor="let col of blockData.middle.thead" [innerHTML]="car[col.field]">
                       </td>
                     </tr>
                 </ng-template>
