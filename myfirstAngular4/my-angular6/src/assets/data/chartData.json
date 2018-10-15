@@ -576,14 +576,141 @@
     "tablecontent":[
       {
         "tabShow": "true",
+        "tabHeader": "<div class=\"col-sm-5 col-md-6 margin-top-24 bg-009ddf color-fff height-60\">Identify and address only render on getBlockMultiContainer</div>",
+        "tabClass": "col-md-6 margin-top-24",
         "tabContent": [
           {
             "tabTitle": "Tab1",
-            "tabData": {}
+            "tabData":
+            {
+              "blockId": "pieChart",
+              "class": "col-md-4 margin-top-24",
+              "type": "chart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": ""
+              },
+              "middle": {
+                "class": "block-box-shadow height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "<div class=\"middle-border height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "type": "pie",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
+                    "datasets": [{
+                      "label": "of votes",
+                      "data": [49, 10, 10, 8, 84, 3],
+                      "backgroundColor": [
+                        "#0093d0",
+                        "#002596",
+                        "#cc292b",
+                        "#00aeef",
+                        "#7dba00",
+                        "#c6c6c6"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Cardio Met (49)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-002596\"></span><span class=\"float-left legend-text\">Respiratory (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-cc292b\"></span><span class=\"float-left legend-text\">Ophthalmology (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">I&D (8)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Oncology (84)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">MS/NS (3)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+              }
+            }
           },
           {
-            "tabTitle": "Tab1",
-            "tabData": {}
+            "tabTitle": "Tab2",
+            "tabData":
+            {
+              "blockId": "barChart",
+              "class": "col-md-4 margin-top-24",
+              "type": "chart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": ""
+              },
+              "middle": {
+                "class": "block-box-shadow height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "type": "bar",
+                  "styleClass": "col-md-12 margin-top-24",
+                  "data": {
+                    "labels": [
+                    "OLA",
+                    "Accredited",
+                    "Speaker Tour",
+                    "Symposiums",
+                    "Preceptorships",
+                    "Nurse Educator"
+                    ],
+                    "datasets": [{
+                      "label": "of votes",
+                      "data": [
+                        138,
+                        4,
+                        9,
+                        1,
+                        1,
+                        11
+                      ],
+                      "backgroundColor": [
+                        "#00134b",
+                        "#0093d0",
+                        "#00aeef",
+                        "#7dba00",
+                        "#c6c6c6",
+                        "#d6006e"
+                      ],
+                      "borderColor": [
+                        "#00134b",
+                        "#0093d0",
+                        "#00aeef",
+                        "#7dba00",
+                        "#c6c6c6",
+                        "#d6006e"
+                      ],
+                      "borderWidth": 1
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                }
+              },
+              "bottom": {
+                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+              }
+            }
           }
         ]
       }

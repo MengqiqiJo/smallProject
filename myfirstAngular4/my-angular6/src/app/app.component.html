@@ -19,11 +19,11 @@
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <p-tabView>
       <p-tabPanel header="Header 1">
         <div class="col-md-6">
-          <p-chart type="bar" [data]="firstBlcok.middle.middleMiddle.data"></p-chart>
+          content 1
         </div>
       </p-tabPanel>
       <p-tabPanel header="Header 2">
@@ -33,69 +33,80 @@
           Content 3
       </p-tabPanel>
   </p-tabView>
-</div>
+</div> -->
 
 <!-- charts -->
-<div class="row" for="contentGeneral">
-    <div *ngFor="let blockData of contentGeneral" >
-      <div class={{blockData.class}}>
-        <div [innerHTML]="blockData.top.value"></div>
-          <div *ngIf="blockData.type == 'chart'; else elseBlock">
-            <div class={{blockData.middle.class}}>
-              <div class={{blockData.middle.middleMiddle.styleClass}}>
-                <p-chart type={{blockData.middle.middleMiddle.type}} height="300px" [data]="blockData.middle.middleMiddle.data" [options]="blockData.middle.middleMiddle.options">
-                </p-chart>
-              </div>
-              <div class={{blockData.middle.middleRight.styleClass}}>
-                <div [innerHTML]="blockData.middle.middleRight.value"></div>
-              </div>
-            </div>
-          </div>
-       <!--  <div [innerHTML]="blockData.bottom.value"></div>
-    </div>
-  </div> -->
-  <!-- TABLE -->
-          <div *ngIf="blockData.type == 'table'; else elseBlock">
-            <div style="clear:both;">
-              <p-table #dt [columns]="blockData.middle.thead" [value]="blockData.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
-                <ng-template pTemplate="caption">
-
-                  <div class="row">
-                    <div class="col-md-4" style="text-align:left;">
-                      <p-multiSelect [options]="blockData.middle.tfields" [(ngModel)]="blockData.middle.thead" optionLabel="header"
-                        selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
-                    </div>
-                    <div class="col-md-4" style="text-align:left;">
-                      <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
-                    </div>
-                    <div class="ui-helper-clearfix col-md-4" style="text-align:right;">
-                      <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
+<div class="row" for="tableDataGeneral">
+    <div *ngFor="let blockData of tableDataGeneral" >
+      <div for="blockData.tabContent">
+        <!-- <div class="blockData.tabClass"> -->
+          <div [innerHTML]="blockData.tabHeader"></div>
+        <!-- </div> -->
+        <p-tabView>
+          <div *ngFor="let eachtabcontent of blockData.tabContent">
+            <p-tabPanel header={{eachtabcontent.tabTitle}}>
+              <div class={{eachtabcontent.tabData.class}}>
+                <div [innerHTML]="eachtabcontent.tabData.top.value"></div>
+                  <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
+                    <div class={{eachtabcontent.tabData.middle.class}}>
+                      <div class={{eachtabcontent.tabData.middle.middleMiddle.styleClass}}>
+                        <p-chart type={{eachtabcontent.tabData.middle.middleMiddle.type}} height="300px" [data]="eachtabcontent.tabData.middle.middleMiddle.data" [options]="eachtabcontent.tabData.middle.middleMiddle.options">
+                        </p-chart>
+                      </div>
+                      <div class={{eachtabcontent.tabData.middle.middleRight.styleClass}}>
+                        <div [innerHTML]="eachtabcontent.tabData.middle.middleRight.value"></div>
+                      </div>
                     </div>
                   </div>
-                </ng-template>
-                <ng-template pTemplate="header" let-columns>
-                    <tr>
-                        <th *ngFor="let col of blockData.middle.thead" [pSortableColumn]="col.field">
-                          {{col.header}}
-                          <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
-                        </th>
-                    </tr>
-                </ng-template>
-                <ng-template pTemplate="body" let-car let-columns="blockData.middle.thead">
-                    <tr>
-                      <td *ngFor="let col of blockData.middle.thead" [innerHTML]="car[col.field]">
-                      </td>
-                    </tr>
-                </ng-template>
-              </p-table>
+
+                  <!-- TABLE -->
+                  <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
+                    <div style="clear:both;">
+                      <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
+                        <ng-template pTemplate="caption">
+
+                          <div class="row">
+                            <div class="col-md-4" style="text-align:left;">
+                              <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
+                                selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+                            </div>
+                            <div class="col-md-4" style="text-align:left;">
+                              <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
+                            </div>
+                            <div class="ui-helper-clearfix col-md-4" style="text-align:right;">
+                              <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
+                            </div>
+                          </div>
+                        </ng-template>
+                        <ng-template pTemplate="header" let-columns>
+                            <tr>
+                                <th *ngFor="let col of eachtabcontent.tabData.middle.thead" [pSortableColumn]="col.field">
+                                  {{col.header}}
+                                  <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-car let-columns="eachtabcontent.tabData.middle.thead">
+                            <tr>
+                              <td *ngFor="let col of eachtabcontent.tabData.middle.thead" [innerHTML]="car[col.field]">
+                              </td>
+                            </tr>
+                        </ng-template>
+                      </p-table>
+                    </div>
+                  </div>
+
+                  <!-- <ng-template #elseBlock>
+                  </ng-template> -->
+
+              <div [innerHTML]="eachtabcontent.tabData.bottom.value"></div>
             </div>
-          </div>
-
-          <!-- <ng-template #elseBlock>
-          </ng-template> -->
-
-      <div [innerHTML]="blockData.bottom.value"></div>
+          </p-tabPanel>
+        </div>
+      </p-tabView>
     </div>
+
+
   </div>
 </div>
 
@@ -146,7 +157,7 @@
 <br>
 
 <!-- save png -->
-<button (click)="saveImage()" class="btn btn-primary">Save Image</button>
+<!-- <button (click)="saveImage()" class="btn btn-primary">Save Image</button> -->
 
 <!-- form -->
 
