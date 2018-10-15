@@ -576,7 +576,7 @@
     "tablecontent":[
       {
         "tabShow": "true",
-        "tabHeader": "<div class=\"col-sm-5 col-md-6 margin-top-24 bg-009ddf color-fff height-60\">Identify and address only render on getBlockMultiContainer</div>",
+        "tabHeader": "<div class=\"bg-009ddf color-fff height-60\">Identify and address only render on getBlockMultiContainer</div>",
         "tabClass": "col-md-6 margin-top-24",
         "tabContent": [
           {
@@ -584,7 +584,7 @@
             "tabData":
             {
               "blockId": "pieChart",
-              "class": "col-md-4 margin-top-24",
+              "class": "col-md-12 margin-top-24",
               "type": "chart",
               "top": {
                 "enable": false,
@@ -592,14 +592,14 @@
                 "value": ""
               },
               "middle": {
-                "class": "block-box-shadow height-400",
+                "class": "",
                 "middleLeft": {
                   "enable": false,
                   "styleClass": "",
                   "value": ""
                 },
                 "middleMiddle": {
-                  "value": "<div class=\"middle-border height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "value": "<div class=\"height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
                   "type": "pie",
                   "styleClass": "col-md-6 margin-top-24",
                   "data": {
@@ -639,7 +639,7 @@
             "tabData":
             {
               "blockId": "barChart",
-              "class": "col-md-4 margin-top-24",
+              "class": "col-md-12 margin-top-24",
               "type": "chart",
               "top": {
                 "enable": false,
@@ -647,14 +647,14 @@
                 "value": ""
               },
               "middle": {
-                "class": "block-box-shadow height-400",
+                "class": "height-400",
                 "middleLeft": {
                   "enable": false,
                   "styleClass": "",
                   "value": ""
                 },
                 "middleMiddle": {
-                  "value": "<div class=\"middle-border height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
                   "type": "bar",
                   "styleClass": "col-md-12 margin-top-24",
                   "data": {
@@ -709,6 +709,144 @@
               },
               "bottom": {
                 "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "true",
+        "tabHeader": "",
+        "tabClass": "col-md-6 margin-top-24",
+        "tabContent": [
+          {
+            "tabTitle": "",
+            "tabData":
+            {
+              "blockId": "pieChart",
+              "type": "chart",
+              "class": "col-md-12 margin-top-24",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff height-60\">Head Office vs OLA Programs</div>"
+              },
+              "middle": {
+                "class": "block-box-shadow height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "<div class=\"middle-border height-400\"><p-chart type=\"doughnut\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "type": "doughnut",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": [],
+                    "datasets": [{
+                      "label": "of votes",
+                      "data": [4, 138],
+                      "backgroundColor": [
+                        "#0093d0",
+                        "#75d1e0"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "true",
+        "tabHeader": "",
+        "tabClass": "col-md-12 margin-top-24",
+        "tabContent": [
+          {
+            "tabTitle": "",
+            "tabData":
+            {
+              "type": "table",
+              "tableKeyName": "table123",
+              "class": "col-md-12 margin-top-24",
+              "top":{
+                "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 bg-009ddf block-box-shadow color-fff height-60\">Brief overview of current treatments</div>"
+              },
+              "middle":{
+                "tfields":[
+                  { "field": "vin", "header": "Vin" },
+                  { "field": "year", "header": "PooooooYear" },
+                  { "field": "brand", "header": "Brand" },
+                  { "field": "color", "header": "Color" }
+                ],
+                "thead":[
+                  { "field": "vin", "header": "Vin" },
+                  { "field": "year", "header": "PooooooYear" },
+                  { "field": "brand", "header": "Brand" },
+                  { "field": "color", "header": "Color" }
+                ],
+                "tabledata":[
+                  {
+                    "vin":"19",
+                    "year":"1988",
+                    "brand":"<a href=\"#\">Apple0</a>",
+                    "color":"red"
+                  },
+                  {
+                    "vin":"2",
+                    "year":"<div class=\"table-cell\">ereeeeeeeeeeeeeeeeeeeeeeeeeeeeettttt55555555551989</div>",
+                    "brand":"Apple1",
+                    "color":"red"
+                  },
+                  {
+                    "vin":"3",
+                    "year":"1983",
+                    "brand":"Apple",
+                    "color":"red"
+                  },
+                  {
+                    "vin":"4",
+                    "year":"1987",
+                    "brand":"Apple2",
+                    "color":"red"
+                  },
+                  {
+                    "vin":"5",
+                    "year":"1986",
+                    "brand":"Apple3",
+                    "color":"red"
+                  },
+                  {
+                    "vin":"6",
+                    "year":"1985",
+                    "brand":"Apple4",
+                    "color":"red"
+                  },
+                  {
+                    "vin":"7",
+                    "year":"1984",
+                    "brand":"Apple5",
+                    "color":"red"
+                  }
+                ]
+              },
+              "bottom": {
+                "value": ""
               }
             }
           }

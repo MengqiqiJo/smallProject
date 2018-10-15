@@ -39,74 +39,72 @@
 <div class="row" for="tableDataGeneral">
     <div *ngFor="let blockData of tableDataGeneral" >
       <div for="blockData.tabContent">
-        <!-- <div class="blockData.tabClass"> -->
+        <div class={{blockData.tabClass}}>
           <div [innerHTML]="blockData.tabHeader"></div>
-        <!-- </div> -->
-        <p-tabView>
-          <div *ngFor="let eachtabcontent of blockData.tabContent">
-            <p-tabPanel header={{eachtabcontent.tabTitle}}>
-              <div class={{eachtabcontent.tabData.class}}>
-                <div [innerHTML]="eachtabcontent.tabData.top.value"></div>
-                  <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
-                    <div class={{eachtabcontent.tabData.middle.class}}>
-                      <div class={{eachtabcontent.tabData.middle.middleMiddle.styleClass}}>
-                        <p-chart type={{eachtabcontent.tabData.middle.middleMiddle.type}} height="300px" [data]="eachtabcontent.tabData.middle.middleMiddle.data" [options]="eachtabcontent.tabData.middle.middleMiddle.options">
-                        </p-chart>
-                      </div>
-                      <div class={{eachtabcontent.tabData.middle.middleRight.styleClass}}>
-                        <div [innerHTML]="eachtabcontent.tabData.middle.middleRight.value"></div>
+          <p-tabView>
+            <div *ngFor="let eachtabcontent of blockData.tabContent">
+              <p-tabPanel header={{eachtabcontent.tabTitle}}>
+                <div class={{eachtabcontent.tabData.class}}>
+                  <div [innerHTML]="eachtabcontent.tabData.top.value"></div>
+                    <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
+                      <div class={{eachtabcontent.tabData.middle.class}}>
+                        <div class={{eachtabcontent.tabData.middle.middleMiddle.styleClass}}>
+                          <p-chart type={{eachtabcontent.tabData.middle.middleMiddle.type}} height="300px" [data]="eachtabcontent.tabData.middle.middleMiddle.data" [options]="eachtabcontent.tabData.middle.middleMiddle.options">
+                          </p-chart>
+                        </div>
+                        <div class={{eachtabcontent.tabData.middle.middleRight.styleClass}}>
+                          <div [innerHTML]="eachtabcontent.tabData.middle.middleRight.value"></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <!-- TABLE -->
-                  <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
-                    <div style="clear:both;">
-                      <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
-                        <ng-template pTemplate="caption">
+                    <!-- TABLE -->
+                    <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
+                      <div style="clear:both;">
+                        <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
+                          <ng-template pTemplate="caption">
 
-                          <div class="row">
-                            <div class="col-md-4" style="text-align:left;">
-                              <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
-                                selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+                            <div class="row">
+                              <div class="col-md-4" style="text-align:left;">
+                                <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
+                                  selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+                              </div>
+                              <div class="col-md-4" style="text-align:left;">
+                                <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
+                              </div>
+                              <div class="ui-helper-clearfix col-md-4" style="text-align:right;">
+                                <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
+                              </div>
                             </div>
-                            <div class="col-md-4" style="text-align:left;">
-                              <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
-                            </div>
-                            <div class="ui-helper-clearfix col-md-4" style="text-align:right;">
-                              <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
-                            </div>
-                          </div>
-                        </ng-template>
-                        <ng-template pTemplate="header" let-columns>
-                            <tr>
-                                <th *ngFor="let col of eachtabcontent.tabData.middle.thead" [pSortableColumn]="col.field">
-                                  {{col.header}}
-                                  <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
-                                </th>
-                            </tr>
-                        </ng-template>
-                        <ng-template pTemplate="body" let-car let-columns="eachtabcontent.tabData.middle.thead">
-                            <tr>
-                              <td *ngFor="let col of eachtabcontent.tabData.middle.thead" [innerHTML]="car[col.field]">
-                              </td>
-                            </tr>
-                        </ng-template>
-                      </p-table>
+                          </ng-template>
+                          <ng-template pTemplate="header" let-columns>
+                              <tr>
+                                  <th *ngFor="let col of eachtabcontent.tabData.middle.thead" [pSortableColumn]="col.field">
+                                    {{col.header}}
+                                    <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                                  </th>
+                              </tr>
+                          </ng-template>
+                          <ng-template pTemplate="body" let-car let-columns="eachtabcontent.tabData.middle.thead">
+                              <tr>
+                                <td *ngFor="let col of eachtabcontent.tabData.middle.thead" [innerHTML]="car[col.field]">
+                                </td>
+                              </tr>
+                          </ng-template>
+                        </p-table>
+                      </div>
                     </div>
-                  </div>
 
-                  <!-- <ng-template #elseBlock>
-                  </ng-template> -->
+                    <!-- <ng-template #elseBlock>
+                    </ng-template> -->
 
-              <div [innerHTML]="eachtabcontent.tabData.bottom.value"></div>
+                  <div [innerHTML]="eachtabcontent.tabData.bottom.value"></div>
+                </div>
+              </p-tabPanel>
             </div>
-          </p-tabPanel>
-        </div>
-      </p-tabView>
+          </p-tabView>
+      </div>
     </div>
-
-
   </div>
 </div>
 
