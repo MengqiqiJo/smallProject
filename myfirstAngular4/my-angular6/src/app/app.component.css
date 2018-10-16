@@ -107,3 +107,7 @@ body {
   margin: 2px;
   word-break: break-all;
 }
+
+.ng-tab-view-wrapper-hide .ui-tabview-nav{
+  display: none;
+}
