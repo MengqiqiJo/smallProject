@@ -5,30 +5,25 @@
 
 
 <!-- tiles -->
-<div class="row" for="pageTopFixedTilesDataGeneral">
+<!-- <div class="row" for="pageTopFixedTilesDataGeneral">
   <div *ngFor="let tilesData of pageTopFixedTilesDataGeneral">
     <div class={{tilesData.bolckClass}}>
       <div [innerHTML]="tilesData.top.value"></div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="row" for="tableDataGeneral">
   <div *ngFor="let blockData of tableDataGeneral" >
-    <div for="blockData.tabContent">
-      <div class="{{blockData.tabClass}}">
-        <div [innerHTML]="blockData.tabHeader"></div>
+    <div for="blockData.blockContent">
+      <div class="{{blockData.blockClass}}">
+        <div [innerHTML]="blockData.blockHeader"></div>
         <p-tabView class="ng-tab-view-wrapper-{{blockData.tabShow}}">
-          <div *ngFor="let eachtabcontent of blockData.tabContent">
+          <div *ngFor="let eachtabcontent of blockData.blockContent">
             <p-tabPanel header="{{eachtabcontent.tabTitle}}" class="ng-tab-panel-wrapper">
               <div class="{{eachtabcontent.tabData.class}}">
                 <div [innerHTML]="eachtabcontent.tabData.top.value">
                 </div>
-
-                <!-- tiles -->
-                <!-- <div *ngIf="eachtabcontent.tabData.type == 'htmlTile'; else elseBlock">
-
-                </div> -->
 
                 <!-- charts -->
                 <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
