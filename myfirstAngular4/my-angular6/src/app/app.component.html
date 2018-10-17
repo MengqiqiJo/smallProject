@@ -21,13 +21,13 @@
         <p-tabView class="ng-tab-view-wrapper-{{blockData.tabShow}}">
           <div *ngFor="let eachtabcontent of blockData.blockContent">
             <p-tabPanel header="{{eachtabcontent.tabTitle}}" class="ng-tab-panel-wrapper">
-              <div class="{{eachtabcontent.tabData.class}}">
+              <div class="{{eachtabcontent.tabData.class}} custom-class-1111">
                 <div [innerHTML]="eachtabcontent.tabData.top.value">
                 </div>
 
                 <!-- charts -->
                 <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
-                  <div class="{{eachtabcontent.tabData.middle.class}}">
+                  <div class="{{eachtabcontent.tabData.middle.class}} ng-chart-second-level">
                     <div class="{{eachtabcontent.tabData.middle.middleMiddle.styleClass}}">
                       <p-chart type="{{eachtabcontent.tabData.middle.middleMiddle.type}}" height="300px" [data]="eachtabcontent.tabData.middle.middleMiddle.data" [options]="eachtabcontent.tabData.middle.middleMiddle.options">
                       </p-chart>
@@ -41,7 +41,7 @@
                 <!-- TABLE -->
                 <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
                   <div style="clear:both;">
-                    <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
+                    <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" >
                       <ng-template pTemplate="caption">
 
                         <div class="row">

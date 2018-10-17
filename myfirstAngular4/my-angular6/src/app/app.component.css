@@ -94,11 +94,11 @@ body {
   height: 400px;
 }
 
-.bottom-border {
+.bottom-border-1-grey {
   border: 1px solid grey;
 }
 
-.middle-border {
+.middle-border-2-lightblue {
   border: 2px solid lightblue;
 }
 
@@ -140,5 +140,9 @@ body {
 }
 
 .ui-state-default a {
-  color:rgba(0, 0, 0, 0.54);
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.even-clear-both {
+  clear: both;
 }
