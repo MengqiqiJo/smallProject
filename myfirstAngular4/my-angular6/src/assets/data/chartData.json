@@ -644,7 +644,7 @@
                 }
               },
               "bottom": {
-                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                "value": ""
               }
             }
           },
@@ -722,7 +722,7 @@
                 }
               },
               "bottom": {
-                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                "value": ""
               }
             }
           }

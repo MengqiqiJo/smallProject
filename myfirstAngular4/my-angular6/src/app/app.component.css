@@ -120,8 +120,13 @@ body {
   display: none;
 }
 
+.ui-tabview.ui-tabview-top>.ui-tabview-nav{
+  border-bottom: solid 2px rgba(0,0,0,0.12);
+}
+
 .ng-tab-view-wrapper-show .ui-tabview-nav li.ui-tabview-selected a{
-  border-bottom: solid 2px #d6006e;
+  border-bottom: solid 3px #d6006e;
+  color: rgb(63,81,181);
 }
 
 .ui-tabview.ui-tabview-top>.ui-tabview-nav li{
@@ -130,4 +135,10 @@ body {
 
 .ui-tabview .ui-tabview-nav li a, .ui-tabview.ui-tabview-collapsible .ui-tabview-nav li.ui-tabview-selected a{
   background-color: white;
+  font-size: 14px;
+  padding: 12px 24px;
+}
+
+.ui-state-default a{
+  color:rgba(0,0,0,0.54);
 }
