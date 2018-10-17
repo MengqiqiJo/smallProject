@@ -119,3 +119,15 @@ body {
 .ng-tab-view-wrapper-hide .ui-tabview-nav{
   display: none;
 }
+
+.ng-tab-view-wrapper-show .ui-tabview-nav li.ui-tabview-selected a{
+  border-bottom: solid 2px #d6006e;
+}
+
+.ui-tabview.ui-tabview-top>.ui-tabview-nav li{
+  border: 0;
+}
+
+.ui-tabview .ui-tabview-nav li a, .ui-tabview.ui-tabview-collapsible .ui-tabview-nav li.ui-tabview-selected a{
+  background-color: white;
+}
