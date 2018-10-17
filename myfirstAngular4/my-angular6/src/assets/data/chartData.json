@@ -251,7 +251,7 @@
                   "value": ""
                 },
                 "middleMiddle": {
-                  "value": "<div class=\"middle-border height-400\"><p-chart type=\"doughnut\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "value": "<div class=\"middle-border-2-lightblue height-400\"><p-chart type=\"doughnut\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
                   "type": "doughnut",
                   "styleClass": "col-md-6 margin-top-24",
                   "data": {
@@ -578,7 +578,7 @@
                 "middleRight": {
                   "enable": false,
                   "styleClass": "col-md-4 margin-top-24",
-                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(138)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(108)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
                 }
               },
               "bottom": {
@@ -594,62 +594,7 @@
         "blockClass": "col-md-6 margin-top-24",
         "blockContent": [
           {
-            "tabTitle": "Tab1",
-            "tabData":
-            {
-              "blockId": "pieChart",
-              "class": "col-md-12 margin-top-24",
-              "type": "chart",
-              "top": {
-                "enable": false,
-                "styleClass": "bg-009ddf color-fff height-60",
-                "value": ""
-              },
-              "middle": {
-                "class": "",
-                "middleLeft": {
-                  "enable": false,
-                  "styleClass": "",
-                  "value": ""
-                },
-                "middleMiddle": {
-                  "value": "<div class=\"height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
-                  "type": "pie",
-                  "styleClass": "col-md-6 margin-top-24",
-                  "data": {
-                    "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
-                    "datasets": [{
-                      "label": "of votes",
-                      "data": [49, 10, 10, 8, 84, 3],
-                      "backgroundColor": [
-                        "#0093d0",
-                        "#002596",
-                        "#cc292b",
-                        "#00aeef",
-                        "#7dba00",
-                        "#c6c6c6"
-                      ]
-                    }]
-                  },
-                  "options": {
-                    "legend": {
-                      "display": false
-                    }
-                  }
-                },
-                "middleRight": {
-                  "enable": false,
-                  "styleClass": "col-md-6",
-                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Cardio Met (49)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-002596\"></span><span class=\"float-left legend-text\">Respiratory (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-cc292b\"></span><span class=\"float-left legend-text\">Ophthalmology (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">I&D (8)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Oncology (84)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">MS/NS (3)</span></div></div>"
-                }
-              },
-              "bottom": {
-                "value": ""
-              }
-            }
-          },
-          {
-            "tabTitle": "Tab2",
+            "tabTitle": "PROVINCE",
             "tabData":
             {
               "blockId": "barChart",
@@ -673,12 +618,84 @@
                   "styleClass": "col-md-12 margin-top-24",
                   "data": {
                     "labels": [
-                    "OLA",
-                    "Accredited",
-                    "Speaker Tour",
-                    "Symposiums",
-                    "Preceptorships",
-                    "Nurse Educator"
+                      "AB",
+                      "BC",
+                      "MB",
+                      "NB",
+                      "NL",
+                      "NS",
+                      "ON",
+                      "PEI",
+                      "QC",
+                      "SA"
+                    ],
+                    "datasets": [{
+                      "label": "of votes",
+                      "data": [
+                        15,
+                        7,
+                        2,
+                        7,
+                        0,
+                        2,
+                        54,
+                        1,
+                        70,
+                        5
+                      ],
+                      "backgroundColor": "#75d1e0",
+                      "borderColor": "#75d1e0",
+                      "borderWidth": 1
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          },
+          {
+            "tabTitle": "EVENT TYPE",
+            "tabData":
+            {
+              "blockId": "barChart",
+              "class": "col-md-12 margin-top-24",
+              "type": "chart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": ""
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "type": "bar",
+                  "styleClass": "col-md-12 margin-top-24",
+                  "data": {
+                    "labels": [
+                      "OLA",
+                      "Accredited",
+                      "Speaker Tour",
+                      "Symposiums",
+                      "Preceptorships",
+                      "Nurse Educator"
                     ],
                     "datasets": [{
                       "label": "of votes",
@@ -686,26 +703,10 @@
                         138,
                         4,
                         9,
-                        1,
-                        1,
-                        11
+                        1
                       ],
-                      "backgroundColor": [
-                        "#00134b",
-                        "#0093d0",
-                        "#00aeef",
-                        "#7dba00",
-                        "#c6c6c6",
-                        "#d6006e"
-                      ],
-                      "borderColor": [
-                        "#00134b",
-                        "#0093d0",
-                        "#00aeef",
-                        "#7dba00",
-                        "#c6c6c6",
-                        "#d6006e"
-                      ],
+                      "backgroundColor": "#75d1e0",
+                      "borderColor": "#75d1e0",
                       "borderWidth": 1
                     }]
                   },
@@ -729,8 +730,29 @@
         ]
       },
       {
+        "tabShow": "hide",
+        "blockHeader": "<div style=\"clear:both; height:1px;\"></div>",
+        "blockClass": "col-md-12",
+        "blockContent": [
+          {
+            "tabTitle": "htmlemptyforclearrow",
+            "blockClass": "",
+            "tabData":
+            {
+              "class": "",
+              "top": {
+                "value": ""
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
         "tabShow": "show",
-        "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Identify and address only render on getBlockMultiContainer111</span></div>",
+        "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Speaker Identify and address only render on getBlockMultiContainer111</span></div>",
         "blockClass": "col-md-6 margin-top-24",
         "blockContent": [
           {
@@ -871,7 +893,7 @@
       {
         "tabShow": "show",
         "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Identify and address only render on getBlockMultiContainer</span></div>",
-        "blockClass": "col-md-6 margin-top-24",
+        "blockClass": "col-md-6 margin-top-24 odd-clear-both",
         "blockContent": [
           {
             "tabTitle": "Tab1",
@@ -1023,60 +1045,197 @@
                 "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">Brief overview of current treatments</div>"
               },
               "middle":{
+                "tSortField": "Province",
                 "tfields":[
-                  { "field": "vin", "header": "Vin" },
-                  { "field": "year", "header": "PooooooYear" },
-                  { "field": "brand", "header": "Brand" },
-                  { "field": "color", "header": "Color" }
+                  { "field": "Province", "header": "Province" },
+                  { "field": "OLA", "header": "OLA" },
+                  { "field": "Accredited", "header": "Accredited" },
+                  { "field": "Speaker Tour", "header": "Speaker Tour" },
+                  { "field": "Symposiums", "header": "Symposiums" }
+
                 ],
                 "thead":[
-                  { "field": "vin", "header": "Vin" },
-                  { "field": "year", "header": "PooooooYear" },
-                  { "field": "brand", "header": "Brand" },
-                  { "field": "color", "header": "Color" }
+                  { "field": "Province", "header": "Province" },
+                  { "field": "OLA", "header": "OLA" },
+                  { "field": "Accredited", "header": "Accredited" },
+                  { "field": "Speaker Tour", "header": "Speaker Tour" },
+                  { "field": "Symposiums", "header": "Symposiums" }
                 ],
                 "tabledata":[
                   {
-                    "vin":"19",
-                    "year":"1988",
-                    "brand":"<a href=\"#\">Apple0</a>",
-                    "color":"red"
+                    "Province": "Alberta",
+                    "OLA": 236,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
                   },
                   {
-                    "vin":"2",
-                    "year":"<div class=\"table-cell\">ereeeeeeeeeeeeeeeeeeeeeeeeeeeeettttt55555555551989</div>",
-                    "brand":"Apple1",
-                    "color":"red"
+                    "Province": "Alberta",
+                    "OLA": 236,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
                   },
                   {
-                    "vin":"3",
-                    "year":"1983",
-                    "brand":"Apple",
-                    "color":"red"
+                    "Province": "British Columbia",
+                    "OLA": 82,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 73
                   },
                   {
-                    "vin":"4",
-                    "year":"1987",
-                    "brand":"Apple2",
-                    "color":"red"
+                    "Province": "Manitoba",
+                    "OLA": 25,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
                   },
                   {
-                    "vin":"5",
-                    "year":"1986",
-                    "brand":"Apple3",
-                    "color":"red"
+                    "Province": "New Brunswick",
+                    "OLA": 57,
+                    "Accredited": 0,
+                    "Speaker Tour": 4,
+                    "Symposiums": 0
                   },
                   {
-                    "vin":"6",
-                    "year":"1985",
-                    "brand":"Apple4",
-                    "color":"red"
+                    "Province": "Newfoundland and Labrador",
+                    "OLA": 0,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
                   },
                   {
-                    "vin":"7",
-                    "year":"1984",
-                    "brand":"Apple5",
-                    "color":"red"
+                    "Province": "Nova Scotia",
+                    "OLA": 25,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  },
+                  {
+                    "Province": "Ontario",
+                    "OLA": 550,
+                    "Accredited": 0,
+                    "Speaker Tour": 7,
+                    "Symposiums": 0
+                  },
+                  {
+                    "Province": "Prince Edward Island",
+                    "OLA": 3,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  },
+                  {
+                    "Province": "Quebec",
+                    "OLA": 468,
+                    "Accredited": 65,
+                    "Speaker Tour": 110,
+                    "Symposiums": 0
+                  },
+                  {
+                    "Province": "Saskatchewan",
+                    "OLA": 87,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  }
+                ]
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "blockHeader": "",
+        "blockClass": "col-md-12 margin-top-24",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "tabData":
+            {
+              "type": "table",
+              "class": "col-md-12 margin-top-24",
+              "top":{
+                "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">Brief overview of current treatments</div>"
+              },
+              "middle":{
+                "tSortField": "Program",
+                "tfields":[
+                  { "field": "Program", "header": "Program" },
+                  { "field": "Events", "header": "Events" },
+                  { "field": "Reach", "header": "Reach" },
+                  { "field": "Responses", "header": "Responses" }
+                ],
+                "thead":[
+                  { "field": "Program", "header": "Program" },
+                  { "field": "Events", "header": "Events" },
+                  { "field": "Reach", "header": "Reach" },
+                  { "field": "Responses", "header": "Responses" }
+                ],
+                "tabledata":[
+                  {
+                    "Program": "<a href=\"#\">The RIBBON Program</a>",
+                    "Events": 12,
+                    "Reach": 183,
+                    "Responses": 121
+                  },
+                  {
+                    "Program": "<a href=\"#\">Optimal Management of Myelofibrosis (MF) and Polycythemia (PV) in 2018</a>",
+                    "Events": 8,
+                    "Reach": 114,
+                    "Responses": 27
+                  },
+                  {
+                    "Program": "<a href=\"#\">PARAGON A Model of Excellence in Advanced Melanoma Treatments</a>",
+                    "Events": 7,
+                    "Reach": 82,
+                    "Responses": 67
+                  },
+                  {
+                    "Program": "<a href=\"#\">Post ASCO Review</a>",
+                    "Events": 1,
+                    "Reach": 82,
+                    "Responses": 51
+                  },
+                  {
+                    "Program": "<a href=\"#\">Breaking News: Hot Topics in Hematology Symposium</a>",
+                    "Events": 1,
+                    "Reach": 73,
+                    "Responses": 17
+                  },
+                  {
+                    "Program": "<a href=\"#\">Ribociclib for HR+ HER2 - advanced breast cancer, PM overview</a>",
+                    "Events": 5,
+                    "Reach": 64,
+                    "Responses": 43
+                  },
+                  {
+                    "Program": "<a href=\"#\">Tumeur NeuroEndocrine, principes fondamentaux : Survol – Diagnostic et traitement</a>",
+                    "Events": 1,
+                    "Reach": 41,
+                    "Responses": 16
+                  },
+                  {
+                    "Program": "<a href=\"#\">Gestion des effets indésirables avec dabrafénib/tramétinib</a>",
+                    "Events": 6,
+                    "Reach": 39,
+                    "Responses": 25
+                  },
+                  {
+                    "Program": "<a href=\"#\">Dabrafenib/Trametinib - Adverse Events Management</a>",
+                    "Events": 3,
+                    "Reach": 37,
+                    "Responses": 28
+                  },
+                  {
+                    "Program": "<a href=\"#\">A 2018 Update: Complex Hematology at RVH</a>",
+                    "Events": 1,
+                    "Reach": 36,
+                    "Responses": 28
                   }
                 ]
               },
