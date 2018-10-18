@@ -11,6 +11,7 @@
             "tabData":
             {
               "class": "",
+              "type": "htmlSnippt",
               "top": {
                 "value": ""
               },
@@ -31,6 +32,7 @@
             "tabData":
             {
               "class": "",
+              "type": "htmlSnippt",
               "top": {
                 "value": ""
               },
@@ -50,6 +52,7 @@
             "tabTitle": "",
             "tabData": {
               "class": "",
+              "type": "htmlSnippt",
               "top": {
                 "value": ""
               },
@@ -69,6 +72,7 @@
             "tabTitle": "",
             "tabData": {
               "class": "",
+              "type": "htmlSnippt",
               "top": {
                 "value": ""
               },
@@ -462,12 +466,12 @@
                 },
                 "middleRight": {
                   "enable": false,
-                  "styleClass": "col-md-4 margin-top-24",
+                  "styleClass": "col-xs-12 col-sm-12 col-md-4 margin-top-24",
                   "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(138)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
                 }
               },
               "bottom": {
-                "value": ""
+                "value": "<div class=\"row\"></div>"
               }
             }
           },
@@ -582,7 +586,7 @@
                 }
               },
               "bottom": {
-                "value": ""
+                "value": "<div class=\"row\"></div>"
               }
             }
           }
@@ -661,7 +665,7 @@
                 }
               },
               "bottom": {
-                "value": ""
+                "value": "<div class=\"row\"></div>"
               }
             }
           },
@@ -723,7 +727,7 @@
                 }
               },
               "bottom": {
-                "value": ""
+                "value": "<div class=\"row\"></div>"
               }
             }
           }
@@ -740,11 +744,12 @@
             "tabData":
             {
               "class": "",
+              "type": "htmlSnippt",
               "top": {
                 "value": ""
               },
               "bottom": {
-                "value": ""
+                "value": "<div class=\"row\"></div>"
               }
             }
           }
@@ -896,7 +901,7 @@
         "blockClass": "col-md-6 margin-top-24 odd-clear-both",
         "blockContent": [
           {
-            "tabTitle": "Tab1",
+            "tabTitle": "Tab31",
             "tabData":
             {
               "blockId": "pieChart",

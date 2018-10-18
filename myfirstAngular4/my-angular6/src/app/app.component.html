@@ -41,7 +41,7 @@
                 <!-- TABLE -->
                 <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
                   <div style="clear:both;">
-                    <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1">
+                    <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" [rowsPerPageOptions]="[10,20,30]">
                       <ng-template pTemplate="caption">
 
                         <div class="row">
