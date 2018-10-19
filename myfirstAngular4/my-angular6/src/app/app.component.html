@@ -53,19 +53,14 @@
                             <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
                           </div>
                           <div class="ui-helper-clearfix col-md-4" style="text-align:right;">
-                            <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
+                            <div class="col-md-6">
+                              <button id="copy-button-{{eachtabcontent.tabData.tableId}}" (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >COPY</button>
+                            </div>
+                            <div class="col-md-6">
+                              <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
+                            </div>
                           </div>
                         </div>
-                        <div class="row">
-
-                          <div class="col-md-4">
-                            <button id="copy-button-{{eachtabcontent.tabData.tableId}}" (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >Copy this</button>
-
-                          </div>
-
-
-                        </div>
-
 
                       </ng-template>
                       <ng-template pTemplate="header" let-columns>
