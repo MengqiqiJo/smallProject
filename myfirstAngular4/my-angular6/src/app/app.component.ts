@@ -27,7 +27,35 @@ export class AppComponent implements OnInit {
     this.result = this.inputFirstName;
   }
 
+valueString: '';
+  myClipboardContent: any[];
+  myCopyClipboard(x) {
+    for (var i= 0; i < x.length; i++) {
+      this.valueString = Object.values(x[i]);
+      console.log(this.valueString);
+    }
+    return this.valueString;
+  }
 
+  copyInputMessage(inputElement){
+    inputElement.select();
+    document.execCommand('copy');
+    inputElement.setSelectionRange(0, 0);
+  }
+
+  copyMessage(val: any){
+    let selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = this.myCopyClipboard(val);
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+  }
 
   getChart = [];
   contentGeneral: any;
@@ -54,9 +82,9 @@ export class AppComponent implements OnInit {
       this.contentGeneral = this.sectionContent.contentSection;
       this.tableDataGeneral = this.sectionContent.tablecontent;
 
-      this.firstBlcok = this.contentGeneral[0];
-      this.firstBlcokTop = this.firstBlcok.top.value;
-      this.firstBlcokBottom = this.firstBlcok.bottom.value;
+      // this.firstBlcok = this.contentGeneral[0];
+      // this.firstBlcokTop = this.firstBlcok.top.value;
+      // this.firstBlcokBottom = this.firstBlcok.bottom.value;
 
       new Chart();
 

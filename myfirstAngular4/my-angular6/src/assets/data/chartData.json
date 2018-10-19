@@ -239,7 +239,6 @@
             "tabTitle": "",
             "tabData":
             {
-              "blockId": "pieChart",
               "type": "chart",
               "class": "col-md-12 margin-top-24",
               "top": {
@@ -255,7 +254,7 @@
                   "value": ""
                 },
                 "middleMiddle": {
-                  "value": "<div class=\"middle-border-2-lightblue height-400\"><p-chart type=\"doughnut\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "value": "",
                   "type": "doughnut",
                   "styleClass": "col-md-6 margin-top-24",
                   "data": {
@@ -1050,9 +1049,9 @@
                 "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">Brief overview of current treatments</div>"
               },
               "middle":{
-                "tSortField": "Province",
+                "tSortField": "province",
                 "tfields":[
-                  { "field": "Province", "header": "Province" },
+                  { "field": "province", "header": "Province" },
                   { "field": "OLA", "header": "OLA" },
                   { "field": "Accredited", "header": "Accredited" },
                   { "field": "Speaker Tour", "header": "Speaker Tour" },
@@ -1060,7 +1059,7 @@
 
                 ],
                 "thead":[
-                  { "field": "Province", "header": "Province" },
+                  { "field": "province", "header": "Province" },
                   { "field": "OLA", "header": "OLA" },
                   { "field": "Accredited", "header": "Accredited" },
                   { "field": "Speaker Tour", "header": "Speaker Tour" },
@@ -1068,77 +1067,77 @@
                 ],
                 "tabledata":[
                   {
-                    "Province": "Alberta",
+                    "province": "Alberta",
                     "OLA": 236,
                     "Accredited": 0,
                     "Speaker Tour": 0,
                     "Symposiums": 0
                   },
                   {
-                    "Province": "Alberta",
+                    "province": "Alberta",
                     "OLA": 236,
                     "Accredited": 0,
                     "Speaker Tour": 0,
                     "Symposiums": 0
                   },
                   {
-                    "Province": "British Columbia",
+                    "province": "British Columbia",
                     "OLA": 82,
                     "Accredited": 0,
                     "Speaker Tour": 0,
                     "Symposiums": 73
                   },
                   {
-                    "Province": "Manitoba",
+                    "province": "Manitoba",
                     "OLA": 25,
                     "Accredited": 0,
                     "Speaker Tour": 0,
                     "Symposiums": 0
                   },
                   {
-                    "Province": "New Brunswick",
+                    "province": "New Brunswick",
                     "OLA": 57,
                     "Accredited": 0,
                     "Speaker Tour": 4,
                     "Symposiums": 0
                   },
                   {
-                    "Province": "Newfoundland and Labrador",
+                    "province": "Newfoundland and Labrador",
                     "OLA": 0,
                     "Accredited": 0,
                     "Speaker Tour": 0,
                     "Symposiums": 0
                   },
                   {
-                    "Province": "Nova Scotia",
+                    "province": "Nova Scotia",
                     "OLA": 25,
                     "Accredited": 0,
                     "Speaker Tour": 0,
                     "Symposiums": 0
                   },
                   {
-                    "Province": "Ontario",
+                    "province": "Ontario",
                     "OLA": 550,
                     "Accredited": 0,
                     "Speaker Tour": 7,
                     "Symposiums": 0
                   },
                   {
-                    "Province": "Prince Edward Island",
+                    "province": "Prince Edward Island",
                     "OLA": 3,
                     "Accredited": 0,
                     "Speaker Tour": 0,
                     "Symposiums": 0
                   },
                   {
-                    "Province": "Quebec",
+                    "province": "Quebec",
                     "OLA": 468,
                     "Accredited": 65,
                     "Speaker Tour": 110,
                     "Symposiums": 0
                   },
                   {
-                    "Province": "Saskatchewan",
+                    "province": "Saskatchewan",
                     "OLA": 87,
                     "Accredited": 0,
                     "Speaker Tour": 0,

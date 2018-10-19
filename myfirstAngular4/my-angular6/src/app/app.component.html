@@ -40,8 +40,8 @@
 
                 <!-- TABLE -->
                 <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
-                  <div style="clear:both;">
-                    <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" [rowsPerPageOptions]="[10,20,30]">
+                  <div style="clear:both;" id="mytable">
+                    <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,30]" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" >
                       <ng-template pTemplate="caption">
 
                         <div class="row">
@@ -56,6 +56,31 @@
                             <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
                           </div>
                         </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <!-- <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="COPY" (click)="myCopyClipboard(eachtabcontent.tabData.middle.tfields)" ></button> -->
+                            <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="COPY" (click)="myCopyClipboard(eachtabcontent.tabData.middle.tabledata)" ></button>
+                            {{valueString}}
+                            <!-- <div for="myClipboardContent">
+                              <div *ngFor="let eachCopyContent of myClipboardContent">
+                                {{eachCopyContent}}
+                              </div>
+                            </div> -->
+                          </div>
+                          <div class="col-md-4">
+                            <input type="text" value={{eachtabcontent.tabData.middle.tabledata}} #userinput>
+                            <button (click)="copyInputMessage(userinput)" value="click to copy" >Copy from Textbox</button>
+                          </div>
+
+                          <div class="col-md-4">
+                            <button (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >Copy this</button>
+
+                          </div>
+
+
+                        </div>
+
+
                       </ng-template>
                       <ng-template pTemplate="header" let-columns>
                           <tr>
