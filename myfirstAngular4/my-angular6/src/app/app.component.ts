@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   }
 
 // copy to clipboard
-  clipBoardArrayContent: [];
+  clipBoardArrayContent: any[];
   clipBoardStringContent: '';
 
   myCopyClipboard(copyContent) {
