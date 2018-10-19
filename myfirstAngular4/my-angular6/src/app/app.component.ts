@@ -27,13 +27,16 @@ export class AppComponent implements OnInit {
     this.result = this.inputFirstName;
   }
 
+
   valueString: any[];
-  myClipboardContent: any[];
-  resultString: null;
+  resultString: '\t';
 
   myCopyClipboard(x) {
 
-    for (var i= 0; i < x.length; i++) {
+    this.valueString = [];
+    this.resultString = '';
+
+    for (var i= x.length - 1; i >= 0; i--) {
       this.valueString = Object.values(x[i]);
 
       for (var j= 0; j < this.valueString.length; j++) {

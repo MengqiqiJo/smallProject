@@ -57,14 +57,9 @@
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-md-4">
-                            <!-- <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="COPY" (click)="myCopyClipboard(eachtabcontent.tabData.middle.tfields)" ></button> -->
-                            <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="COPY" (click)="myCopyClipboard(eachtabcontent.tabData.middle.tabledata)" ></button>
-                            {{valueString}}
-                          </div>
 
                           <div class="col-md-4">
-                            <button (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >Copy this</button>
+                            <button id="copy-button-{{eachtabcontent.tabData.tableId}}" (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >Copy this</button>
 
                           </div>
 

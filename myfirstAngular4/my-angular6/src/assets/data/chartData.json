@@ -1044,6 +1044,7 @@
             "tabData":
             {
               "type": "table",
+              "tableId": 1,
               "class": "col-md-12 margin-top-24",
               "top":{
                 "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">Brief overview of current treatments</div>"
@@ -1162,6 +1163,7 @@
             "tabData":
             {
               "type": "table",
+              "tableId": 2,
               "class": "col-md-12 margin-top-24",
               "top":{
                 "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">Brief overview of current treatments</div>"
