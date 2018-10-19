@@ -27,20 +27,33 @@ export class AppComponent implements OnInit {
     this.result = this.inputFirstName;
   }
 
-valueString: '';
+  valueString: any[];
   myClipboardContent: any[];
+  resultString: null;
+
   myCopyClipboard(x) {
+
     for (var i= 0; i < x.length; i++) {
       this.valueString = Object.values(x[i]);
-      console.log(this.valueString);
-    }
-    return this.valueString;
-  }
 
-  copyInputMessage(inputElement){
-    inputElement.select();
-    document.execCommand('copy');
-    inputElement.setSelectionRange(0, 0);
+      for (var j= 0; j < this.valueString.length; j++) {
+
+        // if (this.resultString) {
+          this.resultString = this.resultString + '\t' + this.valueString[j];
+        // }
+        // else {
+        //   this.resultString = this.valueString[j];
+
+        // }
+
+      }
+
+      this.resultString += '\n';
+
+      console.log(this.resultString);
+    }
+
+    return this.resultString;
   }
 
   copyMessage(val: any){
