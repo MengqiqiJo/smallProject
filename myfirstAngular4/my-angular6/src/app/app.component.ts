@@ -19,44 +19,26 @@ export class AppComponent implements OnInit {
   fruits = ['apple', 'pear', 'orange', 'kiwi', 'peach'];
   inputFirstName = '';
   result = '';
-  log(x) {
-    this.inputFirstName += x + ' ; ';
-  }
 
   showResult() {
     this.result = this.inputFirstName;
   }
 
+// copy to clipboard
+  clipBoardArrayContent: [];
+  clipBoardStringContent: '';
 
-  valueString: any[];
-  resultString: '\t';
+  myCopyClipboard(copyContent) {
+    this.clipBoardArrayContent = [];
+    this.clipBoardStringContent = '';
 
-  myCopyClipboard(x) {
-
-    this.valueString = [];
-    this.resultString = '';
-
-    for (var i= x.length - 1; i >= 0; i--) {
-      this.valueString = Object.values(x[i]);
-
-      for (var j= 0; j < this.valueString.length; j++) {
-
-        // if (this.resultString) {
-          this.resultString = this.resultString + '\t' + this.valueString[j];
-        // }
-        // else {
-        //   this.resultString = this.valueString[j];
-
-        // }
-
-      }
-
-      this.resultString += '\n';
-
-      console.log(this.resultString);
+    for (var i= copyContent.length - 1; i >= 0; i--) {
+      this.clipBoardArrayContent = Object.values(copyContent[i]);
+      this.clipBoardStringContent += this.clipBoardArrayContent.join('\t');
+      this.clipBoardStringContent += '\n';
     }
 
-    return this.resultString;
+    return this.clipBoardStringContent;
   }
 
   copyMessage(val: any){
@@ -73,22 +55,13 @@ export class AppComponent implements OnInit {
     document.body.removeChild(selBox);
   }
 
-  getChart = [];
+// get json data
   contentGeneral: any;
   sectionContent: any;
-  chartData: any;
-  chartDataId: any;
-
-  firstBlcok: any;
-  firstBlcokTop: any;
-  firstBlcokBottom: any;
-
   tableDataGeneral: any[];
-
   pageTopFixedTilesDataGeneral: any[];
 
   constructor(private myService: MyappService) {}
-
   getChartJSONAndDisplay() {
 
     this.myService.getMyJson().subscribe(data => {
@@ -97,10 +70,6 @@ export class AppComponent implements OnInit {
       this.pageTopFixedTilesDataGeneral = this.sectionContent.pageTopFixedSection;
       this.contentGeneral = this.sectionContent.contentSection;
       this.tableDataGeneral = this.sectionContent.tablecontent;
-
-      // this.firstBlcok = this.contentGeneral[0];
-      // this.firstBlcokTop = this.firstBlcok.top.value;
-      // this.firstBlcokBottom = this.firstBlcok.bottom.value;
 
       new Chart();
 
@@ -112,9 +81,10 @@ export class AppComponent implements OnInit {
 
   }
 
-  testChartId: any;
-  imgData: '';
+// save png
 
+  // testChartId: any;
+  // imgData: '';
   saveImage() {
     // this.testChartId = document.getElementById("barChart");
     // this.testChartId.toBlob(function(blob) {
