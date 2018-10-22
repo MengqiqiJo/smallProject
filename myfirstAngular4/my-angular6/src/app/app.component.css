@@ -146,3 +146,8 @@ body {
 .even-clear-both {
   clear: both;
 }
+
+.ui-table-wrapper .ui-table-tbody td {
+  height: 50px;
+}
+
