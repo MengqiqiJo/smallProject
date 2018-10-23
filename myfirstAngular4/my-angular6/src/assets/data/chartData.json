@@ -4,6 +4,7 @@
         "tabShow": "hide",
         "blockHeader": "<div class=\"bg-d6006e height-100 color-fff padding-12\"><div class=\"font-size-14 margin-top-12\">161</div><div class=\"font-size-12 margin-top-12 margin-bottom-6\">Total Events</div>",
         "blockClass": "col-md-3 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "",
@@ -26,6 +27,7 @@
         "tabShow": "hide",
         "blockHeader": "<div class=\"bg-7dba00 height-100 color-fff padding-12\"><div class=\"font-size-14 margin-top-12\">1886</div><div class=\"font-size-12 margin-top-12 margin-bottom-6\">HCP Reached</div>",
         "blockClass": "col-md-3 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "",
@@ -47,6 +49,7 @@
         "tabShow": "hide",
         "blockHeader": "<div class=\"bg-009ddf height-100 color-fff padding-12\"><div class=\"font-size-14 margin-top-12\">1244</div><div class=\"font-size-12 margin-top-12 margin-bottom-6\">Evaluations Received</div>",
         "blockClass": "col-md-3 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "",
@@ -67,6 +70,7 @@
         "tabShow": "hide",
         "blockHeader": "<div class=\"bg-4a245e height-100 color-fff padding-12\"><div class=\"font-size-14 margin-top-12\">66%</div><div class=\"font-size-12 margin-top-12 margin-bottom-6\">HCP Response</div>",
         "blockClass": "col-md-3 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "",
@@ -87,6 +91,7 @@
         "tabShow": "hide",
         "blockHeader": "",
         "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "",
@@ -149,6 +154,7 @@
         "tabShow": "hide",
         "blockHeader": "",
         "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "",
@@ -234,6 +240,7 @@
         "tabShow": "hide",
         "blockHeader": "",
         "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "",
@@ -290,7 +297,8 @@
       {
         "tabShow": "show",
         "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Event Implementation</span></div>",
-        "blockClass": "col-md-6 margin-24 block-box-shadow padding-left-0 padding-right-0",
+        "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
         "blockContent": [
           {
             "tabTitle": "MONTH",
@@ -594,7 +602,8 @@
       {
         "tabShow": "show",
         "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Identify and address only render on getBlockMultiContainer</span></div>",
-        "blockClass": "col-md-6 margin-24 block-box-shadow padding-left-0 padding-right-0",
+        "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
         "blockContent": [
           {
             "tabTitle": "PROVINCE",
@@ -736,6 +745,7 @@
         "tabShow": "hide",
         "blockHeader": "<div style=\"clear:both; height:1px;\"></div>",
         "blockClass": "col-md-12",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "htmlemptyforclearrow",
@@ -758,9 +768,10 @@
         "tabShow": "show",
         "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Speaker Identify and address only render on getBlockMultiContainer111</span></div>",
         "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
         "blockContent": [
           {
-            "tabTitle": "Tab1",
+            "tabTitle": "Tab21",
             "tabData":
             {
               "blockId": "pieChart",
@@ -810,7 +821,7 @@
                 }
               },
               "bottom": {
-                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">222222</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
               }
             }
           },
@@ -898,6 +909,7 @@
         "tabShow": "show",
         "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Identify and address only render on getBlockMultiContainer</span></div>",
         "blockClass": "col-md-6 margin-top-24 odd-clear-both",
+        "blockClassSub": "col-md-12 block-box-shadow padding-0",
         "blockContent": [
           {
             "tabTitle": "Tab31",
@@ -950,7 +962,7 @@
                 }
               },
               "bottom": {
-                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0\"><div class=\"col-md-6 height-66 border-right-2-fff-transparent\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
               }
             }
           },
@@ -1038,6 +1050,7 @@
         "tabShow": "hide",
         "blockHeader": "",
         "blockClass": "col-md-12 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "",
@@ -1157,6 +1170,7 @@
         "tabShow": "hide",
         "blockHeader": "",
         "blockClass": "col-md-12 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
             "tabTitle": "",

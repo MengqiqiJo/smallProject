@@ -152,3 +152,6 @@ body {
   height: 50px;
 }
 
+.border-right-2-fff-transparent {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}

@@ -61,6 +61,9 @@ export class AppComponent implements OnInit {
   tableDataGeneral: any[];
   pageTopFixedTilesDataGeneral: any[];
 
+  initChart: any[];
+  initChartId: any;
+
   constructor(private myService: MyappService) {}
   getChartJSONAndDisplay() {
 
@@ -71,7 +74,18 @@ export class AppComponent implements OnInit {
       this.contentGeneral = this.sectionContent.contentSection;
       this.tableDataGeneral = this.sectionContent.tablecontent;
 
-      new Chart();
+      this.initChartId = document.getElementById('myChart');
+      this.initChart = new Chart(this.initChartId,{
+        type: 'line',
+        data: {
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [{
+            label: "My First dataset",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+          }]
+      });
 
     }, // Bind to view
     err => {
