@@ -118,6 +118,7 @@ body {
 
 .ng-tab-view-wrapper-hide .ui-tabview-nav {
   display: none;
+  height: 0px;
 }
 
 .ui-tabview.ui-tabview-top>.ui-tabview-nav {

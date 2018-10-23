@@ -93,7 +93,7 @@
             "tabData":
             {
               "blockId": "pieChart",
-              "class": "col-md-12 margin-top-24",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
               "type": "chart",
               "top": {
                 "enable": false,
@@ -101,7 +101,7 @@
                 "value": "<div class=\"bg-009ddf color-fff height-60 padding-15 padding-left-14\">Total Events by Business Unit</div>"
               },
               "middle": {
-                "class": "block-box-shadow height-400",
+                "class": "height-400",
                 "middleLeft": {
                   "enable": false,
                   "styleClass": "",
@@ -155,7 +155,7 @@
             "tabData":
             {
               "blockId": "barChart",
-              "class": "col-md-12 margin-top-24",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
               "type": "chart",
               "top": {
                 "enable": false,
@@ -163,7 +163,7 @@
                 "value": "<div class=\"bg-009ddf color-fff height-60 padding-15 padding-left-14\">Event Types of Total</div>"
               },
               "middle": {
-                "class": "block-box-shadow height-400",
+                "class": "height-400",
                 "middleLeft": {
                   "enable": false,
                   "styleClass": "",
@@ -240,14 +240,14 @@
             "tabData":
             {
               "type": "chart",
-              "class": "col-md-12 margin-top-24",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
               "top": {
                 "enable": false,
                 "styleClass": "bg-009ddf color-fff height-60",
                 "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
               },
               "middle": {
-                "class": "block-box-shadow height-400",
+                "class": "height-400",
                 "middleLeft": {
                   "enable": false,
                   "styleClass": "",
@@ -290,7 +290,7 @@
       {
         "tabShow": "show",
         "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Event Implementation</span></div>",
-        "blockClass": "col-md-6 margin-top-24",
+        "blockClass": "col-md-6 margin-24 block-box-shadow padding-left-0 padding-right-0",
         "blockContent": [
           {
             "tabTitle": "MONTH",
@@ -594,7 +594,7 @@
       {
         "tabShow": "show",
         "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Identify and address only render on getBlockMultiContainer</span></div>",
-        "blockClass": "col-md-6 margin-top-24",
+        "blockClass": "col-md-6 margin-24 block-box-shadow padding-left-0 padding-right-0",
         "blockContent": [
           {
             "tabTitle": "PROVINCE",
