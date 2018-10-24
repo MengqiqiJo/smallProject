@@ -16,13 +16,6 @@ import * as html2canvas from "html2canvas";
 
 export class AppComponent implements OnInit {
   title = 'my-angular6999';
-  fruits = ['apple', 'pear', 'orange', 'kiwi', 'peach'];
-  inputFirstName = '';
-  result = '';
-
-  showResult() {
-    this.result = this.inputFirstName;
-  }
 
 // copy to clipboard
   clipBoardArrayContent: any[];
@@ -59,7 +52,6 @@ export class AppComponent implements OnInit {
   contentGeneral: any;
   sectionContent: any;
   tableDataGeneral: any[];
-  pageTopFixedTilesDataGeneral: any[];
 
   initChart: any[];
   initChartId: any;
@@ -70,7 +62,6 @@ export class AppComponent implements OnInit {
     this.myService.getMyJson().subscribe(data => {
       this.sectionContent = data;
 
-      this.pageTopFixedTilesDataGeneral = this.sectionContent.pageTopFixedSection;
       this.contentGeneral = this.sectionContent.contentSection;
       this.tableDataGeneral = this.sectionContent.tablecontent;
 
@@ -78,13 +69,16 @@ export class AppComponent implements OnInit {
       this.initChart = new Chart(this.initChartId,{
         type: 'line',
         data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          labels: ["January", "February"],
           datasets: [{
             label: "My First dataset",
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45],
+            data: [0, 10],
           }]
+        },
+        options: {
+        }
       });
 
     }, // Bind to view
@@ -92,31 +86,10 @@ export class AppComponent implements OnInit {
       // Log errors if any
       console.log('error: ', err);
     });
-
-  }
-
-// save png
-
-  // testChartId: any;
-  // imgData: '';
-  saveImage() {
-    // this.testChartId = document.getElementById("barChart");
-    // this.testChartId.toBlob(function(blob) {
-    //   saveAs(blob,"summary.jpg");
-    // })
-
-    html2canvas(document.getElementById("demoChart")).then(canvas => {
-      // this.imgData = canvas.toDataURL("image/png");
-      document.body.appendChild(canvas);
-        // window.open().document.write('<img src="' + canvas.toDataURL() + '" />');
-    })
-
   }
 
   ngOnInit() {
-
     this.getChartJSONAndDisplay();
-
   }
 
 }

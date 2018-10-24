@@ -113,13 +113,13 @@
                   "value": ""
                 },
                 "middleMiddle": {
-                  "value": "<div class=\"height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "value": "",
                   "type": "pie",
                   "styleClass": "col-md-6 margin-top-24",
                   "data": {
                     "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
                     "datasets": [{
-                      "label": "of votes",
+                      "label": "",
                       "data": [49, 10, 10, 8, 84, 3],
                       "backgroundColor": [
                         "#0093d0",
@@ -176,20 +176,20 @@
                   "value": ""
                 },
                 "middleMiddle": {
-                  "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "value": "",
                   "type": "bar",
                   "styleClass": "col-md-12 margin-top-24",
                   "data": {
                     "labels": [
-                    "OLA",
-                    "Accredited",
-                    "Speaker Tour",
-                    "Symposiums",
-                    "Preceptorships",
-                    "Nurse Educator"
+                      "OLA",
+                      "Accredited",
+                      "Speaker Tour",
+                      "Symposiums",
+                      "Preceptorships",
+                      "Nurse Educator"
                     ],
                     "datasets": [{
-                      "label": "of votes",
+                      "label": "",
                       "data": [
                         138,
                         4,
@@ -265,9 +265,9 @@
                   "type": "doughnut",
                   "styleClass": "col-md-6 margin-top-24",
                   "data": {
-                    "labels": [],
+                    "labels": ["OLA", "Head Office"],
                     "datasets": [{
-                      "label": "of votes",
+                      "label": "",
                       "data": [4, 138],
                       "backgroundColor": [
                         "#0093d0",
@@ -320,7 +320,7 @@
                   "value": ""
                 },
                 "middleMiddle": {
-                  "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "value": "",
                   "type": "bar",
                   "styleClass": "col-md-8 margin-top-24",
                   "data": {
@@ -502,7 +502,7 @@
                   "value": ""
                 },
                 "middleMiddle": {
-                  "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "value": "",
                   "type": "bar",
                   "styleClass": "col-md-8 margin-top-24",
                   "data": {
@@ -625,7 +625,7 @@
                   "value": ""
                 },
                 "middleMiddle": {
-                  "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                  "value": "",
                   "type": "bar",
                   "styleClass": "col-md-12 margin-top-24",
                   "data": {

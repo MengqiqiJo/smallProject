@@ -1,3 +1,129 @@
 <p>
   111111test works!
 </p>
+
+<!-- <div class="row">
+  <p-tabView>
+      <p-tabPanel header="Header 1">
+        <div class="col-md-6">
+          content 1
+        </div>
+      </p-tabPanel>
+      <p-tabPanel header="Header 2">
+          Content 2
+      </p-tabPanel>
+      <p-tabPanel header="Header 3">
+          Content 3
+      </p-tabPanel>
+  </p-tabView>
+</div> -->
+
+<!-- tables -->
+<!-- <div for="tableDataGeneral">
+  <div class="margin-bottom-20 margin-top-20" *ngFor="let blockData of tableDataGeneral">
+    <div>
+      <div [innerHTML]="tabledataContent.top.value"></div>
+    </div>
+
+    <div style="clear:both;">
+      <p-table #dt [columns]="selectedColumns" [value]="tabledataContent.middle.tabledata" [paginator]="true" [rows]="3" sortField="brand" sortOrder="-1">
+        <ng-template pTemplate="caption">
+
+          <div class="row">
+            <div class="col-md-4" style="text-align:left;">
+              <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
+                selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+            </div>
+            <div class="col-md-4" style="text-align:left;">
+              <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
+            </div>
+            <div class="ui-helper-clearfix col-md-4" style="text-align:right;">
+              <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of selectedColumns" [pSortableColumn]="col.field">
+                  {{col.header}}
+                  <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-car let-columns="selectedColumns">
+            <tr>
+              <td *ngFor="let col of selectedColumns" [innerHTML]="car[col.field]">
+              </td>
+            </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+  </div>
+</div> -->
+
+<!-- <br> -->
+
+<!-- save png -->
+<!-- <button (click)="saveImage()" class="btn btn-primary">Save Image</button> -->
+
+<!-- form -->
+
+<!-- <form>
+  <div class="form-group row">
+    <label class="col-md-1 col-form-label" for="firstName">first name: </label>
+    <div class="col-md-4">
+      <input required minlength="3" maxlength="10" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName.value)" id="firstName" type="text" class="form-control col-md-6">
+      <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+        <div *ngIf="firstName.errors.required">First Name is required</div>
+        <div *ngIf="firstName.errors.minlength">First Name should be minimum 3 characters</div>
+        <div *ngIf="firstName.errors.maxlength">First Name should be maximum 10 characters</div>
+        <div *ngIf="firstName.errors.pattern">First Name doesn't match the pattern.</div>
+      </div>
+    </div>
+  </div>
+{{ result }}
+  <div class="form-group row">
+    <label class="col-md-1 col-form-label" for="lastName">last name: </label>
+    <div class="col-md-4">
+      <input ngModel name="lastName" #lastName="ngModel" (change)="log(lastName.value)" id="lastName" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-md-1 col-form-label" for="fruits">choose your favorit fruits</label>
+    <div class="col-md-4">
+      <select class="form-control" id="fruits" required ngModel name="myfruits"  #myfruits="ngModel" (change)="log(myfruits.value)">
+        <option *ngFor="let fruit of fruits" [value]="fruit">{{fruit}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="address">address: </label>
+    <div class="row">
+      <div class="col-md-6">
+        <textarea ngModel name="address" #address="ngModel" (change)="log(address.value)" id="address" cols="30" rows="3" class="form-control"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="showResult()" class="btn btn-primary">submit</button>
+</form>
+
+  <button pButton type="button" label="Click" ></button>
+  <p-button label="Click" ></p-button> -->
+
+<!-- <div class="row">
+  <div id="demoChart" class="col-md-6">
+    <div [innerHTML]="firstBlcokTop"></div>
+    <p-chart type="bar" [data]="{labels: ['January', 'February'],datasets: [{label: 'My First dataset',backgroundColor: '#42A5F5',borderColor: '#1E88E5',data: [65, 59]}]}"></p-chart>
+    <div [innerHTML]="firstBlcokBottom"></div>
+  </div>
+  <div class="col-md-6">
+    <!-- <p-chart type="line" [data]="firstBlcok"></p-chart> -->
+        <!-- <div [innerHTML]="firstBlcok"></div> -->
+
+  <!-- </div>
+</div> -->
+
