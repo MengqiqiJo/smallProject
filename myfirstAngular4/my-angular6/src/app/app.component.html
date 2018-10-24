@@ -35,14 +35,14 @@
                       <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,30]" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" >
                         <ng-template pTemplate="caption" class="table-border">
                           <div class="row">
-                            <div class="col-md-4" style="text-align:left;">
+                            <div class="col-md-4 table-colum-multiselect" style="text-align:left;">
                               <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
                                 selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
                             </div>
-                            <div class="col-md-4" style="text-align:left;">
+                            <div class="col-md-4 table-keyword-search" style="text-align:left;">
                               <input type="text" class="input-search" pInputText size="30" placeholder="Search" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
                             </div>
-                            <div class="ui-helper-clearfix col-md-4" style="text-align:right;">
+                            <div class="ui-helper-clearfix col-md-4 table-copy-excel-button" style="text-align:right;">
                               <div class="col-md-6 button-copy">
                                 <button id="copy-button-{{eachtabcontent.tabData.tableId}}" (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >COPY</button>
                               </div>

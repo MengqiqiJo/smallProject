@@ -148,7 +148,7 @@ body {
   clear: both;
 }
 
-.ui-table-wrapper .ui-table-tbody td {
+.ui-table-wrapper .ui-table-tbody td, .ui-table-wrapper .ui-table-thead th {
   height: 50px;
 }
 
@@ -165,7 +165,7 @@ body {
 }
 
 #mytable p-table .ui-table {
-  margin: 8px;
+  margin: 14px;
 }
 
 
@@ -199,4 +199,10 @@ body {
 
 .input-search {
   height: 32px;
+}
+
+.table-colum-multiselect, .table-keyword-search, .table-copy-excel-button {
+  margin-top: 18px;
+  margin-bottom: 18px;
+
 }
