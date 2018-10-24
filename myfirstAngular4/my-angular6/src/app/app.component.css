@@ -155,3 +155,29 @@ body {
 .border-right-2-fff-transparent {
   border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
+
+.ui-widget-header .button-excel button,.button-copy button{
+  background: #f7f8f9;
+  color: #000;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  border:1px solid #ccc;
+  min-width: 64px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.button-copy button:hover, .button-copy button:focus {
+  background: #eee;
+  color: #000;
+}
+
+.button-excel button:focus {
+  background: #eee;
+  color: #000;
+}
+
+.input-search {
+  height: 32px;
+}
