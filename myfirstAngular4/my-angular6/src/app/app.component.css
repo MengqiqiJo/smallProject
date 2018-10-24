@@ -206,3 +206,11 @@ body {
   margin-bottom: 18px;
 
 }
+
+#mytable p-table .table-content-wrapper {
+  background-color: #ffffff;
+}
+
+#mytable p-table .ui-table .ui-sortable-column.ui-state-highlight, #mytable p-table .ui-paginator .ui-paginator-page.ui-state-active {
+  background-color: #009ddf;
+}
