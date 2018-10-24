@@ -156,7 +156,7 @@ body {
   border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.ui-widget-header .button-excel button,.button-copy button{
+.ui-widget-header .button-excel button, .ui-widget-header .button-copy button{
   background: #f7f8f9;
   color: #000;
   font-weight: 400;
