@@ -152,6 +152,23 @@ body {
   height: 50px;
 }
 
+#mytable p-table .ui-table .ui-table-tbody > tr > td, #mytable p-table .ui-table th {
+  border: none;
+}
+
+#mytable p-table .ui-table .ui-table-wrapper .ui-table-tbody > tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+#mytable p-table .ui-table .ui-table-wrapper .ui-table-tbody > tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+#mytable p-table .ui-table {
+  margin: 8px;
+}
+
+
 .border-right-2-fff-transparent {
   border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
@@ -173,9 +190,11 @@ body {
   color: #000;
 }
 
-.button-excel button:focus {
+#mytable p-table .button-excel .ui-button:enabled:hover, .button-excel .ui-button:focus {
   background: #eee;
   color: #000;
+  border:1px solid #ccc;
+
 }
 
 .input-search {

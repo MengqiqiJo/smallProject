@@ -33,7 +33,7 @@
                   <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
                     <div style="clear:both;" id="mytable">
                       <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,30]" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" >
-                        <ng-template pTemplate="caption">
+                        <ng-template pTemplate="caption" class="table-border">
                           <div class="row">
                             <div class="col-md-4" style="text-align:left;">
                               <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
