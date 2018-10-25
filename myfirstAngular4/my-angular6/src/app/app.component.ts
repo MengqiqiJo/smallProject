@@ -51,9 +51,6 @@ export class AppComponent implements OnInit {
   sectionContent: any;
   tableDataGeneral: any[];
 
-  initChart: any[];
-  initChartId: any;
-
   constructor(private myService: MyappService) {}
   getChartJSONAndDisplay() {
 
@@ -62,22 +59,6 @@ export class AppComponent implements OnInit {
 
       this.contentGeneral = this.sectionContent.contentSection;
       this.tableDataGeneral = this.sectionContent.tablecontent;
-
-      this.initChartId = document.getElementById('myChart');
-      // this.initChart = new Chart(this.initChartId,{
-      //   type: 'line',
-      //   data: {
-      //     labels: ["January", "February"],
-      //     datasets: [{
-      //       label: "My First dataset",
-      //       backgroundColor: 'rgb(255, 99, 132)',
-      //       borderColor: 'rgb(255, 99, 132)',
-      //       data: [0, 10],
-      //     }]
-      //   },
-      //   options: {
-      //   }
-      // });
 
     }, // Bind to view
     err => {
