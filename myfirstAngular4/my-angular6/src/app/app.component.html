@@ -12,7 +12,7 @@
           <p-tabView class="ng-tab-view-wrapper-{{blockData.tabShow}}">
             <div *ngFor="let eachtabcontent of blockData.blockContent; let i = index">
               <p-tabPanel header="{{eachtabcontent.tabTitle}}" class="ng-tab-panel-wrapper" [selected]="i == 0">
-                <div class="{{eachtabcontent.tabData.class}} custom-class-1111">
+                <div class="{{eachtabcontent.tabData.class}} ng-tab-top-class">
                   <div [innerHTML]="eachtabcontent.tabData.top.value">
                   </div>
 
