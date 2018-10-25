@@ -39,9 +39,11 @@
                               <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
                                 selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
                             </div>
-                              <div class="col-md-8 table-keyword-search" style="text-align:right;">
-                                <input type="text" class="input-search" pInputText size="30" placeholder="Search" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
-                              <div class="ui-helper-clearfix table-copy-excel-button" style="display: inline-block;">
+                              <div class="col-md-4 table-keyword-search">
+                                  <input type="text" class="input-search" pInputText size="30" placeholder="Search" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
+                              </div>
+
+                              <div class="ui-helper-clearfix table-copy-excel-button col-md-4" style="text-align:right;">
                                 <div class="button-copy">
                                   <button id="copy-button-{{eachtabcontent.tabData.tableId}}" (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >COPY</button>
                                 </div>
@@ -49,7 +51,6 @@
                                   <button type="button" pButton iconPos="left" label="EXCEL" (click)="dt.exportCSV()"></button>
                                 </div>
                               </div>
-                            </div>
 
                           </div>
                         </ng-template>
