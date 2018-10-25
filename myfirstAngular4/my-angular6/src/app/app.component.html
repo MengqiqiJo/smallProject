@@ -43,10 +43,10 @@
                               <input type="text" class="input-search" pInputText size="30" placeholder="Search" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
                             </div>
                             <div class="ui-helper-clearfix col-md-4 table-copy-excel-button" style="text-align:right;">
-                              <div class="col-md-6 button-copy">
+                              <div class="col-md-6 col-md-offset-2 button-copy">
                                 <button id="copy-button-{{eachtabcontent.tabData.tableId}}" (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >COPY</button>
                               </div>
-                              <div class="col-md-6 button-excel">
+                              <div class="col-md-2 col-md-offset-2 button-excel">
                                 <button type="button" pButton iconPos="left" label="EXCEL" (click)="dt.exportCSV()" style="float:right;"></button>
                               </div>
                             </div>

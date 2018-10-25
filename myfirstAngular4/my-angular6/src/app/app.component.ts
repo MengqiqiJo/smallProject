@@ -26,7 +26,10 @@ export class AppComponent implements OnInit {
     this.clipBoardStringContent = '';
 
     for (var i= copyContent.length - 1; i >= 0; i--) {
+      // copyContent[i] = copyContent[i].replace(/<(.|\n)*?>/g, '');
       this.clipBoardArrayContent = Object.values(copyContent[i]);
+      this.clipBoardArrayContent[0] = this.clipBoardArrayContent[0].replace(/<(.|\n)*?>/g, '');
+      console.log(this.clipBoardArrayContent);
       this.clipBoardStringContent += this.clipBoardArrayContent.join('\t');
       this.clipBoardStringContent += '\n';
     }
