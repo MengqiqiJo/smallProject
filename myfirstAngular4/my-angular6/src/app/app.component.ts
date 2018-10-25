@@ -1,11 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Chart } from 'chart.js';
-
 import { MyappService } from './myapp.service';
-
-import * as html2canvas from "html2canvas";
-
 
 @Component({
   selector: 'app-root',
@@ -69,20 +64,20 @@ export class AppComponent implements OnInit {
       this.tableDataGeneral = this.sectionContent.tablecontent;
 
       this.initChartId = document.getElementById('myChart');
-      this.initChart = new Chart(this.initChartId,{
-        type: 'line',
-        data: {
-          labels: ["January", "February"],
-          datasets: [{
-            label: "My First dataset",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10],
-          }]
-        },
-        options: {
-        }
-      });
+      // this.initChart = new Chart(this.initChartId,{
+      //   type: 'line',
+      //   data: {
+      //     labels: ["January", "February"],
+      //     datasets: [{
+      //       label: "My First dataset",
+      //       backgroundColor: 'rgb(255, 99, 132)',
+      //       borderColor: 'rgb(255, 99, 132)',
+      //       data: [0, 10],
+      //     }]
+      //   },
+      //   options: {
+      //   }
+      // });
 
     }, // Bind to view
     err => {
