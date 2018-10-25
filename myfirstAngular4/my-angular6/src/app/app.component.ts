@@ -47,18 +47,15 @@ export class AppComponent implements OnInit {
   }
 
 // get json data
-  contentGeneral: any;
   sectionContent: any;
-  tableDataGeneral: any[];
+  primengDataGeneral: any[];
 
   constructor(private myService: MyappService) {}
   getChartJSONAndDisplay() {
 
     this.myService.getMyJson().subscribe(data => {
       this.sectionContent = data;
-
-      this.contentGeneral = this.sectionContent.contentSection;
-      this.tableDataGeneral = this.sectionContent.tablecontent;
+      this.primengDataGeneral = this.sectionContent.primengcontentdata;
 
     }, // Bind to view
     err => {
