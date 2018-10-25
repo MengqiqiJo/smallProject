@@ -39,7 +39,7 @@
                               <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
                                 selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
                             </div>
-                            <div class="col-md-4 table-keyword-search" style="text-align:left;">
+                            <div class="col-md-4 table-keyword-search" style="text-align:right;">
                               <input type="text" class="input-search" pInputText size="30" placeholder="Search" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
                             </div>
                             <div class="ui-helper-clearfix col-md-4 table-copy-excel-button" style="text-align:right;">
