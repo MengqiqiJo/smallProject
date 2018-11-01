@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { MyappService } from './myapp.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -45,6 +46,7 @@ export class AppComponent implements OnInit {
     document.execCommand('copy');
     document.body.removeChild(selBox);
   }
+
 
 // get json data
   sectionContent: any;
