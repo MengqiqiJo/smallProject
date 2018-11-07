@@ -1,10 +1,11 @@
+import { Table } from 'primeng/components/table/table';
 
 export class CopyComponent {
 
   clipBoardArrayContent: any[];
   clipBoardStringContent: '';
 
-  myCopyClipboard(copyContent) {
+  copyClipboard(copyContent) {
     this.clipBoardArrayContent = [];
     this.clipBoardStringContent = '';
 
@@ -26,12 +27,16 @@ export class CopyComponent {
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    selBox.value = this.myCopyClipboard(val);
+    selBox.value = this.copyClipboard(val);
     document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
-  }
 
+
+    // var a = Table.prototype.exportCSV;
+    // console.log(a);
+
+  }
 }

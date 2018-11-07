@@ -4,7 +4,6 @@ import { MyappService } from './myapp.service';
 
 import { CopyComponent } from './app.copycomponent';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,8 +15,8 @@ export class AppComponent implements OnInit {
   title = 'my-angular6999';
 
   copyMessage(val: any){
-    var mycopy = new CopyComponent();
-    mycopy.copyMessage(val);
+    var copyButton = new CopyComponent();
+    copyButton.copyMessage(val);
   }
 
 // get json data
