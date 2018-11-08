@@ -85,7 +85,8 @@
 
 
 <div>
-  <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'320px'}" (onOverlayClick)="handleOverlayClick($event)"></p-gmap>
+  <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'320px'}" (onMapReady)="setMap($event)" (onOverlayClick)="handleOverlayClick($event)"></p-gmap>
+
 </div>
 
 
