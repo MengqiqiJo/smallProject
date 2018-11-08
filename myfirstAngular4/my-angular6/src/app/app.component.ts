@@ -53,7 +53,6 @@ export class AppComponent implements OnInit {
     });
   }
 
-
   ngOnInit() {
     this.getChartJSONAndDisplay();
 
@@ -69,8 +68,6 @@ export class AppComponent implements OnInit {
     ];
 
     this.infoWindow = new google.maps.InfoWindow();
-
-
   }
 
   mapPopUpTemplate(title) {
