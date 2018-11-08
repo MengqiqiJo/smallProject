@@ -69,6 +69,8 @@
                       </p-table>
                     </div>
                   </div>
+
+
                   <div [innerHTML]="eachtabcontent.tabData.bottom.value">
                   </div>
                 </div>
@@ -82,7 +84,9 @@
 </div>
 
 
-
+<div>
+  <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'320px'}" (onOverlayClick)="handleOverlayClick($event)"></p-gmap>
+</div>
 
 
 
