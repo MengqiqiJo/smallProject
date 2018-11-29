@@ -1,13 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { MyappService } from './myapp.service';
-
 import { CopyComponent } from './app.copycomponent';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', '../css/plugin.css', '../../node_modules/primeicons/primeicons.css', '../../node_modules/primeng/resources/themes/omega/theme.css', '../../node_modules/primeng/resources/primeng.min.css'],
+  styleUrls: ['./app.component.css', '../css/plugin.css', '../../node_modules/primeng/resources/primeng.min.css'],
   encapsulation: ViewEncapsulation.None,
 })
 
@@ -18,7 +17,13 @@ export class AppComponent implements OnInit {
     copyButton.copyMessage(val);
   }
 
-// get json data
+  // primeng dialog
+  // display: boolean = false;
+  // showDialog() {
+  //   this.display = true;
+  // }
+
+  // get json data
   sectionContent: any;
   primengDataGeneral: any[];
 
@@ -39,5 +44,5 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.getChartJSONAndDisplay();
   }
-
 }
+

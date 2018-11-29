@@ -13,8 +13,6 @@ import { MultiSelectModule } from 'primeng/primeng';
 
 import { PaginatorModule } from 'primeng/primeng';
 
-import {GMapModule} from 'primeng/gmap';
-
 import { TabViewModule } from 'primeng/tabview';
 
 import { ChartModule } from 'primeng/chart';
@@ -48,8 +46,8 @@ import { TestComponent } from './test/test.component';
     DropdownModule,
     MultiSelectModule,
     PaginatorModule,
-    TabViewModule,
-    GMapModule
+    TabViewModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
