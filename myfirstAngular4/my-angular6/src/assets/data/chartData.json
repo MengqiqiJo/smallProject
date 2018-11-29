@@ -134,6 +134,13 @@
                   "options": {
                     "legend": {
                       "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "fontColor": "#000",
+                        "fontSize": 10,
+                        "position": "outside"
+                      }
                     }
                   }
                 },
@@ -220,6 +227,13 @@
                   "options": {
                     "legend": {
                       "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
                     }
                   }
                 },
@@ -278,6 +292,13 @@
                   "options": {
                     "legend": {
                       "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "fontColor": "#000",
+                        "fontSize": 10,
+                        "position": "outside"
+                      }
                     }
                   }
                 },
