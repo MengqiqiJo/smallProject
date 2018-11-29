@@ -9,9 +9,9 @@
   </head>
 
   <body>
-    <a href="#" data-load-url="modal-target1.html" data-target="#myModal" role="button" class="btn btn-default" data-toggle="modal">Launch First</a>
-    <a href="#" data-load-url="modal-target2.html" data-target="#myModal" role="button" class="btn btn-default" data-toggle="modal">Launch First</a>
-    <a href="#" data-load-url="modal-target3.html" data-target="#myModal" role="button" class="btn btn-default" data-toggle="modal">Launch First</a>
+    <a href="modal-target1.html" data-target="#myModal" role="button" class="btn btn-default" data-toggle="modal">Launch First</a>
+    <a href="modal-target2.html" data-target="#myModal" role="button" class="btn btn-default" data-toggle="modal">Launch First</a>
+    <a href="modal-target3.html" data-target="#myModal" role="button" class="btn btn-default" data-toggle="modal">Launch First</a>
 
     <!-- Event Modal -->
     <div id="myModal" class="modal fade">
@@ -34,12 +34,11 @@
     </div>
 
     <script>
-      $('#myModal').on('show.bs.modal', function (e) {
-        var loadurl = e.relatedTarget.dataset.loadUrl;
-        $(this).find('.modal-body').load(loadurl);
+      $('#myModal').on('hidden.bs.modal', function () {
+        $(this).removeData('bs.modal');
       });
     </script>
 
-  </body>
+</body>
 
 </html>
