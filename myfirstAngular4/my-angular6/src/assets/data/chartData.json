@@ -137,9 +137,8 @@
                     },
                     "plugins": {
                       "labels": {
-                        "fontColor": "#000",
-                        "fontSize": 10,
-                        "position": "outside"
+                        "fontColor": "#fff",
+                        "fontSize": 10
                       }
                     }
                   }
@@ -234,7 +233,18 @@
                         "fontColor": "#000",
                         "fontSize": 10
                       }
-                    }
+                    },
+                    "layout": {
+                      "padding": {
+                        "top": 50
+                      }
+                    },
+                    "yAxes": [{
+                      "display": false,
+                      "ticks": {
+                        "max": 130
+                      }
+                    }]
                   }
                 },
                 "middleRight": {
@@ -480,6 +490,12 @@
                     "legend": {
                       "display": false
                     },
+                    "plugins": {
+                      "labels": {
+                        "fontSize": 0,
+                        "fontColor": "#000"
+                      }
+                    },
                     "responsive": false,
                     "maintainAspectRatio": false,
                     "scales": {
@@ -595,6 +611,13 @@
                     "legend": {
                       "display": false
                     },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
+                    },
                     "responsive": false,
                     "maintainAspectRatio": false,
                     "scales": {
@@ -684,6 +707,18 @@
                   "options": {
                     "legend": {
                       "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
+                    },
+                    "layout": {
+                      "padding": {
+                        "top": 10
+                      }
                     }
                   }
                 },
@@ -736,7 +771,9 @@
                         138,
                         4,
                         9,
-                        1
+                        1,
+                        0,
+                        0
                       ],
                       "backgroundColor": "#75d1e0",
                       "borderColor": "#75d1e0",
@@ -746,6 +783,11 @@
                   "options": {
                     "legend": {
                       "display": false
+                    },
+                    "layout": {
+                      "padding": {
+                        "top": 10
+                      }
                     }
                   }
                 },
@@ -832,6 +874,11 @@
                   "options": {
                     "legend": {
                       "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "fontColor": "#fff"
+                      }
                     }
                   }
                 },
