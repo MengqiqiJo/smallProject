@@ -775,8 +775,8 @@
                         0,
                         0
                       ],
-                      "backgroundColor": "#75d1e0",
-                      "borderColor": "#75d1e0",
+                      "backgroundColor": "#ffaa00",
+                      "borderColor": "#ff0000",
                       "borderWidth": 1
                     }]
                   },
@@ -957,6 +957,25 @@
                   "options": {
                     "legend": {
                       "display": false
+                    },
+                    "scales": {
+                      "xAxes": [{
+                        "gridLines": {
+                          "color": "#f5f5f5"
+                        },
+                        "ticks": {
+                          "fontSize": 14
+                        }
+                      }],
+                      "yAxes": [{
+                        "gridLines": {
+                          "color": "#f5f5f5"
+                        },
+                        "ticks": {
+                          "fontSize": 14,
+                          "max": 160
+                        }
+                      }]
                     }
                   }
                 },
