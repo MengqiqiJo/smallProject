@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.3.2/css/bootstrap-slider.css">
+  <style type="text/css">
+
+    #ex2Slider .slider-track-high {
+      background: green;
+    }
+
+    #ex2Slider .slider-selection {
+      background: red;
+    }
+
+    #ex2Slider .slider-handle {
+      background: blue;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div style="margin: 60px;">
+    <span>0</span>
+    <input id="ex12a" data-slider-id='ex2Slider' data-slider-min="0" data-slider-max="20" data-slider-value="4.6" type="text">
+    <span>20</span>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.3.2/bootstrap-slider.js"></script>
+  <script type="text/javascript">
+
+    $("#ex12a").slider({
+      tooltip: 'always',
+      precision: 2,
+      formatter: function(value) {
+        return value + '%';
+      },
+      enabled: false
+    });
+
+  </script>
+</body>
+</html>
