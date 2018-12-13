@@ -39,10 +39,27 @@ export class AppComponent implements OnInit {
       // Log errors if any
       console.log('error: ', err);
     });
+
+
   }
 
   ngOnInit() {
+    Chart.defaults.global.defaultFontColor = 'red';
+    Chart.defaults.global.tooltips = {
+      enabled: false
+    };
+    Chart.defaults.global.tooltipFillColor = 'rgba(0,160,0,0.8)';
+    Chart.defaults.global.plugins.labels = {
+      fontStyle: 'light',
+      render: 'percentage'
+      render: function (args) {
+        if (args.value > 4) {
+          return args.value;
+        }
+      },
+    };
     this.getChartJSONAndDisplay();
+    Chart.defaults.scale.ticks.suggestedMin = 10;
   }
 }
 
