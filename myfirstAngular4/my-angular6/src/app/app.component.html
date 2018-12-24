@@ -3,6 +3,8 @@
 <div class="app-test"></div>
 <!-- <div app-test></div> -->
 
+<!-- <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div> -->
+
 <div class="row" for="primengDataGeneral">
   <div *ngFor="let blockData of primengDataGeneral" >
     <div for="blockData.blockContent">
@@ -17,6 +19,13 @@
                   </div>
 
                   <!-- charts -->
+                  <div *ngIf="eachtabcontent.tabData.type == 'googlechart1'; else elseBlock">
+                  </div>
+                  <div *ngIf="eachtabcontent.tabData.type == 'Chartist.js'; else elseBlock">
+                  </div>
+                  <div *ngIf="eachtabcontent.tabData.type == 'FusionCharts'; else elseBlock">
+                  </div>
+
                   <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
                     <div class="{{eachtabcontent.tabData.middle.class}} ng-chart-second-level">
                       <div class="{{eachtabcontent.tabData.middle.middleMiddle.styleClass}}">
@@ -82,7 +91,6 @@
     </div>
   </div>
 </div>
-
 
 
 

@@ -27,7 +27,8 @@ export class AppComponent implements OnInit {
   sectionContent: any;
   primengDataGeneral: any[];
 
-  constructor(private myService: MyappService) {}
+  constructor(private myService: MyappService) {
+  }
   getChartJSONAndDisplay() {
 
     this.myService.getMyJson().subscribe(data => {
@@ -44,22 +45,46 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    Chart.defaults.global.defaultFontColor = 'red';
-    Chart.defaults.global.tooltips = {
-      enabled: false
-    };
-    Chart.defaults.global.tooltipFillColor = 'rgba(0,160,0,0.8)';
-    Chart.defaults.global.plugins.labels = {
-      fontStyle: 'light',
-      render: 'percentage'
-      render: function (args) {
-        if (args.value > 4) {
-          return args.value;
-        }
-      },
-    };
+    // Chart.defaults.global.defaultFontColor = 'red';
+    // Chart.defaults.global.tooltips = {
+    //   bodyFontSize: 50
+    // };
+    // Chart.defaults.global.tooltipFillColor = 'red';
+    // Chart.defaults.global.plugins.labels = {
+    //   fontStyle: 'light',
+    //   render: function (args) {
+    //     if (args.value > 4) {
+    //       return args.value;
+    //     }
+    //   }
+      // render: 'percentage',
+    // };
     this.getChartJSONAndDisplay();
-    Chart.defaults.scale.ticks.suggestedMin = 10;
+    // Chart.defaults.scale.ticks.suggestedMin = 10;
+
+    // google.charts.load('current', {'packages':['corechart']});
+
+    // google.charts.setOnLoadCallback(drawChart);
+
+    // function drawChart() {
+
+    //    let data = google.visualization.arrayToDataTable([
+    //      ['Task', 'Hours per Day'],
+    //      ['Work',     31],
+    //      ['Eat',      1],
+    //      ['Commute',  2],
+    //      ['Watch TV', 2],
+    //      ['Sleep',    7]
+    //    ]);
+
+    //    let options = {
+    //      title: 'My Daily Activities'
+    //    };
+
+    //    let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    //    chart.draw(data, options);
+    // }
   }
 }
 

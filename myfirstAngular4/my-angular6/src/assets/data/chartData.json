@@ -138,7 +138,8 @@
                     "plugins": {
                       "labels": {
                         "fontColor": "#fff",
-                        "fontSize": 10
+                        "fontSize": 10,
+                        "position": "border"
                       }
                     }
                   }

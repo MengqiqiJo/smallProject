@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <input class="messageCheckbox" type="checkbox" value="number 3" name="mailId1">number 3
+  <input class="messageCheckbox" type="checkbox" value="number 2" name="mailId2">number 2
+  <input class="messageCheckbox" type="checkbox" value="number 1" name="mailId2">number 1
+  <input class="messageCheckbox" type="checkbox" value="number all" name="mailId2">number all
+  <input type="submit" name="submit" onclick="getCheckBoxValue()">
+  <script type="text/javascript">
+    function getCheckBoxValue() {
+      var checkedValue = [];
+      var inputElements = document.getElementsByClassName('messageCheckbox');
+      var checkedCount = 0;
+
+      if (inputElements.includes('number all')) {
+        checkedValue = inputElements;
+      }
+
+      for(var i=0; inputElements[i]; ++i){
+        if(inputElements[i].checked){
+
+          checkedValue[checkedCount] = inputElements[i].value;
+          checkedCount ++;
+        }
+      }
+
+      for (var i = 0; i < checkedCount; i++) {
+        console.log(checkedValue[i]);
+      }
+    }
+  </script>
+</body>
+</html>
