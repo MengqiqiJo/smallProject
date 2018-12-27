@@ -23,6 +23,8 @@
     "chart.js": "^2.7.2",
     "chartjs-plugin-labels": "^1.1.0",
     "core-js": "^2.5.4",
+    "echarts": "^4.2.0-rc.2",
+    "ngx-echarts": "^3.2.0",
     "primeicons": "^1.0.0-beta.10",
     "primeng": "^6.1.4",
     "rxjs": "~6.2.0",

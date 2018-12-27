@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
     copyButton.copyMessage(val);
   }
 
+
   // primeng dialog
   // display: boolean = false;
   // showDialog() {
@@ -29,8 +30,8 @@ export class AppComponent implements OnInit {
 
   constructor(private myService: MyappService) {
   }
-  getChartJSONAndDisplay() {
 
+  getChartJSONAndDisplay() {
     this.myService.getMyJson().subscribe(data => {
       this.sectionContent = data;
       this.primengDataGeneral = this.sectionContent.primengcontentdata;
@@ -44,6 +45,7 @@ export class AppComponent implements OnInit {
 
   }
 
+  chartOption : any;
   ngOnInit() {
     // Chart.defaults.global.defaultFontColor = 'red';
     // Chart.defaults.global.tooltips = {
@@ -85,6 +87,48 @@ export class AppComponent implements OnInit {
 
     //    chart.draw(data, options);
     // }
+
+
+  this.chartOption = {
+      title: {
+          text: '天气情况统计',
+          subtext: '虚构数据',
+          left: 'center'
+      },
+      tooltip : {
+          trigger: 'item',
+          formatter: "{b} : {c} ({d}%)"
+      },
+      legend: {
+          // orient: 'vertical',
+          // top: 'middle',
+          bottom: 10,
+          left: 'center',
+          data: ['西凉', '益州','兖州','荆州','幽州']
+      },
+      series : [
+          {
+              type: 'pie',
+              radius : '65%',
+              center: ['50%', '50%'],
+              selectedMode: 'single',
+              data:[
+                  {value:305, name: '荆州'},
+                  {value:510, name: '兖州'},
+                  {value:634, name: '益州'},
+                  {value:735, name: '西凉'}
+              ],
+              itemStyle: {
+                  emphasis: {
+                      shadowBlur: 10,
+                      shadowOffsetX: 0,
+                      shadowColor: 'rgba(0, 0, 0, 0.5)'
+                  }
+              }
+          }
+      ]
+  };
+
   }
 }
 

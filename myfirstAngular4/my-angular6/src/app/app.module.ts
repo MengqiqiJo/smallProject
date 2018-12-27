@@ -25,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 
 
+import {NgxEchartsModule} from 'ngx-echarts'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,8 @@ import { TestComponent } from './test/test.component';
     DropdownModule,
     MultiSelectModule,
     PaginatorModule,
-    TabViewModule
+    TabViewModule,
+    NgxEchartsModule
 
   ],
   providers: [],
