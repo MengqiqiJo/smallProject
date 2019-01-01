@@ -53,11 +53,13 @@ export class AppComponent implements OnInit {
     //   saveAs(blob,"summary.jpg");
     // })
 
-    html2canvas(document.getElementById("demoChart")).then(canvas => {
-      // this.imgData = canvas.toDataURL("image/png");
-        document.body.appendChild(canvas);
+      html2canvas(document.getElementById("demoChart")).then(function(canvas) {
+        var element = document.createElement('a');
+        element.href = canvas.toDataURL("image/png");
+        element.download = 'download.png';
+        element.click();
+      });
         // window.open().document.write('<img src="' + canvas.toDataURL() + '" />');
-    })
   }
 
   chartOption : any;
