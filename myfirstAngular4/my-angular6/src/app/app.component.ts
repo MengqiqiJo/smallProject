@@ -3,6 +3,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MyappService } from './myapp.service';
 import { CopyComponent } from './app.copycomponent';
 
+import * as html2canvas from "html2canvas";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -43,6 +45,19 @@ export class AppComponent implements OnInit {
     });
 
 
+  }
+
+  saveImage() {
+    // this.testChartId = document.getElementById("barChart");
+    // this.testChartId.toBlob(function(blob) {
+    //   saveAs(blob,"summary.jpg");
+    // })
+
+    html2canvas(document.getElementById("demoChart")).then(canvas => {
+      // this.imgData = canvas.toDataURL("image/png");
+        document.body.appendChild(canvas);
+        // window.open().document.write('<img src="' + canvas.toDataURL() + '" />');
+    })
   }
 
   chartOption : any;
@@ -91,8 +106,7 @@ export class AppComponent implements OnInit {
 
   this.chartOption = {
       title: {
-          text: '天气情况统计',
-          subtext: '虚构数据',
+          text: 'weahther',
           left: 'center'
       },
       tooltip : {
@@ -100,31 +114,48 @@ export class AppComponent implements OnInit {
           formatter: "{b} : {c} ({d}%)"
       },
       legend: {
-          // orient: 'vertical',
-          // top: 'middle',
-          bottom: 10,
-          left: 'center',
-          data: ['西凉', '益州','兖州','荆州','幽州']
+        // orient: 'vertical',
+        // top: 'middle',
+        bottom: 10,
+        left: 'center',
+        data: []
       },
       series : [
           {
-              type: 'pie',
-              radius : '65%',
-              center: ['50%', '50%'],
-              selectedMode: 'single',
-              data:[
-                  {value:305, name: '荆州'},
-                  {value:510, name: '兖州'},
-                  {value:634, name: '益州'},
-                  {value:735, name: '西凉'}
-              ],
-              itemStyle: {
-                  emphasis: {
-                      shadowBlur: 10,
-                      shadowOffsetX: 0,
-                      shadowColor: 'rgba(0, 0, 0, 0.5)'
-                  }
+            type: 'pie',
+            radius : '65%',
+            center: ['50%', '50%'],
+            selectedMode: 'single',
+            label: {
+              normal: {
+                  show: true,
+                  position: 'outside',
+                  formatter: '{d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比
+
+                 textStyle : {
+                  align : 'center',
+                  baseline : 'middle',
+                  fontFamily : '微软雅黑',
+                  fontSize : 15,
+                  fontWeight : 'bolder'
+               }
+              },
+            },
+            data:[
+              {value:35, name: 'Windsor'},
+              {value:10, name: 'London'},
+              {value:34, name: 'Waterloo'},
+              {value:35, name: 'Guelph'},
+              {value:35, name: 'Hamilton'},
+              {value:735, name: 'Oakvile'}
+            ],
+            itemStyle: {
+              emphasis: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)'
               }
+            }
           }
       ]
   };

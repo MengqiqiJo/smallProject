@@ -1,6 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div echarts [options]="chartOption" class="chart"></div>
-<div class="app-test"></div>
+
+<button (click)="saveImage()" class="btn btn-primary">Save Image</button>
+<div id="demoChart">
+  <div echarts [options]="chartOption" class="chart"></div>
+</div>
+<!-- <div class="app-test"></div> -->
 <!-- <div app-test></div> -->
 
 <!-- <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div> -->
@@ -19,12 +23,13 @@
                   </div>
 
                   <!-- charts -->
-                  <div *ngIf="eachtabcontent.tabData.type == 'googlechart1'; else elseBlock">
+                  <div *ngIf="eachtabcontent.tabData.type == 'echart'; else elseBlock">
+                    <div echarts [options]="eachtabcontent.tabData.middle.middleMiddle.data" class="chart"></div>
                   </div>
-                  <div *ngIf="eachtabcontent.tabData.type == 'Chartist.js'; else elseBlock">
+                  <!-- <div *ngIf="eachtabcontent.tabData.type == 'Chartist.js'; else elseBlock">
                   </div>
                   <div *ngIf="eachtabcontent.tabData.type == 'FusionCharts'; else elseBlock">
-                  </div>
+                  </div> -->
 
                   <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
                     <div class="{{eachtabcontent.tabData.middle.class}} ng-chart-second-level">

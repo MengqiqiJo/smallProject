@@ -1353,6 +1353,223 @@
             }
           }
         ]
+      },
+      {
+        "tabShow": "show",
+        "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Event Implementation</span></div>",
+        "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
+        "blockContent": [
+          {
+            "tabTitle": "MONTH",
+            "tabData":
+            {
+              "blockId": "barChart",
+              "class": "col-md-12 margin-top-24",
+              "type": "echart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": ""
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "type": "bar",
+                  "styleClass": "col-md-8 margin-top-24",
+                  "data": {
+                    "title": {
+                        "text": "weahther",
+                        "left": "center"
+                    },
+                    "tooltip" : {
+                        "trigger": "item",
+                        "formatter": "{b} : {c} ({d}%)"
+                    },
+                    "legend": {
+                      "bottom": 10,
+                      "left": "center",
+                      "data": []
+                    },
+                    "series" : [
+                      {
+                        "type": "pie",
+                        "radius" : "65%",
+                        "center": ["50%", "50%"],
+                        "selectedMode": "single",
+                        "label": {
+                          "normal": {
+                            "show": true,
+                            "position": "outside",
+                            "formatter": "{d}%",
+                            "textStyle" : {
+                              "align" : "center",
+                              "baseline" : "middle",
+                              "fontFamily" : "微软雅黑",
+                              "fontSize" : 15,
+                              "fontWeight" : "bolder"
+                            }
+                          }
+                        },
+                        "data":[
+                          {"value":35, "name": "Windsor"},
+                          {"value":10, "name": "London"},
+                          {"value":34, "name": "Waterloo"},
+                          {"value":35, "name": "Guelph"},
+                          {"value":35, "name": "Hamilton"},
+                          {"value":735, "name": "Oakvile"}
+                        ],
+                        "itemStyle": {
+                          "emphasis": {
+                            "shadowBlur": 10,
+                            "shadowOffsetX": 0,
+                            "shadowColor": "rgba(0, 0, 0, 0.5)"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-xs-12 col-sm-12 col-md-4 margin-top-24",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(138)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": "<div class=\"row\"></div>"
+              }
+            }
+          },
+          {
+            "tabTitle": "QUATER",
+            "tabData":
+            {
+              "blockId": "barChart",
+              "class": "col-md-12 margin-top-24",
+              "type": "chart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": ""
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "type": "bar",
+                  "styleClass": "col-md-8 margin-top-24",
+                  "data": {
+                    "labels": [
+                      "Q1",
+                      "Q2",
+                      "Q3",
+                      "Q4"
+                    ],
+                    "datasets": [
+                      {
+                        "backgroundColor": "#00134b",
+                        "borderColor": "#00134b",
+                        "pointColor": "#00134b",
+                        "data": [
+                          0,
+                          74,
+                          57,
+                          7
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#0093d0",
+                        "borderColor": "#0093d0",
+                        "pointColor": "#0093d0",
+                        "data": [
+                          0,
+                          4,
+                          0,
+                          0
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#00aeef",
+                        "borderColor": "#00aeef",
+                        "pointColor": "#00aeef",
+                        "data": [
+                          0,
+                          0,
+                          1,
+                          0
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#7dba00",
+                        "borderColor": "#7dba00",
+                        "pointColor": "#7dba00",
+                        "data": [
+                          0,
+                          0,
+                          1,
+                          0
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#d6006e",
+                        "borderColor": "#d6006e",
+                        "pointColor": "#d6006e",
+                        "data": [
+                          0,
+                          10,
+                          1,
+                          0
+                        ]
+                      }
+                    ]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
+                    },
+                    "responsive": false,
+                    "maintainAspectRatio": false,
+                    "scales": {
+                      "xAxes": [{
+                       "stacked": true
+                      }],
+                      "yAxes": [{
+                        "stacked": true
+                      }]
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-4 margin-top-24",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(108)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": "<div class=\"row\"></div>"
+              }
+            }
+          }
+        ]
       }
     ]
   }

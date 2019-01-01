@@ -2,35 +2,73 @@
 <html>
 <head>
   <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-  <input class="messageCheckbox" type="checkbox" value="number 3" name="mailId1">number 3
-  <input class="messageCheckbox" type="checkbox" value="number 2" name="mailId2">number 2
-  <input class="messageCheckbox" type="checkbox" value="number 1" name="mailId2">number 1
-  <input class="messageCheckbox" type="checkbox" value="number all" name="mailId2">number all
-  <input type="submit" name="submit" onclick="getCheckBoxValue()">
+  <div class="dropdown" style="margin: 20px 100px;">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Country Filter
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div style="padding: 10px;">
+        <input type="submit" name="submit" onclick="getCheckBoxValue()">
+      </div>
+      <div style="padding: 6px;">
+        <input class="messageCheckbox" type="checkbox" value="ALL PROVINCE"> ALL PROVINCE
+      </div>
+      <div style="padding: 6px;">
+        <input class="messageCheckbox" type="checkbox" value="NS"> NS
+      </div>
+      <div style="padding: 6px;">
+        <input class="messageCheckbox" type="checkbox" value="ON"> ON
+      </div>
+      <div style="padding: 6px;">
+        <input class="messageCheckbox" type="checkbox" value="BC"> BC
+      </div>
+      <div style="padding: 6px;">
+        <input class="messageCheckbox" type="checkbox" value="AB"> AB
+      </div>
+      <div style="padding: 6px;">
+        <input class="messageCheckbox" type="checkbox" value="MB"> MB
+      </div>
+      <div style="padding: 6px;">
+        <input class="messageCheckbox" type="checkbox" value="NB"> NB
+      </div>
+      <div style="padding: 6px;">
+        <input class="messageCheckbox" type="checkbox" value="NL"> NL
+      </div>
+    </div>
+  </div>
   <script type="text/javascript">
     function getCheckBoxValue() {
       var checkedValue = [];
+      var checkedAllValue = [];
       var inputElements = document.getElementsByClassName('messageCheckbox');
       var checkedCount = 0;
-
-      if (inputElements.includes('number all')) {
-        checkedValue = inputElements;
-      }
+      var selectAll = false;
 
       for(var i=0; inputElements[i]; ++i){
-        if(inputElements[i].checked){
+        checkedAllValue[i] = inputElements[i].value;
 
+        if(inputElements[i].checked){
           checkedValue[checkedCount] = inputElements[i].value;
           checkedCount ++;
+          if (inputElements[i].value == 'ALL PROVINCE') {
+            selectAll = true;
+          }
         }
       }
 
-      for (var i = 0; i < checkedCount; i++) {
-        console.log(checkedValue[i]);
+      if (selectAll) {
+        console.log(checkedAllValue);
       }
+      else {
+        console.log(checkedValue);
+      }
+
     }
   </script>
 </body>
