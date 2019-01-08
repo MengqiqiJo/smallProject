@@ -139,7 +139,6 @@ export class AppComponent implements OnInit {
                     show: true,
                     position: 'inside',
                     formatter: function(a) {
-                        console.log(Number(a.percent) > 5);
                       if (Number(a.percent) > 5) {
                         return (a.percent + '%');
                       }
@@ -175,20 +174,21 @@ export class AppComponent implements OnInit {
         ]
     };
 
-    // setTimeout(() => {
-    //   this.myChart = echarts.init(document.getElementById('setOptionChart'));
-    //   this.myChart.clear();
-      // this.echartOption = {
-      //     title: {
-      //         text: '111weahther',
-      //         left: 'center'
-      //     }
-      // };
-      // this.myChart.setOption(this.echartOption);
-    //   this.echartOption = this.myChart.getOption();
-    //   console.log("echartOption");
-    //   console.log(this.echartOption);
-    // }, 2000);
+    setTimeout(() => {
+      this.myChart = echarts.init(document.getElementById('setOptionChart'));
+      this.myChart.clear();
+      // this.echartOption = this.myChart.getOption();
+      // this.echartOption.title.push("22weather");
+      this.echartOption = {
+        title: {
+            text: '22weahther',
+            left: 'center'
+        }
+      };
+      this.myChart.setOption(this.echartOption);
+      // this.echartOption = this.myChart.setOption(this.echartOption);
+      console.log("echartOption");
+    }, 2000);
 
   }
 }
