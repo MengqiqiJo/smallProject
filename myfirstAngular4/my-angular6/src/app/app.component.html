@@ -2,13 +2,12 @@
 
 <button (click)="saveImage()" class="btn btn-primary">Save Image</button>
 <div id="demoChart">
-  <div echarts [options]="chartOption" class="chart"></div>
+  <div echarts class="chart"></div>
 </div>
 <!-- <div class="app-test"></div> -->
 <!-- <div app-test></div> -->
 
-<!-- <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div> -->
-<div echarts [options]="chartOption" class="chart"></div>
+<div echarts id="setOptionChart" [options]="chartOption"></div>
 
 <div class="row" for="primengDataGeneral">
   <div *ngFor="let blockData of primengDataGeneral" >
@@ -25,7 +24,7 @@
 
                   <!-- charts -->
                   <div *ngIf="eachtabcontent.tabData.type == 'echart'; else elseBlock">
-                    <div echarts [options]="eachtabcontent.tabData.middle.middleMiddle.data" class="chart"></div>
+                    <div echarts [options]="eachtabcontent.tabData.middle.middleMiddle.data" id="echart"></div>
                   </div>
                   <!-- <div *ngIf="eachtabcontent.tabData.type == 'Chartist.js'; else elseBlock">
                   </div>

@@ -5,6 +5,8 @@ import { CopyComponent } from './app.copycomponent';
 
 import * as html2canvas from "html2canvas";
 
+import echarts from 'echarts';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -63,6 +65,9 @@ export class AppComponent implements OnInit {
   }
 
   chartOption : any;
+  echartOption : any;
+  myChart: any;
+
   ngOnInit() {
     // Chart.defaults.global.defaultFontColor = 'red';
     // Chart.defaults.global.tooltips = {
@@ -106,61 +111,84 @@ export class AppComponent implements OnInit {
     // }
 
 
-  this.chartOption = {
-      title: {
-          text: 'weahther',
-          left: 'center'
-      },
-      tooltip : {
-          trigger: 'item',
-          formatter: "{b} : {c} ({d}%)"
-      },
-      legend: {
-        // orient: 'vertical',
-        // top: 'middle',
-        bottom: 10,
-        left: 'center',
-        data: []
-      },
-      series : [
-          {
-            type: 'pie',
-            radius : '65%',
-            center: ['50%', '50%'],
-            selectedMode: 'single',
-            label: {
-              normal: {
-                  show: true,
-                  position: 'outside',
-                  formatter: '{d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比
 
-                 textStyle : {
-                  align : 'center',
-                  baseline : 'middle',
-                  fontFamily : '微软雅黑',
-                  fontSize : 15,
-                  fontWeight : 'bolder'
-               }
+    this.chartOption = {
+        title: {
+            text: 'weahther',
+            left: 'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c} ({d}%)"
+        },
+        legend: {
+          // orient: 'vertical',
+          // top: 'middle',
+          bottom: 10,
+          left: 'center',
+          data: []
+        },
+        series : [
+            {
+              type: 'pie',
+              radius : '65%',
+              center: ['50%', '50%'],
+              selectedMode: 'single',
+              label: {
+                normal: {
+                    show: true,
+                    position: 'inside',
+                    formatter: function(a) {
+                        console.log(Number(a.percent) > 5);
+                      if (Number(a.percent) > 5) {
+                        return (a.percent + '%');
+                      }
+                      else {
+                        return " ";
+                      }
+                    },
+                   textStyle : {
+                    align : 'center',
+                    baseline : 'middle',
+                    fontFamily : '微软雅黑',
+                    fontSize : 15,
+                    fontWeight : 'bolder'
+                 }
+                },
               },
-            },
-            data:[
-              {value:35, name: 'Windsor'},
-              {value:10, name: 'London'},
-              {value:34, name: 'Waterloo'},
-              {value:35, name: 'Guelph'},
-              {value:35, name: 'Hamilton'},
-              {value:735, name: 'Oakvile'}
-            ],
-            itemStyle: {
-              emphasis: {
-                  shadowBlur: 10,
-                  shadowOffsetX: 0,
-                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+              data:[
+                {value:35, name: 'Windsor'},
+                {value:10, name: 'London'},
+                {value:34, name: 'Waterloo'},
+                {value:35, name: 'Guelph'},
+                {value:35, name: 'Hamilton'},
+                {value:735, name: 'Oakvile'}
+              ],
+              itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
               }
             }
-          }
-      ]
-  };
+        ]
+    };
+
+    // setTimeout(() => {
+    //   this.myChart = echarts.init(document.getElementById('setOptionChart'));
+    //   this.myChart.clear();
+      // this.echartOption = {
+      //     title: {
+      //         text: '111weahther',
+      //         left: 'center'
+      //     }
+      // };
+      // this.myChart.setOption(this.echartOption);
+    //   this.echartOption = this.myChart.getOption();
+    //   console.log("echartOption");
+    //   console.log(this.echartOption);
+    // }, 2000);
 
   }
 }
