@@ -184,7 +184,7 @@
                 },
                 "middleMiddle": {
                   "value": "",
-                  "type": "bar",
+                  "type": "line",
                   "styleClass": "col-md-12 margin-top-24",
                   "data": {
                     "labels": [
@@ -197,6 +197,7 @@
                     ],
                     "datasets": [{
                       "label": "",
+                      "fill": false,
                       "data": [
                         138,
                         4,
@@ -205,24 +206,33 @@
                         1,
                         11
                       ],
-                      "backgroundColor": [
-                        "#00134b",
-                        "#0093d0",
-                        "#00aeef",
-                        "#7dba00",
-                        "#c6c6c6",
-                        "#d6006e"
-                      ],
                       "borderColor": [
-                        "#00134b",
-                        "#0093d0",
-                        "#00aeef",
-                        "#7dba00",
-                        "#c6c6c6",
-                        "#d6006e"
+                        "#00134b"
+                      ],
+                      "backgroundColor": [
+                        "#00134b"
                       ],
                       "borderWidth": 1
-                    }]
+                    },
+                  {
+                    "label": "",
+                    "fill": false,
+                    "data": [
+                      38,
+                      54,
+                      89,
+                      21,
+                      13,
+                      111
+                    ],
+                    "borderColor": [
+                      "#0093d0"
+                    ],
+                    "backgroundColor": [
+                      "#0093d0"
+                      ],
+                    "borderWidth": 1
+                  }]
                   },
                   "options": {
                     "legend": {
