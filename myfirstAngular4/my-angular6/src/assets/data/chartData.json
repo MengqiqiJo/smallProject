@@ -2,6 +2,29 @@
     "primengcontentdata":[
       {
         "tabShow": "hide",
+        "blockHeader": "<div class=\"row margin-0 border-1-e7e7e7\"><div class=\"col-sm-12\"><span class=\"h6 padding-top-6\">total events</span></div><div class=\"col-sm-12\"><span class=\"h4 line-height-1-5\">20</span></div></div><div class=\"row margin-0\"><div class=\"col-xs-4 bg-00a9e0 color-fff height-52 padding-0 font-size-10 padding-top-8\"><div class=\"col-xs-12\">a</div><div class=\"col-xs-12 margin-top-8\">2</div></div><div class=\"col-xs-4 bg-05d23e color-fff height-52 padding-0 font-size-10 padding-top-8\"><div class=\"col-xs-12\">b</div><div class=\"col-xs-12 margin-top-8\">11</div></div><div class=\"col-xs-4 bg-f24b99 color-fff height-52 padding-0 font-size-10 padding-top-8\"><div class=\"col-xs-12\">c</div><div class=\"col-xs-12 margin-top-8\">7</div></div>",
+        "blockClass": "col-sm-6 col-md-3 margin-top-6 margin-bottom-20 text-align-center",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "blockClass": "",
+            "tabData":
+            {
+              "class": "",
+              "type": "htmlSnippt",
+              "top": {
+                "value": ""
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
         "blockHeader": "<div class=\"bg-d6006e height-100 color-fff padding-12\"><div class=\"font-size-14 margin-top-12\">161</div><div class=\"font-size-12 margin-top-12 margin-bottom-6\">Total Events</div>",
         "blockClass": "col-md-3 margin-top-24",
         "blockClassSub": "",
