@@ -131,20 +131,7 @@ d3.csv("bar-data.csv", function(error, data) {
       .attr("y", function(d) { return y(d.value); })
       .attr("height", function(d) { return height - y(d.value); })
       .on("mousemove", function(d) {
-	    d3.select(this)
-	      .attr("stroke","#fff")
-	      .attr("stroke-width","2px")
-	      .style("filter", "url(#drop-shadow)");
-		  d3.select(this)
-	  		.transition()
-	  		.duration(500)
-	  		.ease('elastic')
-	  		.attr('transform',function(d){
-	  			var dist = 1;
-	  			var x = 8;
-	  			var y = 8;
-	  			return 'translate(' + x + ',' + y + ')';
-	  		});
+	    
 	    var mousePos = d3.mouse(divNode);
 	    d3.select("#mainTooltip")
 	      .style("left", mousePos[0] - 40 + "px")
