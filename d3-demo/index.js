@@ -132,7 +132,6 @@ g.append("path")
 			.style('fill', '#F2F2F2')
 			.style("font-size", "18px")
 			.style("font-weight", "bold")
-			.attr("transform", "translate(0," + 20 + ")")
 			.attr("text-anchor", "middle")
       .attr("transform", function(d) {                   
         d.innerRadius = 0;

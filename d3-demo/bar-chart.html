@@ -85,7 +85,7 @@ var yAxis = d3.svg.axis()
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-  .append("g")
+  	.append("g")
     .attr("transform", 
           "translate(" + margin.left + "," + margin.top + ")");
 
@@ -130,17 +130,16 @@ d3.csv("bar-data.csv", function(error, data) {
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.value); })
       .attr("height", function(d) { return height - y(d.value); })
-      .on("mousemove", function(d) {
-	    
+      .on("mousemove", function(d, i) {
+      	var finalPercent = (data[i].value / tots) * 100;
 	    var mousePos = d3.mouse(divNode);
 	    d3.select("#mainTooltip")
 	      .style("left", mousePos[0] - 40 + "px")
 	      .style("top", mousePos[1] - 70 + "px")
 	      .select("#value")
 	      .attr("text-anchor", "middle")
-	      .html(d.value);
-
-			d3.select("#mainTooltip").classed("hidden", false);
+	      .html(d.value + '<br/>' + Math.round(finalPercent) + '%');
+		d3.select("#mainTooltip").classed("hidden", false);
 	   })
 		.on("mouseout", function(d){
 			d3.select(this)
@@ -155,7 +154,49 @@ d3.csv("bar-data.csv", function(error, data) {
 				d3.select("#mainTooltip").classed("hidden", true);
 		});
 
+		var tots = d3.sum(data, function(d) { 
+                    return d.value; 
+                });
+
+		var yTextPadding = 20;
+		svg.append('text')
+			.data(data)
+			.enter()
+			.append("text")
+			.attr("class", "bartext")
+			.attr("text-anchor", "middle")
+			.attr("fill", "white")
+		    .attr("x", function(d,i) {
+			    return x(i);
+			})
+			.attr("y", function(d,i) {
+			    return height - y(d) + yTextPadding;
+			})
+			.text(function(d, i) { 
+		        var finalPercent = data[i].value ;
+		        return finalPercent;
+		     });  
+
+
+			svg.selectAll("text")  		
+				.data(data)
+				.enter()
+				.append("text")
+				.attr("fill", "white")
+				.text(function(d) { return d.value; })
+				.attr({
+					x: function(d, i) {
+						return 10 * i;
+					},
+					y: function(d,i) {
+						return 400;
+					}
+				});
+				     
+
 });
+
+ 
 
 </script>
 
