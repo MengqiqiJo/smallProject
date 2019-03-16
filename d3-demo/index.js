@@ -35,15 +35,13 @@ var tots = d3.sum(data, function(d) {
 var divNode = d3.select("body").node();
 var outerRadius = radius - 10,
     innerRadius = radius - 80;
-var color = d3.scale.ordinal()
+var color = d3.scaleOrdinal()
     .range(['#2fa9e0','#0099ff', '#05d23e', '#009900', '#c6c6c6', '#f7d417', '#ff9933', '#ff66ff', '#ff66cc', '#f24b99']);
 
 var arc = d3.svg.arc()
     .outerRadius(radius - 10);
 
-
-
-var pie = d3.layout.pie()
+var pie = d3.pie()
     .sort(null)
     .value(function(d) { return d.num; });
 

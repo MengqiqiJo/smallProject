@@ -57,7 +57,7 @@
 		<div id="mainTooltip" class="hidden">
 		<p><span id="value"></span></p>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.v4.min.js"></script>
 
 <script>
 
@@ -66,20 +66,21 @@ var margin = {top: 20, right: 20, bottom: 70, left: 40},
     height = 300 - margin.top - margin.bottom;
 
 // Parse the date / time
-var	parseDate = d3.time.format("%Y-%m").parse;
+var	parseDate = d3.timeParse("%Y-%m");
 
-var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
 
-var y = d3.scale.linear().range([height, 0]);
+// var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
 
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom")
-    .tickFormat(d3.time.format("%Y-%m"));
+var x = d3.scaleBand()
+        .rangeRound([0, width], .05);
 
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
+
+var y = d3.scaleLinear().range([height, 0]);
+
+var xAxis = d3.axisBottom(x)
+    .tickFormat(d3.timeFormat("%Y-%m"));
+
+var yAxis = d3.axisLeft(y)
     .ticks(10);
 
 var svg = d3.select("body").append("svg")
@@ -91,6 +92,14 @@ var svg = d3.select("body").append("svg")
 
 var divNode = d3.select("body").node();
 
+// var data = [
+// 	{"date": 2011,"value":45},
+// 	{"date":2012,"value":47},
+// 	{"date":2013,"value":52},
+// 	{"date":2014,"value":70},
+// 	{"date":2015,"value":75},
+// 	{"date":2016,"value":8}
+// ];
 
 d3.csv("bar-data.csv", function(error, data) {
 
@@ -124,10 +133,11 @@ d3.csv("bar-data.csv", function(error, data) {
 
   svg.selectAll("bar")
       .data(data)
-    .enter().append("rect")
+	  .enter()
+	  .append("rect")
       .style("fill", "steelblue")
       .attr("x", function(d) { return x(d.date); })
-      .attr("width", x.rangeBand())
+      .attr("width", x.bandwidth() - 10)
       .attr("y", function(d) { return y(d.value); })
       .attr("height", function(d) { return height - y(d.value); })
       .on("mousemove", function(d, i) {
@@ -158,40 +168,19 @@ d3.csv("bar-data.csv", function(error, data) {
                     return d.value; 
                 });
 
-		var yTextPadding = 20;
 		svg.append('text')
-			.data(data)
-			.enter()
-			.append("text")
-			.attr("class", "bartext")
+			.style('fill', '#000')
+			.style("font-size", "18px")
+			.style("font-weight", "bold")
 			.attr("text-anchor", "middle")
-			.attr("fill", "white")
-		    .attr("x", function(d,i) {
-			    return x(i);
-			})
-			.attr("y", function(d,i) {
-			    return height - y(d) + yTextPadding;
-			})
 			.text(function(d, i) { 
 		        var finalPercent = data[i].value ;
 		        return finalPercent;
-		     });  
+		     })
+			.attr("transform", function(d, i) {                   
+		    	return "translate(" + (20 + i * x.bandwidth()) + ", " + i * 20 + ")";      
+		    });  
 
-
-			svg.selectAll("text")  		
-				.data(data)
-				.enter()
-				.append("text")
-				.attr("fill", "white")
-				.text(function(d) { return d.value; })
-				.attr({
-					x: function(d, i) {
-						return 10 * i;
-					},
-					y: function(d,i) {
-						return 400;
-					}
-				});
 				     
 
 });
