@@ -92,22 +92,21 @@ var svg = d3.select("body").append("svg")
 
 var divNode = d3.select("body").node();
 
-// var data = [
-// 	{"date": 2011,"value":45},
-// 	{"date":2012,"value":47},
-// 	{"date":2013,"value":52},
-// 	{"date":2014,"value":70},
-// 	{"date":2015,"value":75},
-// 	{"date":2016,"value":8}
-// ];
+var data = [
+	{"date": 2011,"value":45},
+	{"date":2012,"value":47},
+	{"date":2013,"value":52},
+	{"date":2014,"value":70},
+	{"date":2015,"value":75},
+	{"date":2016,"value":8}
+];
 
-d3.csv("bar-data.csv", function(error, data) {
+var parseDate = d3.timeParse("%Y");
+data.forEach(function(d) { 
+    d.date = parseDate(d.date);
+    d.value = +d.value;    
+});
 
-    data.forEach(function(d) {
-        d.date = parseDate(d.date);
-        d.value = +d.value;
-    });
-	
   x.domain(data.map(function(d) { return d.date; }));
   y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
@@ -158,7 +157,6 @@ d3.csv("bar-data.csv", function(error, data) {
 				d3.select(this)
 					.transition()
 					.duration(500)
-					.ease('bounce')
 					.attr('transform','translate(0,0)');
 
 				d3.select("#mainTooltip").classed("hidden", true);
@@ -182,11 +180,6 @@ d3.csv("bar-data.csv", function(error, data) {
 		    });  
 
 				     
-
-});
-
- 
-
 </script>
 
 </body>

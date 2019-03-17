@@ -125,7 +125,6 @@
           d3.select(this)
             .transition()
             .duration(500)
-            .ease('elastic')
             .attr('transform',function(d){
               var dist = 1;
               d.midAngle = ((d.endAngle - d.startAngle)/2) + d.startAngle;
@@ -150,7 +149,6 @@
           d3.select(this)
             .transition()
             .duration(500)
-            .ease('bounce')
             .attr('transform','translate(0,0)');
 
           d3.select("#mainTooltip").classed("hidden", true);

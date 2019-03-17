@@ -123,11 +123,10 @@ var color = d3.scaleOrdinal(d3.schemeCategory10);
 
 /* Add SVG */
 var svg = d3.select("#chart").append("svg")
-  .attr("width", (width+margin)+"px")
-  .attr("height", (height+margin)+"px")
+  .attr("width", ( width + margin ) + "px")
+  .attr("height", ( height + margin ) + "px")
   .append('g')
   .attr("transform", `translate(${margin}, ${margin})`);
-
 
 /* Add line into SVG */
 var line = d3.line()
