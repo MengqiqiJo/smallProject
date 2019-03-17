@@ -107,77 +107,77 @@ data.forEach(function(d) {
     d.value = +d.value;    
 });
 
-  x.domain(data.map(function(d) { return d.date; }));
-  y.domain([0, d3.max(data, function(d) { return d.value; })]);
+x.domain(data.map(function(d) { return d.date; }));
+y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-  svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis)
-    .selectAll("text")
-      .style("text-anchor", "end")
-      .attr("dx", "-.8em")
-      .attr("dy", "-.55em")
-      .attr("transform", "rotate(-90)" );
+svg.append("g")
+  .attr("class", "x axis")
+  .attr("transform", "translate(0," + height + ")")
+  .call(xAxis)
+.selectAll("text")
+  .style("text-anchor", "end")
+  .attr("dx", "-.8em")
+  .attr("dy", "-.55em")
+  .attr("transform", "rotate(-90)" );
 
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Value ($)");
+svg.append("g")
+  .attr("class", "y axis")
+  .call(yAxis)
+.append("text")
+  .attr("transform", "rotate(-90)")
+  .attr("y", 6)
+  .attr("dy", ".71em")
+  .style("text-anchor", "end")
+  .text("Value ($)");
 
-  svg.selectAll("bar")
-      .data(data)
-	  .enter()
-	  .append("rect")
-      .style("fill", "steelblue")
-      .attr("x", function(d) { return x(d.date); })
-      .attr("width", x.bandwidth() - 10)
-      .attr("y", function(d) { return y(d.value); })
-      .attr("height", function(d) { return height - y(d.value); })
-      .on("mousemove", function(d, i) {
-      	var finalPercent = (data[i].value / tots) * 100;
-	    var mousePos = d3.mouse(divNode);
-	    d3.select("#mainTooltip")
-	      .style("left", mousePos[0] - 40 + "px")
-	      .style("top", mousePos[1] - 70 + "px")
-	      .select("#value")
-	      .attr("text-anchor", "middle")
-	      .html(d.value + '<br/>' + Math.round(finalPercent) + '%');
-		d3.select("#mainTooltip").classed("hidden", false);
-	   })
-		.on("mouseout", function(d){
-			d3.select(this)
-			    .attr("stroke","none")
-			    .style("filter","none");
-				d3.select(this)
-					.transition()
-					.duration(500)
-					.attr('transform','translate(0,0)');
-
-				d3.select("#mainTooltip").classed("hidden", true);
-		});
-
-		var tots = d3.sum(data, function(d) { 
-                    return d.value; 
-                });
-
-		svg.append('text')
-			.style('fill', '#000')
-			.style("font-size", "18px")
-			.style("font-weight", "bold")
+svg.selectAll("bar")
+	.data(data)
+	.enter()
+	.append("rect")
+	.style("fill", "steelblue")
+	.attr("x", function(d) { return x(d.date); })
+	.attr("width", x.bandwidth() - 10)
+	.attr("y", function(d) { return y(d.value); })
+	.attr("height", function(d) { return height - y(d.value); })
+	.on("mousemove", function(d, i) {
+		var finalPercent = (data[i].value / tots) * 100;
+		var mousePos = d3.mouse(divNode);
+		d3.select("#mainTooltip")
+			.style("left", mousePos[0] - 40 + "px")
+			.style("top", mousePos[1] - 70 + "px")
+			.select("#value")
 			.attr("text-anchor", "middle")
-			.text(function(d, i) { 
-		        var finalPercent = data[i].value ;
-		        return finalPercent;
-		     })
-			.attr("transform", function(d, i) {                   
-		    	return "translate(" + (20 + i * x.bandwidth()) + ", " + i * 20 + ")";      
-		    });  
+			.html(d.value + '<br/>' + Math.round(finalPercent) + '%');
+		d3.select("#mainTooltip").classed("hidden", false);
+	})
+	.on("mouseout", function(d){
+		d3.select(this)
+		    .attr("stroke","none")
+		    .style("filter","none");
+			d3.select(this)
+				.transition()
+				.duration(500)
+				.attr('transform','translate(0,0)');
+
+			d3.select("#mainTooltip").classed("hidden", true);
+	});
+
+var tots = d3.sum(data, function(d) { 
+    return d.value; 
+});
+
+svg.append('text')
+	.style('fill', '#000')
+	.style("font-size", "18px")
+	.style("font-weight", "bold")
+	.attr("text-anchor", "middle")
+	.text(function(d, i) { 
+        var finalPercent = data[i].value ;
+        return finalPercent;
+     })
+	.attr("transform", function(d, i) {                   
+    	return "translate(" + (20 + i * x.bandwidth()) + ", " + i * 20 + ")";      
+	});  
 
 				     
 </script>
