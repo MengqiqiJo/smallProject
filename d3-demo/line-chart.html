@@ -100,7 +100,7 @@ var circleRadius = 3;
 var circleRadiusHover = 6;
 
 
-/* Format Data */
+// Format Data 
 var parseDate = d3.timeParse("%Y");
 data.forEach(function(d) { 
   d.values.forEach(function(d) {
@@ -109,8 +109,7 @@ data.forEach(function(d) {
   });
 });
 
-
-/* Scale */
+// x and y Scale
 var xScale = d3.scaleTime()
   .domain(d3.extent(data[0].values, d => d.date))
   .range([0, width-margin]);
@@ -121,14 +120,30 @@ var yScale = d3.scaleLinear()
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-/* Add SVG */
+// Add SVG 
 var svg = d3.select("#chart").append("svg")
   .attr("width", ( width + margin ) + "px")
   .attr("height", ( height + margin ) + "px")
   .append('g')
   .attr("transform", `translate(${margin}, ${margin})`);
 
-/* Add line into SVG */
+// Add Axis into SVG 
+var xAxis = d3.axisBottom(xScale).ticks(5);
+var yAxis = d3.axisLeft(yScale).ticks(5);
+
+svg.append("g")
+  .attr("transform", `translate(0, ${height-margin})`)
+  .call(xAxis);
+
+svg.append("g")
+  .call(yAxis)
+  .append('text')
+  .attr("y", 15)
+  .attr("transform", "rotate(-90)")
+  .attr("fill", "#000")
+  .text("Total values");
+
+// d3's line generator
 var line = d3.line()
   .x(d => xScale(d.date))
   .y(d => yScale(d.price));
@@ -178,7 +193,7 @@ lines.selectAll('.line-group')
     });
 
 
-/* Add circles in the line */
+// Add circles in the line 
 lines.selectAll("circle-group")
   .data(data).enter()
   .append("g")
@@ -222,21 +237,5 @@ lines.selectAll("circle-group")
       });
 
 
-/* Add Axis into SVG */
-var xAxis = d3.axisBottom(xScale).ticks(5);
-var yAxis = d3.axisLeft(yScale).ticks(5);
 
-svg.append("g")
-  .attr("class", "x axis")
-  .attr("transform", `translate(0, ${height-margin})`)
-  .call(xAxis);
-
-svg.append("g")
-  .attr("class", "y axis")
-  .call(yAxis)
-  .append('text')
-  .attr("y", 15)
-  .attr("transform", "rotate(-90)")
-  .attr("fill", "#000")
-  .text("Total values");
 </script>

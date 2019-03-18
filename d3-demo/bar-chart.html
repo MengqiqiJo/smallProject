@@ -1,185 +1,174 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+	<head>
+		<style>
+			.axis {
+			  font: 10px sans-serif;
+			}
 
-<head>
-	<style>
+			.axis path,
+			.axis line {
+			  fill: none;
+			  stroke: #000;
+			  shape-rendering: crispEdges;
+			}
 
-	.axis {
-	  font: 10px sans-serif;
-	}
+			#mainTooltip {
+			    position: absolute;
+			    min-width :90px;
+			    height: 40px;
+			    padding: 0 0 25px 0;
+			    background-color: rgba(0,0,0,0.6);
+			    -webkit-border-radius: 5px;
+			    -moz-border-radius: 5px;
+			    -o-border-radius: 5px;
+			    border-radius: 50px;
+			    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+			    -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+			    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+			    pointer-events: none;
+			    fill: #fff;
+			    color: #fff;
+			    text-anchor: middle;
+			    text-align: center;
+			    font-weight: bold;
+			    z-index: 9999;
+			}
+			#mainTooltip:before {
+			    border: solid;
+			    border-color: rgba(0,0,0,0.6) transparent;
+			    border-width: 10px 10px 0 10px;
+			    top: 100%;
+			    content: "";
+			    left: 43%;
+			    position: absolute;
+			    z-index: 99;
+			}
+			#mainTooltip.hidden {
+			    display: none;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="mainTooltip" class="hidden">
+			<p><span id="value"></span></p>
+		<script src="http://d3js.org/d3.v5.min.js"></script>
+		<script>
+			var margin = {top: 20, right: 20, bottom: 70, left: 40},
+			    width = 600 - margin.left - margin.right,
+			    height = 300 - margin.top - margin.bottom;
 
-	.axis path,
-	.axis line {
-	  fill: none;
-	  stroke: #000;
-	  shape-rendering: crispEdges;
-	}
+			// Parse the date / time
+			var	parseDate = d3.timeParse("%Y-%m");
 
-	#mainTooltip {
-	    position: absolute;
-	    min-width :90px;
-	    height: 40px;
-	    padding: 0 0 25px 0;
-	    background-color: rgba(0,0,0,0.6);
-	    -webkit-border-radius: 5px;
-	    -moz-border-radius: 5px;
-	    -o-border-radius: 5px;
-	    border-radius: 50px;
-	    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-	    -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-	    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-	    pointer-events: none;
-	    fill: #fff;
-	    color: #fff;
-	    text-anchor: middle;
-	    text-align: center;
-	    font-weight: bold;
-	    z-index: 9999;
-	}
-	#mainTooltip:before {
-	    border: solid;
-	    border-color: rgba(0,0,0,0.6) transparent;
-	    border-width: 10px 10px 0 10px;
-	    top: 100%;
-	    content: "";
-	    left: 43%;
-	    position: absolute;
-	    z-index: 99;
-	}
-	#mainTooltip.hidden {
-	    display: none;
-	}
+			// x axis width
+			var x = d3.scaleBand()
+			        .rangeRound([0, width], .05);
 
-	</style>
-</head>
+			// y axis height
+			var y = d3.scaleLinear().range([height, 0]);
 
-<body>
-		<div id="mainTooltip" class="hidden">
-		<p><span id="value"></span></p>
+			// x axis ticks
+			var xAxis = d3.axisBottom(x)
+			    .tickFormat(d3.timeFormat("%Y-%m"));
 
-<script src="http://d3js.org/d3.v5.min.js"></script>
+			// y axis ticks
+			var yAxis = d3.axisLeft(y)
+			    .ticks(10);
 
-<script>
+			// create a svg and append position
+			var svg = d3.select("body").append("svg")
+			    .attr("width", width + margin.left + margin.right)
+			    .attr("height", height + margin.top + margin.bottom)
+			  	.append("g")
+			    .attr("transform", 
+			          "translate(" + margin.left + "," + margin.top + ")");
 
-var margin = {top: 20, right: 20, bottom: 70, left: 40},
-    width = 600 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+			var divNode = d3.select("body").node();
 
-// Parse the date / time
-var	parseDate = d3.timeParse("%Y-%m");
+			var data = [
+				{"date": 2011,"value":45},
+				{"date":2012,"value":47},
+				{"date":2013,"value":52},
+				{"date":2014,"value":70},
+				{"date":2015,"value":75},
+				{"date":2016,"value":8}
+			];
 
+			var parseDate = d3.timeParse("%Y");
+			data.forEach(function(d) { 
+			    d.date = parseDate(d.date);
+			    d.value = +d.value;    
+			});
 
-// var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
+			x.domain(data.map(function(d) { return d.date; }));
+			y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-var x = d3.scaleBand()
-        .rangeRound([0, width], .05);
+			svg.append("g")
+				.attr("transform", "translate(0," + height + ")")
+				.call(xAxis)
+				.selectAll("text")
+				.style("text-anchor", "end")
+				.attr("dx", "-.8em")
+				.attr("dy", "-.55em")
+				.attr("transform", "rotate(-90)" );
 
+			svg.append("g")
+				.call(yAxis)
+				.append("text")
+				.attr("transform", "rotate(-90)")
+				.attr("y", 6)
+				.attr("dy", ".71em")
+				.style("text-anchor", "end")
+				.text("Value ($)");
 
-var y = d3.scaleLinear().range([height, 0]);
+			svg.selectAll("bar")
+				.data(data)
+				.enter()
+				.append("rect")
+				.style("fill", "steelblue")
+				.attr("x", function(d) { return x(d.date); })
+				.attr("width", x.bandwidth() - 10)
+				.attr("y", function(d) { return y(d.value); })
+				.attr("height", function(d) { return height - y(d.value); })
+				.on("mousemove", function(d, i) {
+					var finalPercent = (data[i].value / tots) * 100;
+					var mousePos = d3.mouse(divNode);
+					d3.select("#mainTooltip")
+						.style("left", mousePos[0] - 40 + "px")
+						.style("top", mousePos[1] - 70 + "px")
+						.select("#value")
+						.attr("text-anchor", "middle")
+						.html(d.value + '<br/>' + Math.round(finalPercent) + '%');
+					d3.select("#mainTooltip").classed("hidden", false);
+				})
+				.on("mouseout", function(d){
+					d3.select(this)
+					    .attr("stroke","none")
+					    .style("filter","none");
+						d3.select(this)
+							.transition()
+							.duration(500)
+							.attr('transform','translate(0,0)');
 
-var xAxis = d3.axisBottom(x)
-    .tickFormat(d3.timeFormat("%Y-%m"));
+						d3.select("#mainTooltip").classed("hidden", true);
+				});
 
-var yAxis = d3.axisLeft(y)
-    .ticks(10);
+			var tots = d3.sum(data, function(d) { 
+			    return d.value; 
+			});
 
-var svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  	.append("g")
-    .attr("transform", 
-          "translate(" + margin.left + "," + margin.top + ")");
-
-var divNode = d3.select("body").node();
-
-var data = [
-	{"date": 2011,"value":45},
-	{"date":2012,"value":47},
-	{"date":2013,"value":52},
-	{"date":2014,"value":70},
-	{"date":2015,"value":75},
-	{"date":2016,"value":8}
-];
-
-var parseDate = d3.timeParse("%Y");
-data.forEach(function(d) { 
-    d.date = parseDate(d.date);
-    d.value = +d.value;    
-});
-
-x.domain(data.map(function(d) { return d.date; }));
-y.domain([0, d3.max(data, function(d) { return d.value; })]);
-
-svg.append("g")
-  .attr("class", "x axis")
-  .attr("transform", "translate(0," + height + ")")
-  .call(xAxis)
-.selectAll("text")
-  .style("text-anchor", "end")
-  .attr("dx", "-.8em")
-  .attr("dy", "-.55em")
-  .attr("transform", "rotate(-90)" );
-
-svg.append("g")
-  .attr("class", "y axis")
-  .call(yAxis)
-.append("text")
-  .attr("transform", "rotate(-90)")
-  .attr("y", 6)
-  .attr("dy", ".71em")
-  .style("text-anchor", "end")
-  .text("Value ($)");
-
-svg.selectAll("bar")
-	.data(data)
-	.enter()
-	.append("rect")
-	.style("fill", "steelblue")
-	.attr("x", function(d) { return x(d.date); })
-	.attr("width", x.bandwidth() - 10)
-	.attr("y", function(d) { return y(d.value); })
-	.attr("height", function(d) { return height - y(d.value); })
-	.on("mousemove", function(d, i) {
-		var finalPercent = (data[i].value / tots) * 100;
-		var mousePos = d3.mouse(divNode);
-		d3.select("#mainTooltip")
-			.style("left", mousePos[0] - 40 + "px")
-			.style("top", mousePos[1] - 70 + "px")
-			.select("#value")
-			.attr("text-anchor", "middle")
-			.html(d.value + '<br/>' + Math.round(finalPercent) + '%');
-		d3.select("#mainTooltip").classed("hidden", false);
-	})
-	.on("mouseout", function(d){
-		d3.select(this)
-		    .attr("stroke","none")
-		    .style("filter","none");
-			d3.select(this)
-				.transition()
-				.duration(500)
-				.attr('transform','translate(0,0)');
-
-			d3.select("#mainTooltip").classed("hidden", true);
-	});
-
-var tots = d3.sum(data, function(d) { 
-    return d.value; 
-});
-
-svg.append('text')
-	.style('fill', '#000')
-	.style("font-size", "18px")
-	.style("font-weight", "bold")
-	.attr("text-anchor", "middle")
-	.text(function(d, i) { 
-        var finalPercent = data[i].value ;
-        return finalPercent;
-     })
-	.attr("transform", function(d, i) {                   
-    	return "translate(" + (20 + i * x.bandwidth()) + ", " + i * 20 + ")";      
-	});  
-
-				     
-</script>
-
-</body>
+			svg.append('text')
+				.style('fill', '#000')
+				.style("font-size", "18px")
+				.style("font-weight", "bold")
+				.attr("text-anchor", "middle")
+				.text(function(d, i) { 
+			        var finalPercent = data[i].value ;
+			        return finalPercent;
+			     })
+				.attr("transform", function(d, i) {                   
+			    	return "translate(" + (20 + i * x.bandwidth()) + ", " + i * 20 + ")";      
+				});  			     
+		</script>
+	</body>
