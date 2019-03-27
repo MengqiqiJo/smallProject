@@ -14,30 +14,23 @@ export class PieChartComponent implements OnInit {
   constructor(private dataService: JsonAppService) {}
 
   public data: any;
-  
-  getChartJSON() {
-    this.dataService.getJsonData().subscribe(jsonData => {
-      this.data = jsonData['contentData'];
-
-      this.getData();
-      this.draw();
-
-    }, // Bind to view
-    err => {
-      // Log errors if any
-      console.log('error: ', err);
-    });
-  }
-
-
+  colorPalette: any;
   width: number;
   height: number;
   radius: number;
-
-  getData() {
-    this.width = 300,
-    this.height = 300,
-    this.radius = Math.min(this.width, this.height) / 2;
+  getChartJSON() {
+    this.dataService.getJsonData().subscribe(jsonData => {
+      this.data = jsonData['contentData'];
+      this.colorPalette = jsonData['colorPalette'];
+      this.width = jsonData['width'];
+      this.height = jsonData['height'];
+      this.radius = Math.min(this.width, this.height) / 2;
+      
+      this.draw();
+    },
+    err => {
+      console.log('error: ', err);
+    });
   }
 
   ngOnInit() {
@@ -45,11 +38,11 @@ export class PieChartComponent implements OnInit {
   }
 
   draw() {
-     
+    
     var divNode = d3.select("body").node();
 
     var color = d3.scaleOrdinal()
-      .range(['#2fa9e0','#0099ff', '#05d23e', '#009900', '#c6c6c6', '#f7d417', '#ff9933', '#ff66ff', '#ff66cc', '#f24b99']);
+      .range(this.colorPalette);
 
     var arc = d3.arc()
       .innerRadius(0)
@@ -96,11 +89,6 @@ export class PieChartComponent implements OnInit {
       });
 
       this.manageLabelText(g);
-    
-  }
-
-  manageTooltip() {
-
   }
 
   manageLabelText(g) {
