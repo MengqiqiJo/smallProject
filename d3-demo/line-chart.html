@@ -5,14 +5,10 @@
 svg {
     font-family: Sans-Serif, Arial;
 }
-.line {
-  stroke-width: 2;
+/*.lineaa {
+  stroke-width: 8;
   fill: none;
-}
-
-.axis path {
-  stroke: black;
-}
+}*/
 
 .text {
   font-size: 12px;
@@ -31,7 +27,7 @@ svg {
 </body>
 
 <!-- Load in the d3 library -->
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
 
 <script>
 
@@ -168,12 +164,13 @@ lines.selectAll('.line-group')
       svg.select(".title-text").remove();
     })
   .append('path')
-  .attr('class', 'line')  
+  .attr('class', 'lineaa')  
   .attr('d', d => line(d.values))
+  .style("fill", 'none')
   .style('stroke', (d, i) => color(i))
   .style('opacity', lineOpacity)
   .on("mouseover", function(d) {
-      d3.selectAll('.line')
+      d3.selectAll('.lineaa')
           .style('opacity', otherLinesOpacityHover);
       d3.selectAll('.circle')
           .style('opacity', circleOpacityOnLineHover);
@@ -183,7 +180,7 @@ lines.selectAll('.line-group')
         .style("cursor", "pointer");
     })
   .on("mouseout", function(d) {
-      d3.selectAll(".line")
+      d3.selectAll(".lineaa")
           .style('opacity', lineOpacity);
       d3.selectAll('.circle')
           .style('opacity', circleOpacity);

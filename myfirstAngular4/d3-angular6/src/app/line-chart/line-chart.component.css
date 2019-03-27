@@ -1,0 +1,20 @@
+svg {
+    font-family: Sans-Serif, Arial;
+}
+.axis path,
+.line {
+ 	fill: none;
+	stroke: 2;
+}
+
+.text {
+  font-size: 24px;
+}
+
+.title-text {
+  font-size: 24px;
+}
+
+body{
+	background-color: yellow;
+}

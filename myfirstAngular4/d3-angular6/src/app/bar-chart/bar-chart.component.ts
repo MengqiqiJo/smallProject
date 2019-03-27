@@ -10,8 +10,10 @@ import * as d3 from 'd3';
 export class BarChartComponent implements OnInit {
 
   constructor() { }
+  xAxis: string;
 
   ngOnInit() {
+  		
   }
 
 }

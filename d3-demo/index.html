@@ -49,8 +49,7 @@
       });
 
       var divNode = d3.select("body").node();
-      var outerRadius = radius - 10,
-          innerRadius = radius - 80;
+      
       var color = d3.scaleOrdinal()
         .range(['#2fa9e0','#0099ff', '#05d23e', '#009900', '#c6c6c6', '#f7d417', '#ff9933', '#ff66ff', '#ff66cc', '#f24b99']);
 
@@ -101,8 +100,8 @@
             .style("font-weight", "bold")
             .attr("text-anchor", "middle")
             .attr("transform", function(d) {                   
-              d.innerRadius = 0;
-              d.outerRadius = 100;
+              d.innerRadiuss = 0;
+              d.outerRadiuss = 200;
               return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
             })
             .text(function(d, i) { 
