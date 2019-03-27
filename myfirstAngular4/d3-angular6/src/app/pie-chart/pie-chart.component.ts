@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonAppService } from '../getjson.service';
+
 import * as d3 from 'd3';
 
 @Component({
@@ -9,70 +11,41 @@ import * as d3 from 'd3';
 export class PieChartComponent implements OnInit {
 
   title = 'd3 app';
+  constructor(private dataService: JsonAppService) {}
+
+  public data: any;
+  
+  getChartJSON() {
+    this.dataService.getJsonData().subscribe(jsonData => {
+      this.data = jsonData['contentData'];
+
+      this.getData();
+      this.draw();
+
+    }, // Bind to view
+    err => {
+      // Log errors if any
+      console.log('error: ', err);
+    });
+  }
 
 
-  constructor() {}
-
-  data: any;
   width: number;
   height: number;
   radius: number;
 
-  ngOnInit() {
-    this.data = [
-      {
-        "name": "Jon",
-        "num": 100
-      },
-      {
-        "name": "Shaggydog",
-        "num": 44
-      },
-      {
-        "name": "Ghost",
-        "num": 215
-      },
-      {
-        "name": "Nymeria",
-        "num": 385
-      },
-      {
-        "name": "Summer",
-        "num": 141
-      },
-      {
-        "name": "Grey wind",
-        "num": 340
-      },
-      {
-        "name": "Ghost",
-        "num": 215
-      },
-      {
-        "name": "Nymeria",
-        "num": 385
-      },
-      {
-        "name": "Summer",
-        "num": 141
-      },
-      {
-        "name": "Grey wind",
-        "num": 340
-      }
-    ];
+  getData() {
     this.width = 300,
     this.height = 300,
     this.radius = Math.min(this.width, this.height) / 2;
+  }
 
-    this.draw();
+  ngOnInit() {
+    this.getChartJSON();
   }
 
   draw() {
-    var tots = d3.sum(this.data, function(d) { 
-      return d['num']; 
-    });
-
+     
     var divNode = d3.select("body").node();
 
     var color = d3.scaleOrdinal()
@@ -100,7 +73,8 @@ export class PieChartComponent implements OnInit {
 
     var g = svg.selectAll("path")
       .data(pie(this.data))
-      .enter().append("g")
+      .enter()
+      .append("g")
       .attr("class", "arc");
 
     g.append("path")
@@ -121,9 +95,22 @@ export class PieChartComponent implements OnInit {
         d3.select("#mainTooltip").classed("hidden", true);
       });
 
+      this.manageLabelText(g);
+    
+  }
+
+  manageTooltip() {
+
+  }
+
+  manageLabelText(g) {
+    var tots = d3.sum(this.data, function(d) { 
+      return d['num']; 
+    });
+
     g.append('text')
       .style('fill', '#F2F2F2')
-      .style("font-size", "18px")
+      .style("font-size", "14px")
       .style("font-weight", "bold")
       .attr("text-anchor", "middle")
       .each(function(d, i) {
