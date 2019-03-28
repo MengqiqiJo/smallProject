@@ -19,6 +19,8 @@ export class PieChartComponent implements OnInit {
   height: number;
   radius: number;
   chartID: string;
+  chartCol: string;
+
   getChartJSON() {
     this.dataService.getJsonData().subscribe(jsonData => {
       jsonData['d3ContentData'].forEach(eachChart => {
@@ -27,6 +29,7 @@ export class PieChartComponent implements OnInit {
         this.colorPalette = eachChart['colorPalette'];
         this.width = eachChart['width'];
         this.height = eachChart['height'];
+        this.chartCol = eachChart['pieChartCol'];
         this.radius = Math.min(this.width, this.height) / 2;
         this.draw();
       });
@@ -56,8 +59,9 @@ export class PieChartComponent implements OnInit {
 
     d3.select(".pie-chart")
       .append("div")
-      .attr("id",this.chartID)
-      .attr("class","pieBox");
+      .attr("id", this.chartID)
+      .attr("class", "pieBox")
+      .attr("class", this.chartCol);
 
     var svg = d3.select("#"+this.chartID)
       .append("svg")

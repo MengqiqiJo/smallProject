@@ -72,19 +72,20 @@
         "#ff66cc", 
         "#f24b99"
       ],
-      "width":300,
-      "height":300
+      "width":400,
+      "height":400,
+      "pieChartCol":"col-lg-6 col-md-6 col-sm-6"
     },
     {
       "chartId":"secondPie",
       "chartData":[
         {
           "name": "Jon",
-          "num": 100
+          "num": 400
         },
         {
           "name": "Shaggydog",
-          "num": 44
+          "num": 404
         },
         {
           "name": "Ghost",
@@ -92,47 +93,47 @@
         },
         {
           "name": "Nymeria",
-          "num": 385
+          "num": 85
         },
         {
           "name": "Jon",
-          "num": 100
+          "num": 10
         },
         {
           "name": "Shaggydog",
-          "num": 44
+          "num": 344
         },
         {
           "name": "Ghost",
-          "num": 215
+          "num": 15
         },
         {
           "name": "Nymeria",
-          "num": 385
+          "num": 35
         },
         {
           "name": "Summer",
-          "num": 141
+          "num": 41
         },
         {
           "name": "Grey wind",
-          "num": 340
+          "num": 90
         },
         {
           "name": "Ghost",
-          "num": 215
+          "num": 125
         },
         {
           "name": "Nymeria",
-          "num": 385
+          "num": 85
         },
         {
           "name": "Summer",
-          "num": 141
+          "num": 341
         },
         {
           "name": "Grey wind",
-          "num": 340
+          "num": 490
         }
       ],
       "colorPalette":[
@@ -148,7 +149,8 @@
         "#f24b99"
       ],
       "width":300,
-      "height":300
+      "height":300,
+      "pieChartCol":"col-lg-4 col-md-4 col-sm-4"
     }
   ]
 }
