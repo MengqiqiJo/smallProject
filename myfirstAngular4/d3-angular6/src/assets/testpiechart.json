@@ -1,74 +1,154 @@
 {
-  "contentData":[
+  "d3ContentData":[
     {
-      "name": "Jon",
-      "num": 100
+      "chartId":"firstPie",
+      "chartData":[
+        {
+          "name": "Jon",
+          "num": 100
+        },
+        {
+          "name": "Shaggydog",
+          "num": 44
+        },
+        {
+          "name": "Ghost",
+          "num": 215
+        },
+        {
+          "name": "Nymeria",
+          "num": 385
+        },
+        {
+          "name": "Jon",
+          "num": 100
+        },
+        {
+          "name": "Shaggydog",
+          "num": 44
+        },
+        {
+          "name": "Ghost",
+          "num": 215
+        },
+        {
+          "name": "Nymeria",
+          "num": 385
+        },
+        {
+          "name": "Summer",
+          "num": 141
+        },
+        {
+          "name": "Grey wind",
+          "num": 340
+        },
+        {
+          "name": "Ghost",
+          "num": 215
+        },
+        {
+          "name": "Nymeria",
+          "num": 385
+        },
+        {
+          "name": "Summer",
+          "num": 141
+        },
+        {
+          "name": "Grey wind",
+          "num": 340
+        }
+      ],
+      "colorPalette":[
+        "#2fa9e0",
+        "#0099ff", 
+        "#05d23e", 
+        "#009900", 
+        "#c6c6c6", 
+        "#f7d417", 
+        "#ff9933", 
+        "#ff66ff", 
+        "#ff66cc", 
+        "#f24b99"
+      ],
+      "width":300,
+      "height":300
     },
     {
-      "name": "Shaggydog",
-      "num": 44
-    },
-    {
-      "name": "Ghost",
-      "num": 215
-    },
-    {
-      "name": "Nymeria",
-      "num": 385
-    },
-    {
-      "name": "Jon",
-      "num": 100
-    },
-    {
-      "name": "Shaggydog",
-      "num": 44
-    },
-    {
-      "name": "Ghost",
-      "num": 215
-    },
-    {
-      "name": "Nymeria",
-      "num": 385
-    },
-    {
-      "name": "Summer",
-      "num": 141
-    },
-    {
-      "name": "Grey wind",
-      "num": 340
-    },
-    {
-      "name": "Ghost",
-      "num": 215
-    },
-    {
-      "name": "Nymeria",
-      "num": 385
-    },
-    {
-      "name": "Summer",
-      "num": 141
-    },
-    {
-      "name": "Grey wind",
-      "num": 340
+      "chartId":"secondPie",
+      "chartData":[
+        {
+          "name": "Jon",
+          "num": 100
+        },
+        {
+          "name": "Shaggydog",
+          "num": 44
+        },
+        {
+          "name": "Ghost",
+          "num": 215
+        },
+        {
+          "name": "Nymeria",
+          "num": 385
+        },
+        {
+          "name": "Jon",
+          "num": 100
+        },
+        {
+          "name": "Shaggydog",
+          "num": 44
+        },
+        {
+          "name": "Ghost",
+          "num": 215
+        },
+        {
+          "name": "Nymeria",
+          "num": 385
+        },
+        {
+          "name": "Summer",
+          "num": 141
+        },
+        {
+          "name": "Grey wind",
+          "num": 340
+        },
+        {
+          "name": "Ghost",
+          "num": 215
+        },
+        {
+          "name": "Nymeria",
+          "num": 385
+        },
+        {
+          "name": "Summer",
+          "num": 141
+        },
+        {
+          "name": "Grey wind",
+          "num": 340
+        }
+      ],
+      "colorPalette":[
+        "#2fa9e0",
+        "#0099ff", 
+        "#05d23e", 
+        "#009900", 
+        "#c6c6c6", 
+        "#f7d417", 
+        "#ff9933", 
+        "#ff66ff", 
+        "#ff66cc", 
+        "#f24b99"
+      ],
+      "width":300,
+      "height":300
     }
-  ],
-  "colorPalette":[
-    "#2fa9e0",
-    "#0099ff", 
-    "#05d23e", 
-    "#009900", 
-    "#c6c6c6", 
-    "#f7d417", 
-    "#ff9933", 
-    "#ff66ff", 
-    "#ff66cc", 
-    "#f24b99"
-  ],
-  "width":300,
-  "height":300
+  ]
 }

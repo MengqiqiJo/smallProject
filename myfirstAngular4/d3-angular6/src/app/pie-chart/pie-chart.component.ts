@@ -13,20 +13,23 @@ export class PieChartComponent implements OnInit {
   title = 'd3 app';
   constructor(private dataService: JsonAppService) {}
 
-  public data: any;
+  public data: any[];
   colorPalette: any;
   width: number;
   height: number;
   radius: number;
+  chartID: string;
   getChartJSON() {
     this.dataService.getJsonData().subscribe(jsonData => {
-      this.data = jsonData['contentData'];
-      this.colorPalette = jsonData['colorPalette'];
-      this.width = jsonData['width'];
-      this.height = jsonData['height'];
-      this.radius = Math.min(this.width, this.height) / 2;
-      
-      this.draw();
+      jsonData['d3ContentData'].forEach(eachChart => {
+        this.chartID = eachChart['chartId'];
+        this.data = eachChart['chartData'];
+        this.colorPalette = eachChart['colorPalette'];
+        this.width = eachChart['width'];
+        this.height = eachChart['height'];
+        this.radius = Math.min(this.width, this.height) / 2;
+        this.draw();
+      });
     },
     err => {
       console.log('error: ', err);
@@ -38,7 +41,6 @@ export class PieChartComponent implements OnInit {
   }
 
   draw() {
-    
     var divNode = d3.select("body").node();
 
     var color = d3.scaleOrdinal()
@@ -52,12 +54,12 @@ export class PieChartComponent implements OnInit {
       .sort(null)
       .value(function(d) { return d['num']; });
 
-    d3.select("#pie-chart")
+    d3.select(".pie-chart")
       .append("div")
-      .attr("id","mainPie")
+      .attr("id",this.chartID)
       .attr("class","pieBox");
 
-    var svg = d3.select("#mainPie")
+    var svg = d3.select("#"+this.chartID)
       .append("svg")
       .attr("width", this.width)
       .attr("height", this.height)
