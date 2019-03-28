@@ -74,7 +74,10 @@
       ],
       "width":400,
       "height":400,
-      "pieChartCol":"col-lg-6 col-md-6 col-sm-6"
+      "chartCol":"col-lg-6 col-md-6 col-sm-6",
+      "innerRadius":20,
+      "outerRadius":200
+
     },
     {
       "chartId":"secondPie",
@@ -137,20 +140,22 @@
         }
       ],
       "colorPalette":[
-        "#2fa9e0",
-        "#0099ff", 
-        "#05d23e", 
+        "#0093d0",
+        "#002596", 
+        "#cc292b", 
         "#009900", 
         "#c6c6c6", 
-        "#f7d417", 
+        "#00aeef", 
         "#ff9933", 
-        "#ff66ff", 
+        "#7dba00", 
         "#ff66cc", 
         "#f24b99"
       ],
-      "width":300,
-      "height":300,
-      "pieChartCol":"col-lg-4 col-md-4 col-sm-4"
+      "width":160,
+      "height":160,
+      "chartCol":"col-lg-4 col-md-4 col-sm-4",
+      "innerRadius":20,
+      "outerRadius":80
     }
   ]
 }

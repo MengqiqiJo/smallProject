@@ -10,7 +10,6 @@ import * as d3 from 'd3';
 })
 export class PieChartComponent implements OnInit {
 
-  title = 'd3 app';
   constructor(private dataService: JsonAppService) {}
 
   public data: any[];
@@ -20,6 +19,9 @@ export class PieChartComponent implements OnInit {
   radius: number;
   chartID: string;
   chartCol: string;
+  centroidRadius: any;
+  innerRadius: number;
+  outerRadius: number;
 
   getChartJSON() {
     this.dataService.getJsonData().subscribe(jsonData => {
@@ -29,9 +31,13 @@ export class PieChartComponent implements OnInit {
         this.colorPalette = eachChart['colorPalette'];
         this.width = eachChart['width'];
         this.height = eachChart['height'];
-        this.chartCol = eachChart['pieChartCol'];
+        this.chartCol = eachChart['chartCol'];
         this.radius = Math.min(this.width, this.height) / 2;
+        this.innerRadius = eachChart['innerRadius'];
+        this.outerRadius = eachChart['outerRadius'];
+       
         this.draw();
+
       });
     },
     err => {
@@ -43,11 +49,52 @@ export class PieChartComponent implements OnInit {
     this.getChartJSON();
   }
 
+  manageLabelText(g) {
+    
+
+    var tots = d3.sum(this.data, function(d) { 
+      return d['num']; 
+    });
+
+    var inner = this.innerRadius;
+    var outer = this.outerRadius;
+
+    g.append('text')
+      .style('fill', '#F2F2F2')
+      .style("font-size", "14px")
+      .style("font-weight", "bold")
+      .attr("text-anchor", "middle")
+      .each(function(d, i) {
+        let centroid = d3.arc()
+          .innerRadius(inner)
+          .outerRadius(outer)
+          .centroid(d as any);
+
+        d3.select(this)
+          .attr('x', centroid[0])
+          .attr('y', centroid[1])
+          .attr('dy', '0.33em')
+          .text(function(d) { 
+            var finalPercent = (d['data']['num'] / tots) * 100;
+            if (finalPercent > 5) {
+              return Math.round(finalPercent) + "%"; 
+            }
+            else {
+              return " "; 
+            }
+          });  
+      });
+  }
+
   draw() {
+
+  
+
     var divNode = d3.select("body").node();
 
     var color = d3.scaleOrdinal()
       .range(this.colorPalette);
+
 
     var arc = d3.arc()
       .innerRadius(0)
@@ -73,8 +120,8 @@ export class PieChartComponent implements OnInit {
     var g = svg.selectAll("path")
       .data(pie(this.data))
       .enter()
-      .append("g")
-      .attr("class", "arc");
+      .append("g");
+      
 
     g.append("path")
       .attr("d", <any>arc) 
@@ -97,35 +144,4 @@ export class PieChartComponent implements OnInit {
       this.manageLabelText(g);
   }
 
-  manageLabelText(g) {
-    var tots = d3.sum(this.data, function(d) { 
-      return d['num']; 
-    });
-
-    g.append('text')
-      .style('fill', '#F2F2F2')
-      .style("font-size", "14px")
-      .style("font-weight", "bold")
-      .attr("text-anchor", "middle")
-      .each(function(d, i) {
-        let centroid = d3.arc()
-          .innerRadius(20)
-          .outerRadius(100)
-          .centroid(d as any);
-
-        d3.select(this)
-          .attr('x', centroid[0])
-          .attr('y', centroid[1])
-          .attr('dy', '0.33em')
-          .text(function(d) { 
-            var finalPercent = (d['data']['num'] / tots) * 100;
-            if (finalPercent > 5) {
-              return Math.round(finalPercent) + "%"; 
-            }
-            else {
-              return " "; 
-            }
-          });  
-      });
-  }
 }
