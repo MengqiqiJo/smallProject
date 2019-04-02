@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild} from '@angular/core';
 
 import { MyappService } from './myapp.service';
 import { CopyComponent } from './app.copycomponent';
@@ -6,6 +6,9 @@ import { CopyComponent } from './app.copycomponent';
 import * as html2canvas from "html2canvas";
 
 import echarts from 'echarts';
+
+import * as d3 from 'd3';
+
 
 @Component({
   selector: 'app-root',
@@ -21,7 +24,6 @@ export class AppComponent implements OnInit {
     copyButton.copyMessage(val);
   }
 
-
   // primeng dialog
   // display: boolean = false;
   // showDialog() {
@@ -32,6 +34,27 @@ export class AppComponent implements OnInit {
   sectionContent: any;
   primengDataGeneral: any[];
 
+  // d3 parameters
+
+  d3data: any[];
+  d3colorPalette: any;
+  d3width: number;
+  d3height: number;
+  d3radius: number;
+  d3chartID: string;
+  d3chartCol: string;
+  d3centroidRadius: any;
+  d3innerRadius: number;
+  d3outerRadius: number;
+  d3groupSvg: any;
+
+  // function
+  d3chartSvg;
+  d3pieChartArc;
+  d3color;
+  d3pieChart ;
+
+
   constructor(private myService: MyappService) {
   }
 
@@ -39,7 +62,6 @@ export class AppComponent implements OnInit {
     this.myService.getMyJson().subscribe(data => {
       this.sectionContent = data;
       this.primengDataGeneral = this.sectionContent.primengcontentdata;
-
     }, // Bind to view
     err => {
       // Log errors if any
@@ -48,6 +70,124 @@ export class AppComponent implements OnInit {
 
 
   }
+
+
+
+// <p (click)="getD3ChartJson(eachtabcontent)">lalallaallala</p>
+  getD3ChartJson(d3JsonData) {
+
+    if (d3JsonData.tabData['type'] == 'd3') {
+      console.log("d3444");
+      console.log(d3JsonData.tabData.type);
+      this.d3chartID = d3JsonData.tabData.middle.middleMiddle['chartId'];
+      this.d3data = d3JsonData.tabData.middle.middleMiddle['chartData'];
+      this.d3colorPalette = d3JsonData.tabData.middle.middleMiddle['colorPalette'];
+      this.d3width = d3JsonData.tabData.middle.middleMiddle['width'];
+      this.d3height = d3JsonData.tabData.middle.middleMiddle['height'];
+      this.d3chartCol = d3JsonData.tabData.middle.middleMiddle['chartCol'];
+      this.d3radius = Math.min(this.d3width, this.d3height) / 2;
+      this.d3innerRadius = d3JsonData.tabData.middle.middleMiddle['innerRadius'];
+      this.d3outerRadius = d3JsonData.tabData.middle.middleMiddle['outerRadius'];
+
+      this.draw();
+    }
+
+  }
+
+  manageLabelText(groupSvg) {
+    
+    var totalNum = d3.sum(this.d3data, function(d) { 
+      return d['num']; 
+    });
+
+    var inner = this.d3innerRadius;
+    var outer = this.d3outerRadius;
+
+    groupSvg.append('text')
+      .style('fill', '#F2F2F2')
+      .style("font-size", "14px")
+      .style("font-weight", "bold")
+      .attr("text-anchor", "middle")
+      .each(function(d, i) {
+        let centroid = d3.arc()
+          .innerRadius(inner)
+          .outerRadius(outer)
+          .centroid(d as any);
+
+        d3.select(this)
+          .attr('x', centroid[0])
+          .attr('y', centroid[1])
+          .attr('dy', '0.33em')
+          .text(function(d) { 
+            var finalPercent = (d['data']['num'] / totalNum) * 100;
+            if (finalPercent > 5) {
+              return Math.round(finalPercent) + "%"; 
+            }
+            else {
+              return " "; 
+            }
+          });  
+      });
+  }
+
+  draw() {
+
+    console.log("hello I am d3");
+
+    var divNode = d3.select("body").node();
+
+    console.log(typeof divNode);
+
+    this.d3color = d3.scaleOrdinal()
+      .range(this.d3colorPalette);
+
+    this.d3pieChartArc = d3.arc()
+      .innerRadius(0)
+      .outerRadius(this.d3radius);
+
+    this.d3pieChart = d3.pie()
+      .sort(null)
+      .value(function(d) { return d['num']; });
+
+    d3.select("#pie-chart")
+      .append("div")
+      .attr("id", this.d3chartID)
+      .attr("class", "pieBox")
+      .attr("class", this.d3chartCol);
+
+    this.d3chartSvg = d3.select("#"+this.d3chartID)
+      .append("svg")
+      .attr("width", this.d3width)
+      .attr("height", this.d3height)
+      .append("g")
+      .attr("transform", "translate(" + this.d3width / 2 + "," + this.d3height / 2 + ")");
+
+    this.d3groupSvg = this.d3chartSvg.selectAll("path")
+      .data(this.d3pieChart(this.d3data))
+      .enter()
+      .append("g");
+      
+    this.d3groupSvg.append("path")
+      .attr("d", <any>this.d3pieChartArc) 
+      .style("fill", (d) => { return (this.d3color(d.data['label']) as any) })
+      .on("mousemove", function(d) {
+        var mousePos: any = d3.mouse(divNode as any);
+        d3.select("#mainTooltip")
+        .style("left", mousePos[0] - 40 + "px")
+        .style("top", mousePos[1] - 100 + "px")
+        .select("#value")
+        .attr("text-anchor", "middle")
+        .html(d.data['label'] + "<br />" + d.data['num']);
+
+        d3.select("#mainTooltip").classed("hidden", false);
+      })
+      .on("mouseout", function(d){
+        d3.select("#mainTooltip").classed("hidden", true);
+      });
+
+      this.manageLabelText(this.d3groupSvg);
+  }
+
 
   saveImage() {
     // this.testChartId = document.getElementById("barChart");
@@ -68,7 +208,13 @@ export class AppComponent implements OnInit {
   echartOption : any;
   myChart: any;
 
+  @ViewChild('divClick') divClick: ElementRef;
+
   ngOnInit() {
+
+    setTimeout(() => {
+      this.divClick.nativeElement.click();
+    }, 200);
     // Chart.defaults.global.defaultFontColor = 'red';
     // Chart.defaults.global.tooltips = {
     //   bodyFontSize: 50
@@ -174,21 +320,7 @@ export class AppComponent implements OnInit {
         ]
     };
 
-    setTimeout(() => {
-      this.myChart = echarts.init(document.getElementById('setOptionChart'));
-      this.myChart.clear();
-      // this.echartOption = this.myChart.getOption();
-      // this.echartOption.title.push("22weather");
-      this.echartOption = {
-        title: {
-            text: '22weahther',
-            left: 'center'
-        }
-      };
-      this.myChart.setOption(this.echartOption);
-      // this.echartOption = this.myChart.setOption(this.echartOption);
-      console.log("echartOption");
-    }, 2000);
+    
 
   }
 }

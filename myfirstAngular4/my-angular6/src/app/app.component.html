@@ -9,9 +9,29 @@
 
 <!-- <div echarts id="setOptionChart" [options]="chartOption"></div> -->
 
+
+<div class="row">
+  <div class="col-md-4">
+    <p-tabView>
+        <p-tabPanel header="D3 Chart">
+           <!-- <div class="row"> -->
+             
+           <!-- </div> -->
+        </p-tabPanel>
+        <p-tabPanel header="D3 Chart Text">
+          <p>this is the second tab view of primeng</p>
+          <p>this is the second tab view of primeng</p>
+          <p>this is the second tab view of primeng</p>
+          <p>this is the second tab view of primeng</p>
+          <p>this is the second tab view of primeng</p>
+        </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
+
 <div class="row" for="primengDataGeneral">
   <div *ngFor="let blockData of primengDataGeneral" >
-    <div for="blockData.blockContent">
+    <div for="blockData.blockContent">  
       <div class="{{blockData.blockClass}}">
         <div class="{{blockData.blockClassSub}}">
           <div [innerHTML]="blockData.blockHeader"></div>
@@ -26,6 +46,24 @@
                   <div *ngIf="eachtabcontent.tabData.type == 'echart'; else elseBlock">
                     <div echarts [options]="eachtabcontent.tabData.middle.middleMiddle.data" id="echart"></div>
                   </div>
+
+                  
+                  <div *ngIf="(eachtabcontent.tabData.type == 'd3')">
+                    <div #divClick (click)="getD3ChartJson(eachtabcontent)"></div>
+                      <div class="{{eachtabcontent.tabData.middle.class}}">
+
+                        <div id="pie-chart">
+                        </div>
+                        <div id="mainTooltip" class="hidden">
+                          <p>
+                            <span id="value"></span>
+                          </p>
+                        </div>
+                      </div>
+          
+                  </div>
+
+                 
                   <!-- <div *ngIf="eachtabcontent.tabData.type == 'Chartist.js'; else elseBlock">
                   </div>
                   <div *ngIf="eachtabcontent.tabData.type == 'FusionCharts'; else elseBlock">

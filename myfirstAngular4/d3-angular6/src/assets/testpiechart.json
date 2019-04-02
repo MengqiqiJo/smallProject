@@ -4,59 +4,59 @@
       "chartId":"firstPie",
       "chartData":[
         {
-          "name": "Jon",
+          "label": "Jon",
           "num": 100
         },
         {
-          "name": "Shaggydog",
+          "label": "Shaggydog",
           "num": 44
         },
         {
-          "name": "Ghost",
+          "label": "Ghost",
           "num": 215
         },
         {
-          "name": "Nymeria",
+          "label": "Nymeria",
           "num": 385
         },
         {
-          "name": "Jon",
+          "label": "Jon",
           "num": 100
         },
         {
-          "name": "Shaggydog",
+          "label": "Shaggydog",
           "num": 44
         },
         {
-          "name": "Ghost",
+          "label": "Ghost",
           "num": 215
         },
         {
-          "name": "Nymeria",
+          "label": "Nymeria",
           "num": 385
         },
         {
-          "name": "Summer",
+          "label": "Summer",
           "num": 141
         },
         {
-          "name": "Grey wind",
+          "label": "Grey wind",
           "num": 340
         },
         {
-          "name": "Ghost",
+          "label": "Ghost",
           "num": 215
         },
         {
-          "name": "Nymeria",
+          "label": "Nymeria",
           "num": 385
         },
         {
-          "name": "Summer",
+          "label": "Summer",
           "num": 141
         },
         {
-          "name": "Grey wind",
+          "label": "Grey wind",
           "num": 340
         }
       ],
@@ -77,65 +77,64 @@
       "chartCol":"col-lg-6 col-md-6 col-sm-6",
       "innerRadius":20,
       "outerRadius":200
-
     },
     {
       "chartId":"secondPie",
       "chartData":[
         {
-          "name": "Jon",
+          "label": "Jon",
           "num": 400
         },
         {
-          "name": "Shaggydog",
+          "label": "Shaggydog",
           "num": 404
         },
         {
-          "name": "Ghost",
+          "label": "Ghost",
           "num": 215
         },
         {
-          "name": "Nymeria",
+          "label": "Nymeria",
           "num": 85
         },
         {
-          "name": "Jon",
+          "label": "Jon",
           "num": 10
         },
         {
-          "name": "Shaggydog",
+          "label": "Shaggydog",
           "num": 344
         },
         {
-          "name": "Ghost",
+          "label": "Ghost",
           "num": 15
         },
         {
-          "name": "Nymeria",
+          "label": "Nymeria",
           "num": 35
         },
         {
-          "name": "Summer",
+          "label": "Summer",
           "num": 41
         },
         {
-          "name": "Grey wind",
+          "label": "Grey wind",
           "num": 90
         },
         {
-          "name": "Ghost",
+          "label": "Ghost",
           "num": 125
         },
         {
-          "name": "Nymeria",
+          "label": "Nymeria",
           "num": 85
         },
         {
-          "name": "Summer",
+          "label": "Summer",
           "num": 341
         },
         {
-          "name": "Grey wind",
+          "label": "Grey wind",
           "num": 490
         }
       ],

@@ -219,3 +219,49 @@ body {
   background-color: #009ddf;
 }
 
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.pieBox{
+    display: inline-block;
+    height: auto;
+}
+
+#mainTooltip {
+    position: absolute;
+    min-width :90px;
+    height: 40px;
+    padding: 0 0 25px 0;
+    background-color: rgba(0,0,0,0.6);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 50px;
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    fill: #fff;
+    color: #fff;
+    text-anchor: middle;
+    text-align: center;
+    font-weight: bold;
+    z-index: 9999;
+}
+#mainTooltip:before {
+    border: solid;
+    border-color: rgba(0,0,0,0.6) transparent;
+    border-width: 10px 10px 0 10px;
+    top: 100%;
+    content: "";
+    left: 43%;
+    position: absolute;
+    z-index: 99;
+}
+#mainTooltip.hidden {
+    display: none;
+}
+       

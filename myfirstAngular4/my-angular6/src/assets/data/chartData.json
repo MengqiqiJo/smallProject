@@ -191,7 +191,7 @@
             {
               "blockId": "pieChart",
               "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
-              "type": "chart",
+              "type": "d3",
               "top": {
                 "enable": false,
                 "styleClass": "bg-009ddf color-fff height-60",
@@ -204,41 +204,88 @@
                   "styleClass": "",
                   "value": ""
                 },
-                "middleMiddle": {
-                  "value": "",
-                  "type": "pie",
+                "middleMiddle":{
                   "styleClass": "col-md-6 margin-top-24",
-                  "data": {
-                    "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
-                    "datasets": [{
-                      "label": "",
-                      "data": [49, 10, 10, 8, 84, 3],
-                      "backgroundColor": [
-                        "#0093d0",
-                        "#002596",
-                        "#cc292b",
-                        "#00aeef",
-                        "#7dba00",
-                        "#c6c6c6"
-                      ]
-                    }]
-                  },
-                  "options": {
-                    "legend": {
-                      "display": false
+                  "chartId":"firstPie",
+                  "chartData":[
+                    {
+                      "label": "Jon",
+                      "num": 100
                     },
-                    "plugins": {
-                      "labels": {
-                        "fontColor": "#fff",
-                        "fontSize": 10,
-                        "position": "border"
-                      }
+                    {
+                      "label": "Shaggydog",
+                      "num": 44
+                    },
+                    {
+                      "label": "Ghost",
+                      "num": 215
+                    },
+                    {
+                      "label": "Nymeria",
+                      "num": 385
+                    },
+                    {
+                      "label": "Jon",
+                      "num": 100
+                    },
+                    {
+                      "label": "Shaggydog",
+                      "num": 44
+                    },
+                    {
+                      "label": "Ghost",
+                      "num": 215
+                    },
+                    {
+                      "label": "Nymeria",
+                      "num": 385
+                    },
+                    {
+                      "label": "Summer",
+                      "num": 141
+                    },
+                    {
+                      "label": "Grey wind",
+                      "num": 340
+                    },
+                    {
+                      "label": "Ghost",
+                      "num": 215
+                    },
+                    {
+                      "label": "Nymeria",
+                      "num": 385
+                    },
+                    {
+                      "label": "Summer",
+                      "num": 141
+                    },
+                    {
+                      "label": "Grey wind",
+                      "num": 340
                     }
-                  }
+                  ],
+                  "colorPalette":[
+                    "#2fa9e0",
+                    "#0099ff", 
+                    "#05d23e", 
+                    "#009900", 
+                    "#c6c6c6", 
+                    "#f7d417", 
+                    "#ff9933", 
+                    "#ff66ff", 
+                    "#ff66cc", 
+                    "#f24b99"
+                  ],
+                  "width":200,
+                  "height":200,
+                  "chartCol":"",
+                  "innerRadius":20,
+                  "outerRadius":120
                 },
                 "middleRight": {
                   "enable": false,
-                  "styleClass": "col-md-6",
+                  "styleClass": "col-md-4",
                   "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Cardio Met (49)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-002596\"></span><span class=\"float-left legend-text\">Respiratory (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-cc292b\"></span><span class=\"float-left legend-text\">Ophthalmology (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">I&D (8)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Oncology (84)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">MS/NS (3)</span></div></div>"
                 }
               },
@@ -1021,12 +1068,12 @@
                   "styleClass": "col-md-12 margin-top-24",
                   "data": {
                     "labels": [
-                    "OLA",
-                    "Accredited",
-                    "Speaker Tour",
-                    "Symposiums",
-                    "Preceptorships",
-                    "Nurse Educator"
+                      "OLA",
+                      "Accredited",
+                      "Speaker Tour",
+                      "Symposiums",
+                      "Preceptorships",
+                      "Nurse Educator"
                     ],
                     "datasets": [{
                       "label": "of votes",
