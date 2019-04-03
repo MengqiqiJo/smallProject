@@ -306,6 +306,123 @@
             "tabTitle": "",
             "tabData":
             {
+              "blockId": "pieChart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "type": "d3",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"bg-009ddf color-fff height-60 padding-15 padding-left-14\">Total Events by Business Unit</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle":{
+                  "styleClass": "col-md-6 margin-top-24",
+                  "chartId":"firstPie",
+                  "chartData":[
+                    {
+                      "label": "Jon",
+                      "num": 10
+                    },
+                    {
+                      "label": "Shaggydog",
+                      "num": 84
+                    },
+                    {
+                      "label": "Ghost",
+                      "num": 105
+                    },
+                    {
+                      "label": "Nymeria",
+                      "num": 25
+                    },
+                    {
+                      "label": "Jon",
+                      "num": 190
+                    },
+                    {
+                      "label": "Shaggydog",
+                      "num": 244
+                    },
+                    {
+                      "label": "Ghost",
+                      "num": 150
+                    },
+                    {
+                      "label": "Nymeria",
+                      "num": 185
+                    },
+                    {
+                      "label": "Summer",
+                      "num": 41
+                    },
+                    {
+                      "label": "Grey wind",
+                      "num": 140
+                    },
+                    {
+                      "label": "Ghost",
+                      "num": 315
+                    },
+                    {
+                      "label": "Nymeria",
+                      "num": 285
+                    },
+                    {
+                      "label": "Summer",
+                      "num": 41
+                    },
+                    {
+                      "label": "Grey wind",
+                      "num": 90
+                    }
+                  ],
+                  "colorPalette":[
+                    "#2fa9e0",
+                    "#0099ff", 
+                    "#05d23e", 
+                    "#009900", 
+                    "#c6c6c6", 
+                    "#f7d417", 
+                    "#ff9933", 
+                    "#ff66ff", 
+                    "#ff66cc", 
+                    "#f24b99"
+                  ],
+                  "width":300,
+                  "height":300,
+                  "chartCol":"",
+                  "innerRadius":20,
+                  "outerRadius":150
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-4",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Cardio Met (49)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-002596\"></span><span class=\"float-left legend-text\">Respiratory (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-cc292b\"></span><span class=\"float-left legend-text\">Ophthalmology (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">I&D (8)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Oncology (84)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">MS/NS (3)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "blockHeader": "",
+        "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "tabData":
+            {
               "blockId": "barChart",
               "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
               "type": "chart",

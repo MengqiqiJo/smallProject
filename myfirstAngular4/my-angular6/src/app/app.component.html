@@ -9,7 +9,6 @@
 
 <!-- <div echarts id="setOptionChart" [options]="chartOption"></div> -->
 
-
 <div class="row">
   <div class="col-md-4">
     <p-tabView>
@@ -49,10 +48,9 @@
 
                   
                   <div *ngIf="(eachtabcontent.tabData.type == 'd3')">
-                    <div #divClick (click)="getD3ChartJson(eachtabcontent)"></div>
+                    <div #divClick (click)="getD3ChartJson(eachtabcontent)">click</div>
                       <div class="{{eachtabcontent.tabData.middle.class}}">
-
-                        <div id="pie-chart">
+                        <div class="pie-chart">
                         </div>
                         <div id="mainTooltip" class="hidden">
                           <p>
@@ -60,7 +58,6 @@
                           </p>
                         </div>
                       </div>
-          
                   </div>
 
                  

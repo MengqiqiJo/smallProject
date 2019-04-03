@@ -149,7 +149,7 @@ export class AppComponent implements OnInit {
       .sort(null)
       .value(function(d) { return d['num']; });
 
-    d3.select("#pie-chart")
+    d3.select(".pie-chart")
       .append("div")
       .attr("id", this.d3chartID)
       .attr("class", "pieBox")
@@ -174,7 +174,7 @@ export class AppComponent implements OnInit {
         var mousePos: any = d3.mouse(divNode as any);
         d3.select("#mainTooltip")
         .style("left", mousePos[0] - 40 + "px")
-        .style("top", mousePos[1] - 100 + "px")
+        .style("top", mousePos[1] - 500 + "px")
         .select("#value")
         .attr("text-anchor", "middle")
         .html(d.data['label'] + "<br />" + d.data['num']);
