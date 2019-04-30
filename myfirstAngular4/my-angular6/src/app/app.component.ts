@@ -9,6 +9,8 @@ import echarts from 'echarts';
 
 import * as d3 from 'd3';
 
+import * as Chart from 'chart.js'
+
 
 @Component({
   selector: 'app-root',
@@ -33,6 +35,8 @@ export class AppComponent implements OnInit {
   // get json data
   sectionContent: any;
   primengDataGeneral: any[];
+  blockData: any;
+
 
   // d3 parameters
 
@@ -55,23 +59,134 @@ export class AppComponent implements OnInit {
   d3pieChart ;
 
 
+  blockIsChart: boolean;
+  chartType: string;
+  chartData: any;
+  tabContent: Array<Object>;
+  countTabContent: number;
+  arrayTabContent: any[];
+
+  canvas: any;
+  ctx: any;
+
   constructor(private myService: MyappService) {
   }
 
+  // get all data 
   getChartJSONAndDisplay() {
+
     this.myService.getMyJson().subscribe(data => {
       this.sectionContent = data;
       this.primengDataGeneral = this.sectionContent.primengcontentdata;
+      
+      this.primengDataGeneral.forEach(eachBlockData => {
+        this.blockData = eachBlockData;
+        this.blockIsChart = eachBlockData.isChart;
+
+        this.blockData.blockContent.forEach(eachTabData => {
+          this.tabContent = eachTabData;
+          
+
+          if (this.blockIsChart) {
+            
+            this.tabContent['tabData'].middle.middleMiddle.options = {
+                legend: {
+                  display: false
+                },
+                scales: {
+                  xAxes: [{
+                    display: true
+                  }],
+                  yAxes: [{
+                    display: true
+                  }],
+                },
+                animation: {
+                  animateScale: true,
+                  animateRotate: true
+                },
+                tooltips: {
+                  callbacks: {
+                    label: function(tooltipItem, data) {
+                      var dataset = data.datasets[tooltipItem.datasetIndex];
+                      var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                        return previousValue + currentValue;
+                      });
+                      var currentValue = dataset.data[tooltipItem.index];
+                      var percentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                      return percentage + "%";
+                    }
+                  }
+                }
+              };
+
+            // this.canvas = document.getElementById('canvas');
+            // this.ctx = this.canvas.getContext('2d');
+            // let myChart = new Chart(this.ctx, {
+            //   type: this.tabContent['tabData'].middle.middleMiddle.type,
+            //   data: this.tabContent['tabData'].middle.middleMiddle.data,
+            //   options: {
+            //     legend: {
+            //       display: false
+            //     },
+            //     scales: {
+            //       xAxes: [{
+            //         display: true
+            //       }],
+            //       yAxes: [{
+            //         display: true
+            //       }],
+            //     },
+            //     animation: {
+            //       animateScale: true,
+            //       animateRotate: true
+            //     },
+            //     tooltips: {
+            //       callbacks: {
+            //         label: function(tooltipItem, data) {
+            //           var dataset = data.datasets[tooltipItem.datasetIndex];
+            //           var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+            //             return previousValue + currentValue;
+            //           });
+            //           var currentValue = dataset.data[tooltipItem.index];
+            //           var percentage = Math.floor(((currentValue/total) * 100)+0.5);         
+            //           return percentage + "%";
+            //         }
+            //       }
+            //     }
+            //   }
+            // });
+          }
+        });
+      });
+
+      // this.primengDataGeneral = this.sectionContent.primengcontentdata;
+
+
+      // for (var j = 0; j < this.primengDataGeneral.length; j++) {
+        
+      //   this.blockData = this.primengDataGeneral[j];
+
+      //   for (var i = 0; i < this.blockData.blockContent.length; i++) {
+
+          // console.log(this.blockData.blockContent[i]);
+          // this.tabContent[j][i] = this.blockData.blockContent[i];
+
+      //     if (this.blockData.isChart) {
+      //       this.blockData.blockContent[i].tabData.middle.middleMiddle.type = 'doughnut';
+      //     }
+          
+      //     console.log(this.blockData.blockContent[i].tabData.middle.middleMiddle.type);
+        
+      //   }
+      // }
+
     }, // Bind to view
     err => {
       // Log errors if any
       console.log('error: ', err);
     });
-
-
   }
-
-
 
 // <p (click)="getD3ChartJson(eachtabcontent)">lalallaallala</p>
   getD3ChartJson(d3JsonData) {
@@ -213,7 +328,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
 
     setTimeout(() => {
-      this.divClick.nativeElement.click();
+      // this.divClick.nativeElement.click();
     }, 200);
     // Chart.defaults.global.defaultFontColor = 'red';
     // Chart.defaults.global.tooltips = {

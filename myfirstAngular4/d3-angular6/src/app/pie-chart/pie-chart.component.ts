@@ -28,7 +28,7 @@ export class PieChartComponent implements OnInit {
   chartSvg;
   pieChartArc;
   color;
-  pieChart;
+  pieChart ;
 
   getChartJSON() {
     this.dataService.getJsonData().subscribe(jsonData => {

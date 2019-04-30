@@ -11,7 +11,7 @@ export class MyappService {
   }
 
   getMyJson() {
-    return this.http.get('./assets/data/chartData.json');
+    return this.http.get('./assets/data/chartDateNew.json');
   }
 
 }
