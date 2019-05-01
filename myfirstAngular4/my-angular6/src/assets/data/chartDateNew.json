@@ -218,8 +218,7 @@
                     "Preceptorships",
                     "Nurse Educator"
                   ],
-                  "datasets": [
-                {
+                  "datasets": [{
                   "label": "",
                   "fill": false,
                   "data": [
@@ -237,7 +236,7 @@
                     "#0093d0"
                     ],
                   "borderWidth": 1
-                }]
+                  }]
                 },
                 "options": {
                   "legend": {

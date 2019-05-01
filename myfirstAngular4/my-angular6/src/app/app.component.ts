@@ -159,28 +159,6 @@ export class AppComponent implements OnInit {
           }
         });
       });
-
-      // this.primengDataGeneral = this.sectionContent.primengcontentdata;
-
-
-      // for (var j = 0; j < this.primengDataGeneral.length; j++) {
-        
-      //   this.blockData = this.primengDataGeneral[j];
-
-      //   for (var i = 0; i < this.blockData.blockContent.length; i++) {
-
-          // console.log(this.blockData.blockContent[i]);
-          // this.tabContent[j][i] = this.blockData.blockContent[i];
-
-      //     if (this.blockData.isChart) {
-      //       this.blockData.blockContent[i].tabData.middle.middleMiddle.type = 'doughnut';
-      //     }
-          
-      //     console.log(this.blockData.blockContent[i].tabData.middle.middleMiddle.type);
-        
-      //   }
-      // }
-
     }, // Bind to view
     err => {
       // Log errors if any
@@ -188,7 +166,6 @@ export class AppComponent implements OnInit {
     });
   }
 
-// <p (click)="getD3ChartJson(eachtabcontent)">lalallaallala</p>
   getD3ChartJson(d3JsonData) {
 
     if (d3JsonData.tabData['type'] == 'd3') {
