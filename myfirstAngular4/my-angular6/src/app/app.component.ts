@@ -9,8 +9,9 @@ import echarts from 'echarts';
 
 import * as d3 from 'd3';
 
-import * as Chart from 'chart.js'
+import * as Chart from 'chart.js';
 
+import 'chartjs-plugin-labels';
 
 @Component({
   selector: 'app-root',
@@ -36,6 +37,11 @@ export class AppComponent implements OnInit {
   sectionContent: any;
   primengDataGeneral: any[];
   blockData: any;
+  
+  // new chart.js data
+  blockIsChart: boolean;
+  tabContent: any;
+  pluginLabel: any;
 
 
   // d3 parameters
@@ -59,15 +65,7 @@ export class AppComponent implements OnInit {
   d3pieChart ;
 
 
-  blockIsChart: boolean;
-  chartType: string;
-  chartData: any;
-  tabContent: any;
-  countTabContent: number;
-  arrayTabContent: any[];
-  pluginLabel: any;
-  canvas: any;
-  ctx: any;
+ 
 
   constructor(private myService: MyappService) {
   }
@@ -86,7 +84,6 @@ export class AppComponent implements OnInit {
         this.blockData.blockContent.forEach(eachTabData => {
           this.tabContent = eachTabData;
           
-
           if (this.blockIsChart) {
             if (this.tabContent['tabData'].middle.middleMiddle.renderLabel == "value") {
               this.pluginLabel = {
