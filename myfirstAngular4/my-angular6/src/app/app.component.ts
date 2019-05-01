@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
   sectionContent: any;
   primengDataGeneral: any[];
   blockData: any;
-  
+
   // new chart.js data
   blockIsChart: boolean;
   tabContent: any;
@@ -45,7 +45,6 @@ export class AppComponent implements OnInit {
 
 
   // d3 parameters
-
   d3data: any[];
   d3colorPalette: any;
   d3width: number;
@@ -100,7 +99,7 @@ export class AppComponent implements OnInit {
                     render: function(args) {
                       console.log(args.percentage);
                       var result = '';
-                      if (args.percentage > 8) {
+                      if (args.percentage > 5) {
                         result = args.percentage + " %";
                       }
                       return result;
@@ -130,12 +129,11 @@ export class AppComponent implements OnInit {
                       });
                       var currentValue = dataset.data[tooltipItem.index];
                       var percentage = Math.floor(((currentValue/total) * 100)+0.5);       
-                      return currentValue + '\n' + percentage + "%";
+                      return currentValue + ' - - ' + percentage + "%";
                     }
                   }
                 }
               };
-
 
 
             // this.canvas = document.getElementById('canvas');
