@@ -27,6 +27,7 @@
               },
               "middleMiddle": {
                 "value": "",
+                "renderLabel": "percentage",
                 "type": "pie",
                 "styleClass": "col-md-6 margin-top-24",
                 "data": {
@@ -88,6 +89,7 @@
               },
               "middleMiddle": {
                 "value": "",
+                "renderLabel": "percentage",
                 "type": "doughnut",
                 "styleClass": "col-md-6 margin-top-24",
                 "data": {
@@ -207,6 +209,7 @@
               },
               "middleMiddle": {
                 "value": "",
+                "renderLabel": "value",
                 "type": "bar",
                 "styleClass": "col-md-12 margin-top-24",
                 "data": {

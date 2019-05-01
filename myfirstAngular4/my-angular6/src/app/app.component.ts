@@ -62,10 +62,10 @@ export class AppComponent implements OnInit {
   blockIsChart: boolean;
   chartType: string;
   chartData: any;
-  tabContent: Array<Object>;
+  tabContent: any;
   countTabContent: number;
   arrayTabContent: any[];
-
+  pluginLabel: any;
   canvas: any;
   ctx: any;
 
@@ -88,19 +88,38 @@ export class AppComponent implements OnInit {
           
 
           if (this.blockIsChart) {
-            
+            if (this.tabContent['tabData'].middle.middleMiddle.renderLabel == "value") {
+              this.pluginLabel = {
+                  labels: {
+                    render: this.tabContent['tabData'].middle.middleMiddle.renderLabel,
+                    fontColor: "#000",
+                    fontSize: 10
+                  }
+                };
+            }
+            else {
+              this.pluginLabel = {
+                  labels: {
+                    render: function(args) {
+                      console.log(args.percentage);
+                      var result = '';
+                      if (args.percentage > 8) {
+                        result = args.percentage + " %";
+                      }
+                      return result;
+
+                    },
+                    fontColor: "#fff",
+                    fontSize: 10
+                  }
+                };
+            }
+
             this.tabContent['tabData'].middle.middleMiddle.options = {
                 legend: {
                   display: false
                 },
-                scales: {
-                  xAxes: [{
-                    display: true
-                  }],
-                  yAxes: [{
-                    display: true
-                  }],
-                },
+                plugins: this.pluginLabel,
                 animation: {
                   animateScale: true,
                   animateRotate: true
@@ -113,12 +132,14 @@ export class AppComponent implements OnInit {
                         return previousValue + currentValue;
                       });
                       var currentValue = dataset.data[tooltipItem.index];
-                      var percentage = Math.floor(((currentValue/total) * 100)+0.5);         
-                      return percentage + "%";
+                      var percentage = Math.floor(((currentValue/total) * 100)+0.5);       
+                      return currentValue + '\n' + percentage + "%";
                     }
                   }
                 }
               };
+
+
 
             // this.canvas = document.getElementById('canvas');
             // this.ctx = this.canvas.getContext('2d');
