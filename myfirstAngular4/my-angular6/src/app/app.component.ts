@@ -12,6 +12,7 @@ import * as d3 from 'd3';
 import * as Chart from 'chart.js';
 
 import 'chartjs-plugin-labels';
+import 'chartjs-plugin-stacked100';
 
 @Component({
   selector: 'app-root',
@@ -92,7 +93,6 @@ export class AppComponent implements OnInit {
               }
               else {
                 this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = function(args) {
-                  console.log(args);
                   var result = '';
                   if (args.percentage > 5) {
                     result = args.percentage + " %";
@@ -101,7 +101,12 @@ export class AppComponent implements OnInit {
                 };
               }
             }
-
+            
+            // isset(this.tabContent.calculateTooltip)
+            // "chartjsPluginsOptions": {
+            //   "calculateTooltip": true,
+            //   "calculateLabel": true
+            // }
             if (this.tabContent.calculateTooltip) {
               this.tabContent['tabData'].middle.middleMiddle.options.tooltips = {
                 callbacks: {
