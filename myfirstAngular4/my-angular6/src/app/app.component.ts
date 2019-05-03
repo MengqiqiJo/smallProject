@@ -12,6 +12,7 @@ import * as d3 from 'd3';
 import * as Chart from 'chart.js';
 
 import 'chartjs-plugin-labels';
+
 import 'chartjs-plugin-stacked100';
 
 @Component({
@@ -86,7 +87,7 @@ export class AppComponent implements OnInit {
           this.tabContent = eachTabData;
           
           if (this.blockIsChart) {
-            if (this.tabContent.calculateLabel) {
+            if (this.tabContent.chartjsPluginsOptions.calculateLabel) {
 
               if (this.tabContent['tabData'].middle.middleMiddle.renderLabel == "value") {
                 this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = "value";
@@ -101,13 +102,13 @@ export class AppComponent implements OnInit {
                 };
               }
             }
-            
+
             // isset(this.tabContent.calculateTooltip)
             // "chartjsPluginsOptions": {
             //   "calculateTooltip": true,
             //   "calculateLabel": true
             // }
-            if (this.tabContent.calculateTooltip) {
+            if (this.tabContent.chartjsPluginsOptions.calculateTooltip) {
               this.tabContent['tabData'].middle.middleMiddle.options.tooltips = {
                 callbacks: {
                   label: function(tooltipItem, data) {

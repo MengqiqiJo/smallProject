@@ -9,8 +9,10 @@
       "blockContent": [
         {
           "tabTitle": "",
-          "calculateTooltip": true,
-          "calculateLabel": true,
+          "chartjsPluginsOptions": {
+            "calculateTooltip": true,
+            "calculateLabel": true
+          },
           "tabData":
           {
             "type": "chart",
@@ -80,8 +82,10 @@
       "blockContent": [
         {
           "tabTitle": "",
-          "calculateTooltip": true,
-          "calculateLabel": true,
+          "chartjsPluginsOptions": {
+            "calculateTooltip": true,
+            "calculateLabel": true
+          },
           "tabData":
           {
             "type": "chart",
@@ -149,6 +153,10 @@
       "blockContent": [
         {
           "tabTitle": "",
+          "chartjsPluginsOptions": {
+            "calculateTooltip": true,
+            "calculateLabel": true
+          },
           "calculateTooltip": true,
           "calculateLabel": true,
           "tabData":
@@ -218,8 +226,10 @@
       "blockContent": [
         {
           "tabTitle": "",
-          "calculateTooltip": true,
-          "calculateLabel": true,
+          "chartjsPluginsOptions": {
+            "calculateTooltip": true,
+            "calculateLabel": true
+          },
           "tabData":
           {
             "blockId": "barChart",
@@ -321,8 +331,6 @@
               "calculateTooltip": true,
               "calculateLabel": true
             },
-            "calculateTooltip": true,
-            "calculateLabel": true,
             "tabData":
             {
               "blockId": "pieChart",
@@ -386,8 +394,10 @@
           },
           {
             "tabTitle": "Tab2",
-            "calculateTooltip": false,
-            "calculateLabel": false,
+            "chartjsPluginsOptions": {
+              "calculateTooltip": false,
+              "calculateLabel": true
+            },
             "tabData":
             {
               "blockId": "barChart",
@@ -523,8 +533,10 @@
               },
               "middleMiddle": {
                 "value": "",
-                "calculateTooltip": false,
-                "calculateLabel": false,
+                "chartjsPluginsOptions": {
+                  "calculateTooltip": true,
+                  "calculateLabel": true
+                },
                 "type": "horizontalBar",
                 "styleClass": "col-md-8 margin-top-24",
                 "data": {
@@ -672,8 +684,6 @@
                       "fontColor": "#000"
                     }
                   },
-                  "responsive": false,
-                  "maintainAspectRatio": false,
                   "scales": {
                     "xAxes": [{
                      "stacked": true
@@ -716,8 +726,10 @@
               },
               "middleMiddle": {
                 "value": "",
-                "calculateTooltip": true,
-                "calculateLabel": true,
+                "chartjsPluginsOptions": {
+                  "calculateTooltip": true,
+                  "calculateLabel": true
+                },
                 "type": "bar",
                 "styleClass": "col-md-8 margin-top-24",
                 "data": {
