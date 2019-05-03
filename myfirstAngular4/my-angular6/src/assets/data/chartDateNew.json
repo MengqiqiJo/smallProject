@@ -2,13 +2,14 @@
   "primengcontentdata":[
     {
       "tabShow": "hide",
-      "isChart": true,
+      "isChartjs": true,
       "blockHeader": "",
       "blockClass": "col-md-4 margin-top-24",
       "blockClassSub": "",
       "blockContent": [
         {
           "tabTitle": "",
+          "calculateTooltip": true,
           "tabData":
           {
             "type": "chart",
@@ -46,6 +47,13 @@
                 "options": {
                   "legend": {
                     "display": false
+                  },
+                  "plugins": {
+                    "labels": {
+                      "render": "percentage",
+                      "fontColor": "#ffffff",
+                      "fontSize": 10
+                    }
                   }
                 }
               },
@@ -64,13 +72,14 @@
     },
     {
       "tabShow": "hide",
-      "isChart": true,
+      "isChartjs": true,
       "blockHeader": "",
       "blockClass": "col-md-4 margin-top-24",
       "blockClassSub": "",
       "blockContent": [
         {
           "tabTitle": "",
+          "calculateTooltip": true,
           "tabData":
           {
             "type": "chart",
@@ -106,6 +115,13 @@
                 "options": {
                   "legend": {
                     "display": false
+                  },
+                  "plugins": {
+                    "labels": {
+                      "render": "value",
+                      "fontColor": "#000",
+                      "fontSize": 10
+                    }
                   }
                 }
               },
@@ -124,13 +140,14 @@
     },
     {
       "tabShow": "hide",
-      "isChart": false,
+      "isChartjs": false,
       "blockHeader": "",
       "blockClass": "col-md-4 margin-top-24",
       "blockClassSub": "",
       "blockContent": [
         {
           "tabTitle": "",
+          "calculateTooltip": true,
           "tabData":
           {
             "type": "chart",
@@ -149,6 +166,7 @@
               },
               "middleMiddle": {
                 "value": "",
+                "renderLabel": "percentage",
                 "type": "doughnut",
                 "styleClass": "col-md-6 margin-top-24",
                 "data": {
@@ -165,6 +183,13 @@
                 "options": {
                   "legend": {
                     "display": false
+                  },
+                  "plugins": {
+                    "labels": {
+                      "render": "value",
+                      "fontColor": "#000",
+                      "fontSize": 10
+                    }
                   }
                 }
               },
@@ -183,13 +208,14 @@
     },
     {
       "tabShow": "hide",
-      "isChart": true,
+      "isChartjs": true,
       "blockHeader": "",
       "blockClass": "col-md-4 margin-top-24",
       "blockClassSub": "",
       "blockContent": [
         {
           "tabTitle": "",
+          "calculateTooltip": true,
           "tabData":
           {
             "blockId": "barChart",
@@ -280,13 +306,14 @@
     },
     {
         "tabShow": "show",
-        "isChart": false,
+        "isChartjs": true,
         "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Speaker Identify and address only render on getBlockMultiContainer111</span></div>",
         "blockClass": "col-md-6 margin-top-24",
         "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
         "blockContent": [
           {
             "tabTitle": "Tab21",
+            "calculateTooltip": true,
             "tabData":
             {
               "blockId": "pieChart",
@@ -305,6 +332,7 @@
                   "value": ""
                 },
                 "middleMiddle": {
+                  "renderLabel": "percentage",
                   "value": "<div class=\"height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
                   "type": "pie",
                   "styleClass": "col-md-6 margin-top-24",
@@ -326,6 +354,13 @@
                   "options": {
                     "legend": {
                       "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
                     }
                   }
                 },
@@ -342,6 +377,7 @@
           },
           {
             "tabTitle": "Tab2",
+            "calculateTooltip": false,
             "tabData":
             {
               "blockId": "barChart",
@@ -390,11 +426,11 @@
                       {
                         "label": "of votes",
                         "data": [
-                          138,
-                          4,
-                          9,
-                          1,
-                          1,
+                          38,
+                          24,
+                          93,
+                          12,
+                          31,
                           11
                         ],
                         "backgroundColor": "#00134b",
@@ -406,6 +442,13 @@
                   "options": {
                     "legend": {
                       "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
                     },
                     "scales": {
                       "xAxes": [{

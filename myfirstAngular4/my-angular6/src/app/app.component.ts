@@ -78,100 +78,67 @@ export class AppComponent implements OnInit {
       
       this.primengDataGeneral.forEach(eachBlockData => {
         this.blockData = eachBlockData;
-        this.blockIsChart = eachBlockData.isChart;
+        this.blockIsChart = eachBlockData.isChartjs;
+
 
         this.blockData.blockContent.forEach(eachTabData => {
           this.tabContent = eachTabData;
           
           if (this.blockIsChart) {
-            if (this.tabContent['tabData'].middle.middleMiddle.renderLabel == "value") {
-              this.pluginLabel = {
-                  labels: {
-                    render: this.tabContent['tabData'].middle.middleMiddle.renderLabel,
-                    fontColor: "#000",
-                    fontSize: 10
-                  }
-                };
-            }
-            else {
-              this.pluginLabel = {
-                  labels: {
-                    render: function(args) {
-                      console.log(args.percentage);
-                      var result = '';
-                      if (args.percentage > 5) {
-                        result = args.percentage + " %";
-                      }
-                      return result;
+            if (this.tabContent.calculateTooltip) {
 
-                    },
-                    fontColor: "#fff",
-                    fontSize: 10
-                  }
-                };
-            }
+              if (this.tabContent['tabData'].middle.middleMiddle.renderLabel == "value") {
 
-            this.tabContent['tabData'].middle.middleMiddle.options = {
-                legend: {
-                  display: false
-                },
-                plugins: this.pluginLabel,
-                animation: {
-                  animateScale: true,
-                  animateRotate: true
-                },
-                tooltips: {
-                  callbacks: {
-                    label: function(tooltipItem, data) {
-                      var dataset = data.datasets[tooltipItem.datasetIndex];
-                      var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-                        return previousValue + currentValue;
-                      });
-                      var currentValue = dataset.data[tooltipItem.index];
-                      var percentage = Math.floor(((currentValue/total) * 100)+0.5);       
-                      return currentValue + ' - - ' + percentage + "%";
-                    }
+                this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = "value";
+                // this.pluginLabel = {
+                //     labels: {
+                //       render: this.tabContent['tabData'].middle.middleMiddle.renderLabel,
+                //       fontColor: "#000",
+                //       fontSize: 10
+                //     }
+                //   };
+              }
+              else {
+                console.log(this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render);
+                this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = function(args) {
+                  var result = '';
+                  if (args.percentage > 5) {
+                    result = args.percentage + " %";
+                  }
+                  return result;
+
+                };
+                // this.pluginLabel = {
+                //     labels: {
+                //       render: function(args) {
+                //         var result = '';
+                //         if (args.percentage > 5) {
+                //           result = args.percentage + " %";
+                //         }
+                //         return result;
+
+                //       },
+                //       fontColor: "#fff",
+                //       fontSize: 10
+                //     }
+                //   };
+              }
+
+              this.tabContent['tabData'].middle.middleMiddle.options.tooltips = {
+                callbacks: {
+                  label: function(tooltipItem, data) {
+                    var dataset = data.datasets[tooltipItem.datasetIndex];
+                    var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                      return previousValue + currentValue;
+                    });
+                    var currentValue = dataset.data[tooltipItem.index];
+                    var percentage = Math.floor(((currentValue/total) * 100)+0.5);       
+                    return currentValue + ' - - ' + percentage + "%";
                   }
                 }
               };
 
-
-            // this.canvas = document.getElementById('canvas');
-            // this.ctx = this.canvas.getContext('2d');
-            // let myChart = new Chart(this.ctx, {
-            //   type: this.tabContent['tabData'].middle.middleMiddle.type,
-            //   data: this.tabContent['tabData'].middle.middleMiddle.data,
-            //   options: {
-            //     legend: {
-            //       display: false
-            //     },
-            //     scales: {
-            //       xAxes: [{
-            //         display: true
-            //       }],
-            //       yAxes: [{
-            //         display: true
-            //       }],
-            //     },
-            //     animation: {
-            //       animateScale: true,
-            //       animateRotate: true
-            //     },
-            //     tooltips: {
-            //       callbacks: {
-            //         label: function(tooltipItem, data) {
-            //           var dataset = data.datasets[tooltipItem.datasetIndex];
-            //           var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-            //             return previousValue + currentValue;
-            //           });
-            //           var currentValue = dataset.data[tooltipItem.index];
-            //           var percentage = Math.floor(((currentValue/total) * 100)+0.5);         
-            //           return percentage + "%";
-            //         }
-            //       }
-            //     }
-            //   }
-            // });
+            }
           }
         });
       });
