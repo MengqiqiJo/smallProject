@@ -85,45 +85,24 @@ export class AppComponent implements OnInit {
           this.tabContent = eachTabData;
           
           if (this.blockIsChart) {
-            if (this.tabContent.calculateTooltip) {
+            if (this.tabContent.calculateLabel) {
 
               if (this.tabContent['tabData'].middle.middleMiddle.renderLabel == "value") {
-
                 this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = "value";
-                // this.pluginLabel = {
-                //     labels: {
-                //       render: this.tabContent['tabData'].middle.middleMiddle.renderLabel,
-                //       fontColor: "#000",
-                //       fontSize: 10
-                //     }
-                //   };
               }
               else {
-                console.log(this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render);
                 this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = function(args) {
+                  console.log(args);
                   var result = '';
                   if (args.percentage > 5) {
                     result = args.percentage + " %";
                   }
                   return result;
-
                 };
-                // this.pluginLabel = {
-                //     labels: {
-                //       render: function(args) {
-                //         var result = '';
-                //         if (args.percentage > 5) {
-                //           result = args.percentage + " %";
-                //         }
-                //         return result;
-
-                //       },
-                //       fontColor: "#fff",
-                //       fontSize: 10
-                //     }
-                //   };
               }
+            }
 
+            if (this.tabContent.calculateTooltip) {
               this.tabContent['tabData'].middle.middleMiddle.options.tooltips = {
                 callbacks: {
                   label: function(tooltipItem, data) {
@@ -137,8 +116,8 @@ export class AppComponent implements OnInit {
                   }
                 }
               };
-
             }
+
           }
         });
       });

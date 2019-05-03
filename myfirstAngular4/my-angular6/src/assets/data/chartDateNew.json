@@ -10,6 +10,7 @@
         {
           "tabTitle": "",
           "calculateTooltip": true,
+          "calculateLabel": true,
           "tabData":
           {
             "type": "chart",
@@ -80,6 +81,7 @@
         {
           "tabTitle": "",
           "calculateTooltip": true,
+          "calculateLabel": true,
           "tabData":
           {
             "type": "chart",
@@ -148,6 +150,7 @@
         {
           "tabTitle": "",
           "calculateTooltip": true,
+          "calculateLabel": true,
           "tabData":
           {
             "type": "chart",
@@ -216,6 +219,7 @@
         {
           "tabTitle": "",
           "calculateTooltip": true,
+          "calculateLabel": true,
           "tabData":
           {
             "blockId": "barChart",
@@ -314,6 +318,7 @@
           {
             "tabTitle": "Tab21",
             "calculateTooltip": true,
+            "calculateLabel": true,
             "tabData":
             {
               "blockId": "pieChart",
@@ -339,7 +344,7 @@
                   "data": {
                     "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
                     "datasets": [{
-                      "label": "of votes",
+                      "label": "",
                       "data": [49, 10, 10, 8, 84, 3],
                       "backgroundColor": [
                         "#0093d0",
@@ -378,6 +383,7 @@
           {
             "tabTitle": "Tab2",
             "calculateTooltip": false,
+            "calculateLabel": false,
             "tabData":
             {
               "blockId": "barChart",
@@ -396,6 +402,7 @@
                   "value": ""
                 },
                 "middleMiddle": {
+                  "renderLabel": "percentage",
                   "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
                   "type": "bar",
                   "styleClass": "col-md-12 margin-top-24",
@@ -410,7 +417,7 @@
                     ],
                     "datasets": [
                       {
-                        "label": "of votes",
+                        "label": "",
                         "data": [
                           138,
                           4,
@@ -445,7 +452,7 @@
                     },
                     "plugins": {
                       "labels": {
-                        "render": "value",
+                        "render": "percentage",
                         "fontColor": "#000",
                         "fontSize": 10
                       }
