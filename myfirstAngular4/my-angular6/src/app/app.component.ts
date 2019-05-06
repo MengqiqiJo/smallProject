@@ -79,24 +79,16 @@ export class AppComponent implements OnInit {
       this.primengDataGeneral = this.sectionContent.primengcontentdata;
       
       this.primengDataGeneral.forEach(eachBlockData => {
-        this.blockData = eachBlockData;
-
-
-        this.blockData.blockContent.forEach(eachTabData => {
-          this.tabContent = eachTabData;
-          
+        eachBlockData.blockContent.forEach(eachTabData => {
           if (eachBlockData.isChartjs) {
-            
-            if (typeof this.tabContent.chartjsPluginsOptions !== 'undefined') {
-
-              if (typeof this.tabContent.chartjsPluginsOptions.calculateLabel !== 'undefined') {
-                if (this.tabContent.chartjsPluginsOptions.calculateLabel) {
-
-                  if (this.tabContent['tabData'].middle.middleMiddle.renderLabel == "value") {
-                    this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = "value";
+            if (typeof eachTabData.chartjsPluginsOptions !== 'undefined') {
+              if (typeof eachTabData.chartjsPluginsOptions.calculateLabel !== 'undefined') {
+                if (eachTabData.chartjsPluginsOptions.calculateLabel) {
+                  if (eachTabData['tabData'].middle.middleMiddle.renderLabel == "value") {
+                    eachTabData['tabData'].middle.middleMiddle.options.plugins.labels.render = "value";
                   }
                   else {
-                    this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = function(args) {
+                    eachTabData['tabData'].middle.middleMiddle.options.plugins.labels.render = function(args) {
                       var result = '';
                       if (args.percentage > 5) {
                         result = args.percentage + " %";
@@ -107,9 +99,9 @@ export class AppComponent implements OnInit {
                 }
               }
 
-              if (typeof this.tabContent.chartjsPluginsOptions.calculateLabel !== 'undefined') {
-                if (this.tabContent.chartjsPluginsOptions.calculateTooltip) {
-                  this.tabContent['tabData'].middle.middleMiddle.options.tooltips = {
+              if (typeof eachTabData.chartjsPluginsOptions.calculateLabel !== 'undefined') {
+                if (eachTabData.chartjsPluginsOptions.calculateTooltip) {
+                  eachTabData['tabData'].middle.middleMiddle.options.tooltips = {
                     callbacks: {
                       label: function(tooltipItem, data) {
                         var dataset = data.datasets[tooltipItem.datasetIndex];
@@ -124,11 +116,12 @@ export class AppComponent implements OnInit {
                   };
                 }
               }
-
             }
           }
         });
       });
+
+      
     }, // Bind to view
     err => {
       // Log errors if any
