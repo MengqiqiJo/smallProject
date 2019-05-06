@@ -80,50 +80,52 @@ export class AppComponent implements OnInit {
       
       this.primengDataGeneral.forEach(eachBlockData => {
         this.blockData = eachBlockData;
-        this.blockIsChart = eachBlockData.isChartjs;
 
 
         this.blockData.blockContent.forEach(eachTabData => {
           this.tabContent = eachTabData;
           
-          if (this.blockIsChart) {
-            if (this.tabContent.chartjsPluginsOptions.calculateLabel) {
+          if (eachBlockData.isChartjs) {
+            
+            if (typeof this.tabContent.chartjsPluginsOptions !== 'undefined') {
 
-              if (this.tabContent['tabData'].middle.middleMiddle.renderLabel == "value") {
-                this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = "value";
-              }
-              else {
-                this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = function(args) {
-                  var result = '';
-                  if (args.percentage > 5) {
-                    result = args.percentage + " %";
+              if (typeof this.tabContent.chartjsPluginsOptions.calculateLabel !== 'undefined') {
+                if (this.tabContent.chartjsPluginsOptions.calculateLabel) {
+
+                  if (this.tabContent['tabData'].middle.middleMiddle.renderLabel == "value") {
+                    this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = "value";
                   }
-                  return result;
-                };
-              }
-            }
-
-            // isset(this.tabContent.calculateTooltip)
-            // "chartjsPluginsOptions": {
-            //   "calculateTooltip": true,
-            //   "calculateLabel": true
-            // }
-            if (this.tabContent.chartjsPluginsOptions.calculateTooltip) {
-              this.tabContent['tabData'].middle.middleMiddle.options.tooltips = {
-                callbacks: {
-                  label: function(tooltipItem, data) {
-                    var dataset = data.datasets[tooltipItem.datasetIndex];
-                    var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-                      return previousValue + currentValue;
-                    });
-                    var currentValue = dataset.data[tooltipItem.index];
-                    var percentage = Math.floor(((currentValue/total) * 100)+0.5);       
-                    return currentValue + ' - - ' + percentage + "%";
+                  else {
+                    this.tabContent['tabData'].middle.middleMiddle.options.plugins.labels.render = function(args) {
+                      var result = '';
+                      if (args.percentage > 5) {
+                        result = args.percentage + " %";
+                      }
+                      return result;
+                    };
                   }
                 }
-              };
-            }
+              }
 
+              if (typeof this.tabContent.chartjsPluginsOptions.calculateLabel !== 'undefined') {
+                if (this.tabContent.chartjsPluginsOptions.calculateTooltip) {
+                  this.tabContent['tabData'].middle.middleMiddle.options.tooltips = {
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                        var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                          return previousValue + currentValue;
+                        });
+                        var currentValue = dataset.data[tooltipItem.index];
+                        var percentage = Math.floor(((currentValue/total) * 100)+0.5);       
+                        return currentValue + ' - - ' + percentage + "%";
+                      }
+                    }
+                  };
+                }
+              }
+
+            }
           }
         });
       });
