@@ -622,6 +622,7 @@
                      "stacked": true
                     }],
                     "yAxes": [{
+                      "barPercentage": 0.4,
                       "stacked": true
                     }]
                   }
@@ -707,12 +708,15 @@
                   "scales": {
                     "xAxes": [{
                       "stacked": true,
+                      "barPercentage": 0.2,
                       "ticks": {
                         "beginAtZero": true
                       }
                     }],
                     "yAxes": [{
                       "stacked": false,
+                      "barPercentage": 0.2,
+                      "maxBarThickness": 100,
                       "ticks": {
                         "beginAtZero": true
                       }
