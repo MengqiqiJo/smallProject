@@ -1,6 +1,18 @@
-<input type="text" [(ngModel)]="name" >
-<p>{{name}}</p>
 
-<h1>
-	<app-server></app-server>
-</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>hello this is my app</h3>
+			<hr>
+		</div>
+		<div class="col-md-6">
+			<input type="text" [(ngModel)]="name" >
+			<p>{{name}}</p>
+		</div>
+		<div class="col-md-6">
+			<h1>
+				<app-servers></app-servers>
+			</h1>
+		</div>
+	</div>
+</div>

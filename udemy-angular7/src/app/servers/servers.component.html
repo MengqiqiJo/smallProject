@@ -1,0 +1,11 @@
+
+<!-- Data Binding: property binding -->
+<button class="btn btn-primary" [disabled]="allowNewServer" (click)="onCreateServer()"> add server </button>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+{{serverName}}
+<!-- Data Binding: string interpolation -->
+<p>{{ allowNewServer }}</p>
+<p [innerText]="allowNewServer"></p>
+<p>{{serverCreationStatus}}</p>
+<app-server></app-server>
+<app-server></app-server>
