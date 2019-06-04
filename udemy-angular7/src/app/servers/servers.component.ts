@@ -14,18 +14,27 @@ import { Component, OnInit } from '@angular/core';
 	 //  <app-server></app-server>
 	 //  <app-server></app-server>`,
   templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.css']
+  styles: [`
+	.online {
+		color: white;
+	}
+  `]
+  // styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
 	allowNewServer = true;
 
 	serverCreationStatus = "no server was created";
-	serverName = '';
+	serverName = 'test server';
+	serverCreated = false;
+	serverStatus: string = 'offline';
 
   constructor() { 
   	setTimeout(() => {
   		this.allowNewServer = false;
   	}, 2000);
+
+  	this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
   }
 
   ngOnInit() {
@@ -33,12 +42,18 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
   	this.serverCreationStatus = "server was created";
+
+  	this.serverCreated = true; 
   }
 
   onUpdateServerName(event: any) {
   	console.log(event);
 
   	this.serverName = (<HTMLInputElement>event.target).value;
+  }
+
+  getColor() {
+  	return this.serverStatus === 'online' ? 'green' : 'red';
   }
 
 }
