@@ -15,24 +15,64 @@
 </div>
  -->
 
-<div class="row">
-  <div class="col-md-4">
-    <p-tabView>
-        <p-tabPanel header="D3 Chart">
-           <!-- <div class="row"> -->
-             
-           <!-- </div> -->
-        </p-tabPanel>
-        <p-tabPanel header="D3 Chart Text">
-          <p>this is the second tab view of primeng</p>
-          <p>this is the second tab view of primeng</p>
-          <p>this is the second tab view of primeng</p>
-          <p>this is the second tab view of primeng</p>
-          <p>this is the second tab view of primeng</p>
-        </p-tabPanel>
-    </p-tabView>
+<div>
+  <p-dropdown [options]="businessUnit" [(ngModel)]="selectedCity" placeholder="Business Unit" optionLabel="name" [showClear]="false" (onChange)="updateTherapeuticAreas($event)" [autoWidth]="false" [style]="{'width': '300px'}"></p-dropdown>
+</div>
+
+<div>
+  <p-dropdown [options]="availableTherapArea" [(ngModel)]="selectedTherap" placeholder="Therapetic Area" optionLabel="therapAreaName" [showClear]="false" (onChange)="updateProgram($event)" [autoWidth]="false" [style]="{'width': '300px'}"></p-dropdown>
+</div>
+<div>
+  <p-dropdown [options]="availableProgram" [(ngModel)]="selectedProgram" placeholder="Select Program" optionLabel="programName" [showClear]="false" (onChange)="updateSubmitButton($event)" filter="true" [autoWidth]="false" [style]="{'width': '300px'}"></p-dropdown>
+</div>
+<div>
+  <p-button label="Generate Report" [disabled]="enableHCPSubmitButton"></p-button>
+</div>
+<hr>
+<hr>
+<div>
+  <h3>Current Password</h3>
+  <span class="ui-float-label">
+      <input type="text" size="30" pInputText [(ngModel)]="text" required="true"> 
+  </span>
+</div>
+<div>
+  <h3>Email Address *</h3>
+  <span class="ui-float-label">
+      <input type="text" size="30" pInputText [(ngModel)]="text"> 
+  </span>
+</div>
+<div>
+  <h3>User Name *</h3>
+  <span class="ui-float-label">
+      <input type="text" size="30" pInputText [(ngModel)]="text"> 
+  </span>
+</div>
+<div>
+  <h3>Password *</h3>
+  <input type="password" pPassword />
+</div>
+
+<div>
+  <h3 class="first">status</h3>
+  <div class="ui-g" style="width:250px;margin-bottom:10px">
+      <div class="ui-g-12"><p-radioButton name="group1" value="Blocked" label="Blocked" [(ngModel)]="val1" inputId="opt1"></p-radioButton></div>
+      <div class="ui-g-12"><p-radioButton name="group1" value="Active" label="Active" [(ngModel)]="val1" inputId="opt2"></p-radioButton></div>
   </div>
 </div>
+Selected Value = {{val1||'none'}}
+
+<div>
+  <h3 class="first">Roles</h3>
+  <div class="ui-g" style="width:250px;margin-bottom:10px">
+      <div class="ui-g-12"><p-checkbox name="group1" value="Speaker" label="Speaker" [(ngModel)]="selectedRoles" inputId="ny"></p-checkbox></div>
+      <div class="ui-g-12"><p-checkbox name="group1" value="Rep" label="Rep" [(ngModel)]="selectedRoles" inputId="sf"></p-checkbox></div>
+      <div class="ui-g-12"><p-checkbox name="group1" value="Siteadmin" label="Siteadmin" [(ngModel)]="selectedRoles" inputId="la"></p-checkbox></div>
+      <div class="ui-g-12"><p-checkbox name="group1" value="Moderator" label="Moderator" [(ngModel)]="selectedRoles" inputId="la"></p-checkbox></div>
+      <div class="ui-g-12"><p-checkbox name="group1" value="Client" label="Client" [(ngModel)]="selectedRoles" inputId="la"></p-checkbox></div>
+  </div>
+</div>
+Selected Roles: <span *ngFor="let role of selectedRoles" style="margin-right:10px">{{role}}</span>
 
 <div class="row" for="primengDataGeneral">
   <div *ngFor="let blockData of primengDataGeneral" >

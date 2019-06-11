@@ -4,11 +4,16 @@ import { NgModule } from '@angular/core';
 import { AccordionModule } from 'primeng/primeng';
 import { PanelModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
-import { RadioButtonModule } from 'primeng/primeng';
 
 import { DataTableModule, SharedModule } from 'primeng/primeng';
 import { TableModule } from 'primeng/table';
+
+
 import { DropdownModule } from 'primeng/primeng';
+import {InputTextModule} from 'primeng/inputtext';
+import {PasswordModule} from 'primeng/password';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import {CheckboxModule} from 'primeng/checkbox';
 import { MultiSelectModule } from 'primeng/primeng';
 
 import { PaginatorModule } from 'primeng/primeng';
@@ -49,7 +54,10 @@ import {NgxEchartsModule} from 'ngx-echarts'
     MultiSelectModule,
     PaginatorModule,
     TabViewModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    InputTextModule,
+    PasswordModule,
+    CheckboxModule
 
   ],
   providers: [],

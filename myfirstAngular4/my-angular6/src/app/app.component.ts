@@ -3,6 +3,8 @@ import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild} from '@ang
 import { MyappService } from './myapp.service';
 import { CopyComponent } from './app.copycomponent';
 
+import {SelectItem} from 'primeng/api';
+
 import * as html2canvas from "html2canvas";
 
 import echarts from 'echarts';
@@ -66,9 +68,124 @@ export class AppComponent implements OnInit {
   d3pieChart ;
 
 
- 
+businessUnit: any[];
+therapArea: any[];
+programArea: any[];
+availableTherapArea: any[];
+availableProgram: any[];
+enableHCPSubmitButton : boolean;
+selectedCity: string;
+selectedTherap: string;
+selectedProgram: string;
+text: string;
+val1: string;
+selectedRoles: string[] = [];
 
   constructor(private myService: MyappService) {
+
+    this.businessUnit = [
+      {businessUnitId : 1, name: 'Immunology'},
+      {businessUnitId : 2, name: 'Oncology'},
+      {businessUnitId : 3, name: 'Speacialty'}
+    ];
+
+    this.availableTherapArea = [];
+    this.availableProgram = [];
+    this.enableHCPSubmitButton = true;
+    
+    this.therapArea = [
+      {
+        businessUnitId : 1,
+        therapAreaId : 6,
+        therapAreaName : "Hematology"
+      },
+      {
+        businessUnitId : 1,
+        therapAreaId : 7,
+        therapAreaName : "solid Tumor"
+      },
+      {
+        businessUnitId : 2,
+        therapAreaId : 8,
+        therapAreaName : "Bio T"
+      },
+      {
+        businessUnitId : 2,
+        therapAreaId : 9,
+        therapAreaName : "Dermatology"
+      },
+      {
+        businessUnitId : 3,
+        therapAreaId : 10,
+        therapAreaName : "Gastrointestinal"
+      }
+    ];
+
+    this.programArea = [
+      {
+        therapAreaId : 6,
+        programId : 11,
+        programName : "CONII - Value Based Advisory Board"
+      },
+      {
+        therapAreaId : 7,
+        programId : 12,
+        programName : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
+      },
+      {
+        therapAreaId : 6,
+        programId : 13,
+        programName : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
+      },
+      {
+        therapAreaId : 7,
+        programId : 14,
+        programName : "CONII – Hematology Advisory Board"
+      },
+      {
+        therapAreaId : 7,
+        programId : 15,
+        programName : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
+      }
+    ];
+
+  }
+
+  updateTherapeuticAreas(event) {
+    var temporaryTherap = [];
+
+      this.therapArea.forEach(thearpData => {
+        if (thearpData.businessUnitId == event.value.businessUnitId) {
+          console.log("thearpData");
+          console.log(thearpData);
+          // this.availableTherapArea.push(thearpData);
+          // console.log(this.availableTherapArea);
+          temporaryTherap.push(thearpData);
+        }
+      });
+
+      this.availableTherapArea = temporaryTherap;
+  }
+
+  updateProgram(event) {
+    var temopraryProgram = [];
+
+    this.programArea.forEach(programData => {
+      if (programData.therapAreaId == event.value.therapAreaId) {
+        temopraryProgram.push(programData);
+        console.log(temopraryProgram);
+      }
+    });
+
+    this.availableProgram = temopraryProgram;
+  }
+
+  updateSubmitButton(event) {
+    console.log(event);
+    console.log(this.enableHCPSubmitButton);
+    this.enableHCPSubmitButton = false;
+    console.log(this.enableHCPSubmitButton);
+    
   }
 
   // get all data 
@@ -266,6 +383,8 @@ export class AppComponent implements OnInit {
   @ViewChild('divClick') divClick: ElementRef;
 
   ngOnInit() {
+
+
 
     setTimeout(() => {
       // this.divClick.nativeElement.click();
