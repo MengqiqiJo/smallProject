@@ -185,7 +185,6 @@ selectedRoles: string[] = [];
     console.log(this.enableHCPSubmitButton);
     this.enableHCPSubmitButton = false;
     console.log(this.enableHCPSubmitButton);
-    
   }
 
   // get all data 
