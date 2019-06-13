@@ -48,11 +48,14 @@
       <input type="text" size="30" pInputText [(ngModel)]="text"> 
   </span>
 </div>
-<div>
+
+<!-- password input -->
+<div class="password">
   <h3>Password *</h3>
   <input type="password" pPassword />
 </div>
 
+<!-- radio -->
 <div>
   <h3 class="first">status</h3>
   <div class="ui-g" style="width:250px;margin-bottom:10px">
@@ -62,17 +65,30 @@
 </div>
 Selected Value = {{val1||'none'}}
 
-<div>
+<!-- check box -->
+<div for="userRoles">
   <h3 class="first">Roles</h3>
-  <div class="ui-g" style="width:250px;margin-bottom:10px">
-      <div class="ui-g-12"><p-checkbox name="group1" value="Speaker" label="Speaker" [(ngModel)]="selectedRoles" inputId="ny"></p-checkbox></div>
-      <div class="ui-g-12"><p-checkbox name="group1" value="Rep" label="Rep" [(ngModel)]="selectedRoles" inputId="sf"></p-checkbox></div>
-      <div class="ui-g-12"><p-checkbox name="group1" value="Siteadmin" label="Siteadmin" [(ngModel)]="selectedRoles" inputId="la"></p-checkbox></div>
-      <div class="ui-g-12"><p-checkbox name="group1" value="Moderator" label="Moderator" [(ngModel)]="selectedRoles" inputId="la"></p-checkbox></div>
-      <div class="ui-g-12"><p-checkbox name="group1" value="Client" label="Client" [(ngModel)]="selectedRoles" inputId="la"></p-checkbox></div>
+  <div class="ui-g" style="width:250px;margin-bottom:10px" *ngFor="let userRole of userRoles">
+      <div class="ui-g-12"><p-checkbox name="{{userRole.name}}" value="{{userRole.value}}" label="{{userRole.label}}" [(ngModel)]="selectedRoles"></p-checkbox></div>
   </div>
 </div>
 Selected Roles: <span *ngFor="let role of selectedRoles" style="margin-right:10px">{{role}}</span>
+
+<!-- button -->
+<div>
+  <button pButton type="button" label="SAVE" class="save-button" style="margin: 10px;"></button>
+  <button pButton type="button" label="CANCEL ACCOUNT" class="cancel-button" style="margin: 10px;"></button>
+</div>
+
+
+<p-dialog header="tabTitle" [(visible)]="display" [modal]="true" [responsive]="true" [style]="{width: '350px', minWidth: '200px'}" [minY]="70" 
+[maximizable]="true" [baseZIndex]="10000">
+  <p>pop up dialog</p>
+</p-dialog>
+<button type="button" (click)="showDialog()" pButton icon="pi pi-info-circle" label="Show dialog"></button>
+
+
+
 
 <div class="row" for="primengDataGeneral">
   <div *ngFor="let blockData of primengDataGeneral" >

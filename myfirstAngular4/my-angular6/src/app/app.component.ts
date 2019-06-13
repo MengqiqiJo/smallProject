@@ -80,6 +80,8 @@ selectedProgram: string;
 text: string;
 val1: string;
 selectedRoles: string[] = [];
+display: boolean = false;
+userRoles: any[];
 
   constructor(private myService: MyappService) {
 
@@ -149,6 +151,34 @@ selectedRoles: string[] = [];
       }
     ];
 
+    this.userRoles = [
+      {
+        name: "answer1",
+        value: "Speaker",
+        label: "Speaker"
+      },
+      {
+        name: "answer2",
+        value: "Rep",
+        label: "Rep"
+      },
+      {
+        name: "answer3",
+        value: "Siteadmin",
+        label: "Siteadmin"
+      },
+      {
+        name: "answer4",
+        value: "Moderate",
+        label: "Moderate"
+      },
+      {
+        name: "answer5",
+        value: "Client",
+        label: "Client"
+      }
+    ];
+
   }
 
   updateTherapeuticAreas(event) {
@@ -185,6 +215,10 @@ selectedRoles: string[] = [];
     console.log(this.enableHCPSubmitButton);
     this.enableHCPSubmitButton = false;
     console.log(this.enableHCPSubmitButton);
+  }
+
+  showDialog() {
+    this.display = true;
   }
 
   // get all data 

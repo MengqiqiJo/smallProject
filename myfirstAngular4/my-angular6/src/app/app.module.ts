@@ -15,6 +15,7 @@ import {PasswordModule} from 'primeng/password';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {CheckboxModule} from 'primeng/checkbox';
 import { MultiSelectModule } from 'primeng/primeng';
+import {DialogModule} from 'primeng/dialog';
 
 import { PaginatorModule } from 'primeng/primeng';
 
@@ -57,8 +58,8 @@ import {NgxEchartsModule} from 'ngx-echarts'
     NgxEchartsModule,
     InputTextModule,
     PasswordModule,
-    CheckboxModule
-
+    CheckboxModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,18 @@
-
+.ui-float-label input, .password input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 300px;
+}
+.ui-float-label input:focus {
+  outline: none;
+}
+.save-button {
+  background-color: green !important;
+}
+.cancel-button {
+  background-color: red !important;
+}
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
