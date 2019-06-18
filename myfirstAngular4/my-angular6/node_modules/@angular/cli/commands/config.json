@@ -1,39 +1,44 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "ConfigCommandOptions",
-  "description": "Get/set configuration values.",
+  "$id": "ng-cli://commands/config.json",
+  "description": "Retrieves or sets Angular configuration values in the angular.json file for the workspace.",
   "$longDescription": "",
 
   "$aliases": [],
-  "$scope": "in",
+  "$scope": "all",
   "$type": "native",
   "$impl": "./config-impl#ConfigCommand",
 
   "type": "object",
-  "properties": {
-    "jsonPath": {
-      "type": "string",
-      "description": "The path to the value to get/set.",
-      "$default": {
-        "$source": "argv",
-        "index": 0
-      }
+  "allOf": [
+    {
+      "properties": {
+        "jsonPath": {
+          "type": "string",
+          "description": "The configuration key to set or query, in JSON path format. For example: \"a[3].foo.bar[2]\". If no new value is provided, returns the current value of this key.",
+          "$default": {
+            "$source": "argv",
+            "index": 0
+          }
+        },
+        "value": {
+          "type": ["string", "number", "boolean"],
+          "description": "If provided, a new value for the given configuration key.",
+          "$default": {
+            "$source": "argv",
+            "index": 1
+          }
+        },
+        "global": {
+          "type": "boolean",
+          "description": "When true, accesses the global configuration in the caller's home directory.",
+          "default": false,
+          "aliases": ["g"]
+        }
+      },
+      "required": [
+      ]
     },
-    "value": {
-      "type": "string",
-      "description": "The new value to be set.",
-      "$default": {
-        "$source": "argv",
-        "index": 1
-      }
-    },
-    "global": {
-      "type": "boolean",
-      "description": "Get/set the value in the global configuration (in your home directory).",
-      "default": false,
-      "aliases": ["g"]
-    }
-  },
-  "required": [
+    { "$ref": "./definitions.json#/definitions/base" }
   ]
 }

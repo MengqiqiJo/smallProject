@@ -85,71 +85,71 @@ userRoles: any[];
 
   constructor(private myService: MyappService) {
 
-    this.businessUnit = [
-      {businessUnitId : 1, name: 'Immunology'},
-      {businessUnitId : 2, name: 'Oncology'},
-      {businessUnitId : 3, name: 'Speacialty'}
-    ];
+    // this.businessUnit = [
+    //   {businessUnitId : 1, name: 'Immunology'},
+    //   {businessUnitId : 2, name: 'Oncology'},
+    //   {businessUnitId : 3, name: 'Speacialty'}
+    // ];
 
     this.availableTherapArea = [];
     this.availableProgram = [];
     this.enableHCPSubmitButton = true;
     
-    this.therapArea = [
-      {
-        businessUnitId : 1,
-        therapAreaId : 6,
-        therapAreaName : "Hematology"
-      },
-      {
-        businessUnitId : 1,
-        therapAreaId : 7,
-        therapAreaName : "solid Tumor"
-      },
-      {
-        businessUnitId : 2,
-        therapAreaId : 8,
-        therapAreaName : "Bio T"
-      },
-      {
-        businessUnitId : 2,
-        therapAreaId : 9,
-        therapAreaName : "Dermatology"
-      },
-      {
-        businessUnitId : 3,
-        therapAreaId : 10,
-        therapAreaName : "Gastrointestinal"
-      }
-    ];
+    // this.therapArea = [
+    //   {
+    //     businessUnitId : 1,
+    //     therapAreaId : 6,
+    //     therapAreaName : "Hematology"
+    //   },
+    //   {
+    //     businessUnitId : 1,
+    //     therapAreaId : 7,
+    //     therapAreaName : "solid Tumor"
+    //   },
+    //   {
+    //     businessUnitId : 2,
+    //     therapAreaId : 8,
+    //     therapAreaName : "Bio T"
+    //   },
+    //   {
+    //     businessUnitId : 2,
+    //     therapAreaId : 9,
+    //     therapAreaName : "Dermatology"
+    //   },
+    //   {
+    //     businessUnitId : 3,
+    //     therapAreaId : 10,
+    //     therapAreaName : "Gastrointestinal"
+    //   }
+    // ];
 
-    this.programArea = [
-      {
-        therapAreaId : 6,
-        programId : 11,
-        programName : "CONII - Value Based Advisory Board"
-      },
-      {
-        therapAreaId : 7,
-        programId : 12,
-        programName : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
-      },
-      {
-        therapAreaId : 6,
-        programId : 13,
-        programName : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
-      },
-      {
-        therapAreaId : 7,
-        programId : 14,
-        programName : "CONII – Hematology Advisory Board"
-      },
-      {
-        therapAreaId : 7,
-        programId : 15,
-        programName : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
-      }
-    ];
+    // this.programArea = [
+    //   {
+    //     therapAreaId : 6,
+    //     programId : 11,
+    //     programName : "CONII - Value Based Advisory Board"
+    //   },
+    //   {
+    //     therapAreaId : 7,
+    //     programId : 12,
+    //     programName : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
+    //   },
+    //   {
+    //     therapAreaId : 6,
+    //     programId : 13,
+    //     programName : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
+    //   },
+    //   {
+    //     therapAreaId : 7,
+    //     programId : 14,
+    //     programName : "CONII – Hematology Advisory Board"
+    //   },
+    //   {
+    //     therapAreaId : 7,
+    //     programId : 15,
+    //     programName : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
+    //   }
+    // ];
 
     this.userRoles = [
       {
@@ -181,6 +181,12 @@ userRoles: any[];
 
   }
 
+
+  buonclick() {
+    // this.availableTherapArea = [];
+    // this.selectedTherap = null;
+  }
+
   updateTherapeuticAreas(event) {
     var temporaryTherap = [];
 
@@ -194,7 +200,10 @@ userRoles: any[];
         }
       });
 
+      this.availableTherapArea = [];
       this.availableTherapArea = temporaryTherap;
+      this.availableProgram = [];
+
   }
 
   updateProgram(event) {
@@ -207,6 +216,7 @@ userRoles: any[];
       }
     });
 
+    this.availableProgram = [];
     this.availableProgram = temopraryProgram;
   }
 
@@ -226,6 +236,11 @@ userRoles: any[];
 
     this.myService.getMyJson().subscribe(data => {
       this.sectionContent = data;
+
+      this.businessUnit = this.sectionContent.hcpcontentdata[0].businessUnit;
+      this.therapArea = this.sectionContent.hcpcontentdata[0].therapArea;
+      this.programArea = this.sectionContent.hcpcontentdata[0].programArea;
+
       this.primengDataGeneral = this.sectionContent.primengcontentdata;
       
       this.primengDataGeneral.forEach(eachBlockData => {

@@ -8,8 +8,6 @@ export declare class Chips implements AfterContentInit, ControlValueAccessor {
     style: any;
     styleClass: string;
     disabled: boolean;
-    onAdd: EventEmitter<any>;
-    onRemove: EventEmitter<any>;
     field: string;
     placeholder: string;
     max: number;
@@ -20,8 +18,11 @@ export declare class Chips implements AfterContentInit, ControlValueAccessor {
     inputStyleClass: any;
     addOnTab: boolean;
     addOnBlur: boolean;
+    onAdd: EventEmitter<any>;
+    onRemove: EventEmitter<any>;
     onFocus: EventEmitter<any>;
     onBlur: EventEmitter<any>;
+    onChipClick: EventEmitter<any>;
     inputViewChild: ElementRef;
     templates: QueryList<any>;
     itemTemplate: TemplateRef<any>;
@@ -33,6 +34,7 @@ export declare class Chips implements AfterContentInit, ControlValueAccessor {
     constructor(el: ElementRef, domHandler: DomHandler);
     ngAfterContentInit(): void;
     onClick(event: any): void;
+    onItemClick(event: Event, item: any): void;
     writeValue(value: any): void;
     registerOnChange(fn: Function): void;
     registerOnTouched(fn: Function): void;

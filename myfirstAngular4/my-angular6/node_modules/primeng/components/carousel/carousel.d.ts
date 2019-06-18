@@ -23,7 +23,7 @@ export declare class Carousel implements AfterViewChecked, AfterViewInit, OnDest
     itemTemplate: TemplateRef<any>;
     left: any;
     items: any;
-    columns: any;
+    columns: number;
     page: number;
     valuesChanged: any;
     interval: any;

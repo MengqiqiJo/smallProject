@@ -11,6 +11,7 @@ export declare class ToggleButton implements ControlValueAccessor, AfterViewInit
     styleClass: string;
     inputId: string;
     tabindex: number;
+    iconPos: string;
     onChange: EventEmitter<any>;
     checkboxViewChild: ElementRef;
     checkbox: HTMLInputElement;

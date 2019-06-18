@@ -2,6 +2,7 @@ import Displayable from './Displayable';
 import * as zrUtil from '../core/util';
 import * as textContain from '../contain/text';
 import * as textHelper from './helper/text';
+import {ContextCachedBy} from './constant';
 
 /**
  * @alias zrender/graphic/Text
@@ -39,6 +40,9 @@ Text.prototype = {
         // style.bind(ctx, this, prevEl);
 
         if (!textHelper.needDrawText(text, style)) {
+            // The current el.style is not applied
+            // and should not be used as cache.
+            ctx.__attrCachedBy = ContextCachedBy.NONE;
             return;
         }
 
@@ -65,6 +69,7 @@ Text.prototype = {
                 style.textAlign,
                 style.textVerticalAlign,
                 style.textPadding,
+                style.textLineHeight,
                 style.rich
             );
 

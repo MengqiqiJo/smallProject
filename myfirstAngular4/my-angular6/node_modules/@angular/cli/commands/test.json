@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "TestCommandOptions",
-  "description": "Run unit tests in existing project.",
-  "$longDescription": "",
+  "$id": "ng-cli://commands/test.json",
+  "description": "Runs unit tests in a project.",
+  "$longDescription": "./test-long.md",
 
   "$aliases": [ "t" ],
   "$scope": "in",
@@ -10,25 +10,8 @@
   "$impl": "./test-impl#TestCommand",
 
   "type": "object",
-  "properties": {
-    "project": {
-      "type": "string",
-      "description": "The name of the project to test.",
-      "$default": {
-        "$source": "argv",
-        "index": 0
-      }
-    },
-    "configuration": {
-      "description": "Specify the configuration to use.",
-      "type": "string",
-      "aliases": ["c"]
-    },
-    "prod": {
-      "description": "Flag to set configuration to 'production'.",
-      "type": "boolean"
-    }
-  },
-  "required": [
+  "allOf": [
+    { "$ref": "./definitions.json#/definitions/architect" },
+    { "$ref": "./definitions.json#/definitions/base" }
   ]
 }

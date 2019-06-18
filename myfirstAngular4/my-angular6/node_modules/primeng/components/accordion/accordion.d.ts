@@ -8,6 +8,7 @@ export declare class AccordionTab implements OnDestroy {
     selected: boolean;
     disabled: boolean;
     selectedChange: EventEmitter<any>;
+    transitionOptions: string;
     headerFacet: QueryList<Header>;
     animating: boolean;
     id: string;

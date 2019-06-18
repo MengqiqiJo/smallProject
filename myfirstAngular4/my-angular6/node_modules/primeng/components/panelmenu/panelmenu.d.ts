@@ -5,12 +5,14 @@ export declare class BasePanelMenuItem {
 export declare class PanelMenuSub extends BasePanelMenuItem {
     item: MenuItem;
     expanded: boolean;
+    transitionOptions: string;
 }
 export declare class PanelMenu extends BasePanelMenuItem {
     model: MenuItem[];
     style: any;
     styleClass: string;
     multiple: boolean;
+    transitionOptions: string;
     animating: boolean;
     collapseAll(): void;
     handleClick(event: any, item: any): void;

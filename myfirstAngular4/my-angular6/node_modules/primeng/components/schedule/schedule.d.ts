@@ -42,7 +42,6 @@ export declare class Schedule implements DoCheck, OnDestroy, OnInit, OnChanges, 
     eventRender: Function;
     dayRender: Function;
     navLinks: boolean;
-    options: any;
     onDayClick: EventEmitter<any>;
     onDrop: EventEmitter<any>;
     onEventClick: EventEmitter<any>;
@@ -63,10 +62,12 @@ export declare class Schedule implements DoCheck, OnDestroy, OnInit, OnChanges, 
     differ: any;
     calendar: any;
     config: any;
+    _options: any;
     constructor(el: ElementRef, differs: IterableDiffers);
     ngOnInit(): void;
     ngAfterViewChecked(): void;
     ngOnChanges(changes: SimpleChanges): void;
+    options: any;
     initialize(): void;
     ngDoCheck(): void;
     ngOnDestroy(): void;

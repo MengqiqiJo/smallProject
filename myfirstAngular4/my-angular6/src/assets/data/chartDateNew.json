@@ -743,5 +743,68 @@
         }
       ]
     }
+  ],
+  "hcpcontentdata":[
+    {
+      "businessUnit": [
+        {"businessUnitId" : 1, "name": "Immunology"},
+        {"businessUnitId" : 2, "name": "Oncology"},
+        {"businessUnitId" : 3, "name": "Speacialty"}
+      ],
+      "therapArea":[
+        {
+          "businessUnitId" : 1,
+          "therapAreaId" : 6,
+          "therapAreaName" : "Hematology"
+        },
+        {
+          "businessUnitId" : 1,
+          "therapAreaId" : 7,
+          "therapAreaName" : "solid Tumor"
+        },
+        {
+          "businessUnitId" : 2,
+          "therapAreaId" : 8,
+          "therapAreaName" : "Bio T"
+        },
+        {
+          "businessUnitId" : 2,
+          "therapAreaId" : 9,
+          "therapAreaName" : "Dermatology"
+        },
+        {
+          "businessUnitId" : 3,
+          "therapAreaId" : 10,
+          "therapAreaName" : "Gastrointestinal"
+        }
+      ],
+      "programArea":[
+        {
+          "therapAreaId" : 6,
+          "programId" : 11,
+          "programName" : "CONII - Value Based Advisory Board"
+        },
+        {
+          "therapAreaId" : 7,
+          "programId" : 12,
+          "programName" : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
+        },
+        {
+          "therapAreaId" : 6,
+          "programId" : 13,
+          "programName" : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
+        },
+        {
+          "therapAreaId" : 7,
+          "programId" : 14,
+          "programName" : "CONII – Hematology Advisory Board"
+        },
+        {
+          "therapAreaId" : 7,
+          "programId" : 15,
+          "programName" : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
+        }
+      ]
+    }
   ]
 }

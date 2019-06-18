@@ -10,6 +10,7 @@ export declare class Fieldset implements BlockableUI {
     onAfterToggle: EventEmitter<any>;
     style: any;
     styleClass: string;
+    transitionOptions: string;
     animating: boolean;
     constructor(el: ElementRef);
     id: string;

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "LintCommandOptions",
-  "description": "Lints code in existing project.",
-  "$longDescription": "",
+  "$id": "ng-cli://commands/lint.json",
+  "description": "Runs linting tools on Angular app code in a given project folder.",
+  "$longDescription": "./lint-long.md",
 
   "$aliases": [ "l" ],
   "$scope": "in",
@@ -10,21 +10,30 @@
   "$impl": "./lint-impl#LintCommand",
 
   "type": "object",
-  "properties": {
-    "project": {
-      "type": "string",
-      "description": "The name of the project to lint.",
-      "$default": {
-        "$source": "argv",
-        "index": 0
-      }
+  "allOf": [
+    {
+      "properties": {
+        "project": {
+          "type": "string",
+          "description": "The name of the project to lint.",
+          "$default": {
+            "$source": "argv",
+            "index": 0
+          }
+        },
+        "configuration": {
+          "description": "The linting configuration to use.",
+          "type": "string",
+          "aliases": [
+            "c"
+          ]
+        }
+      },
+      "required": [
+      ]
     },
-    "configuration": {
-      "description": "Specify the configuration to use.",
-      "type": "string",
-      "aliases": ["c"]
+    {
+      "$ref": "./definitions.json#/definitions/base"
     }
-  },
-  "required": [
   ]
 }

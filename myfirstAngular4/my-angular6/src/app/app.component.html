@@ -16,7 +16,7 @@
  -->
 
 <div>
-  <p-dropdown [options]="businessUnit" [(ngModel)]="selectedCity" placeholder="Business Unit" optionLabel="name" [showClear]="false" (onChange)="updateTherapeuticAreas($event)" [autoWidth]="false" [style]="{'width': '300px'}"></p-dropdown>
+  <p-dropdown [options]="businessUnit" [(ngModel)]="selectedCity" placeholder="Business Unit" optionLabel="name" [showClear]="false" (onChange)="updateTherapeuticAreas($event)" (onClick)="buonclick()" [autoWidth]="false" [style]="{'width': '300px'}"></p-dropdown>
 </div>
 
 <div>

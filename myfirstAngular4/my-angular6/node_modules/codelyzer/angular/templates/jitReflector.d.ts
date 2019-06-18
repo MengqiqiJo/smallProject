@@ -4,7 +4,6 @@ export declare const MODULE_SUFFIX = "";
 export declare class JitReflector implements CompileReflector {
     tryAnnotations: any;
     private reflectionCapabilities;
-    private builtinExternalReferences;
     constructor();
     guards(): {};
     componentModuleUrl(type: any, cmpMetadata: Component): string;
