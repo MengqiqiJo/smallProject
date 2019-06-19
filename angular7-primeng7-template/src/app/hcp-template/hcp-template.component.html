@@ -1,3 +1,41 @@
-<p>
-  hcp-template works!
-</p>
+
+{{availableHcpData}}
+<div>
+  <p-dropdown 
+  [options]="businessUnit" 
+  [(ngModel)]="selectedCity" 
+  placeholder="Business ssUnit" 
+  optionLabel="name" 
+  [showClear]="false" 
+  (onChange)="updateTherapeuticAreas($event)" 
+  [autoWidth]="false" 
+  [style]="{'width': '300px'}"
+  ></p-dropdown>
+</div>
+
+<div>
+  <p-dropdown 
+  [options]="availableTherapArea" 
+  [(ngModel)]="selectedTherap" 
+  placeholder="Therapetic Area" 
+  optionLabel="therapAreaName" 
+  [showClear]="false" 
+  (onChange)="updateProgram($event)" 
+  [autoWidth]="false" 
+  [style]="{'width': '300px'}"
+  ></p-dropdown>
+</div>
+
+<div>
+  <p-dropdown 
+  [options]="availableProgram" 
+  [(ngModel)]="selectedProgram" 
+  placeholder="Select Program" 
+  optionLabel="programName" 
+  [showClear]="false" 
+  (onChange)="updateSubmitButton($event)" 
+  filter="true" 
+  [autoWidth]="false" 
+  [style]="{'width': '300px'}"
+  ></p-dropdown>
+</div>

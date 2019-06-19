@@ -15,7 +15,7 @@
 </div>
  -->
 
-<div>
+<!-- <div>
   <p-dropdown 
   [options]="businessUnit" 
   [(ngModel)]="selectedCity" 
@@ -29,11 +29,33 @@
 </div>
 
 <div>
-  <p-dropdown [options]="availableTherapArea" [(ngModel)]="selectedTherap" placeholder="Therapetic Area" optionLabel="therapAreaName" [showClear]="false" (onChange)="updateProgram($event)" [autoWidth]="false" [style]="{'width': '300px'}"></p-dropdown>
+  <p-dropdown 
+  [options]="availableTherapArea" 
+  [(ngModel)]="selectedTherap" 
+  placeholder="Therapetic Area" 
+  optionLabel="therapAreaName" 
+  [showClear]="false" 
+  (onChange)="updateProgram($event)" 
+  [autoWidth]="false" 
+  [style]="{'width': '300px'}"
+  ></p-dropdown>
 </div>
+
 <div>
-  <p-dropdown [options]="availableProgram" [(ngModel)]="selectedProgram" placeholder="Select Program" optionLabel="programName" [showClear]="false" (onChange)="updateSubmitButton($event)" filter="true" [autoWidth]="false" [style]="{'width': '300px'}"></p-dropdown>
-</div>
+  <p-dropdown 
+  [options]="availableProgram" 
+  [(ngModel)]="selectedProgram" 
+  placeholder="Select Program" 
+  optionLabel="programName" 
+  [showClear]="false" 
+  (onChange)="updateSubmitButton($event)" 
+  filter="true" 
+  [autoWidth]="false" 
+  [style]="{'width': '300px'}"
+  ></p-dropdown>
+</div> -->
+<app-hcp-template [hcpData]="hcpData"></app-hcp-template>
+
 <div>
   <p-button label="Generate Report" [disabled]="enableHCPSubmitButton"></p-button>
 </div>
