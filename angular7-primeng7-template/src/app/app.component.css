@@ -1,0 +1,281 @@
+.ui-float-label input, .password input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 300px;
+}
+.ui-float-label input:focus {
+  outline: none;
+}
+.save-button {
+  background-color: green !important;
+}
+.cancel-button {
+  background-color: red !important;
+}
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+body {
+  padding: 20px;
+}
+
+.form-control.ng-touched.ng-invalid {
+  border: 2px solid red;
+}
+
+.bg-009ddf{
+  background-color: #0090df;
+}
+.bg-c6c6c6{
+  background-color: #c6c6c6;
+}
+.bg-f7d417{
+  background-color: #f7d417;
+}
+
+.color-fff {
+  color: #000;
+}
+
+.height-60 {
+  height: 60px;
+}
+.bg-05d23e {
+  background-color: #05d23e;
+}
+
+.bg-00aade {
+  background-color: #001a4e;
+}
+
+.bg-d6006e {
+  background-color: #d6006e;
+}
+
+.bg-7dba00 {
+  background-color: #7dba00;
+}
+
+.bg-4a245e {
+  background-color: #4a245e;
+}
+
+.bg-0093d0 {
+  background-color: #0093d0;
+}
+
+.bg-002596 {
+  background-color: #002596;
+}
+
+.bg-cc292b {
+  background-color: #cc292b;
+}
+
+.bg-00aeef {
+  background-color: #00aeef;
+}
+
+.bg-7dba00 {
+  background-color: #7dba00;
+}
+
+.bg-75d1e0 {
+  background-color: #75d1e0;
+}
+
+.bg-00134b {
+  background-color: #00134b;
+}
+
+.width-10 {
+  width: 10px;
+}
+
+.height-10 {
+  height: 10px;
+}
+
+.width-32 {
+  width: 32px;
+}
+
+.height-400 {
+  height: 400px;
+}
+
+.bottom-border-1-grey {
+  border: 1px solid grey;
+}
+
+.middle-border-2-lightblue {
+  border: 2px solid lightblue;
+}
+
+.legend-square {
+  float: left;
+  height: 12px;
+  width: 12px;
+  margin: 2px;
+  margin-right: 6px;
+}
+
+.table-cell {
+  width: 44px;
+  margin: 2px;
+  word-break: break-all;
+}
+
+.ng-tab-view-wrapper-hide .ui-tabview-nav {
+  display: none;
+  height: 0px;
+}
+
+.ui-tabview.ui-tabview-top>.ui-tabview-nav {
+  border-bottom: solid 2px rgba(0, 0, 0, 0.12);
+}
+.ui-tabview.ui-tabview-top>.ui-tabview-nav li {
+  border: 0;
+}
+
+.ng-tab-view-wrapper-show .ui-tabview-nav li.ui-tabview-selected a {
+  border-bottom: solid 3px #d6006e;
+  color: rgb(63, 81, 181);
+}
+
+.ui-tabview .ui-tabview-nav li a,
+.ui-tabview.ui-tabview-collapsible .ui-tabview-nav li.ui-tabview-selected a {
+  background-color: white;
+  font-size: 14px;
+  padding: 12px 24px;
+}
+
+.ui-state-default a {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.even-clear-both {
+  clear: both;
+}
+
+.ui-table-wrapper .ui-table-tbody td, .ui-table-wrapper .ui-table-thead th {
+  height: 50px;
+}
+
+#mytable p-table .ui-table .ui-table-tbody > tr > td, #mytable p-table .ui-table th {
+  border: none;
+}
+
+#mytable p-table .ui-table .ui-table-wrapper .ui-table-tbody > tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+#mytable p-table .ui-table .ui-table-wrapper .ui-table-tbody > tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+#mytable p-table .ui-table {
+  margin: 14px;
+}
+
+
+.border-right-2-fff-transparent {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.ui-widget-header .button-excel, .ui-widget-header .button-copy{
+  display: inline-block;
+}
+.ui-widget-header .button-excel button, .ui-widget-header .button-copy button{
+  background: #f7f8f9;
+  color: #000;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  border:1px solid #ccc;
+  min-width: 64px;
+  height: 32px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.button-copy button:hover, .button-copy button:focus {
+  background: #eee;
+  color: #000;
+}
+
+#mytable p-table .button-excel .ui-button:enabled:hover, .button-excel .ui-button:focus {
+  background: #eee;
+  color: #000;
+  border:1px solid #ccc;
+
+}
+
+.input-search {
+  height: 32px;
+}
+
+.table-colum-multiselect, .table-keyword-search, .table-copy-excel-button {
+  margin-top: 18px;
+  margin-bottom: 18px;
+
+}
+
+#mytable p-table .table-content-wrapper {
+  background-color: #ffffff;
+}
+
+#mytable p-table .ui-table .ui-sortable-column.ui-state-highlight, #mytable p-table .ui-paginator .ui-paginator-page.ui-state-active {
+  background-color: #009ddf;
+}
+
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.pieBox{
+    display: inline-block;
+    height: auto;
+}
+
+#mainTooltip {
+    position: absolute;
+    min-width :90px;
+    height: 40px;
+    padding: 0 0 25px 0;
+    background-color: rgba(0,0,0,0.6);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 50px;
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    fill: #fff;
+    color: #fff;
+    text-anchor: middle;
+    text-align: center;
+    font-weight: bold;
+    z-index: 9999;
+}
+#mainTooltip:before {
+    border: solid;
+    border-color: rgba(0,0,0,0.6) transparent;
+    border-width: 10px 10px 0 10px;
+    top: 100%;
+    content: "";
+    left: 43%;
+    position: absolute;
+    z-index: 99;
+}
+#mainTooltip.hidden {
+    display: none;
+}
+       

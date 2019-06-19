@@ -5,7 +5,7 @@ import { AccordionModule } from 'primeng/primeng';
 import { PanelModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
 
-import { DataTableModule, SharedModule } from 'primeng/primeng';
+import { TreeTableModule, SharedModule } from 'primeng/primeng';
 import { TableModule } from 'primeng/table';
 
 
@@ -48,7 +48,7 @@ import {NgxEchartsModule} from 'ngx-echarts'
     RadioButtonModule,
     BrowserAnimationsModule,
     ChartModule,
-    DataTableModule,
+    TreeTableModule,
     SharedModule,
     TableModule,
     DropdownModule,
