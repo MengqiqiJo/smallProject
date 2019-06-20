@@ -25,6 +25,7 @@
     "chartjs-plugin-labels": "^1.1.0",
     "chartjs-plugin-stacked100": "^0.7.1",
     "core-js": "^2.5.4",
+    "font-awesome": "^4.7.0",
     "primeicons": "^1.0.0",
     "primeng": "^8.0.0",
     "rxjs": "~6.3.3",

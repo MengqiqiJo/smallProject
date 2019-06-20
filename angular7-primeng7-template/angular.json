@@ -23,10 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "../node_modules/font-awesome/css/font-awesome.css",
-              "../node_modules/primeng/resources/themes/omega/theme.css", 
-              "../node_modules/primeng/resources/primeng.css"
+              "src/styles.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
