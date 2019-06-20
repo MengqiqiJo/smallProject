@@ -128,26 +128,7 @@ Selected Roles: <span *ngFor="let role of selectedRoles" style="margin-right:10p
                   <div [innerHTML]="eachtabcontent.tabData.top.value">
                   </div>
 
-                  <!-- charts -->
-                  <!-- <div *ngIf="eachtabcontent.tabData.type == 'echart'; else elseBlock">
-                    <div echarts [options]="eachtabcontent.tabData.middle.middleMiddle.data" id="echart"></div>
-                  </div>
-
-                  
-                  <div *ngIf="(eachtabcontent.tabData.type == 'd3')">
-                    <div #divClick (click)="getD3ChartJson(eachtabcontent)">click</div>
-                      <div class="{{eachtabcontent.tabData.middle.class}}">
-                        <div class="pie-chart">
-                        </div>
-                        <div id="mainTooltip" class="hidden">
-                          <p>
-                            <span id="value"></span>
-                          </p>
-                        </div>
-                      </div>
-                  </div> -->
-
-
+             
                   <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
                     <div class="{{eachtabcontent.tabData.middle.class}} ng-chart-second-level">
                       <div class="{{eachtabcontent.tabData.middle.middleMiddle.styleClass}}">
