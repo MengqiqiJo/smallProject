@@ -129,10 +129,10 @@ export class AppComponent implements OnInit {
     this.myService.getMyJson().subscribe(data => {
       this.sectionContent = data;
 
-      this.hcpData = this.sectionContent.hcpcontentdata[0].businessUnit;
-      this.businessUnit = this.sectionContent.hcpcontentdata[0].businessUnit;
-      this.therapArea = this.sectionContent.hcpcontentdata[0].therapArea;
-      this.programArea = this.sectionContent.hcpcontentdata[0].programArea;
+      this.hcpData = this.sectionContent.hcpcontentdata;
+      this.hcpbusinessUnitData = this.sectionContent.hcpcontentdata[0].businessUnit;
+      // this.hcptherapAreaData = this.sectionContent.hcpcontentdata[0].therapArea;
+      // this.hcpprogramAreaData = this.sectionContent.hcpcontentdata[0].programArea;
 
       this.primengDataGeneral = this.sectionContent.primengcontentdata;
       

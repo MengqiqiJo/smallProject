@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HcpTemplateComponent implements OnInit {
 
-	businessUnit: any[];
+	// businessUnit: any[];
 	therapArea: any[];
 	programArea: any[];
 	availableTherapArea: any[];
@@ -18,24 +18,24 @@ export class HcpTemplateComponent implements OnInit {
 	selectedProgram: string;
 	display: boolean = false;
 
-	@Input('hcpData') availableHcpData: any[];
+  @Input('hcpbusinessUnitData') businessUnit: any[];
+	@Input('hcpData') hcpData: any[];
+
 
 	
   constructor() { 
   	this.availableTherapArea = [];
   	this.availableProgram = [];
-  	this.enableHCPSubmitButton = true;	
+  	this.enableHCPSubmitButton = true;	    
   }
 
   updateTherapeuticAreas(event) {
+    console.log(this.hcpData[0].businessUnit);
+    this.therapArea = this.hcpData[0].therapArea;
     var temporaryTherap = [];
 
     this.therapArea.forEach(thearpData => {
       if (thearpData.businessUnitId == event.value.businessUnitId) {
-        console.log("thearpData");
-        console.log(thearpData);
-        // this.availableTherapArea.push(thearpData);
-        // console.log(this.availableTherapArea);
         temporaryTherap.push(thearpData);
       }
     });
@@ -46,12 +46,12 @@ export class HcpTemplateComponent implements OnInit {
   }
 
   updateProgram(event) {
+    this.programArea = this.hcpData[0].programArea;
     var temopraryProgram = [];
 
     this.programArea.forEach(programData => {
       if (programData.therapAreaId == event.value.therapAreaId) {
         temopraryProgram.push(programData);
-        console.log(temopraryProgram);
       }
     });
 
@@ -60,13 +60,12 @@ export class HcpTemplateComponent implements OnInit {
   }
 
   updateSubmitButton(event) {
-    console.log(event);
-    console.log(this.enableHCPSubmitButton);
     this.enableHCPSubmitButton = false;
     console.log(this.enableHCPSubmitButton);
   }
 
   ngOnInit() {
+
   }
 
 }
