@@ -1,3 +1,38 @@
-<p>
-  primeng-table works!
-</p>
+<!-- TABLE -->
+  <div style="clear:both;" id="mytable">
+    <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,30]" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" >
+      <ng-template pTemplate="caption" class="table-border">
+        <div class="row table-content-wrapper">
+          <div class="col-md-4 table-keyword-search" style="text-align:left;">
+            <input type="text" class="input-search" pInputText size="30" placeholder="Search" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
+          </div>
+          <div class="col-md-2 col-md-offset-4 table-colum-multiselect">
+              <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
+              selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+          </div>
+          <div class="ui-helper-clearfix table-copy-excel-button col-md-2" style="text-align:right;">
+            <div class="button-copy">
+              <button id="copy-button-{{eachtabcontent.tabData.tableId}}" (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >COPY</button>
+            </div>
+            <div class="button-excel">
+              <button type="button" pButton iconPos="left" label="EXCEL" (click)="dt.exportCSV()"></button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header" let-columns>
+          <tr>
+              <th *ngFor="let col of eachtabcontent.tabData.middle.thead" [pSortableColumn]="col.field">
+                {{col.header}}
+                <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+              </th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-car let-columns="eachtabcontent.tabData.middle.thead">
+          <tr>
+            <td *ngFor="let col of eachtabcontent.tabData.middle.thead" [innerHTML]="car[col.field]">
+            </td>
+          </tr>
+      </ng-template>
+    </p-table>
+  </div>

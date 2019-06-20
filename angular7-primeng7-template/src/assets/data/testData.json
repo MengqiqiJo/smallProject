@@ -742,6 +742,127 @@
           }
         }
       ]
+    },
+    {
+      "tabShow": "hide",
+      "isChartjs": false,
+      "blockHeader": "",
+      "blockClass": "col-md-12 margin-top-24",
+      "blockClassSub": "",
+      "blockContent": [
+        {
+          "tabTitle": "",
+          "tabData":
+          {
+            "type": "table",
+            "tableId": 1,
+            "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+            "top":{
+              "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">Brief overview of current treatments</div>"
+            },
+            "middle":{
+              "tSortField": "province",
+              "tfields":[
+                { "field": "province", "header": "Province" },
+                { "field": "OLA", "header": "OLA" },
+                { "field": "Accredited", "header": "Accredited" },
+                { "field": "Speaker Tour", "header": "Speaker Tour" },
+                { "field": "Symposiums", "header": "Symposiums" }
+
+              ],
+              "thead":[
+                { "field": "province", "header": "Province" },
+                { "field": "OLA", "header": "OLA" },
+                { "field": "Accredited", "header": "Accredited" },
+                { "field": "Speaker Tour", "header": "Speaker Tour" },
+                { "field": "Symposiums", "header": "Symposiums" }
+              ],
+              "tabledata":[
+                {
+                  "province": "Alberta",
+                  "OLA": 236,
+                  "Accredited": 0,
+                  "Speaker Tour": 0,
+                  "Symposiums": 0
+                },
+                {
+                  "province": "Alberta",
+                  "OLA": 236,
+                  "Accredited": 0,
+                  "Speaker Tour": 0,
+                  "Symposiums": 0
+                },
+                {
+                  "province": "British Columbia",
+                  "OLA": 82,
+                  "Accredited": 0,
+                  "Speaker Tour": 0,
+                  "Symposiums": 73
+                },
+                {
+                  "province": "Manitoba",
+                  "OLA": 25,
+                  "Accredited": 0,
+                  "Speaker Tour": 0,
+                  "Symposiums": 0
+                },
+                {
+                  "province": "New Brunswick",
+                  "OLA": 57,
+                  "Accredited": 0,
+                  "Speaker Tour": 4,
+                  "Symposiums": 0
+                },
+                {
+                  "province": "Newfoundland and Labrador",
+                  "OLA": 0,
+                  "Accredited": 0,
+                  "Speaker Tour": 0,
+                  "Symposiums": 0
+                },
+                {
+                  "province": "Nova Scotia",
+                  "OLA": 25,
+                  "Accredited": 0,
+                  "Speaker Tour": 0,
+                  "Symposiums": 0
+                },
+                {
+                  "province": "Ontario",
+                  "OLA": 550,
+                  "Accredited": 0,
+                  "Speaker Tour": 7,
+                  "Symposiums": 0
+                },
+                {
+                  "province": "Prince Edward Island",
+                  "OLA": 3,
+                  "Accredited": 0,
+                  "Speaker Tour": 0,
+                  "Symposiums": 0
+                },
+                {
+                  "province": "Quebec",
+                  "OLA": 468,
+                  "Accredited": 65,
+                  "Speaker Tour": 110,
+                  "Symposiums": 0
+                },
+                {
+                  "province": "Saskatchewan",
+                  "OLA": 87,
+                  "Accredited": 0,
+                  "Speaker Tour": 0,
+                  "Symposiums": 0
+                }
+              ]
+            },
+            "bottom": {
+              "value": ""
+            }
+          }
+        }
+      ]
     }
   ],
   "hcpcontentdata":[

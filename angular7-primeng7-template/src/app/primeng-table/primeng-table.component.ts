@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-primeng-table',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./primeng-table.component.css']
 })
 export class PrimengTableComponent implements OnInit {
+
+	@Input('tableInputData') eachtabcontent: any;
 
   constructor() { }
 

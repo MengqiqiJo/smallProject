@@ -31,7 +31,8 @@ export class AppComponent implements OnInit {
   tabContent: any;
   pluginLabel: any;
 
-
+  tableInputData: any;
+  hcpbusinessUnitData: any[];
   
   hcpData: any[];
 	businessUnit: any[];
@@ -131,11 +132,8 @@ export class AppComponent implements OnInit {
 
       this.hcpData = this.sectionContent.hcpcontentdata;
       this.hcpbusinessUnitData = this.sectionContent.hcpcontentdata[0].businessUnit;
-      // this.hcptherapAreaData = this.sectionContent.hcpcontentdata[0].therapArea;
-      // this.hcpprogramAreaData = this.sectionContent.hcpcontentdata[0].programArea;
-
+    
       this.primengDataGeneral = this.sectionContent.primengcontentdata;
-      
       this.primengDataGeneral.forEach(eachBlockData => {
         eachBlockData.blockContent.forEach(eachTabData => {
           if (eachBlockData.isChartjs) {
@@ -175,6 +173,9 @@ export class AppComponent implements OnInit {
                 }
               }
             }
+          }
+          else {
+            this.tableInputData = eachTabData;
           }
         });
       });
