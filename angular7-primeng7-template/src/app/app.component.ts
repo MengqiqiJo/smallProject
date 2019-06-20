@@ -31,7 +31,6 @@ export class AppComponent implements OnInit {
   tabContent: any;
   pluginLabel: any;
 
-  hcpbusinessUnitData: any[];
   hcpData: any[];
 
 
@@ -46,11 +45,6 @@ export class AppComponent implements OnInit {
 	userRoles: any[];
 
   constructor(private myService: AppService) {
-
-    // this.availableTherapArea = [];
-    // this.availableProgram = [];
-    // this.enableHCPSubmitButton = true;
-
     
     this.userRoles = [
       {
@@ -94,7 +88,6 @@ export class AppComponent implements OnInit {
       this.sectionContent = data;
 
       this.hcpData = this.sectionContent.hcpcontentdata;
-      this.hcpbusinessUnitData = this.sectionContent.hcpcontentdata[0].businessUnit;
     
       this.primengDataGeneral = this.sectionContent.primengcontentdata;
       this.primengDataGeneral.forEach(eachBlockData => {
@@ -138,7 +131,6 @@ export class AppComponent implements OnInit {
               }
             }
           }
-          
         });
       });
 

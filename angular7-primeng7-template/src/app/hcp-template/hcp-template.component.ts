@@ -18,20 +18,18 @@ export class HcpTemplateComponent implements OnInit {
 	selectedProgram: string;
 	display: boolean = false;
 
-  @Input('hcpbusinessUnitData') businessUnit: any[];
 	@Input('hcpData') hcpData: any[];
 
-
-	
   constructor() { 
   	this.availableTherapArea = [];
   	this.availableProgram = [];
-  	this.enableHCPSubmitButton = true;	    
+  	this.enableHCPSubmitButton = true;	
+
   }
 
-  updateTherapeuticAreas(event) {
+  updateTherapeuticAreas(event, therapAreas) {
     console.log(this.hcpData[0].businessUnit);
-    this.therapArea = this.hcpData[0].therapArea;
+    this.therapArea = therapAreas;
     var temporaryTherap = [];
 
     this.therapArea.forEach(thearpData => {
@@ -45,8 +43,8 @@ export class HcpTemplateComponent implements OnInit {
     this.availableProgram = [];
   }
 
-  updateProgram(event) {
-    this.programArea = this.hcpData[0].programArea;
+  updateProgram(event, programArea) {
+    this.programArea = programArea;
     var temopraryProgram = [];
 
     this.programArea.forEach(programData => {
@@ -65,7 +63,6 @@ export class HcpTemplateComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
 
 }
