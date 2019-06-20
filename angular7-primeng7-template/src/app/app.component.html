@@ -128,22 +128,14 @@ Selected Roles: <span *ngFor="let role of selectedRoles" style="margin-right:10p
                   <div [innerHTML]="eachtabcontent.tabData.top.value">
                   </div>
 
-             
+                  <!-- chartjs -->
                   <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
-                    <div class="{{eachtabcontent.tabData.middle.class}} ng-chart-second-level">
-                      <div class="{{eachtabcontent.tabData.middle.middleMiddle.styleClass}}">
-                        <p-chart type="{{eachtabcontent.tabData.middle.middleMiddle.type}}" height="300px" [data]="eachtabcontent.tabData.middle.middleMiddle.data" [options]="eachtabcontent.tabData.middle.middleMiddle.options">
-                        </p-chart>
-                      </div>
-                      <div class="{{eachtabcontent.tabData.middle.middleRight.styleClass}}">
-                        <div [innerHTML]="eachtabcontent.tabData.middle.middleRight.value"></div>
-                      </div>
-                    </div>      
+                    <app-primeng-chartjs [chartInputData]="eachtabcontent"></app-primeng-chartjs>    
                   </div>
 
                   <!-- table -->
                     <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
-                      <app-primeng-table [tableInputData]="tableInputData"></app-primeng-table>
+                      <app-primeng-table [tableInputData]="eachtabcontent"></app-primeng-table>
                     </div>
 
                   <div [innerHTML]="eachtabcontent.tabData.bottom.value">

@@ -1,3 +1,9 @@
-<p>
-  primeng-chartjs works!
-</p>
+<div class="{{eachtabcontent.tabData.middle.class}} ng-chart-second-level">
+  <div class="{{eachtabcontent.tabData.middle.middleMiddle.styleClass}}">
+    <p-chart type="{{eachtabcontent.tabData.middle.middleMiddle.type}}" height="300px" [data]="eachtabcontent.tabData.middle.middleMiddle.data" [options]="eachtabcontent.tabData.middle.middleMiddle.options">
+    </p-chart>
+  </div>
+  <div class="{{eachtabcontent.tabData.middle.middleRight.styleClass}}">
+    <div [innerHTML]="eachtabcontent.tabData.middle.middleRight.value"></div>
+  </div>
+</div>  

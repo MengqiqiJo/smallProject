@@ -31,10 +31,10 @@ export class AppComponent implements OnInit {
   tabContent: any;
   pluginLabel: any;
 
-  tableInputData: any;
   hcpbusinessUnitData: any[];
-  
   hcpData: any[];
+
+
 	businessUnit: any[];
 	therapArea: any[];
 	programArea: any[];
@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
     // this.availableTherapArea = [];
     // this.availableProgram = [];
     // this.enableHCPSubmitButton = true;
+
     
     this.userRoles = [
       {
@@ -99,6 +100,7 @@ export class AppComponent implements OnInit {
       this.primengDataGeneral.forEach(eachBlockData => {
         eachBlockData.blockContent.forEach(eachTabData => {
           if (eachBlockData.isChartjs) {
+
             if (typeof eachTabData.chartjsPluginsOptions !== 'undefined') {
               if (typeof eachTabData.chartjsPluginsOptions.calculateLabel !== 'undefined') {
                 if (eachTabData.chartjsPluginsOptions.calculateLabel) {
@@ -136,9 +138,7 @@ export class AppComponent implements OnInit {
               }
             }
           }
-          else {
-            this.tableInputData = eachTabData;
-          }
+          
         });
       });
 
