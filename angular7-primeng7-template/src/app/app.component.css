@@ -23,6 +23,19 @@ body {
   padding: 20px;
 }
 
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li a, 
+body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li a, 
+body .ui-tabview.ui-tabview-left .ui-tabview-nav li a, 
+body .ui-tabview.ui-tabview-right .ui-tabview-nav li a {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.edit-password-form {
+  margin: 20px;
+}
+
 .form-control.ng-touched.ng-invalid {
   border: 2px solid red;
 }
@@ -130,6 +143,10 @@ body {
   word-break: break-all;
 }
 
+body .ui-tabview .ui-tabview-panels {
+  border: 1px solid #ffffff;
+}
+
 .ng-tab-view-wrapper-hide .ui-tabview-nav {
   display: none;
   height: 0px;
@@ -138,9 +155,32 @@ body {
 .ui-tabview.ui-tabview-top>.ui-tabview-nav {
   border-bottom: solid 2px rgba(0, 0, 0, 0.12);
 }
-.ui-tabview.ui-tabview-top>.ui-tabview-nav li {
-  border: 0;
+
+/*multitab*/
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li, 
+body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li, 
+body .ui-tabview.ui-tabview-left .ui-tabview-nav li, 
+body .ui-tabview.ui-tabview-right .ui-tabview-nav li {
+  border: 1px solid #c6c6c6;
 }
+
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active a, 
+body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li.ui-state-active a, 
+body .ui-tabview.ui-tabview-left .ui-tabview-nav li.ui-state-active a, 
+body .ui-tabview.ui-tabview-right .ui-tabview-nav li.ui-state-active a {
+  color: rgb(63, 81, 181);
+}
+
+/*table multi select filter*/
+body .ui-multiselect-panel .ui-multiselect-items .ui-multiselect-item.ui-state-highlight {
+  background-color: #ffffff;
+}
+/*table*/
+body .ui-table .ui-table-caption, body .ui-table .ui-table-summary {
+  background-color: #ffffff;
+  border: none;
+}
+
 
 .ng-tab-view-wrapper-show .ui-tabview-nav li.ui-tabview-selected a {
   border-bottom: solid 3px #d6006e;

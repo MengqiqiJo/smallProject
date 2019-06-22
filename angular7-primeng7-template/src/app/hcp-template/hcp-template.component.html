@@ -11,7 +11,7 @@
     [showClear]="false" 
     (onChange)="updateTherapeuticAreas($event, eachHCPDate.therapArea)" 
     [autoWidth]="false" 
-    [style]="{'width': '300px'}"
+    [style]="{'width': '500px'}"
     ></p-dropdown>
   </div>
 
@@ -24,7 +24,7 @@
     [showClear]="false" 
     (onChange)="updateProgram($event, eachHCPDate.programArea)" 
     [autoWidth]="false" 
-    [style]="{'width': '300px'}"
+    [style]="{'width': '500px'}"
     ></p-dropdown>
   </div>
 
@@ -38,8 +38,11 @@
     (onChange)="updateSubmitButton($event)" 
     filter="true" 
     [autoWidth]="false" 
-    [style]="{'width': '300px'}"
+    [style]="{'width': '500px'}"
     ></p-dropdown>
   </div>
 
+<div>
+  <p-button label="Generate Report" [disabled]="enableHCPSubmitButton"></p-button>
+</div>
 </div>
