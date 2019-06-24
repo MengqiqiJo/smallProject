@@ -131,9 +131,9 @@ Selected Roles: <span *ngFor="let role of selectedRoles" style="margin-right:10p
                   </div>
 
                   <!-- table -->
-                    <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
-                      <app-primeng-table [tableInputData]="eachtabcontent"></app-primeng-table>
-                    </div>
+                  <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
+                    <app-primeng-table [tableInputData]="eachtabcontent"></app-primeng-table>
+                  </div>
 
                   <div [innerHTML]="eachtabcontent.tabData.bottom.value">
                   </div>
