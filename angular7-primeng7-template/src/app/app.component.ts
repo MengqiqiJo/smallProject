@@ -66,6 +66,9 @@ export class AppComponent implements OnInit {
   meetingTimes: DropDownDataFormat[];
   selectedMeetingTimes: DropDownDataFormat;
 
+  speakers: SelectItem[];
+  selectedSpeakers: string = "";
+
   constructor(private myService: AppService) {
 
     this.userRoles = [
@@ -147,6 +150,33 @@ export class AppComponent implements OnInit {
       {
         label: 'Eating Disorders in Diabetes',
         value: 'Eating Disorders in Diabetes'
+      }
+    ];
+
+    this.speakers = [
+      {
+        label: 'Marie-Claude Racine',
+        value: 'Marie-Claude Racine'
+      },
+      {
+        label: 'Larry Dian',
+        value: 'Larry Dian',
+      },
+      {
+        label: 'Shereen Metias',
+        value: 'Shereen Metias'
+      },
+      {
+        label: 'Marie-Hélène Robert', 
+        value: 'Marie-Hélène Robert' 
+      },
+      {
+        label: 'Patrice Gosselin',
+        value: 'Patrice Gosselin'
+      },
+      {
+        label: 'Danielle Houde',
+        value: 'Danielle Houde'
       }
     ];
 

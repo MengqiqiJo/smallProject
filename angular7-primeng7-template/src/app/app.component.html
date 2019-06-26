@@ -126,6 +126,19 @@
   <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p>
 </div>
 
+<!-- speaker -->
+<div style="margin: 20px;">
+  <div style="color:#00a9e0; font-size: 14px;">
+    <span>Speaker</span>
+  </div>
+  <p-multiSelect 
+  [options]="speakers" 
+  [(ngModel)]="selectedSpeakers" 
+  [panelStyle]="{minWidth:'30em'}"
+  [filter]="true"></p-multiSelect>
+  <p>Selected modules: {{selectedSpeakers}}</p>
+</div>
+
 <div style="margin: 20px;">
   <p-button 
   label="Click" 
