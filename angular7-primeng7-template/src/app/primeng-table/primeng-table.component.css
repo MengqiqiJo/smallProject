@@ -1,0 +1,3 @@
+#mytable p-table .ui-table .ui-sortable-column.ui-state-highlight, #mytable p-table .ui-paginator .ui-paginator-page.ui-state-active {
+	background-color: #fff;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { CopyComponent } from '../copy.component';
 
 @Component({
   selector: 'app-primeng-table',
@@ -15,5 +16,10 @@ export class PrimengTableComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  copyMessage(val: any) {
+	  var copyButton = new CopyComponent();
+	  copyButton.copyMessage(val);
+	}
 
 }

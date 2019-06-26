@@ -10,6 +10,8 @@ import 'chartjs-plugin-labels';
 
 import 'chartjs-plugin-stacked100';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,6 +21,7 @@ import 'chartjs-plugin-stacked100';
 
 
 export class AppComponent implements OnInit {
+
 
  
   // get json data

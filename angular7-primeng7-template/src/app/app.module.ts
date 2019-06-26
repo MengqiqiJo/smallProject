@@ -38,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     PrimengTableComponent,
     PrimengChartjsComponent,
-    HcpTemplateComponent
+    HcpTemplateComponent,
   ],
   imports: [
     BrowserModule,
