@@ -11,6 +11,9 @@ import 'chartjs-plugin-labels';
 import 'chartjs-plugin-stacked100';
 
 
+interface DropDownDataFormat {
+  name: string
+}
 
 @Component({
   selector: 'app-root',
@@ -40,15 +43,31 @@ export class AppComponent implements OnInit {
 	businessUnit: any[];
 	therapArea: any[];
 	programArea: any[];
-	// availableTherapArea: any[];
-	// availableProgram: any[];
-	// enableHCPSubmitButton : boolean;
 	selectedRoles: string[] = [];
 	display: boolean = false;
 	userRoles: any[];
 
+  // evaluation form
+  enteredMeetingName: string;
+  programs: DropDownDataFormat[];
+  selectedProgram: DropDownDataFormat;
+  modules: SelectItem[];
+  selectedModules: string = "";
+
+  programTypes: DropDownDataFormat[];
+  selectedProgramType: DropDownDataFormat;
+
+  evaluationForms: DropDownDataFormat[];
+  selectedEvaluationForms: DropDownDataFormat;
+
+  meetingFormats: DropDownDataFormat[];
+  selectedMeetingFormats: DropDownDataFormat;
+
+  meetingTimes: DropDownDataFormat[];
+  selectedMeetingTimes: DropDownDataFormat;
+
   constructor(private myService: AppService) {
-    
+
     this.userRoles = [
       {
         name: "answer1",
@@ -77,8 +96,99 @@ export class AppComponent implements OnInit {
       }
     ];
 
+    this.programTypes = [
+      {name: 'None'},
+      {name: 'Accredited'},
+      {name: 'OLAs'},
+      {name: 'Symposia'},
+      {name: 'Non Accredited'}
+    ];
+
+    this.selectedProgram = {
+      name: '2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection'
+    };
+
+    this.programs = [
+      {name: 'None'},
+      {name: '2017 COPD & Asthma Update: Hot Topics'},
+      {name: '2017 COPD Review with Graeme McCauley'},
+      {name: '2017 Let\'s Have a Heart to Heart: CV Considerations in Type 2 DM'},
+      {name: '2017: The Changing Landscape in the Treatment of COPD'},
+      {name: '2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection'}
+    ];
+    
+    this.enteredMeetingName = "Meeting - 2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection";
+    
+    this.modules = [
+      {
+        label: 'MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY',
+        value: 'MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY'
+      },
+      {
+        label: 'Chronic Kidney Disease',
+        value: 'Chronic Kidney Disease'
+      },
+      {
+        label: 'Complex Patients: Therapies that Can Reduce Mortality',
+        value: 'Complex Patients: Therapies that Can Reduce Mortality',
+      },
+      {
+        label: 'Diabetes in Aboriginal Populations',
+        value: 'Diabetes in Aboriginal Populations'
+      },
+      {
+        label: 'Diabetes Management in the Presence of Glucocorticoids', 
+        value: 'Diabetes Management in the Presence of Glucocorticoids' 
+      },
+      {
+        label: 'Early Use of Insulin Therapy in T2D',
+        value: 'Early Use of Insulin Therapy in T2D'
+      },
+      {
+        label: 'Eating Disorders in Diabetes',
+        value: 'Eating Disorders in Diabetes'
+      }
+    ];
+
+    this.evaluationForms = [
+      {name: 'None'},
+      {name: 'If you hear hoofbeats, think...'},
+      {name: '(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices'},
+      {name: '2017 Lets have a Heart to Heart: CV Considerations in T2DM'},
+      {name: '2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection'},
+      {name: 'A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview'},
+      {name: 'Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2'}
+    ];
+
+    this.selectedEvaluationForms = {
+      name: '2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection'
+    };
+
+    this.meetingFormats = [
+      {name: 'None'},
+      {name: 'HCP Scholarships'},
+      {name: 'Hybrid (Live/virtual)'},
+      {name: 'Independent Sponsor Materials'},
+      {name: 'Live'},
+      {name: 'Webinar'}
+    ];
+
+    this.meetingTimes = [
+      {name: '12:00 AM'},
+      {name: '3:00 AM'},
+      {name: '6:00 AM'},
+      {name: '9:00 AM'},
+      {name: '12:00 PM'},
+      {name: '3:00 PM'},
+      {name: '6:00 PM'},
+      {name: '9:00 PM'},
+    ];
+
   }
 
+  save() {
+    console.log(this.enteredMeetingName + '\n' + this.selectedProgram.name + '\n' + this.selectedModules + '\n' + this.selectedProgramType.name);
+  }
 
   showDialog() {
     this.display = true;

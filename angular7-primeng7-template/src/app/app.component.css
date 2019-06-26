@@ -1,3 +1,11 @@
+
+/*multi select*/
+.ui-multiselect .ui-multiselect-label {
+  width: 500px;
+}
+
+
+
 .ui-float-label input, .password input {
   border-top: none;
   border-left: none;
