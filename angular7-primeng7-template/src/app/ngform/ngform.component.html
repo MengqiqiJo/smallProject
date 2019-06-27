@@ -122,6 +122,57 @@
 	  <!-- <p>Selected modules: {{selectedSpeakers}}</p> -->
 	</div>
 
+	<!-- Multi Therapeituc Event -->
+	<div style="margin: 20px;">
+	  <div style="color:#00a9e0; font-size: 14px;">
+	    <span>Meeting Time</span>
+	  </div>
+	  <p-dropdown 
+	  [options]="eachMeetingEventData.multiTherapeuticEvent" 
+	  [(ngModel)]="selectedMeetingTimes" 
+	  placeholder="Select a meeting Time" 
+	  optionLabel="name" 
+	  [showClear]="true"
+	  filter="true"
+	  [autoWidth]="false" 
+	  [style]="{'width': '500px'}"></p-dropdown>
+	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
+	</div>
+
+	<!-- Location -->
+	<div style="margin: 20px;">
+	  <div style="color:#00a9e0; font-size: 14px;">
+	    <span>Meeting Time</span>
+	  </div>
+	  <p-dropdown 
+	  [options]="eachMeetingEventData.location" 
+	  [(ngModel)]="selectedMeetingTimes" 
+	  placeholder="Select a meeting Time" 
+	  optionLabel="name" 
+	  [showClear]="true"
+	  filter="true"
+	  [autoWidth]="false" 
+	  [style]="{'width': '500px'}"></p-dropdown>
+	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
+	</div>
+
+	<!-- canada city -->
+	<div style="margin: 20px;">
+	  <div style="color:#00a9e0; font-size: 14px;">
+	    <span>Meeting Time</span>
+	  </div>
+	  <p-dropdown 
+	  [options]="eachMeetingEventData.canadaCity" 
+	  [(ngModel)]="selectedMeetingTimes" 
+	  placeholder="Select a meeting Time" 
+	  optionLabel="name" 
+	  [showClear]="true"
+	  filter="true"
+	  [autoWidth]="false" 
+	  [style]="{'width': '500px'}"></p-dropdown>
+	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
+	</div>
+
 	<div style="margin: 20px;">
 	  <p-button 
 	  label="Click" 

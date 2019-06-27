@@ -33,6 +33,7 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NGFormComponent } from './ngform/ngform.component';
+import { EditPasswordComponent } from './edit-password/edit-password.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { NGFormComponent } from './ngform/ngform.component';
     PrimengChartjsComponent,
     HcpTemplateComponent,
     NGFormComponent,
+    EditPasswordComponent,
   ],
   imports: [
     BrowserModule,

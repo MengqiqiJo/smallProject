@@ -1415,6 +1415,31 @@
         {"name": "3:00 PM"},
         {"name": "6:00 PM"},
         {"name": "9:00 PM"}
+      ],
+      "multiTherapeuticEvent":[
+        {"name": "None"},
+        {"name": "Yes"},
+        {"name": "No"}
+      ],
+      "location":[
+        {"name": "None"},
+        {"name": "Conference Room"},
+        {"name": "Convention Center"},
+        {"name": "Hospital"},
+        {"name": "Hotel"},
+        {"name": "Medical Clinic"},
+        {"name": "Other"},
+        {"name": "Pharmacy"}
+      ],
+      "canadaCity":[
+        {"name": "None"},
+        {"name": "Abbotsford"},
+        {"name": "Acton Vale"},
+        {"name": "Addington"},
+        {"name": "Addington Highlands"},
+        {"name": "Adelaide Metcalfe"},
+        {"name": "Windsor"},
+        {"name": "York"}
       ]
     }
   ]
