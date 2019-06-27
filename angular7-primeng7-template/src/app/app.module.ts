@@ -32,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { NGFormComponent } from './ngform/ngform.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     PrimengTableComponent,
     PrimengChartjsComponent,
     HcpTemplateComponent,
+    NGFormComponent,
   ],
   imports: [
     BrowserModule,

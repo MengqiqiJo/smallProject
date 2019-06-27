@@ -1,167 +1,18 @@
-<!--The content below is only a placeholder and can be replaced.-->
 
-<!-- <button (click)="saveImage()" class="btn btn-primary">Save Image</button>
-<div id="demoChart">
-  <div echarts class="chart"></div>
-</div> -->
-<!-- <div class="app-test"></div> -->
-<!-- <div app-test></div> -->
-
-<!-- <div echarts id="setOptionChart" [options]="chartOption"></div> -->
-
-
-<!-- <div width="10" height="10">
-  <canvas id="canvas"></canvas>
-</div>
- -->
-
-
-
-
-<h4>add meeting form</h4>
-<div style="margin: 20px;">
-  <div style="color:#00a9e0; font-size: 14px;">
-    <span>Meeting Name</span>
-  </div>
-  <input 
-  type="text" 
-  size="68" 
-  [(ngModel)]="enteredMeetingName" 
-  placeholder="{{enteredMeetingName}}" 
-  pInputText> 
-</div>
-
-<div style="margin: 20px;">
-  <div style="color:#00a9e0; font-size: 14px;">
-    <span>Program</span>
-  </div>
-  <p-dropdown 
-  [options]="programs" 
-  [(ngModel)]="selectedProgram" 
-  placeholder="{{selectedProgram.name}}" 
-  optionLabel="name" 
-  [showClear]="true"
-  filter="true" 
-  [autoWidth]="false" 
-  [style]="{'width': '500px'}"></p-dropdown>
-</div>
-
-<div style="margin: 20px;">
-  <div style="color:#00a9e0; font-size: 14px;">
-    <span>Module</span>
-  </div>
-  <p-multiSelect 
-  [options]="modules" 
-  [(ngModel)]="selectedModules" 
-  [panelStyle]="{minWidth:'30em'}"
-  [filter]="true"></p-multiSelect>
-  <p>Selected modules: {{selectedModules}}</p>
-</div>
-
-<!-- program type -->
-<div style="margin: 20px;">
-  <div style="color:#00a9e0; font-size: 14px;">
-    <span>Program Type</span>
-  </div>
-  <p-dropdown 
-  [options]="programTypes" 
-  [(ngModel)]="selectedProgramType" 
-  placeholder="Select a program type" 
-  optionLabel="name" 
-  [showClear]="true"
-  filter="true"
-  [autoWidth]="false" 
-  [style]="{'width': '500px'}"></p-dropdown>
-  <p>Selected City: {{selectedProgramType ? selectedProgramType.name : 'none'}}</p>
-</div>
-
-<!-- evaluation form -->
-<div style="margin: 20px;">
-  <div style="color:#00a9e0; font-size: 14px;">
-    <span>Evaluation Form</span>
-  </div>
-  <p-dropdown 
-  [options]="evaluationForms" 
-  [(ngModel)]="selectedEvaluationForms" 
-  placeholder="Select a evaluation form" 
-  optionLabel="name" 
-  [showClear]="true"
-  filter="true"
-  [autoWidth]="false" 
-  [style]="{'width': '500px'}"></p-dropdown>
-  <p>Selected City: {{selectedEvaluationForms ? selectedEvaluationForms.name : 'none'}}</p>
-</div>
-
-<!-- Meeting Format -->
-<div style="margin: 20px;">
-  <div style="color:#00a9e0; font-size: 14px;">
-    <span>Meeting Format</span>
-  </div>
-  <p-dropdown 
-  [options]="meetingFormats" 
-  [(ngModel)]="selectedMeetingFormats" 
-  placeholder="Select a meeting format" 
-  optionLabel="name" 
-  [showClear]="true"
-  filter="true"
-  [autoWidth]="false" 
-  [style]="{'width': '500px'}"></p-dropdown>
-  <p>Selected City: {{selectedMeetingFormats ? selectedMeetingFormats.name : 'none'}}</p>
-</div>
-
-<!-- Time -->
-<div style="margin: 20px;">
-  <div style="color:#00a9e0; font-size: 14px;">
-    <span>Meeting Time</span>
-  </div>
-  <p-dropdown 
-  [options]="meetingTimes" 
-  [(ngModel)]="selectedMeetingTimes" 
-  placeholder="Select a meeting Time" 
-  optionLabel="name" 
-  [showClear]="true"
-  filter="true"
-  [autoWidth]="false" 
-  [style]="{'width': '500px'}"></p-dropdown>
-  <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p>
-</div>
-
-<!-- speaker -->
-<div style="margin: 20px;">
-  <div style="color:#00a9e0; font-size: 14px;">
-    <span>Speaker</span>
-  </div>
-  <p-multiSelect 
-  [options]="speakers" 
-  [(ngModel)]="selectedSpeakers" 
-  [panelStyle]="{minWidth:'30em'}"
-
-  [filter]="true"></p-multiSelect>
-  <p>Selected modules: {{selectedSpeakers}}</p>
-</div>
-
-<div style="margin: 20px;">
-  <p-button 
-  label="Click" 
-  (onClick)="save()"></p-button>
-</div>
-
-
-
-
-
-
-
-
-
+<!-- meeting event form -->
+<app-ngform 
+[meetingEventData]="meetingEventData"></app-ngform>
 
 <hr><hr>
+
+<!-- hcp form -->
 <app-hcp-template 
 [hcpData]="hcpData"></app-hcp-template>
 
+<hr>
+<hr>
 
-<hr>
-<hr>
+<!-- edit password form -->
 <div class="edit-password-form">
   <h3>Current Password</h3>
   <span class="ui-float-label">
@@ -213,7 +64,7 @@ Selected Roles: <span *ngFor="let role of selectedRoles" style="margin-right:10p
 </div>
 
 
-
+<!-- chart -->
 <div class="row" for="primengDataGeneral">
   <div *ngFor="let blockData of primengDataGeneral" >
     <div for="blockData.blockContent">  
