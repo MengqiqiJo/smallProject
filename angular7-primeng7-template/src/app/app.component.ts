@@ -73,33 +73,7 @@ export class AppComponent implements OnInit {
 
   constructor(private myService: AppService) {
 
-    this.userRoles = [
-      {
-        name: "answer1",
-        value: "Speaker",
-        label: "Speaker"
-      },
-      {
-        name: "answer2",
-        value: "Rep",
-        label: "Rep"
-      },
-      {
-        name: "answer3",
-        value: "Siteadmin",
-        label: "Siteadmin"
-      },
-      {
-        name: "answer4",
-        value: "Moderate",
-        label: "Moderate"
-      },
-      {
-        name: "answer5",
-        value: "Client",
-        label: "Client"
-      }
-    ];
+    
 
     // this.programTypes = [
     //   {"name": "None"},
