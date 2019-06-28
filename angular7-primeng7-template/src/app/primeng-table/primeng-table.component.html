@@ -1,6 +1,6 @@
 <!-- TABLE -->
 <div style="clear:both;" id="mytable">
-  <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,30]" [resizableColumns]="true" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" >
+  <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,30]" [resizableColumns]="false" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" >
     <ng-template pTemplate="caption" class="table-border">
       <div class="row table-content-wrapper">
         <div class="col-md-4 table-keyword-search" style="text-align:left;">
