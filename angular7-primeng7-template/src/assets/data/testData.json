@@ -1332,79 +1332,95 @@
         {"name": "Symposia"},
         {"name": "Non Accredited"}
       ],
-      "programs":[
-        {"name": "None"},
-        {"name": "2017 COPD & Asthma Update: Hot Topics"},
-        {"name": "2017 COPD Review with Graeme McCauley"},
-        {"name": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"},
-        {"name": "2017: The Changing Landscape in the Treatment of COPD"},
-        {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"}
-      ],
-      "modules":[
-        {
-          "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY",
-          "value": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY"
-        },
-        {
-          "label": "Chronic Kidney Disease",
-          "value": "Chronic Kidney Disease"
-        },
-        {
-          "label": "Complex Patients: Therapies that Can Reduce Mortality",
-          "value": "Complex Patients: Therapies that Can Reduce Mortality"
-        },
-        {
-          "label": "Diabetes in Aboriginal Populations",
-          "value": "Diabetes in Aboriginal Populations"
-        },
-        {
-          "label": "Diabetes Management in the Presence of Glucocorticoids", 
-          "value": "Diabetes Management in the Presence of Glucocorticoids" 
-        },
-        {
-          "label": "Early Use of Insulin Therapy in T2D",
-          "value": "Early Use of Insulin Therapy in T2D"
-        },
-        {
-          "label": "Eating Disorders in Diabetes",
-          "value": "Eating Disorders in Diabetes"
-        }
-      ],
-      "speakers":[
-        {
-          "label": "Marie-Claude Racine",
-          "value": "Marie-Claude Racine"
-        },
-        {
-          "label": "Larry Dian",
-          "value": "Larry Dian"
-        },
-        {
-          "label": "Shereen Metias",
-          "value": "Shereen Metias"
-        },
-        {
-          "label": "Marie-Hélène Robert", 
-          "value": "Marie-Hélène Robert" 
-        },
-        {
-          "label": "Patrice Gosselin",
-          "value": "Patrice Gosselin"
-        },
-        {
-          "label": "Danielle Houde",
-          "value": "Danielle Houde"
-        }
-      ],
-      "evaluationForms":[
-        {"name": "None"},
-        {"name": "If you hear hoofbeats, think..."},
-        {"name": "(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices"},
-        {"name": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"},
-        {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"},
-        {"name": "A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview"},
-        {"name": "Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2"}
-      ],
+      "programs":{
+        "programsDefault":{"name": "2016 COPD & Asthma Update: Hot Topics"},
+        "programsData":[
+          {"name": "None"},
+          {"name": "2017 COPD & Asthma Update: Hot Topics"},
+          {"name": "2017 COPD Review with Graeme McCauley"},
+          {"name": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"},
+          {"name": "2017: The Changing Landscape in the Treatment of COPD"},
+          {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"}
+        ]
+      },
+      "modules":{
+        "modulesDefault":"",
+        "modulesData":[
+          {
+            "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY",
+            "value": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY"
+          },
+          {
+            "label": "Chronic Kidney Disease",
+            "value": "Chronic Kidney Disease"
+          },
+          {
+            "label": "Complex Patients: Therapies that Can Reduce Mortality",
+            "value": "Complex Patients: Therapies that Can Reduce Mortality"
+          },
+          {
+            "label": "Diabetes in Aboriginal Populations",
+            "value": "Diabetes in Aboriginal Populations"
+          },
+          {
+            "label": "Diabetes Management in the Presence of Glucocorticoids", 
+            "value": "Diabetes Management in the Presence of Glucocorticoids" 
+          },
+          {
+            "label": "Early Use of Insulin Therapy in T2D",
+            "value": "Early Use of Insulin Therapy in T2D"
+          },
+          {
+            "label": "Eating Disorders in Diabetes",
+            "value": "Eating Disorders in Diabetes"
+          }
+        ]
+      },
+      "speakers":{
+        "speakersDefault":"",
+        "speakersData":[
+          {
+            "label": "Marie-Claude Racine",
+            "value": "Marie-Claude Racine"
+          },
+          {
+            "label": "Larry Dian",
+            "value": "Larry Dian"
+          },
+          {
+            "label": "Shereen Metias",
+            "value": "Shereen Metias"
+          },
+          {
+            "label": "Marie-Hélène Robert", 
+            "value": "Marie-Hélène Robert" 
+          },
+          {
+            "label": "Patrice Gosselin",
+            "value": "Patrice Gosselin"
+          },
+          {
+            "label": "Danielle Houde",
+            "value": "Danielle Houde"
+          }
+        ]
+      },
+      "meetingName":{
+        "meetingNameDefault":"Meeting - 2017 Lets have a Heart to Heart: CV Considerations in T2DM",
+        "meetingNameData":""
+      },
+      "evaluationForms":{
+        "evaluationFormsDefault":{"name": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"},
+        "evaluationFormsData":[
+          {"name": "None"},
+          {"name": "If you hear hoofbeats, think..."},
+          {"name": "(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices"},
+          {"name": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"},
+          {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"},
+          {"name": "A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview"},
+          {"name": "Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2"}
+        ]
+      },
       "meetingFormats":[
         {"name": "None"},
         {"name": "HCP Scholarships"},
