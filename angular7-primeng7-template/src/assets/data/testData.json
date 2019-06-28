@@ -762,6 +762,13 @@
             },
             "middle":{
               "tSortField": "province",
+              "tfields":[
+                { "field": "province", "header": "Program Name" },
+                { "field": "OLA", "header": "BU" },
+                { "field": "Accredited", "header": "#Events" },
+                { "field": "Speaker Tour", "header": "HCP Reach" },
+                { "field": "Symposiums", "header": "Responses" }
+              ],
               "thead":[
                 { "field": "province", "header": "Program Name" },
                 { "field": "OLA", "header": "BU" },
