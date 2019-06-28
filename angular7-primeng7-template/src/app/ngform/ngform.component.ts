@@ -17,6 +17,10 @@ export class NGFormComponent implements OnInit {
 	selectedMeetingTimes: any;
 	selectedSpeakers: string;
 
+	selectedMultiTherapeitucEvent: any;
+	selectedMeetingLocation: any;
+	selectedCanadaCity: any;
+
   constructor() { 
   	this.selectedProgram = {
   	      "name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
@@ -35,7 +39,11 @@ export class NGFormComponent implements OnInit {
     	this.selectedProgramType.name + '\n' + 
     	this.selectedEvaluationForms.name + '\n' +
     	this.selectedMeetingTimes.name + '\n' +
-    	this.selectedSpeakers);
+    	this.selectedSpeakers + '\n' +
+    	this.selectedMultiTherapeitucEvent + '\n' +
+			this.selectedMeetingLocation + '\n' +
+			this.selectedCanadaCity
+    	);
   }
 
   ngOnInit() {

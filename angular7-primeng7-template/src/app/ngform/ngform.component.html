@@ -5,12 +5,13 @@
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Meeting Name</span>
 	  </div>
-	  <input 
-	  type="text" 
-	  size="68" 
+	  <textarea 
+	  [rows]="5" 
+	  [cols]="68"
 	  [(ngModel)]="enteredMeetingName" 
 	  placeholder="{{enteredMeetingName}}" 
-	  pInputText> 
+	  pInputTextarea 
+	  autoResize="autoResize"></textarea>
 	</div>
 
 	<div style="margin: 20px;">
@@ -23,7 +24,6 @@
 	  placeholder="{{selectedProgram.name}}" 
 	  optionLabel="name" 
 	  [showClear]="true"
-	  filter="true" 
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
 	</div>
@@ -37,7 +37,7 @@
 	  [(ngModel)]="selectedModules" 
 	  [panelStyle]="{minWidth:'30em'}"
 	  [filter]="true"></p-multiSelect>
-	  <p>Selected modules: {{selectedModules}}</p>
+	  <!-- <p>Selected modules: {{selectedModules}}</p> -->
 	</div>
 
 	<!-- program type -->
@@ -54,7 +54,7 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <p>Selected City: {{selectedProgramType ? selectedProgramType.name : 'none'}}</p>
+	  <!-- <p>Selected City: {{selectedProgramType ? selectedProgramType.name : 'none'}}</p> -->
 	</div>
 
 	<!-- evaluation form -->
@@ -71,7 +71,7 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <p>Selected City: {{selectedEvaluationForms ? selectedEvaluationForms.name : 'none'}}</p>
+	  <!-- <p>Selected City: {{selectedEvaluationForms ? selectedEvaluationForms.name : 'none'}}</p> -->
 	</div>
 
 	<!-- Meeting Format -->
@@ -125,12 +125,12 @@
 	<!-- Multi Therapeituc Event -->
 	<div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
-	    <span>Meeting Time</span>
+	    <span>Multi-Therapeituc Event</span>
 	  </div>
 	  <p-dropdown 
 	  [options]="eachMeetingEventData.multiTherapeuticEvent" 
-	  [(ngModel)]="selectedMeetingTimes" 
-	  placeholder="Select a meeting Time" 
+	  [(ngModel)]="selectedMultiTherapeitucEvent" 
+	  placeholder="Select a Multi-Therapeituc Event" 
 	  optionLabel="name" 
 	  [showClear]="true"
 	  filter="true"
@@ -142,29 +142,55 @@
 	<!-- Location -->
 	<div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
-	    <span>Meeting Time</span>
+	    <span>Location</span>
 	  </div>
 	  <p-dropdown 
 	  [options]="eachMeetingEventData.location" 
-	  [(ngModel)]="selectedMeetingTimes" 
-	  placeholder="Select a meeting Time" 
+	  [(ngModel)]="selectedMeetingLocation" 
+	  placeholder="Select a location" 
 	  optionLabel="name" 
 	  [showClear]="true"
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
 	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
+	</div>
+
+	<!-- Venue Name -->
+	<div style="margin: 20px;">
+	  <div style="color:#00a9e0; font-size: 14px;">
+	    <span>Venue Name</span>
+	  </div>
+	  <input 
+	  type="text" 
+	  size="68" 
+	  [(ngModel)]="enteredVenueName" 
+	  placeholder=" " 
+	  pInputText> 
+	</div>
+
+	<!-- Address -->
+	<div style="margin: 20px;">
+	  <div style="color:#00a9e0; font-size: 14px;">
+	    <span>Address</span>
+	  </div>
+	  <input 
+	  type="text" 
+	  size="68" 
+	  [(ngModel)]="enteredAddress" 
+	  placeholder=" " 
+	  pInputText> 
 	</div>
 
 	<!-- canada city -->
 	<div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
-	    <span>Meeting Time</span>
+	    <span>Canada City</span>
 	  </div>
 	  <p-dropdown 
 	  [options]="eachMeetingEventData.canadaCity" 
-	  [(ngModel)]="selectedMeetingTimes" 
-	  placeholder="Select a meeting Time" 
+	  [(ngModel)]="selectedCanadaCity" 
+	  placeholder="Select a canada city" 
 	  optionLabel="name" 
 	  [showClear]="true"
 	  filter="true"
@@ -173,9 +199,53 @@
 	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
 	</div>
 
+	<!-- Event ME -->
+	<div style="margin: 20px;">
+	  <div style="color:#00a9e0; font-size: 14px;">
+	    <span>Event ME</span>
+	  </div>
+	  <textarea 
+	  [rows]="5" 
+	  [cols]="68" 
+	  pInputTextarea 
+	  autoResize="autoResize"></textarea>
+	</div>
+
+	<!-- Signature -->
+	<div style="margin: 20px;">
+	  <div style="color:#00a9e0; font-size: 14px;">
+	    <span>Signature</span>
+	  </div>
+	  <textarea 
+	  [rows]="5" 
+	  [cols]="68" 
+	  pInputTextarea 
+	  autoResize="autoResize"></textarea>
+	</div>
+
+	<!-- Evaluation Number -->
+	<div style="margin: 20px;">
+	  <div style="color:#00a9e0; font-size: 14px;">
+	    <span>Evaluation Number</span>
+	  </div>
+	  <textarea 
+	  [rows]="5" 
+	  [cols]="68" 
+	  pInputTextarea 
+	  autoResize="autoResize"></textarea>
+	</div>
+
+	
+
 	<div style="margin: 20px;">
 	  <p-button 
-	  label="Click" 
+	  label="SUBMIT" 
+	  (onClick)="save()"></p-button>
+	</div>
+
+	<div style="margin: 20px;">
+	  <p-button 
+	  label="SAVE&EVALUATE" 
 	  (onClick)="save()"></p-button>
 	</div>
 </div>

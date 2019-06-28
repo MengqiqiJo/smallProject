@@ -27,6 +27,8 @@ import {TabViewModule} from 'primeng/tabview';
 
 import {ChartModule} from 'primeng/chart';
 
+import {InputTextareaModule} from 'primeng/inputtextarea';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
@@ -61,7 +63,8 @@ import { EditPasswordComponent } from './edit-password/edit-password.component';
     ChartModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    InputTextareaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
