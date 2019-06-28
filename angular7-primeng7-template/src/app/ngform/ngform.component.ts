@@ -9,26 +9,25 @@ export class NGFormComponent implements OnInit {
 
 	@Input('meetingEventData') meetingEventData: any[];
 
-	selectedProgram: any;
-	enteredMeetingName: string;
-	selectedEvaluationForms: any;
-	selectedModules: string;
-	selectedProgramType: any;
-	selectedMeetingTimes: any;
-	selectedSpeakers: string;
+	selectedProgram: any={};
+	enteredMeetingName: string="";
+	selectedEvaluationForms: any={};
+	selectedModules: string="";
+	selectedProgramType: any={};
+	selectedMeetingTimes: any={};
+	selectedSpeakers: string="";
 
-	selectedMultiTherapeitucEvent: any;
-	selectedMeetingLocation: any;
-	selectedCanadaCity: any;
+  selectedMeetingFormats: any={};
+
+	selectedMultiTherapeitucEvent: any={};
+	selectedMeetingLocation: any={};
+	selectedCanadaCity: any={};
+
+  enteredEventME: string="";
+  enteredSignature: string="";
+  enteredEvaluationNumber: string="";
 
   constructor() { 
-  	this.selectedProgram = {
-  	      "name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
-  	    };
-  	this.enteredMeetingName = "Meeting - 2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection";
-  	this.selectedEvaluationForms = {
-  	      "name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
-  	    };
   }
 
   save() {
@@ -38,15 +37,20 @@ export class NGFormComponent implements OnInit {
     	this.selectedModules + '\n' + 
     	this.selectedProgramType.name + '\n' + 
     	this.selectedEvaluationForms.name + '\n' +
+      this.selectedMeetingFormats.name + '\n' +
     	this.selectedMeetingTimes.name + '\n' +
     	this.selectedSpeakers + '\n' +
-    	this.selectedMultiTherapeitucEvent + '\n' +
-			this.selectedMeetingLocation + '\n' +
-			this.selectedCanadaCity
+    	this.selectedMultiTherapeitucEvent.name + '\n' +
+			this.selectedMeetingLocation.name + '\n' +
+			this.selectedCanadaCity.name + '\n' +
+      this.enteredEventME + '\n' +
+      this.enteredSignature + '\n' +
+      this.enteredEvaluationNumber
     	);
   }
 
   ngOnInit() {
+    console.log();
   }
 
 }

@@ -9,7 +9,7 @@
 	  [rows]="5" 
 	  [cols]="68"
 	  [(ngModel)]="enteredMeetingName" 
-	  placeholder="{{enteredMeetingName}}" 
+	  placeholder="{{eachMeetingEventData.meetingName.meetingNameDefault}}" 
 	  pInputTextarea 
 	  autoResize="autoResize"></textarea>
 	</div>
@@ -19,9 +19,9 @@
 	    <span>Program</span>
 	  </div>
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.programs" 
+	  [options]="eachMeetingEventData.programs.programsData" 
 	  [(ngModel)]="selectedProgram" 
-	  placeholder="{{selectedProgram.name}}" 
+	  placeholder="{{eachMeetingEventData.programs.programsDefault.name}}" 
 	  optionLabel="name" 
 	  [showClear]="true"
 	  [autoWidth]="false" 
@@ -33,11 +33,11 @@
 	    <span>Module</span>
 	  </div>
 	  <p-multiSelect 
-	  [options]="eachMeetingEventData.modules" 
+	  [options]="eachMeetingEventData.modules.modulesData" 
 	  [(ngModel)]="selectedModules" 
 	  [panelStyle]="{minWidth:'30em'}"
 	  [filter]="true"></p-multiSelect>
-	  <!-- <p>Selected modules: {{selectedModules}}</p> -->
+	  <p>Selected modules: {{selectedModules}}</p>
 	</div>
 
 	<!-- program type -->
@@ -54,7 +54,7 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <!-- <p>Selected City: {{selectedProgramType ? selectedProgramType.name : 'none'}}</p> -->
+	  <p>Selected program type: {{selectedProgramType ? selectedProgramType.name : 'none'}}</p>
 	</div>
 
 	<!-- evaluation form -->
@@ -63,15 +63,15 @@
 	    <span>Evaluation Form</span>
 	  </div>
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.evaluationForms" 
+	  [options]="eachMeetingEventData.evaluationForms.evaluationFormsData" 
 	  [(ngModel)]="selectedEvaluationForms" 
-	  placeholder="Select a evaluation form" 
+	  placeholder="{{eachMeetingEventData.evaluationForms.evaluationFormsDefault.name}}" 
 	  optionLabel="name" 
 	  [showClear]="true"
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <!-- <p>Selected City: {{selectedEvaluationForms ? selectedEvaluationForms.name : 'none'}}</p> -->
+	  <p>Selected City: {{selectedEvaluationForms ? selectedEvaluationForms.name : 'none'}}</p>
 	</div>
 
 	<!-- Meeting Format -->
@@ -88,7 +88,7 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <!-- <p>Selected City: {{selectedMeetingFormats ? selectedMeetingFormats.name : 'none'}}</p> -->
+	  <p>Selected City: {{selectedMeetingFormats ? selectedMeetingFormats.name : 'none'}}</p>
 	</div>
 
 	<!-- Time -->
@@ -105,7 +105,7 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
+	  <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p>
 	</div>
 
 	<!-- speaker -->
@@ -114,7 +114,7 @@
 	    <span>Speaker</span>
 	  </div>
 	  <p-multiSelect 
-	  [options]="eachMeetingEventData.speakers" 
+	  [options]="eachMeetingEventData.speakers.speakersData" 
 	  [(ngModel)]="selectedSpeakers" 
 	  [panelStyle]="{minWidth:'30em'}"
 
@@ -196,7 +196,7 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
+	  <p>Selected City: {{selectedCanadaCity ? selectedCanadaCity.name : 'none'}}</p>
 	</div>
 
 	<!-- Event ME -->
@@ -208,7 +208,8 @@
 	  [rows]="5" 
 	  [cols]="68" 
 	  pInputTextarea 
-	  autoResize="autoResize"></textarea>
+	  autoResize="autoResize"
+	  [(ngModel)]="enteredEventME"></textarea>
 	</div>
 
 	<!-- Signature -->
@@ -220,7 +221,8 @@
 	  [rows]="5" 
 	  [cols]="68" 
 	  pInputTextarea 
-	  autoResize="autoResize"></textarea>
+	  autoResize="autoResize"
+	  [(ngModel)]="enteredSignature"></textarea>
 	</div>
 
 	<!-- Evaluation Number -->
@@ -232,7 +234,8 @@
 	  [rows]="5" 
 	  [cols]="68" 
 	  pInputTextarea 
-	  autoResize="autoResize"></textarea>
+	  autoResize="autoResize"
+	  [(ngModel)]="enteredEvaluationNumber"></textarea>
 	</div>
 
 	
