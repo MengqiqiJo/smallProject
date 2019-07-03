@@ -19,9 +19,9 @@
 	    <span>Program</span>
 	  </div>
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.programs.programsData" 
+	  [options]="eachMeetingEventData.programs.data" 
 	  [(ngModel)]="selectedProgram" 
-	  placeholder="{{eachMeetingEventData.programs.programsDefault.name}}" 
+	  placeholder="{{eachMeetingEventData.programs.default.name}}" 
 	  optionLabel="name" 
 	  [showClear]="true"
 	  [autoWidth]="false" 
@@ -96,8 +96,9 @@
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Meeting Time</span>
 	  </div>
+
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.meetingTimes" 
+	  [options]="eachMeetingEventData.meetingTimes.meetingTimesData" 
 	  [(ngModel)]="selectedMeetingTimes" 
 	  placeholder="Select a meeting Time" 
 	  optionLabel="name" 

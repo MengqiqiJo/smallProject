@@ -1333,10 +1333,17 @@
         {"name": "Non Accredited"}
       ],
       "programs":{
-        "programsDefault":{"name": "2016 COPD & Asthma Update: Hot Topics"},
-        "programsData":[
+        "inputType": "textfield radio checkbox multiselect",
+        "displayType": "dropdown slider",
+        "default": {
+          "name": "2016 COPD & Asthma Update: Hot Topics"
+        },
+        "data":[
           {"name": "None"},
-          {"name": "2017 COPD & Asthma Update: Hot Topics"},
+          {
+            "id": 1111,
+            "name": "2017 COPD & Asthma Update: Hot Topics"
+          },
           {"name": "2017 COPD Review with Graeme McCauley"},
           {"name": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"},
           {"name": "2017: The Changing Landscape in the Treatment of COPD"},
@@ -1429,16 +1436,19 @@
         {"name": "Live"},
         {"name": "Webinar"}
       ],
-      "meetingTimes":[
-        {"name": "12:00 AM"},
-        {"name": "3:00 AM"},
-        {"name": "6:00 AM"},
-        {"name": "9:00 AM"},
-        {"name": "12:00 PM"},
-        {"name": "3:00 PM"},
-        {"name": "6:00 PM"},
-        {"name": "9:00 PM"}
-      ],
+      "meetingTimes":{
+        "meetingTimesDefault":"",
+        "meetingTimesData":[
+          {"name": "12:00 AM"},
+          {"name": "3:00 AM"},
+          {"name": "6:00 AM"},
+          {"name": "9:00 AM"},
+          {"name": "12:00 PM"},
+          {"name": "3:00 PM"},
+          {"name": "6:00 PM"},
+          {"name": "9:00 PM"}
+        ]
+      },
       "multiTherapeuticEvent":[
         {"name": "None"},
         {"name": "Yes"},
