@@ -1332,22 +1332,51 @@
         {"name": "Symposia"},
         {"name": "Non Accredited"}
       ],
+      "customText":{
+        "inputType": "customText textfield radio checkbox multiselect",
+        "displayType": "",
+        "default": {
+          "id": 1111
+        },
+        "data":[
+          {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"}
+        ]
+      },
       "programs":{
         "inputType": "textfield radio checkbox multiselect",
         "displayType": "dropdown slider",
         "default": {
-          "name": "2016 COPD & Asthma Update: Hot Topics"
+          "id": 1111
         },
         "data":[
-          {"name": "None"},
+          {
+            "id": 1001,
+            "name": "20"
+          },
           {
             "id": 1111,
-            "name": "2017 COPD & Asthma Update: Hot Topics"
+            "name": "20178 COPD & Asthma Update: Hot Topics"
           },
-          {"name": "2017 COPD Review with Graeme McCauley"},
-          {"name": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"},
-          {"name": "2017: The Changing Landscape in the Treatment of COPD"},
-          {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"}
+          {
+            "id": 1112,
+            "name": "20178"
+          },
+          {
+            "id": 2222,
+            "name": "2017 COPD Review with Graeme McCauley"
+          },
+          {
+            "id": 3333,
+            "name": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"
+          },
+          {
+            "id": 4444,
+            "name": "2017: The Changing Landscape in the Treatment of COPD"
+          },
+          {
+            "id": 2222,
+            "name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
+          }
         ]
       },
       "modules":{
