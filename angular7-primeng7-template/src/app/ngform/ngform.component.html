@@ -20,23 +20,22 @@
 	  </div>
 	  <p-dropdown 
 	  [options]="eachMeetingEventData.programs.data" 
-	  [(ngModel)]="selectedProgram" 
-	  optionLabel="name" 
-	  [showClear]="true"
+	  [(ngModel)]="selectedProgram"
 	  [autoWidth]="false" 
-	  [style]="{'width': '500px'}">
+	  [showClear]="true"
+	  [style]="{'width':'500px'}">
+	       <ng-template let-item pTemplate="selectedItem"> 
+	          <span>{{item.label}}</span>
+	      </ng-template> 
+	      <ng-template let-car pTemplate="item"> 
+	          <div class="ui-helper-clearfix" style="position: relative;height:25px;">
+	          <div>{{car.label}}</div> </div>
+	      </ng-template>
 	  </p-dropdown>
+
 	</div>
 
-	<p-dropdown [options]="dds" [(ngModel)]="selectedCar" [style]="{'width':'150px'}">
-	     <ng-template let-item pTemplate="selectedItem"> 
-	        <span>{{item.label}}</span>
-	    </ng-template> 
-	    <ng-template let-car pTemplate="item"> 
-	        <div class="ui-helper-clearfix" style="position: relative;height:25px;">
-	        <div>{{car.label}}</div> </div>
-	    </ng-template>
-	</p-dropdown>
+	
 
 	<div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">

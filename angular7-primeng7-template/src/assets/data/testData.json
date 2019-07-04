@@ -1351,31 +1351,43 @@
         "data":[
           {
             "id": 1001,
-            "name": "20"
+            "label": "20",
+            "value": "20"
           },
           {
             "id": 1111,
-            "name": "20178 COPD & Asthma Update: Hot Topics"
+            "label": "20178 COPD & Asthma Update: Hot Topics",
+            "value": "20178 COPD & Asthma Update: Hot Topics"
+
           },
           {
             "id": 1112,
-            "name": "20178"
+            "label": "20178",
+            "value": "20178"
           },
           {
             "id": 2222,
-            "name": "2017 COPD Review with Graeme McCauley"
+            "label": "2017 COPD Review with Graeme McCauley",
+            "value": "2017 COPD Review with Graeme McCauley"
+
           },
           {
             "id": 3333,
-            "name": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"
+            "label": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM",
+            "value": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"
+
           },
           {
             "id": 4444,
-            "name": "2017: The Changing Landscape in the Treatment of COPD"
+            "label": "2017: The Changing Landscape in the Treatment of COPD",
+            "value": "2017: The Changing Landscape in the Treatment of COPD"
+
           },
           {
             "id": 2222,
-            "name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
+            "label": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection",
+            "value": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
+            
           }
         ]
       },

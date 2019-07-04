@@ -9,7 +9,7 @@ export class NGFormComponent implements OnInit {
 
 	@Input('meetingEventData') meetingEventData: any[];
 
-	selectedProgram: string='20178';
+	selectedProgram: string="20178";
 	enteredMeetingName: string="";
 	selectedEvaluationForms: any={};
 	selectedModules: string="";
@@ -31,6 +31,7 @@ export class NGFormComponent implements OnInit {
   selectedCar: string='Fiat';
   dds: any[];
 
+
   constructor() {
     console.log("meetingEventData");
     // console.log(this.meetingEventData);
@@ -49,9 +50,6 @@ export class NGFormComponent implements OnInit {
                 {label: 'VW', value: 'VW'},
                 {label: 'Volvo', value: 'Volvo'},
             ];
-
-            console.log(this.selectedCar);
-
 
     // this.selectedProgram = {"name" : 'india'};
   }
@@ -76,7 +74,6 @@ export class NGFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log();
   }
 
 }
