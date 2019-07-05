@@ -9,9 +9,9 @@ export class NGFormComponent implements OnInit {
 
 	@Input('meetingEventData') meetingEventData: any[];
 
-	selectedProgram: string="20178";
-	enteredMeetingName: string="";
-	selectedEvaluationForms: any={};
+	selectedProgram: string="2017 COPD Review with Graeme McCauley";
+	enteredMeetingName: string="Meeting - 2017 Lets have a Heart to Heart: CV Considerations in T2DM";
+	selectedEvaluationForms: string="2017 Lets have a Heart to Heart: CV Considerations in T2DM";
 	selectedModules: string="";
 	selectedProgramType: any={};
 	selectedMeetingTimes: any={};
@@ -34,24 +34,7 @@ export class NGFormComponent implements OnInit {
 
   constructor() {
     console.log("meetingEventData");
-    // console.log(this.meetingEventData);
-    // this.meetingEventData.forEach(obj => {
-    //   console.log(obj);
-    // });
-    this.dds = [
-                {label: 'Audi', value: 'Audi'},
-                {label: 'BMW', value: 'BMW'},
-                {label: 'Fiat', value: 'Fiat'},
-                {label: 'Ford', value: 'Ford'},
-                {label: 'Honda', value: 'Honda'},
-                {label: 'Jaguar', value: 'Jaguar'},
-                {label: 'Mercedes', value: 'Mercedes'},
-                {label: 'Renault', value: 'Renault'},
-                {label: 'VW', value: 'VW'},
-                {label: 'Volvo', value: 'Volvo'},
-            ];
-
-    // this.selectedProgram = {"name" : 'india'};
+   
   }
 
   save() {
@@ -60,7 +43,7 @@ export class NGFormComponent implements OnInit {
     	'selected program' + this.selectedProgram + '\n' + 
     	this.selectedModules + '\n' + 
     	this.selectedProgramType.name + '\n' + 
-    	this.selectedEvaluationForms.name + '\n' +
+    	this.selectedEvaluationForms + '\n' +
       this.selectedMeetingFormats.name + '\n' +
     	this.selectedMeetingTimes.name + '\n' +
     	this.selectedSpeakers + '\n' +

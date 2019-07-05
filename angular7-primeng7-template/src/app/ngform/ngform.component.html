@@ -9,7 +9,7 @@
 	  [rows]="5" 
 	  [cols]="68"
 	  [(ngModel)]="enteredMeetingName" 
-	  placeholder="{{eachMeetingEventData.meetingName.meetingNameDefault}}" 
+	  placeholder="{{eachMeetingEventData.meetingName.default}}" 
 	  pInputTextarea 
 	  autoResize="autoResize"></textarea>
 	</div>
@@ -28,21 +28,19 @@
 	          <span>{{item.label}}</span>
 	      </ng-template> 
 	      <ng-template let-car pTemplate="item"> 
-	          <div class="ui-helper-clearfix" style="position: relative;height:25px;">
+	          <div>
 	          <div>{{car.label}}</div> </div>
 	      </ng-template>
 	  </p-dropdown>
-
 	</div>
 
 	
-
 	<div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Module</span>
 	  </div>
 	  <p-multiSelect 
-	  [options]="eachMeetingEventData.modules.modulesData" 
+	  [options]="eachMeetingEventData.modules.data" 
 	  [(ngModel)]="selectedModules" 
 	  [panelStyle]="{minWidth:'30em'}"
 	  [filter]="true"></p-multiSelect>
@@ -55,7 +53,7 @@
 	    <span>Program Type</span>
 	  </div>
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.programTypes" 
+	  [options]="eachMeetingEventData.programTypes.data" 
 	  [(ngModel)]="selectedProgramType" 
 	  placeholder="Select a program type" 
 	  optionLabel="name" 
@@ -63,7 +61,7 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <p>Selected program type: {{selectedProgramType ? selectedProgramType.name : 'none'}}</p>
+	  <!-- <p>Selected program type: {{selectedProgramType ? selectedProgramType.data.name : 'none'}}</p> -->
 	</div>
 
 	<!-- evaluation form -->
@@ -72,15 +70,21 @@
 	    <span>Evaluation Form</span>
 	  </div>
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.evaluationForms.evaluationFormsData" 
+	  [options]="eachMeetingEventData.evaluationForms.data" 
 	  [(ngModel)]="selectedEvaluationForms" 
-	  placeholder="{{eachMeetingEventData.evaluationForms.evaluationFormsDefault.name}}" 
-	  optionLabel="name" 
 	  [showClear]="true"
 	  filter="true"
 	  [autoWidth]="false" 
-	  [style]="{'width': '500px'}"></p-dropdown>
-	  <p>Selected City: {{selectedEvaluationForms ? selectedEvaluationForms.name : 'none'}}</p>
+	  [style]="{'width': '500px'}">
+	  	 <ng-template let-item pTemplate="selectedItem"> 
+	  	    <span>{{item.label}}</span>
+	  	</ng-template> 
+	  	<ng-template let-car pTemplate="item"> 
+	  	    <div>
+	  	    <div>{{car.label}}</div> </div>
+	  	</ng-template>
+	  </p-dropdown>
+	  <!-- <p>Selected City: {{selectedEvaluationForms ? selectedEvaluationForms.name : 'none'}}</p> -->
 	</div>
 
 	<!-- Meeting Format -->
@@ -89,15 +93,13 @@
 	    <span>Meeting Format</span>
 	  </div>
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.meetingFormats" 
+	  [options]="eachMeetingEventData.meetingFormats.data" 
 	  [(ngModel)]="selectedMeetingFormats" 
 	  placeholder="Select a meeting format" 
-	  optionLabel="name" 
 	  [showClear]="true"
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <p>Selected City: {{selectedMeetingFormats ? selectedMeetingFormats.name : 'none'}}</p>
 	</div>
 
 	<!-- Time -->
@@ -107,7 +109,7 @@
 	  </div>
 
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.meetingTimes.meetingTimesData" 
+	  [options]="eachMeetingEventData.meetingTimes.data" 
 	  [(ngModel)]="selectedMeetingTimes" 
 	  placeholder="Select a meeting Time" 
 	  optionLabel="name" 
@@ -115,7 +117,7 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p>
+	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
 	</div>
 
 	<!-- speaker -->
@@ -124,7 +126,7 @@
 	    <span>Speaker</span>
 	  </div>
 	  <p-multiSelect 
-	  [options]="eachMeetingEventData.speakers.speakersData" 
+	  [options]="eachMeetingEventData.speakers.data" 
 	  [(ngModel)]="selectedSpeakers" 
 	  [panelStyle]="{minWidth:'30em'}"
 
@@ -138,10 +140,9 @@
 	    <span>Multi-Therapeituc Event</span>
 	  </div>
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.multiTherapeuticEvent" 
+	  [options]="eachMeetingEventData.multiTherapeuticEvent.data" 
 	  [(ngModel)]="selectedMultiTherapeitucEvent" 
 	  placeholder="Select a Multi-Therapeituc Event" 
-	  optionLabel="name" 
 	  [showClear]="true"
 	  filter="true"
 	  [autoWidth]="false" 
@@ -155,10 +156,9 @@
 	    <span>Location</span>
 	  </div>
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.location" 
+	  [options]="eachMeetingEventData.location.data" 
 	  [(ngModel)]="selectedMeetingLocation" 
 	  placeholder="Select a location" 
-	  optionLabel="name" 
 	  [showClear]="true"
 	  filter="true"
 	  [autoWidth]="false" 
@@ -198,15 +198,13 @@
 	    <span>Canada City</span>
 	  </div>
 	  <p-dropdown 
-	  [options]="eachMeetingEventData.canadaCity" 
+	  [options]="eachMeetingEventData.canadaCity.data" 
 	  [(ngModel)]="selectedCanadaCity" 
 	  placeholder="Select a canada city" 
-	  optionLabel="name" 
 	  [showClear]="true"
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <p>Selected City: {{selectedCanadaCity ? selectedCanadaCity.name : 'none'}}</p>
 	</div>
 
 	<!-- Event ME -->

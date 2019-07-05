@@ -1325,13 +1325,36 @@
   ],
   "meetingeventdata":[
     {
-      "programTypes":[
-        {"name": "None"},
-        {"name": "Accredited"},
-        {"name": "OLAs"},
-        {"name": "Symposia"},
-        {"name": "Non Accredited"}
-      ],
+      "programTypes":{
+        "default":"",
+        "data": [
+          {
+            "id": 1111,
+            "name": "None",
+            "value": "None"
+          },
+          {
+            "id": 2222,
+            "name": "Accredited",
+            "value": "Accredited"
+          },
+          {
+            "id": 3333,
+            "name": "OLAs",
+            "value": "OLAs"
+          },
+          {
+            "id": 4444,
+            "name": "Symposia",
+            "value": "Symposia"
+          },
+          {
+            "id": 5555,
+            "name": "Non Accredited",
+            "value": "Non Accredited"
+          }
+        ]
+      },
       "customText":{
         "inputType": "customText textfield radio checkbox multiselect",
         "displayType": "",
@@ -1384,137 +1407,306 @@
 
           },
           {
-            "id": 2222,
+            "id": 5555,
             "label": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection",
             "value": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
-            
+
           }
         ]
       },
       "modules":{
-        "modulesDefault":"",
-        "modulesData":[
+        "default":"",
+        "data":[
           {
+            "id": 1111,
             "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY",
             "value": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY"
           },
           {
+            "id": 2222,
             "label": "Chronic Kidney Disease",
             "value": "Chronic Kidney Disease"
           },
           {
+            "id": 3333,
             "label": "Complex Patients: Therapies that Can Reduce Mortality",
             "value": "Complex Patients: Therapies that Can Reduce Mortality"
           },
           {
+            "id": 4444,
             "label": "Diabetes in Aboriginal Populations",
             "value": "Diabetes in Aboriginal Populations"
           },
           {
+            "id": 5555,
             "label": "Diabetes Management in the Presence of Glucocorticoids", 
             "value": "Diabetes Management in the Presence of Glucocorticoids" 
           },
           {
+            "id": 6666,
             "label": "Early Use of Insulin Therapy in T2D",
             "value": "Early Use of Insulin Therapy in T2D"
           },
           {
+            "id": 7777,
             "label": "Eating Disorders in Diabetes",
             "value": "Eating Disorders in Diabetes"
           }
         ]
       },
       "speakers":{
-        "speakersDefault":"",
-        "speakersData":[
+        "default":"",
+        "data":[
           {
+            "id": 1111,
             "label": "Marie-Claude Racine",
             "value": "Marie-Claude Racine"
           },
           {
+            "id": 2222,
             "label": "Larry Dian",
             "value": "Larry Dian"
           },
           {
+            "id": 3333,
             "label": "Shereen Metias",
             "value": "Shereen Metias"
           },
           {
+            "id": 4444,
             "label": "Marie-Hélène Robert", 
             "value": "Marie-Hélène Robert" 
           },
           {
+            "id": 5555,
             "label": "Patrice Gosselin",
             "value": "Patrice Gosselin"
           },
           {
+            "id": 6666,
             "label": "Danielle Houde",
             "value": "Danielle Houde"
           }
         ]
       },
       "meetingName":{
-        "meetingNameDefault":"Meeting - 2017 Lets have a Heart to Heart: CV Considerations in T2DM",
-        "meetingNameData":""
+        "default":"Meeting - 2017 Lets have a Heart to Heart: CV Considerations in T2DM",
+        "data":""
       },
       "evaluationForms":{
-        "evaluationFormsDefault":{"name": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"},
-        "evaluationFormsData":[
-          {"name": "None"},
-          {"name": "If you hear hoofbeats, think..."},
-          {"name": "(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices"},
-          {"name": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"},
-          {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"},
-          {"name": "A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview"},
-          {"name": "Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2"}
+        "default":{
+          "id": 4444,
+          "label": "2017 Lets have a Heart to Heart: CV Considerations in T2DM",
+          "value": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"
+        },
+        "data":[
+          {
+            "id": 1111,
+            "label": "None",
+            "value": "None"
+          },
+          {
+            "id": 2222,
+            "label": "If you hear hoofbeats, think...",
+            "value": "If you hear hoofbeats, think..."
+          },
+          {
+            "id": 3333,
+            "label": "(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices",
+            "value": "(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices"
+          },
+          {
+            "id": 4444,
+            "label": "2017 Lets have a Heart to Heart: CV Considerations in T2DM",
+            "value": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"
+          },
+          {
+            "id": 55555,
+            "label": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection",
+            "value": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
+          },
+          {
+            "id": 6666,
+            "label": "A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview",
+            "value": "A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview"
+          },
+          {
+            "id": 7777,
+            "label": "Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2",
+            "value": "Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2"
+          }
         ]
       },
-      "meetingFormats":[
-        {"name": "None"},
-        {"name": "HCP Scholarships"},
-        {"name": "Hybrid (Live/virtual)"},
-        {"name": "Independent Sponsor Materials"},
-        {"name": "Live"},
-        {"name": "Webinar"}
-      ],
-      "meetingTimes":{
-        "meetingTimesDefault":"",
-        "meetingTimesData":[
-          {"name": "12:00 AM"},
-          {"name": "3:00 AM"},
-          {"name": "6:00 AM"},
-          {"name": "9:00 AM"},
-          {"name": "12:00 PM"},
-          {"name": "3:00 PM"},
-          {"name": "6:00 PM"},
-          {"name": "9:00 PM"}
-        ]
-      },
-      "multiTherapeuticEvent":[
-        {"name": "None"},
-        {"name": "Yes"},
-        {"name": "No"}
-      ],
-      "location":[
-        {"name": "None"},
-        {"name": "Conference Room"},
-        {"name": "Convention Center"},
-        {"name": "Hospital"},
-        {"name": "Hotel"},
-        {"name": "Medical Clinic"},
-        {"name": "Other"},
-        {"name": "Pharmacy"}
-      ],
-      "canadaCity":[
-        {"name": "None"},
-        {"name": "Abbotsford"},
-        {"name": "Acton Vale"},
-        {"name": "Addington"},
-        {"name": "Addington Highlands"},
-        {"name": "Adelaide Metcalfe"},
-        {"name": "Windsor"},
-        {"name": "York"}
+      "meetingFormats":{
+        "default":"",
+        "data":[
+        {
+          "id": 1111,
+          "label": "None",
+          "value": "None"
+        },
+        {
+          "id": 2222,
+          "label": "HCP Scholarships",
+          "value": "HCP Scholarships"
+        },
+        {
+          "id": 3333,
+          "label": "Hybrid (Live/virtual)",
+          "value": "Hybrid (Live/virtual)"
+        },
+        {
+          "id": 4444,
+          "label": "Independent Sponsor Materials",
+          "value": "Independent Sponsor Materials"
+        },
+        {
+          "id": 5555,
+          "label": "Live",
+          "value": "Live"
+        },
+        {
+          "id": 66666,
+          "label": "Webinar",
+          "value": "Webinar"
+        }
       ]
+    },
+      "meetingTimes":{
+        "default":"",
+        "data":[
+          {
+            "id": 1111,
+            "label": "12:00 AM",
+            "value": "12:00 AM"
+          },
+          {
+            "id": 2222,
+            "label": "3:00 AM",
+            "value": "3:00 AM"
+          },
+          {
+            "id": 3333,
+            "label": "6:00 AM",
+            "value": "6:00 AM"
+          },
+          {
+            "id": 4444,
+            "label": "9:00 AM",
+            "value": "9:00 AM"
+          },
+          {
+            "id": 55555,
+            "label": "12:00 PM",
+            "value": "12:00 PM"
+          },
+          {
+            "id": 6666,
+            "label": "3:00 PM",
+            "value": "3:00 PM"
+          },
+          {
+            "id": 6666,
+            "label": "6:00 PM",
+            "value": "6:00 PM"
+          },
+          {
+            "id": 6666,
+            "label": "9:00 PM",
+            "value": "9:00 PM"
+          }
+        ]
+      },
+      "multiTherapeuticEvent":{
+        "default": "",
+        "data":[
+          {
+            "id": 1111,
+            "label": "None",
+            "value": "None"
+          },
+          {
+            "id": 2222,
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "id": 3333,
+            "label": "No",
+            "value": "No"
+          }
+        ]
+      },
+      "location":{
+        "default": "",
+        "data": [
+          {
+            "id": 1111,
+            "label": "None",
+            "value": "None"
+          },
+          {
+            "id": 2222,
+            "label": "Conference Room",
+            "value": "Conference Room"
+          },
+          {
+            "id": 3333,
+            "label": "Convention Center",
+            "value": "Convention Center"
+          },
+          {
+            "id": 4444,
+            "label": "Hospital",
+            "value": "Hospital"
+          },
+          {
+            "id": 5555,
+            "label": "Hotel",
+            "value": "Hotel"
+          },
+          {
+            "id": 6666,
+            "label": "Pharmacy",
+            "value": "Pharmacy"
+          }
+        ]
+      },
+      "canadaCity":{
+        "default": "",
+        "data": [
+          {
+            "id": 1111,
+            "label": "None",
+            "value": "None"
+          },
+          {
+            "id": 2222,
+            "label": "Abbotsford",
+            "value": "Abbotsford"
+          },
+          {
+            "id": 3333,
+            "label": "Acton Vale",
+            "value": "Acton Vale"
+          },
+          {
+            "id": 4444,
+            "label": "Addington",
+            "value": "Addington"
+          },
+          {
+            "id": 55555,
+            "label": "Addington Highlands",
+            "value": "Addington Highlands"
+          },
+          {
+            "id": 55555,
+            "label": "Adelaide Metcalfe",
+            "value": "Adelaide Metcalfe"
+          }
+        ]
+      }
     }
   ]
 }
