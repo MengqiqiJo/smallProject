@@ -1324,9 +1324,20 @@
     }
   ],
   "meetingeventdata":[
-    {
-      "programTypes":{
+      {
+        "fieldName":"Meeting Name",
+        "inputType": "textfield",
+        "displayType": "textfield",
+        "default":"Meeting - 2017 Lets have a Heart to Heart: CV Considerations in T2DM",
+        "ngModel":"enteredMeetingName",
+        "data":""
+      },
+      {
+        "fieldName":"Program Type",
+        "inputType": "radio",
+        "displayType": "dropdown",
         "default":"",
+        "ngModel":"selectedProgramType",
         "data": [
           {
             "id": 1111,
@@ -1355,22 +1366,12 @@
           }
         ]
       },
-      "customText":{
-        "inputType": "customText textfield radio checkbox multiselect",
-        "displayType": "",
-        "default": {
-          "id": 1111
-        },
-        "data":[
-          {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"}
-        ]
-      },
-      "programs":{
-        "inputType": "textfield radio checkbox multiselect",
-        "displayType": "dropdown slider",
-        "default": {
-          "id": 1111
-        },
+      {
+        "fieldName":"Program",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": "20178",
+        "ngModel":"selectedProgram",
         "data":[
           {
             "id": 1001,
@@ -1379,8 +1380,8 @@
           },
           {
             "id": 1111,
-            "label": "20178 COPD & Asthma Update: Hot Topics",
-            "value": "20178 COPD & Asthma Update: Hot Topics"
+            "label": "2018 COPD & Asthma Update: Hot Topics",
+            "value": "2018 COPD & Asthma Update: Hot Topics"
 
           },
           {
@@ -1414,8 +1415,12 @@
           }
         ]
       },
-      "modules":{
-        "default":"",
+      {
+        "fieldName":"Modules",
+        "inputType": "multiselect",
+        "displayType": "multiselect",
+        "default":["Chronic Kidney Disease", "Diabetes in Aboriginal Populations"],
+        "ngModel":"selectedModules",
         "data":[
           {
             "id": 1111,
@@ -1454,8 +1459,12 @@
           }
         ]
       },
-      "speakers":{
+      {
+        "fieldName":"Speakers",
+        "inputType": "multiselect",
+        "displayType": "multiselect",
         "default":"",
+        "ngModel":"selectedSpeakers",
         "data":[
           {
             "id": 1111,
@@ -1488,17 +1497,13 @@
             "value": "Danielle Houde"
           }
         ]
-      },
-      "meetingName":{
-        "default":"Meeting - 2017 Lets have a Heart to Heart: CV Considerations in T2DM",
-        "data":""
-      },
-      "evaluationForms":{
-        "default":{
-          "id": 4444,
-          "label": "2017 Lets have a Heart to Heart: CV Considerations in T2DM",
-          "value": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"
-        },
+      }, 
+      {
+        "fieldName":"Evaluation Forms",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default":"2017 Lets have a Heart to Heart: CV Considerations in T2DM",
+        "ngModel":"selectedEvaluationForms",
         "data":[
           {
             "id": 1111,
@@ -1537,43 +1542,51 @@
           }
         ]
       },
-      "meetingFormats":{
+      {
+        "fieldName":"Meeting Formats",
+        "inputType": "radio",
+        "displayType": "dropdown",
         "default":"",
+        "ngModel":"selectedMeetingFormats",
         "data":[
-        {
-          "id": 1111,
-          "label": "None",
-          "value": "None"
-        },
-        {
-          "id": 2222,
-          "label": "HCP Scholarships",
-          "value": "HCP Scholarships"
-        },
-        {
-          "id": 3333,
-          "label": "Hybrid (Live/virtual)",
-          "value": "Hybrid (Live/virtual)"
-        },
-        {
-          "id": 4444,
-          "label": "Independent Sponsor Materials",
-          "value": "Independent Sponsor Materials"
-        },
-        {
-          "id": 5555,
-          "label": "Live",
-          "value": "Live"
-        },
-        {
-          "id": 66666,
-          "label": "Webinar",
-          "value": "Webinar"
-        }
-      ]
-    },
-      "meetingTimes":{
+          {
+            "id": 1111,
+            "label": "None",
+            "value": "None"
+          },
+          {
+            "id": 2222,
+            "label": "HCP Scholarships",
+            "value": "HCP Scholarships"
+          },
+          {
+            "id": 3333,
+            "label": "Hybrid (Live/virtual)",
+            "value": "Hybrid (Live/virtual)"
+          },
+          {
+            "id": 4444,
+            "label": "Independent Sponsor Materials",
+            "value": "Independent Sponsor Materials"
+          },
+          {
+            "id": 5555,
+            "label": "Live",
+            "value": "Live"
+          },
+          {
+            "id": 66666,
+            "label": "Webinar",
+            "value": "Webinar"
+          }
+        ]
+      },
+      {
+        "fieldName":"Meeting Times",
+        "inputType": "radio",
+        "displayType": "dropdown",
         "default":"",
+        "ngModel":"selectedMeetingTimes",
         "data":[
           {
             "id": 1111,
@@ -1617,8 +1630,12 @@
           }
         ]
       },
-      "multiTherapeuticEvent":{
+      {
+        "fieldName":"MultiTherapeituc Events",
+        "inputType": "radio",
+        "displayType": "dropdown",
         "default": "",
+        "ngModel":"selectedMultiTherapeitucEvent",
         "data":[
           {
             "id": 1111,
@@ -1637,8 +1654,12 @@
           }
         ]
       },
-      "location":{
+      {
+        "fieldName":"Meeting Location",
+        "inputType": "textfield",
+        "displayType": "textfield",
         "default": "",
+        "ngModel":"selectedMeetingLocation",
         "data": [
           {
             "id": 1111,
@@ -1672,8 +1693,12 @@
           }
         ]
       },
-      "canadaCity":{
+      {
+        "fieldName":"Canada City",
+        "inputType": "radio",
+        "displayType": "dropdown",
         "default": "",
+        "ngModel":"selectedCanadaCity",
         "data": [
           {
             "id": 1111,
@@ -1707,6 +1732,5 @@
           }
         ]
       }
-    }
   ]
 }

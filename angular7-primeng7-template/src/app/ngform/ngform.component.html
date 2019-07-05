@@ -1,6 +1,54 @@
-<div *ngFor="let eachMeetingEventData of meetingEventData">
+<div *ngFor="let eachMeetingEventData of ngData; let i=index" >
+  <div *ngIf="eachMeetingEventData.displayType == 'dropdown'; else elseBlock">
+  	<div style="margin: 20px;">
+  	  <div style="color:#00a9e0; font-size: 14px;">
+  	    <span>{{eachMeetingEventData.fieldName}}</span>
+  	  </div>
+  	  <p-dropdown 
+  	  [options]="eachMeetingEventData.data" 
+  	  [(ngModel)]="totalResults[i]" 
+  	  [autoWidth]="false" 
+  	  [showClear]="true"
+  	  [style]="{'width':'500px'}">
+  	       <ng-template let-item pTemplate="selectedItem"> 
+  	          <span>{{item.label}}</span>
+  	      </ng-template> 
+  	      <ng-template let-car pTemplate="item"> 
+  	          <div>
+  	          <div>{{car.label}}</div> </div>
+  	      </ng-template>
+  	  </p-dropdown>
+  	</div>
+  </div>
+  <div *ngIf="eachMeetingEventData.displayType == 'multiselect'; else elseBlock">
+  	<div style="margin: 20px;">
+  	  <div style="color:#00a9e0; font-size: 14px;">
+  	    <span>{{eachMeetingEventData.fieldName}}</span>
+  	  </div>
+  	  <p-multiSelect 
+  	  [options]="eachMeetingEventData.data" 
+  	  [(ngModel)]="totalResults[i]" 
+  	  [panelStyle]="{minWidth:'30em'}"
+  	  [filter]="true"></p-multiSelect>
+  	</div>
+  </div>
+  <div *ngIf="eachMeetingEventData.displayType == 'textfield'; else elseBlock">
+  	<div style="margin: 20px;">
+  	  <div style="color:#00a9e0; font-size: 14px;">
+  	    <span>{{eachMeetingEventData.fieldName}}</span>
+  	  </div>
+  	  <textarea 
+  	  [rows]="5" 
+  	  [cols]="68"
+  	  [(ngModel)]="totalResults[i]"
+  	  placeholder=totalResults[i]
+  	  pInputTextarea 
+  	  autoResize="autoResize"></textarea>
+  	</div>
+  </div>
+
 	
-	<h4>add meeting form</h4>
+	<!-- <h4>add meeting form</h4>
 	<div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Meeting Name</span>
@@ -9,7 +57,7 @@
 	  [rows]="5" 
 	  [cols]="68"
 	  [(ngModel)]="enteredMeetingName" 
-	  placeholder="{{eachMeetingEventData.meetingName.default}}" 
+	  placeholder="{{enteredMeetingName}}" 
 	  pInputTextarea 
 	  autoResize="autoResize"></textarea>
 	</div>
@@ -46,9 +94,9 @@
 	  [filter]="true"></p-multiSelect>
 	  <p>Selected modules: {{selectedModules}}</p>
 	</div>
-
+ -->
 	<!-- program type -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Program Type</span>
 	  </div>
@@ -61,11 +109,10 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <!-- <p>Selected program type: {{selectedProgramType ? selectedProgramType.data.name : 'none'}}</p> -->
-	</div>
+	</div> -->
 
 	<!-- evaluation form -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Evaluation Form</span>
 	  </div>
@@ -84,11 +131,10 @@
 	  	    <div>{{car.label}}</div> </div>
 	  	</ng-template>
 	  </p-dropdown>
-	  <!-- <p>Selected City: {{selectedEvaluationForms ? selectedEvaluationForms.name : 'none'}}</p> -->
-	</div>
+	</div> -->
 
 	<!-- Meeting Format -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Meeting Format</span>
 	  </div>
@@ -100,10 +146,10 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	</div>
+	</div> -->
 
 	<!-- Time -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Meeting Time</span>
 	  </div>
@@ -117,11 +163,10 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
-	</div>
+	</div> -->
 
 	<!-- speaker -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Speaker</span>
 	  </div>
@@ -131,11 +176,10 @@
 	  [panelStyle]="{minWidth:'30em'}"
 
 	  [filter]="true"></p-multiSelect>
-	  <!-- <p>Selected modules: {{selectedSpeakers}}</p> -->
-	</div>
+	</div> -->
 
 	<!-- Multi Therapeituc Event -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Multi-Therapeituc Event</span>
 	  </div>
@@ -147,11 +191,10 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
-	</div>
+	</div> -->
 
 	<!-- Location -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Location</span>
 	  </div>
@@ -163,11 +206,10 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	  <!-- <p>Selected City: {{selectedMeetingTimes ? selectedMeetingTimes.name : 'none'}}</p> -->
-	</div>
+	</div> -->
 
 	<!-- Venue Name -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Venue Name</span>
 	  </div>
@@ -177,10 +219,10 @@
 	  [(ngModel)]="enteredVenueName" 
 	  placeholder=" " 
 	  pInputText> 
-	</div>
+	</div> -->
 
 	<!-- Address -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Address</span>
 	  </div>
@@ -190,10 +232,10 @@
 	  [(ngModel)]="enteredAddress" 
 	  placeholder=" " 
 	  pInputText> 
-	</div>
+	</div> -->
 
 	<!-- canada city -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Canada City</span>
 	  </div>
@@ -205,10 +247,10 @@
 	  filter="true"
 	  [autoWidth]="false" 
 	  [style]="{'width': '500px'}"></p-dropdown>
-	</div>
+	</div> -->
 
 	<!-- Event ME -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Event ME</span>
 	  </div>
@@ -218,10 +260,10 @@
 	  pInputTextarea 
 	  autoResize="autoResize"
 	  [(ngModel)]="enteredEventME"></textarea>
-	</div>
+	</div> -->
 
 	<!-- Signature -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Signature</span>
 	  </div>
@@ -231,10 +273,10 @@
 	  pInputTextarea 
 	  autoResize="autoResize"
 	  [(ngModel)]="enteredSignature"></textarea>
-	</div>
+	</div> -->
 
 	<!-- Evaluation Number -->
-	<div style="margin: 20px;">
+	<!-- <div style="margin: 20px;">
 	  <div style="color:#00a9e0; font-size: 14px;">
 	    <span>Evaluation Number</span>
 	  </div>
@@ -244,10 +286,25 @@
 	  pInputTextarea 
 	  autoResize="autoResize"
 	  [(ngModel)]="enteredEvaluationNumber"></textarea>
-	</div>
+	</div> -->
 
 	
-	<div class="row">
+<!-- json json json json -->
+	<!-- {
+	  "fieldName":"custom text",
+	  "inputType": "customText textfield radio checkbox multiselect",
+	  "displayType": "customeText",
+	  "default": {
+	    "id": 1111
+	  },
+	  "data":[
+	    {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"}
+	  ]
+	}, -->
+	
+</div>
+
+<div class="row">
 		<div class="col-md-2" style="margin: 20px;">
 		  <p-button 
 		  label="SUBMIT" 
@@ -260,4 +317,3 @@
 		  (onClick)="save()"></p-button>
 		</div>
 	</div>
-</div>
