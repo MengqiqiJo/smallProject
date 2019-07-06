@@ -1350,7 +1350,7 @@
           {
             "id": 1111,
             "name": "None",
-            "value": "None"
+            "value": ""
           },
           {
             "id": 2222,
@@ -1381,6 +1381,11 @@
         "default": "20178",
         "ngModel":"selectedProgram",
         "data":[
+          {
+            "id": 1000,
+            "label": "NONE",
+            "value": ""
+          },
           {
             "id": 1001,
             "label": "20",
@@ -1516,7 +1521,7 @@
           {
             "id": 1111,
             "label": "None",
-            "value": "None"
+            "value": ""
           },
           {
             "id": 2222,
@@ -1560,7 +1565,7 @@
           {
             "id": 1111,
             "label": "None",
-            "value": "None"
+            "value": ""
           },
           {
             "id": 2222,
@@ -1596,6 +1601,11 @@
         "default":"",
         "ngModel":"selectedMeetingTimes",
         "data":[
+          {
+            "id": 1000,
+            "label": "NONE",
+            "value": ""
+          },
           {
             "id": 1111,
             "label": "12:00 AM",
@@ -1648,7 +1658,7 @@
           {
             "id": 1111,
             "label": "None",
-            "value": "None"
+            "value": ""
           },
           {
             "id": 2222,
@@ -1711,7 +1721,7 @@
           {
             "id": 1111,
             "label": "None",
-            "value": "None"
+            "value": ""
           },
           {
             "id": 2222,
