@@ -9,7 +9,7 @@ import { AppService } from '../app.service';
 })
 export class NGFormComponent implements OnInit {
 
-	@Input('meetingEventData') meetingEventData: any[];
+	@Input('name') ngFormcomponentData: any[];
 
 	selectedProgram: string="2017 COPD Review with Graeme McCauley";
 	enteredMeetingName: string="Meeting - 2017 Lets have a Heart to Heart: CV Considerations in T2DM";
@@ -31,22 +31,10 @@ export class NGFormComponent implements OnInit {
 
   ngData: any[];
 
-  totalResults: []=[];
-  countResult: number;
+  totalResults: any[]=[];
+  countResult: number = 0;
 
   constructor(private myService: AppService) {
-    console.log("meetingEventData");
-
-    this.countResult = 0;
-    this.myService.getMyJson().subscribe(data => {
-      this.ngData = data['meetingeventdata'];
-      this.ngData.forEach(eachBlock => {
-        this.totalResults[this.countResult] = eachBlock.default;
-        this.countResult++;
-      });
-
-    });
-   
   }
 
   save() {
@@ -71,6 +59,12 @@ export class NGFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("input");
+    console.log(this.ngFormcomponentData);
+      this.ngFormcomponentData.forEach(eachBlock => {
+        this.totalResults[this.countResult] = eachBlock.default;
+        this.countResult++;
+      });
   }
 
 }

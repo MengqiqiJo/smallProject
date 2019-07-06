@@ -1,370 +1,122 @@
-{
-  "primengcontentdata":[
-    {
-      "tabShow": "hide",
-      "isChartjs": true,
-      "blockHeader": "",
-      "blockClass": "col-md-4 margin-top-24",
-      "blockClassSub": "",
-      "blockContent": [
-        {
-          "tabTitle": "",
-          "chartjsPluginsOptions": {
-            "calculateTooltip": true,
-            "calculateLabel": true
-          },
-          "tabData":
-          {
-            "type": "chart",
-            "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
-            "top": {
-              "enable": false,
-              "styleClass": "bg-009ddf color-fff height-60",
-              "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
-            },
-            "middle": {
-              "class": "height-400",
-              "middleLeft": {
-                "enable": false,
-                "styleClass": "",
-                "value": ""
-              },
-              "middleMiddle": {
-                "value": "",
-                "renderLabel": "percentage",
-                "type": "pie",
-                "styleClass": "col-md-6 margin-top-24",
-                "data": {
-                  "labels": ["OLA", "Head Office", "I&D", "MS/NS"],
-                  "datasets": [{
-                    "label": "",
-                    "data": [4, 138, 20, 40],
-                    "backgroundColor": [
-                      "#0023d0",
-                      "#75d1e0",
-                      "#cc292b",
-                      "#00aeef"
-                    ]
-                  }]
-                },
-                "options": {
-                  "legend": {
-                    "display": false
-                  },
-                  "plugins": {
-                    "labels": {
-                      "render": "percentage",
-                      "fontColor": "#ffffff",
-                      "fontSize": 10
-                    }
-                  }
-                }
-              },
-              "middleRight": {
-                "enable": false,
-                "styleClass": "col-md-6",
-                "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
-              }
-            },
-            "bottom": {
-              "value": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "tabShow": "hide",
-      "isChartjs": true,
-      "blockHeader": "",
-      "blockClass": "col-md-4 margin-top-24",
-      "blockClassSub": "",
-      "blockContent": [
-        {
-          "tabTitle": "",
-          "chartjsPluginsOptions": {
-            "calculateTooltip": true,
-            "calculateLabel": true
-          },
-          "tabData":
-          {
-            "type": "chart",
-            "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
-            "top": {
-              "enable": false,
-              "styleClass": "bg-009ddf color-fff height-60",
-              "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
-            },
-            "middle": {
-              "class": "height-400",
-              "middleLeft": {
-                "enable": false,
-                "styleClass": "",
-                "value": ""
-              },
-              "middleMiddle": {
-                "value": "",
-                "renderLabel": "percentage",
-                "type": "doughnut",
-                "styleClass": "col-md-6 margin-top-24",
-                "data": {
-                  "labels": ["OLA", "Head Office"],
-                  "datasets": [{
-                    "label": "",
-                    "data": [4, 138],
-                    "backgroundColor": [
-                      "#0093d0",
-                      "#75d1e0"
-                    ]
-                  }]
-                },
-                "options": {
-                  "legend": {
-                    "display": false
-                  },
-                  "plugins": {
-                    "labels": {
-                      "render": "value",
-                      "fontColor": "#000",
-                      "fontSize": 10
-                    }
-                  }
-                }
-              },
-              "middleRight": {
-                "enable": false,
-                "styleClass": "col-md-6",
-                "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
-              }
-            },
-            "bottom": {
-              "value": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "tabShow": "hide",
-      "isChartjs": false,
-      "blockHeader": "",
-      "blockClass": "col-md-4 margin-top-24",
-      "blockClassSub": "",
-      "blockContent": [
-        {
-          "tabTitle": "",
-          "chartjsPluginsOptions": {
-            "calculateTooltip": true,
-            "calculateLabel": true
-          },
-          "calculateTooltip": true,
-          "calculateLabel": true,
-          "tabData":
-          {
-            "type": "chart",
-            "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
-            "top": {
-              "enable": false,
-              "styleClass": "bg-009ddf color-fff height-60",
-              "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
-            },
-            "middle": {
-              "class": "height-400",
-              "middleLeft": {
-                "enable": false,
-                "styleClass": "",
-                "value": ""
-              },
-              "middleMiddle": {
-                "value": "",
-                "renderLabel": "percentage",
-                "type": "doughnut",
-                "styleClass": "col-md-6 margin-top-24",
-                "data": {
-                  "labels": ["OLA", "Head Office"],
-                  "datasets": [{
-                    "label": "",
-                    "data": [4, 138],
-                    "backgroundColor": [
-                      "#0093d0",
-                      "#75d1e0"
-                    ]
-                  }]
-                },
-                "options": {
-                  "legend": {
-                    "display": false
-                  },
-                  "plugins": {
-                    "labels": {
-                      "render": "value",
-                      "fontColor": "#000",
-                      "fontSize": 10
-                    }
-                  }
-                }
-              },
-              "middleRight": {
-                "enable": false,
-                "styleClass": "col-md-6",
-                "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
-              }
-            },
-            "bottom": {
-              "value": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "tabShow": "hide",
-      "isChartjs": true,
-      "blockHeader": "",
-      "blockClass": "col-md-4 margin-top-24",
-      "blockClassSub": "",
-      "blockContent": [
-        {
-          "tabTitle": "",
-          "chartjsPluginsOptions": {
-            "calculateTooltip": true,
-            "calculateLabel": true
-          },
-          "tabData":
-          {
-            "blockId": "barChart",
-            "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
-            "type": "chart",
-            "top": {
-              "enable": false,
-              "styleClass": "bg-009ddf color-fff height-60",
-              "value": "<div class=\"bg-009ddf color-fff height-60 padding-15 padding-left-14\">Event Types of Total</div>"
-            },
-            "middle": {
-              "class": "height-400",
-              "middleLeft": {
-                "enable": false,
-                "styleClass": "",
-                "value": ""
-              },
-              "middleMiddle": {
-                "value": "",
-                "renderLabel": "value",
-                "type": "bar",
-                "styleClass": "col-md-12 margin-top-24",
-                "data": {
-                  "labels": [
-                    "OLA",
-                    "Accredited",
-                    "Speaker Tour",
-                    "Symposiums",
-                    "Preceptorships",
-                    "Nurse Educator"
-                  ],
-                  "datasets": [{
-                  "label": "",
-                  "fill": false,
-                  "data": [
-                    38,
-                    54,
-                    89,
-                    21,
-                    13,
-                    111
-                  ],
-                  "borderColor": [
-                    "#0093d0"
-                  ],
-                  "backgroundColor": [
-                    "#0093d0"
-                    ],
-                  "borderWidth": 1
-                  }]
-                },
-                "options": {
-                  "legend": {
-                    "display": false
-                  },
-                  "plugins": {
-                    "labels": {
-                      "render": "value",
-                      "fontColor": "#000",
-                      "fontSize": 10
-                    }
-                  },
-                  "layout": {
-                    "padding": {
-                      "top": 50
-                    }
-                  },
-                  "yAxes": [{
-                    "display": false,
-                    "ticks": {
-                      "max": 130
-                    }
-                  }]
-                }
-              },
-              "middleRight": {
-                "enable": false,
-                "styleClass": "",
-                "value": ""
-              }
-            },
-            "bottom": {
-              "value": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-        "tabShow": "show",
+[
+  {
+    "componentname":"primengcontentdata",
+    "primengcontentdata":[
+      {
+        "tabShow": "hide",
         "isChartjs": true,
-        "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Speaker Identify and address only render on getBlockMultiContainer111</span></div>",
-        "blockClass": "col-md-6 margin-top-24",
-        "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
+        "blockHeader": "",
+        "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
         "blockContent": [
           {
-            "tabTitle": "Tab21",
+            "tabTitle": "",
             "chartjsPluginsOptions": {
               "calculateTooltip": true,
               "calculateLabel": true
             },
             "tabData":
             {
-              "blockId": "pieChart",
-              "class": "col-md-12 margin-top-24",
               "type": "chart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
               "top": {
                 "enable": false,
                 "styleClass": "bg-009ddf color-fff height-60",
-                "value": ""
+                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
               },
               "middle": {
-                "class": "",
+                "class": "height-400",
                 "middleLeft": {
                   "enable": false,
                   "styleClass": "",
                   "value": ""
                 },
                 "middleMiddle": {
+                  "value": "",
                   "renderLabel": "percentage",
-                  "value": "<div class=\"height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
                   "type": "pie",
                   "styleClass": "col-md-6 margin-top-24",
                   "data": {
-                    "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
+                    "labels": ["OLA", "Head Office", "I&D", "MS/NS"],
                     "datasets": [{
                       "label": "",
-                      "data": [49, 10, 10, 8, 84, 3],
+                      "data": [4, 138, 20, 40],
+                      "backgroundColor": [
+                        "#0023d0",
+                        "#75d1e0",
+                        "#cc292b",
+                        "#00aeef"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "percentage",
+                        "fontColor": "#ffffff",
+                        "fontSize": 10
+                      }
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": true,
+        "blockHeader": "",
+        "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "chartjsPluginsOptions": {
+              "calculateTooltip": true,
+              "calculateLabel": true
+            },
+            "tabData":
+            {
+              "type": "chart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "percentage",
+                  "type": "doughnut",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": ["OLA", "Head Office"],
+                    "datasets": [{
+                      "label": "",
+                      "data": [4, 138],
                       "backgroundColor": [
                         "#0093d0",
-                        "#002596",
-                        "#cc292b",
-                        "#00aeef",
-                        "#7dba00",
-                        "#c6c6c6"
+                        "#75d1e0"
                       ]
                     }]
                   },
@@ -384,20 +136,386 @@
                 "middleRight": {
                   "enable": false,
                   "styleClass": "col-md-6",
-                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Cardio Met (49)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-002596\"></span><span class=\"float-left legend-text\">Respiratory (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-cc292b\"></span><span class=\"float-left legend-text\">Ophthalmology (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">I&D (8)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Oncology (84)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">MS/NS (3)</span></div></div>"
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
                 }
               },
               "bottom": {
-                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">222222</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                "value": ""
               }
             }
-          },
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": false,
+        "blockHeader": "",
+        "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
           {
-            "tabTitle": "Tab2",
+            "tabTitle": "",
             "chartjsPluginsOptions": {
-              "calculateTooltip": false,
+              "calculateTooltip": true,
               "calculateLabel": true
             },
+            "calculateTooltip": true,
+            "calculateLabel": true,
+            "tabData":
+            {
+              "type": "chart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "percentage",
+                  "type": "doughnut",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": ["OLA", "Head Office"],
+                    "datasets": [{
+                      "label": "",
+                      "data": [4, 138],
+                      "backgroundColor": [
+                        "#0093d0",
+                        "#75d1e0"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": true,
+        "blockHeader": "",
+        "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "chartjsPluginsOptions": {
+              "calculateTooltip": true,
+              "calculateLabel": true
+            },
+            "tabData":
+            {
+              "blockId": "barChart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "type": "chart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"bg-009ddf color-fff height-60 padding-15 padding-left-14\">Event Types of Total</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "value",
+                  "type": "bar",
+                  "styleClass": "col-md-12 margin-top-24",
+                  "data": {
+                    "labels": [
+                      "OLA",
+                      "Accredited",
+                      "Speaker Tour",
+                      "Symposiums",
+                      "Preceptorships",
+                      "Nurse Educator"
+                    ],
+                    "datasets": [{
+                    "label": "",
+                    "fill": false,
+                    "data": [
+                      38,
+                      54,
+                      89,
+                      21,
+                      13,
+                      111
+                    ],
+                    "borderColor": [
+                      "#0093d0"
+                    ],
+                    "backgroundColor": [
+                      "#0093d0"
+                      ],
+                    "borderWidth": 1
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
+                    },
+                    "layout": {
+                      "padding": {
+                        "top": 50
+                      }
+                    },
+                    "yAxes": [{
+                      "display": false,
+                      "ticks": {
+                        "max": 130
+                      }
+                    }]
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+          "tabShow": "show",
+          "isChartjs": true,
+          "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Speaker Identify and address only render on getBlockMultiContainer111</span></div>",
+          "blockClass": "col-md-6 margin-top-24",
+          "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
+          "blockContent": [
+            {
+              "tabTitle": "Tab21",
+              "chartjsPluginsOptions": {
+                "calculateTooltip": true,
+                "calculateLabel": true
+              },
+              "tabData":
+              {
+                "blockId": "pieChart",
+                "class": "col-md-12 margin-top-24",
+                "type": "chart",
+                "top": {
+                  "enable": false,
+                  "styleClass": "bg-009ddf color-fff height-60",
+                  "value": ""
+                },
+                "middle": {
+                  "class": "",
+                  "middleLeft": {
+                    "enable": false,
+                    "styleClass": "",
+                    "value": ""
+                  },
+                  "middleMiddle": {
+                    "renderLabel": "percentage",
+                    "value": "<div class=\"height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                    "type": "pie",
+                    "styleClass": "col-md-6 margin-top-24",
+                    "data": {
+                      "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
+                      "datasets": [{
+                        "label": "",
+                        "data": [49, 10, 10, 8, 84, 3],
+                        "backgroundColor": [
+                          "#0093d0",
+                          "#002596",
+                          "#cc292b",
+                          "#00aeef",
+                          "#7dba00",
+                          "#c6c6c6"
+                        ]
+                      }]
+                    },
+                    "options": {
+                      "legend": {
+                        "display": false
+                      },
+                      "plugins": {
+                        "labels": {
+                          "render": "value",
+                          "fontColor": "#000",
+                          "fontSize": 10
+                        }
+                      }
+                    }
+                  },
+                  "middleRight": {
+                    "enable": false,
+                    "styleClass": "col-md-6",
+                    "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Cardio Met (49)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-002596\"></span><span class=\"float-left legend-text\">Respiratory (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-cc292b\"></span><span class=\"float-left legend-text\">Ophthalmology (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">I&D (8)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Oncology (84)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">MS/NS (3)</span></div></div>"
+                  }
+                },
+                "bottom": {
+                  "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">222222</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                }
+              }
+            },
+            {
+              "tabTitle": "Tab2",
+              "chartjsPluginsOptions": {
+                "calculateTooltip": false,
+                "calculateLabel": true
+              },
+              "tabData":
+              {
+                "blockId": "barChart",
+                "class": "col-md-12 margin-top-24",
+                "type": "chart",
+                "top": {
+                  "enable": false,
+                  "styleClass": "bg-009ddf color-fff height-60",
+                  "value": ""
+                },
+                "middle": {
+                  "class": "height-400",
+                  "middleLeft": {
+                    "enable": false,
+                    "styleClass": "",
+                    "value": ""
+                  },
+                  "middleMiddle": {
+                    "renderLabel": "percentage",
+                    "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                    "type": "bar",
+                    "styleClass": "col-md-12 margin-top-24",
+                    "data": {
+                      "labels": [
+                        "OLA",
+                        "Accredited",
+                        "Speaker Tour",
+                        "Symposiums",
+                        "Preceptorships",
+                        "Nurse Educator"
+                      ],
+                      "datasets": [
+                        {
+                          "label": "",
+                          "data": [
+                            138,
+                            4,
+                            9,
+                            1,
+                            1,
+                            11
+                          ],
+                          "backgroundColor": "#0093d0",
+                          "borderColor": "#0093d0",
+                          "borderWidth": 1
+                        },
+                        {
+                          "label": "of votes",
+                          "data": [
+                            38,
+                            24,
+                            93,
+                            12,
+                            31,
+                            11
+                          ],
+                          "backgroundColor": "#00134b",
+                          "borderColor": "#00134b",
+                          "borderWidth": 1
+                        }
+                      ] 
+                    },
+                    "options": {
+                      "legend": {
+                        "display": false
+                      },
+                      "plugins": {
+                        "labels": {
+                          "render": "percentage",
+                          "fontColor": "#000",
+                          "fontSize": 10
+                        }
+                      },
+                      "scales": {
+                        "xAxes": [{
+                          "gridLines": {
+                            "color": "#f5f5f5"
+                          },
+                          "ticks": {
+                            "fontSize": 14
+                          }
+                        }],
+                        "yAxes": [{
+                          "gridLines": {
+                            "color": "#f5f5f5"
+                          },
+                          "ticks": {
+                            "fontSize": 14,
+                            "max": 160
+                          }
+                        }]
+                      }
+                    }
+                  },
+                  "middleRight": {
+                    "enable": false,
+                    "styleClass": "",
+                    "value": ""
+                  }
+                },
+                "bottom": {
+                  "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                }
+              }
+            }
+          ]
+      },
+      {
+        "tabShow": "show",
+        "isChartjs": true,
+        "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Event Implementation</span></div>",
+        "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
+        "blockContent": [
+          {
+            "tabTitle": "MONTH",
             "tabData":
             {
               "blockId": "barChart",
@@ -416,77 +534,199 @@
                   "value": ""
                 },
                 "middleMiddle": {
-                  "renderLabel": "percentage",
-                  "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
-                  "type": "bar",
-                  "styleClass": "col-md-12 margin-top-24",
+                  "value": "",
+                  "chartjsPluginsOptions": {
+                    "calculateTooltip": true,
+                    "calculateLabel": true
+                  },
+                  "type": "horizontalBar",
+                  "styleClass": "col-md-8 margin-top-24",
                   "data": {
                     "labels": [
-                      "OLA",
-                      "Accredited",
-                      "Speaker Tour",
-                      "Symposiums",
-                      "Preceptorships",
-                      "Nurse Educator"
+                      "JAN",
+                      "FEB",
+                      "MAR",
+                      "APR"
                     ],
                     "datasets": [
                       {
-                        "label": "",
-                        "data": [
-                          138,
-                          4,
-                          9,
-                          1,
-                          1,
-                          11
-                        ],
-                        "backgroundColor": "#0093d0",
-                        "borderColor": "#0093d0",
-                        "borderWidth": 1
-                      },
-                      {
-                        "label": "of votes",
-                        "data": [
-                          38,
-                          24,
-                          93,
-                          12,
-                          31,
-                          11
-                        ],
                         "backgroundColor": "#00134b",
                         "borderColor": "#00134b",
-                        "borderWidth": 1
+                        "pointColor": "#00134b",
+                        "data": [
+                          10,
+                          20,
+                          10,
+                          28
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#0093d0",
+                        "borderColor": "#0093d0",
+                        "pointColor": "#0093d0",
+                        "data": [
+                          1,
+                          3,
+                          5,
+                          0
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#00aeef",
+                        "borderColor": "#00aeef",
+                        "pointColor": "#00aeef",
+                        "data": [
+                          19,
+                          60,
+                          50,
+                          40
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#7dba00",
+                        "borderColor": "#7dba00",
+                        "pointColor": "#7dba00",
+                        "data": [
+                          30,
+                          10,
+                          15,
+                          12
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#c6c6c6",
+                        "borderColor": "#c6c6c6",
+                        "pointColor": "#c6c6c6",
+                        "data": [
+                          10,
+                          20,
+                          10,
+                          1
+                        ]
                       }
-                    ] 
+                    ]
                   },
                   "options": {
                     "legend": {
                       "display": false
                     },
                     "plugins": {
+                      "stacked100": {
+                        "enable": true
+                      },
                       "labels": {
-                        "render": "percentage",
-                        "fontColor": "#000",
-                        "fontSize": 10
+                        "fontSize": 0,
+                        "fontColor": "#000"
                       }
                     },
                     "scales": {
                       "xAxes": [{
-                        "gridLines": {
-                          "color": "#f5f5f5"
-                        },
+                       "stacked": true
+                      }],
+                      "yAxes": [{
+                        "barPercentage": 0.4,
+                        "stacked": true
+                      }]
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-xs-12 col-sm-12 col-md-4 margin-top-24",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(138)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": "<div class=\"row\"></div>"
+              }
+            }
+          },
+          {
+            "tabTitle": "QUATER",
+            "tabData":
+            {
+              "blockId": "barChart",
+              "class": "col-md-12 margin-top-24",
+              "type": "chart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": ""
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "chartjsPluginsOptions": {
+                    "calculateTooltip": true,
+                    "calculateLabel": true
+                  },
+                  "type": "bar",
+                  "styleClass": "col-md-8 margin-top-24",
+                  "data": {
+                    "labels": [
+                      "Q1",
+                      "Q2",
+                      "Q3",
+                      "Q4",
+                      "Q5"
+                    ],
+                    "datasets": [
+                      {
+                        "type": "bar",
+                        "label": "walk ins",
+                        "backgroundColor": "green",
+                        "data": [10, 8, 10, 19, 10],
+                        "yAxisID": "bar-y-axis"
+                    }, 
+                    {
+                        "type": "bar",
+                        "label": "pick-ups",
+                        "backgroundColor": "blue",
+                        "data": [20, 10, 4, 20, 20],
+                        "yAxisID": "bar-y-axis"
+                    },
+                    {
+                        "type": "bar",
+                        "label": "no show",
+                        "backgroundColor": "red",
+                        "data": [5, 6, 3, 7, 8],
+                        "yAxisID": "bar-y-axis"
+                    }
+                    ]
+                  },
+                  "options": {
+                    "datasetFill": false,
+                    "scaleShowVerticalLines": false,
+                    "responsive": false,
+                    "legend": {
+                      "position": "bottom"
+                    },
+                    "scales": {
+                      "xAxes": [{
+                        "stacked": true,
+                        "barPercentage": 0.2,
                         "ticks": {
-                          "fontSize": 14
+                          "beginAtZero": true
                         }
                       }],
                       "yAxes": [{
-                        "gridLines": {
-                          "color": "#f5f5f5"
-                        },
+                        "stacked": false,
+                        "barPercentage": 0.2,
+                        "maxBarThickness": 100,
                         "ticks": {
-                          "fontSize": 14,
-                          "max": 160
+                          "beginAtZero": true
+                        }
+                      }, {
+                        "id": "bar-y-axis",
+                        "stacked": true,
+                        "ticks": {
+                          "beginAtZero": true
                         }
                       }]
                     }
@@ -494,836 +734,604 @@
                 },
                 "middleRight": {
                   "enable": false,
-                  "styleClass": "",
-                  "value": ""
+                  "styleClass": "col-md-4 margin-top-24",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(108)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
                 }
               },
               "bottom": {
-                "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                "value": "<div class=\"row\"></div>"
               }
             }
           }
         ]
-    },
-    {
-      "tabShow": "show",
-      "isChartjs": true,
-      "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Event Implementation</span></div>",
-      "blockClass": "col-md-6 margin-top-24",
-      "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
-      "blockContent": [
-        {
-          "tabTitle": "MONTH",
-          "tabData":
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": false,
+        "blockHeader": "",
+        "blockClass": "col-md-12 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
           {
-            "blockId": "barChart",
-            "class": "col-md-12 margin-top-24",
-            "type": "chart",
-            "top": {
-              "enable": false,
-              "styleClass": "bg-009ddf color-fff height-60",
-              "value": ""
-            },
-            "middle": {
-              "class": "height-400",
-              "middleLeft": {
-                "enable": false,
-                "styleClass": "",
-                "value": ""
+            "tabTitle": "",
+            "tabData":
+            {
+              "type": "table",
+              "tableId": 1,
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top":{
+                "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">View Programs</div>"
               },
-              "middleMiddle": {
-                "value": "",
-                "chartjsPluginsOptions": {
-                  "calculateTooltip": true,
-                  "calculateLabel": true
-                },
-                "type": "horizontalBar",
-                "styleClass": "col-md-8 margin-top-24",
-                "data": {
-                  "labels": [
-                    "JAN",
-                    "FEB",
-                    "MAR",
-                    "APR"
-                  ],
-                  "datasets": [
-                    {
-                      "backgroundColor": "#00134b",
-                      "borderColor": "#00134b",
-                      "pointColor": "#00134b",
-                      "data": [
-                        10,
-                        20,
-                        10,
-                        28
-                      ]
-                    },
-                    {
-                      "backgroundColor": "#0093d0",
-                      "borderColor": "#0093d0",
-                      "pointColor": "#0093d0",
-                      "data": [
-                        1,
-                        3,
-                        5,
-                        0
-                      ]
-                    },
-                    {
-                      "backgroundColor": "#00aeef",
-                      "borderColor": "#00aeef",
-                      "pointColor": "#00aeef",
-                      "data": [
-                        19,
-                        60,
-                        50,
-                        40
-                      ]
-                    },
-                    {
-                      "backgroundColor": "#7dba00",
-                      "borderColor": "#7dba00",
-                      "pointColor": "#7dba00",
-                      "data": [
-                        30,
-                        10,
-                        15,
-                        12
-                      ]
-                    },
-                    {
-                      "backgroundColor": "#c6c6c6",
-                      "borderColor": "#c6c6c6",
-                      "pointColor": "#c6c6c6",
-                      "data": [
-                        10,
-                        20,
-                        10,
-                        1
-                      ]
-                    }
-                  ]
-                },
-                "options": {
-                  "legend": {
-                    "display": false
-                  },
-                  "plugins": {
-                    "stacked100": {
-                      "enable": true
-                    },
-                    "labels": {
-                      "fontSize": 0,
-                      "fontColor": "#000"
-                    }
-                  },
-                  "scales": {
-                    "xAxes": [{
-                     "stacked": true
-                    }],
-                    "yAxes": [{
-                      "barPercentage": 0.4,
-                      "stacked": true
-                    }]
-                  }
-                }
-              },
-              "middleRight": {
-                "enable": false,
-                "styleClass": "col-xs-12 col-sm-12 col-md-4 margin-top-24",
-                "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(138)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
-              }
-            },
-            "bottom": {
-              "value": "<div class=\"row\"></div>"
-            }
-          }
-        },
-        {
-          "tabTitle": "QUATER",
-          "tabData":
-          {
-            "blockId": "barChart",
-            "class": "col-md-12 margin-top-24",
-            "type": "chart",
-            "top": {
-              "enable": false,
-              "styleClass": "bg-009ddf color-fff height-60",
-              "value": ""
-            },
-            "middle": {
-              "class": "height-400",
-              "middleLeft": {
-                "enable": false,
-                "styleClass": "",
-                "value": ""
-              },
-              "middleMiddle": {
-                "value": "",
-                "chartjsPluginsOptions": {
-                  "calculateTooltip": true,
-                  "calculateLabel": true
-                },
-                "type": "bar",
-                "styleClass": "col-md-8 margin-top-24",
-                "data": {
-                  "labels": [
-                    "Q1",
-                    "Q2",
-                    "Q3",
-                    "Q4",
-                    "Q5"
-                  ],
-                  "datasets": [
-                    {
-                      "type": "bar",
-                      "label": "walk ins",
-                      "backgroundColor": "green",
-                      "data": [10, 8, 10, 19, 10],
-                      "yAxisID": "bar-y-axis"
-                  }, 
+              "middle":{
+                "tSortField": "province",
+                "tfields":[
+                  { "field": "province", "header": "Program Name" },
+                  { "field": "OLA", "header": "BU" },
+                  { "field": "Accredited", "header": "#Events" },
+                  { "field": "Speaker Tour", "header": "HCP Reach" },
+                  { "field": "Symposiums", "header": "Responses" }
+                ],
+                "thead":[
+                  { "field": "province", "header": "Program Name" },
+                  { "field": "OLA", "header": "BU" },
+                  { "field": "Accredited", "header": "#Events" },
+                  { "field": "Speaker Tour", "header": "HCP Reach" },
+                  { "field": "Symposiums", "header": "Responses" }
+                ],
+                "tabledata":[
                   {
-                      "type": "bar",
-                      "label": "pick-ups",
-                      "backgroundColor": "blue",
-                      "data": [20, 10, 4, 20, 20],
-                      "yAxisID": "bar-y-axis"
+                    "province": "US Medical Affairs HCV Advisory Board",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 9,
+                    "Symposiums": 9
                   },
                   {
-                      "type": "bar",
-                      "label": "no show",
-                      "backgroundColor": "red",
-                      "data": [5, 6, 3, 7, 8],
-                      "yAxisID": "bar-y-axis"
-                  }
-                  ]
-                },
-                "options": {
-                  "datasetFill": false,
-                  "scaleShowVerticalLines": false,
-                  "responsive": false,
-                  "legend": {
-                    "position": "bottom"
+                    "province": "US HCV TGCPAA Symposium",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 39,
+                    "Symposiums": 35
                   },
-                  "scales": {
-                    "xAxes": [{
-                      "stacked": true,
-                      "barPercentage": 0.2,
-                      "ticks": {
-                        "beginAtZero": true
-                      }
-                    }],
-                    "yAxes": [{
-                      "stacked": false,
-                      "barPercentage": 0.2,
-                      "maxBarThickness": 100,
-                      "ticks": {
-                        "beginAtZero": true
-                      }
-                    }, {
-                      "id": "bar-y-axis",
-                      "stacked": true,
-                      "ticks": {
-                        "beginAtZero": true
-                      }
-                    }]
+                  {
+                    "province": "Understanding the Clinical Impact: Addressing Evidence Gaps in Adenomyosis, Endometriosis, and Uterine Fibroids - SEUD Symposium",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 240,
+                    "Symposiums": 23
+                  },
+                  {
+                    "province": "PCH Symposium",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 100,
+                    "Symposiums": 12
+                  },
+                  {
+                    "province": "IOTOD Conference 2019 Meet the Experts Workshop: Success through Outreach: Managing HCV in the Addiction Setting",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 30,
+                    "Symposiums": 13
+                  },
+                  {
+                    "province": "IOTOD Conference 2019 Industry Satellite Symposium: HCV and Addiction: A Multidisciplinary Approach",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 90,
+                    "Symposiums": 32
+                  },
+                  {
+                    "province": "Exocrine Pancreatic Insufficiency Post Pancreatic Surgery SOAP Symposium",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 102,
+                    "Symposiums": 39
+                  },
+                  {
+                    "province": "EPI Medical Affairs Advisory Board Meeting",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 7,
+                    "Symposiums": 7
+                  },
+                  {
+                    "province": "EASL 2019 Symposium: Transforming the HCV Care Cascade: Making HCV Elimination a Reality",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 1400,
+                    "Symposiums": 95
+                  },
+                  {
+                    "province": "AUA ICU Theater",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 242,
+                    "Symposiums": 37
+                  },
+                  {
+                    "province": "What Do Your Patients With MDD Really Want? Strategies to Help Them Re-Engage in Life",
+                    "OLA": "Lundbeck",
+                    "Accredited": 11,
+                    "Speaker Tour": 143,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "US Medical Affairs HCV Advisory Board",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 9,
+                    "Symposiums": 9
+                  },
+                  {
+                    "province": "US HCV TGCPAA Symposium",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 39,
+                    "Symposiums": 35
+                  },
+                  {
+                    "province": "Understanding the Clinical Impact: Addressing Evidence Gaps in Adenomyosis, Endometriosis, and Uterine Fibroids - SEUD Symposium",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 240,
+                    "Symposiums": 23
+                  },
+                  {
+                    "province": "PCH Symposium",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 100,
+                    "Symposiums": 12
+                  },
+                  {
+                    "province": "IOTOD Conference 2019 Meet the Experts Workshop: Success through Outreach: Managing HCV in the Addiction Setting",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 30,
+                    "Symposiums": 13
+                  },
+                  {
+                    "province": "IOTOD Conference 2019 Industry Satellite Symposium: HCV and Addiction: A Multidisciplinary Approach",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 90,
+                    "Symposiums": 32
+                  },
+                  {
+                    "province": "Exocrine Pancreatic Insufficiency Post Pancreatic Surgery SOAP Symposium",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 102,
+                    "Symposiums": 39
+                  },
+                  {
+                    "province": "EPI Medical Affairs Advisory Board Meeting",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 7,
+                    "Symposiums": 7
+                  },
+                  {
+                    "province": "EASL 2019 Symposium: Transforming the HCV Care Cascade: Making HCV Elimination a Reality",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 1400,
+                    "Symposiums": 95
+                  },
+                  {
+                    "province": "AUA ICU Theater",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 242,
+                    "Symposiums": 37
+                  },
+                  {
+                    "province": "What Do Your Patients With MDD Really Want? Strategies to Help Them Re-Engage in Life",
+                    "OLA": "Lundbeck",
+                    "Accredited": 11,
+                    "Speaker Tour": 143,
+                    "Symposiums": 0
                   }
-                }
+                ]
               },
-              "middleRight": {
-                "enable": false,
-                "styleClass": "col-md-4 margin-top-24",
-                "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(108)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
+              "bottom": {
+                "value": ""
               }
-            },
-            "bottom": {
-              "value": "<div class=\"row\"></div>"
             }
           }
-        }
-      ]
-    },
-    {
-      "tabShow": "hide",
-      "isChartjs": false,
-      "blockHeader": "",
-      "blockClass": "col-md-12 margin-top-24",
-      "blockClassSub": "",
-      "blockContent": [
-        {
-          "tabTitle": "",
-          "tabData":
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": false,
+        "blockHeader": "",
+        "blockClass": "col-md-12 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
           {
-            "type": "table",
-            "tableId": 1,
-            "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
-            "top":{
-              "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">View Programs</div>"
-            },
-            "middle":{
-              "tSortField": "province",
-              "tfields":[
-                { "field": "province", "header": "Program Name" },
-                { "field": "OLA", "header": "BU" },
-                { "field": "Accredited", "header": "#Events" },
-                { "field": "Speaker Tour", "header": "HCP Reach" },
-                { "field": "Symposiums", "header": "Responses" }
-              ],
-              "thead":[
-                { "field": "province", "header": "Program Name" },
-                { "field": "OLA", "header": "BU" },
-                { "field": "Accredited", "header": "#Events" },
-                { "field": "Speaker Tour", "header": "HCP Reach" },
-                { "field": "Symposiums", "header": "Responses" }
-              ],
-              "tabledata":[
-                {
-                  "province": "US Medical Affairs HCV Advisory Board",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 9,
-                  "Symposiums": 9
-                },
-                {
-                  "province": "US HCV TGCPAA Symposium",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 39,
-                  "Symposiums": 35
-                },
-                {
-                  "province": "Understanding the Clinical Impact: Addressing Evidence Gaps in Adenomyosis, Endometriosis, and Uterine Fibroids - SEUD Symposium",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 240,
-                  "Symposiums": 23
-                },
-                {
-                  "province": "PCH Symposium",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 100,
-                  "Symposiums": 12
-                },
-                {
-                  "province": "IOTOD Conference 2019 Meet the Experts Workshop: Success through Outreach: Managing HCV in the Addiction Setting",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 30,
-                  "Symposiums": 13
-                },
-                {
-                  "province": "IOTOD Conference 2019 Industry Satellite Symposium: HCV and Addiction: A Multidisciplinary Approach",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 90,
-                  "Symposiums": 32
-                },
-                {
-                  "province": "Exocrine Pancreatic Insufficiency Post Pancreatic Surgery SOAP Symposium",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 102,
-                  "Symposiums": 39
-                },
-                {
-                  "province": "EPI Medical Affairs Advisory Board Meeting",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 7,
-                  "Symposiums": 7
-                },
-                {
-                  "province": "EASL 2019 Symposium: Transforming the HCV Care Cascade: Making HCV Elimination a Reality",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 1400,
-                  "Symposiums": 95
-                },
-                {
-                  "province": "AUA ICU Theater",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 242,
-                  "Symposiums": 37
-                },
-                {
-                  "province": "What Do Your Patients With MDD Really Want? Strategies to Help Them Re-Engage in Life",
-                  "OLA": "Lundbeck",
-                  "Accredited": 11,
-                  "Speaker Tour": 143,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "US Medical Affairs HCV Advisory Board",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 9,
-                  "Symposiums": 9
-                },
-                {
-                  "province": "US HCV TGCPAA Symposium",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 39,
-                  "Symposiums": 35
-                },
-                {
-                  "province": "Understanding the Clinical Impact: Addressing Evidence Gaps in Adenomyosis, Endometriosis, and Uterine Fibroids - SEUD Symposium",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 240,
-                  "Symposiums": 23
-                },
-                {
-                  "province": "PCH Symposium",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 100,
-                  "Symposiums": 12
-                },
-                {
-                  "province": "IOTOD Conference 2019 Meet the Experts Workshop: Success through Outreach: Managing HCV in the Addiction Setting",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 30,
-                  "Symposiums": 13
-                },
-                {
-                  "province": "IOTOD Conference 2019 Industry Satellite Symposium: HCV and Addiction: A Multidisciplinary Approach",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 90,
-                  "Symposiums": 32
-                },
-                {
-                  "province": "Exocrine Pancreatic Insufficiency Post Pancreatic Surgery SOAP Symposium",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 102,
-                  "Symposiums": 39
-                },
-                {
-                  "province": "EPI Medical Affairs Advisory Board Meeting",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 7,
-                  "Symposiums": 7
-                },
-                {
-                  "province": "EASL 2019 Symposium: Transforming the HCV Care Cascade: Making HCV Elimination a Reality",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 1400,
-                  "Symposiums": 95
-                },
-                {
-                  "province": "AUA ICU Theater",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 242,
-                  "Symposiums": 37
-                },
-                {
-                  "province": "What Do Your Patients With MDD Really Want? Strategies to Help Them Re-Engage in Life",
-                  "OLA": "Lundbeck",
-                  "Accredited": 11,
-                  "Speaker Tour": 143,
-                  "Symposiums": 0
-                }
-              ]
-            },
-            "bottom": {
-              "value": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "tabShow": "hide",
-      "isChartjs": false,
-      "blockHeader": "",
-      "blockClass": "col-md-12 margin-top-24",
-      "blockClassSub": "",
-      "blockContent": [
-        {
-          "tabTitle": "",
-          "tabData":
-          {
-            "type": "table",
-            "tableId": 1,
-            "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
-            "top":{
-              "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">View Programs</div>"
-            },
-            "middle":{
-              "tSortField": "province",
-              "tfields":[
-                { "field": "province", "header": "Program Name" },
-                { "field": "OLA", "header": "BU" },
-                { "field": "Accredited", "header": "#Events" },
-                { "field": "Speaker Tour", "header": "HCP Reach" },
-                { "field": "Symposiums", "header": "Responses" }
+            "tabTitle": "",
+            "tabData":
+            {
+              "type": "table",
+              "tableId": 1,
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top":{
+                "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">View Programs</div>"
+              },
+              "middle":{
+                "tSortField": "province",
+                "tfields":[
+                  { "field": "province", "header": "Program Name" },
+                  { "field": "OLA", "header": "BU" },
+                  { "field": "Accredited", "header": "#Events" },
+                  { "field": "Speaker Tour", "header": "HCP Reach" },
+                  { "field": "Symposiums", "header": "Responses" }
 
-              ],
-              "thead":[
-                { "field": "province", "header": "Program Name" },
-                { "field": "OLA", "header": "BU" },
-                { "field": "Accredited", "header": "#Events" },
-                { "field": "Speaker Tour", "header": "HCP Reach" },
-                { "field": "Symposiums", "header": "Responses" }
-              ],
-              "tabledata":[
-                {
-                  "province": "US Medical Affairs HCV Advisory Board",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 9,
-                  "Symposiums": 9
-                },
-                {
-                  "province": "US HCV TGCPAA Symposium",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 39,
-                  "Symposiums": 35
-                },
-                {
-                  "province": "Understanding the Clinical Impact: Addressing Evidence Gaps in Adenomyosis, Endometriosis, and Uterine Fibroids - SEUD Symposium",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 240,
-                  "Symposiums": 23
-                },
-                {
-                  "province": "PCH Symposium",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 100,
-                  "Symposiums": 12
-                },
-                {
-                  "province": "IOTOD Conference 2019 Meet the Experts Workshop: Success through Outreach: Managing HCV in the Addiction Setting",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 30,
-                  "Symposiums": 13
-                },
-                {
-                  "province": "IOTOD Conference 2019 Industry Satellite Symposium: HCV and Addiction: A Multidisciplinary Approach",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 90,
-                  "Symposiums": 32
-                },
-                {
-                  "province": "Exocrine Pancreatic Insufficiency Post Pancreatic Surgery SOAP Symposium",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 102,
-                  "Symposiums": 39
-                },
-                {
-                  "province": "EPI Medical Affairs Advisory Board Meeting",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 7,
-                  "Symposiums": 7
-                },
-                {
-                  "province": "EASL 2019 Symposium: Transforming the HCV Care Cascade: Making HCV Elimination a Reality",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 1400,
-                  "Symposiums": 95
-                },
-                {
-                  "province": "AUA ICU Theater",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 242,
-                  "Symposiums": 37
-                },
-                {
-                  "province": "What Do Your Patients With MDD Really Want? Strategies to Help Them Re-Engage in Life",
-                  "OLA": "Lundbeck",
-                  "Accredited": 11,
-                  "Speaker Tour": 143,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "US Medical Affairs HCV Advisory Board",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 9,
-                  "Symposiums": 9
-                },
-                {
-                  "province": "US HCV TGCPAA Symposium",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 39,
-                  "Symposiums": 35
-                },
-                {
-                  "province": "Understanding the Clinical Impact: Addressing Evidence Gaps in Adenomyosis, Endometriosis, and Uterine Fibroids - SEUD Symposium",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 240,
-                  "Symposiums": 23
-                },
-                {
-                  "province": "PCH Symposium",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 100,
-                  "Symposiums": 12
-                },
-                {
-                  "province": "IOTOD Conference 2019 Meet the Experts Workshop: Success through Outreach: Managing HCV in the Addiction Setting",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 30,
-                  "Symposiums": 13
-                },
-                {
-                  "province": "IOTOD Conference 2019 Industry Satellite Symposium: HCV and Addiction: A Multidisciplinary Approach",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 90,
-                  "Symposiums": 32
-                },
-                {
-                  "province": "Exocrine Pancreatic Insufficiency Post Pancreatic Surgery SOAP Symposium",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 102,
-                  "Symposiums": 39
-                },
-                {
-                  "province": "EPI Medical Affairs Advisory Board Meeting",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 7,
-                  "Symposiums": 7
-                },
-                {
-                  "province": "EASL 2019 Symposium: Transforming the HCV Care Cascade: Making HCV Elimination a Reality",
-                  "OLA": "HCV",
-                  "Accredited": 1,
-                  "Speaker Tour": 1400,
-                  "Symposiums": 95
-                },
-                {
-                  "province": "AUA ICU Theater",
-                  "OLA": "Mature Products",
-                  "Accredited": 1,
-                  "Speaker Tour": 242,
-                  "Symposiums": 37
-                },
-                {
-                  "province": "What Do Your Patients With MDD Really Want? Strategies to Help Them Re-Engage in Life",
-                  "OLA": "Lundbeck",
-                  "Accredited": 11,
-                  "Speaker Tour": 143,
-                  "Symposiums": 0
-                }
-              ]
-            },
-            "bottom": {
-              "value": ""
+                ],
+                "thead":[
+                  { "field": "province", "header": "Program Name" },
+                  { "field": "OLA", "header": "BU" },
+                  { "field": "Accredited", "header": "#Events" },
+                  { "field": "Speaker Tour", "header": "HCP Reach" },
+                  { "field": "Symposiums", "header": "Responses" }
+                ],
+                "tabledata":[
+                  {
+                    "province": "US Medical Affairs HCV Advisory Board",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 9,
+                    "Symposiums": 9
+                  },
+                  {
+                    "province": "US HCV TGCPAA Symposium",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 39,
+                    "Symposiums": 35
+                  },
+                  {
+                    "province": "Understanding the Clinical Impact: Addressing Evidence Gaps in Adenomyosis, Endometriosis, and Uterine Fibroids - SEUD Symposium",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 240,
+                    "Symposiums": 23
+                  },
+                  {
+                    "province": "PCH Symposium",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 100,
+                    "Symposiums": 12
+                  },
+                  {
+                    "province": "IOTOD Conference 2019 Meet the Experts Workshop: Success through Outreach: Managing HCV in the Addiction Setting",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 30,
+                    "Symposiums": 13
+                  },
+                  {
+                    "province": "IOTOD Conference 2019 Industry Satellite Symposium: HCV and Addiction: A Multidisciplinary Approach",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 90,
+                    "Symposiums": 32
+                  },
+                  {
+                    "province": "Exocrine Pancreatic Insufficiency Post Pancreatic Surgery SOAP Symposium",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 102,
+                    "Symposiums": 39
+                  },
+                  {
+                    "province": "EPI Medical Affairs Advisory Board Meeting",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 7,
+                    "Symposiums": 7
+                  },
+                  {
+                    "province": "EASL 2019 Symposium: Transforming the HCV Care Cascade: Making HCV Elimination a Reality",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 1400,
+                    "Symposiums": 95
+                  },
+                  {
+                    "province": "AUA ICU Theater",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 242,
+                    "Symposiums": 37
+                  },
+                  {
+                    "province": "What Do Your Patients With MDD Really Want? Strategies to Help Them Re-Engage in Life",
+                    "OLA": "Lundbeck",
+                    "Accredited": 11,
+                    "Speaker Tour": 143,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "US Medical Affairs HCV Advisory Board",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 9,
+                    "Symposiums": 9
+                  },
+                  {
+                    "province": "US HCV TGCPAA Symposium",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 39,
+                    "Symposiums": 35
+                  },
+                  {
+                    "province": "Understanding the Clinical Impact: Addressing Evidence Gaps in Adenomyosis, Endometriosis, and Uterine Fibroids - SEUD Symposium",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 240,
+                    "Symposiums": 23
+                  },
+                  {
+                    "province": "PCH Symposium",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 100,
+                    "Symposiums": 12
+                  },
+                  {
+                    "province": "IOTOD Conference 2019 Meet the Experts Workshop: Success through Outreach: Managing HCV in the Addiction Setting",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 30,
+                    "Symposiums": 13
+                  },
+                  {
+                    "province": "IOTOD Conference 2019 Industry Satellite Symposium: HCV and Addiction: A Multidisciplinary Approach",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 90,
+                    "Symposiums": 32
+                  },
+                  {
+                    "province": "Exocrine Pancreatic Insufficiency Post Pancreatic Surgery SOAP Symposium",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 102,
+                    "Symposiums": 39
+                  },
+                  {
+                    "province": "EPI Medical Affairs Advisory Board Meeting",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 7,
+                    "Symposiums": 7
+                  },
+                  {
+                    "province": "EASL 2019 Symposium: Transforming the HCV Care Cascade: Making HCV Elimination a Reality",
+                    "OLA": "HCV",
+                    "Accredited": 1,
+                    "Speaker Tour": 1400,
+                    "Symposiums": 95
+                  },
+                  {
+                    "province": "AUA ICU Theater",
+                    "OLA": "Mature Products",
+                    "Accredited": 1,
+                    "Speaker Tour": 242,
+                    "Symposiums": 37
+                  },
+                  {
+                    "province": "What Do Your Patients With MDD Really Want? Strategies to Help Them Re-Engage in Life",
+                    "OLA": "Lundbeck",
+                    "Accredited": 11,
+                    "Speaker Tour": 143,
+                    "Symposiums": 0
+                  }
+                ]
+              },
+              "bottom": {
+                "value": ""
+              }
             }
           }
-        }
-      ]
-    },
-    {
-      "tabShow": "hide",
-      "isChartjs": false,
-      "blockHeader": "",
-      "blockClass": "col-md-12 margin-top-24",
-      "blockClassSub": "",
-      "blockContent": [
-        {
-          "tabTitle": "",
-          "tabData":
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": false,
+        "blockHeader": "",
+        "blockClass": "col-md-12 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
           {
-            "type": "table",
-            "tableId": 1,
-            "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
-            "top":{
-              "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">Brief overview of current treatments</div>"
-            },
-            "middle":{
-              "tSortField": "province",
-              "tfields":[
-                { "field": "province", "header": "Province" },
-                { "field": "OLA", "header": "OLA" },
-                { "field": "Accredited", "header": "Accredited" },
-                { "field": "Speaker Tour", "header": "Speaker Tour" },
-                { "field": "Symposiums", "header": "Symposiums" }
+            "tabTitle": "",
+            "tabData":
+            {
+              "type": "table",
+              "tableId": 1,
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top":{
+                "value": "<div class=\"col-sm-12 col-md-12 font-size-14 padding-left-24 padding-15 bg-009ddf block-box-shadow color-fff height-60\">Brief overview of current treatments</div>"
+              },
+              "middle":{
+                "tSortField": "province",
+                "tfields":[
+                  { "field": "province", "header": "Province" },
+                  { "field": "OLA", "header": "OLA" },
+                  { "field": "Accredited", "header": "Accredited" },
+                  { "field": "Speaker Tour", "header": "Speaker Tour" },
+                  { "field": "Symposiums", "header": "Symposiums" }
 
-              ],
-              "thead":[
-                { "field": "province", "header": "Province" },
-                { "field": "OLA", "header": "OLA" },
-                { "field": "Accredited", "header": "Accredited" },
-                { "field": "Speaker Tour", "header": "Speaker Tour" },
-                { "field": "Symposiums", "header": "Symposiums" }
-              ],
-              "tabledata":[
-                {
-                  "province": "Alberta",
-                  "OLA": 36,
-                  "Accredited": 0,
-                  "Speaker Tour": 0,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "Alberta",
-                  "OLA": 36,
-                  "Accredited": 0,
-                  "Speaker Tour": 0,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "British Columbia",
-                  "OLA": 82,
-                  "Accredited": 0,
-                  "Speaker Tour": 0,
-                  "Symposiums": 73
-                },
-                {
-                  "province": "Manitoba",
-                  "OLA": 25,
-                  "Accredited": 0,
-                  "Speaker Tour": 0,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "New Brunswick",
-                  "OLA": 57,
-                  "Accredited": 0,
-                  "Speaker Tour": 4,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "Newfoundland and Labrador",
-                  "OLA": 0,
-                  "Accredited": 0,
-                  "Speaker Tour": 0,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "Nova Scotia",
-                  "OLA": 25,
-                  "Accredited": 0,
-                  "Speaker Tour": 0,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "Ontario",
-                  "OLA": 50,
-                  "Accredited": 0,
-                  "Speaker Tour": 7,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "Prince Edward Island",
-                  "OLA": 3,
-                  "Accredited": 0,
-                  "Speaker Tour": 0,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "Quebec",
-                  "OLA": 68,
-                  "Accredited": 65,
-                  "Speaker Tour": 110,
-                  "Symposiums": 0
-                },
-                {
-                  "province": "Saskatchewan",
-                  "OLA": 87,
-                  "Accredited": 0,
-                  "Speaker Tour": 0,
-                  "Symposiums": 0
-                }
-              ]
-            },
-            "bottom": {
-              "value": ""
+                ],
+                "thead":[
+                  { "field": "province", "header": "Province" },
+                  { "field": "OLA", "header": "OLA" },
+                  { "field": "Accredited", "header": "Accredited" },
+                  { "field": "Speaker Tour", "header": "Speaker Tour" },
+                  { "field": "Symposiums", "header": "Symposiums" }
+                ],
+                "tabledata":[
+                  {
+                    "province": "Alberta",
+                    "OLA": 36,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "Alberta",
+                    "OLA": 36,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "British Columbia",
+                    "OLA": 82,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 73
+                  },
+                  {
+                    "province": "Manitoba",
+                    "OLA": 25,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "New Brunswick",
+                    "OLA": 57,
+                    "Accredited": 0,
+                    "Speaker Tour": 4,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "Newfoundland and Labrador",
+                    "OLA": 0,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "Nova Scotia",
+                    "OLA": 25,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "Ontario",
+                    "OLA": 50,
+                    "Accredited": 0,
+                    "Speaker Tour": 7,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "Prince Edward Island",
+                    "OLA": 3,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "Quebec",
+                    "OLA": 68,
+                    "Accredited": 65,
+                    "Speaker Tour": 110,
+                    "Symposiums": 0
+                  },
+                  {
+                    "province": "Saskatchewan",
+                    "OLA": 87,
+                    "Accredited": 0,
+                    "Speaker Tour": 0,
+                    "Symposiums": 0
+                  }
+                ]
+              },
+              "bottom": {
+                "value": ""
+              }
             }
           }
-        }
-      ]
-    }
-  ],
-  "hcpcontentdata":[
-    {
-      "businessUnit": [
-        {"businessUnitId" : 1, "name": "Immunology"},
-        {"businessUnitId" : 2, "name": "Oncology"},
-        {"businessUnitId" : 3, "name": "Speacialty"}
-      ],
-      "therapArea":[
-        {
-          "businessUnitId" : 1,
-          "therapAreaId" : 6,
-          "therapAreaName" : "Hematology"
-        },
-        {
-          "businessUnitId" : 1,
-          "therapAreaId" : 7,
-          "therapAreaName" : "solid Tumor"
-        },
-        {
-          "businessUnitId" : 2,
-          "therapAreaId" : 8,
-          "therapAreaName" : "Bio T"
-        },
-        {
-          "businessUnitId" : 2,
-          "therapAreaId" : 9,
-          "therapAreaName" : "Dermatology"
-        },
-        {
-          "businessUnitId" : 3,
-          "therapAreaId" : 10,
-          "therapAreaName" : "Gastrointestinal"
-        }
-      ],
-      "programArea":[
-        {
-          "therapAreaId" : 6,
-          "programId" : 11,
-          "programName" : "CONII - Value Based Advisory Board"
-        },
-        {
-          "therapAreaId" : 7,
-          "programId" : 12,
-          "programName" : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
-        },
-        {
-          "therapAreaId" : 6,
-          "programId" : 13,
-          "programName" : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
-        },
-        {
-          "therapAreaId" : 7,
-          "programId" : 14,
-          "programName" : "CONII – Hematology Advisory Board"
-        },
-        {
-          "therapAreaId" : 7,
-          "programId" : 15,
-          "programName" : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
-        }
-      ]
-    }
-  ],
-  "meetingeventdata":[
+        ]
+      }
+    ]
+  },
+  {
+    "componentname":"hcpcontentdata",
+    "hcpcontentdata":[
+      {
+        "businessUnit": [
+          {"businessUnitId" : 1, "name": "Immunology"},
+          {"businessUnitId" : 2, "name": "Oncology"},
+          {"businessUnitId" : 3, "name": "Speacialty"}
+        ],
+        "therapArea":[
+          {
+            "businessUnitId" : 1,
+            "therapAreaId" : 6,
+            "therapAreaName" : "Hematology"
+          },
+          {
+            "businessUnitId" : 1,
+            "therapAreaId" : 7,
+            "therapAreaName" : "solid Tumor"
+          },
+          {
+            "businessUnitId" : 2,
+            "therapAreaId" : 8,
+            "therapAreaName" : "Bio T"
+          },
+          {
+            "businessUnitId" : 2,
+            "therapAreaId" : 9,
+            "therapAreaName" : "Dermatology"
+          },
+          {
+            "businessUnitId" : 3,
+            "therapAreaId" : 10,
+            "therapAreaName" : "Gastrointestinal"
+          }
+        ],
+        "programArea":[
+          {
+            "therapAreaId" : 6,
+            "programId" : 11,
+            "programName" : "CONII - Value Based Advisory Board"
+          },
+          {
+            "therapAreaId" : 7,
+            "programId" : 12,
+            "programName" : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
+          },
+          {
+            "therapAreaId" : 6,
+            "programId" : 13,
+            "programName" : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
+          },
+          {
+            "therapAreaId" : 7,
+            "programId" : 14,
+            "programName" : "CONII – Hematology Advisory Board"
+          },
+          {
+            "therapAreaId" : 7,
+            "programId" : 15,
+            "programName" : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "componentname":"meetingeventdata",
+    "meetingeventdata":[
       {
         "fieldName":"Meeting Name",
         "inputType": "textfield",
@@ -1732,5 +1740,6 @@
           }
         ]
       }
-  ]
-}
+    ]
+  }
+]

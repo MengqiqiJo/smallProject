@@ -1,22 +1,34 @@
 
 <!-- meeting event form -->
-<app-ngform 
-[meetingEventData]="meetingEventData"></app-ngform>
+<div *ngFor="let eachcomponent of sectionContent">
+  <div *ngIf="eachcomponent.componentname == 'meetingeventdata'; else elseBlock">
+    <app-ngform [name]="eachcomponent.meetingeventdata"></app-ngform>
+  </div>
+
+  <div *ngIf="eachcomponent.componentname == 'hcpcontentdata'; else elseBlock ">
+    <!-- hcp form -->
+    <app-hcp-template [hcpData]="eachcomponent.hcpcontentdata"></app-hcp-template> 
+  </div>
+
+
+</div>
+
+
 
 <hr>
 <hr>
 
-<!-- hcp form -->
-<app-hcp-template 
-[hcpData]="hcpData"></app-hcp-template>
+
 
 <hr>
 <hr>
 
 <!-- edit password form -->
-<app-edit-password></app-edit-password>
+<!-- <app-edit-password></app-edit-password> -->
 
 
+
+<!-- <ng-template #elseBlock> -->
 <!-- chart -->
 <div class="row" for="primengDataGeneral">
   <div *ngFor="let blockData of primengDataGeneral" >
@@ -38,6 +50,7 @@
 
                   <!-- table -->
                   <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
+
                     <app-primeng-table [tableInputData]="eachtabcontent"></app-primeng-table>
                   </div>
 
@@ -52,7 +65,7 @@
     </div>
   </div>
 </div>
-
+<!-- </ng-template> -->
 
 
 

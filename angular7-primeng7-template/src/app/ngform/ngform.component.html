@@ -1,4 +1,4 @@
-<div *ngFor="let eachMeetingEventData of ngData; let i=index" >
+<div *ngFor="let eachMeetingEventData of ngFormcomponentData; let i=index" >
   <div *ngIf="eachMeetingEventData.displayType == 'dropdown'; else elseBlock">
   	<div style="margin: 20px;">
   	  <div style="color:#00a9e0; font-size: 14px;">
@@ -41,7 +41,7 @@
   	  [rows]="5" 
   	  [cols]="68"
   	  [(ngModel)]="totalResults[i]"
-  	  placeholder=totalResults[i]
+  	  placeholder="totalResults[i]"
   	  pInputTextarea 
   	  autoResize="autoResize"></textarea>
   	</div>
