@@ -34,6 +34,8 @@ export class NGFormComponent implements OnInit {
   totalResults: any[]=[];
   countResult: number = 0;
 
+  checked: boolean = false;
+
   constructor(private myService: AppService) {
   }
 
