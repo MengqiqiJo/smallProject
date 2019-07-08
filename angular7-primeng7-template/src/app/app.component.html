@@ -5,7 +5,7 @@
     <app-ngform [name]="eachcomponent.meetingeventdata"></app-ngform>
   </div>
 
-  <div *ngIf="eachcomponent.componentname == 'hcpcontentdata'; else elseBlock ">
+  <div *ngIf="eachcomponent.componentname == 'primengform'; else elseBlock ">
     <!-- hcp form -->
     <app-hcp-template [hcpData]="eachcomponent.hcpcontentdata"></app-hcp-template> 
   </div>

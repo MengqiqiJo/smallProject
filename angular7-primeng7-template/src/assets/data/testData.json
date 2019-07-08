@@ -1,6 +1,6 @@
 [
   {
-    "componentname":"primengcontentdata",
+    "componentname":"primengchartjs",
     "primengcontentdata":[
       {
         "tabShow": "hide",
@@ -781,7 +781,7 @@
                 "tabledata":[
                   {
                     "province": "US Medical Affairs HCV Advisory Board",
-                    "OLA": "HCV",
+                    "OLA": "<a href=\"https://www.google.com/maps\">OLAs</a>",
                     "Accredited": 1,
                     "Speaker Tour": 9,
                     "Symposiums": 9
@@ -1264,7 +1264,7 @@
     ]
   },
   {
-    "componentname":"hcpcontentdata",
+    "componentname":"primengform",
     "hcpcontentdata":[
       {
         "businessUnit": [
@@ -1273,11 +1273,6 @@
           {"businessUnitId" : 3, "name": "Speacialty"}
         ],
         "therapArea":[
-          {
-            "businessUnitId" : 1,
-            "therapAreaId" : 6,
-            "therapAreaName" : "Hematology"
-          },
           {
             "businessUnitId" : 1,
             "therapAreaId" : 7,
@@ -1333,98 +1328,56 @@
     "componentname":"meetingeventdata",
     "meetingeventdata":[
       {
+        "fieldName":"Entity Form Add meeting",
+        "inputType": "text",
+        "displayType": "customtext",
+        "default": "Entity Form Add meeting",
+        "data": ""
+      },
+      {
         "fieldName":"Meeting Name",
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"Meeting - 2017 Lets have a Heart to Heart: CV Considerations in T2DM",
-        "ngModel":"enteredMeetingName",
         "data":""
-      },
-      {
-        "fieldName":"Program Type",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default":"",
-        "ngModel":"selectedProgramType",
-        "data": [
-          {
-            "id": 1111,
-            "name": "None",
-            "value": ""
-          },
-          {
-            "id": 2222,
-            "name": "Accredited",
-            "value": "Accredited"
-          },
-          {
-            "id": 3333,
-            "name": "OLAs",
-            "value": "OLAs"
-          },
-          {
-            "id": 4444,
-            "name": "Symposia",
-            "value": "Symposia"
-          },
-          {
-            "id": 5555,
-            "name": "Non Accredited",
-            "value": "Non Accredited"
-          }
-        ]
       },
       {
         "fieldName":"Program",
         "inputType": "radio",
         "displayType": "dropdown",
-        "default": "20178",
-        "ngModel":"selectedProgram",
+        "default": 1112,
         "data":[
           {
-            "id": 1000,
-            "label": "NONE",
-            "value": ""
+            "value": 1000,
+            "label": "NONE"          
           },
           {
-            "id": 1001,
-            "label": "20",
-            "value": "20"
+            "value": 1001,
+            "label": "20"          
           },
           {
-            "id": 1111,
-            "label": "2018 COPD & Asthma Update: Hot Topics",
-            "value": "2018 COPD & Asthma Update: Hot Topics"
-
+            "value": 1111,
+            "label": "2018 COPD & Asthma Update: Hot Topics"
           },
           {
-            "id": 1112,
-            "label": "20178",
-            "value": "20178"
+            "value": 1112,
+            "label": "20178"          
           },
           {
-            "id": 2222,
-            "label": "2017 COPD Review with Graeme McCauley",
-            "value": "2017 COPD Review with Graeme McCauley"
-
+            "value": 2222,
+            "label": "2017 COPD Review with Graeme McCauley"
           },
           {
-            "id": 3333,
-            "label": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM",
-            "value": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"
-
+            "value": 3333,
+            "label": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"
           },
           {
-            "id": 4444,
-            "label": "2017: The Changing Landscape in the Treatment of COPD",
-            "value": "2017: The Changing Landscape in the Treatment of COPD"
-
+            "value": 4444,
+            "label": "2017: The Changing Landscape in the Treatment of COPD"
           },
           {
-            "id": 5555,
-            "label": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection",
-            "value": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
-
+            "value": 5555,
+            "label": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
           }
         ]
       },
@@ -1432,43 +1385,35 @@
         "fieldName":"Modules",
         "inputType": "multiselect",
         "displayType": "multiselect",
-        "default":["Chronic Kidney Disease", "Diabetes in Aboriginal Populations"],
-        "ngModel":"selectedModules",
+        "default":[2222, 4444],
         "data":[
           {
-            "id": 1111,
-            "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY",
-            "value": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY"
+            "value": 1111,
+            "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY"
           },
           {
-            "id": 2222,
-            "label": "Chronic Kidney Disease",
-            "value": "Chronic Kidney Disease"
+            "value": 2222,
+            "label": "Chronic Kidney Disease"
           },
           {
-            "id": 3333,
-            "label": "Complex Patients: Therapies that Can Reduce Mortality",
-            "value": "Complex Patients: Therapies that Can Reduce Mortality"
+            "value": 3333,
+            "label": "Complex Patients: Therapies that Can Reduce Mortality"
           },
           {
-            "id": 4444,
-            "label": "Diabetes in Aboriginal Populations",
-            "value": "Diabetes in Aboriginal Populations"
+            "value": 4444,
+            "label": "Diabetes in Aboriginal Populations"
           },
           {
-            "id": 5555,
-            "label": "Diabetes Management in the Presence of Glucocorticoids", 
-            "value": "Diabetes Management in the Presence of Glucocorticoids" 
+            "value": 5555,
+            "label": "Diabetes Management in the Presence of Glucocorticoids"
           },
           {
-            "id": 6666,
-            "label": "Early Use of Insulin Therapy in T2D",
-            "value": "Early Use of Insulin Therapy in T2D"
+            "value": 6666,
+            "label": "Early Use of Insulin Therapy in T2D"
           },
           {
-            "id": 7777,
-            "label": "Eating Disorders in Diabetes",
-            "value": "Eating Disorders in Diabetes"
+            "value": 7777,
+            "label": "Eating Disorders in Diabetes"
           }
         ]
       },
@@ -1477,37 +1422,30 @@
         "inputType": "multiselect",
         "displayType": "multiselect",
         "default":"",
-        "ngModel":"selectedSpeakers",
         "data":[
           {
-            "id": 1111,
-            "label": "Marie-Claude Racine",
-            "value": "Marie-Claude Racine"
+            "value": 1111,
+            "label": "Marie-Claude Racine"
           },
           {
-            "id": 2222,
-            "label": "Larry Dian",
-            "value": "Larry Dian"
+            "value": 2222,
+            "label": "Larry Dian"
           },
           {
-            "id": 3333,
-            "label": "Shereen Metias",
-            "value": "Shereen Metias"
+            "value": 3333,
+            "label": "Shereen Metias"
           },
           {
-            "id": 4444,
-            "label": "Marie-Hélène Robert", 
-            "value": "Marie-Hélène Robert" 
+            "value": 4444,
+            "label": "Marie-Hélène Robert"
           },
           {
-            "id": 5555,
-            "label": "Patrice Gosselin",
-            "value": "Patrice Gosselin"
+            "value": 5555,
+            "label": "Patrice Gosselin"
           },
           {
-            "id": 6666,
-            "label": "Danielle Houde",
-            "value": "Danielle Houde"
+            "value": 6666,
+            "label": "Danielle Houde"
           }
         ]
       }, 
@@ -1515,43 +1453,35 @@
         "fieldName":"Evaluation Forms",
         "inputType": "radio",
         "displayType": "dropdown",
-        "default":"2017 Lets have a Heart to Heart: CV Considerations in T2DM",
-        "ngModel":"selectedEvaluationForms",
+        "default":4444,
         "data":[
           {
-            "id": 1111,
-            "label": "None",
-            "value": ""
+            "value": 1111,
+            "label": "None"
           },
           {
-            "id": 2222,
-            "label": "If you hear hoofbeats, think...",
-            "value": "If you hear hoofbeats, think..."
+            "value": 2222,
+            "label": "If you hear hoofbeats, think..."
           },
           {
-            "id": 3333,
-            "label": "(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices",
-            "value": "(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices"
+            "value": 3333,
+            "label": "(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices"
           },
           {
-            "id": 4444,
-            "label": "2017 Lets have a Heart to Heart: CV Considerations in T2DM",
-            "value": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"
+            "value": 4444,
+            "label": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"
           },
           {
-            "id": 55555,
-            "label": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection",
-            "value": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
+            "value": 55555,
+            "label": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
           },
           {
-            "id": 6666,
-            "label": "A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview",
-            "value": "A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview"
+            "value": 6666,
+            "label": "A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview"
           },
           {
-            "id": 7777,
-            "label": "Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2",
-            "value": "Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2"
+            "value": 7777,
+            "label": "Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2"
           }
         ]
       },
@@ -1560,37 +1490,30 @@
         "inputType": "radio",
         "displayType": "dropdown",
         "default":"",
-        "ngModel":"selectedMeetingFormats",
         "data":[
           {
-            "id": 1111,
-            "label": "None",
-            "value": ""
+            "value": 1111,
+            "label": "None"
           },
           {
-            "id": 2222,
-            "label": "HCP Scholarships",
-            "value": "HCP Scholarships"
+            "value": 2222,
+            "label": "HCP Scholarships"
           },
           {
-            "id": 3333,
-            "label": "Hybrid (Live/virtual)",
-            "value": "Hybrid (Live/virtual)"
+            "value": 3333,
+            "label": "Hybrid (Live/virtual)"
           },
           {
-            "id": 4444,
-            "label": "Independent Sponsor Materials",
-            "value": "Independent Sponsor Materials"
+            "value": 4444,
+            "label": "Independent Sponsor Materials"
           },
           {
-            "id": 5555,
-            "label": "Live",
-            "value": "Live"
+            "value": 5555,
+            "label": "Live"
           },
           {
-            "id": 66666,
-            "label": "Webinar",
-            "value": "Webinar"
+            "value": 66666,
+            "label": "Webinar"
           }
         ]
       },
@@ -1598,53 +1521,43 @@
         "fieldName":"Meeting Times",
         "inputType": "radio",
         "displayType": "dropdown",
-        "default":"",
-        "ngModel":"selectedMeetingTimes",
+        "default":2222,
         "data":[
           {
-            "id": 1000,
-            "label": "NONE",
-            "value": ""
+            "value": 1000,
+            "label": "NONE"
           },
           {
-            "id": 1111,
-            "label": "12:00 AM",
-            "value": "12:00 AM"
+            "value": 1111,
+            "label": "12:00 AM"
           },
           {
-            "id": 2222,
-            "label": "3:00 AM",
-            "value": "3:00 AM"
+            "value": 2222,
+            "label": "3:00 AM"
           },
           {
-            "id": 3333,
-            "label": "6:00 AM",
-            "value": "6:00 AM"
+            "value": 3333,
+            "label": "6:00 AM"
           },
           {
-            "id": 4444,
-            "label": "9:00 AM",
-            "value": "9:00 AM"
+            "value": 4444,
+            "label": "9:00 AM"
           },
           {
-            "id": 55555,
-            "label": "12:00 PM",
-            "value": "12:00 PM"
+            "value": 55555,
+            "label": "12:00 PM"
           },
           {
-            "id": 6666,
-            "label": "3:00 PM",
-            "value": "3:00 PM"
+            "value": 6666,
+            "label": "3:00 PM"
           },
           {
-            "id": 6666,
-            "label": "6:00 PM",
-            "value": "6:00 PM"
+            "value": 6666,
+            "label": "6:00 PM"
           },
           {
-            "id": 6666,
-            "label": "9:00 PM",
-            "value": "9:00 PM"
+            "value": 6666,
+            "label": "9:00 PM"
           }
         ]
       },
@@ -1653,22 +1566,18 @@
         "inputType": "radio",
         "displayType": "dropdown",
         "default": "",
-        "ngModel":"selectedMultiTherapeitucEvent",
         "data":[
           {
-            "id": 1111,
-            "label": "None",
-            "value": ""
+            "value": 1111,
+            "label": "None"
           },
           {
-            "id": 2222,
-            "label": "Yes",
-            "value": "Yes"
+            "value": 2222,
+            "label": "Yes"
           },
           {
-            "id": 3333,
-            "label": "No",
-            "value": "No"
+            "value": 3333,
+            "label": "No"
           }
         ]
       },
@@ -1677,37 +1586,30 @@
         "inputType": "textfield",
         "displayType": "textfield",
         "default": "",
-        "ngModel":"selectedMeetingLocation",
         "data": [
           {
-            "id": 1111,
-            "label": "None",
-            "value": "None"
+            "value": 1111,
+            "label": "None"
           },
           {
-            "id": 2222,
-            "label": "Conference Room",
-            "value": "Conference Room"
+            "value": 2222,
+            "label": "Conference Room"
           },
           {
-            "id": 3333,
-            "label": "Convention Center",
-            "value": "Convention Center"
+            "value": 3333,
+            "label": "Convention Center"
           },
           {
-            "id": 4444,
-            "label": "Hospital",
-            "value": "Hospital"
+            "value": 4444,
+            "label": "Hospital"
           },
           {
-            "id": 5555,
-            "label": "Hotel",
-            "value": "Hotel"
+            "value": 5555,
+            "label": "Hotel"
           },
           {
-            "id": 6666,
-            "label": "Pharmacy",
-            "value": "Pharmacy"
+            "value": 6666,
+            "label": "Pharmacy"
           }
         ]
       },
@@ -1719,36 +1621,44 @@
         "ngModel":"selectedCanadaCity",
         "data": [
           {
-            "id": 1111,
-            "label": "None",
-            "value": ""
+            "value": 1111,
+            "label": "None"
           },
           {
-            "id": 2222,
-            "label": "Abbotsford",
-            "value": "Abbotsford"
+            "value": 2222,
+            "label": "Abbotsford"
           },
           {
-            "id": 3333,
-            "label": "Acton Vale",
-            "value": "Acton Vale"
+            "value": 3333,
+            "label": "Acton Vale"
           },
           {
-            "id": 4444,
-            "label": "Addington",
-            "value": "Addington"
+            "value": 4444,
+            "label": "Addington"
           },
           {
-            "id": 55555,
-            "label": "Addington Highlands",
-            "value": "Addington Highlands"
+            "value": 55555,
+            "label": "Addington Highlands"
           },
           {
-            "id": 55555,
-            "label": "Adelaide Metcalfe",
-            "value": "Adelaide Metcalfe"
+            "value": 55555,
+            "label": "Adelaide Metcalfe"
           }
         ]
+      },
+      {
+        "fieldName":"Summary Evaluation",
+        "inputType": "checkbox",
+        "displayType": "checkbox",
+        "default": false,
+        "data": ""
+      },
+      {
+        "fieldName":"Event Date",
+        "inputType": "calendar",
+        "displayType": "calendar",
+        "default": "",
+        "data": ""
       }
     ]
   }

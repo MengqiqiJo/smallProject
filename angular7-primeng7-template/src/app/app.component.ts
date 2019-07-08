@@ -205,7 +205,7 @@ export class AppComponent implements OnInit {
       this.sectionContent = data;
 
       this.sectionContent.forEach(eachComponent => {
-        if (eachComponent.componentname == 'primengcontentdata') {
+        if (eachComponent.componentname == 'primengchartjs') {
           this.primengDataGeneral = eachComponent.primengcontentdata;
           this.primengDataGeneral.forEach(eachBlockData => {
             eachBlockData.blockContent.forEach(eachTabData => {

@@ -20,6 +20,7 @@ import {RadioButtonModule} from 'primeng/radiobutton';
 import {CheckboxModule} from 'primeng/checkbox';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {DialogModule} from 'primeng/dialog';
+import {CalendarModule} from 'primeng/calendar';
 
 import {PaginatorModule} from 'primeng/paginator';
 
@@ -64,7 +65,8 @@ import { EditPasswordComponent } from './edit-password/edit-password.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    InputTextareaModule
+    InputTextareaModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
