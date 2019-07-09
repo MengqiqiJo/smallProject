@@ -4,20 +4,26 @@
   	  <div style="color:#00a9e0; font-size: 14px;">
   	    <span>{{eachMeetingEventData.fieldName}}</span>
   	  </div>
-  	  <p-dropdown 
-  	  [options]="eachMeetingEventData.data" 
-  	  [(ngModel)]="totalResults[i]" 
-  	  [autoWidth]="false" 
-  	  [showClear]="true"
-  	  [style]="{'width':'500px'}">
-  	       <ng-template let-item pTemplate="selectedItem"> 
-  	          <span>{{item.label}}</span>
-  	      </ng-template> 
-  	      <ng-template let-car pTemplate="item"> 
-  	          <div>
-  	          <div>{{car.label}}</div> </div>
-  	      </ng-template>
-  	  </p-dropdown>
+      <!-- <div *ngIf="eachMeetingEventData.isHcp"> -->
+      <div>
+        <p-dropdown 
+        [options]="eachMeetingEventData.isChild ? availableData[eachMeetingEventData.availableData] : eachMeetingEventData.data" 
+        [(ngModel)]="totalResults[i]" 
+        [autoWidth]="false" 
+        [showClear]="true"
+        placeholder="please select" 
+        (onChange)="eachMeetingEventData.isParent ? updateChildLevelData($event, eachMeetingEventData.child, eachMeetingEventData.availableChildData) : '' " 
+        [style]="{'width':'500px'}">
+             <ng-template let-item pTemplate="selectedItem"> 
+                <span>{{item.label}}</span>
+            </ng-template> 
+            <ng-template let-car pTemplate="item"> 
+                <div>
+                <div>{{car.label}}</div> </div>
+            </ng-template>
+        </p-dropdown>
+      </div>
+
   	</div>
   </div>
   <div *ngIf="eachMeetingEventData.displayType == 'multiselect'; else elseBlock">
@@ -60,6 +66,7 @@
   	    <span>{{eachMeetingEventData.fieldName}}</span>
   	  </div>
 	    <p-calendar [(ngModel)]="totalResults[i]" [showTime]="true"></p-calendar>
+      {{totalResults[i]}}
   	</div>
   </div>
   <div *ngIf="eachMeetingEventData.displayType == 'customtext'; else elseBlock">

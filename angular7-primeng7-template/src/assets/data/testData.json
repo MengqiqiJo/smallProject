@@ -773,10 +773,10 @@
                 ],
                 "thead":[
                   { "field": "province", "header": "Program Name", "width": "50%" },
-                  { "field": "OLA", "header": "BU", "width": "10%" },
-                  { "field": "Accredited", "header": "#Events", "width": "5%"},
-                  { "field": "Speaker Tour", "header": "HCP Reach", "width": "15%" },
-                  { "field": "Symposiums", "header": "Responses", "width": "20%" }
+                  { "field": "OLA", "header": "BU"},
+                  { "field": "Accredited", "header": "#Events", "width": "30%"},
+                  { "field": "Speaker Tour", "header": "HCP Reach"},
+                  { "field": "Symposiums", "header": "Responses"}
                 ],
                 "tabledata":[
                   {
@@ -1267,56 +1267,103 @@
     "componentname":"primengform",
     "hcpcontentdata":[
       {
-        "businessUnit": [
+        "fieldName":"businessUnit",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 1,
+        "child": "therapArea",
+        "data": [
           {"value" : 1, "label": "Immunology"},
           {"value" : 2, "label": "Oncology"},
           {"value" : 3, "label": "Speacialty"}
-        ],
-        "therapArea":[
+        ]
+      },
+      {
+        "isChild": true,
+        "fieldName":"therapArea",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 7,
+        "child": "programArea",
+        "data":[
           {
-            "businessUnitId" : 1,
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 1
+            },
             "value" : 7,
             "label" : "solid Tumor"
           },
           {
-            "businessUnitId" : 2,
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 2
+            },
             "value" : 8,
             "label" : "Bio T"
           },
           {
-            "businessUnitId" : 2,
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 2
+            },
             "value" : 9,
             "label" : "Dermatology"
           },
           {
-            "businessUnitId" : 3,
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 3
+            },
             "value" : 10,
             "label" : "Gastrointestinal"
           }
-        ],
+        ]
+      },
+      {
+        "isChild": true,
+        "fieldName":"programArea",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 11,
         "programArea":[
           {
-            "therapAreaId" : 6,
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 6
+            },
             "value" : 11,
             "label" : "CONII - Value Based Advisory Board"
           },
           {
-            "therapAreaId" : 7,
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 7
+            },
             "value" : 12,
             "label" : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
           },
           {
-            "therapAreaId" : 6,
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 7
+            },
             "value" : 13,
             "label" : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
           },
           {
-            "therapAreaId" : 7,
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 8
+            },
             "value" : 14,
             "label" : "CONII – Hematology Advisory Board"
           },
           {
-            "therapAreaId" : 7,
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 8
+            },
             "value" : 15,
             "label" : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
           }
@@ -1327,6 +1374,132 @@
   {
     "componentname":"meetingeventdata",
     "meetingeventdata":[
+      {
+        "fieldName":"HCP PAGE",
+        "inputType": "text",
+        "displayType": "customtext",
+        "default": "HCP PAGE",
+        "data": ""
+      },
+      {
+        "isParent": true,
+        "fieldName":"businessUnit",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 1,
+        "child": "therapArea",
+        "availableChildData": "availableTherapArea",
+        "data": [
+          {"value" : 1, "label": "None"},
+          {"value" : 2, "label": "Immunology"},
+          {"value" : 3, "label": "Oncology"},
+          {"value" : 4, "label": "Speacialty"}
+        ]
+      },
+      {
+        "isParent": true,
+        "isChild": true,
+        "fieldName":"therapArea",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 101,
+        "child": "programArea",
+        "availableChildData": "availableProgramArea",
+        "availableData": "availableTherapArea",
+        "data":[
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 1
+            },
+            "value" : 101,
+            "label" : "None"
+          },
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 2
+            },
+            "value" : 7,
+            "label" : "solid Tumor"
+          },
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 2
+            },
+            "value" : 8,
+            "label" : "Bio T"
+          },
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 2
+            },
+            "value" : 9,
+            "label" : "Dermatology"
+          },
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 3
+            },
+            "value" : 10,
+            "label" : "Gastrointestinal"
+          }
+        ]
+      },
+      {
+        "isChild": true,
+        "fieldName":"programArea",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 11,
+        "child": "",
+        "availableData": "availableProgramArea",
+        "data":[
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 6
+            },
+            "value" : 11,
+            "label" : "CONII - Value Based Advisory Board"
+          },
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 7
+            },
+            "value" : 12,
+            "label" : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
+          },
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 7
+            },
+            "value" : 13,
+            "label" : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
+          },
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 8
+            },
+            "value" : 14,
+            "label" : "CONII – Hematology Advisory Board"
+          },
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 8
+            },
+            "value" : 15,
+            "label" : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
+          }
+        ]
+      },
       {
         "fieldName":"Entity Form Add meeting",
         "inputType": "text",

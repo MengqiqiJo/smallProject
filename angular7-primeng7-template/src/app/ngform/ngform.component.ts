@@ -15,8 +15,10 @@ export class NGFormComponent implements OnInit {
 
   totalResults: any[]=[];
   countResult: number = 0;
+  childData: any[]=[];
 
-
+  availableData: any[]=[];
+  childLevelData: any[];
 
   constructor(private myService: AppService) {
   }
@@ -26,13 +28,47 @@ export class NGFormComponent implements OnInit {
     console.log(this.totalResults);
   }
 
+  updateChildLevelData(event, childLevelName, availableChildData) {
+    console.log(event.value);
+    this.childLevelData = this.childData[childLevelName];
+    var temporaryData = [];
+
+    this.childLevelData.forEach(eachchildLevelData => {
+
+
+      if (eachchildLevelData.parent.parentId == event.value) {
+        console.log('event value');
+        console.log(event.value);
+        console.log('parent id');
+        console.log(eachchildLevelData.parent.parentId);
+        temporaryData.push(eachchildLevelData);
+      }
+    });
+
+    this.availableChildData = [];
+    this.availableChildData = temporaryData;
+    this.availableData[availableChildData] = temporaryData;
+
+    console.log(availableChildData);
+    console.log("this is an on change function");
+  }
+
+
   ngOnInit() {
     console.log("input");
     console.log(this.ngFormcomponentData);
       this.ngFormcomponentData.forEach(eachBlock => {
+
+        if ((typeof eachBlock.isChild !== 'undefined') && eachBlock.isChild) {
+          this.childData[eachBlock.fieldName]= eachBlock.data;
+        }
+
         this.totalResults[this.countResult] = eachBlock.default;
         this.countResult++;
       });
+
+      console.log("child data");
+      console.log(this.childData);
   }
 
 }

@@ -1,10 +1,10 @@
 
 
-<div *ngFor="let eachHCPDate of hcpData">
+<!-- <div *ngFor="let eachHCPDate of hcpData">
   
-  <div>
+  <div *ngIf="eachHCPDate.fieldName == 'businessUnit'">
     <p-dropdown 
-    [options]="eachHCPDate.businessUnit" 
+    [options]="eachHCPDate.data" 
     [(ngModel)]="selectedCity" 
     placeholder="Business ssUnit" 
     [showClear]="false" 
@@ -14,7 +14,7 @@
     ></p-dropdown>
   </div>
 
-  <div>
+  <div *ngIf="eachHCPDate.fieldName == 'therapArea'">
     <p-dropdown 
     [options]="availableTherapArea" 
     [(ngModel)]="selectedTherap" 
@@ -42,4 +42,4 @@
 <div>
   <p-button label="Generate Report" [disabled]="enableHCPSubmitButton"></p-button>
 </div>
-</div>
+</div> -->

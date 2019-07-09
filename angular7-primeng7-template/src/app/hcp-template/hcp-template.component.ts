@@ -27,40 +27,40 @@ export class HcpTemplateComponent implements OnInit {
 
   }
 
-  updateTherapeuticAreas(event, therapAreas) {
-    console.log(event.value);
-    this.therapArea = therapAreas;
-    var temporaryTherap = [];
+  // updateTherapeuticAreas(event, therapAreas) {
+  //   console.log(event.value);
+  //   this.therapArea = therapAreas;
+  //   var temporaryTherap = [];
 
-    this.therapArea.forEach(thearpData => {
-      if (thearpData.businessUnitId == event.value) {
-        temporaryTherap.push(thearpData);
-      }
-    });
+  //   this.therapArea.forEach(thearpData => {
+  //     if (thearpData.businessUnitId == event.value) {
+  //       temporaryTherap.push(thearpData);
+  //     }
+  //   });
 
-    this.availableTherapArea = [];
-    this.availableTherapArea = temporaryTherap;
-    this.availableProgram = [];
-  }
+  //   this.availableTherapArea = [];
+  //   this.availableTherapArea = temporaryTherap;
+  //   this.availableProgram = [];
+  // }
 
-  updateProgram(event, programArea) {
-    this.programArea = programArea;
-    var temopraryProgram = [];
+  // updateProgram(event, programArea) {
+  //   this.programArea = programArea;
+  //   var temopraryProgram = [];
 
-    this.programArea.forEach(programData => {
-      if (programData.therapAreaId == event.value) {
-        temopraryProgram.push(programData);
-      }
-    });
+  //   this.programArea.forEach(programData => {
+  //     if (programData.therapAreaId == event.value) {
+  //       temopraryProgram.push(programData);
+  //     }
+  //   });
 
-    this.availableProgram = [];
-    this.availableProgram = temopraryProgram;
-  }
+  //   this.availableProgram = [];
+  //   this.availableProgram = temopraryProgram;
+  // }
 
-  updateSubmitButton(event) {
-    this.enableHCPSubmitButton = false;
-    console.log(this.enableHCPSubmitButton);
-  }
+  // updateSubmitButton(event) {
+  //   this.enableHCPSubmitButton = false;
+  //   console.log(this.enableHCPSubmitButton);
+  // }
 
   ngOnInit() {
   }
