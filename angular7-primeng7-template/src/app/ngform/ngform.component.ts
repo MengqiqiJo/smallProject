@@ -45,8 +45,8 @@ export class NGFormComponent implements OnInit {
       }
     });
 
-    this.availableChildData = [];
-    this.availableChildData = temporaryData;
+    // this.availableChildData = [];
+    // this.availableChildData = temporaryData;
     this.availableData[availableChildData] = temporaryData;
 
     console.log(availableChildData);
