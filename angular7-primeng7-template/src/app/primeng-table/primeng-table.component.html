@@ -22,15 +22,15 @@
     </ng-template>
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of eachtabcontent.tabData.middle.thead" [pSortableColumn]="col.field" pResizableColumn>
+            <th *ngFor="let col of eachtabcontent.tabData.middle.thead" [pSortableColumn]="col.field" [ngStyle]="{'width': col.width}">
               {{col.header}}
               <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
             </th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-car let-columns="eachtabcontent.tabData.middle.thead">
+    <ng-template pTemplate="body" let-celldata let-columns="eachtabcontent.tabData.middle.thead">
         <tr>
-          <td *ngFor="let col of eachtabcontent.tabData.middle.thead" [innerHTML]="car[col.field]" class="ui-resizable-column">
+          <td *ngFor="let col of eachtabcontent.tabData.middle.thead" [innerHTML]="celldata[col.field]">
           </td>
         </tr>
     </ng-template>

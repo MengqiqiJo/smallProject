@@ -772,11 +772,11 @@
                   { "field": "Symposiums", "header": "Responses" }
                 ],
                 "thead":[
-                  { "field": "province", "header": "Program Name" },
-                  { "field": "OLA", "header": "BU" },
-                  { "field": "Accredited", "header": "#Events" },
-                  { "field": "Speaker Tour", "header": "HCP Reach" },
-                  { "field": "Symposiums", "header": "Responses" }
+                  { "field": "province", "header": "Program Name", "width": "50%" },
+                  { "field": "OLA", "header": "BU", "width": "10%" },
+                  { "field": "Accredited", "header": "#Events", "width": "5%"},
+                  { "field": "Speaker Tour", "header": "HCP Reach", "width": "15%" },
+                  { "field": "Symposiums", "header": "Responses", "width": "20%" }
                 ],
                 "tabledata":[
                   {
@@ -970,11 +970,11 @@
 
                 ],
                 "thead":[
-                  { "field": "province", "header": "Program Name" },
-                  { "field": "OLA", "header": "BU" },
-                  { "field": "Accredited", "header": "#Events" },
-                  { "field": "Speaker Tour", "header": "HCP Reach" },
-                  { "field": "Symposiums", "header": "Responses" }
+                  { "field": "province", "header": "Program Name", "width": "30%" },
+                  { "field": "OLA", "header": "BU", "width": "10%" },
+                  { "field": "Accredited", "header": "#Events", "width": "20%" },
+                  { "field": "Speaker Tour", "header": "HCP Reach", "width": "20%" },
+                  { "field": "Symposiums", "header": "Responses", "width": "20%" }
                 ],
                 "tabledata":[
                   {
@@ -1168,11 +1168,11 @@
 
                 ],
                 "thead":[
-                  { "field": "province", "header": "Province" },
-                  { "field": "OLA", "header": "OLA" },
-                  { "field": "Accredited", "header": "Accredited" },
-                  { "field": "Speaker Tour", "header": "Speaker Tour" },
-                  { "field": "Symposiums", "header": "Symposiums" }
+                  { "field": "province", "header": "Province", "width": "50%" },
+                  { "field": "OLA", "header": "OLA", "width": "10%" },
+                  { "field": "Accredited", "header": "Accredited", "width": "10%" },
+                  { "field": "Speaker Tour", "header": "Speaker Tour", "width": "10%" },
+                  { "field": "Symposiums", "header": "Symposiums", "width": "20%" }
                 ],
                 "tabledata":[
                   {
