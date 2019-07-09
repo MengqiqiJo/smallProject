@@ -28,12 +28,12 @@ export class HcpTemplateComponent implements OnInit {
   }
 
   updateTherapeuticAreas(event, therapAreas) {
-    console.log(this.hcpData[0].businessUnit);
+    console.log(event.value);
     this.therapArea = therapAreas;
     var temporaryTherap = [];
 
     this.therapArea.forEach(thearpData => {
-      if (thearpData.businessUnitId == event.value.businessUnitId) {
+      if (thearpData.businessUnitId == event.value) {
         temporaryTherap.push(thearpData);
       }
     });
@@ -48,7 +48,7 @@ export class HcpTemplateComponent implements OnInit {
     var temopraryProgram = [];
 
     this.programArea.forEach(programData => {
-      if (programData.therapAreaId == event.value.therapAreaId) {
+      if (programData.therapAreaId == event.value) {
         temopraryProgram.push(programData);
       }
     });
