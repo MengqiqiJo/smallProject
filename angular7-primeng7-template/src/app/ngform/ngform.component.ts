@@ -28,25 +28,16 @@ export class NGFormComponent implements OnInit {
     console.log(this.totalResults);
   }
 
-  updateChildLevelData(event, childLevelName, availableChildData) {
+  updateChildLevelData(event, currentLevelBlock, availableChildData) {
     console.log(event.value);
-    this.childLevelData = this.childData[childLevelName.child];
+    this.childLevelData = this.childData[currentLevelBlock.child];
     var temporaryData = [];
+    var parentLevelName = '';
 
-   this.totalResults[childLevelName.child] = '';
-
-   // if (this.parentChild[this.parentChild[childLevelName.child]]) {}
-   var childchild = '';
-
-   childchild = childLevelName.child;
-    while(this.parentChild[childchild]) {
-
-      console.log("parentChild[childchild]");
-      console.log(this.parentChild[childchild]);
-
-      this.totalResults[this.parentChild[childchild]] = '';
-      childchild = this.parentChild[childchild];
-
+    parentLevelName = currentLevelBlock.fieldName;
+    while(this.parentChild[parentLevelName]) {
+      parentLevelName = this.parentChild[parentLevelName];
+      this.totalResults[parentLevelName] = '';
     }
 
 
@@ -54,30 +45,17 @@ export class NGFormComponent implements OnInit {
     console.log(this.totalResults);
 
 
-
-
     this.childLevelData.forEach(eachchildLevelData => {
-
-
       if (eachchildLevelData.parent.parentId == event.value) {
-        // console.log('event value');
-        // console.log(event.value);
-        // console.log('parent id');
-        // console.log(eachchildLevelData.parent.parentId);
         temporaryData.push(eachchildLevelData);
       }
     });
 
     this.availableData[availableChildData] = temporaryData;
-
-    console.log(availableChildData);
-    console.log("this is an on change function");
   }
 
 
   ngOnInit() {
-    console.log("input");
-    console.log(this.ngFormcomponentData);
       this.ngFormcomponentData.forEach(eachBlock => {
 
         if ((typeof eachBlock.isChild !== 'undefined') && eachBlock.isChild) {
@@ -89,11 +67,6 @@ export class NGFormComponent implements OnInit {
         }
         this.totalResults[eachBlock.fieldName] = eachBlock.default;
       });
-
-      console.log("child data");
-      console.log(this.childData);
-      console.log("parent child");
-      console.log(this.parentChild);
   }
 
 }
