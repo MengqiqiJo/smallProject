@@ -1372,8 +1372,8 @@
     ]
   },
   {
-    "componentname":"meetingeventdata",
-    "meetingeventdata":[
+    "componentname":"primengforms",
+    "primengforms":[
       {
         "fieldName":"HCP PAGE",
         "inputType": "text",

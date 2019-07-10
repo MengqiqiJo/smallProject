@@ -1,14 +1,14 @@
 
 <!-- meeting event form -->
 <div *ngFor="let eachcomponent of sectionContent">
-  <div *ngIf="eachcomponent.componentname == 'meetingeventdata'; else elseBlock">
-    <app-ngform [name]="eachcomponent.meetingeventdata"></app-ngform>
+  <div *ngIf="eachcomponent.componentname == 'primengforms'; else elseBlock">
+    <app-ngform [name]="eachcomponent.primengforms"></app-ngform>
   </div>
 
-  <div *ngIf="eachcomponent.componentname == 'primengform'; else elseBlock ">
+  <!-- <div *ngIf="eachcomponent.componentname == 'primengform'; else elseBlock "> -->
     <!-- hcp form -->
     <!-- <app-hcp-template [hcpData]="eachcomponent.hcpcontentdata"></app-hcp-template>  -->
-  </div>
+  <!-- </div> -->
 
 
 </div>
