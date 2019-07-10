@@ -18,7 +18,7 @@ export class NGFormComponent implements OnInit {
 
   availableData: any[]=[];
   childLevelData: any[];
-  parentChild: any[]=[];
+  parentChildSet: any[]=[];
 
   constructor(private myService: AppService) {
   }
@@ -33,10 +33,11 @@ export class NGFormComponent implements OnInit {
     this.childLevelData = this.childData[currentLevelBlock.child];
     var temporaryData = [];
     var parentLevelName = '';
+    this.availableData = [];
 
     parentLevelName = currentLevelBlock.fieldName;
-    while(this.parentChild[parentLevelName]) {
-      parentLevelName = this.parentChild[parentLevelName];
+    while(this.parentChildSet[parentLevelName]) {
+      parentLevelName = this.parentChildSet[parentLevelName];
       this.totalResults[parentLevelName] = '';
     }
 
@@ -63,7 +64,7 @@ export class NGFormComponent implements OnInit {
         }
 
         if (eachBlock.child) {
-          this.parentChild[eachBlock.fieldName] = eachBlock.child;
+          this.parentChildSet[eachBlock.fieldName] = eachBlock.child;
         }
         this.totalResults[eachBlock.fieldName] = eachBlock.default;
       });
