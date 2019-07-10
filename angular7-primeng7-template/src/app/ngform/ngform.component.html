@@ -7,11 +7,11 @@
       <div>
         <p-dropdown 
         [options]="eachMeetingEventData.isChild ? availableData[eachMeetingEventData.availableDataName] : eachMeetingEventData.data" 
-        [(ngModel)]="totalResults[i]" 
+        [(ngModel)]="totalResults[eachMeetingEventData.fieldName]" 
         [autoWidth]="false" 
         [showClear]="true"
         placeholder="please select" 
-        (onChange)="eachMeetingEventData.isParent ? updateChildLevelData($event, eachMeetingEventData.child, eachMeetingEventData.availableChildDataName) : '' " 
+        (onChange)="eachMeetingEventData.isParent ? updateChildLevelData($event, eachMeetingEventData, eachMeetingEventData.availableChildDataName) : '' " 
         [style]="{'width':'500px'}">
              <ng-template let-item pTemplate="selectedItem"> 
                 <span>{{item.label}}</span>
@@ -31,7 +31,7 @@
   	  </div>
   	  <p-multiSelect 
   	  [options]="eachMeetingEventData.data" 
-  	  [(ngModel)]="totalResults[i]" 
+  	  [(ngModel)]="totalResults[eachMeetingEventData.fieldName]" 
   	  [panelStyle]="{minWidth:'30em'}"
   	  [filter]="true"></p-multiSelect>
   	</div>
@@ -44,8 +44,8 @@
   	  <textarea 
   	  [rows]="5" 
   	  [cols]="68"
-  	  [(ngModel)]="totalResults[i]"
-  	  [placeholder]="totalResults[i]"
+  	  [(ngModel)]="totalResults[eachMeetingEventData.fieldName]"
+  	  [placeholder]="totalResults[eachMeetingEventData.fieldName]"
   	  pInputTextarea 
   	  autoResize="autoResize"></textarea>
   	</div>
@@ -55,7 +55,7 @@
   	  <div style="color:#00a9e0; font-size: 14px;">
   	    <span>{{eachMeetingEventData.fieldName}}</span>
   	  </div>
-  	  <p-checkbox [(ngModel)]="totalResults[i]" binary="true"></p-checkbox>
+  	  <p-checkbox [(ngModel)]="totalResults[eachMeetingEventData.fieldName]" binary="true"></p-checkbox>
   	</div>
   </div>
   <div *ngIf="eachMeetingEventData.displayType == 'calendar'; else elseBlock">
@@ -63,8 +63,8 @@
   	  <div style="color:#00a9e0; font-size: 14px;">
   	    <span>{{eachMeetingEventData.fieldName}}</span>
   	  </div>
-	    <p-calendar [(ngModel)]="totalResults[i]" [showTime]="true"></p-calendar>
-      {{totalResults[i]}}
+	    <p-calendar [(ngModel)]="totalResults[eachMeetingEventData.fieldName]" [showTime]="true"></p-calendar>
+      {{totalResults[eachMeetingEventData.fieldName]}}
   	</div>
   </div>
   <div *ngIf="eachMeetingEventData.displayType == 'customtext'; else elseBlock">

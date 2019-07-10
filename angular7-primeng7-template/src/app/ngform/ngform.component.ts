@@ -14,11 +14,11 @@ export class NGFormComponent implements OnInit {
   ngData: any[];
 
   totalResults: any[]=[];
-  countResult: number = 0;
   childData: any[]=[];
 
   availableData: any[]=[];
   childLevelData: any[];
+  parentChild: any[]=[];
 
   constructor(private myService: AppService) {
   }
@@ -30,17 +30,40 @@ export class NGFormComponent implements OnInit {
 
   updateChildLevelData(event, childLevelName, availableChildData) {
     console.log(event.value);
-    this.childLevelData = this.childData[childLevelName];
+    this.childLevelData = this.childData[childLevelName.child];
     var temporaryData = [];
+
+   this.totalResults[childLevelName.child] = '';
+
+   // if (this.parentChild[this.parentChild[childLevelName.child]]) {}
+   var childchild = '';
+
+   childchild = childLevelName.child;
+    while(this.parentChild[childchild]) {
+
+      console.log("parentChild[childchild]");
+      console.log(this.parentChild[childchild]);
+
+      this.totalResults[this.parentChild[childchild]] = '';
+      childchild = this.parentChild[childchild];
+
+    }
+
+
+    console.log("after reset");
+    console.log(this.totalResults);
+
+
+
 
     this.childLevelData.forEach(eachchildLevelData => {
 
 
       if (eachchildLevelData.parent.parentId == event.value) {
-        console.log('event value');
-        console.log(event.value);
-        console.log('parent id');
-        console.log(eachchildLevelData.parent.parentId);
+        // console.log('event value');
+        // console.log(event.value);
+        // console.log('parent id');
+        // console.log(eachchildLevelData.parent.parentId);
         temporaryData.push(eachchildLevelData);
       }
     });
@@ -61,12 +84,16 @@ export class NGFormComponent implements OnInit {
           this.childData[eachBlock.fieldName]= eachBlock.data;
         }
 
-        this.totalResults[this.countResult] = eachBlock.default;
-        this.countResult++;
+        if (eachBlock.child) {
+          this.parentChild[eachBlock.fieldName] = eachBlock.child;
+        }
+        this.totalResults[eachBlock.fieldName] = eachBlock.default;
       });
 
       console.log("child data");
       console.log(this.childData);
+      console.log("parent child");
+      console.log(this.parentChild);
   }
 
 }
