@@ -4,15 +4,14 @@
   	  <div style="color:#00a9e0; font-size: 14px;">
   	    <span>{{eachMeetingEventData.fieldName}}</span>
   	  </div>
-      <!-- <div *ngIf="eachMeetingEventData.isHcp"> -->
       <div>
         <p-dropdown 
-        [options]="eachMeetingEventData.isChild ? availableData[eachMeetingEventData.availableData] : eachMeetingEventData.data" 
+        [options]="eachMeetingEventData.isChild ? availableData[eachMeetingEventData.availableDataName] : eachMeetingEventData.data" 
         [(ngModel)]="totalResults[i]" 
         [autoWidth]="false" 
         [showClear]="true"
         placeholder="please select" 
-        (onChange)="eachMeetingEventData.isParent ? updateChildLevelData($event, eachMeetingEventData.child, eachMeetingEventData.availableChildData) : '' " 
+        (onChange)="eachMeetingEventData.isParent ? updateChildLevelData($event, eachMeetingEventData.child, eachMeetingEventData.availableChildDataName) : '' " 
         [style]="{'width':'500px'}">
              <ng-template let-item pTemplate="selectedItem"> 
                 <span>{{item.label}}</span>
@@ -23,7 +22,6 @@
             </ng-template>
         </p-dropdown>
       </div>
-
   	</div>
   </div>
   <div *ngIf="eachMeetingEventData.displayType == 'multiselect'; else elseBlock">

@@ -1388,7 +1388,7 @@
         "displayType": "dropdown",
         "default": 1,
         "child": "therapArea",
-        "availableChildData": "availableTherapArea",
+        "availableChildDataName": "availableTherapArea",
         "data": [
           {"value" : 1, "label": "None"},
           {"value" : 2, "label": "Immunology"},
@@ -1404,8 +1404,8 @@
         "displayType": "dropdown",
         "default": 101,
         "child": "programArea",
-        "availableChildData": "availableProgramArea",
-        "availableData": "availableTherapArea",
+        "availableChildDataName": "availableProgramArea",
+        "availableDataName": "availableTherapArea",
         "data":[
           {
             "parent" : {
@@ -1456,7 +1456,7 @@
         "displayType": "dropdown",
         "default": 11,
         "child": "",
-        "availableData": "availableProgramArea",
+        "availableDataName": "availableProgramArea",
         "data":[
           {
             "parent" : {
