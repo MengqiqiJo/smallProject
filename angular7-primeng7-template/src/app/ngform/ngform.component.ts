@@ -9,7 +9,7 @@ import { AppService } from '../app.service';
 })
 export class NGFormComponent implements OnInit {
 
-	@Input('name') ngFormcomponentData: any[];
+  @Input('name') ngFormcomponentData: any[];
 
   ngData: any[];
 
@@ -29,13 +29,19 @@ export class NGFormComponent implements OnInit {
   }
 
   updateChildLevelData(event, currentLevelBlock, availableChildData) {
+
+    console.log("-------------------------availableChildData----------------------------");
+    console.log(availableChildData);
+    console.log("-------------------------availableChildData----------------------------");
+    
+
     console.log(event.value);
     this.childLevelData = this.childData[currentLevelBlock.child];
     var temporaryData = [];
     var parentLevelName = '';
     this.availableData = [];
 
-    parentLevelName = currentLevelBlock.fieldName;
+    parentLevelName = currentLevelBlock.fieldLabel;
     while(this.parentChildSet[parentLevelName]) {
       parentLevelName = this.parentChildSet[parentLevelName];
       this.totalResults[parentLevelName] = '';
@@ -60,13 +66,13 @@ export class NGFormComponent implements OnInit {
       this.ngFormcomponentData.forEach(eachBlock => {
 
         if ((typeof eachBlock.isChild !== 'undefined') && eachBlock.isChild) {
-          this.childData[eachBlock.fieldName]= eachBlock.data;
+          this.childData[eachBlock.fieldLabel]= eachBlock.data;
         }
 
         if (eachBlock.child) {
-          this.parentChildSet[eachBlock.fieldName] = eachBlock.child;
+          this.parentChildSet[eachBlock.fieldLabel] = eachBlock.child;
         }
-        this.totalResults[eachBlock.fieldName] = eachBlock.default;
+        this.totalResults[eachBlock.fieldLabel] = eachBlock.default;
       });
   }
 

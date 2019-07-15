@@ -1,92 +1,97 @@
-<div *ngFor="let eachMeetingEventData of ngFormcomponentData; let i=index" >
-  <div *ngIf="eachMeetingEventData.displayType == 'dropdown'; else elseBlock">
-  	<div style="margin: 20px;">
-  	  <div style="color:#00a9e0; font-size: 14px;">
-  	    <span>{{eachMeetingEventData.fieldName}}</span>
-  	  </div>
-      <div>
-        <p-dropdown 
-        [options]="eachMeetingEventData.isChild ? availableData[eachMeetingEventData.availableDataName] : eachMeetingEventData.data" 
-        [(ngModel)]="totalResults[eachMeetingEventData.fieldName]" 
-        [autoWidth]="false" 
-        [showClear]="true"
-        placeholder="please select" 
-        (onChange)="eachMeetingEventData.isParent ? updateChildLevelData($event, eachMeetingEventData, eachMeetingEventData.availableChildDataName) : '' " 
-        [style]="{'width':'500px'}">
-             <ng-template let-item pTemplate="selectedItem"> 
-                <span>{{item.label}}</span>
-            </ng-template> 
-            <ng-template let-eachOption pTemplate="item"> 
-                <div>
-                <div>{{eachOption.label}}</div> </div>
-            </ng-template>
-        </p-dropdown>
+<div class="row">
+  <div class="col-md-6">
+    <div *ngFor="let eachMeetingEventData of ngFormcomponentData; let i=index">
+      <div *ngIf="eachMeetingEventData.displayType == 'dropdown'; else elseBlock">
+        <div style="margin: 20px;">
+          <div style="color: #00a9e0; font-size: 14px;">
+            <span>{{eachMeetingEventData.fieldLabel}}</span>
+          </div>
+          <div>
+            <p-dropdown 
+            [options]="eachMeetingEventData.isChild ? availableData['available' + eachMeetingEventData.fieldLabel] : eachMeetingEventData.data" 
+            [(ngModel)]="totalResults[eachMeetingEventData.fieldLabel]" 
+            [autoWidth]="false" 
+            [showClear]="true"
+            placeholder="please select" 
+            (onChange)="eachMeetingEventData.child ? updateChildLevelData($event, eachMeetingEventData, 'available' + eachMeetingEventData.child) : '' " 
+            [style]="{'width':'500px'}">
+                 <ng-template let-item pTemplate="selectedItem"> 
+                    <span>{{item.label}}</span>
+                </ng-template> 
+                <ng-template let-eachOption pTemplate="item"> 
+                    <div>
+                    <div>{{eachOption.label}}</div> </div>
+                </ng-template>
+            </p-dropdown>
+            {{totalResults[eachMeetingEventData.fieldLabel]}}
+          </div>
+        </div>
       </div>
-  	</div>
+      <div *ngIf="eachMeetingEventData.displayType == 'multiselect'; else elseBlock">
+        <div style="margin: 20px;">
+          <div style="color: #00a9e0; font-size: 14px;">
+            <span>{{eachMeetingEventData.fieldLabel}}</span>
+          </div>
+          <p-multiSelect 
+          [options]="eachMeetingEventData.data" 
+          [(ngModel)]="totalResults[eachMeetingEventData.fieldLabel]" 
+          [panelStyle]="{minWidth:'30em'}"
+          [filter]="true"></p-multiSelect>
+        </div>
+      </div>
+      <div *ngIf="eachMeetingEventData.displayType == 'textfield'; else elseBlock">
+        <div style="margin: 20px;">
+          <div style="color: #00a9e0; font-size: 14px;">
+            <span>{{eachMeetingEventData.fieldLabel}}</span>
+          </div>
+          <textarea 
+          [rows]="5" 
+          [cols]="68"
+          [(ngModel)]="totalResults[eachMeetingEventData.fieldLabel]"
+          [placeholder]="totalResults[eachMeetingEventData.fieldLabel]"
+          pInputTextarea 
+          autoResize="autoResize"></textarea>
+        </div>
+      </div>
+      <div *ngIf="eachMeetingEventData.displayType == 'checkbox'; else elseBlock">
+        <div style="margin: 20px;">
+          <div style="color: #00a9e0; font-size: 14px;">
+            <span>{{eachMeetingEventData.fieldLabel}}</span>
+          </div>
+          <p-checkbox [(ngModel)]="totalResults[eachMeetingEventData.fieldLabel]" binary="true"></p-checkbox>
+        </div>
+      </div>
+      <div *ngIf="eachMeetingEventData.displayType == 'calendar'; else elseBlock">
+        <div style="margin: 20px;">
+          <div style="color: #00a9e0; font-size: 14px;">
+            <span>{{eachMeetingEventData.fieldLabel}}</span>
+          </div>
+          <p-calendar [(ngModel)]="totalResults[eachMeetingEventData.fieldLabel]" [showTime]="true"></p-calendar>
+          {{totalResults[eachMeetingEventData.fieldLabel]}}
+        </div>
+      </div>
+      <div *ngIf="eachMeetingEventData.displayType == 'customtext'; else elseBlock">
+        <div style="margin: 20px;">
+          <div style="color: #00a9e0; font-size: 24px;">
+            <span>{{eachMeetingEventData.fieldLabel}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div *ngIf="eachMeetingEventData.displayType == 'multiselect'; else elseBlock">
-  	<div style="margin: 20px;">
-  	  <div style="color:#00a9e0; font-size: 14px;">
-  	    <span>{{eachMeetingEventData.fieldName}}</span>
-  	  </div>
-  	  <p-multiSelect 
-  	  [options]="eachMeetingEventData.data" 
-  	  [(ngModel)]="totalResults[eachMeetingEventData.fieldName]" 
-  	  [panelStyle]="{minWidth:'30em'}"
-  	  [filter]="true"></p-multiSelect>
-  	</div>
-  </div>
-  <div *ngIf="eachMeetingEventData.displayType == 'textfield'; else elseBlock">
-  	<div style="margin: 20px;">
-  	  <div style="color:#00a9e0; font-size: 14px;">
-  	    <span>{{eachMeetingEventData.fieldName}}</span>
-  	  </div>
-  	  <textarea 
-  	  [rows]="5" 
-  	  [cols]="68"
-  	  [(ngModel)]="totalResults[eachMeetingEventData.fieldName]"
-  	  [placeholder]="totalResults[eachMeetingEventData.fieldName]"
-  	  pInputTextarea 
-  	  autoResize="autoResize"></textarea>
-  	</div>
-  </div>
-  <div *ngIf="eachMeetingEventData.displayType == 'checkbox'; else elseBlock">
-  	<div style="margin: 20px;">
-  	  <div style="color:#00a9e0; font-size: 14px;">
-  	    <span>{{eachMeetingEventData.fieldName}}</span>
-  	  </div>
-  	  <p-checkbox [(ngModel)]="totalResults[eachMeetingEventData.fieldName]" binary="true"></p-checkbox>
-  	</div>
-  </div>
-  <div *ngIf="eachMeetingEventData.displayType == 'calendar'; else elseBlock">
-  	<div style="margin: 20px;">
-  	  <div style="color:#00a9e0; font-size: 14px;">
-  	    <span>{{eachMeetingEventData.fieldName}}</span>
-  	  </div>
-	    <p-calendar [(ngModel)]="totalResults[eachMeetingEventData.fieldName]" [showTime]="true"></p-calendar>
-      {{totalResults[eachMeetingEventData.fieldName]}}
-  	</div>
-  </div>
-  <div *ngIf="eachMeetingEventData.displayType == 'customtext'; else elseBlock">
-  	<div style="margin: 20px;">
-  	  <div style="color:#00a9e0; font-size: 24px;">
-  	    <span>{{eachMeetingEventData.fieldName}}</span>
-  	  </div>
-  	</div>
-  </div>
-
 </div>
 
-<div class="row">
-		<div class="col-md-2" style="margin: 20px;">
-		  <p-button 
-		  label="SUBMIT" 
-		  (onClick)="save()"></p-button>
-		</div>
 
-		<div class="col-md-2" style="margin: 20px;">
-		  <p-button 
-		  label="SAVE&EVALUATE" 
-		  (onClick)="save()"></p-button>
-		</div>
-	</div>
+<div class="row">
+    <div class="col-md-2" style="margin: 20px;">
+      <p-button 
+      label="SUBMIT" 
+      (onClick)="save()"></p-button>
+    </div>
+
+    <div class="col-md-2" style="margin: 20px;">
+      <p-button 
+      label="SAVE&EVALUATE" 
+      (onClick)="save()"></p-button>
+    </div>
+  </div>
