@@ -29,17 +29,10 @@ export class NGFormComponent implements OnInit {
   }
 
   updateChildLevelData(event, currentLevelBlock, availableChildData) {
-
-    console.log("-------------------------availableChildData----------------------------");
-    console.log(availableChildData);
-    console.log("-------------------------availableChildData----------------------------");
-    
-
     console.log(event.value);
     this.childLevelData = this.childData[currentLevelBlock.child];
     var temporaryData = [];
     var parentLevelValue = 0;
-    this.availableData = [];
 
     parentLevelValue = currentLevelBlock.fieldValue;
     while(this.parentChildSet[parentLevelValue]) {
@@ -59,6 +52,9 @@ export class NGFormComponent implements OnInit {
     });
 
     this.availableData[availableChildData] = temporaryData;
+
+    console.log("availableData");
+    console.log(this.availableData);
   }
 
 
