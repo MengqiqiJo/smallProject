@@ -38,13 +38,13 @@ export class NGFormComponent implements OnInit {
     console.log(event.value);
     this.childLevelData = this.childData[currentLevelBlock.child];
     var temporaryData = [];
-    var parentLevelName = '';
+    var parentLevelValue = 0;
     this.availableData = [];
 
-    parentLevelName = currentLevelBlock.fieldLabel;
-    while(this.parentChildSet[parentLevelName]) {
-      parentLevelName = this.parentChildSet[parentLevelName];
-      this.totalResults[parentLevelName] = '';
+    parentLevelValue = currentLevelBlock.fieldValue;
+    while(this.parentChildSet[parentLevelValue]) {
+      parentLevelValue = this.parentChildSet[parentLevelValue];
+      this.totalResults[parentLevelValue] = '';
     }
 
 
@@ -70,9 +70,9 @@ export class NGFormComponent implements OnInit {
         }
 
         if (eachBlock.child) {
-          this.parentChildSet[eachBlock.fieldLabel] = eachBlock.child;
+          this.parentChildSet[eachBlock.fieldValue] = eachBlock.childValue;
         }
-        this.totalResults[eachBlock.fieldLabel] = eachBlock.default;
+        this.totalResults[eachBlock.fieldValue] = eachBlock.default;
       });
   }
 
