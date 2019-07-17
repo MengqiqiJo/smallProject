@@ -2193,6 +2193,12 @@
         "inputType": "textfield",
         "displayType": "textfield",
         "default": "",
+        "returnValue":{
+          "refer_tId":"1060",
+          "refer_uId":"",
+          "city":"windsor",
+          "refer_other":"lll"
+        },
         "data": [
           {
             "value": 1111,

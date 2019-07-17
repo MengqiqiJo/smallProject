@@ -19,13 +19,25 @@ export class NGFormComponent implements OnInit {
   availableData: any[]=[];
   childLevelData: any[];
   parentChildSet: any[]=[];
+  returnResults: any[]=[];
 
   constructor(private myService: AppService) {
   }
 
   save() {
-    console.log("total results");
-    console.log(this.totalResults);
+   
+    console.log("returnResults1");
+    console.log(this.returnResults);
+
+
+    this.returnResults.forEach(eachResult => {
+      eachResult.question_value = this.totalResults[eachResult.question_id];
+    });
+
+    console.log("returnResults2");
+    console.log(this.returnResults);
+
+
   }
 
   updateChildLevelData(event, currentLevelBlock, availableChildData) {
@@ -40,11 +52,6 @@ export class NGFormComponent implements OnInit {
       this.totalResults[parentLevelValue] = '';
     }
 
-
-    console.log("after reset");
-    console.log(this.totalResults);
-
-
     this.childLevelData.forEach(eachchildLevelData => {
       if (eachchildLevelData.parent.parentId == event.value) {
         temporaryData.push(eachchildLevelData);
@@ -52,14 +59,15 @@ export class NGFormComponent implements OnInit {
     });
 
     this.availableData[availableChildData] = temporaryData;
-
-    console.log("availableData");
-    console.log(this.availableData);
   }
 
 
   ngOnInit() {
+    var temporaryBlockData;
+    var blockReturnOtherValue;
       this.ngFormcomponentData.forEach(eachBlock => {
+        temporaryBlockData=null;
+        blockReturnOtherValue=null;
 
         if ((typeof eachBlock.isChild !== 'undefined') && eachBlock.isChild) {
           this.childData[eachBlock.fieldLabel]= eachBlock.data;
@@ -68,7 +76,23 @@ export class NGFormComponent implements OnInit {
         if (eachBlock.child) {
           this.parentChildSet[eachBlock.fieldValue] = eachBlock.childValue;
         }
+
+        
         this.totalResults[eachBlock.fieldValue] = eachBlock.default;
+
+        
+        temporaryBlockData = {
+          "question_id": eachBlock.fieldValue,
+          "question_value": eachBlock.default
+        };
+
+        if (eachBlock.returnValue) {
+          blockReturnOtherValue = eachBlock.returnValue;
+          temporaryBlockData = Object.assign(temporaryBlockData, blockReturnOtherValue);
+        }
+
+        this.returnResults.push(temporaryBlockData);
+
       });
   }
 

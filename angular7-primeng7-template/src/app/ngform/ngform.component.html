@@ -9,7 +9,7 @@
           <div>
             <p-dropdown 
             [options]="eachMeetingEventData.isChild ? availableData['available' + eachMeetingEventData.fieldLabel] : eachMeetingEventData.data" 
-            [(ngModel)]="totalResults[eachMeetingEventData.fieldLabel]" 
+            [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" 
             [autoWidth]="false" 
             [showClear]="true"
             placeholder="please select" 
@@ -23,7 +23,7 @@
                     <div>{{eachOption.label}}</div> </div>
                 </ng-template>
             </p-dropdown>
-            {{totalResults[eachMeetingEventData.fieldLabel]}}
+            {{totalResults[eachMeetingEventData.fieldValue]}}
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
           </div>
           <p-multiSelect 
           [options]="eachMeetingEventData.data" 
-          [(ngModel)]="totalResults[eachMeetingEventData.fieldLabel]" 
+          [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" 
           [panelStyle]="{minWidth:'30em'}"
           [filter]="true"></p-multiSelect>
         </div>
@@ -58,7 +58,7 @@
           <div style="color: #00a9e0; font-size: 14px;">
             <span>{{eachMeetingEventData.fieldLabel}}</span>
           </div>
-          <p-checkbox [(ngModel)]="totalResults[eachMeetingEventData.fieldLabel]" binary="true"></p-checkbox>
+          <p-checkbox [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" binary="true"></p-checkbox>
         </div>
       </div>
       <div *ngIf="eachMeetingEventData.displayType == 'calendar'; else elseBlock">
@@ -66,7 +66,7 @@
           <div style="color: #00a9e0; font-size: 14px;">
             <span>{{eachMeetingEventData.fieldLabel}}</span>
           </div>
-          <p-calendar [(ngModel)]="totalResults[eachMeetingEventData.fieldLabel]" [showTime]="true"></p-calendar>
+          <p-calendar [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" [showTime]="true"></p-calendar>
           {{totalResults[eachMeetingEventData.fieldLabel]}}
         </div>
       </div>
