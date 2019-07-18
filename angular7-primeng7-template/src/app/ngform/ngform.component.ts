@@ -20,19 +20,40 @@ export class NGFormComponent implements OnInit {
   childLevelData: any[];
   parentChildSet: any[]=[];
   returnResults: any[]=[];
+  returnQuestions: any[]=[];
 
   constructor(private myService: AppService) {
   }
 
   save() {
-   
+
+    this.totalResults
+
     console.log("returnResults1");
-    console.log(this.returnResults);
+    console.log(this.totalResults);
 
-
+   
     this.returnResults.forEach(eachResult => {
-      eachResult.question_value = this.totalResults[eachResult.question_id];
+      
+      eachResult.field_value =[];
+      eachResult.field_value = eachResult.field_value.concat(this.totalResults[eachResult.field_name]);
+     
+
     });
+
+    this.returnQuestions.forEach(eachQuestion => {
+     
+      eachQuestion.question_value =[];
+      eachQuestion.question_value = eachQuestion.question_value.concat(this.totalResults[eachQuestion.question_id]);
+     
+    });
+
+
+
+    this.returnResults["field_evaluation_reactset"]={
+      "field_name": "field_evaluation_reactset",
+      "field_value": this.returnQuestions
+    };
 
     console.log("returnResults2");
     console.log(this.returnResults);
@@ -65,9 +86,12 @@ export class NGFormComponent implements OnInit {
   ngOnInit() {
     var temporaryBlockData;
     var blockReturnOtherValue;
+    var temporaryQuestionData;
+  
       this.ngFormcomponentData.forEach(eachBlock => {
         temporaryBlockData=null;
         blockReturnOtherValue=null;
+        temporaryQuestionData=null;
 
         if ((typeof eachBlock.isChild !== 'undefined') && eachBlock.isChild) {
           this.childData[eachBlock.fieldLabel]= eachBlock.data;
@@ -80,18 +104,37 @@ export class NGFormComponent implements OnInit {
         
         this.totalResults[eachBlock.fieldValue] = eachBlock.default;
 
-        
-        temporaryBlockData = {
-          "question_id": eachBlock.fieldValue,
-          "question_value": eachBlock.default
-        };
+        if (eachBlock.isQuestion) {
+          temporaryQuestionData = {
+            "question_id" : eachBlock.fieldValue,
+            "question_value": []
+          }
 
-        if (eachBlock.returnValue) {
-          blockReturnOtherValue = eachBlock.returnValue;
-          temporaryBlockData = Object.assign(temporaryBlockData, blockReturnOtherValue);
+          if (eachBlock.returnValue) {
+            blockReturnOtherValue = eachBlock.returnValue;
+            temporaryQuestionData = Object.assign(temporaryQuestionData, blockReturnOtherValue);
+          }
+
+          this.returnQuestions.push(temporaryQuestionData);
+
+        }
+        else {
+          temporaryBlockData = {
+            "field_name": eachBlock.fieldValue,
+            "field_value": []
+          };
+
+          if (eachBlock.returnValue) {
+            blockReturnOtherValue = eachBlock.returnValue;
+            temporaryBlockData = Object.assign(temporaryBlockData, blockReturnOtherValue);
+          }
+
+          this.returnResults.push(temporaryBlockData);
         }
 
-        this.returnResults.push(temporaryBlockData);
+        
+
+        
 
       });
   }
