@@ -34,18 +34,13 @@ export class NGFormComponent implements OnInit {
 
    
     this.returnResults.forEach(eachResult => {
-      
       eachResult.field_value =[];
       eachResult.field_value = eachResult.field_value.concat(this.totalResults[eachResult.field_name]);
-     
-
     });
 
     this.returnQuestions.forEach(eachQuestion => {
-     
       eachQuestion.question_value =[];
       eachQuestion.question_value = eachQuestion.question_value.concat(this.totalResults[eachQuestion.question_id]);
-     
     });
 
 
@@ -57,7 +52,6 @@ export class NGFormComponent implements OnInit {
 
     console.log("returnResults2");
     console.log(this.returnResults);
-
 
   }
 
