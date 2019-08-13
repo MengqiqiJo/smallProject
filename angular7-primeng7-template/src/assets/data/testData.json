@@ -2236,7 +2236,6 @@
         "inputType": "radio",
         "displayType": "dropdown",
         "default": "",
-        "ngModel":"selectedCanadaCity",
         "data": [
           {
             "value": 1111,
@@ -2265,10 +2264,68 @@
         ]
       },
       {
+        "fieldValue": 1062,
+        "fieldLabel":"Speakers",
+        "inputType": "multiselect",
+        "displayType": "generalCheckbox",
+        "default":"",
+        "data":[
+          {
+            "value": 1111,
+            "label": "Marie-Claude Racine"
+          },
+          {
+            "value": 2222,
+            "label": "Larry Dian"
+          },
+          {
+            "value": 3333,
+            "label": "Shereen Metias"
+          },
+          {
+            "value": 4444,
+            "label": "Marie-Hélène Robert"
+          },
+          {
+            "value": 5555,
+            "label": "Patrice Gosselin"
+          },
+          {
+            "value": 6666,
+            "label": "Danielle Houde"
+          }
+        ]
+      },
+      {
+        "fieldValue": 1063,
+        "fieldLabel":"What is the current interpretation of the CT chest?",
+        "inputType": "radio",
+        "displayType": "radioButton",
+        "default":"",
+        "data":[
+          {
+            "value": 101,
+            "label": "UIP"
+          },
+          {
+            "value": 202,
+            "label": "Probable UIP"
+          },
+          {
+            "value": 303,
+            "label": "Indeterminate for UIP"
+          },
+          {
+            "value": 404,
+            "label": "Alternative diagnosis"
+          }
+        ]
+      },
+      {
         "fieldValue": "field_evaluation_summary",
         "fieldLabel":"Summary Evaluation",
-        "inputType": "checkbox",
-        "displayType": "checkbox",
+        "inputType": "booleanCheckbox",
+        "displayType": "booleanCheckbox",
         "default": false,
         "data": ""
       },

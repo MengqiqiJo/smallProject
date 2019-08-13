@@ -19,8 +19,8 @@ export class NGFormComponent implements OnInit {
   availableData: any[]=[];
   childLevelData: any[];
   parentChildSet: any[]=[];
-  returnResults: any[]=[];
-  returnQuestions: any[]=[];
+  returnFormResults: any[]=[];
+  returnQuestionsResults: any[]=[];
 
   constructor(private myService: AppService) {
   }
@@ -29,29 +29,29 @@ export class NGFormComponent implements OnInit {
 
     this.totalResults
 
-    console.log("returnResults1");
+    console.log("returnFormResults1");
     console.log(this.totalResults);
 
    
-    this.returnResults.forEach(eachResult => {
+    this.returnFormResults.forEach(eachResult => {
       eachResult.field_value =[];
       eachResult.field_value = eachResult.field_value.concat(this.totalResults[eachResult.field_name]);
     });
 
-    this.returnQuestions.forEach(eachQuestion => {
+    this.returnQuestionsResults.forEach(eachQuestion => {
       eachQuestion.question_value =[];
       eachQuestion.question_value = eachQuestion.question_value.concat(this.totalResults[eachQuestion.question_id]);
     });
 
 
 
-    this.returnResults["field_evaluation_reactset"]={
+    this.returnFormResults["field_evaluation_reactset"]={
       "field_name": "field_evaluation_reactset",
-      "field_value": this.returnQuestions
+      "field_value": this.returnQuestionsResults
     };
 
-    console.log("returnResults2");
-    console.log(this.returnResults);
+    console.log("returnFormResults2");
+    console.log(this.returnFormResults);
 
   }
 
@@ -76,7 +76,6 @@ export class NGFormComponent implements OnInit {
     this.availableData[availableChildData] = temporaryData;
   }
 
-
   ngOnInit() {
     var temporaryBlockData;
     var blockReturnOtherValue;
@@ -94,8 +93,7 @@ export class NGFormComponent implements OnInit {
         if (eachBlock.child) {
           this.parentChildSet[eachBlock.fieldValue] = eachBlock.childValue;
         }
-
-        
+ 
         this.totalResults[eachBlock.fieldValue] = eachBlock.default;
 
         if (eachBlock.isQuestion) {
@@ -109,7 +107,7 @@ export class NGFormComponent implements OnInit {
             temporaryQuestionData = Object.assign(temporaryQuestionData, blockReturnOtherValue);
           }
 
-          this.returnQuestions.push(temporaryQuestionData);
+          this.returnQuestionsResults.push(temporaryQuestionData);
 
         }
         else {
@@ -123,12 +121,8 @@ export class NGFormComponent implements OnInit {
             temporaryBlockData = Object.assign(temporaryBlockData, blockReturnOtherValue);
           }
 
-          this.returnResults.push(temporaryBlockData);
+          this.returnFormResults.push(temporaryBlockData);
         }
-
-        
-
-        
 
       });
   }
