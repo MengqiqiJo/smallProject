@@ -1831,7 +1831,7 @@
         "displayType": "dropdown",
         "default": 11,
         "child": "subprogramArea",
-        "childValue": 1051,
+        "childValue": 1050,
         "availableDataName": "availableProgramArea",
         "data":[
           {
