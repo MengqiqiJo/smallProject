@@ -20,10 +20,10 @@
                 </ng-template> 
                 <ng-template let-eachOption pTemplate="item"> 
                     <div>
-                    <div>{{eachOption.label}}</div> </div>
+                      <div>{{eachOption.label}}</div> 
+                    </div>
                 </ng-template>
             </p-dropdown>
-            {{totalResults[eachMeetingEventData.fieldValue]}}
           </div>
         </div>
       </div>
@@ -66,14 +66,12 @@
           <div style="color: #00a9e0; font-size: 14px;">
             <span>{{eachMeetingEventData.fieldLabel}}</span>
           </div>
-
           <div *ngFor="let eachCheckBoxData of eachMeetingEventData.data; let i=index">
             <div class="ui-g-12">
               <p-checkbox value="{{eachCheckBoxData.value}}" label="{{eachCheckBoxData.label}}" [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" inputId="{{eachCheckBoxData.value}}">
               </p-checkbox>
             </div>
           </div>
-
         </div>
       </div>
       <div *ngIf="eachMeetingEventData.displayType == 'radioButton'; else elseBlock">
@@ -81,14 +79,12 @@
           <div style="color: #00a9e0; font-size: 14px;">
             <span>{{eachMeetingEventData.fieldLabel}}</span>
           </div>
-
           <div *ngFor="let eachCheckBoxData of eachMeetingEventData.data; let i=index">
             <div class="ui-g-12">
               <p-radioButton value="{{eachCheckBoxData.value}}" label="{{eachCheckBoxData.label}}" [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" inputId="{{eachCheckBoxData.value}}">
               </p-radioButton>
             </div>
           </div>
-
         </div>
       </div>
       <div *ngIf="eachMeetingEventData.displayType == 'calendar'; else elseBlock">
@@ -111,17 +107,16 @@
   </div>
 </div>
 
-
-<div class="row">
-    <div class="col-md-2" style="margin: 20px;">
-      <p-button 
-      label="SUBMIT" 
-      (onClick)="save()"></p-button>
-    </div>
-
-    <div class="col-md-2" style="margin: 20px;">
-      <p-button 
-      label="SAVE&EVALUATE" 
-      (onClick)="save()"></p-button>
-    </div>
+<!-- <div class="row">
+  <div class="col-md-2" style="margin: 20px;">
+    <p-button 
+    label="SUBMIT" 
+    (onClick)="save()"></p-button>
   </div>
+
+  <div class="col-md-2" style="margin: 20px;">
+    <p-button 
+    label="SAVE&EVALUATE" 
+    (onClick)="save()"></p-button>
+  </div>
+</div> -->

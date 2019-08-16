@@ -6,21 +6,6 @@
   </div>
 </div>
 
-
-<hr>
-<hr>
-
-
-
-<hr>
-<hr>
-
-<!-- edit password form -->
-<!-- <app-edit-password></app-edit-password> -->
-
-
-
-<!-- <ng-template #elseBlock> -->
 <!-- chart -->
 <div class="row" for="primengDataGeneral">
   <div *ngFor="let blockData of primengDataGeneral" >
@@ -42,7 +27,6 @@
 
                   <!-- table -->
                   <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
-
                     <app-primeng-table [tableInputData]="eachtabcontent"></app-primeng-table>
                   </div>
 

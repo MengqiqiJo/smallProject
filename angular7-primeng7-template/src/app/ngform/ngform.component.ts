@@ -11,8 +11,6 @@ export class NGFormComponent implements OnInit {
 
   @Input('name') ngFormcomponentData: any[];
 
-  ngData: any[];
-
   totalResults: any[]=[];
   childData: any[]=[];
 
@@ -23,16 +21,15 @@ export class NGFormComponent implements OnInit {
   returnQuestionsResults: any[]=[];
 
   constructor(private myService: AppService) {
-  }
+  } 
 
   save() {
 
     this.totalResults
 
-    console.log("returnFormResults1");
-    console.log(this.totalResults);
+    // console.log("returnFormResults1");
+    // console.log(this.totalResults);
 
-   
     this.returnFormResults.forEach(eachResult => {
       eachResult.field_value =[];
       eachResult.field_value = eachResult.field_value.concat(this.totalResults[eachResult.field_name]);
@@ -43,16 +40,13 @@ export class NGFormComponent implements OnInit {
       eachQuestion.question_value = eachQuestion.question_value.concat(this.totalResults[eachQuestion.question_id]);
     });
 
-
-
     this.returnFormResults["field_evaluation_reactset"]={
       "field_name": "field_evaluation_reactset",
       "field_value": this.returnQuestionsResults
     };
 
-    console.log("returnFormResults2");
-    console.log(this.returnFormResults);
-
+    // console.log("returnFormResults2");
+    // console.log(this.returnFormResults);
   }
 
   updateChildLevelData(event, currentLevelBlock, availableChildData) {
