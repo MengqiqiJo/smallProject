@@ -76,7 +76,7 @@
       </div>
       <div *ngIf="eachMeetingEventData.displayType == 'radioButton'; else elseBlock">
         <div style="margin: 20px;">
-          <div style="color: #00a9e0; font-size: 14px;">
+          <div style="color:#00a9e0; font-size: 14px;">
             <span>{{eachMeetingEventData.fieldLabel}}</span>
           </div>
           <div *ngFor="let eachCheckBoxData of eachMeetingEventData.data; let i=index">

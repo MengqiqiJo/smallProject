@@ -24,8 +24,8 @@ export class NGFormComponent implements OnInit {
   } 
 
   save() {
-    // console.log("returnFormResults1");
-    // console.log(this.totalResults);
+    console.log("returnFormResults1");
+    console.log(this.totalResults);
 
     var temporaryQuestionResult;
 
@@ -46,8 +46,8 @@ export class NGFormComponent implements OnInit {
 
     this.returnFormResults.push(temporaryQuestionResult);
 
-    // console.log("returnFormResults2");
-    // console.log(this.returnFormResults);
+    console.log("returnFormResults2");
+    console.log(this.returnFormResults);
   }
 
   updateChildLevelData(event, currentLevelBlock, availableChildData) {

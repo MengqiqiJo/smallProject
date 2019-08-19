@@ -7,8 +7,9 @@
           <input type="text" class="input-search" pInputText size="30" placeholder="Search" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
         </div>
         <div class="col-md-6 table-colum-multiselect">
-            <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
-            selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+          <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
+          selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns">
+          </p-multiSelect>
         </div>
         <div class="ui-helper-clearfix table-copy-excel-button col-md-2" style="text-align:right;">
           <div class="button-copy">
@@ -21,18 +22,18 @@
       </div>
     </ng-template>
     <ng-template pTemplate="header" let-columns>
-        <tr>
-            <th *ngFor="let col of eachtabcontent.tabData.middle.thead" [pSortableColumn]="col.field" [ngStyle]="{'width': col.width}">
-              {{col.header}}
-              <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
-            </th>
-        </tr>
+      <tr>
+        <th *ngFor="let col of eachtabcontent.tabData.middle.thead" [pSortableColumn]="col.field" [ngStyle]="{'width': col.width}">
+          {{col.header}}
+          <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+        </th>
+      </tr>
     </ng-template>
     <ng-template pTemplate="body" let-celldata let-columns="eachtabcontent.tabData.middle.thead">
-        <tr>
-          <td *ngFor="let col of eachtabcontent.tabData.middle.thead" [innerHTML]="celldata[col.field]">
-          </td>
-        </tr>
+      <tr>
+        <td *ngFor="let col of eachtabcontent.tabData.middle.thead" [innerHTML]="celldata[col.field]">
+        </td>
+      </tr>
     </ng-template>
   </p-table>
 </div>

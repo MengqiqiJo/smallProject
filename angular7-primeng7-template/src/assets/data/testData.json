@@ -6,7 +6,7 @@
         "tabShow": "hide",
         "isChartjs": true,
         "blockHeader": "",
-        "blockClass": "col-md-4 margin-top-24",
+        "blockClass": "col-md-6 margin-top-24",
         "blockClassSub": "",
         "blockContent": [
           {
@@ -22,7 +22,7 @@
               "top": {
                 "enable": false,
                 "styleClass": "bg-009ddf color-fff height-60",
-                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
+                "value": "<div class=\"col-sm-5 col-md-12 bg-4a245e color-fff padding-15 height-60\">Question Title 1</div>"
               },
               "middle": {
                 "class": "height-400",
@@ -37,15 +37,16 @@
                   "type": "pie",
                   "styleClass": "col-md-6 margin-top-24",
                   "data": {
-                    "labels": ["OLA", "Head Office", "I&D", "MS/NS"],
+                    "labels": ["OLA", "Head Office", "I&D", "MS/NS", "netual"],
                     "datasets": [{
                       "label": "",
-                      "data": [4, 138, 20, 40],
+                      "data": [14, 13, 15, 14, 15],
                       "backgroundColor": [
-                        "#0023d0",
-                        "#75d1e0",
-                        "#cc292b",
-                        "#00aeef"
+                        "#2fa9e0",
+                        "#4a245e",
+                        "#c6c6c6",
+                        "#f7d417",
+                        "#f24b99"
                       ]
                     }]
                   },
@@ -57,7 +58,7 @@
                       "labels": {
                         "render": "percentage",
                         "fontColor": "#ffffff",
-                        "fontSize": 10
+                        "fontSize": 16
                       }
                     }
                   }
@@ -65,7 +66,303 @@
                 "middleRight": {
                   "enable": false,
                   "styleClass": "col-md-6",
-                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-2fa9e0\"></span><span class=\"float-left legend-text\">Strongly Agree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-4a245e\"></span><span class=\"float-left legend-text\">Agree (13)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Neutral (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f7d417\"></span><span class=\"float-left legend-text\">Disagree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f24b99\"></span><span class=\"float-left legend-text\">Strongly Disagree (14)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": true,
+        "blockHeader": "",
+        "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "chartjsPluginsOptions": {
+              "calculateTooltip": true,
+              "calculateLabel": true
+            },
+            "tabData":
+            {
+              "type": "chart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"col-sm-5 col-md-12 bg-2fa9e0 color-fff padding-15 height-60\">Question Title 2</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "percentage",
+                  "type": "pie",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": ["OLA", "Head Office", "I&D", "MS/NS", "netual"],
+                    "datasets": [{
+                      "label": "",
+                      "data": [14, 13, 15, 14, 15],
+                      "backgroundColor": [
+                        "#573366",
+                        "#1b6c98",
+                        "#277256",
+                        "#e1aa05",
+                        "#cb231a"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "percentage",
+                        "fontColor": "#ffffff",
+                        "fontSize": 16
+                      }
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-573366\"></span><span class=\"float-left legend-text\">Strongly Agree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-1b6c98\"></span><span class=\"float-left legend-text\">Agree (13)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-277256\"></span><span class=\"float-left legend-text\">Neutral (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-e1aa05\"></span><span class=\"float-left legend-text\">Disagree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-cb231a\"></span><span class=\"float-left legend-text\">Strongly Disagree (14)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": true,
+        "blockHeader": "",
+        "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "chartjsPluginsOptions": {
+              "calculateTooltip": true,
+              "calculateLabel": true
+            },
+            "tabData":
+            {
+              "type": "chart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"col-sm-5 col-md-12 bg-fb6205 color-fff padding-15 height-60\">Question Title 3</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "percentage",
+                  "type": "pie",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": ["OLA", "Head Office", "I&D", "MS/NS", "netual"],
+                    "datasets": [{
+                      "label": "",
+                      "data": [14, 13, 15, 14, 15],
+                      "backgroundColor": [
+                        "#2fa9e0",
+                        "#fb6205",
+                        "#c6c6c6",
+                        "#f7d417",
+                        "#f24b99"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "percentage",
+                        "fontColor": "#ffffff",
+                        "fontSize": 16
+                      }
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-2fa9e0\"></span><span class=\"float-left legend-text\">Strongly Agree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-fb6205\"></span><span class=\"float-left legend-text\">Agree (13)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Neutral (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f7d417\"></span><span class=\"float-left legend-text\">Disagree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f24b99\"></span><span class=\"float-left legend-text\">Strongly Disagree (14)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": true,
+        "blockHeader": "",
+        "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "chartjsPluginsOptions": {
+              "calculateTooltip": true,
+              "calculateLabel": true
+            },
+            "tabData":
+            {
+              "type": "chart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"col-sm-5 col-md-12 bg-2fa9e0 color-000 padding-15 height-60\">Question Title 4</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "percentage",
+                  "type": "pie",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": ["OLA", "Head Office", "I&D", "MS/NS", "netual"],
+                    "datasets": [{
+                      "label": "",
+                      "data": [14, 13, 15, 14, 15],
+                      "backgroundColor": [
+                        "#2fa9e0",
+                        "#05d23e",
+                        "#c6c6c6",
+                        "#f7d417",
+                        "#f24b99"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "percentage",
+                        "fontColor": "#000",
+                        "fontSize": 16
+                      }
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-2fa9e0\"></span><span class=\"float-left legend-text\">Strongly Agree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-05d23e\"></span><span class=\"float-left legend-text\">Agree (13)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Neutral (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f7d417\"></span><span class=\"float-left legend-text\">Disagree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f24b99\"></span><span class=\"float-left legend-text\">Strongly Disagree (14)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": true,
+        "blockHeader": "",
+        "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "chartjsPluginsOptions": {
+              "calculateTooltip": true,
+              "calculateLabel": true
+            },
+            "tabData":
+            {
+              "type": "chart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"col-sm-5 col-md-12 bg-2fa9e0 color-fff padding-15 height-60\">Question Title 5</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "percentage",
+                  "type": "pie",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": ["OLA", "Head Office", "I&D", "MS/NS", "netual"],
+                    "datasets": [{
+                      "label": "",
+                      "data": [14, 13, 15, 14, 15],
+                      "backgroundColor": [
+                        "#2fa9e0",
+                        "#05d23e",
+                        "#c6c6c6",
+                        "#f7d417",
+                        "#f24b99"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "percentage",
+                        "fontColor": "#000",
+                        "fontSize": 16
+                      }
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-2fa9e0\"></span><span class=\"float-left legend-text\">Strongly Agree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-05d23e\"></span><span class=\"float-left legend-text\">Agree (13)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Neutral (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f7d417\"></span><span class=\"float-left legend-text\">Disagree (14)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-f24b99\"></span><span class=\"float-left legend-text\">Strongly Disagree (14)</span></div></div>"
                 }
               },
               "bottom": {
