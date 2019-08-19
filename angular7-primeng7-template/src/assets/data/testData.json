@@ -2336,6 +2336,91 @@
         "displayType": "calendar",
         "default": "",
         "data": ""
+      },
+      {
+        "fieldValue": 1046,
+        "fieldLabel":"EDIT PASSWORD",
+        "inputType": "text",
+        "displayType": "customtext",
+        "default": "EDIT PASSWORD"
+      },
+      {
+        "fieldValue": 405,
+        "fieldLabel":"Current Password",
+        "inputType": "textfield",
+        "displayType": "textfield",
+        "default":"",
+        "data":""
+      },
+      {
+        "fieldValue": 406,
+        "fieldLabel":"Email Address",
+        "inputType": "textfield",
+        "displayType": "textfield",
+        "default":"",
+        "data":""
+      },
+      {
+        "fieldValue": 407,
+        "fieldLabel":"User Name",
+        "inputType": "textfield",
+        "displayType": "textfield",
+        "default":"",
+        "data":""
+      },
+      {
+        "fieldValue": 408,
+        "fieldLabel":"Password",
+        "inputType": "textfield",
+        "displayType": "textfield",
+        "default":"",
+        "data":""
+      },
+      {
+        "fieldValue": 409,
+        "fieldLabel":"Status",
+        "inputType": "radio",
+        "displayType": "radioButton",
+        "default":"",
+        "data":[
+          {
+            "value": 101,
+            "label": "Blcoked"
+          },
+          {
+            "value": 202,
+            "label": "Active"
+          }
+        ]
+      },
+      {
+        "fieldValue": 1062,
+        "fieldLabel":"Roles",
+        "inputType": "multiselect",
+        "displayType": "generalCheckbox",
+        "default":"",
+        "data":[
+          {
+            "value": 1111,
+            "label": "Speaker"
+          },
+          {
+            "value": 2222,
+            "label": "Rep"
+          },
+          {
+            "value": 3333,
+            "label": "Siteadmin"
+          },
+          {
+            "value": 4444,
+            "label": "Moderate"
+          },
+          {
+            "value": 5555,
+            "label": "Client"
+          }
+        ]
       }
     ]
   }

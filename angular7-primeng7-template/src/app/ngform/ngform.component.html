@@ -15,14 +15,14 @@
             placeholder="please select" 
             (onChange)="eachMeetingEventData.child ? updateChildLevelData($event, eachMeetingEventData, 'available' + eachMeetingEventData.child) : '' " 
             [style]="{'width':'500px'}">
-                 <ng-template let-item pTemplate="selectedItem"> 
-                    <span>{{item.label}}</span>
-                </ng-template> 
-                <ng-template let-eachOption pTemplate="item"> 
-                    <div>
-                      <div>{{eachOption.label}}</div> 
-                    </div>
-                </ng-template>
+              <ng-template let-item pTemplate="selectedItem"> 
+                <span>{{item.label}}</span>
+              </ng-template> 
+              <ng-template let-eachOption pTemplate="item"> 
+                <div>
+                  <div>{{eachOption.label}}</div> 
+                </div>
+              </ng-template>
             </p-dropdown>
           </div>
         </div>
@@ -67,7 +67,7 @@
             <span>{{eachMeetingEventData.fieldLabel}}</span>
           </div>
           <div *ngFor="let eachCheckBoxData of eachMeetingEventData.data; let i=index">
-            <div class="ui-g-12">
+            <div class="ui-g-12" style="font-weight: normal;">
               <p-checkbox value="{{eachCheckBoxData.value}}" label="{{eachCheckBoxData.label}}" [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" inputId="{{eachCheckBoxData.value}}">
               </p-checkbox>
             </div>
@@ -80,7 +80,7 @@
             <span>{{eachMeetingEventData.fieldLabel}}</span>
           </div>
           <div *ngFor="let eachCheckBoxData of eachMeetingEventData.data; let i=index">
-            <div class="ui-g-12">
+            <div class="ui-g-12" style="font-size: 14px; font-weight: lighter;">
               <p-radioButton value="{{eachCheckBoxData.value}}" label="{{eachCheckBoxData.label}}" [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" inputId="{{eachCheckBoxData.value}}">
               </p-radioButton>
             </div>
