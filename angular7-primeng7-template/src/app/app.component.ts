@@ -201,7 +201,7 @@ export class AppComponent implements OnInit {
   // get all data 
   getChartJSONAndDisplay() {
 
-    this.myService.getMyJson().subscribe(data => {
+    this.myService.getJsonFile().subscribe(data => {
       this.sectionContent = data;
 
       this.sectionContent.forEach(eachComponent => {
