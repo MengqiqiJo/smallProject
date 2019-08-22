@@ -1,8 +1,8 @@
-<app-edit-password></app-edit-password>
+<!-- <app-edit-password></app-edit-password> -->
 <!-- meeting event form -->
 <div *ngFor="let eachcomponent of sectionContent">
   <div *ngIf="eachcomponent.componentname == 'primengforms'; else elseBlock">
-    <app-ngform [name]="eachcomponent.primengforms"></app-ngform>
+    <app-ngform [name]="eachcomponent"></app-ngform>
   </div>
 </div>
 

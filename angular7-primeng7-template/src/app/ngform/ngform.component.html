@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-6">
-    <div *ngFor="let eachMeetingEventData of ngFormcomponentData; let i=index">
+    <div *ngFor="let eachMeetingEventData of ngFormcomponentData.primengforms; let i=index">
       <div *ngIf="eachMeetingEventData.displayType == 'dropdown'; else elseBlock">
         <div style="margin: 20px;">
           <div style="color: #00a9e0; font-size: 14px;">
@@ -101,6 +101,11 @@
           <div style="color: #00a9e0; font-size: 24px;">
             <span>{{eachMeetingEventData.fieldLabel}}</span>
           </div>
+        </div>
+      </div>
+      <div *ngIf="eachMeetingEventData.displayType == 'customHTML'; else elseBlock">
+        <div style="margin: 20px;">
+          <div [innerHTML]="eachMeetingEventData.fieldLabel"></div>
         </div>
       </div>
     </div>

@@ -1,15 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,ViewEncapsulation } from '@angular/core';
 import { AppService } from '../app.service';
 
 
 @Component({
   selector: 'app-ngform',
   templateUrl: './ngform.component.html',
-  styleUrls: ['./ngform.component.css']
+  styleUrls: ['./ngform.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NGFormComponent implements OnInit {
 
-  @Input('name') ngFormcomponentData: any[];
+  @Input('name') ngFormcomponentData: any;
+
+  formBasicInfo: any;
 
   totalResults: any[]=[];
   childData: any[]=[];
@@ -24,9 +27,6 @@ export class NGFormComponent implements OnInit {
   } 
 
   save() {
-    console.log("returnFormResults1");
-    console.log(this.totalResults);
-
     var temporaryQuestionResult;
 
     this.returnFormResults.forEach(eachResult => {
@@ -46,8 +46,11 @@ export class NGFormComponent implements OnInit {
 
     this.returnFormResults.push(temporaryQuestionResult);
 
-    console.log("returnFormResults2");
-    console.log(this.returnFormResults);
+    this.returnFormResults.forEach(eachResult => {
+      this.formBasicInfo.resultSubmit[eachResult.field_name] = eachResult;
+    });
+
+    console.log(this.formBasicInfo);
   }
 
   updateChildLevelData(event, currentLevelBlock, availableChildData) {
@@ -75,8 +78,10 @@ export class NGFormComponent implements OnInit {
     var temporaryBlockData;
     var blockReturnOtherValue;
     var temporaryQuestionData;
-  
-    this.ngFormcomponentData.forEach(eachBlock => {
+
+    this.formBasicInfo = this.ngFormcomponentData.formsBasicInfo;
+
+    this.ngFormcomponentData.primengforms.forEach(eachBlock => {
       temporaryBlockData=null;
       blockReturnOtherValue=null;
       temporaryQuestionData=null;

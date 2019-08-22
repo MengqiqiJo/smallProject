@@ -1562,6 +1562,21 @@
   },
   {
     "componentname":"primengforms",
+    "formsBasicInfo": {
+      "postUrl": "node",
+      "redirectUrl": "manageinfo/node/evaluation/add/form/805",
+      "deleteRedirectUrl": "nodeinfo/redirect/meetinginsert",
+      "formType": "add",
+      "resultSubmit": {
+        "type": {
+          "target_id": "evaluation"
+        },
+        "field_evaluation_meetingnid": {
+          "target_id": "805",
+          "target_type": "node"
+        }
+      }
+    },
     "primengforms":[
       {
         "fieldValue": "field_evaluation_title",
