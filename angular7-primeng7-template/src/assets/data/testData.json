@@ -1574,49 +1574,52 @@
         "field_evaluation_meetingnid": {
           "target_id": "805",
           "target_type": "node"
+        },
+        "field_evaluation_comments": {
+          "value": "some comment from user"
         }
       }
     },
     "primengforms":[
       {
-        "fieldValue": "field_evaluation_html",
+        "fieldId": "field_evaluation_html",
         "fieldLabel":"Current IBD Management: Lost in Translation Unraveling the mysteries of IBD management toward better outcomes",
         "inputType": "text",
         "displayType": "customtext",
         "default": "",
-        "data": []
+        "options": []
       },
       {
-        "fieldValue": "field_evaluation_title",
+        "fieldId": "field_evaluation_title",
         "fieldLabel":"<div class=\"col-sm-5 col-md-12 bg-4a245e color-fff padding-15 height-60\">Question Title 1</div>",
         "inputType": "text",
-        "displayType": "customHTML",
+        "displayType": "customhtml",
         "default": "",
-        "data": []
+        "options": []
       },
       {
-        "fieldValue": "field_meeting_title",
+        "fieldId": "field_meeting_title",
         "fieldLabel":"Title",
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"Evaluation for meeting 805",
-        "data":""
+        "options":""
       },
       {
-        "fieldValue": "field_evaluation_user",
+        "fieldId": "field_evaluation_user",
         "fieldLabel":"User",
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"",
-        "data":""
+        "options":""
       },
       {
-        "fieldValue": 1034,
+        "fieldId": 1034,
         "fieldLabel":"Type",
         "inputType": "radio",
         "displayType": "dropdown",
-        "default": 1000,
-        "data":[
+        "default": null,
+        "options":[
           {
             "value": 1000,
             "label": "NONE"          
@@ -1632,12 +1635,12 @@
         ]
       },
       {
-        "fieldValue": 1035,
+        "fieldId": 1035,
         "fieldLabel":"Practitioner Type",
         "inputType": "multiselect",
         "displayType": "multiselect",
         "default":[],
-        "data":[
+        "options":[
           {
             "value": 1111,
             "label": "Specialist"
@@ -1665,8 +1668,8 @@
         ]
       },
       {
-        "isQuestion": true,
-        "fieldValue": 1036,
+        "isReactSet": true,
+        "fieldId": "field_reactset_rate",
         "fieldLabel":"How would you rate the overall quality of this Abbvie Educational Program?",
         "inputType": "radio",
         "displayType": "dropdown",
@@ -1677,7 +1680,7 @@
           "city":"london",
           "refer_other":"lilkly"
         },
-        "data":[
+        "options":[
           {
             "value": 1000,
             "label": "NONE"          
@@ -1705,13 +1708,13 @@
         ]
       },
       {
-        "isQuestion": true,
-        "fieldValue": 1037,
+        "isReactSet": true,
+        "fieldId": "field_reactset_imporatnce",
         "fieldLabel":"Discuss the importance of early intervention in minimizing the risk of disease prograssion",
         "inputType": "radio",
         "displayType": "dropdown",
         "default": 1000,
-        "data":[
+        "options":[
           {
             "value": 1000,
             "label": "NONE"          
@@ -1739,13 +1742,13 @@
         ]
       },
       {
-        "isQuestion": true,
-        "fieldValue": 1038,
+        "isReactSet": true,
+        "fieldId": 1038,
         "fieldLabel":"Recognize the importance of regular monitoring to minimize subclinical and chronic inflammation",
         "inputType": "radio",
         "displayType": "dropdown",
         "default": 1000,
-        "data":[
+        "options":[
           {
             "value": 1000,
             "label": "NONE"          
@@ -1773,196 +1776,102 @@
         ]
       },
       {
-        "isQuestion": true,
-        "fieldValue": 1039,
-        "fieldLabel":"Review the practicality of treat-to-target and tight contrl approachesin IBD",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": 1000,
-        "data":[
-          {
-            "value": 1000,
-            "label": "NONE"          
-          },
+        "isReactSet": true,
+        "fieldId": 1055,
+        "fieldLabel":"Speakers",
+        "inputType": "multiselect",
+        "displayType": "multiselect",
+        "default":"",
+        "options":[
           {
             "value": 1111,
-            "label": "1"          
+            "label": "Marie-Claude Racine"
           },
           {
-            "value": 222,
-            "label": "2"
+            "value": 2222,
+            "label": "Larry Dian"
           },
           {
-            "value": 333,
-            "label": "3"
+            "value": 3333,
+            "label": "Shereen Metias"
           },
           {
-            "value": 444,
-            "label": "4"
+            "value": 4444,
+            "label": "Marie-Hélène Robert"
           },
           {
-            "value": 555,
-            "label": "5"
+            "value": 5555,
+            "label": "Patrice Gosselin"
+          },
+          {
+            "value": 6666,
+            "label": "Danielle Houde"
+          }
+        ]
+      }, 
+      {
+        "isReactSet": true,
+        "fieldId": 1054,
+        "fieldLabel":"Modules",
+        "inputType": "multiselect",
+        "displayType": "multiselect",
+        "default":[2222, 4444],
+        "options":[
+          {
+            "value": 1111,
+            "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY"
+          },
+          {
+            "value": 2222,
+            "label": "Chronic Kidney Disease"
+          },
+          {
+            "value": 3333,
+            "label": "Complex Patients: Therapies that Can Reduce Mortality"
+          },
+          {
+            "value": 4444,
+            "label": "Diabetes in Aboriginal Populations"
+          },
+          {
+            "value": 5555,
+            "label": "Diabetes Management in the Presence of Glucocorticoids"
+          },
+          {
+            "value": 6666,
+            "label": "Early Use of Insulin Therapy in T2D"
+          },
+          {
+            "value": 7777,
+            "label": "Eating Disorders in Diabetes"
           }
         ]
       },
       {
-        "fieldValue": 1040,
-        "fieldLabel":"I intend to change my clinical practice following what i learned in this program",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": 1000,
-        "data":[
-          {
-            "value": 1000,
-            "label": "NONE"          
-          },
-          {
-            "value": 1111,
-            "label": "1"          
-          },
-          {
-            "value": 222,
-            "label": "2"
-          },
-          {
-            "value": 333,
-            "label": "3"
-          },
-          {
-            "value": 444,
-            "label": "4"
-          },
-          {
-            "value": 555,
-            "label": "5"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1041,
-        "fieldLabel":"The content of the program was fair and balanced",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": 1000,
-        "data":[
-          {
-            "value": 1000,
-            "label": "NONE"          
-          },
-          {
-            "value": 1111,
-            "label": "1"          
-          },
-          {
-            "value": 222,
-            "label": "2"
-          },
-          {
-            "value": 333,
-            "label": "3"
-          },
-          {
-            "value": 444,
-            "label": "4"
-          },
-          {
-            "value": 555,
-            "label": "5"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1042,
-        "fieldLabel":"I would recommend this program to others",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": 1000,
-        "data":[
-          {
-            "value": 1000,
-            "label": "NONE"          
-          },
-          {
-            "value": 1111,
-            "label": "1"          
-          },
-          {
-            "value": 222,
-            "label": "2"
-          },
-          {
-            "value": 333,
-            "label": "3"
-          },
-          {
-            "value": 444,
-            "label": "4"
-          },
-          {
-            "value": 555,
-            "label": "5"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1043,
-        "fieldLabel":"Overall, Speaker engagement and presentaion was high quality",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": 1000,
-        "data":[
-          {
-            "value": 1000,
-            "label": "NONEThinking of other educational programs you have attended, what specific recommendations do you have to it?Thinking of other educational programs you haveThinking of other educational programs you have attended, what specific recommendations do you have to it?Thinking of other educational programs you have"          
-          },
-          {
-            "value": 1111,
-            "label": "1"          
-          },
-          {
-            "value": 222,
-            "label": "2"
-          },
-          {
-            "value": 333,
-            "label": "3"
-          },
-          {
-            "value": 444,
-            "label": "4"
-          },
-          {
-            "value": 555,
-            "label": "5"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1044,
+        "fieldId": 1044,
         "fieldLabel":"Thinking of other educational programs you have attended, what specific recommendations do you have to it?Thinking of other educational programs you have attended, what specific recommendations do you have to it?",
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"",
-        "data":""
+        "options":""
       },
       {
-        "fieldValue": 1045,
+        "fieldId": 1045,
         "fieldLabel":"What suggestions would you have for this program or future educational topics?",
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"",
-        "data":""
+        "options":""
       },
       {
-        "fieldValue": 1046,
+        "fieldId": 1046,
         "fieldLabel":"HCP PAGE",
         "inputType": "text",
         "displayType": "customtext",
-        "default": "HCP PAGE"
+        "default": ""
       },
       {
-        "fieldValue": 1047,
+        "fieldId": 1047,
         "fieldLabel":"businessUnit",
         "inputType": "radio",
         "displayType": "dropdown",
@@ -1970,7 +1879,7 @@
         "child": "therapArea",
         "childValue": 1048,
         "availableChildDataName": "availableTherapArea",
-        "data": [
+        "options": [
           {"value" : 1, "label": "None"},
           {"value" : 2, "label": "Immunology"},
           {"value" : 3, "label": "Oncology"},
@@ -1978,7 +1887,7 @@
         ]
       },
       {
-        "fieldValue": 1048,
+        "fieldId": 1048,
         "isChild": true,
         "fieldLabel":"therapArea",
         "inputType": "radio",
@@ -1988,7 +1897,7 @@
         "childValue": 1049,
         "availableChildDataName": "availableProgramArea",
         "availableDataName": "availableTherapArea",
-        "data":[
+        "options":[
           {
             "parent" : {
               "parentName": "businessUnit",
@@ -2032,7 +1941,7 @@
         ]
       },
       {
-        "fieldValue": 1049,
+        "fieldId": 1049,
         "isChild": true,
         "fieldLabel":"programArea",
         "inputType": "radio",
@@ -2041,7 +1950,7 @@
         "child": "subprogramArea",
         "childValue": 1050,
         "availableDataName": "availableProgramArea",
-        "data":[
+        "options":[
           {
             "parent" : {
               "parentName": "therapArea",
@@ -2085,7 +1994,7 @@
         ]
       },
       {
-        "fieldValue": 1050,
+        "fieldId": 1050,
         "isChild": true,
         "fieldLabel":"subprogramArea",
         "inputType": "radio",
@@ -2093,7 +2002,7 @@
         "default": 11,
         "child": "",
         "availableDataName": "availablesubprogramArea",
-        "data":[
+        "options":[
           {
             "parent" : {
               "parentName": "programArea",
@@ -2137,347 +2046,12 @@
         ]
       },
       {
-        "fieldValue": 1051,
-        "fieldLabel":"Entity Form Add meeting",
-        "inputType": "text",
-        "displayType": "customtext",
-        "default": "Entity Form Add meeting",
-        "data": ""
-      },
-      {
-        "fieldValue": 1052,
-        "fieldLabel":"Meeting Name",
-        "inputType": "textfield",
-        "displayType": "textfield",
-        "default":"Meeting - 2017 Lets have a Heart to Heart: CV Considerations in T2DM",
-        "data":""
-      },
-      {
-        "fieldValue": 1053,
-        "fieldLabel":"Program",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": 1112,
-        "data":[
-          {
-            "value": 1000,
-            "label": "NONE"          
-          },
-          {
-            "value": 1001,
-            "label": "20"          
-          },
-          {
-            "value": 1111,
-            "label": "2018 COPD & Asthma Update: Hot Topics"
-          },
-          {
-            "value": 1112,
-            "label": "20178"          
-          },
-          {
-            "value": 2222,
-            "label": "2017 COPD Review with Graeme McCauley"
-          },
-          {
-            "value": 3333,
-            "label": "2017 Let's Have a Heart to Heart: CV Considerations in Type 2 DM"
-          },
-          {
-            "value": 4444,
-            "label": "2017: The Changing Landscape in the Treatment of COPD"
-          },
-          {
-            "value": 5555,
-            "label": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1054,
-        "fieldLabel":"Modules",
-        "inputType": "multiselect",
-        "displayType": "multiselect",
-        "default":[2222, 4444],
-        "data":[
-          {
-            "value": 1111,
-            "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY"
-          },
-          {
-            "value": 2222,
-            "label": "Chronic Kidney Disease"
-          },
-          {
-            "value": 3333,
-            "label": "Complex Patients: Therapies that Can Reduce Mortality"
-          },
-          {
-            "value": 4444,
-            "label": "Diabetes in Aboriginal Populations"
-          },
-          {
-            "value": 5555,
-            "label": "Diabetes Management in the Presence of Glucocorticoids"
-          },
-          {
-            "value": 6666,
-            "label": "Early Use of Insulin Therapy in T2D"
-          },
-          {
-            "value": 7777,
-            "label": "Eating Disorders in Diabetes"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1055,
-        "fieldLabel":"Speakers",
-        "inputType": "multiselect",
-        "displayType": "multiselect",
-        "default":"",
-        "data":[
-          {
-            "value": 1111,
-            "label": "Marie-Claude Racine"
-          },
-          {
-            "value": 2222,
-            "label": "Larry Dian"
-          },
-          {
-            "value": 3333,
-            "label": "Shereen Metias"
-          },
-          {
-            "value": 4444,
-            "label": "Marie-Hélène Robert"
-          },
-          {
-            "value": 5555,
-            "label": "Patrice Gosselin"
-          },
-          {
-            "value": 6666,
-            "label": "Danielle Houde"
-          }
-        ]
-      }, 
-      {
-        "fieldValue": 1056,
-        "fieldLabel":"Evaluation Forms",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default":4444,
-        "data":[
-          {
-            "value": 1111,
-            "label": "None"
-          },
-          {
-            "value": 2222,
-            "label": "If you hear hoofbeats, think..."
-          },
-          {
-            "value": 3333,
-            "label": "(New Advances in the Management of Respiratory Disorders) Shifting Paradigms in COPD Management & Navigating COPD Devices"
-          },
-          {
-            "value": 4444,
-            "label": "2017 Lets have a Heart to Heart: CV Considerations in T2DM"
-          },
-          {
-            "value": 55555,
-            "label": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"
-          },
-          {
-            "value": 6666,
-            "label": "A Change Of Heart: Emerging Strategies In The Management Of CV Risk In Type 2 Diabetes Overview"
-          },
-          {
-            "value": 7777,
-            "label": "Acides gras oméga-3 alimentaires d’origine marine et rétinopathie menaçant la vue chez les personnes d’âge mûr et âgées atteintes de diabète de type 2"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1057,
-        "fieldLabel":"Meeting Formats",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default":"",
-        "data":[
-          {
-            "value": 1111,
-            "label": "None"
-          },
-          {
-            "value": 2222,
-            "label": "HCP Scholarships"
-          },
-          {
-            "value": 3333,
-            "label": "Hybrid (Live/virtual)"
-          },
-          {
-            "value": 4444,
-            "label": "Independent Sponsor Materials"
-          },
-          {
-            "value": 5555,
-            "label": "Live"
-          },
-          {
-            "value": 66666,
-            "label": "Webinar"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1058,
-        "fieldLabel":"Meeting Times",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default":2222,
-        "data":[
-          {
-            "value": 1000,
-            "label": "NONE"
-          },
-          {
-            "value": 1111,
-            "label": "12:00 AM"
-          },
-          {
-            "value": 2222,
-            "label": "3:00 AM"
-          },
-          {
-            "value": 3333,
-            "label": "6:00 AM"
-          },
-          {
-            "value": 4444,
-            "label": "9:00 AM"
-          },
-          {
-            "value": 55555,
-            "label": "12:00 PM"
-          },
-          {
-            "value": 6666,
-            "label": "3:00 PM"
-          },
-          {
-            "value": 6666,
-            "label": "6:00 PM"
-          },
-          {
-            "value": 6666,
-            "label": "9:00 PM"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1059,
-        "fieldLabel":"MultiTherapeituc Events",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": "",
-        "data":[
-          {
-            "value": 1111,
-            "label": "None"
-          },
-          {
-            "value": 2222,
-            "label": "Yes"
-          },
-          {
-            "value": 3333,
-            "label": "No"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1060,
-        "fieldLabel":"Meeting Location",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": 2222,
-        "returnValue":{
-          "refer_tid":"1060",
-          "refer_uid":"",
-          "city":"windsor",
-          "refer_other":"lll"
-        },
-        "data": [
-          {
-            "value": 1111,
-            "label": "None"
-          },
-          {
-            "value": 2222,
-            "label": "Conference Room"
-          },
-          {
-            "value": 3333,
-            "label": "Convention Center"
-          },
-          {
-            "value": 4444,
-            "label": "Hospital"
-          },
-          {
-            "value": 5555,
-            "label": "Hotel"
-          },
-          {
-            "value": 6666,
-            "label": "Pharmacy"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1061,
-        "fieldLabel":"Canada City",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": "",
-        "data": [
-          {
-            "value": 1111,
-            "label": "None"
-          },
-          {
-            "value": 2222,
-            "label": "Abbotsford"
-          },
-          {
-            "value": 3333,
-            "label": "Acton Vale"
-          },
-          {
-            "value": 4444,
-            "label": "Addington"
-          },
-          {
-            "value": 55555,
-            "label": "Addington Highlands"
-          },
-          {
-            "value": 55555,
-            "label": "Adelaide Metcalfe"
-          }
-        ]
-      },
-      {
-        "fieldValue": 1062,
+        "fieldId": 1062,
         "fieldLabel":"Speakers",
         "inputType": "multiselect",
         "displayType": "generalCheckbox",
         "default":"",
-        "data":[
+        "options":[
           {
             "value": 1111,
             "label": "Marie-Claude Racine"
@@ -2505,12 +2079,12 @@
         ]
       },
       {
-        "fieldValue": 1063,
+        "fieldId": 1063,
         "fieldLabel":"What is the current interpretation of the CT chest?",
         "inputType": "radio",
         "displayType": "radioButton",
         "default":"",
-        "data":[
+        "options":[
           {
             "value": 101,
             "label": "UIP"
@@ -2530,67 +2104,28 @@
         ]
       },
       {
-        "fieldValue": "field_evaluation_summary",
+        "fieldId": "field_evaluation_summary",
         "fieldLabel":"Summary Evaluation",
         "inputType": "booleanCheckbox",
         "displayType": "booleanCheckbox",
         "default": false,
-        "data": ""
+        "options": ""
       },
       {
-        "fieldValue": "field_evaluation_date",
+        "fieldId": "field_evaluation_date",
         "fieldLabel":"Event Date",
         "inputType": "calendar",
         "displayType": "calendar",
         "default": "",
-        "data": ""
+        "options": ""
       },
       {
-        "fieldValue": 1046,
-        "fieldLabel":"EDIT PASSWORD",
-        "inputType": "text",
-        "displayType": "customtext",
-        "default": "EDIT PASSWORD"
-      },
-      {
-        "fieldValue": 405,
-        "fieldLabel":"Current Password",
-        "inputType": "textfield",
-        "displayType": "textfield",
-        "default":"",
-        "data":""
-      },
-      {
-        "fieldValue": 406,
-        "fieldLabel":"Email Address",
-        "inputType": "textfield",
-        "displayType": "textfield",
-        "default":"",
-        "data":""
-      },
-      {
-        "fieldValue": 407,
-        "fieldLabel":"User Name",
-        "inputType": "textfield",
-        "displayType": "textfield",
-        "default":"",
-        "data":""
-      },
-      {
-        "fieldValue": 408,
-        "fieldLabel":"Password",
-        "inputType": "textfield",
-        "displayType": "textfield",
-        "default":"",
-        "data":""
-      },
-      {
-        "fieldValue": 409,
+        "fieldId": 409,
         "fieldLabel":"Status",
         "inputType": "radio",
         "displayType": "radioButton",
         "default":"",
-        "data":[
+        "options":[
           {
             "value": 101,
             "label": "Blcoked"
@@ -2602,12 +2137,12 @@
         ]
       },
       {
-        "fieldValue": 1062,
+        "fieldId": 1062,
         "fieldLabel":"Roles",
         "inputType": "multiselect",
         "displayType": "generalCheckbox",
         "default":"",
-        "data":[
+        "options":[
           {
             "value": 1111,
             "label": "Speaker"

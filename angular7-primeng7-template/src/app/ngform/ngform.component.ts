@@ -59,7 +59,7 @@ export class NGFormComponent implements OnInit {
     var temporaryData = [];
     var parentLevelValue = 0;
 
-    parentLevelValue = currentLevelBlock.fieldValue;
+    parentLevelValue = currentLevelBlock.fieldId;
     while(this.parentChildSet[parentLevelValue]) {
       parentLevelValue = this.parentChildSet[parentLevelValue];
       this.totalResults[parentLevelValue] = '';
@@ -91,14 +91,14 @@ export class NGFormComponent implements OnInit {
       }
 
       if (eachBlock.child) {
-        this.parentChildSet[eachBlock.fieldValue] = eachBlock.childValue;
+        this.parentChildSet[eachBlock.fieldId] = eachBlock.childValue;
       }
 
-      this.totalResults[eachBlock.fieldValue] = eachBlock.default;
+      this.totalResults[eachBlock.fieldId] = eachBlock.default;
 
-      if (eachBlock.isQuestion) {
+      if (eachBlock.isReactSet) {
         temporaryQuestionData = {
-          "question_id" : eachBlock.fieldValue,
+          "question_id" : eachBlock.fieldId,
           "question_value": []
         }
 
@@ -111,7 +111,7 @@ export class NGFormComponent implements OnInit {
       }
       else {
         temporaryBlockData = {
-          "field_name": eachBlock.fieldValue,
+          "field_name": eachBlock.fieldId,
           "field_value": []
         };
 
