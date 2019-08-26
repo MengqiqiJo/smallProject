@@ -87,7 +87,7 @@ export class NGFormComponent implements OnInit {
       temporaryQuestionData=null;
 
       if ((typeof eachBlock.isChild !== 'undefined') && eachBlock.isChild) {
-        this.childData[eachBlock.fieldLabel]= eachBlock.data;
+        this.childData[eachBlock.fieldLabel]= eachBlock.options;
       }
 
       if (eachBlock.child) {

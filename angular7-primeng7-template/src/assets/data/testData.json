@@ -1603,7 +1603,7 @@
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"Evaluation for meeting 805",
-        "options":""
+        "options":[]
       },
       {
         "fieldId": "field_evaluation_user",
@@ -1611,10 +1611,10 @@
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"",
-        "options":""
+        "options":[]
       },
       {
-        "fieldId": 1034,
+        "fieldId": "field_type",
         "fieldLabel":"Type",
         "inputType": "radio",
         "displayType": "dropdown",
@@ -1635,7 +1635,7 @@
         ]
       },
       {
-        "fieldId": 1035,
+        "fieldId": "field_practitioner",
         "fieldLabel":"Practitioner Type",
         "inputType": "multiselect",
         "displayType": "multiselect",
@@ -1673,7 +1673,7 @@
         "fieldLabel":"How would you rate the overall quality of this Abbvie Educational Program?",
         "inputType": "radio",
         "displayType": "dropdown",
-        "default": 1000,
+        "default": 1111,
         "returnValue":{
           "refer_tid":"880",
           "refer_uid":"",
@@ -1743,7 +1743,7 @@
       },
       {
         "isReactSet": true,
-        "fieldId": 1038,
+        "fieldId": "field_recognize",
         "fieldLabel":"Recognize the importance of regular monitoring to minimize subclinical and chronic inflammation",
         "inputType": "radio",
         "displayType": "dropdown",
@@ -1777,11 +1777,11 @@
       },
       {
         "isReactSet": true,
-        "fieldId": 1055,
+        "fieldId": "field_speakers",
         "fieldLabel":"Speakers",
         "inputType": "multiselect",
         "displayType": "multiselect",
-        "default":"",
+        "default":[1111, 2222],
         "options":[
           {
             "value": 1111,
@@ -1811,7 +1811,7 @@
       }, 
       {
         "isReactSet": true,
-        "fieldId": 1054,
+        "fieldId": "field_modules",
         "fieldLabel":"Modules",
         "inputType": "multiselect",
         "displayType": "multiselect",
@@ -1848,27 +1848,27 @@
         ]
       },
       {
-        "fieldId": 1044,
+        "fieldId": "field_thinking",
         "fieldLabel":"Thinking of other educational programs you have attended, what specific recommendations do you have to it?Thinking of other educational programs you have attended, what specific recommendations do you have to it?",
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"",
-        "options":""
+        "options":[]
       },
       {
-        "fieldId": 1045,
+        "fieldId": "field_suggestions_program",
         "fieldLabel":"What suggestions would you have for this program or future educational topics?",
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"",
-        "options":""
+        "options":[]
       },
       {
-        "fieldId": 1046,
+        "fieldId": "field_hcp",
         "fieldLabel":"HCP PAGE",
         "inputType": "text",
         "displayType": "customtext",
-        "default": ""
+        "default": []
       },
       {
         "fieldId": 1047,
@@ -2046,11 +2046,11 @@
         ]
       },
       {
-        "fieldId": 1062,
+        "fieldId": "field_speakers2",
         "fieldLabel":"Speakers",
         "inputType": "multiselect",
         "displayType": "generalCheckbox",
-        "default":"",
+        "default":[],
         "options":[
           {
             "value": 1111,
@@ -2079,11 +2079,11 @@
         ]
       },
       {
-        "fieldId": 1063,
+        "fieldId": "field_ctchest",
         "fieldLabel":"What is the current interpretation of the CT chest?",
         "inputType": "radio",
         "displayType": "radioButton",
-        "default":"",
+        "default":[],
         "options":[
           {
             "value": 101,
@@ -2109,7 +2109,7 @@
         "inputType": "booleanCheckbox",
         "displayType": "booleanCheckbox",
         "default": false,
-        "options": ""
+        "options": []
       },
       {
         "fieldId": "field_evaluation_date",
@@ -2117,14 +2117,14 @@
         "inputType": "calendar",
         "displayType": "calendar",
         "default": "",
-        "options": ""
+        "options": []
       },
       {
-        "fieldId": 409,
+        "fieldId": "field_status",
         "fieldLabel":"Status",
         "inputType": "radio",
         "displayType": "radioButton",
-        "default":"",
+        "default":[],
         "options":[
           {
             "value": 101,
@@ -2137,11 +2137,11 @@
         ]
       },
       {
-        "fieldId": 1062,
+        "fieldId": "field_roles",
         "fieldLabel":"Roles",
         "inputType": "multiselect",
         "displayType": "generalCheckbox",
-        "default":"",
+        "default":[],
         "options":[
           {
             "value": 1111,
