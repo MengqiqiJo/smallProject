@@ -1,19 +1,19 @@
 <div class="row">
   <div class="col-md-6">
-    <div *ngFor="let eachMeetingEventData of ngFormcomponentData.primengforms; let i=index">
-      <div *ngIf="eachMeetingEventData.displayType == 'dropdown'; else elseBlock">
+    <div *ngFor="let eachFormFieldData of ngFormcomponentData.primengforms; let i=index">
+      <div *ngIf="eachFormFieldData.displayType == 'dropdown'; else elseBlock">
         <div style="margin: 20px;">
           <div style="color: #00a9e0; font-size: 14px;">
-            <span>{{eachMeetingEventData.fieldLabel}}</span>
+            <span>{{eachFormFieldData.fieldLabel}}</span>
           </div>
           <div>
             <p-dropdown 
-            [options]="eachMeetingEventData.isChild ? availableData['available' + eachMeetingEventData.fieldLabel] : eachMeetingEventData.data" 
-            [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" 
+            [options]="eachFormFieldData.isChild ? availableData['available' + eachFormFieldData.fieldLabel] : eachFormFieldData.options" 
+            [(ngModel)]="totalResults[eachFormFieldData.fieldId]" 
             [autoWidth]="false" 
             [showClear]="true"
             placeholder="please select" 
-            (onChange)="eachMeetingEventData.child ? updateChildLevelData($event, eachMeetingEventData, 'available' + eachMeetingEventData.child) : '' " 
+            (onChange)="eachFormFieldData.child ? updateChildLevelData($event, eachFormFieldData, 'available' + eachFormFieldData.child) : '' " 
             [style]="{'width':'500px'}">
               <ng-template let-item pTemplate="selectedItem"> 
                 <span>{{item.label}}</span>
@@ -27,85 +27,85 @@
           </div>
         </div>
       </div>
-      <div *ngIf="eachMeetingEventData.displayType == 'multiselect'; else elseBlock">
+      <div *ngIf="eachFormFieldData.displayType == 'multiselect'; else elseBlock">
         <div style="margin: 20px;">
           <div style="color: #00a9e0; font-size: 14px;">
-            <span>{{eachMeetingEventData.fieldLabel}}</span>
+            <span>{{eachFormFieldData.fieldLabel}}</span>
           </div>
           <p-multiSelect 
-          [options]="eachMeetingEventData.data" 
-          [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" 
+          [options]="eachFormFieldData.options" 
+          [(ngModel)]="totalResults[eachFormFieldData.fieldId]" 
           [panelStyle]="{minWidth:'30em'}"
           [filter]="true"></p-multiSelect>
         </div>
       </div>
-      <div *ngIf="eachMeetingEventData.displayType == 'textfield'; else elseBlock">
+      <div *ngIf="eachFormFieldData.displayType == 'textfield'; else elseBlock">
         <div style="margin: 20px;">
           <div style="color: #00a9e0; font-size: 14px;">
-            <span>{{eachMeetingEventData.fieldLabel}}</span>
+            <span>{{eachFormFieldData.fieldLabel}}</span>
           </div>
           <textarea 
           [rows]="5" 
           [cols]="68"
-          [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]"
-          [placeholder]="totalResults[eachMeetingEventData.fieldValue]"
+          [(ngModel)]="totalResults[eachFormFieldData.fieldId]"
+          [placeholder]="totalResults[eachFormFieldData.fieldId]"
           pInputTextarea 
           autoResize="autoResize"></textarea>
         </div>
       </div>
-      <div *ngIf="eachMeetingEventData.displayType == 'booleanCheckbox'; else elseBlock">
+      <div *ngIf="eachFormFieldData.displayType == 'booleanCheckbox'; else elseBlock">
         <div style="margin: 20px;">
           <div style="color: #00a9e0; font-size: 14px;">
-            <span>{{eachMeetingEventData.fieldLabel}}</span>
+            <span>{{eachFormFieldData.fieldLabel}}</span>
           </div>
-          <p-checkbox [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" binary="true"></p-checkbox>
+          <p-checkbox [(ngModel)]="totalResults[eachFormFieldData.fieldId]" binary="true"></p-checkbox>
         </div>
       </div>
-      <div *ngIf="eachMeetingEventData.displayType == 'generalCheckbox'; else elseBlock">
+      <div *ngIf="eachFormFieldData.displayType == 'generalCheckbox'; else elseBlock">
         <div style="margin: 20px;">
           <div style="color: #00a9e0; font-size: 14px;">
-            <span>{{eachMeetingEventData.fieldLabel}}</span>
+            <span>{{eachFormFieldData.fieldLabel}}</span>
           </div>
-          <div *ngFor="let eachCheckBoxData of eachMeetingEventData.data; let i=index">
+          <div *ngFor="let eachCheckBoxData of eachFormFieldData.options; let i=index">
             <div class="ui-g-12" style="font-weight: normal;">
-              <p-checkbox value="{{eachCheckBoxData.value}}" label="{{eachCheckBoxData.label}}" [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" inputId="{{eachCheckBoxData.value}}">
+              <p-checkbox value="{{eachCheckBoxData.value}}" label="{{eachCheckBoxData.label}}" [(ngModel)]="totalResults[eachFormFieldData.fieldId]" inputId="{{eachCheckBoxData.value}}">
               </p-checkbox>
             </div>
           </div>
         </div>
       </div>
-      <div *ngIf="eachMeetingEventData.displayType == 'radioButton'; else elseBlock">
+      <div *ngIf="eachFormFieldData.displayType == 'radioButton'; else elseBlock">
         <div style="margin: 20px;">
           <div style="color:#00a9e0; font-size: 14px;">
-            <span>{{eachMeetingEventData.fieldLabel}}</span>
+            <span>{{eachFormFieldData.fieldLabel}}</span>
           </div>
-          <div *ngFor="let eachCheckBoxData of eachMeetingEventData.data; let i=index">
+          <div *ngFor="let eachCheckBoxData of eachFormFieldData.options; let i=index">
             <div class="ui-g-12" style="font-size: 14px; font-weight: lighter;">
-              <p-radioButton value="{{eachCheckBoxData.value}}" label="{{eachCheckBoxData.label}}" [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" inputId="{{eachCheckBoxData.value}}">
+              <p-radioButton value="{{eachCheckBoxData.value}}" label="{{eachCheckBoxData.label}}" [(ngModel)]="totalResults[eachFormFieldData.fieldId]" inputId="{{eachCheckBoxData.value}}">
               </p-radioButton>
             </div>
           </div>
         </div>
       </div>
-      <div *ngIf="eachMeetingEventData.displayType == 'calendar'; else elseBlock">
+      <div *ngIf="eachFormFieldData.displayType == 'calendar'; else elseBlock">
         <div style="margin: 20px;">
           <div style="color: #00a9e0; font-size: 14px;">
-            <span>{{eachMeetingEventData.fieldLabel}}</span>
+            <span>{{eachFormFieldData.fieldLabel}}</span>
           </div>
-          <p-calendar [(ngModel)]="totalResults[eachMeetingEventData.fieldValue]" [showTime]="true"></p-calendar>
-          {{totalResults[eachMeetingEventData.fieldLabel]}}
+          <p-calendar [(ngModel)]="totalResults[eachFormFieldData.fieldId]" [showTime]="true"></p-calendar>
+          {{totalResults[eachFormFieldData.fieldLabel]}}
         </div>
       </div>
-      <div *ngIf="eachMeetingEventData.displayType == 'customtext'; else elseBlock">
+      <div *ngIf="eachFormFieldData.displayType == 'customtext'; else elseBlock">
         <div style="margin: 20px;">
           <div style="color: #00a9e0; font-size: 24px;">
-            <span>{{eachMeetingEventData.fieldLabel}}</span>
+            <span>{{eachFormFieldData.fieldLabel}}</span>
           </div>
         </div>
       </div>
-      <div *ngIf="eachMeetingEventData.displayType == 'customHTML'; else elseBlock">
+      <div *ngIf="eachFormFieldData.displayType == 'customhtml'; else elseBlock">
         <div style="margin: 20px;">
-          <div [innerHTML]="eachMeetingEventData.fieldLabel"></div>
+          <div [innerHTML]="eachFormFieldData.fieldLabel"></div>
         </div>
       </div>
     </div>
