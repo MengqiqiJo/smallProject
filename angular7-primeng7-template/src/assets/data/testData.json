@@ -4,6 +4,50 @@
     "primengcontentdata":[
       {
         "tabShow": "hide",
+        "blockHeader": "<div class=\"row margin-0 border-1-e7e7e7\"><div class=\"col-sm-12\"><span class=\"h6 padding-top-6\">total events</span></div><div class=\"col-sm-12\"><span class=\"h4 line-height-1-5\">20</span></div></div><div class=\"row margin-0\"><div class=\"col-xs-4 bg-00a9e0 color-fff height-52 padding-0 font-size-10 padding-top-8\"><div class=\"col-xs-12\">a</div><div class=\"col-xs-12 margin-top-8\">2</div></div><div class=\"col-xs-4 bg-05d23e color-fff height-52 padding-0 font-size-10 padding-top-8\"><div class=\"col-xs-12\">b</div><div class=\"col-xs-12 margin-top-8\">11</div></div><div class=\"col-xs-4 bg-f24b99 color-fff height-52 padding-0 font-size-10 padding-top-8\"><div class=\"col-xs-12\">c</div><div class=\"col-xs-12 margin-top-8\">7</div></div>",
+        "blockClass": "col-sm-6 col-md-3 margin-top-6 margin-bottom-20 text-align-center",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "blockClass": "",
+            "tabData":
+            {
+              "class": "",
+              "type": "htmlSnippt",
+              "top": {
+                "value": ""
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "blockHeader": "<div class=\"bg-009ddf height-100 color-fff padding-12\"><div class=\"font-size-14 margin-top-12\">1244</div><div class=\"font-size-12 margin-top-12 margin-bottom-6\">Evaluations Received</div>",
+        "blockClass": "col-md-3 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "tabData": {
+              "class": "",
+              "type": "htmlSnippt",
+              "top": {
+                "value": ""
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
         "isChartjs": true,
         "blockHeader": "",
         "blockClass": "col-md-6 margin-top-24",
@@ -2025,8 +2069,8 @@
         "displayType": "dropdown",
         "default": 1,
         "child": "therapArea",
-        "childValue": 1048,
-        "availableChildDataName": "availableTherapArea",
+        "childId": 1048,
+        "availableChildDataName": "available1048",
         "options": [
           {"value" : 1, "label": "None"},
           {"value" : 2, "label": "Immunology"},
@@ -2042,9 +2086,9 @@
         "displayType": "dropdown",
         "default": 101,
         "child": "programArea",
-        "childValue": 1049,
-        "availableChildDataName": "availableProgramArea",
-        "availableDataName": "availableTherapArea",
+        "childId": 1049,
+        "availableChildDataName": "available1049",
+        "availableDataName": "available1048",
         "options":[
           {
             "parent" : {
@@ -2096,8 +2140,8 @@
         "displayType": "dropdown",
         "default": 11,
         "child": "subprogramArea",
-        "childValue": 1050,
-        "availableDataName": "availableProgramArea",
+        "childId": 1050,
+        "availableDataName": "available1049",
         "options":[
           {
             "parent" : {
@@ -2149,7 +2193,7 @@
         "displayType": "dropdown",
         "default": 11,
         "child": "",
-        "availableDataName": "availablesubprogramArea",
+        "availableDataName": "available1050",
         "options":[
           {
             "parent" : {
@@ -2264,6 +2308,22 @@
         "fieldLabel":"Event Date",
         "inputType": "calendar",
         "displayType": "calendar",
+        "default": "",
+        "options": []
+      },
+      {
+        "fieldId": "field_save_evaluate",
+        "fieldLabel":"Save & Evaluate",
+        "inputType": "button",
+        "displayType": "button",
+        "default": "",
+        "options": []
+      },
+      {
+        "fieldId": "field_save",
+        "fieldLabel":"Save",
+        "inputType": "button",
+        "displayType": "button",
         "default": "",
         "options": []
       },

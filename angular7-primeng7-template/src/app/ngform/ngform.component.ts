@@ -91,7 +91,7 @@ export class NGFormComponent implements OnInit {
       }
 
       if (eachBlock.child) {
-        this.parentChildSet[eachBlock.fieldId] = eachBlock.childValue;
+        this.parentChildSet[eachBlock.fieldId] = eachBlock.childId;
       }
 
       this.totalResults[eachBlock.fieldId] = eachBlock.default;

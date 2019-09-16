@@ -8,12 +8,12 @@
           </div>
           <div>
             <p-dropdown 
-            [options]="eachFormFieldData.isChild ? availableData['available' + eachFormFieldData.fieldLabel] : eachFormFieldData.options" 
+            [options]="eachFormFieldData.isChild ? availableData['available' + eachFormFieldData.fieldId] : eachFormFieldData.options" 
             [(ngModel)]="totalResults[eachFormFieldData.fieldId]" 
             [autoWidth]="false" 
             [showClear]="true"
             placeholder="please select" 
-            (onChange)="eachFormFieldData.child ? updateChildLevelData($event, eachFormFieldData, 'available' + eachFormFieldData.child) : '' " 
+            (onChange)="eachFormFieldData.child ? updateChildLevelData($event, eachFormFieldData, 'available' + eachFormFieldData.childId) : '' " 
             [style]="{'width':'500px'}">
               <ng-template let-item pTemplate="selectedItem"> 
                 <span>{{item.label}}</span>
@@ -108,20 +108,17 @@
           <div [innerHTML]="eachFormFieldData.fieldLabel"></div>
         </div>
       </div>
+      <div *ngIf="eachFormFieldData.displayType == 'button'; else elseBlock">
+        <div class="row">
+          <div class="col-md-4" style="margin: 20px;">
+            <p-button 
+            label="{{eachFormFieldData.fieldLabel}}" 
+            (onClick)="save()"></p-button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-2" style="margin: 20px;">
-    <p-button 
-    label="SUBMIT" 
-    (onClick)="save()"></p-button>
-  </div>
 
-  <div class="col-md-2" style="margin: 20px;">
-    <p-button 
-    label="SAVE&EVALUATE" 
-    (onClick)="save()"></p-button>
-  </div>
-</div>
