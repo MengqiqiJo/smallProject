@@ -584,7 +584,7 @@
               "top": {
                 "enable": false,
                 "styleClass": "bg-009ddf color-fff height-60",
-                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
+                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">doughnut chart. show percentage, hide less than 5%. hover value--percentage. no bottom</div>"
               },
               "middle": {
                 "class": "height-400",
@@ -657,7 +657,7 @@
               "top": {
                 "enable": false,
                 "styleClass": "bg-009ddf color-fff height-60",
-                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">Head Office vs OLA Programs</div>"
+                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">doughnut chart. show value, display less than 5%. hover value. no bottom</div>"
               },
               "middle": {
                 "class": "height-400",
@@ -729,7 +729,7 @@
               "top": {
                 "enable": false,
                 "styleClass": "bg-009ddf color-fff height-60",
-                "value": "<div class=\"bg-009ddf color-fff height-60 padding-15 padding-left-14\">Event Types of Total</div>"
+                "value": "<div class=\"bg-009ddf color-fff height-60 padding-15 padding-left-14\">table. show value. hover value--percentage. no bottom.</div>"
               },
               "middle": {
                 "class": "height-400",
@@ -812,7 +812,7 @@
       {
           "tabShow": "show",
           "isChartjs": true,
-          "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Speaker Identify and address only render on getBlockMultiContainer111</span></div>",
+          "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Pie chart/ Line chart. With bottom, Hide less than 5% percent. pie hover value--percentage. line hover value.</span></div>",
           "blockClass": "col-md-6 margin-top-24",
           "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
           "blockContent": [
@@ -824,7 +824,7 @@
               },
               "tabData":
               {
-                "blockId": "pieChart",
+                "blockId": "lineChart",
                 "class": "col-md-12 margin-top-24",
                 "type": "chart",
                 "top": {
@@ -909,7 +909,7 @@
                   "middleMiddle": {
                     "renderLabel": "percentage",
                     "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
-                    "type": "bar",
+                    "type": "line",
                     "styleClass": "col-md-12 margin-top-24",
                     "data": {
                       "labels": [
@@ -931,12 +931,12 @@
                             1,
                             11
                           ],
-                          "backgroundColor": "#0093d0",
                           "borderColor": "#0093d0",
-                          "borderWidth": 1
+                          "fill": false,
+                          "borderWidth": 2
                         },
                         {
-                          "label": "of votes",
+                          "label": "",
                           "data": [
                             38,
                             24,
@@ -945,11 +945,11 @@
                             31,
                             11
                           ],
-                          "backgroundColor": "#00134b",
                           "borderColor": "#00134b",
-                          "borderWidth": 1
+                          "fill": false,
+                          "borderWidth": 2
                         }
-                      ] 
+                      ]
                     },
                     "options": {
                       "legend": {
@@ -999,7 +999,7 @@
       {
         "tabShow": "show",
         "isChartjs": true,
-        "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Event Implementation</span></div>",
+        "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">horizontal stacked100 barChart. / vertical stacked barChart.</span></div>",
         "blockClass": "col-md-6 margin-top-24",
         "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
         "blockContent": [
@@ -1172,7 +1172,7 @@
                         "backgroundColor": "green",
                         "data": [10, 8, 10, 19, 10],
                         "yAxisID": "bar-y-axis"
-                    }, 
+                    },
                     {
                         "type": "bar",
                         "label": "pick-ups",
@@ -1814,11 +1814,11 @@
         "options":[
           {
             "value": 1000,
-            "label": "NONE"          
+            "label": "NONE"
           },
           {
             "value": 1111,
-            "label": "Pre"          
+            "label": "Pre"
           },
           {
             "value": 222,
@@ -1875,11 +1875,11 @@
         "options":[
           {
             "value": 1000,
-            "label": "NONE"          
+            "label": "NONE"
           },
           {
             "value": 1111,
-            "label": "1"          
+            "label": "1"
           },
           {
             "value": 222,
@@ -1909,11 +1909,11 @@
         "options":[
           {
             "value": 1000,
-            "label": "NONE"          
+            "label": "NONE"
           },
           {
             "value": 1111,
-            "label": "1"          
+            "label": "1"
           },
           {
             "value": 222,
@@ -1943,11 +1943,11 @@
         "options":[
           {
             "value": 1000,
-            "label": "NONE"          
+            "label": "NONE"
           },
           {
             "value": 1111,
-            "label": "1"          
+            "label": "1"
           },
           {
             "value": 222,
@@ -2000,7 +2000,7 @@
             "label": "Danielle Houde"
           }
         ]
-      }, 
+      },
       {
         "isReactSet": true,
         "fieldId": "field_modules",

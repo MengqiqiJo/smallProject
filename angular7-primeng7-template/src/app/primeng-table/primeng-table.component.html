@@ -1,5 +1,5 @@
 <!-- TABLE -->
-<div style="clear:both;" id="mytable">
+<!-- <div style="clear:both;" id="mytable">
   <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,30]" [resizableColumns]="true" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" >
     <ng-template pTemplate="caption" class="table-border">
       <div class="row table-content-wrapper">
@@ -36,4 +36,73 @@
       </tr>
     </ng-template>
   </p-table>
+</div> -->
+
+<div class="row" for="primengDataGeneral">
+  <div *ngFor="let blockData of primengDataGeneral" >
+    <div for="blockData.blockContent">
+      <div class="{{blockData.blockClass}}">
+        <div class="{{blockData.blockClassSub}}">
+          <div [innerHTML]="blockData.blockHeader"></div>
+          <p-tabView class="ng-tab-view-wrapper-{{blockData.tabShow}}">
+            <div *ngFor="let eachtabcontent of blockData.blockContent; let i = index">
+              <p-tabPanel header="{{eachtabcontent.tabTitle}}" class="ng-tab-panel-wrapper" [selected]="i == 0">
+                <div class="{{eachtabcontent.tabData.class}} ng-tab-top-class">
+                  <div [innerHTML]="eachtabcontent.tabData.top.value">
+                  </div>
+
+                  <!-- table -->
+                  <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
+                    <!-- TABLE -->
+                    <div style="clear:both;" id="mytable">
+                      <p-table #dt [columns]="eachtabcontent.tabData.middle.thead" [value]="eachtabcontent.tabData.middle.tabledata" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,30]" [resizableColumns]="true" sortField="{{eachtabcontent.tabData.middle.tSortField}}" sortOrder="-1" >
+                        <ng-template pTemplate="caption" class="table-border">
+                          <div class="row table-content-wrapper">
+                            <div class="col-md-4 table-keyword-search" style="text-align:left;">
+                              <input type="text" class="input-search" pInputText size="30" placeholder="Search" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto;">
+                            </div>
+                            <div class="col-md-6 table-colum-multiselect">
+                              <p-multiSelect [options]="eachtabcontent.tabData.middle.tfields" [(ngModel)]="eachtabcontent.tabData.middle.thead" optionLabel="header"
+                              selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns">
+                              </p-multiSelect>
+                            </div>
+                            <div class="ui-helper-clearfix table-copy-excel-button col-md-2" style="text-align:right;">
+                              <div class="button-copy">
+                                <button id="copy-button-{{eachtabcontent.tabData.tableId}}" (click)="copyMessage(eachtabcontent.tabData.middle.tabledata)" value="click to copy" >COPY</button>
+                              </div>
+                              <div class="button-excel">
+                                <button type="button" pButton iconPos="left" label="EXCEL" (click)="dt.exportCSV()"></button>
+                              </div>
+                            </div>
+                          </div>
+                        </ng-template>
+                        <ng-template pTemplate="header" let-columns>
+                          <tr>
+                            <th *ngFor="let col of eachtabcontent.tabData.middle.thead" [pSortableColumn]="col.field" [ngStyle]="{'width': col.width}">
+                              {{col.header}}
+                              <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                            </th>
+                          </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-celldata let-columns="eachtabcontent.tabData.middle.thead">
+                          <tr>
+                            <td *ngFor="let col of eachtabcontent.tabData.middle.thead" [innerHTML]="celldata[col.field]">
+                            </td>
+                          </tr>
+                        </ng-template>
+                      </p-table>
+                    </div>
+
+                  </div>
+
+                  <div [innerHTML]="eachtabcontent.tabData.bottom.value">
+                  </div>
+                </div>
+              </p-tabPanel>
+            </div>
+          </p-tabView>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

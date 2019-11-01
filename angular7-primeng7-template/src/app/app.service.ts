@@ -24,6 +24,25 @@ export class AppService {
     // return this.http.get(ngDrupalSettings.drupalSettings.path.baseUrl + 'ngjson/'  + section + '/page/'  + entityId + '/start/end');
   }
 
+  getFormData() {
+    return this.http.get('./assets/data/testForm.json');
+  }
+
+  getChartData() {
+    return this.http.get('./assets/data/testChart.json');
+  }
+
+  getTableData() {
+    return this.http.get('./assets/data/testTable.json');
+  }
+
+  getRometoData() {
+    this.http.get('http://emdprogramevals.ca/rest/session/token').subscribe(result =>{
+      console.log("result");
+      console.log(result);
+    });
+  }
+
 }
 
 

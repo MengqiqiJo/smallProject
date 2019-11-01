@@ -10,6 +10,8 @@ import 'chartjs-plugin-labels';
 
 import 'chartjs-plugin-stacked100';
 
+import * as jquery from 'jquery';
+
 
 interface DropDownDataFormat {
   name: string
@@ -26,7 +28,7 @@ interface DropDownDataFormat {
 export class AppComponent implements OnInit {
 
 
- 
+
   // get json data
   sectionContent: any;
   primengDataGeneral: any[];
@@ -73,7 +75,7 @@ export class AppComponent implements OnInit {
 
   constructor(private myService: AppService) {
 
-    
+
 
     // this.programTypes = [
     //   {"name": "None"},
@@ -95,9 +97,9 @@ export class AppComponent implements OnInit {
     //   {"name": "2017: The Changing Landscape in the Treatment of COPD"},
     //   {"name": "2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection"}
     // ];
-    
+
     // this.enteredMeetingName = "Meeting - 2018 Diabetes Canada Clinical Practice Guidelines: Chapter 23: Cardiovascular Protection";
-    
+
     // this.modules = [
     //   {
     //     "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY",
@@ -116,8 +118,8 @@ export class AppComponent implements OnInit {
     //     "value": "Diabetes in Aboriginal Populations"
     //   },
     //   {
-    //     "label": "Diabetes Management in the Presence of Glucocorticoids", 
-    //     "value": "Diabetes Management in the Presence of Glucocorticoids" 
+    //     "label": "Diabetes Management in the Presence of Glucocorticoids",
+    //     "value": "Diabetes Management in the Presence of Glucocorticoids"
     //   },
     //   {
     //     "label": "Early Use of Insulin Therapy in T2D",
@@ -143,8 +145,8 @@ export class AppComponent implements OnInit {
     //     "value": "Shereen Metias"
     //   },
     //   {
-    //     "label": "Marie-Hélène Robert", 
-    //     "value": "Marie-Hélène Robert" 
+    //     "label": "Marie-Hélène Robert",
+    //     "value": "Marie-Hélène Robert"
     //   },
     //   {
     //     "label": "Patrice Gosselin",
@@ -192,13 +194,18 @@ export class AppComponent implements OnInit {
 
   }
 
-  
+
 
   showDialog() {
     this.display = true;
   }
 
-  // get all data 
+
+  getTestData() {
+    this.myService.getRometoData();
+  }
+
+  // get all data
   getChartJSONAndDisplay() {
 
     this.myService.getJsonFile().subscribe(data => {
@@ -239,7 +246,7 @@ export class AppComponent implements OnInit {
                               return previousValue + currentValue;
                             });
                             var currentValue = dataset.data[tooltipItem.index];
-                            var percentage = Math.floor(((currentValue/total) * 100)+0.5);       
+                            var percentage = Math.floor(((currentValue/total) * 100)+0.5);
                             return currentValue + ' - - ' + percentage + "%";
                           }
                         }
@@ -251,12 +258,12 @@ export class AppComponent implements OnInit {
             });
           });
         }
-      
-      });
-    
-      
 
-      
+      });
+
+
+
+
     }, // Bind to view
     err => {
       // Log errors if any
@@ -271,9 +278,14 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       // this.divClick.nativeElement.click();
     }, 200);
-   
+
+    // jQuery.get('https://my-json-server.typicode.com/typicode/demo/comments').done(function (data) {
+    //   console.log("data");
+    //   console.log(data);
+    // });
+
     this.getChartJSONAndDisplay();
-    
+
   }
 }
 

@@ -1,15 +1,25 @@
 <!-- <app-edit-password></app-edit-password> -->
 <!-- meeting event form -->
-<div *ngFor="let eachcomponent of sectionContent">
+
+<h1>Angular 7 / Primeng 7 Template</h1>
+<nav>
+  <button type="button" class="btn btn-primary" style="margin: 30px; width: 100px;" routerLink="/form" routerLinkActive="active">ng form</button>
+  <button type="button" class="btn btn-success" style="margin: 30px; width: 100px;" routerLink="/charts" routerLinkActive="active">ng chart</button>
+  <button type="button" class="btn btn-info" style="margin: 30px; width: 100px;" routerLink="/table" routerLinkActive="active">ng table</button>
+</nav>
+<router-outlet></router-outlet>
+
+
+<!-- <div *ngFor="let eachcomponent of sectionContent">
   <div *ngIf="eachcomponent.componentname == 'primengforms'; else elseBlock">
     <app-ngform [name]="eachcomponent"></app-ngform>
   </div>
-</div>
+</div> -->
 
 <!-- chart -->
-<div class="row" for="primengDataGeneral">
+<!-- <div class="row" for="primengDataGeneral">
   <div *ngFor="let blockData of primengDataGeneral" >
-    <div for="blockData.blockContent">  
+    <div for="blockData.blockContent">
       <div class="{{blockData.blockClass}}">
         <div class="{{blockData.blockClassSub}}">
           <div [innerHTML]="blockData.blockHeader"></div>
@@ -18,15 +28,15 @@
               <p-tabPanel header="{{eachtabcontent.tabTitle}}" class="ng-tab-panel-wrapper" [selected]="i == 0">
                 <div class="{{eachtabcontent.tabData.class}} ng-tab-top-class">
                   <div [innerHTML]="eachtabcontent.tabData.top.value">
-                  </div>
+                  </div> -->
 
                   <!-- chartjs -->
-                  <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
-                    <app-primeng-chartjs [chartInputData]="eachtabcontent"></app-primeng-chartjs>    
-                  </div>
+                  <!-- <div *ngIf="eachtabcontent.tabData.type == 'chart'; else elseBlock">
+                    <app-primeng-chartjs [chartInputData]="eachtabcontent"></app-primeng-chartjs>
+                  </div> -->
 
                   <!-- table -->
-                  <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
+                  <!-- <div *ngIf="eachtabcontent.tabData.type == 'table'; else elseBlock">
                     <app-primeng-table [tableInputData]="eachtabcontent"></app-primeng-table>
                   </div>
 
@@ -40,7 +50,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- </ng-template> -->
 
 

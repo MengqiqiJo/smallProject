@@ -10,7 +10,9 @@ import { AppService } from '../app.service';
 })
 export class NGFormComponent implements OnInit {
 
-  @Input('name') ngFormcomponentData: any;
+  // @Input('name') ngFormcomponentData: any;
+
+  ngFormcomponentData: any;
 
   formBasicInfo: any;
 
@@ -24,7 +26,7 @@ export class NGFormComponent implements OnInit {
   returnQuestionsResults: any[]=[];
 
   constructor(private myService: AppService) {
-  } 
+  }
 
   save() {
     var temporaryQuestionResult;
@@ -35,20 +37,22 @@ export class NGFormComponent implements OnInit {
     });
 
     this.returnQuestionsResults.forEach(eachQuestion => {
-      eachQuestion.question_value =[];
-      eachQuestion.question_value = eachQuestion.question_value.concat(this.totalResults[eachQuestion.question_id]);
+      eachQuestion.question_answer = null;
+      eachQuestion.question_answer = this.totalResults[eachQuestion.question_tid];
     });
 
-    temporaryQuestionResult = {
-      "field_name": "field_evaluation_reactset",
-      "field_value": this.returnQuestionsResults
-    };
+    // temporaryQuestionResult = {
+    //   "field_name": "field_evaluation_reactset",
+    //   "field_value": this.returnQuestionsResults
+    // };
 
-    this.returnFormResults.push(temporaryQuestionResult);
+    // this.returnFormResults.push(temporaryQuestionResult);
 
     this.returnFormResults.forEach(eachResult => {
       this.formBasicInfo.resultSubmit[eachResult.field_name] = eachResult;
     });
+
+    this.formBasicInfo.resultSubmit["field_evaluation_reactset"] = this.returnQuestionsResults;
 
     console.log(this.formBasicInfo);
   }
@@ -74,10 +78,23 @@ export class NGFormComponent implements OnInit {
     this.availableData[availableChildData] = temporaryData;
   }
 
+  // add router
+  getChartJSONAndDisplay() {
+    this.myService.getFormData().subscribe(data => {
+      this.ngFormcomponentData = data[0];
+    }, // Bind to view
+    err => {
+      // Log errors if any
+      console.log('error: ', err);
+    });
+  }
+
   ngOnInit() {
     var temporaryBlockData;
     var blockReturnOtherValue;
     var temporaryQuestionData;
+
+    this.getChartJSONAndDisplay();
 
     this.formBasicInfo = this.ngFormcomponentData.formsBasicInfo;
 
@@ -96,32 +113,35 @@ export class NGFormComponent implements OnInit {
 
       this.totalResults[eachBlock.fieldId] = eachBlock.default;
 
-      if (eachBlock.isReactSet) {
-        temporaryQuestionData = {
-          "question_id" : eachBlock.fieldId,
-          "question_value": []
-        }
+      if (eachBlock.displayType !== "customtext" && eachBlock.displayType !== "customhtml") {
+        if (eachBlock.isReactSet) {
+          temporaryQuestionData = {
+            "question_tid" : eachBlock.fieldId,
+            "question_answer": null
+          }
 
-        if (eachBlock.returnValue) {
-          blockReturnOtherValue = eachBlock.returnValue;
-          temporaryQuestionData = Object.assign(temporaryQuestionData, blockReturnOtherValue);
-        }
+          if (eachBlock.returnValue) {
+            blockReturnOtherValue = eachBlock.returnValue;
+            temporaryQuestionData = Object.assign(temporaryQuestionData, blockReturnOtherValue);
+          }
 
-        this.returnQuestionsResults.push(temporaryQuestionData);
+          this.returnQuestionsResults.push(temporaryQuestionData);
+        }
+        else {
+          temporaryBlockData = {
+            "field_name": eachBlock.fieldId,
+            "field_value": []
+          };
+
+          if (eachBlock.returnValue) {
+            blockReturnOtherValue = eachBlock.returnValue;
+            temporaryBlockData = Object.assign(temporaryBlockData, blockReturnOtherValue);
+          }
+
+          this.returnFormResults.push(temporaryBlockData);
+        }
       }
-      else {
-        temporaryBlockData = {
-          "field_name": eachBlock.fieldId,
-          "field_value": []
-        };
 
-        if (eachBlock.returnValue) {
-          blockReturnOtherValue = eachBlock.returnValue;
-          temporaryBlockData = Object.assign(temporaryBlockData, blockReturnOtherValue);
-        }
-
-        this.returnFormResults.push(temporaryBlockData);
-      }
 
     });
   }

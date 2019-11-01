@@ -37,6 +37,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NGFormComponent } from './ngform/ngform.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'form', component: NGFormComponent },
+  { path: 'charts', component: PrimengChartjsComponent },
+  { path: 'table', component: PrimengTableComponent },
+];
 
 @NgModule({
   declarations: [
@@ -66,7 +73,11 @@ import { EditPasswordComponent } from './edit-password/edit-password.component';
     FormsModule,
     HttpClientModule,
     InputTextareaModule,
-    CalendarModule
+    CalendarModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

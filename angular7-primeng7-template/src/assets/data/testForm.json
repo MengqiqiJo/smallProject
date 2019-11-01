@@ -1,0 +1,625 @@
+[
+  {
+    "componentname":"primengforms",
+    "formsBasicInfo": {
+      "postUrl": "node",
+      "redirectUrl": "manageinfo/node/evaluation/add/form/805",
+      "deleteRedirectUrl": "nodeinfo/redirect/meetinginsert",
+      "formType": "add",
+      "resultSubmit": {
+        "type": {
+          "target_id": "evaluation"
+        },
+        "field_evaluation_meetingnid": {
+          "target_id": "805",
+          "target_type": "node"
+        },
+        "field_evaluation_comments": {
+          "value": "some comment from user"
+        }
+      }
+    },
+    "primengforms":[
+      {
+        "fieldId": "field_evaluation_html",
+        "fieldLabel":"Current IBD Management: Lost in Translation Unraveling the mysteries of IBD management toward better outcomes",
+        "inputType": "text",
+        "displayType": "customtext",
+        "default": "",
+        "options": []
+      },
+      {
+        "fieldId": "field_evaluation_title",
+        "fieldLabel":"<div class=\"col-sm-5 col-md-12 bg-4a245e color-fff padding-15 height-60\">Question Title 1</div>",
+        "inputType": "text",
+        "displayType": "customhtml",
+        "default": "",
+        "options": []
+      },
+      {
+        "fieldId": "field_meeting_title",
+        "fieldLabel":"Title",
+        "inputType": "textfield",
+        "displayType": "textfield",
+        "default":"Evaluation for meeting 805",
+        "options":[]
+      },
+      {
+        "fieldId": "field_evaluation_user",
+        "fieldLabel":"User",
+        "inputType": "textfield",
+        "displayType": "textfield",
+        "default":"",
+        "options":[]
+      },
+      {
+        "fieldId": "field_type",
+        "fieldLabel":"Type",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": null,
+        "options":[
+          {
+            "value": 1000,
+            "label": "NONE"
+          },
+          {
+            "value": 1111,
+            "label": "Pre"
+          },
+          {
+            "value": 222,
+            "label": "Post"
+          }
+        ]
+      },
+      {
+        "fieldId": "field_practitioner",
+        "fieldLabel":"Practitioner Type",
+        "inputType": "multiselect",
+        "displayType": "multiselect",
+        "default":[],
+        "options":[
+          {
+            "value": 1111,
+            "label": "Specialist"
+          },
+          {
+            "value": 2222,
+            "label": "PCP"
+          },
+          {
+            "value": 3333,
+            "label": "Nurse"
+          },
+          {
+            "value": 4444,
+            "label": "Other"
+          },
+          {
+            "value": 5555,
+            "label": "GI"
+          },
+          {
+            "value": 6666,
+            "label": "NP/PA"
+          }
+        ]
+      },
+      {
+        "isReactSet": true,
+        "fieldId": "field_reactset_rate",
+        "fieldLabel":"How would you rate the overall quality of this Abbvie Educational Program?",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 1111,
+        "returnValue":{
+          "refer_tid":"880",
+          "refer_uid":"",
+          "city":"london",
+          "refer_other":"lilkly"
+        },
+        "options":[
+          {
+            "value": 1000,
+            "label": "NONE"
+          },
+          {
+            "value": 1111,
+            "label": "1"
+          },
+          {
+            "value": 222,
+            "label": "2"
+          },
+          {
+            "value": 333,
+            "label": "3"
+          },
+          {
+            "value": 444,
+            "label": "4"
+          },
+          {
+            "value": 555,
+            "label": "5"
+          }
+        ]
+      },
+      {
+        "isReactSet": true,
+        "fieldId": "field_reactset_imporatnce",
+        "fieldLabel":"Discuss the importance of early intervention in minimizing the risk of disease prograssion",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 1000,
+        "options":[
+          {
+            "value": 1000,
+            "label": "NONE"
+          },
+          {
+            "value": 1111,
+            "label": "1"
+          },
+          {
+            "value": 222,
+            "label": "2"
+          },
+          {
+            "value": 333,
+            "label": "3"
+          },
+          {
+            "value": 444,
+            "label": "4"
+          },
+          {
+            "value": 555,
+            "label": "5"
+          }
+        ]
+      },
+      {
+        "isReactSet": true,
+        "fieldId": "field_recognize",
+        "fieldLabel":"Recognize the importance of regular monitoring to minimize subclinical and chronic inflammation",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 1000,
+        "options":[
+          {
+            "value": 1000,
+            "label": "NONE"
+          },
+          {
+            "value": 1111,
+            "label": "1"
+          },
+          {
+            "value": 222,
+            "label": "2"
+          },
+          {
+            "value": 333,
+            "label": "3"
+          },
+          {
+            "value": 444,
+            "label": "4"
+          },
+          {
+            "value": 555,
+            "label": "5"
+          }
+        ]
+      },
+      {
+        "isReactSet": true,
+        "fieldId": "field_speakers",
+        "fieldLabel":"Speakers",
+        "inputType": "multiselect",
+        "displayType": "multiselect",
+        "default":[1111, 2222],
+        "options":[
+          {
+            "value": 1111,
+            "label": "Marie-Claude Racine"
+          },
+          {
+            "value": 2222,
+            "label": "Larry Dian"
+          },
+          {
+            "value": 3333,
+            "label": "Shereen Metias"
+          },
+          {
+            "value": 4444,
+            "label": "Marie-Hélène Robert"
+          },
+          {
+            "value": 5555,
+            "label": "Patrice Gosselin"
+          },
+          {
+            "value": 6666,
+            "label": "Danielle Houde"
+          }
+        ]
+      },
+      {
+        "isReactSet": true,
+        "fieldId": "field_modules",
+        "fieldLabel":"Modules",
+        "inputType": "multiselect",
+        "displayType": "multiselect",
+        "default":[2222, 4444],
+        "options":[
+          {
+            "value": 1111,
+            "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY"
+          },
+          {
+            "value": 2222,
+            "label": "Chronic Kidney Disease"
+          },
+          {
+            "value": 3333,
+            "label": "Complex Patients: Therapies that Can Reduce Mortality"
+          },
+          {
+            "value": 4444,
+            "label": "Diabetes in Aboriginal Populations"
+          },
+          {
+            "value": 5555,
+            "label": "Diabetes Management in the Presence of Glucocorticoids"
+          },
+          {
+            "value": 6666,
+            "label": "Early Use of Insulin Therapy in T2D"
+          },
+          {
+            "value": 7777,
+            "label": "Eating Disorders in Diabetes"
+          }
+        ]
+      },
+      {
+        "fieldId": "field_thinking",
+        "fieldLabel":"Thinking of other educational programs you have attended, what specific recommendations do you have to it?Thinking of other educational programs you have attended, what specific recommendations do you have to it?",
+        "inputType": "textfield",
+        "displayType": "textfield",
+        "default":"",
+        "options":[]
+      },
+      {
+        "fieldId": "field_suggestions_program",
+        "fieldLabel":"What suggestions would you have for this program or future educational topics?",
+        "inputType": "textfield",
+        "displayType": "textfield",
+        "default":"",
+        "options":[]
+      },
+      {
+        "fieldId": "field_hcp",
+        "fieldLabel":"HCP PAGE",
+        "inputType": "text",
+        "displayType": "customtext",
+        "default": []
+      },
+      {
+        "fieldId": 1047,
+        "fieldLabel":"businessUnit",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 1,
+        "child": "therapArea",
+        "childId": 1048,
+        "availableChildDataName": "available1048",
+        "options": [
+          {"value" : 1, "label": "None"},
+          {"value" : 2, "label": "Immunology"},
+          {"value" : 3, "label": "Oncology"},
+          {"value" : 4, "label": "Speacialty"}
+        ]
+      },
+      {
+        "fieldId": 1048,
+        "isChild": true,
+        "fieldLabel":"therapArea",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 101,
+        "child": "programArea",
+        "childId": 1049,
+        "availableChildDataName": "available1049",
+        "availableDataName": "available1048",
+        "options":[
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 1
+            },
+            "value" : 101,
+            "label" : "None"
+          },
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 2
+            },
+            "value" : 7,
+            "label" : "solid Tumor"
+          },
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 2
+            },
+            "value" : 8,
+            "label" : "Bio T"
+          },
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 2
+            },
+            "value" : 9,
+            "label" : "Dermatology"
+          },
+          {
+            "parent" : {
+              "parentName": "businessUnit",
+              "parentId": 3
+            },
+            "value" : 10,
+            "label" : "Gastrointestinal"
+          }
+        ]
+      },
+      {
+        "fieldId": 1049,
+        "isChild": true,
+        "fieldLabel":"programArea",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 11,
+        "child": "subprogramArea",
+        "childId": 1050,
+        "availableDataName": "available1049",
+        "options":[
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 10
+            },
+            "value" : 11,
+            "label" : "CONII - Value Based Advisory Board"
+          },
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 7
+            },
+            "value" : 12,
+            "label" : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
+          },
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 7
+            },
+            "value" : 13,
+            "label" : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
+          },
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 8
+            },
+            "value" : 14,
+            "label" : "CONII – Hematology Advisory Board"
+          },
+          {
+            "parent" : {
+              "parentName": "therapArea",
+              "parentId": 8
+            },
+            "value" : 15,
+            "label" : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
+          }
+        ]
+      },
+      {
+        "fieldId": 1050,
+        "isChild": true,
+        "fieldLabel":"subprogramArea",
+        "inputType": "radio",
+        "displayType": "dropdown",
+        "default": 11,
+        "child": "",
+        "availableDataName": "available1050",
+        "options":[
+          {
+            "parent" : {
+              "parentName": "programArea",
+              "parentId": 13
+            },
+            "value" : 311,
+            "label" : "CONII - Value Based Advisory Board"
+          },
+          {
+            "parent" : {
+              "parentName": "programArea",
+              "parentId": 12
+            },
+            "value" : 312,
+            "label" : "Changing the Goals: Optimizing Therapeutic Approaches in AML"
+          },
+          {
+            "parent" : {
+              "parentName": "programArea",
+              "parentId": 14
+            },
+            "value" : 313,
+            "label" : "APSHO Symposium: Targeted Agents and Goals of Therapy in CLL"
+          },
+          {
+            "parent" : {
+              "parentName": "programArea",
+              "parentId": 13
+            },
+            "value" : 314,
+            "label" : "CONII – Hematology Advisory Board"
+          },
+          {
+            "parent" : {
+              "parentName": "programArea",
+              "parentId": 12
+            },
+            "value" : 315,
+            "label" : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
+          }
+        ]
+      },
+      {
+        "fieldId": "field_speakers2",
+        "fieldLabel":"Speakers",
+        "inputType": "multiselect",
+        "displayType": "generalCheckbox",
+        "default":[],
+        "options":[
+          {
+            "value": 1111,
+            "label": "Marie-Claude Racine"
+          },
+          {
+            "value": 2222,
+            "label": "Larry Dian"
+          },
+          {
+            "value": 3333,
+            "label": "Shereen Metias"
+          },
+          {
+            "value": 4444,
+            "label": "Marie-Hélène Robert"
+          },
+          {
+            "value": 5555,
+            "label": "Patrice Gosselin"
+          },
+          {
+            "value": 6666,
+            "label": "Danielle Houde"
+          }
+        ]
+      },
+      {
+        "fieldId": "field_ctchest",
+        "fieldLabel":"What is the current interpretation of the CT chest?",
+        "inputType": "radio",
+        "displayType": "radioButton",
+        "default":[],
+        "options":[
+          {
+            "value": 101,
+            "label": "UIP"
+          },
+          {
+            "value": 202,
+            "label": "Probable UIP"
+          },
+          {
+            "value": 303,
+            "label": "Indeterminate for UIP"
+          },
+          {
+            "value": 404,
+            "label": "Alternative diagnosis"
+          }
+        ]
+      },
+      {
+        "fieldId": "field_evaluation_summary",
+        "fieldLabel":"Summary Evaluation",
+        "inputType": "booleanCheckbox",
+        "displayType": "booleanCheckbox",
+        "default": false,
+        "options": []
+      },
+      {
+        "fieldId": "field_evaluation_date",
+        "fieldLabel":"Event Date",
+        "inputType": "calendar",
+        "displayType": "calendar",
+        "default": "",
+        "options": []
+      },
+      {
+        "fieldId": "field_save_evaluate",
+        "fieldLabel":"Save & Evaluate",
+        "inputType": "button",
+        "displayType": "button",
+        "default": "",
+        "options": []
+      },
+      {
+        "fieldId": "field_save",
+        "fieldLabel":"Save",
+        "inputType": "button",
+        "displayType": "button",
+        "default": "",
+        "options": []
+      },
+      {
+        "fieldId": "field_status",
+        "fieldLabel":"Status",
+        "inputType": "radio",
+        "displayType": "radioButton",
+        "default":[],
+        "options":[
+          {
+            "value": 101,
+            "label": "Blcoked"
+          },
+          {
+            "value": 202,
+            "label": "Active"
+          }
+        ]
+      },
+      {
+        "fieldId": "field_roles",
+        "fieldLabel":"Roles",
+        "inputType": "multiselect",
+        "displayType": "generalCheckbox",
+        "default":[],
+        "options":[
+          {
+            "value": 1111,
+            "label": "Speaker"
+          },
+          {
+            "value": 2222,
+            "label": "Rep"
+          },
+          {
+            "value": 3333,
+            "label": "Siteadmin"
+          },
+          {
+            "value": 4444,
+            "label": "Moderate"
+          },
+          {
+            "value": 5555,
+            "label": "Client"
+          }
+        ]
+      }
+    ]
+  }
+]

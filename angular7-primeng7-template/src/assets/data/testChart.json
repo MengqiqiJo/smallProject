@@ -1,0 +1,721 @@
+[
+  {
+    "componentname":"primengchartjs",
+    "primengcontentdata":[
+      {
+        "tabShow": "hide",
+        "blockHeader": "<div class=\"row margin-0 border-1-e7e7e7\"><div class=\"col-sm-12\"><span class=\"h6 padding-top-6\">total events</span></div><div class=\"col-sm-12\"><span class=\"h4 line-height-1-5\">20</span></div></div><div class=\"row margin-0\"><div class=\"col-xs-4 bg-00a9e0 color-fff height-52 padding-0 font-size-10 padding-top-8\"><div class=\"col-xs-12\">a</div><div class=\"col-xs-12 margin-top-8\">2</div></div><div class=\"col-xs-4 bg-05d23e color-fff height-52 padding-0 font-size-10 padding-top-8\"><div class=\"col-xs-12\">b</div><div class=\"col-xs-12 margin-top-8\">11</div></div><div class=\"col-xs-4 bg-f24b99 color-fff height-52 padding-0 font-size-10 padding-top-8\"><div class=\"col-xs-12\">c</div><div class=\"col-xs-12 margin-top-8\">7</div></div>",
+        "blockClass": "col-sm-6 col-md-3 margin-top-6 margin-bottom-20 text-align-center",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "blockClass": "",
+            "tabData":
+            {
+              "class": "",
+              "type": "htmlSnippt",
+              "top": {
+                "value": ""
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "blockHeader": "<div class=\"bg-009ddf height-100 color-fff padding-12\"><div class=\"font-size-14 margin-top-12\">1244</div><div class=\"font-size-12 margin-top-12 margin-bottom-6\">Evaluations Received</div>",
+        "blockClass": "col-md-3 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "tabData": {
+              "class": "",
+              "type": "htmlSnippt",
+              "top": {
+                "value": ""
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": true,
+        "blockHeader": "",
+        "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "chartjsPluginsOptions": {
+              "calculateTooltip": true,
+              "calculateLabel": true
+            },
+            "tabData":
+            {
+              "type": "chart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">doughnut chart. show percentage, hide less than 5%. hover value--percentage. no bottom</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "percentage",
+                  "type": "doughnut",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": ["OLA", "Head Office"],
+                    "datasets": [{
+                      "label": "",
+                      "data": [4, 138],
+                      "backgroundColor": [
+                        "#0093d0",
+                        "#75d1e0"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": false,
+        "blockHeader": "",
+        "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "chartjsPluginsOptions": {
+              "calculateTooltip": true,
+              "calculateLabel": true
+            },
+            "calculateTooltip": true,
+            "calculateLabel": true,
+            "tabData":
+            {
+              "type": "chart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"col-sm-5 col-md-12 bg-009ddf color-fff padding-15 height-60\">doughnut chart. show value, display less than 5%. hover value. no bottom</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "percentage",
+                  "type": "doughnut",
+                  "styleClass": "col-md-6 margin-top-24",
+                  "data": {
+                    "labels": ["OLA", "Head Office"],
+                    "datasets": [{
+                      "label": "",
+                      "data": [4, 138],
+                      "backgroundColor": [
+                        "#0093d0",
+                        "#75d1e0"
+                      ]
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-6",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Head Office (4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-75d1e0\"></span><span class=\"float-left legend-text\">OLA (138)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "tabShow": "hide",
+        "isChartjs": true,
+        "blockHeader": "",
+        "blockClass": "col-md-4 margin-top-24",
+        "blockClassSub": "",
+        "blockContent": [
+          {
+            "tabTitle": "",
+            "chartjsPluginsOptions": {
+              "calculateTooltip": true,
+              "calculateLabel": true
+            },
+            "tabData":
+            {
+              "blockId": "barChart",
+              "class": "col-md-12 margin-top-24 block-box-shadow padding-left-0 padding-right-0",
+              "type": "chart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": "<div class=\"bg-009ddf color-fff height-60 padding-15 padding-left-14\">table. show value. hover value--percentage. no bottom.</div>"
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "renderLabel": "value",
+                  "type": "bar",
+                  "styleClass": "col-md-12 margin-top-24",
+                  "data": {
+                    "labels": [
+                      "OLA",
+                      "Accredited",
+                      "Speaker Tour",
+                      "Symposiums",
+                      "Preceptorships",
+                      "Nurse Educator"
+                    ],
+                    "datasets": [{
+                    "label": "",
+                    "fill": false,
+                    "data": [
+                      38,
+                      54,
+                      89,
+                      21,
+                      13,
+                      111
+                    ],
+                    "borderColor": [
+                      "#0093d0"
+                    ],
+                    "backgroundColor": [
+                      "#0093d0"
+                      ],
+                    "borderWidth": 1
+                    }]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "labels": {
+                        "render": "value",
+                        "fontColor": "#000",
+                        "fontSize": 10
+                      }
+                    },
+                    "layout": {
+                      "padding": {
+                        "top": 50
+                      }
+                    },
+                    "yAxes": [{
+                      "display": false,
+                      "ticks": {
+                        "max": 130
+                      }
+                    }]
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                }
+              },
+              "bottom": {
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+          "tabShow": "show",
+          "isChartjs": true,
+          "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">Pie chart/ Line chart. With bottom, Hide less than 5% percent. pie hover value--percentage. line hover value.</span></div>",
+          "blockClass": "col-md-6 margin-top-24",
+          "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
+          "blockContent": [
+            {
+              "tabTitle": "Tab21",
+              "chartjsPluginsOptions": {
+                "calculateTooltip": true,
+                "calculateLabel": true
+              },
+              "tabData":
+              {
+                "blockId": "lineChart",
+                "class": "col-md-12 margin-top-24",
+                "type": "chart",
+                "top": {
+                  "enable": false,
+                  "styleClass": "bg-009ddf color-fff height-60",
+                  "value": ""
+                },
+                "middle": {
+                  "class": "",
+                  "middleLeft": {
+                    "enable": false,
+                    "styleClass": "",
+                    "value": ""
+                  },
+                  "middleMiddle": {
+                    "renderLabel": "percentage",
+                    "value": "<div class=\"height-400\"><p-chart type=\"pie\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                    "type": "pie",
+                    "styleClass": "col-md-6 margin-top-24",
+                    "data": {
+                      "labels": ["langues d'oïl", "le français", "Yellow", "Green", "Purple", "Orange"],
+                      "datasets": [{
+                        "label": "",
+                        "data": [49, 10, 10, 8, 84, 3],
+                        "backgroundColor": [
+                          "#0093d0",
+                          "#002596",
+                          "#cc292b",
+                          "#00aeef",
+                          "#7dba00",
+                          "#c6c6c6"
+                        ]
+                      }]
+                    },
+                    "options": {
+                      "legend": {
+                        "display": false
+                      },
+                      "plugins": {
+                        "labels": {
+                          "render": "value",
+                          "fontColor": "#000",
+                          "fontSize": 10
+                        }
+                      }
+                    }
+                  },
+                  "middleRight": {
+                    "enable": false,
+                    "styleClass": "col-md-6",
+                    "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Cardio Met (49)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-002596\"></span><span class=\"float-left legend-text\">Respiratory (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-cc292b\"></span><span class=\"float-left legend-text\">Ophthalmology (10)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">I&D (8)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Oncology (84)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">MS/NS (3)</span></div></div>"
+                  }
+                },
+                "bottom": {
+                  "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">222222</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                }
+              }
+            },
+            {
+              "tabTitle": "Tab2",
+              "chartjsPluginsOptions": {
+                "calculateTooltip": false,
+                "calculateLabel": true
+              },
+              "tabData":
+              {
+                "blockId": "barChart",
+                "class": "col-md-12 margin-top-24",
+                "type": "chart",
+                "top": {
+                  "enable": false,
+                  "styleClass": "bg-009ddf color-fff height-60",
+                  "value": ""
+                },
+                "middle": {
+                  "class": "height-400",
+                  "middleLeft": {
+                    "enable": false,
+                    "styleClass": "",
+                    "value": ""
+                  },
+                  "middleMiddle": {
+                    "renderLabel": "percentage",
+                    "value": "<div class=\"height-400\"><p-chart type=\"bar\" [data]=\"primeData\"></p-chart>hello this is bar chart</div>",
+                    "type": "line",
+                    "styleClass": "col-md-12 margin-top-24",
+                    "data": {
+                      "labels": [
+                        "OLA",
+                        "Accredited",
+                        "Speaker Tour",
+                        "Symposiums",
+                        "Preceptorships",
+                        "Nurse Educator"
+                      ],
+                      "datasets": [
+                        {
+                          "label": "",
+                          "data": [
+                            138,
+                            4,
+                            9,
+                            1,
+                            1,
+                            11
+                          ],
+                          "borderColor": "#0093d0",
+                          "fill": false,
+                          "borderWidth": 2
+                        },
+                        {
+                          "label": "",
+                          "data": [
+                            38,
+                            24,
+                            93,
+                            12,
+                            31,
+                            11
+                          ],
+                          "borderColor": "#00134b",
+                          "fill": false,
+                          "borderWidth": 2
+                        }
+                      ]
+                    },
+                    "options": {
+                      "legend": {
+                        "display": false
+                      },
+                      "plugins": {
+                        "labels": {
+                          "render": "percentage",
+                          "fontColor": "#000",
+                          "fontSize": 10
+                        }
+                      },
+                      "scales": {
+                        "xAxes": [{
+                          "gridLines": {
+                            "color": "#f5f5f5"
+                          },
+                          "ticks": {
+                            "fontSize": 14
+                          }
+                        }],
+                        "yAxes": [{
+                          "gridLines": {
+                            "color": "#f5f5f5"
+                          },
+                          "ticks": {
+                            "fontSize": 14,
+                            "max": 160
+                          }
+                        }]
+                      }
+                    }
+                  },
+                  "middleRight": {
+                    "enable": false,
+                    "styleClass": "",
+                    "value": ""
+                  }
+                },
+                "bottom": {
+                  "value": "<div class=\"col-md-12 text-center bottom-n-1 padding-0 block-box-shadow\"><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">22</div><div class=\"font-size-10 text-center\">RESPONSES</div></div><div class=\"col-md-6 height-66 border-1-eee border-bottom-none\"><div class=\"font-bold height-32 padding-top-6\">55%</div><div class=\"font-size-10 text-center\">BEST ANSWER</div></div></div>"
+                }
+              }
+            }
+          ]
+      },
+      {
+        "tabShow": "show",
+        "isChartjs": true,
+        "blockHeader": "<div class=\"bg-009ddf color-fff padding-15 height-60\"><span class=\"float-left display-block height-32 width-32 bg-d6006e margin-left-6 border-1-eee\"></span><span class=\"margin-left-14\">horizontal stacked100 barChart. / vertical stacked barChart.</span></div>",
+        "blockClass": "col-md-6 margin-top-24",
+        "blockClassSub": "col-md-12 block-box-shadow padding-left-0 padding-right-0",
+        "blockContent": [
+          {
+            "tabTitle": "MONTH",
+            "tabData":
+            {
+              "blockId": "barChart",
+              "class": "col-md-12 margin-top-24",
+              "type": "chart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": ""
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "chartjsPluginsOptions": {
+                    "calculateTooltip": true,
+                    "calculateLabel": true
+                  },
+                  "type": "horizontalBar",
+                  "styleClass": "col-md-8 margin-top-24",
+                  "data": {
+                    "labels": [
+                      "JAN",
+                      "FEB",
+                      "MAR",
+                      "APR"
+                    ],
+                    "datasets": [
+                      {
+                        "backgroundColor": "#00134b",
+                        "borderColor": "#00134b",
+                        "pointColor": "#00134b",
+                        "data": [
+                          10,
+                          20,
+                          10,
+                          28
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#0093d0",
+                        "borderColor": "#0093d0",
+                        "pointColor": "#0093d0",
+                        "data": [
+                          1,
+                          3,
+                          5,
+                          0
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#00aeef",
+                        "borderColor": "#00aeef",
+                        "pointColor": "#00aeef",
+                        "data": [
+                          19,
+                          60,
+                          50,
+                          40
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#7dba00",
+                        "borderColor": "#7dba00",
+                        "pointColor": "#7dba00",
+                        "data": [
+                          30,
+                          10,
+                          15,
+                          12
+                        ]
+                      },
+                      {
+                        "backgroundColor": "#c6c6c6",
+                        "borderColor": "#c6c6c6",
+                        "pointColor": "#c6c6c6",
+                        "data": [
+                          10,
+                          20,
+                          10,
+                          1
+                        ]
+                      }
+                    ]
+                  },
+                  "options": {
+                    "legend": {
+                      "display": false
+                    },
+                    "plugins": {
+                      "stacked100": {
+                        "enable": true
+                      },
+                      "labels": {
+                        "fontSize": 0,
+                        "fontColor": "#000"
+                      }
+                    },
+                    "scales": {
+                      "xAxes": [{
+                       "stacked": true
+                      }],
+                      "yAxes": [{
+                        "barPercentage": 0.4,
+                        "stacked": true
+                      }]
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-xs-12 col-sm-12 col-md-4 margin-top-24",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(138)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": "<div class=\"row\"></div>"
+              }
+            }
+          },
+          {
+            "tabTitle": "QUATER",
+            "tabData":
+            {
+              "blockId": "barChart",
+              "class": "col-md-12 margin-top-24",
+              "type": "chart",
+              "top": {
+                "enable": false,
+                "styleClass": "bg-009ddf color-fff height-60",
+                "value": ""
+              },
+              "middle": {
+                "class": "height-400",
+                "middleLeft": {
+                  "enable": false,
+                  "styleClass": "",
+                  "value": ""
+                },
+                "middleMiddle": {
+                  "value": "",
+                  "chartjsPluginsOptions": {
+                    "calculateTooltip": true,
+                    "calculateLabel": true
+                  },
+                  "type": "bar",
+                  "styleClass": "col-md-8 margin-top-24",
+                  "data": {
+                    "labels": [
+                      "Q1",
+                      "Q2",
+                      "Q3",
+                      "Q4",
+                      "Q5"
+                    ],
+                    "datasets": [
+                      {
+                        "type": "bar",
+                        "label": "walk ins",
+                        "backgroundColor": "green",
+                        "data": [10, 8, 10, 19, 10],
+                        "yAxisID": "bar-y-axis"
+                    },
+                    {
+                        "type": "bar",
+                        "label": "pick-ups",
+                        "backgroundColor": "blue",
+                        "data": [20, 10, 4, 20, 20],
+                        "yAxisID": "bar-y-axis"
+                    },
+                    {
+                        "type": "bar",
+                        "label": "no show",
+                        "backgroundColor": "red",
+                        "data": [5, 6, 3, 7, 8],
+                        "yAxisID": "bar-y-axis"
+                    }
+                    ]
+                  },
+                  "options": {
+                    "datasetFill": false,
+                    "scaleShowVerticalLines": false,
+                    "responsive": false,
+                    "legend": {
+                      "position": "bottom"
+                    },
+                    "scales": {
+                      "xAxes": [{
+                        "stacked": true,
+                        "barPercentage": 0.2,
+                        "ticks": {
+                          "beginAtZero": true
+                        }
+                      }],
+                      "yAxes": [{
+                        "stacked": false,
+                        "barPercentage": 0.2,
+                        "maxBarThickness": 100,
+                        "ticks": {
+                          "beginAtZero": true
+                        }
+                      }, {
+                        "id": "bar-y-axis",
+                        "stacked": true,
+                        "ticks": {
+                          "beginAtZero": true
+                        }
+                      }]
+                    }
+                  }
+                },
+                "middleRight": {
+                  "enable": false,
+                  "styleClass": "col-md-4 margin-top-24",
+                  "value": "<div class=\"padding-top-24 margin-top-24 margin-left-12 font-size-12 width-pt-100\"><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00134b\"></span><span class=\"float-left legend-text\">OLA(108)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-0093d0\"></span><span class=\"float-left legend-text\">Accredited(4)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-00aeef\"></span><span class=\"float-left legend-text\">Speaker Tour(9)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-7dba00\"></span><span class=\"float-left legend-text\">Symposiums(1)</span></div><div class=\"clear-both height-32 text-center\"><span class=\"legend-square bg-c6c6c6\"></span><span class=\"float-left legend-text\">Preceptorships(1)</span></div></div>"
+                }
+              },
+              "bottom": {
+                "value": "<div class=\"row\"></div>"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

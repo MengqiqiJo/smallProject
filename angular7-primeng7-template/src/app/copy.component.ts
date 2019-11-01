@@ -33,10 +33,5 @@ export class CopyComponent {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
-
-
-    // var a = Table.prototype.exportCSV;
-    // console.log(a);
-
   }
 }
