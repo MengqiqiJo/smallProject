@@ -80,8 +80,60 @@ export class NGFormComponent implements OnInit {
 
   // add router
   getChartJSONAndDisplay() {
+    // var temporaryBlockData;
+    // var blockReturnOtherValue;
+    // var temporaryQuestionData;
+
     this.myService.getFormData().subscribe(data => {
+
       this.ngFormcomponentData = data[0];
+      this.formBasicInfo = this.ngFormcomponentData.formsBasicInfo;
+
+      this.ngFormcomponentData.primengforms.forEach(eachBlock => {
+        var temporaryBlockData=null;
+        var blockReturnOtherValue=null;
+        var temporaryQuestionData=null;
+
+        if ((typeof eachBlock.isChild !== 'undefined') && eachBlock.isChild) {
+          this.childData[eachBlock.fieldLabel]= eachBlock.options;
+        }
+
+        if (eachBlock.child) {
+          this.parentChildSet[eachBlock.fieldId] = eachBlock.childId;
+        }
+
+        this.totalResults[eachBlock.fieldId] = eachBlock.default;
+
+        if (eachBlock.displayType !== "customtext" || eachBlock.displayType !== "customhtml") {
+          if (eachBlock.isReactSet) {
+            temporaryQuestionData = {
+              "question_tid" : eachBlock.fieldId,
+              "question_answer": null
+            }
+
+            if (eachBlock.returnValue) {
+              blockReturnOtherValue = eachBlock.returnValue;
+              temporaryQuestionData = Object.assign(temporaryQuestionData, blockReturnOtherValue);
+            }
+
+            this.returnQuestionsResults.push(temporaryQuestionData);
+          }
+          else {
+            temporaryBlockData = {
+              "field_name": eachBlock.fieldId,
+              "field_value": []
+            };
+
+            if (eachBlock.returnValue) {
+              blockReturnOtherValue = eachBlock.returnValue;
+              temporaryBlockData = Object.assign(temporaryBlockData, blockReturnOtherValue);
+            }
+
+            this.returnFormResults.push(temporaryBlockData);
+          }
+        }
+      });
+
     }, // Bind to view
     err => {
       // Log errors if any
@@ -90,60 +142,8 @@ export class NGFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    var temporaryBlockData;
-    var blockReturnOtherValue;
-    var temporaryQuestionData;
 
     this.getChartJSONAndDisplay();
-
-    this.formBasicInfo = this.ngFormcomponentData.formsBasicInfo;
-
-    this.ngFormcomponentData.primengforms.forEach(eachBlock => {
-      temporaryBlockData=null;
-      blockReturnOtherValue=null;
-      temporaryQuestionData=null;
-
-      if ((typeof eachBlock.isChild !== 'undefined') && eachBlock.isChild) {
-        this.childData[eachBlock.fieldLabel]= eachBlock.options;
-      }
-
-      if (eachBlock.child) {
-        this.parentChildSet[eachBlock.fieldId] = eachBlock.childId;
-      }
-
-      this.totalResults[eachBlock.fieldId] = eachBlock.default;
-
-      if (eachBlock.displayType !== "customtext" && eachBlock.displayType !== "customhtml") {
-        if (eachBlock.isReactSet) {
-          temporaryQuestionData = {
-            "question_tid" : eachBlock.fieldId,
-            "question_answer": null
-          }
-
-          if (eachBlock.returnValue) {
-            blockReturnOtherValue = eachBlock.returnValue;
-            temporaryQuestionData = Object.assign(temporaryQuestionData, blockReturnOtherValue);
-          }
-
-          this.returnQuestionsResults.push(temporaryQuestionData);
-        }
-        else {
-          temporaryBlockData = {
-            "field_name": eachBlock.fieldId,
-            "field_value": []
-          };
-
-          if (eachBlock.returnValue) {
-            blockReturnOtherValue = eachBlock.returnValue;
-            temporaryBlockData = Object.assign(temporaryBlockData, blockReturnOtherValue);
-          }
-
-          this.returnFormResults.push(temporaryBlockData);
-        }
-      }
-
-
-    });
   }
 
 }

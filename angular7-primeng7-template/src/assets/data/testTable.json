@@ -228,11 +228,11 @@
 
                 ],
                 "thead":[
-                  { "field": "province", "header": "Province", "width": "50%" },
-                  { "field": "OLA", "header": "OLA", "width": "10%" },
-                  { "field": "Accredited", "header": "Accredited", "width": "10%" },
-                  { "field": "Speaker Tour", "header": "Speaker Tour", "width": "10%" },
-                  { "field": "Symposiums", "header": "Symposiums", "width": "20%" }
+                  { "field": "province", "header": "Province", "width": "60%" },
+                  { "field": "OLA", "header": "OLA"},
+                  { "field": "Accredited", "header": "Accredited"},
+                  { "field": "Speaker Tour", "header": "Speaker Tour"},
+                  { "field": "Symposiums", "header": "Symposiums"}
                 ],
                 "tabledata":[
                   {

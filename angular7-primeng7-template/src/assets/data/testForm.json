@@ -22,7 +22,7 @@
     "primengforms":[
       {
         "fieldId": "field_evaluation_html",
-        "fieldLabel":"Current IBD Management: Lost in Translation Unraveling the mysteries of IBD management toward better outcomes",
+        "fieldLabel":"Custom Text Field",
         "inputType": "text",
         "displayType": "customtext",
         "default": "",
@@ -30,7 +30,7 @@
       },
       {
         "fieldId": "field_evaluation_title",
-        "fieldLabel":"<div class=\"col-sm-5 col-md-12 bg-4a245e color-fff padding-15 height-60\">Question Title 1</div>",
+        "fieldLabel":"<div class=\"col-sm-5 col-md-12 bg-4a245e color-fff padding-15 height-40\">Custome HTML Field</div>",
         "inputType": "text",
         "displayType": "customhtml",
         "default": "",
@@ -38,15 +38,15 @@
       },
       {
         "fieldId": "field_meeting_title",
-        "fieldLabel":"Title",
+        "fieldLabel":"Text field with default value, not submit",
         "inputType": "textfield",
         "displayType": "textfield",
-        "default":"Evaluation for meeting 805",
+        "default":"Text field with default value, not submit",
         "options":[]
       },
       {
         "fieldId": "field_evaluation_user",
-        "fieldLabel":"User",
+        "fieldLabel":"Text field without default value, submit input value",
         "inputType": "textfield",
         "displayType": "textfield",
         "default":"",
@@ -54,7 +54,7 @@
       },
       {
         "fieldId": "field_type",
-        "fieldLabel":"Type",
+        "fieldLabel":"Dropdown Field, single select, without default value, submit input value",
         "inputType": "radio",
         "displayType": "dropdown",
         "default": null,
@@ -74,42 +74,9 @@
         ]
       },
       {
-        "fieldId": "field_practitioner",
-        "fieldLabel":"Practitioner Type",
-        "inputType": "multiselect",
-        "displayType": "multiselect",
-        "default":[],
-        "options":[
-          {
-            "value": 1111,
-            "label": "Specialist"
-          },
-          {
-            "value": 2222,
-            "label": "PCP"
-          },
-          {
-            "value": 3333,
-            "label": "Nurse"
-          },
-          {
-            "value": 4444,
-            "label": "Other"
-          },
-          {
-            "value": 5555,
-            "label": "GI"
-          },
-          {
-            "value": 6666,
-            "label": "NP/PA"
-          }
-        ]
-      },
-      {
         "isReactSet": true,
         "fieldId": "field_reactset_rate",
-        "fieldLabel":"How would you rate the overall quality of this Abbvie Educational Program?",
+        "fieldLabel":"Dropdown Field, single select, with default value, submit input value",
         "inputType": "radio",
         "displayType": "dropdown",
         "default": 1111,
@@ -147,77 +114,42 @@
         ]
       },
       {
-        "isReactSet": true,
-        "fieldId": "field_reactset_imporatnce",
-        "fieldLabel":"Discuss the importance of early intervention in minimizing the risk of disease prograssion",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": 1000,
+        "fieldId": "field_practitioner",
+        "fieldLabel":"multiselect Field, multiselect, without default value, submit input value",
+        "inputType": "multiselect",
+        "displayType": "multiselect",
+        "default":[],
         "options":[
           {
-            "value": 1000,
-            "label": "NONE"
-          },
-          {
             "value": 1111,
-            "label": "1"
+            "label": "Specialist"
           },
           {
-            "value": 222,
-            "label": "2"
+            "value": 2222,
+            "label": "PCP"
           },
           {
-            "value": 333,
-            "label": "3"
+            "value": 3333,
+            "label": "Nurse"
           },
           {
-            "value": 444,
-            "label": "4"
+            "value": 4444,
+            "label": "Other"
           },
           {
-            "value": 555,
-            "label": "5"
-          }
-        ]
-      },
-      {
-        "isReactSet": true,
-        "fieldId": "field_recognize",
-        "fieldLabel":"Recognize the importance of regular monitoring to minimize subclinical and chronic inflammation",
-        "inputType": "radio",
-        "displayType": "dropdown",
-        "default": 1000,
-        "options":[
-          {
-            "value": 1000,
-            "label": "NONE"
+            "value": 5555,
+            "label": "GI"
           },
           {
-            "value": 1111,
-            "label": "1"
-          },
-          {
-            "value": 222,
-            "label": "2"
-          },
-          {
-            "value": 333,
-            "label": "3"
-          },
-          {
-            "value": 444,
-            "label": "4"
-          },
-          {
-            "value": 555,
-            "label": "5"
+            "value": 6666,
+            "label": "NP/PA"
           }
         ]
       },
       {
         "isReactSet": true,
         "fieldId": "field_speakers",
-        "fieldLabel":"Speakers",
+        "fieldLabel":"multiselect Field, multiselect, with default value, submit input value",
         "inputType": "multiselect",
         "displayType": "multiselect",
         "default":[1111, 2222],
@@ -249,44 +181,6 @@
         ]
       },
       {
-        "isReactSet": true,
-        "fieldId": "field_modules",
-        "fieldLabel":"Modules",
-        "inputType": "multiselect",
-        "displayType": "multiselect",
-        "default":[2222, 4444],
-        "options":[
-          {
-            "value": 1111,
-            "label": "MODULE 5: MANAGING SPECIAL SITUATIONS AND PATIENT POPULATIONS: HIV, TUBERCULOSIS (TB), HEPATITIS B & C, CHRONIC PERIODONTITIS AND THE USE OF BIOLOGICS IN PREGNANCY"
-          },
-          {
-            "value": 2222,
-            "label": "Chronic Kidney Disease"
-          },
-          {
-            "value": 3333,
-            "label": "Complex Patients: Therapies that Can Reduce Mortality"
-          },
-          {
-            "value": 4444,
-            "label": "Diabetes in Aboriginal Populations"
-          },
-          {
-            "value": 5555,
-            "label": "Diabetes Management in the Presence of Glucocorticoids"
-          },
-          {
-            "value": 6666,
-            "label": "Early Use of Insulin Therapy in T2D"
-          },
-          {
-            "value": 7777,
-            "label": "Eating Disorders in Diabetes"
-          }
-        ]
-      },
-      {
         "fieldId": "field_thinking",
         "fieldLabel":"Thinking of other educational programs you have attended, what specific recommendations do you have to it?Thinking of other educational programs you have attended, what specific recommendations do you have to it?",
         "inputType": "textfield",
@@ -295,12 +189,78 @@
         "options":[]
       },
       {
-        "fieldId": "field_suggestions_program",
-        "fieldLabel":"What suggestions would you have for this program or future educational topics?",
-        "inputType": "textfield",
-        "displayType": "textfield",
-        "default":"",
-        "options":[]
+        "fieldId": "field_speakers2",
+        "fieldLabel":"multiselect, display type check box, without default value, submit input",
+        "inputType": "multiselect",
+        "displayType": "generalCheckbox",
+        "default":[],
+        "options":[
+          {
+            "value": 1111,
+            "label": "Marie-Claude Racine"
+          },
+          {
+            "value": 2222,
+            "label": "Larry Dian"
+          },
+          {
+            "value": 3333,
+            "label": "Shereen Metias"
+          },
+          {
+            "value": 4444,
+            "label": "Marie-Hélène Robert"
+          },
+          {
+            "value": 5555,
+            "label": "Patrice Gosselin"
+          },
+          {
+            "value": 6666,
+            "label": "Danielle Houde"
+          }
+        ]
+      },
+      {
+        "fieldId": "field_ctchest",
+        "fieldLabel":"single select, display type radioButton, without default value, submit input",
+        "inputType": "radio",
+        "displayType": "radioButton",
+        "default":[],
+        "options":[
+          {
+            "value": 101,
+            "label": "UIP"
+          },
+          {
+            "value": 202,
+            "label": "Probable UIP"
+          },
+          {
+            "value": 303,
+            "label": "Indeterminate for UIP"
+          },
+          {
+            "value": 404,
+            "label": "Alternative diagnosis"
+          }
+        ]
+      },
+      {
+        "fieldId": "field_evaluation_summary",
+        "fieldLabel":"single select, display type boolean Checkbox, without default value, submit input",
+        "inputType": "booleanCheckbox",
+        "displayType": "booleanCheckbox",
+        "default": false,
+        "options": []
+      },
+      {
+        "fieldId": "field_evaluation_date",
+        "fieldLabel":"calendar, submit input value",
+        "inputType": "calendar",
+        "displayType": "calendar",
+        "default": "",
+        "options": []
       },
       {
         "fieldId": "field_hcp",
@@ -483,80 +443,6 @@
             "label" : "ONS Symposium: Goals of CLL Therapy and Targeted Agents"
           }
         ]
-      },
-      {
-        "fieldId": "field_speakers2",
-        "fieldLabel":"Speakers",
-        "inputType": "multiselect",
-        "displayType": "generalCheckbox",
-        "default":[],
-        "options":[
-          {
-            "value": 1111,
-            "label": "Marie-Claude Racine"
-          },
-          {
-            "value": 2222,
-            "label": "Larry Dian"
-          },
-          {
-            "value": 3333,
-            "label": "Shereen Metias"
-          },
-          {
-            "value": 4444,
-            "label": "Marie-Hélène Robert"
-          },
-          {
-            "value": 5555,
-            "label": "Patrice Gosselin"
-          },
-          {
-            "value": 6666,
-            "label": "Danielle Houde"
-          }
-        ]
-      },
-      {
-        "fieldId": "field_ctchest",
-        "fieldLabel":"What is the current interpretation of the CT chest?",
-        "inputType": "radio",
-        "displayType": "radioButton",
-        "default":[],
-        "options":[
-          {
-            "value": 101,
-            "label": "UIP"
-          },
-          {
-            "value": 202,
-            "label": "Probable UIP"
-          },
-          {
-            "value": 303,
-            "label": "Indeterminate for UIP"
-          },
-          {
-            "value": 404,
-            "label": "Alternative diagnosis"
-          }
-        ]
-      },
-      {
-        "fieldId": "field_evaluation_summary",
-        "fieldLabel":"Summary Evaluation",
-        "inputType": "booleanCheckbox",
-        "displayType": "booleanCheckbox",
-        "default": false,
-        "options": []
-      },
-      {
-        "fieldId": "field_evaluation_date",
-        "fieldLabel":"Event Date",
-        "inputType": "calendar",
-        "displayType": "calendar",
-        "default": "",
-        "options": []
       },
       {
         "fieldId": "field_save_evaluate",

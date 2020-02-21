@@ -15,7 +15,7 @@
             [filter]="true"
             placeholder="please select"
             (onChange)="eachFormFieldData.child ? updateChildLevelData($event, eachFormFieldData, 'available' + eachFormFieldData.childId) : '' "
-            [style]="{'width':'500px'}">
+            [style]="{'width':'650px'}">
               <ng-template let-item pTemplate="selectedItem">
                 <span>{{item.label}}</span>
               </ng-template>
@@ -36,7 +36,7 @@
           <p-multiSelect
           [options]="eachFormFieldData.options"
           [(ngModel)]="totalResults[eachFormFieldData.fieldId]"
-          [panelStyle]="{minWidth:'30em'}"
+          [style]="{'width':'650px'}"
           [filter]="true"></p-multiSelect>
         </div>
       </div>
@@ -47,7 +47,7 @@
           </div>
           <textarea
           [rows]="5"
-          [cols]="68"
+          [cols]="88"
           [(ngModel)]="totalResults[eachFormFieldData.fieldId]"
           [placeholder]="totalResults[eachFormFieldData.fieldId]"
           pInputTextarea
