@@ -1,15 +1,29 @@
 <template>
-  <div class="hello">
+  <div class="form-body-wrapper">
     <h1>{{ msg }}</h1>
 
-    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
-    <label for="jack">Jack</label>
-    <input type="checkbox" id="john" value="John" v-model="checkedNames">
-    <label for="john">John</label>
-    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
-    <label for="mike">Mike</label>
-    <br>
-    <span>Checked names: {{ checkedNames }}</span>
+    <select v-model="dropDownSelected">
+      <option v-for="option in dropDownSelectOptions" v-bind:key="option.value" v-bind:value="option.value">
+        <label>{{ option.text }}</label>
+      </option>
+    </select>
+  <span>Selected: {{ dropDownSelected }}</span>
+
+    <hr>
+
+    <div>
+      <label v-for="item in checkboxItems" v-bind:key="item.value" >
+        <input type="checkbox" v-model="checkboxSelectedItems" v-bind:value="item.value"> {{ item.text }}
+      </label>
+    </div>
+    <span>Selected: {{ checkboxSelectedItems }}</span>
+
+    <hr>
+
+    <div>
+      <input type="submit" value="Submit" v-on:click="submit" />
+    </div>
+
   </div>
 
 </template>
@@ -18,18 +32,38 @@
 export default {
   name: 'FormTemplate',
   props: {
-    msg: String
+    msg: String,
+
   },
-  data() {
-    return {
-      checkedNames: []
+  data: () => ({
+    dropDownSelected: 'A',
+    dropDownSelectOptions: [
+      { text: 'One', value: 'A' },
+      { text: 'Two', value: 'B' },
+      { text: 'Three', value: 'C' }
+    ],
+    checkboxItems : [
+      { text: 'One', value: 'A' },
+      { text: 'Two', value: 'B' },
+      { text: 'Three', value: 'C' }
+    ],
+    checkboxSelectedItems : [],
+  }),
+  methods: {
+    submit: function() {
+      console.log(this.dropDownSelected);
+      console.log(this.checkboxSelectedItems);
     }
   }
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.form-body-wrapper {
+  width:50%;
+}
 h3 {
   margin: 40px 0 0;
 }
