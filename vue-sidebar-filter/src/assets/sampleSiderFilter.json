@@ -14,7 +14,7 @@
       "inputType": "multiselect",
       "displayType": "generalCheckbox",
       "default": ["1111"],
-      "result": [],
+      "result": ["1111"],
       "options": [
         {
           "value": "1111",
@@ -60,7 +60,7 @@
       "inputType": "multiselect",
       "displayType": "multiselect",
       "default": ["2100"],
-      "result": [],
+      "result": ["2100"],
       "options":[
         {
           "value" : "2100",
@@ -94,7 +94,7 @@
       "inputType": "multiselect",
       "displayType": "multiselect",
       "default": ["3100"],
-      "result": [],
+      "result": ["3100"],
       "options":[
         {
           "value" : "3100",
@@ -128,7 +128,7 @@
       "inputType": "multiselect",
       "displayType": "multiselect",
       "default": ["4100"],
-      "result": [],
+      "result": ["4100"],
       "options":[
         {
           "value" : "4100",
