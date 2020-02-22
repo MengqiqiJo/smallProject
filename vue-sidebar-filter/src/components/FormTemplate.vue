@@ -29,10 +29,10 @@
       <div v-if="eachBlockData.displayType=='generalCheckbox'">
         <div>
           <label v-for="item in eachBlockData.options" v-bind:key="item.value">
-            <input type="checkbox" v-model="checkboxSelectedItems" v-bind:value="item.value"> {{ item.label }}
+            <input type="checkbox" v-model="eachBlockData.result" v-bind:value="item.value"> {{ item.label }}
           </label>
         </div>
-        <span>Selected: {{ checkboxSelectedItems }}</span>
+        <span>Selected: {{ eachBlockData.result }}</span>
       </div>
 
 
@@ -40,12 +40,18 @@
 
       <div v-if="eachBlockData.displayType=='multiselect'">
       <span>{{eachBlockData.fieldLabel}}</span>
-        <select v-model="eachBlockData.default">
+
+        <MultiSelect v-model="eachBlockData.result" optionValue="value" :options="eachBlockData.options" :filter="true" optionLabel="label" placeholder="Select" />
+
+
+        <!-- <select v-model="eachBlockData.default">
           <option v-for="option in eachBlockData.options" v-bind:key="option.value" v-bind:value="option.value">
             <label>{{ option.label }}</label>
           </option>
-        </select>
-        <span>Selected: {{ eachBlockData.default }}</span>
+        </select>  -->
+        <span>Selected: {{ eachBlockData.result }}</span>
+
+
       </div>
 
     </div>
@@ -60,26 +66,19 @@
 
 <script>
 import sampleJson from '../assets/sampleSiderFilter.json'
+import MultiSelect from 'primevue/multiselect';
 
 export default {
   name: 'FormTemplate',
+  components: {
+    MultiSelect,
+  },
   props: {
-    msg: String,
-
+    msg: String
   },
   data: () => ({
     sampleSiderJson: sampleJson,
-    dropDownSelected: 'A',
-    dropDownSelectOptions: [
-      { text: 'One', value: 'A' },
-      { text: 'Two', value: 'B' },
-      { text: 'Three', value: 'C' }
-    ],
-    checkboxItems : [
-      { text: 'One', value: 'A' },
-      { text: 'Two', value: 'B' },
-      { text: 'Three', value: 'C' }
-    ],
+    multiselectResult: {},
     checkboxSelectedItems : [],
   }),
   methods: {
@@ -95,6 +94,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .form-body-wrapper {
   width:50%;
 }
