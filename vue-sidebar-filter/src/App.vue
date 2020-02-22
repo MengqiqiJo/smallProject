@@ -1,12 +1,7 @@
 <template>
   <div id="app">
     <FormTemplate/>
-
-
   </div>
-
-
-
 </template>
 
 <script>
@@ -17,12 +12,7 @@ export default {
   name: 'App',
   components: {
     FormTemplate
-  },
- css: [
-    {src: 'primevue/resources/primevue.min.css'},
-    {src: 'primevue/resources/themes/nova-light/theme.css'},
-    {src: 'primeicons/primeicons.css'},
-  ]
+  }
 }
 </script>
 
