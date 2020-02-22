@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <FormTemplate msg="This is form template"/>
+    <FormTemplate/>
 
 
   </div>
