@@ -46,7 +46,7 @@
       ]
     },
     {
-			"fieldId": "field_horizontal_line",
+			"fieldId": "1",
       "fieldLabel":"",
       "inputType": "",
       "displayType": "horizontalLine",
@@ -153,7 +153,7 @@
       ]
     },
     {
-			"fieldId": "field_horizontal_line",
+			"fieldId": "2",
       "fieldLabel":"",
       "inputType": "",
       "displayType": "horizontalLine",
