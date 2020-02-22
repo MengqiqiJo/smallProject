@@ -2,7 +2,7 @@
   <div class="form-body-wrapper">
     <h1>{{ msg }}</h1>
 
-    <select v-model="dropDownSelected">
+    <!-- <select v-model="dropDownSelected">
       <option v-for="option in dropDownSelectOptions" v-bind:key="option.value" v-bind:value="option.value">
         <label>{{ option.text }}</label>
       </option>
@@ -12,13 +12,43 @@
     <hr>
 
     <div>
-      <label v-for="item in checkboxItems" v-bind:key="item.value" >
+      <label v-for="item in checkboxItems" v-bind:key="item.value">
         <input type="checkbox" v-model="checkboxSelectedItems" v-bind:value="item.value"> {{ item.text }}
       </label>
     </div>
-    <span>Selected: {{ checkboxSelectedItems }}</span>
+    <span>Selected: {{ checkboxSelectedItems }}</span> -->
 
     <hr>
+
+    <div v-for="eachBlockData in sampleSiderJson.siderData" v-bind:key="eachBlockData.fieldId">
+
+      <div v-if="eachBlockData.displayType=='horizontalLine'">
+        <hr>
+      </div>
+
+      <div v-if="eachBlockData.displayType=='generalCheckbox'">
+        <div>
+          <label v-for="item in eachBlockData.options" v-bind:key="item.value">
+            <input type="checkbox" v-model="checkboxSelectedItems" v-bind:value="item.value"> {{ item.label }}
+          </label>
+        </div>
+        <span>Selected: {{ checkboxSelectedItems }}</span>
+      </div>
+
+
+
+
+      <div v-if="eachBlockData.displayType=='multiselect'">
+      <span>{{eachBlockData.fieldLabel}}</span>
+        <select v-model="eachBlockData.default">
+          <option v-for="option in eachBlockData.options" v-bind:key="option.value" v-bind:value="option.value">
+            <label>{{ option.label }}</label>
+          </option>
+        </select>
+        <span>Selected: {{ eachBlockData.default }}</span>
+      </div>
+
+    </div>
 
     <div>
       <input type="submit" value="Submit" v-on:click="submit" />
@@ -29,6 +59,8 @@
 </template>
 
 <script>
+import sampleJson from '../assets/sampleSiderFilter.json'
+
 export default {
   name: 'FormTemplate',
   props: {
@@ -36,6 +68,7 @@ export default {
 
   },
   data: () => ({
+    sampleSiderJson: sampleJson,
     dropDownSelected: 'A',
     dropDownSelectOptions: [
       { text: 'One', value: 'A' },
@@ -53,6 +86,7 @@ export default {
     submit: function() {
       console.log(this.dropDownSelected);
       console.log(this.checkboxSelectedItems);
+      console.log(this.sampleSiderJson.siderData);
     }
   }
 

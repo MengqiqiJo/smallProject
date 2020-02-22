@@ -1,0 +1,189 @@
+{
+	"siderData":[
+		{
+			"fieldId": "field_evaluation_title",
+      "fieldLabel":"Category Filters",
+      "inputType": "text",
+      "displayType": "customhtml",
+      "default": "",
+      "options": []
+		},
+		{
+      "fieldId": "field_funding_source",
+      "fieldLabel":"Funding Source",
+      "inputType": "multiselect",
+      "displayType": "generalCheckbox",
+      "default": ["1111"],
+      "options": [
+        {
+          "value": "1111",
+          "label": "All"
+        },
+        {
+          "value": "2222",
+          "label": "Latin America"
+        },
+        {
+          "value": "3333",
+          "label": "WEC"
+        },
+        {
+          "value": "4444",
+          "label": "EEMEA"
+        },
+        {
+          "value": "5555",
+          "label": "Japan"
+        },
+        {
+          "value": "6666",
+          "label": "Global"
+        },
+        {
+          "value": "7777",
+          "label": "USA"
+        }
+      ]
+    },
+    {
+			"fieldId": "field_horizontal_line",
+      "fieldLabel":"",
+      "inputType": "",
+      "displayType": "horizontalLine",
+      "default": "",
+      "options": []
+		},
+    {
+      "fieldId": "field_countries_latin_america",
+      "fieldLabel":"Latin America",
+      "inputType": "multiselect",
+      "displayType": "multiselect",
+      "default": "2100",
+      "options":[
+        {
+          "value" : "2100",
+          "label" : "All"
+        },
+        {
+          "value" : "2101",
+          "label" : "Peru"
+        },
+        {
+          "value" : "2102",
+          "label" : "Cuba"
+        },
+        {
+          "value" : "2103",
+          "label" : "Chile"
+        },
+        {
+          "value" : "2104",
+          "label" : "Haiti"
+        },
+        {
+          "value" : "2105",
+          "label" : "Martinique"
+        }
+      ]
+    },
+    {
+      "fieldId": "field_countries_eemea",
+      "fieldLabel":"EEMEA",
+      "inputType": "multiselect",
+      "displayType": "multiselect",
+      "default": "3100",
+      "options":[
+        {
+          "value" : "3100",
+          "label" : "All"
+        },
+        {
+          "value" : "3101",
+          "label" : "Peru"
+        },
+        {
+          "value" : "3102",
+          "label" : "Cuba"
+        },
+        {
+          "value" : "3103",
+          "label" : "Chile"
+        },
+        {
+          "value" : "3104",
+          "label" : "Haiti"
+        },
+        {
+          "value" : "3105",
+          "label" : "Martinique"
+        }
+      ]
+    },
+    {
+      "fieldId": "field_countries_japan",
+      "fieldLabel":"Japan",
+      "inputType": "multiselect",
+      "displayType": "multiselect",
+      "default": "4100",
+      "options":[
+        {
+          "value" : "4100",
+          "label" : "All"
+        },
+        {
+          "value" : "4101",
+          "label" : "Peru"
+        },
+        {
+          "value" : "4102",
+          "label" : "Cuba"
+        },
+        {
+          "value" : "4103",
+          "label" : "Chile"
+        },
+        {
+          "value" : "4104",
+          "label" : "Haiti"
+        },
+        {
+          "value" : "4105",
+          "label" : "Martinique"
+        }
+      ]
+    },
+    {
+			"fieldId": "field_horizontal_line",
+      "fieldLabel":"",
+      "inputType": "",
+      "displayType": "horizontalLine",
+      "default": "",
+      "options": []
+		},
+    {
+      "fieldId": "field_business_unit",
+      "fieldLabel":"Select Business",
+      "inputType": "multiselect",
+      "displayType": "generalCheckbox",
+      "default": ["5111"],
+      "options": [
+        {
+          "value": "5111",
+          "label": "All"
+        },
+        {
+          "value": "5222",
+          "label": "Oncology"
+        },
+        {
+          "value": "5333",
+          "label": "Immunology"
+        },
+        {
+          "value": "5444",
+          "label": "Speciality"
+        }
+      ]
+    }
+	]
+}
