@@ -59,13 +59,9 @@
       "fieldLabel":"Latin America",
       "inputType": "multiselect",
       "displayType": "multiselect",
-      "default": ["2100"],
-      "result": ["2100"],
+      "default": [],
+      "result": [],
       "options":[
-        {
-          "value" : "2100",
-          "label" : "All"
-        },
         {
           "value" : "2101",
           "label" : "Peru"
@@ -93,13 +89,9 @@
       "fieldLabel":"EEMEA",
       "inputType": "multiselect",
       "displayType": "multiselect",
-      "default": ["3100"],
-      "result": ["3100"],
+      "default": [],
+      "result": [],
       "options":[
-        {
-          "value" : "3100",
-          "label" : "All"
-        },
         {
           "value" : "3101",
           "label" : "3Peru"
@@ -127,13 +119,9 @@
       "fieldLabel":"Japan",
       "inputType": "multiselect",
       "displayType": "multiselect",
-      "default": ["4100"],
-      "result": ["4100"],
+      "default": [],
+      "result": [],
       "options":[
-        {
-          "value" : "4100",
-          "label" : "All"
-        },
         {
           "value" : "4101",
           "label" : "4Peru"
