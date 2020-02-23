@@ -10,17 +10,19 @@
       <div v-if="eachBlockData.displayType=='generalCheckbox'">
         <div>
           <label v-for="item in eachBlockData.options" v-bind:key="item.value">
-            <input type="checkbox" v-model="eachBlockData.result" v-bind:value="item.value"> {{ item.label }}
+            <input type="checkbox" v-model="sampleSiderJson.result[eachBlockData.fieldId]" v-bind:value="item.value"> {{ item.label }}
           </label>
         </div>
-        <span>Selected: {{ eachBlockData.result }}</span>
+        <span>Selected: {{ sampleSiderJson.result }}</span>
       </div>
 
       <div v-if="eachBlockData.displayType=='multiselect'">
-        <span>{{eachBlockData.fieldLabel}}</span>
-        <MultiSelect v-model="eachBlockData.result" optionValue="value" :options="eachBlockData.options" :filter="true" optionLabel="label" placeholder="Select" />
+        <div v-if="eachBlockData.isChild">
+          <span>{{eachBlockData.fieldLabel}}</span>
+          <MultiSelect v-model="sampleSiderJson.result[eachBlockData.fieldId]" optionValue="value" :options="getDropDownOption(sampleSiderJson.result[eachBlockData.parentId], eachBlockData.options)" :filter="true" optionLabel="value" placeholder="Select" />
+          <span>Selected: {{ sampleSiderJson.result }}</span>
+        </div>
 
-        <span>Selected: {{ eachBlockData.result }}</span>
       </div>
 
     </div>
@@ -49,7 +51,30 @@ export default {
     submit: function() {
       console.log(this.dropDownSelected);
       console.log(this.sampleSiderJson.siderData);
+    },
+
+    getDropDownOption: function(parentResult, childOption) {
+      var temporaryData = [];
+      childOption.forEach(eachChildBlockValue => {
+        eachChildBlockValue.enable.forEach(eachChildRenderValue => {
+          if (parentResult.includes(eachChildRenderValue)) {
+              temporaryData.push(eachChildBlockValue);
+          }
+        });
+      });
+
+      const filteredArr = temporaryData.reduce((acc, current) => {
+        const x = acc.find(item => item.value === current.value);
+        if (!x) {
+          return acc.concat([current]);
+        } else {
+          return acc;
+        }
+      }, []);
+
+      return filteredArr;
     }
+
   }
 
 }
