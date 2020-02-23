@@ -57,8 +57,10 @@ export default {
   }),
   methods: {
     submit: function() {
-      console.log(this.dropDownSelected);
-      console.log(this.sampleSiderJson.siderData);
+      // print result
+      // below two ways both work
+      console.log(this.totalResult);
+      console.log(this.sampleSiderJson.result);
     },
 
     getDropDownOption: function(parentResult, childBlockData) {
