@@ -10,17 +10,17 @@
       <div v-if="eachBlockData.displayType=='generalCheckbox'">
         <div>
           <label v-for="item in eachBlockData.options" v-bind:key="item.value">
-            <input type="checkbox" v-model="sampleSiderJson.result[eachBlockData.fieldId]" v-bind:value="item.value"> {{ item.label }}
+            <input type="checkbox" v-model="totalResult[eachBlockData.fieldId]" v-bind:value="item.value"> {{ item.label }}
           </label>
         </div>
-        <span>Selected: {{ sampleSiderJson.result }}</span>
+        <span>Selected: {{ totalResult }}</span>
       </div>
 
       <div v-if="eachBlockData.displayType=='multiselect'">
         <div v-if="eachBlockData.isChild">
           <span>{{eachBlockData.fieldLabel}}</span>
-          <MultiSelect v-model="sampleSiderJson.result[eachBlockData.fieldId]" optionValue="value" :options="getDropDownOption(sampleSiderJson.result[eachBlockData.parentId], eachBlockData.options)" :filter="true" optionLabel="value" placeholder="Select" />
-          <span>Selected: {{ sampleSiderJson.result }}</span>
+          <MultiSelect v-model="totalResult[eachBlockData.fieldId]" optionValue="value" :options="getDropDownOption(totalResult[eachBlockData.parentId], eachBlockData)" :filter="true" optionLabel="value" placeholder="Select" />
+          <span>Selected: {{ totalResult }}</span>
         </div>
 
       </div>
@@ -46,6 +46,7 @@ export default {
   },
   data: () => ({
     sampleSiderJson: sampleJson,
+    totalResult: sampleJson.result,
   }),
   methods: {
     submit: function() {
@@ -53,9 +54,9 @@ export default {
       console.log(this.sampleSiderJson.siderData);
     },
 
-    getDropDownOption: function(parentResult, childOption) {
+    getDropDownOption: function(parentResult, childBlockData) {
       var temporaryData = [];
-      childOption.forEach(eachChildBlockValue => {
+      childBlockData.options.forEach(eachChildBlockValue => {
         eachChildBlockValue.enable.forEach(eachChildRenderValue => {
           if (parentResult.includes(eachChildRenderValue)) {
               temporaryData.push(eachChildBlockValue);
@@ -71,6 +72,23 @@ export default {
           return acc;
         }
       }, []);
+
+
+      childBlockData.options.forEach(eachChildBlockValue => {
+
+        var tempEnable = eachChildBlockValue.enable;
+
+        const foundIfParentChecked = parentResult.some(r=> tempEnable.indexOf(r) >= 0);
+
+        if (!foundIfParentChecked) {
+
+          var currentValueIndex = this.totalResult[childBlockData.fieldId].indexOf(eachChildBlockValue.value);
+          if (currentValueIndex > -1) {
+            this.totalResult[childBlockData.fieldId].splice(currentValueIndex, 1);
+          }
+        }
+
+      });
 
       return filteredArr;
     }
