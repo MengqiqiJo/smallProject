@@ -1,36 +1,43 @@
 <template>
-  <div class="form-body-wrapper">
+  <div class="form-body-wrapper row">
+    <div class="col-md-4">
 
-    <div v-for="eachBlockData in sampleSiderJson.siderData" v-bind:key="eachBlockData.fieldId">
+      <div v-for="eachBlockData in sampleSiderJson.siderData" v-bind:key="eachBlockData.fieldId">
 
-      <div v-if="eachBlockData.displayType=='horizontalLine'">
-        <hr>
-      </div>
-
-      <div v-if="eachBlockData.displayType=='generalCheckbox'">
-        <div>
-          <label v-for="item in eachBlockData.options" v-bind:key="item.value">
-            <input type="checkbox" v-model="totalResult[eachBlockData.fieldId]" v-bind:value="item.value"> {{ item.label }}
-          </label>
-        </div>
-        <span>Selected: {{ totalResult }}</span>
-      </div>
-
-      <div v-if="eachBlockData.displayType=='multiselect'">
-        <div v-if="eachBlockData.isChild">
-          <span>{{eachBlockData.fieldLabel}}</span>
-          <MultiSelect v-model="totalResult[eachBlockData.fieldId]" optionValue="value" :options="getDropDownOption(totalResult[eachBlockData.parentId], eachBlockData)" :filter="true" optionLabel="value" placeholder="Select" />
-          <span>Selected: {{ totalResult }}</span>
+        <div v-if="eachBlockData.displayType=='horizontalLine'">
+          <hr>
         </div>
 
+        <div v-if="eachBlockData.displayType=='generalCheckbox'">
+          <div class="sider-checkbox-wrapper row">
+            <div class="col-md-6 text-center" v-for="item in eachBlockData.options" v-bind:key="item.value">
+              <div>
+                <input type="checkbox" v-model="totalResult[eachBlockData.fieldId]" v-bind:value="item.value">
+                <span>{{ item.label }}</span>
+              </div>
+            </div>
+          </div>
+          <!-- <span>Selected: {{ totalResult }}</span> -->
+        </div>
+
+        <div v-if="eachBlockData.displayType=='multiselect'">
+          <div v-if="eachBlockData.isChild">
+            <div class="col-md-12 text-center">
+              <div>{{eachBlockData.fieldLabel}}</div>
+              <MultiSelect v-model="totalResult[eachBlockData.fieldId]" optionValue="value" :options="getDropDownOption(totalResult[eachBlockData.parentId], eachBlockData)" :filter="true" optionLabel="value" placeholder="Select" />
+              <!-- <span>Selected: {{ totalResult }}</span> -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div>
+        <input type="submit" value="Submit" v-on:click="submit" />
       </div>
 
     </div>
-
-    <div>
-      <input type="submit" value="Submit" v-on:click="submit" />
-    </div>
-
   </div>
 
 </template>
@@ -101,12 +108,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.form-body-wrapper {
-  width:50%;
+.sider-checkbox-wrapper {
+  text-align:left;
 }
-h3 {
-  margin: 40px 0 0;
-}
+
 ul {
   list-style-type: none;
   padding: 0;
