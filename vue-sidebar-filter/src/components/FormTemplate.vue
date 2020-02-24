@@ -10,7 +10,7 @@
 
         <div v-if="eachBlockData.displayType=='generalCheckbox'">
           <div class="sider-checkbox-wrapper row">
-            <div class="col-md-12">{{eachBlockData.fieldLabel}}</div>
+            <div class="col-md-12 text-center">{{eachBlockData.fieldLabel}}</div>
             <div class="col-md-6 text-center" v-for="item in eachBlockData.options" v-bind:key="item.value">
               <div>
                 <input type="checkbox" v-model="totalResult[eachBlockData.fieldId]" v-bind:value="item.value">
