@@ -10,6 +10,7 @@
 
         <div v-if="eachBlockData.displayType=='generalCheckbox'">
           <div class="sider-checkbox-wrapper row">
+            <div class="col-md-12">{{eachBlockData.fieldLabel}}</div>
             <div class="col-md-6 text-center" v-for="item in eachBlockData.options" v-bind:key="item.value">
               <div>
                 <input type="checkbox" v-model="totalResult[eachBlockData.fieldId]" v-bind:value="item.value">
@@ -24,7 +25,12 @@
           <div v-if="eachBlockData.isChild">
             <div class="col-md-12 text-center">
               <div>{{eachBlockData.fieldLabel}}</div>
-              <MultiSelect v-model="totalResult[eachBlockData.fieldId]" optionValue="value" :options="getDropDownOption(totalResult[eachBlockData.parentId], eachBlockData)" :filter="true" optionLabel="value" placeholder="Select" />
+              <MultiSelect v-model="totalResult[eachBlockData.fieldId]"
+                optionValue="value"
+                :options="getDropDownOption(totalResult[eachBlockData.parentId], eachBlockData)"
+                :filter="true"
+                optionLabel="label"
+                placeholder="Select" />
               <!-- <span>Selected: {{ totalResult }}</span> -->
             </div>
           </div>
@@ -35,6 +41,8 @@
 
       <div>
         <input type="submit" value="Submit" v-on:click="submit" />
+      }
+      }
       </div>
 
     </div>
@@ -54,7 +62,15 @@ export default {
   data: () => ({
     sampleSiderJson: sampleJson,
     totalResult: sampleJson.result,
+    getDataUsingAxios: null
   }),
+  mounted () {
+    this.$http.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.getDataUsingAxios = response))
+      .catch(error => {
+        console.log(error)
+      })
+  },
   methods: {
     submit: function() {
       // print result
