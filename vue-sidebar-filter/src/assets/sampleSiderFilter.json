@@ -8,10 +8,18 @@
   },
   "siderData":[
     {
-      "fieldId": "field_evaluation_title",
-      "fieldLabel":"Category Filters",
+      "fieldId": "field_text_category",
+      "fieldLabel":"category filter",
       "inputType": "text",
-      "displayType": "customhtml",
+      "displayType": "textfield",
+      "default": "",
+      "options": []
+    },
+    {
+      "fieldId": "0",
+      "fieldLabel":"",
+      "inputType": "",
+      "displayType": "horizontalLine",
       "default": "",
       "options": []
     },
@@ -57,6 +65,14 @@
       "fieldLabel":"",
       "inputType": "",
       "displayType": "horizontalLine",
+      "default": "",
+      "options": []
+    },
+    {
+      "fieldId": "field_text_select_countries",
+      "fieldLabel":"Select Countries",
+      "inputType": "text",
+      "displayType": "textfield",
       "default": "",
       "options": []
     },
