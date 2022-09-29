@@ -27,7 +27,7 @@
     "chartjs-plugin-labels": "^1.1.0",
     "chartjs-plugin-stacked100": "^0.7.1",
     "core-js": "^3.1.4",
-    "d3": "^5.9.2",
+    "d3": "^7.6.1",
     "echarts": "^4.2.1",
     "html2canvas": "^1.0.0-rc.3",
     "ngx-echarts": "^3.2.0",
